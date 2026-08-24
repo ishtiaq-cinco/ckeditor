@@ -22,8 +22,8 @@ export default async function generateCKEditor5DocsBuild( outputPath ) {
 	const globPatternsToRemove = [
 		'translations/*.d.ts',
 		'translations/*.umd.js',
-		'ckeditor5-editor.css',
-		'ckeditor5-content.css'
+		'@ssmckinney/ckeditor5-editor.css',
+		'@ssmckinney/ckeditor5-content.css'
 	];
 
 	const filesToRemove = await glob( globPatternsToRemove, {

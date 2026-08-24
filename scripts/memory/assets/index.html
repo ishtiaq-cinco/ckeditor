@@ -19,14 +19,14 @@
 		<script type="importmap">
 		{
 			"imports": {
-				"ckeditor5": "/ckeditor5.js"
+				"@ssmckinney/ckeditor5": "/ckeditor5.js"
 			}
 		}
 		</script>
 
 		<!-- Define the editor creation factory -->
 		<script type="module">
-			import * as CKEDITOR from 'ckeditor5';
+			import * as CKEDITOR from '@ssmckinney/ckeditor5';
 
 			function createEditor( hostId, editorName, { LICENSE_KEY } ) {
 				const EDITOR_CONFIG = {

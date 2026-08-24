@@ -4,7 +4,7 @@
  */
 
 /**
- * Note: Run this script in root of ckeditor5.
+ * Note: Run this script in root of @ssmckinney/ckeditor5.
  */
 
 import { Module } from './module.mjs';

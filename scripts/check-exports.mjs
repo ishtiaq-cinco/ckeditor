@@ -18,6 +18,7 @@ import { PACKAGES_DIRECTORY } from './release/utils/constants.mjs';
  */
 const paths = {
 	'ckeditor5': CKEDITOR5_INDEX,
+	'@ssmckinney/ckeditor5': CKEDITOR5_INDEX,
 	'ckeditor5-premium-features': CKEDITOR5_PREMIUM_FEATURES_INDEX
 };
 
@@ -39,6 +40,7 @@ const { values } = parseArgs( {
 		/*
 		 * Name of the package to check. Valid options:
 		 * - `ckeditor5`.
+		 * - `@ssmckinney/ckeditor5`.
 		 * - `ckeditor5-premium-features`.
 		 */
 		'input': { type: 'string' }

@@ -25,21 +25,21 @@ export function validateNaming( { pkg, module, item } ) {
 
 	function essentialPackagesPolicy() {
 		const essentialPackages = [
-			'@ckeditor/ckeditor5-clipboard',
-			'@ckeditor/ckeditor5-cloud-services',
+			'@ssmckinney/ckeditor5-clipboard',
+			'@ssmckinney/ckeditor5-cloud-services',
 			'@ckeditor/ckeditor5-collaboration-core',
-			'@ckeditor/ckeditor5-core',
-			'@ckeditor/ckeditor5-editor-balloon',
-			'@ckeditor/ckeditor5-editor-classic',
-			'@ckeditor/ckeditor5-editor-decoupled',
-			'@ckeditor/ckeditor5-editor-inline',
-			'@ckeditor/ckeditor5-editor-multi-root',
-			'@ckeditor/ckeditor5-engine',
-			'@ckeditor/ckeditor5-typing',
-			'@ckeditor/ckeditor5-ui',
-			'@ckeditor/ckeditor5-upload',
-			'@ckeditor/ckeditor5-utils',
-			'@ckeditor/ckeditor5-widget'
+			'@ssmckinney/ckeditor5-core',
+			'@ssmckinney/ckeditor5-editor-balloon',
+			'@ssmckinney/ckeditor5-editor-classic',
+			'@ssmckinney/ckeditor5-editor-decoupled',
+			'@ssmckinney/ckeditor5-editor-inline',
+			'@ssmckinney/ckeditor5-editor-multi-root',
+			'@ssmckinney/ckeditor5-engine',
+			'@ssmckinney/ckeditor5-typing',
+			'@ssmckinney/ckeditor5-ui',
+			'@ssmckinney/ckeditor5-upload',
+			'@ssmckinney/ckeditor5-utils',
+			'@ssmckinney/ckeditor5-widget'
 		];
 
 		return {
@@ -73,7 +73,7 @@ export function validateNaming( { pkg, module, item } ) {
 
 		function namesInFile( fileNameRegex ) {
 			const isApplicable = () => (
-				pkg.packageName === '@ckeditor/ckeditor5-engine' &&
+				pkg.packageName === '@ssmckinney/ckeditor5-engine' &&
 				fileNameRegex.test( module.relativeFileName ) &&
 				!item.internal
 			);
@@ -160,7 +160,7 @@ export function validateNaming( { pkg, module, item } ) {
 				'list-multi-level': [ 'MultiLevelList', 'ListMultiLevel' ]
 			};
 
-			const packageName = pkg.packageName.match( /^@ckeditor\/ckeditor5-(.*)$/ )?.[ 1 ];
+			const packageName = pkg.packageName.match( /^@ckeditor\/@ssmckinney/ckeditor5-(.*)$/ )?.[ 1 ];
 
 			return specificPackages[ packageName ] ?? [ getDefaultPackageName() ];
 

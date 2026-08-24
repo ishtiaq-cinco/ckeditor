@@ -7,7 +7,7 @@ import upath from 'upath';
 import * as releaseTools from '@ckeditor/ckeditor5-dev-release-tools';
 import { CKEDITOR5_PACKAGES_PATH } from '../../constants.mjs';
 
-const CKEDITOR5_PATH = upath.join( CKEDITOR5_PACKAGES_PATH, 'ckeditor5' );
+const CKEDITOR5_PATH = upath.join( CKEDITOR5_PACKAGES_PATH, '@ssmckinney/ckeditor5' );
 
 /**
  * @param {ReleaseOptions} cliArguments

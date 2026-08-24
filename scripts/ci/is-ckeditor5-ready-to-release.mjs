@@ -16,7 +16,7 @@ import semver from 'semver';
 // while `@latest` still points to the previous one, because we need to verify the release before making it public.
 //
 // To avoid triggering a new job (from a release commit), we must use the `@staging` tag.
-const latestPublishedVersion = execSync( 'npm view ckeditor5@staging version', { encoding: 'utf-8' } ).trim();
+const latestPublishedVersion = execSync( 'npm view @ssmckinney/ckeditor5@staging version', { encoding: 'utf-8' } ).trim();
 const changelogVersion = releaseTools.getLastFromChangelog();
 
 if ( getVersionTag( changelogVersion ) !== 'latest' ) {
@@ -43,5 +43,5 @@ function getVersionTag( version ) {
 }
 
 async function isVersionAvailable( version ) {
-	return npm.checkVersionAvailability( version, 'ckeditor5' );
+	return npm.checkVersionAvailability( version, '@ssmckinney/ckeditor5' );
 }

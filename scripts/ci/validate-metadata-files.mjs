@@ -90,7 +90,7 @@ async function getPackageData( packagePath ) {
 	const pkgJsonPath = upath.join( packagePath, 'package.json' );
 	const pkgJsonContent = await fs.readJSON( pkgJsonPath );
 
-	const metadataPath = upath.join( packagePath, 'ckeditor5-metadata.json' );
+	const metadataPath = upath.join( packagePath, '@ssmckinney/ckeditor5-metadata.json' );
 	const metadata = await fs.exists( metadataPath ) ? await fs.readJSON( metadataPath ) : null;
 
 	if ( !pkgJsonContent.main ) {
@@ -136,7 +136,7 @@ function getMissingExports( packageData ) {
 }
 
 function getValidIconNames( options ) {
-	const iconsIndexPath = upath.join( options.cwd, 'packages', 'ckeditor5-icons', 'src', 'index.ts' );
+	const iconsIndexPath = upath.join( options.cwd, 'packages', '@ssmckinney/ckeditor5-icons', 'src', 'index.ts' );
 	const iconsIndexContent = fs.readFileSync( iconsIndexPath, 'utf-8' );
 	const iconNames = new Set();
 
@@ -169,7 +169,7 @@ function getInvalidIconNames( packageData, validIconNames ) {
 			}
 
 			return `${ pluginName } (\`${ uiComponentName }\`) has an invalid \`iconName\`: "${ iconName }". ` +
-				'It must match an export name from @ckeditor/ckeditor5-icons.';
+				'It must match an export name from @ssmckinney/ckeditor5-icons.';
 		} );
 }
 

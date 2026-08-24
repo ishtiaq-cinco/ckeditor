@@ -91,7 +91,7 @@ module.exports = function createHtmlOutputMarkup() {
 
 			const sourceFileLink = !isExternalPackage && !isThirdPartyPackage ?
 				`<a class="b-link" target="_blank" rel="noopener" 
-					href="https://github.com/ckeditor/ckeditor5/blob/master/packages/${ packageName }/ckeditor5-metadata.json">` +
+					href="https://github.com/ckeditor/ckeditor5/blob/master/packages/${ packageName }/@ssmckinney/ckeditor5-metadata.json">` +
 					sourceFileMarkup +
 				'</a>' :
 				sourceFileMarkup;
@@ -153,7 +153,7 @@ function createGlobPattern() {
 		.map( config => {
 			const dir = path.dirname( require.resolve( config.path + '/package.json' ) );
 
-			return fs.existsSync( `${ dir }/ckeditor5-metadata.json` ) ? dir : config.fallbackPath;
+			return fs.existsSync( `${ dir }/@ssmckinney/ckeditor5-metadata.json` ) ? dir : config.fallbackPath;
 		} );
 
 	const paths = [
@@ -162,7 +162,7 @@ function createGlobPattern() {
 		...resolvedThirdPartyConfigs
 	];
 
-	return `{${ paths.join( ',' ) }}/ckeditor5-metadata.json`;
+	return `{${ paths.join( ',' ) }}/@ssmckinney/ckeditor5-metadata.json`;
 }
 
 /**
@@ -196,7 +196,7 @@ function parseFile( file ) {
 
 	const sourceFileMarkup = isThirdPartyPackage ?
 		createSourceFileMarkupForThirdPartyPackage( file.path ) :
-		`<code class="b-inline-code">@ckeditor/${ packageName }/ckeditor5-metadata.json</code>`;
+		`<code class="b-inline-code">@ckeditor/${ packageName }/@ssmckinney/ckeditor5-metadata.json</code>`;
 
 	const packageData = {
 		packageName,
@@ -309,7 +309,7 @@ function createApiLink( packageData, plugin ) {
 		return;
 	}
 
-	const shortPackageName = packageData.packageName.replace( /^ckeditor5-/g, '' );
+	const shortPackageName = packageData.packageName.replace( /^@ssmckinney/ckeditor5-/g, '' );
 
 	const packagePath = plugin.path
 		.replace( /(^src\/)|(\.ts$)/g, '' )

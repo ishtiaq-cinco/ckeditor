@@ -4,6 +4,6 @@
  */
 
 export const NON_FULL_COVERAGE_PACKAGES = [
-	'ckeditor5',
-	'ckeditor5-minimap'
+	'@ssmckinney/ckeditor5',
+	'@ssmckinney/ckeditor5-minimap'
 ];

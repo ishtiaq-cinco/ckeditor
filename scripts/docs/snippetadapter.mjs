@@ -155,7 +155,7 @@ async function buildSnippets( snippets, paths, constants, imports ) {
 			/**
 			 * Handles imports ending with `?raw`, loading file contents as plain text. Useful for inlining raw assets.
 			 *
-			 * Must be loaded before `externalize-ckeditor5` to avoid `?raw` imports being marked as external.
+			 * Must be loaded before `externalize-@ssmckinney/ckeditor5` to avoid `?raw` imports being marked as external.
 			 */
 			{
 				name: 'raw-import',
@@ -180,8 +180,8 @@ async function buildSnippets( snippets, paths, constants, imports ) {
 
 			/**
 			 * Esbuild has an `external` property. However, it doesn't look for direct match, but checks if the path starts
-			 * with the provided value. This means that if the `external` array includes `@ckeditor/ckeditor5-core` and we
-			 * have an import like `@ckeditor/ckeditor5-core/tests/...`, then it will be marked as external instead of being
+			 * with the provided value. This means that if the `external` array includes `@ssmckinney/ckeditor5-core` and we
+			 * have an import like `@ssmckinney/ckeditor5-core/tests/...`, then it will be marked as external instead of being
 			 * bundled. This will cause issues, because the `tests` directory is not available in the CDN build.
 			 */
 			{
@@ -194,7 +194,7 @@ async function buildSnippets( snippets, paths, constants, imports ) {
 			},
 
 			/**
-			 * Code from "ckeditor5" and "ckeditor5-premium-features" is externalized to avoid bundling it with the snippet
+			 * Code from "@ssmckinney/ckeditor5" and "ckeditor5-premium-features" is externalized to avoid bundling it with the snippet
 			 * code. However, if the source file is imported directly, it can be bundled and (in case of commercial features)
 			 * not obfuscated. To prevent this, we throw an error if such an import is detected.
 			 */
@@ -205,7 +205,7 @@ async function buildSnippets( snippets, paths, constants, imports ) {
 						errors: [
 							{
 								// eslint-disable-next-line @stylistic/max-len
-								text: `Can't use the source file "${ args.path }" in the snippet. Use "ckeditor5" or "ckeditor5-premium-features" import instead.`
+								text: `Can't use the source file "${ args.path }" in the snippet. Use "@ssmckinney/ckeditor5" or "ckeditor5-premium-features" import instead.`
 							}
 						]
 					} ) );
@@ -328,10 +328,12 @@ async function getConstants() {
  * @returns {Promise<Object<string, string>>}
  */
 async function getImportMap() {
-	const core = await getDependencies( 'ckeditor5' );
+	const core = await getDependencies( '@ssmckinney/ckeditor5' );
 	const commercial = await getDependencies( 'ckeditor5-premium-features' );
 
 	const imports = {
+		'@ssmckinney/ckeditor5': '%BASE_PATH%/assets/ckeditor5/ckeditor5.js',
+		'@ssmckinney/ckeditor5/': '%BASE_PATH%/assets/ckeditor5/',
 		'ckeditor5': '%BASE_PATH%/assets/ckeditor5/ckeditor5.js',
 		'ckeditor5/': '%BASE_PATH%/assets/ckeditor5/',
 		'ckeditor5-premium-features': '%BASE_PATH%/assets/ckeditor5-premium-features/ckeditor5-premium-features.js',
@@ -341,12 +343,12 @@ async function getImportMap() {
 	};
 
 	/**
-	 * Some snippets may use imports from individual packages instead of the main `ckeditor5` or
+	 * Some snippets may use imports from individual packages instead of the main `@ssmckinney/ckeditor5` or
 	 * `ckeditor5-premium-features` packages. In such cases, we need to add these imports to the import map.
 	 */
 	for ( const dependency of core ) {
-		imports[ dependency ] ||= imports.ckeditor5;
-		imports[ `${ dependency }/dist/index.js` ] ||= imports.ckeditor5;
+		imports[ dependency ] ||= imports[ '@ssmckinney/ckeditor5' ];
+		imports[ `${ dependency }/dist/index.js` ] ||= imports[ '@ssmckinney/ckeditor5' ];
 	}
 
 	for ( const dependency of commercial ) {

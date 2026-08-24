@@ -1,7 +1,7 @@
-CKEditor&nbsp;5 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20CKEditor%205%20on%20GitHub&url=https%3A%2F%2Fgithub.com%2Fckeditor%2Fckeditor5)<!-- omit in toc -->
+CKEditor&nbsp;5 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20CKEditor%205%20on%20GitHub&url=https%3A%2F%2Fgithub.com%2Fckeditor%2F@ssmckinney/ckeditor5)<!-- omit in toc -->
 ===================================
 
-[![npm version](https://badge.fury.io/js/ckeditor5.svg)](https://www.npmjs.com/package/ckeditor5)
+[![npm version](https://badge.fury.io/js/@ssmckinney/ckeditor5.svg)](https://www.npmjs.com/package/@ssmckinney/ckeditor5)
 [![codecov](https://codecov.io/gh/ckeditor/ckeditor5/branch/master/graph/badge.svg)](https://codecov.io/gh/ckeditor/ckeditor5)
 [![CircleCI](https://circleci.com/gh/ckeditor/ckeditor5.svg?style=shield)](https://app.circleci.com/pipelines/github/ckeditor/ckeditor5?branch=master)
 ![TypeScript Support](https://badgen.net/badge/Built%20With/TypeScript/blue)
@@ -33,7 +33,7 @@ CKEditor&nbsp;5 is a modern JavaScript rich-text editor with MVC architecture, c
 
 ## Quick start
 
-Refer to the [Quick Start](https://ckeditor.com/docs/ckeditor5/latest/getting-started/installation/quick-start.html) guide to learn more about CKEditor&nbsp;5 installation.
+Refer to the [Quick Start](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/getting-started/installation/quick-start.html) guide to learn more about CKEditor&nbsp;5 installation.
 
 ### CKEditor 5 Builder
 
@@ -41,7 +41,7 @@ The easiest way to start using CKEditor&nbsp;5 with all the features you need is
 
 ### Build with AI
 
-You can also set up CKEditor&nbsp;5 with an AI coding agent such as Claude Code, Cursor, Codex, or Copilot. Install the official CKEditor skill, and your agent will handle the installation, configuration, and licensing for you. See the [Build with AI](https://ckeditor.com/docs/ckeditor5/latest/getting-started/ai-coding-agents.html) guide.
+You can also set up CKEditor&nbsp;5 with an AI coding agent such as Claude Code, Cursor, Codex, or Copilot. Install the official CKEditor skill, and your agent will handle the installation, configuration, and licensing for you. See the [Build with AI](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/getting-started/ai-coding-agents.html) guide.
 
 ### TypeScript support
 
@@ -50,27 +50,27 @@ CKEditor&nbsp;5 is a TypeScript project. Starting from v37.0.0, official package
 ### CKEditor 5 advanced installation
 
 For more advanced users or those who need to integrate CKEditor&nbsp;5 with their applications, we prepared integrations with popular JavaScript frameworks:
-* [Angular](https://ckeditor.com/docs/ckeditor5/latest/getting-started/installation/angular.html)
-* [React](https://ckeditor.com/docs/ckeditor5/latest/getting-started/installation/react/react.html)
-* [Vue](https://ckeditor.com/docs/ckeditor5/latest/getting-started/installation/vuejs-v3.html)
+* [Angular](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/getting-started/installation/angular.html)
+* [React](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/getting-started/installation/react/react.html)
+* [Vue](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/getting-started/installation/vuejs-v3.html)
 
 #### CKEditor 5 Framework
 
 CKEditor&nbsp;5 is also a framework for creating custom-made rich text editing solutions.
 
-To find out how to start building your editor from scratch go to the [CKEditor&nbsp;5 Framework overview](https://ckeditor.com/docs/ckeditor5/latest/framework/index.html) section of the CKEditor&nbsp;5 documentation.
+To find out how to start building your editor from scratch go to the [CKEditor&nbsp;5 Framework overview](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/framework/index.html) section of the CKEditor&nbsp;5 documentation.
 
 ## Documentation and FAQ
 
-Extensive documentation dedicated to all things CKEditor&nbsp;5-related is available. You will find basic guides that will help you kick off your project, advanced deep-dive tutorials to tailor the editor to your specific needs, and help sections with solutions and answers to any of your possible questions. To find out more refer to the following [CKEditor&nbsp;5 documentation](https://ckeditor.com/docs/ckeditor5/latest/index.html) sections:
+Extensive documentation dedicated to all things CKEditor&nbsp;5-related is available. You will find basic guides that will help you kick off your project, advanced deep-dive tutorials to tailor the editor to your specific needs, and help sections with solutions and answers to any of your possible questions. To find out more refer to the following [CKEditor&nbsp;5 documentation](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/index.html) sections:
 
-* [Installing CKEditor&nbsp;5](https://ckeditor.com/docs/ckeditor5/latest/getting-started/installation/quick-start.html)
-* [CKEditor&nbsp;5 features](https://ckeditor.com/docs/ckeditor5/latest/features/index.html)
-* [CKEditor&nbsp;5 examples](https://ckeditor.com/docs/ckeditor5/latest/examples/index.html)
-* [Updating CKEditor&nbsp;5](https://ckeditor.com/docs/ckeditor5/latest/updating/index.html)
-* [Getting CKEditor&nbsp;5 support](https://ckeditor.com/docs/ckeditor5/latest/support/index.html)
-* [CKEditor&nbsp;5 Framework](https://ckeditor.com/docs/ckeditor5/latest/framework/index.html)
-* [API documentation](https://ckeditor.com/docs/ckeditor5/latest/api/index.html)
+* [Installing CKEditor&nbsp;5](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/getting-started/installation/quick-start.html)
+* [CKEditor&nbsp;5 features](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/index.html)
+* [CKEditor&nbsp;5 examples](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/examples/index.html)
+* [Updating CKEditor&nbsp;5](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/updating/index.html)
+* [Getting CKEditor&nbsp;5 support](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/support/index.html)
+* [CKEditor&nbsp;5 Framework](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/framework/index.html)
+* [API documentation](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/api/index.html)
 
 For FAQ please go to the [CKEditor Ecosystem help center](https://support.ckeditor.com/hc/en-us).
 For a high-level overview of the project see the [CKEditor Ecosystem website](https://ckeditor.com).
@@ -81,13 +81,13 @@ Follow the [CKEditor&nbsp;5 changelog](https://github.com/ckeditor/ckeditor5/blo
 
 ## Editing and collaboration features
 
-The CKEditor&nbsp;5 Framework offers access to a plethora of various plugins, supporting [all kinds of editing features](https://ckeditor.com/docs/ckeditor5/latest/features/index.html).
+The CKEditor&nbsp;5 Framework offers access to a plethora of various plugins, supporting [all kinds of editing features](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/index.html).
 
 From collaborative editing support providing comments and tracking changes, through editing tools that let users control the content looks and structure such as tables, lists, and font styles, to accessibility helpers and multi-language support - CKEditor&nbsp;5 is easily extensible and customizable. Special duty features like Markdown input and output and source editing, or export to PDF and Word provide solutions for users with diverse and specialized needs. Images and videos are easily supported and CKEditor&nbsp;5 offers various upload and storage systems to manage these.
 
 The number of options and the ease of customization and adding new ones make the editing experience even better for any environment and professional background.
 
-Refer to the [CKEditor&nbsp;5 Features](https://ckeditor.com/docs/ckeditor5/latest/features/index.html) documentation for details.
+Refer to the [CKEditor&nbsp;5 Features](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/index.html) documentation for details.
 
 ## Create a free account and test full potential
 
@@ -103,13 +103,13 @@ The development repository of CKEditor&nbsp;5 is located at [https://github.com/
 
 CKEditor&nbsp;5 is a modular, multi-package, [monorepo](https://en.wikipedia.org/wiki/Monorepo) project. It consists of several packages that create the editing framework, based on which the feature packages are implemented.
 
-The [`ckeditor5`](https://github.com/ckeditor/ckeditor5) repository is the place that centralizes the development of CKEditor&nbsp;5. It bundles different packages into a single place, adding the necessary helper tools for the development workflow, like the builder and the test runner. [Basic information on how to set up the development environment](https://ckeditor.com/docs/ckeditor5/latest/framework/contributing/development-environment.html) can be found in the documentation.
+The [`@ssmckinney/ckeditor5`](https://github.com/ckeditor/ckeditor5) repository is the place that centralizes the development of CKEditor&nbsp;5. It bundles different packages into a single place, adding the necessary helper tools for the development workflow, like the builder and the test runner. [Basic information on how to set up the development environment](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/framework/contributing/development-environment.html) can be found in the documentation.
 
-See the [official contributors' guide](https://ckeditor.com/docs/ckeditor5/latest/framework/contributing/contributing.html) to learn how to contribute your code to the project.
+See the [official contributors' guide](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/framework/contributing/contributing.html) to learn how to contribute your code to the project.
 
 ### Reporting issues and feature requests
 
-Report issues in [the `ckeditor5` repository](https://github.com/ckeditor/ckeditor5/issues). Read more in the [Getting support](https://ckeditor.com/docs/ckeditor5/latest/support/index.html#reporting-issues) section of the CKEditor 5 documentation.
+Report issues in [the `@ssmckinney/ckeditor5` repository](https://github.com/ssmckinney/ckeditor5/issues). Read more in the [Getting support](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/support/index.html#reporting-issues) section of the CKEditor 5 documentation.
 
 ## License
 

@@ -277,13 +277,13 @@ function memberExistInRecord( record, packageName, memberName ) {
 function removeExpectedExceptions( data ) {
 	return data
 		// TODO: Remove after WProofReader has been adjusted.
-		.filter( record => !memberExistInRecord( record, '@ckeditor/ckeditor5-ui', 'UIModel' ) )
+		.filter( record => !memberExistInRecord( record, '@ssmckinney/ckeditor5-ui', 'UIModel' ) )
 		// TODO: Remove after MathType has been adjusted.
-		.filter( record => !memberExistInRecord( record, '@ckeditor/ckeditor5-engine', 'ViewUpcastWriter' ) )
+		.filter( record => !memberExistInRecord( record, '@ssmckinney/ckeditor5-engine', 'ViewUpcastWriter' ) )
 		// TODO Remove after it is moved to the clipboard package.
-		.filter( record => !memberExistInRecord( record, '@ckeditor/ckeditor5-image', 'isHtmlInDataTransfer' ) )
-		.filter( record => !memberExistInRecord( record, '@ckeditor/ckeditor5-find-and-replace', 'FindReplaceCommandBase' ) )
-		.filter( record => !memberExistInRecord( record, '@ckeditor/ckeditor5-utils', 'globalVar' ) );
+		.filter( record => !memberExistInRecord( record, '@ssmckinney/ckeditor5-image', 'isHtmlInDataTransfer' ) )
+		.filter( record => !memberExistInRecord( record, '@ssmckinney/ckeditor5-find-and-replace', 'FindReplaceCommandBase' ) )
+		.filter( record => !memberExistInRecord( record, '@ssmckinney/ckeditor5-utils', 'globalVar' ) );
 }
 
 function allowsReexportInternals( pkg ) {

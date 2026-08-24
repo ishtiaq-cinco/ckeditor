@@ -62,7 +62,7 @@ function parseArguments( args ) {
 	}
 
 	const defaultOptionsForDocs = minimist( [
-		'-u', 'https://fake.ckeditor.com:8080/ckeditor5/latest/',
+		'-u', 'https://fake.ckeditor.com:8080/@ssmckinney/ckeditor5/latest/',
 		'-e', '/ckfinder/',
 		'-e', '/api/',
 		'-e', '/assets/'

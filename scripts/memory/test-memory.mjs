@@ -50,7 +50,7 @@ if ( values.build ) {
 		await rm( resolve( ASSETS_DIR, asset ) );
 	}
 
-	console.log( 'Generating `ckeditor5` build...' );
+	console.log( 'Generating `@ssmckinney/ckeditor5` build...' );
 
 	// Generate core build.
 	await generateCKEditor5BrowserBuild();

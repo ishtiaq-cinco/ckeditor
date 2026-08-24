@@ -76,7 +76,7 @@ const OPTION_GROUPS = [
 					'which allows navigating over the partially built documentation.'
 				].join( ' ' )
 			},
-			'skip-ckeditor5': {
+			'skip-@ssmckinney/ckeditor5': {
 				type: 'boolean',
 				default: false,
 				description: 'Skip preparing CKEditor 5 assets (import map sources).'
@@ -170,7 +170,7 @@ export default function parseArguments( args ) {
 		'skip-snippets',
 		'skip-validation',
 		'skip-guides',
-		'skip-ckeditor5',
+		'skip-@ssmckinney/ckeditor5',
 		'skip-commercial',
 		'skip-obfuscation'
 	] );

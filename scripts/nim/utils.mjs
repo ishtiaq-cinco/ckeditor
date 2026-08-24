@@ -45,7 +45,7 @@ export function generateCKEditor5NpmBuild( overrides = {} ) {
 		banner,
 		sourceMap: true,
 		external: [
-			'ckeditor5'
+			'@ssmckinney/ckeditor5'
 		],
 		...overrides
 	} );
@@ -77,7 +77,7 @@ export async function generateCKEditor5PackageBuild( packagePath, overrides = {}
 		stripInternal: false,
 		banner,
 		external: [
-			'ckeditor5',
+			'@ssmckinney/ckeditor5',
 			...Object.keys( {
 				...pkg.dependencies,
 				...pkg.peerDependencies

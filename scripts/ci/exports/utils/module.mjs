@@ -231,11 +231,11 @@ export class Module {
 				}
 
 				// Skip `declare module '...' { ... }` and `declare global { ... }`
-				// except for augmentations for '@ckeditor/ckeditor5-core'.
+				// except for augmentations for '@ssmckinney/ckeditor5-core'.
 				// as it currently does not affect export results.
 				if ( path.isTSModuleDeclaration() ) {
-					// Process module declarations, specifically handling augmentations for @ckeditor/ckeditor5-core.
-					if ( node.id.type === 'StringLiteral' && node.id.value === '@ckeditor/ckeditor5-core' ) {
+					// Process module declarations, specifically handling augmentations for @ssmckinney/ckeditor5-core.
+					if ( node.id.type === 'StringLiteral' && node.id.value === '@ssmckinney/ckeditor5-core' ) {
 						// Process declarations inside the module augmentation.
 						path.traverse( {
 							TSInterfaceDeclaration: interfacePath => {
@@ -760,7 +760,7 @@ export class Module {
 }
 
 function normalizeModuleAlias( name ) {
-	return name.replace( /^ckeditor5(?:-collaboration)?\/src\/(.*)\.js$/, '@ckeditor/ckeditor5-$1' );
+	return name.replace( /^@ssmckinney\/ckeditor5(?:-collaboration)?\/src\/(.*)\.js$/, '@ssmckinney/ckeditor5-$1' );
 }
 
 function isMixinBaseHelperCandidate( declarator ) {

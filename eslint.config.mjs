@@ -22,8 +22,8 @@ const allowedPackageNames = [
 		.filter( Boolean )
 ];
 
-const disallowedPackageImportsPattern = `@ckeditor/ckeditor5-(?!${ allowedPackageNames.join( '|' ) })`;
-const disallowedPackageImportsMessage = 'External `@ckeditor/ckeditor5-*` imports are forbidden.';
+const disallowedPackageImportsPattern = `@ssmckinney/ckeditor5-(?!${ allowedPackageNames.join( '|' ) })`;
+const disallowedPackageImportsMessage = 'External `@ssmckinney/ckeditor5-*` imports are forbidden.';
 
 const disallowedRelativePathImportsPattern = [ './**/src/**', '../**/src/**' ];
 const disallowedRelativePathImportsMessage = 'Imports to the `src` directory from within the `src` directory are forbidden.';
@@ -225,7 +225,7 @@ export default defineConfig( [
 			'ckeditor5-rules/no-default-export': 'error',
 			'ckeditor5-rules/allow-svg-imports-only-in-icons-package': 'error',
 			'ckeditor5-rules/no-literal-dollar-root': [ 'error', {
-				allowedPackages: [ 'ckeditor5-engine', 'ckeditor5-core' ],
+				allowedPackages: [ '@ssmckinney/ckeditor5-engine', '@ssmckinney/ckeditor5-core' ],
 				allowedCalls: [ 'is' ]
 			} ],
 			'ckeditor5-rules/require-explicit-data-context': 'error',

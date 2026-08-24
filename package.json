@@ -1,15 +1,15 @@
 {
-  "name": "ckeditor5-root",
+  "name": "@ssmckinney/ckeditor5-root",
   "private": true,
   "version": "48.3.0",
   "description": "The development environment of CKEditor 5 - the best browser-based rich text editor.",
-  "license": "SEE LICENSE IN LICENSE.md",
+  "license": "GPL-2.0",
   "author": "CKSource (http://cksource.com/)",
   "homepage": "https://ckeditor.com/ckeditor-5",
-  "bugs": "https://github.com/ckeditor/ckeditor5/issues",
+  "bugs": "https://github.com/ssmckinney/ckeditor5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5.git"
+    "url": "https://github.com/ssmckinney/ckeditor5.git"
   },
   "engines": {
     "node": ">=24.11.0",

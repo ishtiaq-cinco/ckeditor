@@ -7,7 +7,7 @@ import { glob } from 'glob';
 import { readFile } from 'node:fs/promises';
 import semver from 'semver';
 import upath from 'upath';
-import isCKEditor5PackageFactory from './isckeditor5packagefactory.mjs';
+import isCKEditor5PackageFactory from './is@ssmckinney/ckeditor5packagefactory.mjs';
 
 /**
  * Validates if the versions of packages and their dependencies in specified directory match the provided version.
@@ -70,11 +70,11 @@ function validateDependenciesMatchVersion( version, pkgJson, skipPackages, isCKE
 	const devDependencies = pkgJson.devDependencies || {};
 	const peerDependencies = pkgJson.peerDependencies || {};
 	const allDependencies = { ...dependencies, ...devDependencies, ...peerDependencies };
-	const ckeditor5Dependencies = Object.entries( allDependencies )
+	const @ssmckinney/ckeditor5Dependencies = Object.entries( allDependencies )
 		.filter( ( [ depName ] ) => !skipPackages.includes( depName ) )
 		.filter( ( [ depName ] ) => isCKEditor5Package( depName ) );
 
-	return ckeditor5Dependencies.reduce( ( accum, [ depName, depVersion ] ) => {
+	return @ssmckinney/ckeditor5Dependencies.reduce( ( accum, [ depName, depVersion ] ) => {
 		const semverMinVersion = semver.minVersion( depVersion ).version;
 
 		return semverMinVersion !== version ?

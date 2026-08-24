@@ -59,7 +59,7 @@ async function main() {
  * @param {Number} options.attempts
  */
 function runTests( { packageName, checkCoverage, attempts = 3 } ) {
-	const shortName = packageName.replace( /^ckeditor5?-/, '' );
+	const shortName = packageName.replace( /^@ssmckinney/ckeditor5?-/, '' );
 
 	const testCommand = [
 		'pnpm',

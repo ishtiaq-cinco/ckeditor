@@ -51,12 +51,12 @@ const tasks = new Listr( [
 					// The `#default` key is used for all packages that do not have own definition.
 					default: [
 						// The CKEditor 5 framework does not define features.
-						'ckeditor5-metadata.json'
+						'@ssmckinney/ckeditor5-metadata.json'
 					]
 				},
 				requireEntryPoint: true,
 				optionalEntryPointPackages: [
-					'ckeditor5'
+					'@ssmckinney/ckeditor5'
 				]
 			} );
 		}
