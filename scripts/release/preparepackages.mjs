@@ -16,9 +16,9 @@ import { confirm } from '@inquirer/prompts';
 
 import updateVersionReferences from './utils/updateversionreferences.mjs';
 import buildPackageUsingRollupCallback from './utils/buildpackageusingrollupcallback.mjs';
-import buildCKEditor5Root from './utils/buildckeditor5root.mjs';
+import buildCKEditor5Root from './utils/build@ssmckinney/ckeditor5root.mjs';
 import parseArguments from './utils/parsearguments.mjs';
-import isCKEditor5PackageFactory from './utils/isckeditor5packagefactory.mjs';
+import isCKEditor5PackageFactory from './utils/is@ssmckinney/ckeditor5packagefactory.mjs';
 import getListrOptions from './utils/getlistroptions.mjs';
 import getCdnVersion from './utils/getcdnversion.mjs';
 import isNonCommittableRelease from './utils/isnoncommittablerelease.mjs';
@@ -140,13 +140,13 @@ const tasks = new Listr( [
 		task: ( ctx, task ) => {
 			return task.newListr( [
 				{
-					title: 'Preparing the "ckeditor5" package files.',
+					title: 'Preparing the "@ssmckinney/ckeditor5" package files.',
 					task: () => {
 						return buildCKEditor5Root();
 					}
 				},
 				{
-					title: 'Building the `dist/` directory for `ckeditor5-*` packages.',
+					title: 'Building the `dist/` directory for `@ssmckinney/ckeditor5-*` packages.',
 					task: ( ctx, task ) => {
 						return releaseTools.executeInParallel( {
 							packagesDirectory: PACKAGES_DIRECTORY,
@@ -178,7 +178,7 @@ const tasks = new Listr( [
 					}
 				},
 				{
-					title: 'Copying `ckeditor5` files to the release directory.',
+					title: 'Copying `@ssmckinney/ckeditor5` files to the release directory.',
 					task: async () => {
 						const filenamesToCopy = [
 							'CHANGELOG.md',
@@ -189,7 +189,7 @@ const tasks = new Listr( [
 						for ( const filename of filenamesToCopy ) {
 							await fs.copy(
 								upath.join( CKEDITOR5_ROOT_PATH, filename ),
-								upath.join( CKEDITOR5_ROOT_PATH, RELEASE_DIRECTORY, 'ckeditor5', filename ),
+								upath.join( CKEDITOR5_ROOT_PATH, RELEASE_DIRECTORY, '@ssmckinney/ckeditor5', filename ),
 								{ overwrite: true }
 							);
 						}
@@ -199,7 +199,7 @@ const tasks = new Listr( [
 					title: 'Moving packages to npm release directory.',
 					task: async () => {
 						const movePromises = ( await fs.readdir( RELEASE_DIRECTORY ) )
-							.filter( packageSlug => packageSlug.startsWith( 'ckeditor5' ) )
+							.filter( packageSlug => packageSlug.startsWith( '@ssmckinney/ckeditor5' ) )
 							.map( packageSlug => {
 								return fs.move(
 									upath.join( RELEASE_DIRECTORY, packageSlug ),
@@ -221,16 +221,16 @@ const tasks = new Listr( [
 						await fs.copy( translationsPath, `./${ RELEASE_CDN_DIRECTORY }/translations/` );
 
 						// CKEditor 5 ZIP.
-						await fs.copy( browserPath, `./${ RELEASE_ZIP_DIRECTORY }/ckeditor5/` );
-						await fs.copy( translationsPath, `./${ RELEASE_ZIP_DIRECTORY }/ckeditor5/translations/` );
+						await fs.copy( browserPath, `./${ RELEASE_ZIP_DIRECTORY }/@ssmckinney/ckeditor5/` );
+						await fs.copy( translationsPath, `./${ RELEASE_ZIP_DIRECTORY }/@ssmckinney/ckeditor5/translations/` );
 						await fs.copy( './scripts/release/assets/zip', `./${ RELEASE_ZIP_DIRECTORY }/` );
-						await fs.copy( `./${ PACKAGES_DIRECTORY }/ckeditor5/LICENSE.md`, `./${ RELEASE_ZIP_DIRECTORY }/LICENSE.md` );
+						await fs.copy( `./${ PACKAGES_DIRECTORY }/@ssmckinney/ckeditor5/LICENSE.md`, `./${ RELEASE_ZIP_DIRECTORY }/LICENSE.md` );
 						await fs.copy( './COPYING.GPL', `./${ RELEASE_ZIP_DIRECTORY }/COPYING.GPL` );
 
 						await fs.ensureDir( `./${ RELEASE_CDN_DIRECTORY }/zip` );
 
 						const cdnVersion = getCdnVersion( cliArguments );
-						const zipName = `ckeditor5-${ cdnVersion === 'staging' ? latestVersion : cdnVersion }`;
+						const zipName = `@ssmckinney/ckeditor5-${ cdnVersion === 'staging' ? latestVersion : cdnVersion }`;
 
 						await tools.shExec(
 							`zip -r ../../${ RELEASE_CDN_DIRECTORY }/zip/${ zipName }.zip ./*`,

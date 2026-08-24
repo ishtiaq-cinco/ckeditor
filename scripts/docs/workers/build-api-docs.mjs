@@ -43,7 +43,7 @@ try {
 			'packages/ckeditor5-*/src/augmentation.ts',
 			'../../packages/ckeditor5-*/src/augmentation.ts',
 
-			// Ignore the main ckeditor5 package.
+			// Ignore the main @ssmckinney/ckeditor5 package.
 			'packages/ckeditor5/**/*'
 		]
 	} );

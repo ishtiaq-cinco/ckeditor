@@ -6,5 +6,5 @@
 export default function getRealImportPath( modulePath ) {
 	const shortPackageName = modulePath.split( '/' )[ 0 ];
 
-	return shortPackageName ? `@ckeditor/ckeditor5-${ shortPackageName }` : modulePath;
+	return shortPackageName ? `@ssmckinney/ckeditor5-${ shortPackageName }` : modulePath;
 }

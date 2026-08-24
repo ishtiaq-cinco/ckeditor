@@ -32,7 +32,7 @@ minimumReleaseAge: 4320 # 3 days
 minimumReleaseAgeExclude:
   - '@ckeditor/*'
   - '@cksource/*'
-  - '*ckeditor5*'
+  - '@ssmckinney/*'
   - 'umberto'
 
 shellEmulator: true

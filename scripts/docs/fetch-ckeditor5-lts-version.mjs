@@ -12,7 +12,7 @@ export default async function fetchCKEditor5LtsVersion( config ) {
 	config.variables ??= {};
 
 	try {
-		const { version } = await npm.manifest( `ckeditor5@${ LTS_TAG }` );
+		const { version } = await npm.manifest( `@ssmckinney/ckeditor5@${ LTS_TAG }` );
 
 		if ( VAR_NAME in config.variables ) {
 			console.warn( `The "${ VAR_NAME }" will be overridden by a hook.` );

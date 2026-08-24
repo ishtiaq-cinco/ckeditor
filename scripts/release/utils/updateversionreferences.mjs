@@ -17,20 +17,20 @@ import { CKEDITOR5_ROOT_PATH } from '../../constants.mjs';
  * flow in `ckeditor5-commercial/scripts/release/preparepackages.mjs`.
  */
 const FILES_TO_UPDATE = [
-	{
-		file: 'README.md',
-		pattern: /(?<=cdn\.ckeditor\.com\/ckeditor5\/)\d+\.\d+\.\d+(?=\/)/,
+		{
+			file: 'README.md',
+			pattern: /(?<=cdn\.ckeditor\.com\/ckeditor5\/)\d+\.\d+\.\d+(?=\/)/,
 		value: ( { version } ) => version,
 		// Update CDN URL only when releasing a stable release.
 		skip: ( { version } ) => !version.match( /^\d+.\d+.\d+$/ )
 	},
-	{
-		file: upath.join( 'packages', 'ckeditor5-utils', 'src', 'version.ts' ),
+		{
+			file: upath.join( 'packages', 'ckeditor5-utils', 'src', 'version.ts' ),
 		pattern: /(?<=const version = ')[^']+(?=';)/,
 		value: ( { version } ) => version
 	},
-	{
-		file: upath.join( 'packages', 'ckeditor5-utils', 'src', 'version.ts' ),
+		{
+			file: upath.join( 'packages', 'ckeditor5-utils', 'src', 'version.ts' ),
 		pattern: /(?<=const releaseDate = new Date\( )\d+, \d+, \d+(?= \);)/,
 		value: ( { releaseDate } ) => `${ releaseDate.getFullYear() }, ${ releaseDate.getMonth() }, ${ releaseDate.getDate() }`
 	}

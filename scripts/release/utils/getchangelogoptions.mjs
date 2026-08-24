@@ -11,11 +11,11 @@ export default function getChangelogOptions( cliArguments ) {
 		cwd: CKEDITOR5_ROOT_PATH,
 		packagesDirectory: PACKAGES_DIRECTORY,
 		shouldIgnoreRootPackage: true,
-		npmPackageToCheck: 'ckeditor5',
+		npmPackageToCheck: '@ssmckinney/ckeditor5',
 		transformScope: name => {
 			const noScopedPackages = [
-				'ckeditor5',
-				'ckeditor5-premium-feature'
+				'@ssmckinney/ckeditor5',
+				'@ssmckinney/ckeditor5-premium-feature'
 			];
 
 			if ( noScopedPackages.includes( name ) ) {
@@ -26,7 +26,7 @@ export default function getChangelogOptions( cliArguments ) {
 			}
 
 			return {
-				displayName: name.replace( /^ckeditor5-/, '' ),
+				displayName: name.replace( /^@ssmckinney/ckeditor5-/, '' ),
 				npmUrl: 'https://www.npmjs.com/package/@ckeditor/' + name
 			};
 		},

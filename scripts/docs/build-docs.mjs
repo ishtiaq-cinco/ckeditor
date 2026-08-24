@@ -83,7 +83,7 @@ try {
 			absolute: true
 		} );
 
-		const destinationPath = upath.join( DOCUMENTATION_PATH, 'ckeditor5', version, 'assets' );
+		const destinationPath = upath.join( DOCUMENTATION_PATH, '@ssmckinney/ckeditor5', version, 'assets' );
 
 		if ( !assetsPaths.length ) {
 			throw new Error( 'CKEditor 5 assets needed to run snippets are not detected. Snippets will not work.' );

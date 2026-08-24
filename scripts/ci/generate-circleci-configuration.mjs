@@ -36,20 +36,20 @@ const FEATURE_BATCH_SIZES = [
 ];
 
 const FRAMEWORK_PACKAGES = [
-	'ckeditor5-clipboard',
-	'ckeditor5-core',
-	'ckeditor5-engine',
-	'ckeditor5-enter',
-	'ckeditor5-icons',
-	'ckeditor5-paragraph',
-	'ckeditor5-select-all',
-	'ckeditor5-typing',
-	'ckeditor5-ui',
-	'ckeditor5-undo',
-	'ckeditor5-upload',
-	'ckeditor5-utils',
-	'ckeditor5-watchdog',
-	'ckeditor5-widget'
+	'@ssmckinney/ckeditor5-clipboard',
+	'@ssmckinney/ckeditor5-core',
+	'@ssmckinney/ckeditor5-engine',
+	'@ssmckinney/ckeditor5-enter',
+	'@ssmckinney/ckeditor5-icons',
+	'@ssmckinney/ckeditor5-paragraph',
+	'@ssmckinney/ckeditor5-select-all',
+	'@ssmckinney/ckeditor5-typing',
+	'@ssmckinney/ckeditor5-ui',
+	'@ssmckinney/ckeditor5-undo',
+	'@ssmckinney/ckeditor5-upload',
+	'@ssmckinney/ckeditor5-utils',
+	'@ssmckinney/ckeditor5-watchdog',
+	'@ssmckinney/ckeditor5-widget'
 ];
 
 const { values: options } = parseArgs( {

@@ -21,7 +21,7 @@ const tasks = new Listr( [
 		title: 'Remove existing files.',
 		task: async () => {
 			await tools.shExec(
-				`aws s3 rm s3://${ CDN_S3_BUCKET }/ckeditor5/${ cdnVersion } --recursive`,
+				`aws s3 rm s3://${ CDN_S3_BUCKET }/@ssmckinney/ckeditor5/${ cdnVersion } --recursive`,
 				{ ...shellModifiers }
 			);
 		}
@@ -31,7 +31,7 @@ const tasks = new Listr( [
 		task: async () => {
 			for ( const [ pattern, value ] of Object.entries( S3_CONTENT_TYPE ) ) {
 				await tools.shExec(
-					`aws s3 cp ./${ RELEASE_CDN_DIRECTORY }/ s3://${ CDN_S3_BUCKET }/ckeditor5/${ cdnVersion }/ ${ S3_COPY_ARGS } \
+					`aws s3 cp ./${ RELEASE_CDN_DIRECTORY }/ s3://${ CDN_S3_BUCKET }/@ssmckinney/ckeditor5/${ cdnVersion }/ ${ S3_COPY_ARGS } \
 					 --exclude "*" --include "${ pattern }" --content-type "${ value }"`,
 					{ ...shellModifiers }
 				);

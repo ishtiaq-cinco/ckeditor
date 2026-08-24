@@ -27,7 +27,7 @@ const npmOwner = 'ckeditor';
 const packages = globSync( GLOB_PATTERNS, { absolute: true, cwd: CKEDITOR5_ROOT_PATH } )
 	.map( packageJsonPath => fs.readJsonSync( packageJsonPath ).name );
 
-const latestPublishedVersion = await releaseTools.getVersionForTag( 'ckeditor5', 'latest' );
+const latestPublishedVersion = await releaseTools.getVersionForTag( '@ssmckinney/ckeditor5', 'latest' );
 
 console.log( `Current \`@latest\` on npm: ${ latestPublishedVersion }.` );
 

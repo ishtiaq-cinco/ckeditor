@@ -13,7 +13,7 @@ import upath from 'upath';
 // This script ensures that the "manual/" test directories are only located in the root
 // of the "tests" directories. Previously, they have been nested deeper, which prevents
 // those tests from being compiled while running tests using the `--files` argument.
-// See: https://github.com/ckeditor/ckeditor5/issues/12251.
+// See: https://github.com/ssmckinney/ckeditor5/issues/12251.
 
 const globPatterns = [
 	'packages/*/tests/*/**/manual/**/*.@(js|ts|html|md)',

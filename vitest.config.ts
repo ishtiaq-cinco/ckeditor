@@ -35,7 +35,7 @@ type TestOptions = NonNullable<ViteUserConfig[ 'test' ]>;
  * wrapper (which spawns Vitest with cwd set to the package directory) and for IDE integrations
  * like WebStorm (which spawn Vitest from the repository root).
  *
- * The `name` option must be the short package name (without the `ckeditor5-` prefix),
+ * The `name` option must be the short package name (without the `@ssmckinney/ckeditor5-` prefix),
  * as the test runner wrapper selects packages by this name.
  * Any other properties are merged into the `test` configuration as overrides.
  */

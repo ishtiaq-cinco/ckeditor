@@ -8,7 +8,7 @@
  *
  * You might be wondering why this script exists. The reason is that in the old installation methods, we
  * allowed customizing icons by overriding individual SVG imports (see this guide for more information
- * https://ckeditor.com/docs/ckeditor5/latest/framework/how-tos.html#how-to-customize-the-ckeditor-5-icons).
+ * https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/framework/how-tos.html#how-to-customize-the-ckeditor-5-icons).
  *
  * That's why from the `src/index.ts` file of this package, we export all SVG icons from the `theme/icons`
  * folder. This unfortunately causes TypeScript to generate typings like this:
@@ -35,7 +35,7 @@ import fs from 'node:fs';
 import upath from 'upath';
 import { CKEDITOR5_PACKAGES_PATH } from './constants.mjs';
 
-const path = upath.join( CKEDITOR5_PACKAGES_PATH, 'ckeditor5-icons', 'dist', 'index.d.ts' );
+const path = upath.join( CKEDITOR5_PACKAGES_PATH, '@ssmckinney/ckeditor5-icons', 'dist', 'index.d.ts' );
 const content = fs.readFileSync( path, 'utf8' );
 
 const updatedContent = content.replace(
