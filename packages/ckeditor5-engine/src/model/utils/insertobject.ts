@@ -15,7 +15,7 @@ import { type Model } from '../model.js';
 import { type ModelRange } from '../range.js';
 import { type ModelWriter } from '../writer.js';
 
-import { CKEditorError, first } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, first } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Inserts an {@glink framework/deep-dive/schema#object-elements object element} at a specific position in the editor content.

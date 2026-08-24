@@ -10,7 +10,7 @@
 import { ViewNode } from './node.js';
 import { ViewText } from './text.js';
 import { ViewTextProxy } from './textproxy.js';
-import { type ArrayOrItem, isIterable, toMap } from '@ckeditor/ckeditor5-utils';
+import { type ArrayOrItem, isIterable, toMap } from '@ssmckinney/ckeditor5-utils';
 import { Matcher, isPatternMatched, type MatcherPattern, type NormalizedPropertyPattern } from './matcher.js';
 import { StylesMap, type Styles, type StyleValue } from './stylesmap.js';
 
@@ -556,7 +556,7 @@ export class ViewElement extends ViewNode {
 
 		// Clone filler offset method.
 		// We can't define this method in a prototype because it's behavior which
-		// is changed by e.g. toWidget() function from ckeditor5-widget. Perhaps this should be one of custom props.
+		// is changed by e.g. toWidget() function from @ssmckinney/ckeditor5-widget. Perhaps this should be one of custom props.
 		cloned.getFillerOffset = this.getFillerOffset;
 
 		// Clone unsafe attributes list.
@@ -1216,7 +1216,7 @@ export class ViewElement extends ViewNode {
 ViewElement.prototype.is = function( this: ViewElement, type: string, name?: string ): boolean {
 	if ( !name ) {
 		return type === 'element' || type === 'view:element' ||
-			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ckeditor/ckeditor5/issues/6529.
+			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ssmckinney/ckeditor5/issues/6529.
 			type === 'node' || type === 'view:node';
 	} else {
 		return name === this.name && ( type === 'element' || type === 'view:element' );

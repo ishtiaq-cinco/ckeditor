@@ -6,11 +6,11 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { Image } from '../../src/image.js';
 import { ImageStyle } from '../../src/imagestyle.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ContextWatchdog } from '@ckeditor/ckeditor5-watchdog';
-import { Context } from '@ckeditor/ckeditor5-core';
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ContextWatchdog } from '@ssmckinney/ckeditor5-watchdog';
+import { Context } from '@ssmckinney/ckeditor5-core';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 describe( 'ImageStyle integration', () => {
 	describe( 'with Watchdog plugin', () => {

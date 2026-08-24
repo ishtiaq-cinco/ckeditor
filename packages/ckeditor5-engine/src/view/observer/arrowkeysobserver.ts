@@ -13,7 +13,7 @@ import { type EditingView } from '../view.js';
 import type { ViewDocumentKeyEventData, ViewDocumentKeyDownEvent } from './keyobserver.js';
 import type { BubblingEvent } from './bubblingemittermixin.js';
 
-import { isArrowKeyCode } from '@ckeditor/ckeditor5-utils';
+import { isArrowKeyCode } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Arrow keys observer introduces the {@link module:engine/view/document~ViewDocument#event:arrowKey `Document#arrowKey`} event.

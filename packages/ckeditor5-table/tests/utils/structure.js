@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 import { TableEditing } from '../../src/tableediting.js';
 
-import { _setModelData, _stringifyModel } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _stringifyModel } from '@ssmckinney/ckeditor5-engine';
 import { modelTable } from '../_utils/utils.js';
 import { cropTableToDimensions, getHorizontallyOverlappingCells, getVerticallyOverlappingCells } from '../../src/utils/structure.js';
 

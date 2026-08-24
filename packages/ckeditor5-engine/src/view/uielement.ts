@@ -9,7 +9,7 @@
 
 import { ViewElement, type ViewElementAttributes } from './element.js';
 import { ViewNode } from './node.js';
-import { CKEditorError, keyCodes } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, keyCodes } from '@ssmckinney/ckeditor5-utils';
 
 import { type EditingView } from './view.js';
 import { type ViewDocument } from './document.js';
@@ -147,7 +147,7 @@ export class ViewUIElement extends ViewElement {
 ViewUIElement.prototype.is = function( this: ViewUIElement, type: string, name?: string ): boolean {
 	if ( !name ) {
 		return type === 'uiElement' || type === 'view:uiElement' ||
-			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ckeditor/ckeditor5/issues/6529.
+			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ssmckinney/ckeditor5/issues/6529.
 			type === 'element' || type === 'view:element' ||
 			type === 'node' || type === 'view:node';
 	} else {

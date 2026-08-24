@@ -96,7 +96,7 @@ describe( 'MarkdownGfmDataProcessor', () => {
 				);
 			} );
 
-			// s/ckeditor5/2
+			// s/@ssmckinney/ckeditor5/2
 			it( 'should handle invalid urls with repeated characters', () => {
 				testDataProcessor(
 					'http://\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'',

@@ -6,10 +6,10 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { range } from 'es-toolkit/compat';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Image, ImageCaption, ImageBlockEditing, ImageInlineEditing } from '@ckeditor/ckeditor5-image';
-import { LinkImage } from '@ckeditor/ckeditor5-link';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Image, ImageCaption, ImageBlockEditing, ImageInlineEditing } from '@ssmckinney/ckeditor5-image';
+import { LinkImage } from '@ssmckinney/ckeditor5-link';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 import { getModelDataWithAttributes } from '../_utils/utils.js';
 import { GeneralHtmlSupport } from '../../src/generalhtmlsupport.js';
@@ -445,7 +445,7 @@ describe( 'ImageElementSupport', () => {
 		// 	// This should also work when we set `attributes: true` but currently there are some
 		// 	// problems related to GHS picking up non-GHS attributes (like src) due to some attributes not
 		// 	// being consumed. For now we make GHS to handle only data-xxx attributes to bypass it.
-		// 	// @see https://github.com/ckeditor/ckeditor5/issues/11532
+		// 	// @see https://github.com/ssmckinney/ckeditor5/issues/11532
 		// 	dataFilter.loadAllowedConfig( [ {
 		// 		name: /^(figure|img)$/,
 		// 		attributes: /^data-.*$/,
@@ -527,7 +527,7 @@ describe( 'ImageElementSupport', () => {
 		// 	// This should also work when we set `attributes: true` but currently there are some
 		// 	// problems related to GHS picking up non-GHS attributes (like src) due to some attributes not
 		// 	// being consumed. For now we make GHS to handle only data-xxx attributes to bypass it.
-		// 	// @see https://github.com/ckeditor/ckeditor5/issues/11532
+		// 	// @see https://github.com/ssmckinney/ckeditor5/issues/11532
 		// 	dataFilter.loadAllowedConfig( [ {
 		// 		name: /^(figure|img)$/,
 		// 		attributes: /^data-.*$/,
@@ -1013,7 +1013,7 @@ describe( 'ImageElementSupport', () => {
 		// 	// This should also work when we set `attributes: true` but currently there are some
 		// 	// problems related to GHS picking up non-GHS attributes (like src) due to some attributes not
 		// 	// being consumed. For now we make GHS to handle only data-xxx attributes to bypass it.
-		// 	// @see https://github.com/ckeditor/ckeditor5/issues/11532
+		// 	// @see https://github.com/ssmckinney/ckeditor5/issues/11532
 		// 	dataFilter.loadAllowedConfig( [ {
 		// 		name: /^(figure|img|a)$/,
 		// 		attributes: /^data-.*$/,
@@ -1120,7 +1120,7 @@ describe( 'ImageElementSupport', () => {
 		// 	// This should also work when we set `attributes: true` but currently there are some
 		// 	// problems related to GHS picking up non-GHS attributes (like src) due to some attributes not
 		// 	// being consumed. For now we make GHS to handle only data-xxx attributes to bypass it.
-		// 	// @see https://github.com/ckeditor/ckeditor5/issues/11532
+		// 	// @see https://github.com/ssmckinney/ckeditor5/issues/11532
 		// 	dataFilter.loadAllowedConfig( [ {
 		// 		name: /^(figure|img|a)$/,
 		// 		attributes: /^data-.*$/,
@@ -1547,7 +1547,7 @@ describe( 'ImageElementSupport', () => {
 		// 	// This should also work when we set `attributes: true` but currently there are some
 		// 	// problems related to GHS picking up non-GHS attributes (like src) due to some attributes not
 		// 	// being consumed. For now we make GHS to handle only data-xxx attributes to bypass it.
-		// 	// @see https://github.com/ckeditor/ckeditor5/issues/11532
+		// 	// @see https://github.com/ssmckinney/ckeditor5/issues/11532
 		// 	dataFilter.loadAllowedConfig( [ {
 		// 		name: /^(figure|img|figcaption)$/,
 		// 		attributes: /^data-.*$/,
@@ -1654,7 +1654,7 @@ describe( 'ImageElementSupport', () => {
 		// 	// This should also work when we set `attributes: true` but currently there are some
 		// 	// problems related to GHS picking up non-GHS attributes (like src) due to some attributes not
 		// 	// being consumed. For now we make GHS to handle only data-xxx attributes to bypass it.
-		// 	// @see https://github.com/ckeditor/ckeditor5/issues/11532
+		// 	// @see https://github.com/ssmckinney/ckeditor5/issues/11532
 		// 	dataFilter.loadAllowedConfig( [ {
 		// 		name: /^(figure|img|figcaption)$/,
 		// 		attributes: /^data-.*$/,
@@ -1908,7 +1908,7 @@ describe( 'ImageElementSupport', () => {
 			);
 		} );
 
-		// See: https://github.com/ckeditor/ckeditor5/issues/10703.
+		// See: https://github.com/ssmckinney/ckeditor5/issues/10703.
 		it( 'should hoist an image with attributes out of a <dir> element as a block image', () => {
 			dataFilter.loadAllowedConfig( [ {
 				name: 'img',
@@ -1936,7 +1936,7 @@ describe( 'ImageElementSupport', () => {
 			expect( editor.getData() ).toBe( '<figure class="image"><img data-foo="bar"></figure>' );
 		} );
 
-		// See: https://github.com/ckeditor/ckeditor5/issues/10703.
+		// See: https://github.com/ssmckinney/ckeditor5/issues/10703.
 		it( 'should not crash when an <img> with attributes cannot be converted to any model element', () => {
 			// Force the `<img>` to have no valid model representation: disallow both image types and the GHS generic
 			// `<htmlImg>` fallback. The upcast then yields a `null` model range. The GHS image attribute converter
@@ -2044,7 +2044,7 @@ describe( 'ImageElementSupport', () => {
 		// 	} );
 
 		// 	// TODO: this should pass, but image attributes are incorrectly applied to the span in the editing view.
-		// 	// Should be fixed by https://github.com/ckeditor/ckeditor5/issues/11532
+		// 	// Should be fixed by https://github.com/ssmckinney/ckeditor5/issues/11532
 		// 	// expect(_getViewData( editor.editing.view, { withoutSelection: true } ) ).toBe(
 		// 	// 	'<p data-paragraph="paragraph">' +
 		// 	// 		'<span class="ck-widget image-inline" contenteditable="false">' +
@@ -2440,7 +2440,7 @@ describe( 'ImageElementSupport', () => {
 		// 	} );
 
 		// 	// TODO: this should pass, but image attributes are incorrectly applied to the span in the editing view.
-		// 	// Should be fixed by https://github.com/ckeditor/ckeditor5/issues/11532
+		// 	// Should be fixed by https://github.com/ssmckinney/ckeditor5/issues/11532
 		// 	// expect(_getViewData( editor.editing.view, { withoutSelection: true } ) ).toBe(
 		// 	// 	'<p data-paragraph="paragraph">' +
 		// 	// 		'<span class="foo" data-link="zzz" href="www.example.com" style="background:red;color:pink">' +

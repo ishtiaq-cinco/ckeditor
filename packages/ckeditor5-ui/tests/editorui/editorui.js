@@ -15,9 +15,9 @@ import { EvaluationBadge } from '../../src/editorui/evaluationbadge.js';
 import { AriaLiveAnnouncer } from '../../src/arialiveannouncer.js';
 import { EditorUIView, InlineEditableUIView, MenuBarView, View } from '../../src/index.js';
 
-import { FocusTracker, keyCodes, env } from '@ckeditor/ckeditor5-utils';
-import { Editor } from '@ckeditor/ckeditor5-core';
-import { ClassicTestEditor, ClassicTestEditorUI } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { FocusTracker, keyCodes, env } from '@ssmckinney/ckeditor5-utils';
+import { Editor } from '@ssmckinney/ckeditor5-core';
+import { ClassicTestEditor, ClassicTestEditorUI } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 class MyEditorUI extends EditorUI {
 	constructor( editor ) {
@@ -1028,7 +1028,7 @@ describe( 'EditorUI', () => {
 					secondToolbarWithSetupAndCleanup.element.remove();
 				} );
 
-				// https://github.com/ckeditor/ckeditor5/issues/12339
+				// https://github.com/ssmckinney/ckeditor5/issues/12339
 				it( 'should work if the focus was already in the toolbar (e.g. a user clicked an item)', () => {
 					ui.focusTracker.focusedElement = visibleContextualToolbar.element;
 

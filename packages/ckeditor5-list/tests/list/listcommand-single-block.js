@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 import { ListCommand } from '../../src/list/listcommand.js';
 import { ListEditing } from '../../src/list/listediting.js';
 
 import { stubUid } from './_utils/uid.js';
 import { modelList } from './_utils/utils.js';
 
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'ListCommand (multiBlock=false)', () => {
 	let editor, command, model, root, changedBlocks;

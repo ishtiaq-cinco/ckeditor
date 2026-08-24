@@ -7,7 +7,7 @@
  * @module list/listproperties/listpropertiesediting
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import type {
 	Consumables,
@@ -16,7 +16,7 @@ import type {
 	ModelItem,
 	UpcastElementEvent,
 	ViewElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import {
 	ListEditing,
@@ -45,8 +45,28 @@ import {
 import type { ListIndentCommandAfterExecuteEvent } from '../list/listindentcommand.js';
 import type { ListPropertiesConfig } from '../listconfig.js';
 import { getNormalizedConfig } from './utils/config.js';
+import { ListMarkerColorCommand } from './listmarkercolorcommand.js';
+import { ListColumnsCommand } from './listcolumnscommand.js';
+import {
+	createListMarkerStyles,
+	getListColumnsClass,
+	getListColumnsFromClasses,
+	getListMarkerClass,
+	getListMarkerFromClasses,
+	isListMarkerStyle,
+	LIST_COLUMN_COUNTS,
+	LIST_MARKERS
+} from './utils/markers.js';
+
+const MARKER_STYLE_ELEMENT_ID = 'ck-list-marker-styles';
 
 const DEFAULT_LIST_TYPE = 'default';
+
+/**
+ * The custom property carrying the marker colour. It sits on the list rather than on the item so that a whole
+ * list can be recoloured in one attribute, and `::marker` reads it back through `var()`.
+ */
+const MARKER_COLOR_PROPERTY = '--ck-list-marker-color';
 
 /**
  * The document list properties engine feature.
@@ -114,6 +134,8 @@ export class ListPropertiesEditing extends Plugin {
 
 		const enabledProperties = editor.config.get( 'list.properties' )!;
 		const strategies = createAttributeStrategies( enabledProperties );
+
+		this._injectMarkerStyles();
 
 		for ( const strategy of strategies ) {
 			strategy.addCommand( editor );
@@ -230,6 +252,28 @@ export class ListPropertiesEditing extends Plugin {
 			}
 		} );
 	}
+
+	/**
+	 * Injects the generated marker rules into the document.
+	 *
+	 * These are *content* styles, not editor chrome: any page rendering the saved HTML needs them too, or a list
+	 * with a marker class falls back to a plain bullet. They are generated from the SVGs rather than shipped as a
+	 * static stylesheet so the two cannot drift apart. Use
+	 * {@link module:list/listproperties/utils/markers~createListMarkerStyles} to obtain the same string for a
+	 * published page or a preview iframe.
+	 */
+	private _injectMarkerStyles(): void {
+		if ( typeof document === 'undefined' || document.getElementById( MARKER_STYLE_ELEMENT_ID ) ) {
+			return;
+		}
+
+		const style = document.createElement( 'style' );
+
+		style.id = MARKER_STYLE_ELEMENT_ID;
+		style.textContent = createListMarkerStyles();
+
+		document.head.appendChild( style );
+	}
 }
 
 /**
@@ -328,6 +372,22 @@ function createAttributeStrategies( enabledProperties: ListPropertiesConfig ) {
 			},
 
 			setAttributeOnDowncast( writer, listStyle, element ) {
+				// Whatever marker was in force before goes: only one can apply at a time, and the style being
+				// set now may well not be a marker at all.
+				for ( const marker of LIST_MARKERS ) {
+					writer.removeClass( getListMarkerClass( marker.name ), element );
+				}
+
+				// Markers drawn from an SVG have no `list-style-type` keyword to write, so they travel as a class
+				// that the generated stylesheet paints. See `module:list/listproperties/utils/markers`.
+				if ( listStyle && isListMarkerStyle( listStyle as string ) ) {
+					writer.removeStyle( 'list-style-type', element );
+					writer.removeAttribute( 'type', element );
+					writer.addClass( getListMarkerClass( listStyle as string ), element );
+
+					return;
+				}
+
 				if ( listStyle && listStyle !== DEFAULT_LIST_TYPE ) {
 					if ( useAttribute ) {
 						const value = getTypeAttributeFromListStyleType( listStyle as string );
@@ -349,6 +409,14 @@ function createAttributeStrategies( enabledProperties: ListPropertiesConfig ) {
 			},
 
 			getAttributeOnUpcast( listParent ) {
+				// Checked before `list-style-type`, so a `<ul>` carrying both keeps the marker it was saved with
+				// rather than the plain fallback another editor or a sanitizer may have added alongside it.
+				const marker = getListMarkerFromClasses( listParent.getClassNames() );
+
+				if ( marker ) {
+					return marker;
+				}
+
 				const style = listParent.getStyle( 'list-style-type' );
 
 				if ( style ) {
@@ -362,6 +430,80 @@ function createAttributeStrategies( enabledProperties: ListPropertiesConfig ) {
 				}
 
 				return DEFAULT_LIST_TYPE;
+			}
+		} );
+	}
+
+	if ( enabledProperties.markerColor ) {
+		strategies.push( {
+			attributeName: 'listMarkerColor',
+
+			// The empty string rather than `null`, because the model treats setting an attribute to `null` as
+			// removing it — the post-fixer would then set the default, find the attribute still absent, and set
+			// it again forever. An empty string is stored, so "no colour chosen" is a state the list can be in.
+			defaultValue: '',
+			viewConsumables: { styles: MARKER_COLOR_PROPERTY },
+
+			addCommand( editor ) {
+				editor.commands.add( 'listMarkerColor', new ListMarkerColorCommand( editor ) );
+			},
+
+			appliesToListItem() {
+				// Both list types: `::marker` colours the numbers of an ordered list as readily as the bullets
+				// of an unordered one.
+				return true;
+			},
+
+			hasValidAttribute( item ) {
+				return item.hasAttribute( 'listMarkerColor' );
+			},
+
+			setAttributeOnDowncast( writer, listMarkerColor, element ) {
+				if ( listMarkerColor ) {
+					writer.setStyle( MARKER_COLOR_PROPERTY, listMarkerColor as string, element );
+				} else {
+					writer.removeStyle( MARKER_COLOR_PROPERTY, element );
+				}
+			},
+
+			getAttributeOnUpcast( listParent ) {
+				return listParent.getStyle( MARKER_COLOR_PROPERTY ) || '';
+			}
+		} );
+	}
+
+	if ( enabledProperties.columns ) {
+		strategies.push( {
+			attributeName: 'listColumns',
+			defaultValue: 1,
+			viewConsumables: { classes: LIST_COLUMN_COUNTS.filter( count => count > 1 ).map( getListColumnsClass ) },
+
+			addCommand( editor ) {
+				editor.commands.add( 'listColumns', new ListColumnsCommand( editor ) );
+			},
+
+			appliesToListItem() {
+				return true;
+			},
+
+			hasValidAttribute( item ) {
+				return item.hasAttribute( 'listColumns' );
+			},
+
+			setAttributeOnDowncast( writer, listColumns, element ) {
+				// Every column class is cleared first: the value being set now may be a different count, or the
+				// stacked default, which carries no class at all.
+				for ( const count of LIST_COLUMN_COUNTS ) {
+					writer.removeClass( getListColumnsClass( count ), element );
+				}
+
+				if ( ( listColumns as number ) > 1 ) {
+					writer.addClass( getListColumnsClass( listColumns as number ), element );
+				}
+			},
+
+			getAttributeOnUpcast( listParent ) {
+				return getListColumnsFromClasses( listParent.getClassNames() );
 			}
 		} );
 	}
@@ -440,13 +582,15 @@ declare module '../list/listediting' {
 		listStyle?: string;
 		listStart?: number;
 		listReversed?: boolean;
+		listMarkerColor?: string;
+		listColumns?: number;
 	}
 }
 
 declare module '../list/utils/model' {
 	interface ListElement {
-		getAttribute( key: 'listStyle' ): string;
-		getAttribute( key: 'listStart' ): number;
+		getAttribute( key: 'listStyle' | 'listMarkerColor' ): string;
+		getAttribute( key: 'listStart' | 'listColumns' ): number;
 		getAttribute( key: 'listReversed' ): boolean;
 	}
 }

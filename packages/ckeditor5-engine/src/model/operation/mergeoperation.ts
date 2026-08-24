@@ -17,7 +17,7 @@ import { type ModelDocument } from '../document.js';
 import { type ModelElement } from '../element.js';
 import type { ModelSelectable } from '../selection.js';
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Operation to merge two {@link module:engine/model/element~ModelElement elements}.

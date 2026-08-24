@@ -7,7 +7,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { addKeyboardHandlingForGrid } from '../../src/bindings/addkeyboardhandlingforgrid.js';
 import { View } from '../../src/view.js';
 import { ButtonView } from '../../src/button/buttonview.js';
-import { KeystrokeHandler, FocusTracker, Locale, keyCodes } from '@ckeditor/ckeditor5-utils';
+import { KeystrokeHandler, FocusTracker, Locale, keyCodes } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'addKeyboardHandlingForGrid()', () => {
 	let view, keystrokes, focusTracker, gridElementsCollection;

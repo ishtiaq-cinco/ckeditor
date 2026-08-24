@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { MarkdownGfmDataProcessor } from '@ckeditor/ckeditor5-markdown-gfm';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { ImageInlineEditing } from '@ckeditor/ckeditor5-image';
-import { ListEditing, ListPropertiesEditing } from '@ckeditor/ckeditor5-list';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { MarkdownGfmDataProcessor } from '@ssmckinney/ckeditor5-markdown-gfm';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { ImageInlineEditing } from '@ssmckinney/ckeditor5-image';
+import { ListEditing, ListPropertiesEditing } from '@ssmckinney/ckeditor5-list';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { CodeBlockUI } from '../src/codeblockui.js';
 import { CodeBlockEditing } from '../src/codeblockediting.js';

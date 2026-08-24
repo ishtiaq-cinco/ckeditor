@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { AutoLink, LinkImage, Bookmark, CKBox, CKBoxImageEdit, PictureEditing, ImageInsert, ImageResize, AutoImage } from 'ckeditor5';
+import { AutoLink, LinkImage, Bookmark, CKBox, CKBoxImageEdit, PictureEditing, ImageInsert, ImageResize, AutoImage } from '@ssmckinney/ckeditor5';
 import {
 	TOKEN_URL,
 	CS_CONFIG,

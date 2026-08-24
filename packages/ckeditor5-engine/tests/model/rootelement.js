@@ -7,7 +7,7 @@ import { describe, it, expect, beforeAll } from 'vitest';
 import { Model } from '../../src/model/model.js';
 import { ModelElement } from '../../src/model/element.js';
 import { ModelRootElement } from '../../src/model/rootelement.js';
-import { count } from '@ckeditor/ckeditor5-utils';
+import { count } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'RootElement', () => {
 	describe( 'constructor()', () => {

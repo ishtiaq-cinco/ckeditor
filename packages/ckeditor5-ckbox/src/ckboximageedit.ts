@@ -7,7 +7,7 @@
  * @module ckbox/ckboximageedit
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import { CKBoxImageEditEditing } from './ckboximageedit/ckboximageeditediting.js';
 import { CKBoxImageEditUI } from './ckboximageedit/ckboximageeditui.js';

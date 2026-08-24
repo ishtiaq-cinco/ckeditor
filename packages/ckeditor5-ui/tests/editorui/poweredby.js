@@ -4,14 +4,14 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Editor } from '@ckeditor/ckeditor5-core';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Rect } from '@ckeditor/ckeditor5-utils';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
-import { generateLicenseKey } from '@ckeditor/ckeditor5-core/tests/_utils/generatelicensekey.js';
+import { Editor } from '@ssmckinney/ckeditor5-core';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { SourceEditing } from '@ssmckinney/ckeditor5-source-editing';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Rect } from '@ssmckinney/ckeditor5-utils';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { generateLicenseKey } from '@ssmckinney/ckeditor5-core/tests/_utils/generatelicensekey.js';
 
 import { EditorUI } from '../../src/editorui/editorui.js';
 import { BalloonPanelView } from '../../src/index.js';

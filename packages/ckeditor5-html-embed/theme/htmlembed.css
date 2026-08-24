@@ -20,13 +20,13 @@
 	background-color: var(--ck-color-base-foreground);
 	/* Give the embed some air. */
 	/* The first value should be equal to --ck-spacing-large variable if used in the editor context
-	to avoid the content jumping (See https://github.com/ckeditor/ckeditor5/issues/9825). */
+	to avoid the content jumping (See https://github.com/ssmckinney/ckeditor5/issues/9825). */
 	margin: 0.9em auto;
 	position: relative;
 	display: flow-root;
 
 	/* Give the html embed some minimal width in the content to prevent them
-	from being "squashed" in tight spaces, e.g. in table cells (https://github.com/ckeditor/ckeditor5/issues/8331) */
+	from being "squashed" in tight spaces, e.g. in table cells (https://github.com/ssmckinney/ckeditor5/issues/8331) */
 	min-width: 15em;
 
 	&:not(.ck-widget_selected):not(:hover) {
@@ -141,7 +141,7 @@
 			background: var(--ck-html-embed-source-disabled-background);
 			color: var(--ck-html-embed-source-disabled-color);
 
-			/* Safari needs this for the proper text color in disabled input (https://github.com/ckeditor/ckeditor5/issues/8320). */
+			/* Safari needs this for the proper text color in disabled input (https://github.com/ssmckinney/ckeditor5/issues/8320). */
 			-webkit-text-fill-color: var(--ck-html-embed-source-disabled-color);
 			opacity: 1;
 		}

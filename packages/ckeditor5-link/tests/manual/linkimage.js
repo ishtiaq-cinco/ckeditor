@@ -3,14 +3,14 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
-import { ImageUpload } from '@ckeditor/ckeditor5-image';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { EasyImage } from '@ssmckinney/ckeditor5-easy-image';
+import { ImageUpload } from '@ssmckinney/ckeditor5-image';
 import { LinkImage } from '../../src/linkimage.js';
 
-import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
+import { CS_CONFIG } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
 
 ClassicEditor
 	.create( {

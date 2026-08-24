@@ -1,7 +1,7 @@
 CKEditor&nbsp;5
 ===================================
 
-This is a placeholder `README.md` for the `ckeditor5` package on npm.
+This is a placeholder `README.md` for the `@ssmckinney/ckeditor5` package on npm.
 
 The actual README is sourced from the main CKEditor 5 repository and will replace this file during the release process.
 

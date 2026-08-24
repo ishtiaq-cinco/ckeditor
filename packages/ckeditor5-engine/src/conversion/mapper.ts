@@ -13,7 +13,7 @@ import { ModelRange } from '../model/range.js';
 import { ViewPosition } from '../view/position.js';
 import { ViewRange } from '../view/range.js';
 
-import { CKEditorError, EmitterMixin, type GetCallback, type EmitterMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, EmitterMixin, type GetCallback, type EmitterMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 
 import { type ViewDocumentFragment } from '../view/documentfragment.js';
 import { type ViewElement } from '../view/element.js';

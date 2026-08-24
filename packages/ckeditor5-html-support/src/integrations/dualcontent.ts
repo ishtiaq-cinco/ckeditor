@@ -7,9 +7,9 @@
  * @module html-support/integrations/dualcontent
  */
 
-import type { ViewElement } from '@ckeditor/ckeditor5-engine';
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { priorities } from '@ckeditor/ckeditor5-utils';
+import type { ViewElement } from '@ssmckinney/ckeditor5-engine';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { priorities } from '@ssmckinney/ckeditor5-utils';
 
 import {
 	modelToViewBlockAttributeConverter,
@@ -129,7 +129,7 @@ export class DualContentModelElementSupport extends Plugin {
 
 		// Traversing the viewElement subtree looking for block elements.
 		// Especially for the cases like <div><a href="#"><p>foo</p></a></div>.
-		// https://github.com/ckeditor/ckeditor5/issues/11513
+		// https://github.com/ssmckinney/ckeditor5/issues/11513
 		for ( const viewItem of view.createRangeIn( viewElement ).getItems() ) {
 			if ( viewItem.is( 'element' ) && blockElements.includes( viewItem.name ) ) {
 				return true;

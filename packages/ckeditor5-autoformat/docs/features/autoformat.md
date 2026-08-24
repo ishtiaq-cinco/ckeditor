@@ -50,7 +50,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, Autoformat } from 'ckeditor5';
+import { ClassicEditor, Autoformat } from '@ssmckinney/ckeditor5';
 
 ClassicEditor.
 	create( {
@@ -76,8 +76,8 @@ You can use these tools to create your own autoformatters. Check the [`Autoforma
 ## Known issues
 
 While the autoformatting feature is stable and ready to use, some issues were reported for it. Feel free to upvote 👍&nbsp; them on GitHub if they are important for you:
-* Pasting Markdown-formatted content does not automatically convert the pasted syntax markers into properly formatted content. GitHub issues: [#2321](https://github.com/ckeditor/ckeditor5/issues/2321), [#2322](https://github.com/ckeditor/ckeditor5/issues/2322).
-* Setting a specific code block language is not supported yet (it defaults to plain text on insertion). GitHub issue: [#8598](https://github.com/ckeditor/ckeditor5/issues/8598).
+* Pasting Markdown-formatted content does not automatically convert the pasted syntax markers into properly formatted content. GitHub issues: [#2321](https://github.com/ssmckinney/ckeditor5/issues/2321), [#2322](https://github.com/ssmckinney/ckeditor5/issues/2322).
+* Setting a specific code block language is not supported yet (it defaults to plain text on insertion). GitHub issue: [#8598](https://github.com/ssmckinney/ckeditor5/issues/8598).
 
 ## Related features
 

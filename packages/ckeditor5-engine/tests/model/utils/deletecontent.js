@@ -1489,7 +1489,7 @@ describe( 'DataController utils', () => {
 				'<blockLimit><paragraph>foo []</paragraph></blockLimit><blockLimit><paragraph> qux</paragraph></blockLimit>'
 			);
 
-			// See: https://github.com/ckeditor/ckeditor5/issues/1265.
+			// See: https://github.com/ssmckinney/ckeditor5/issues/1265.
 			it( 'should proper merge two elements which are inside limit element', () => {
 				_setModelData( model,
 					'<blockLimit>' +

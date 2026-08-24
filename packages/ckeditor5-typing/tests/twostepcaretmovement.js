@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { DomEmitterMixin, EventInfo, keyCodes, toArray, priorities } from '@ckeditor/ckeditor5-utils';
-import { ViewDocumentDomEventData, ModelPosition, _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { DomEmitterMixin, EventInfo, keyCodes, toArray, priorities } from '@ssmckinney/ckeditor5-utils';
+import { ViewDocumentDomEventData, ModelPosition, _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
 import { TwoStepCaretMovement } from '../src/twostepcaretmovement.js';
 
 import { Input } from '../src/input.js';
@@ -183,7 +183,7 @@ describe( 'TwoStepCaretMovement', () => {
 			] );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/937
+		// https://github.com/ssmckinney/ckeditor5/issues/937
 		it( 'should not require two-steps between unrelated attributes inside the initial attribute', () => {
 			_setModelData( model, '<$text a="1">fo[]o</$text><$text a="1" b="2">bar</$text><$text a="1">baz</$text>' );
 
@@ -398,7 +398,7 @@ describe( 'TwoStepCaretMovement', () => {
 			] );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/937
+		// https://github.com/ssmckinney/ckeditor5/issues/937
 		it( 'should not require two-steps between unrelated attributes inside the initial attribute', () => {
 			_setModelData( model, '<$text a="1">foo</$text><$text a="1" b="2">bar</$text><$text a="1">b[]az</$text>' );
 
@@ -583,7 +583,7 @@ describe( 'TwoStepCaretMovement', () => {
 		} );
 
 		// https://github.com/ckeditor/ckeditor5-engine/issues/1346
-		// https://github.com/ckeditor/ckeditor5/issues/946
+		// https://github.com/ssmckinney/ckeditor5/issues/946
 		it( 'should correctly re-renter the attribute', () => {
 			_setModelData( model, 'fo[]o <$text a="1">bar</$text>' );
 
@@ -616,7 +616,7 @@ describe( 'TwoStepCaretMovement', () => {
 			] );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/922
+		// https://github.com/ssmckinney/ckeditor5/issues/922
 		it( 'should not lose the new attribute when typing (after)', () => {
 			_setModelData( model, '<$text a="1">x[]</$text>' );
 
@@ -644,7 +644,7 @@ describe( 'TwoStepCaretMovement', () => {
 			expect( getSelectionAttributesArray( selection ) ).toEqual( [ 'b' ] );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/922
+		// https://github.com/ssmckinney/ckeditor5/issues/922
 		it( 'should not lose the new attribute when typing (before)', () => {
 			_setModelData( model, '<$text a="1">[]x</$text>' );
 
@@ -853,7 +853,7 @@ describe( 'TwoStepCaretMovement', () => {
 		} );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/1016
+	// https://github.com/ssmckinney/ckeditor5/issues/1016
 	describe( 'mouse click a the edge of tow-step node', () => {
 		it( 'should insert content after the two-step node', () => {
 			_setModelData( model, '<paragraph><$text a="1">foo[]</$text></paragraph>' );
@@ -1014,7 +1014,7 @@ describe( 'TwoStepCaretMovement', () => {
 			expect( _getModelData( model ) ).toEqual( '<paragraph><$text bold="true">foo[]</$text></paragraph>' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/17171
+		// https://github.com/ssmckinney/ckeditor5/issues/17171
 		it( 'should handle use touchstart event to determine behavior if mousedown is fired after selectionchange on iOS', () => {
 			_setModelData( model, '<paragraph><$text a="1">foo[]</$text></paragraph>' );
 
@@ -1066,7 +1066,7 @@ describe( 'TwoStepCaretMovement', () => {
 		} );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/6053
+	// https://github.com/ssmckinney/ckeditor5/issues/6053
 	describe( 'selection attribute management on paste', () => {
 		beforeEach( () => {
 			model.schema.extend( '$text', { allowAttributes: 'bold' } );
@@ -1177,7 +1177,7 @@ describe( 'TwoStepCaretMovement', () => {
 		} );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/7521
+	// https://github.com/ssmckinney/ckeditor5/issues/7521
 	describe( 'removing a character before the link element', () => {
 		beforeEach( () => {
 			vi.spyOn( editor.editing.view, 'scrollToTheSelection' ).mockImplementation( () => {} );

@@ -5,7 +5,7 @@
 
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { createEditabilityChecker } from '../../src/ckboximageedit/utils.js';
-import { ModelElement } from '@ckeditor/ckeditor5-engine';
+import { ModelElement } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'image edit utils', () => {
 	afterEach( () => {

@@ -333,7 +333,7 @@ describe( 'DowncastDispatcher', () => {
 			expect( dispatcher._conversionApi.consumable ).toBeUndefined();
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/15411.
+		// https://github.com/ssmckinney/ckeditor5/issues/15411.
 		it( 'should properly handle markers in reconverted elements', () => {
 			// This test is very silly, but it is very difficult to test it when you have to operate on mocks and stubs :/.
 			// There are simply too many things to set up and mock.

@@ -96,7 +96,7 @@ function selectionPostFixer( writer: ModelWriter, model: Model ): boolean {
 		// for instance, would destroy the selection attributes. Let's make sure that the post-fixer
 		// actually worked first before setting a new selection.
 		//
-		// https://github.com/ckeditor/ckeditor5/issues/6693
+		// https://github.com/ssmckinney/ckeditor5/issues/6693
 		if ( correctedRange && !correctedRange.isEqual( modelRange ) ) {
 			ranges.push( correctedRange );
 			wasFixed = true;

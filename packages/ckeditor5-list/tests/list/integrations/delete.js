@@ -7,16 +7,16 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 import { ListEditing } from '../../../src/list/listediting.js';
 
-import { Delete } from '@ckeditor/ckeditor5-typing';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { Widget, toWidget } from '@ckeditor/ckeditor5-widget';
+import { Delete } from '@ssmckinney/ckeditor5-typing';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { Widget, toWidget } from '@ssmckinney/ckeditor5-widget';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import {
 	_getModelData,
 	_setModelData,
-	ViewDocumentDomEventData, BubblingEventInfo } from '@ckeditor/ckeditor5-engine';
+	ViewDocumentDomEventData, BubblingEventInfo } from '@ssmckinney/ckeditor5-engine';
 
 import { stubUid } from '../_utils/uid.js';
 import { modelList } from '../_utils/utils.js';

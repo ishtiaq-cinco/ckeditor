@@ -7,10 +7,10 @@ import { describe, it, expect, vi, beforeAll, afterAll, beforeEach, afterEach } 
 import { CodeBlockEditing } from '../src/codeblockediting.js';
 import { CodeBlockUI } from '../src/codeblockui.js';
 
-import { IconCodeBlock } from '@ckeditor/ckeditor5-icons';
+import { IconCodeBlock } from '@ssmckinney/ckeditor5-icons';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { _clearTranslations, add as addTranslations } from '@ckeditor/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { _clearTranslations, add as addTranslations } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'CodeBlockUI', () => {
 	let editor, command, element, languagesListView;

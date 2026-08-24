@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
 import { SelectAllEditing } from '../src/selectallediting.js';
 import { SelectAllCommand } from '../src/selectallcommand.js';
-import { env, keyCodes } from '@ckeditor/ckeditor5-utils';
+import { env, keyCodes } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'SelectAllEditing', () => {
 	let editor, viewDocument;

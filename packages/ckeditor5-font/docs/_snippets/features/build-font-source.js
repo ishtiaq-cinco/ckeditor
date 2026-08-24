@@ -12,7 +12,7 @@ import {
 	ImageResize,
 	AutoImage,
 	LinkImage
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 import { ClassicEditor } from '@snippets/index.js';
 
 export class FontEditor extends ClassicEditor {

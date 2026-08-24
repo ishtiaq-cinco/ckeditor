@@ -5,12 +5,12 @@
 
 import { beforeAll, afterAll, beforeEach, afterEach, describe, it, expect, vi } from 'vitest';
 import { TestColorPlugin } from '../_utils/testcolorplugin.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ColorGridView } from '@ckeditor/ckeditor5-ui';
-import { global, add as addTranslations, _clearTranslations } from '@ckeditor/ckeditor5-utils';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ColorGridView } from '@ssmckinney/ckeditor5-ui';
+import { global, add as addTranslations, _clearTranslations } from '@ssmckinney/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'FontColorUIBase', () => {
 	const testColorConfig = {
@@ -781,7 +781,7 @@ describe( 'FontColorUIBase', () => {
 		} );
 	} );
 
-	// Issue: https://github.com/ckeditor/ckeditor5/issues/15580
+	// Issue: https://github.com/ssmckinney/ckeditor5/issues/15580
 	// For simplicity we create editor with two same buttons in toolbar
 	// instead overcomplicating stuff with ballon toolbar.
 	describe( 'toolbar with two same instance of testColor', () => {

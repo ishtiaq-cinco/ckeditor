@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { Editor } from '@ckeditor/ckeditor5-core';
+import { Editor } from '@ssmckinney/ckeditor5-core';
 import { ComponentFactory } from '../src/componentfactory.js';
 
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'ComponentFactory', () => {
 	let editor, factory;

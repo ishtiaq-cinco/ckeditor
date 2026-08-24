@@ -12,7 +12,7 @@ The {@link module:link/linkimage~LinkImage} plugin lets you use images as links.
 
 ## Demo
 
-Click one of the images to open the contextual toolbar. Use the link icon {@icon @ckeditor/ckeditor5-icons/theme/icons/link.svg Link} to add a link to the image. After you do this, an icon will appear in the top-right corner of the image, indicating there is a link attached to it.
+Click one of the images to open the contextual toolbar. Use the link icon {@icon @ssmckinney/ckeditor5-icons/theme/icons/link.svg Link} to add a link to the image. After you do this, an icon will appear in the top-right corner of the image, indicating there is a link attached to it.
 
 {@snippet features/image-link}
 
@@ -54,7 +54,7 @@ An inline image code would look more like this:
 To enable this feature, you need to load the {@link module:link/linkimage~LinkImage} plugin. Read more in the {@link features/images-installation installation guide}.
 
 <info-box info>
-	The {@link module:link/linkimage~LinkImage} plugin is available in the {@link api/link `@ckeditor/ckeditor5-link`} package.
+	The {@link module:link/linkimage~LinkImage} plugin is available in the {@link api/link `@ssmckinney/ckeditor5-link`} package.
 </info-box>
 
 ## Common API

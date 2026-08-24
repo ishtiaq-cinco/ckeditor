@@ -7,10 +7,10 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { View } from '../src/view.js';
 import { Template } from '../src/template.js';
 
-import { Collection } from '@ckeditor/ckeditor5-utils';
+import { Collection } from '@ssmckinney/ckeditor5-utils';
 import { ViewCollection } from '../src/viewcollection.js';
-import { normalizeHtml } from '@ckeditor/ckeditor5-utils/tests/_utils/normalizehtml.js';
-import { assertCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { normalizeHtml } from '@ssmckinney/ckeditor5-utils/tests/_utils/normalizehtml.js';
+import { assertCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 let TestView, view, childA, childB;
 

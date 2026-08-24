@@ -7,7 +7,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { attachToForm } from '../../../src/editor/utils/attachtoform.js';
 import { ElementApiMixin } from '../../../src/editor/utils/elementapimixin.js';
 import { Editor } from '../../../src/editor/editor.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'attachToForm()', () => {
 	let editor, form, textarea, submitStub;

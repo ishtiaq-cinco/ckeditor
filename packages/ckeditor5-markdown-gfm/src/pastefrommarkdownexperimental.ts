@@ -7,10 +7,10 @@
  * @module markdown-gfm/pastefrommarkdownexperimental
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { ClipboardPipeline, type ClipboardInputTransformationEvent } from '@ckeditor/ckeditor5-clipboard';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { ClipboardPipeline, type ClipboardInputTransformationEvent } from '@ssmckinney/ckeditor5-clipboard';
 import { MarkdownGfmDataProcessor } from './gfmdataprocessor.js';
-import type { ViewDocumentKeyDownEvent } from '@ckeditor/ckeditor5-engine';
+import type { ViewDocumentKeyDownEvent } from '@ssmckinney/ckeditor5-engine';
 
 const ALLOWED_MARKDOWN_FIRST_LEVEL_TAGS = [ 'SPAN', 'BR', 'PRE', 'CODE' ];
 

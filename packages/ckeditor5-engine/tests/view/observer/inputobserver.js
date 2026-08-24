@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { global, env } from '@ckeditor/ckeditor5-utils';
+import { global, env } from '@ssmckinney/ckeditor5-utils';
 
 import { InputObserver } from '../../../src/view/observer/inputobserver.js';
 import { ViewDataTransfer } from '../../../src/view/datatransfer.js';

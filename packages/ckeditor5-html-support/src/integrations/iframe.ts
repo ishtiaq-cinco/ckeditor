@@ -7,8 +7,8 @@
  * @module html-support/integrations/iframe
  */
 
-import type { DowncastDispatcher, DowncastInsertEvent, ModelElement } from '@ckeditor/ckeditor5-engine';
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import type { DowncastDispatcher, DowncastInsertEvent, ModelElement } from '@ssmckinney/ckeditor5-engine';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { DataFilter, type HtmlSupportDataFilterRegisterEvent } from '../datafilter.js';
 
 /**

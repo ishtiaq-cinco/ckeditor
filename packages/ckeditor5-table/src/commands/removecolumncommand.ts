@@ -7,12 +7,12 @@
  * @module table/commands/removecolumncommand
  */
 
-import { Command } from '@ckeditor/ckeditor5-core';
+import { Command } from '@ssmckinney/ckeditor5-core';
 import type {
 	ModelDocumentSelection,
 	ModelElement,
 	ModelSelection
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { TableWalker, type TableSlot } from '../tablewalker.js';
 import { type TableUtils } from '../tableutils.js';

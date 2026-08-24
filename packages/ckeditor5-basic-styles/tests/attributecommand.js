@@ -7,9 +7,9 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { AttributeCommand } from '../src/attributecommand.js';
 
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
 
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'AttributeCommand', () => {
 	const attrKey = 'bold';
@@ -334,7 +334,7 @@ describe( 'AttributeCommand', () => {
 			} );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/18430
+		// https://github.com/ssmckinney/ckeditor5/issues/18430
 		it( 'When applying bold to range that includes empty paragraph, empty paragraph should get selection:bold', () => {
 			// Three paragraphs: bold "foo", empty, bold "foo". Selection spans all three [ ... ].
 			_setModelData( model, '[<p>foo</p><p></p><p>foo</p>]' );

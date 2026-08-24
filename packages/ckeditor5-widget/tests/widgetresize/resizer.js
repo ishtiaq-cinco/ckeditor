@@ -7,10 +7,10 @@ import { describe, it, expect, vi, beforeEach, beforeAll, afterAll } from 'vites
 
 import { WidgetResizer } from '../../src/widgetresize/resizer.js';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 
 describe( 'Resizer', () => {
 	let editor, editorElement;
@@ -206,7 +206,7 @@ describe( 'Resizer', () => {
 			renderedElement.remove();
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/7633
+		// https://github.com/ssmckinney/ckeditor5/issues/7633
 		it( 'should not cause changes in the view unless the host size actually changed', () => {
 			const resizerInstance = createResizer( {
 				getHandleHost: widgetWrapper => widgetWrapper

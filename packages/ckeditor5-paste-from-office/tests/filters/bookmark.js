@@ -6,7 +6,7 @@
 import { describe, it, expect, beforeAll } from 'vitest';
 import { transformBookmarks } from '../../src/filters/bookmark.js';
 
-import { HtmlDataProcessor, ViewUpcastWriter, ViewDocument, StylesProcessor } from '@ckeditor/ckeditor5-engine';
+import { HtmlDataProcessor, ViewUpcastWriter, ViewDocument, StylesProcessor } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'PasteFromOffice - filters - bookmark', () => {
 	let writer, viewDocument;

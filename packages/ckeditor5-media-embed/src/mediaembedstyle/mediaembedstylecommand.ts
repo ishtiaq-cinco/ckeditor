@@ -7,7 +7,7 @@
  * @module media-embed/mediaembedstyle/mediaembedstylecommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
 import { getSelectedMediaModelWidget } from '../utils.js';
 import type { NormalizedMediaStyleOption } from '../mediaembedconfig.js';
 

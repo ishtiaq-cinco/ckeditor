@@ -7,12 +7,12 @@
  * @module style/integrations/list
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import type { ModelElement } from '@ckeditor/ckeditor5-engine';
-import type { ListType, ListUtils } from '@ckeditor/ckeditor5-list';
-import type { TemplateDefinition } from '@ckeditor/ckeditor5-ui';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import type { ModelElement } from '@ssmckinney/ckeditor5-engine';
+import type { ListType, ListUtils } from '@ssmckinney/ckeditor5-list';
+import type { TemplateDefinition } from '@ssmckinney/ckeditor5-ui';
 
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
 
 import {
 	StyleUtils,

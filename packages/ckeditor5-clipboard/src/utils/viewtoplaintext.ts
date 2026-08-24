@@ -7,7 +7,7 @@
  * @module clipboard/utils/viewtoplaintext
  */
 
-import type { ViewDomConverter, ViewDocumentFragment, ViewElement, ViewItem } from '@ckeditor/ckeditor5-engine';
+import type { ViewDomConverter, ViewDocumentFragment, ViewElement, ViewItem } from '@ssmckinney/ckeditor5-engine';
 
 // Elements which should not have empty-line padding.
 // Most `view.ContainerElement` want to be separate by new-line, but some are creating one structure
@@ -36,7 +36,7 @@ export function viewToPlainText(
 	}
 
 	if ( viewItem.is( 'element', 'br' ) ) {
-		return '\n'; // Convert soft breaks to single line break (https://github.com/ckeditor/ckeditor5/issues/8045).
+		return '\n'; // Convert soft breaks to single line break (https://github.com/ssmckinney/ckeditor5/issues/8045).
 	}
 
 	/**

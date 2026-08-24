@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 import {
 	ViewDowncastWriter,
 	ViewUpcastWriter,
@@ -14,10 +14,10 @@ import {
 	_setModelData,
 	_parseView,
 	_stringifyView
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import { Table } from '@ckeditor/ckeditor5-table';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Table } from '@ssmckinney/ckeditor5-table';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 import { Image } from '../../src/image.js';
 import { ImageEditing } from '../../src/image/imageediting.js';

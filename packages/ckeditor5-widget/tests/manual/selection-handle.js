@@ -5,8 +5,8 @@
 
 import { Widget } from '../../src/widget.js';
 import { toWidget } from '../../src/utils.js';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 
 function MyPlugin( editor ) {
 	editor.model.schema.register( 'div', {

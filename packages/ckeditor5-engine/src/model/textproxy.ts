@@ -13,7 +13,7 @@ import { type ModelElement } from './element.js';
 import { type ModelNode } from './node.js';
 import { type ModelText } from './text.js';
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 // @if CK_DEBUG_ENGINE // import { convertMapToStringifiedObject } from '../dev-utils/utils.js';
 

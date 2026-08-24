@@ -5,21 +5,21 @@
 
 import { ListEditing } from '../../src/list/listediting.js';
 
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { IndentEditing } from '@ckeditor/ckeditor5-indent';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { CodeBlockEditing } from '@ckeditor/ckeditor5-code-block';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { IndentEditing } from '@ssmckinney/ckeditor5-indent';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { CodeBlockEditing } from '@ssmckinney/ckeditor5-code-block';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { setupTestHelpers } from './_utils/utils.js';
 import { stubUid } from './_utils/uid.js';
 
@@ -254,7 +254,7 @@ describe( 'ListEditing - converters - data pipeline', () => {
 			);
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/16450.
+		// See https://github.com/ssmckinney/ckeditor5/issues/16450.
 		it( 'does not clear incorrect elements (text inside ul/ol should not be removed)', () => {
 			test.data(
 				'<ul>' +
@@ -2088,7 +2088,7 @@ describe( 'ListEditing - converters - data pipeline', () => {
 			);
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/16450.
+		// See https://github.com/ssmckinney/ckeditor5/issues/16450.
 		it( 'mixed lists deep structure, white spaces, incorrect content, empty items', () => {
 			test.data(
 				'<p>foo</p>' +

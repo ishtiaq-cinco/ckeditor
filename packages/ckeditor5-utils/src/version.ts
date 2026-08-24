@@ -28,7 +28,7 @@ if ( globalThis.CKEDITOR_VERSION ) {
 	 * # Check dependency versions
 	 *
 	 * First, make sure that you use the latest version of all CKEditor&nbsp;5 dependencies.
-	 * Depending on the installation method, you should check the versions of the `ckeditor5`,
+	 * Depending on the installation method, you should check the versions of the `@ssmckinney/ckeditor5`,
 	 * `ckeditor5-premium-features`, or `@ckeditor/ckeditor5-<NAME>` packages. If you cannot update
 	 * to the latest version, ensure that all the CKEditor&nbsp;5 packages are
 	 * in the same version.
@@ -49,12 +49,12 @@ if ( globalThis.CKEDITOR_VERSION ) {
 	 *
 	 * These are the most common import methods of the CKEditor&nbsp;5 packages.
 	 *
-	 * - **New installation methods (NIM)** &ndash; Imports from the `ckeditor5` and `ckeditor5-premium-features` packages.
+	 * - **New installation methods (NIM)** &ndash; Imports from the `@ssmckinney/ckeditor5` and `ckeditor5-premium-features` packages.
 	 * - **Optimized build** for the new installation methods &ndash; Imports from the `@ckeditor/ckeditor5-<NAME>/dist/index.js`.
 	 * - **Predefined builds** (no longer supported) &ndash; Imports from the `@ckeditor/ckeditor5-build-<NAME>` packages.
 	 * - **Default imports** (legacy) &ndash; Imports from the `@ckeditor/ckeditor5-<NAME>` packages (default export).
 	 * - **`src`** (legacy) &ndash; Imports from the `@ckeditor/ckeditor5-<NAME>/src/*`.
-	 * - **DLL builds** (legacy) &ndash; Imports from the `ckeditor5/build/<NAME>` and `@ckeditor/ckeditor5-<NAME>/build/*`.
+	 * - **DLL builds** (legacy) &ndash; Imports from the `@ssmckinney/ckeditor5/build/<NAME>` and `@ckeditor/ckeditor5-<NAME>/build/*`.
 	 *
 	 * The best way to avoid duplicate modules is to avoid mixing these installation methods. For example, if you use imports
 	 * specific to the optimized build, you should use them for all CKEditor&nbsp;5 packages. In addition, since
@@ -78,7 +78,7 @@ if ( globalThis.CKEDITOR_VERSION ) {
 	 * <summary>New installation methods and optimized builds</summary>
 	 *
 	 * If you use the {@glink updating/nim-migration/migration-to-new-installation-methods new installation methods},
-	 * you should only import { code } from the `ckeditor5` and `ckeditor5-premium-features` packages.
+	 * you should only import { code } from the `@ssmckinney/ckeditor5` and `ckeditor5-premium-features` packages.
 	 * Do not import { code } from the `@ckeditor/ckeditor5-<NAME>` packages unless you follow
 	 * the {@glink getting-started/setup/optimizing-build-size Optimizing build size} guide and the imports from
 	 * the `@ckeditor/ckeditor5-<NAME>` packages end with `/dist/index.js`.
@@ -88,11 +88,11 @@ if ( globalThis.CKEDITOR_VERSION ) {
 	 * Examples of valid and invalid import paths:
 	 *
 	 * ```js
-	 * import { ClassicEditor, Highlight } from 'ckeditor5'; // ✅
-	 * import { Highlight } from '@ckeditor/ckeditor5-highlight/dist/index.js'; // ✅
-	 * import { Highlight } from '@ckeditor/ckeditor5-highlight/src/highlight.js'; // ❌
-	 * import { Highlight } from '@ckeditor/ckeditor5-highlight'; // ❌
-	 * import '@ckeditor/ckeditor5-highlight/build/highlight.js'; // ❌
+	 * import { ClassicEditor, Highlight } from '@ssmckinney/ckeditor5'; // ✅
+	 * import { Highlight } from '@ssmckinney/ckeditor5-highlight/dist/index.js'; // ✅
+	 * import { Highlight } from '@ssmckinney/ckeditor5-highlight/src/highlight.js'; // ❌
+	 * import { Highlight } from '@ssmckinney/ckeditor5-highlight'; // ❌
+	 * import '@ssmckinney/ckeditor5-highlight/build/highlight.js'; // ❌
 	 * ```
 	 * </details>
 	 *
@@ -111,11 +111,11 @@ if ( globalThis.CKEDITOR_VERSION ) {
 	 *
 	 * ```js
 	 * import { ClassicEditor } from '@ckeditor/ckeditor5-build-classic'; // ✅
-	 * import { Highlight } from 'ckeditor5'; // ❌
-	 * import { Highlight } from '@ckeditor/ckeditor5-highlight/dist/index.js'; // ❌
-	 * import { Highlight } from '@ckeditor/ckeditor5-highlight'; // ❌
-	 * import { Highlight } from '@ckeditor/ckeditor5-highlight/src/highlight'; // ❌
-	 * import '@ckeditor/ckeditor5-highlight/build/highlight'; // ❌
+	 * import { Highlight } from '@ssmckinney/ckeditor5'; // ❌
+	 * import { Highlight } from '@ssmckinney/ckeditor5-highlight/dist/index.js'; // ❌
+	 * import { Highlight } from '@ssmckinney/ckeditor5-highlight'; // ❌
+	 * import { Highlight } from '@ssmckinney/ckeditor5-highlight/src/highlight'; // ❌
+	 * import '@ssmckinney/ckeditor5-highlight/build/highlight'; // ❌
 	 * ```
 	 *
 	 * If you are missing some features from the list of plugins, you should switch to the
@@ -131,17 +131,17 @@ if ( globalThis.CKEDITOR_VERSION ) {
 	 * the `@ckeditor/ckeditor5-<NAME>/src/*` files, it is not recommended as it can make migration to the new installation
 	 * methods more difficult.
 	 *
-	 * If you use this installation method, you should not import { code } from the `ckeditor5` or `ckeditor5-premium-features` packages.
+	 * If you use this installation method, you should not import { code } from the `@ssmckinney/ckeditor5` or `ckeditor5-premium-features` packages.
 	 *
 	 * Examples of valid and invalid import paths:
 	 *
 	 * ```js
-	 * import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic'; // ✅
-	 * import { Highlight } from '@ckeditor/ckeditor5-highlight'; // ✅
-	 * import { Highlight } from '@ckeditor/ckeditor5-highlight/src/highlight.js'; // ✅ (not recommended)
-	 * import { Highlight } from 'ckeditor5'; // ❌
-	 * import { Highlight } from '@ckeditor/ckeditor5-highlight/dist/index.js'; // ❌
-	 * import '@ckeditor/ckeditor5-highlight/build/highlight'; // ❌
+	 * import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic'; // ✅
+	 * import { Highlight } from '@ssmckinney/ckeditor5-highlight'; // ✅
+	 * import { Highlight } from '@ssmckinney/ckeditor5-highlight/src/highlight.js'; // ✅ (not recommended)
+	 * import { Highlight } from '@ssmckinney/ckeditor5'; // ❌
+	 * import { Highlight } from '@ssmckinney/ckeditor5-highlight/dist/index.js'; // ❌
+	 * import '@ssmckinney/ckeditor5-highlight/build/highlight'; // ❌
 	 * ```
 	 * </details>
 	 *
@@ -154,19 +154,19 @@ if ( globalThis.CKEDITOR_VERSION ) {
 	 * Examples of valid and invalid import paths:
 	 *
 	 * ```js
-	 * import 'ckeditor5/build/ckeditor5-dll.js';// ✅
-	 * import '@ckeditor/ckeditor5-editor-classic/build/editor-classic.js';// ✅
-	 * import '@ckeditor/ckeditor5-highlight/build/highlight.js';// ✅
-	 * import { Highlight } from 'ckeditor5'; // ❌
-	 * import { Highlight } from '@ckeditor/ckeditor5-highlight/dist/index.js'; // ❌
-	 * import { Highlight } from '@ckeditor/ckeditor5-highlight'; // ❌
-	 * import { Highlight } from '@ckeditor/ckeditor5-highlight/src/highlight.js'; // ❌
+	 * import '@ssmckinney/ckeditor5/build/@ssmckinney/ckeditor5-dll.js';// ✅
+	 * import '@ssmckinney/ckeditor5-editor-classic/build/editor-classic.js';// ✅
+	 * import '@ssmckinney/ckeditor5-highlight/build/highlight.js';// ✅
+	 * import { Highlight } from '@ssmckinney/ckeditor5'; // ❌
+	 * import { Highlight } from '@ssmckinney/ckeditor5-highlight/dist/index.js'; // ❌
+	 * import { Highlight } from '@ssmckinney/ckeditor5-highlight'; // ❌
+	 * import { Highlight } from '@ssmckinney/ckeditor5-highlight/src/highlight.js'; // ❌
 	 * ```
 	 * </details>
 	 *
 	 * # Reinstall `node_modules`
 	 *
-	 * Usually, npm and other package managers deduplicate all packages - for example, `ckeditor5` is only installed once
+	 * Usually, npm and other package managers deduplicate all packages - for example, `@ssmckinney/ckeditor5` is only installed once
 	 * in `node_modules/`. However, it is known to fail to do so occasionally.
 	 *
 	 * To rule out this possibility, you can try the following:
@@ -174,7 +174,7 @@ if ( globalThis.CKEDITOR_VERSION ) {
 	 * 1. Remove the `node_modules` directory.
 	 * 2. Remove the `package-lock.json`, `yarn.lock`, or `pnpm-lock.yaml` files (depending on the package manager used).
 	 * 3. Run `npm install` to reinstall all packages.
-	 * 4. Run `npm ls` to check how many times packages like `@ckeditor/ckeditor5-core` are installed.
+	 * 4. Run `npm ls` to check how many times packages like `@ssmckinney/ckeditor5-core` are installed.
 	 * If they are installed more than once, verify which package causes that.
 	 *
 	 * @error ckeditor-duplicated-modules

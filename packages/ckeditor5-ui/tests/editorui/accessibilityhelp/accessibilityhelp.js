@@ -4,12 +4,12 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { AccessibilityHelp, ButtonView, MenuBarMenuListItemButtonView } from '../../../src/index.js';
-import { env, global, keyCodes } from '@ckeditor/ckeditor5-utils';
-import { MultiRootEditor } from '@ckeditor/ckeditor5-editor-multi-root';
+import { env, global, keyCodes } from '@ssmckinney/ckeditor5-utils';
+import { MultiRootEditor } from '@ssmckinney/ckeditor5-editor-multi-root';
 import { AccessibilityHelpContentView } from '../../../src/editorui/accessibilityhelp/accessibilityhelpcontentview.js';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
 
 describe( 'AccessibilityHelp', () => {
 	let editor, plugin, dialogPlugin, domElement;

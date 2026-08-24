@@ -7,15 +7,15 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { Editor } from '../../src/editor/editor.js';
 import { Context } from '../../src/context.js';
 import { Plugin } from '../../src/plugin.js';
-import { Config, Locale, CKEditorError } from '@ckeditor/ckeditor5-utils';
-import { EditingController, _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { Config, Locale, CKEditorError } from '@ssmckinney/ckeditor5-utils';
+import { EditingController, _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { PluginCollection } from '../../src/plugincollection.js';
 import { CommandCollection } from '../../src/commandcollection.js';
 import { Command } from '../../src/command.js';
 import { EditingKeystrokeHandler } from '../../src/editingkeystrokehandler.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { Accessibility } from '../../src/accessibility.js';
-import { EditorWatchdog, ContextWatchdog } from '@ckeditor/ckeditor5-watchdog';
+import { EditorWatchdog, ContextWatchdog } from '@ssmckinney/ckeditor5-watchdog';
 
 class TestEditor extends Editor {
 	static create( config ) {
@@ -1437,7 +1437,7 @@ describe( 'Editor', () => {
 			editor.model.document.createRoot( '$root', 'main' );
 			editor.model.document.createRoot( '$root', 'secondRoot' );
 			editor.model.schema.extend( '$text', { allowIn: '$root' } );
-			editor.fire( 'ready' ); // (https://github.com/ckeditor/ckeditor5/issues/6139)
+			editor.fire( 'ready' ); // (https://github.com/ssmckinney/ckeditor5/issues/6139)
 		} );
 
 		afterEach( async () => {

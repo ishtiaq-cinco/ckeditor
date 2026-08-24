@@ -13,7 +13,7 @@ import { ModelPosition } from '../../../src/model/position.js';
 
 import { _setModelData, _getModelData, _parseModel, _stringifyModel } from '../../../src/dev-utils/model.js';
 import { ModelRange } from '../../../src/model/range.js';
-import { Config } from '@ckeditor/ckeditor5-utils';
+import { Config } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'DataController utils', () => {
 	let model, doc, root, config;
@@ -544,7 +544,7 @@ describe( 'DataController utils', () => {
 				expect( _stringifyModel( root, affectedRange ) ).toBe( '[<heading1>bar</heading1>]' );
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/9794
+			// https://github.com/ssmckinney/ckeditor5/issues/9794
 			it( 'should not insert a disallowed inline widget into a limit element', () => {
 				const schema = model.schema;
 
@@ -797,7 +797,7 @@ describe( 'DataController utils', () => {
 					);
 				} );
 
-				// See https://github.com/ckeditor/ckeditor5/issues/2010.
+				// See https://github.com/ssmckinney/ckeditor5/issues/2010.
 				it( 'should handle bQ+p over bQ+p insertion', () => {
 					model.schema.register( 'blockQuote', {
 						allowWhere: '$block',

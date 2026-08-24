@@ -7,9 +7,9 @@
  * @module easy-image/easyimage
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { ImageUpload } from '@ckeditor/ckeditor5-image';
-import { logWarning } from '@ckeditor/ckeditor5-utils';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { ImageUpload } from '@ssmckinney/ckeditor5-image';
+import { logWarning } from '@ssmckinney/ckeditor5-utils';
 
 import { CloudServicesUploadAdapter } from './cloudservicesuploadadapter.js';
 

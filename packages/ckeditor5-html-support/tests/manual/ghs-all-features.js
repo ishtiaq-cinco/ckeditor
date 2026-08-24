@@ -3,25 +3,25 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Alignment } from '@ckeditor/ckeditor5-alignment';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { Code, Strikethrough, Subscript, Superscript, Underline } from '@ckeditor/ckeditor5-basic-styles';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
-import { FontBackgroundColor, FontColor, FontFamily, FontSize } from '@ckeditor/ckeditor5-font';
-import { Highlight } from '@ckeditor/ckeditor5-highlight';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
-import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed';
-import { ImageResize, ImageUpload } from '@ckeditor/ckeditor5-image';
-import { IndentBlock } from '@ckeditor/ckeditor5-indent';
-import { LinkImage } from '@ckeditor/ckeditor5-link';
-import { ListProperties, TodoList } from '@ckeditor/ckeditor5-list';
-import { PageBreak } from '@ckeditor/ckeditor5-page-break';
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
-import { TableCellProperties, TableProperties, TableCaption, TableColumnResize } from '@ckeditor/ckeditor5-table';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Alignment } from '@ssmckinney/ckeditor5-alignment';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { Code, Strikethrough, Subscript, Superscript, Underline } from '@ssmckinney/ckeditor5-basic-styles';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { EasyImage } from '@ssmckinney/ckeditor5-easy-image';
+import { FontBackgroundColor, FontColor, FontFamily, FontSize } from '@ssmckinney/ckeditor5-font';
+import { Highlight } from '@ssmckinney/ckeditor5-highlight';
+import { HorizontalLine } from '@ssmckinney/ckeditor5-horizontal-line';
+import { HtmlEmbed } from '@ssmckinney/ckeditor5-html-embed';
+import { ImageResize, ImageUpload } from '@ssmckinney/ckeditor5-image';
+import { IndentBlock } from '@ssmckinney/ckeditor5-indent';
+import { LinkImage } from '@ssmckinney/ckeditor5-link';
+import { ListProperties, TodoList } from '@ssmckinney/ckeditor5-list';
+import { PageBreak } from '@ssmckinney/ckeditor5-page-break';
+import { SourceEditing } from '@ssmckinney/ckeditor5-source-editing';
+import { TableCellProperties, TableProperties, TableCaption, TableColumnResize } from '@ssmckinney/ckeditor5-table';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { RemoveFormat } from '@ssmckinney/ckeditor5-remove-format';
 
 import { GeneralHtmlSupport } from '../../src/generalhtmlsupport.js';
 

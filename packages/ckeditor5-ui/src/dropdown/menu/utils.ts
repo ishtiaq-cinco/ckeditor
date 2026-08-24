@@ -7,7 +7,7 @@
  * @module ui/dropdown/menu/utils
  */
 
-import type { PositioningFunction } from '@ckeditor/ckeditor5-utils';
+import type { PositioningFunction } from '@ssmckinney/ckeditor5-utils';
 
 const NESTED_PANEL_HORIZONTAL_OFFSET = 5;
 

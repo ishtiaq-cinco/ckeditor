@@ -7,8 +7,8 @@
  * @module restricted-editing/restrictededitingmode/utils
  */
 
-import type { Editor } from '@ckeditor/ckeditor5-core';
-import type { ModelDocumentSelection, Marker, ModelPosition, ModelRange, Model } from '@ckeditor/ckeditor5-engine';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
+import type { ModelDocumentSelection, Marker, ModelPosition, ModelRange, Model } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * Returns a single "restricted-editing-exception" marker at a given position. Contrary to

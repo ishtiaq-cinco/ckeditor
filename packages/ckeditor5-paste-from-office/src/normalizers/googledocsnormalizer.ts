@@ -7,8 +7,8 @@
  * @module paste-from-office/normalizers/googledocsnormalizer
  */
 
-import { ViewUpcastWriter, type ViewDocument } from '@ckeditor/ckeditor5-engine';
-import type { ClipboardInputTransformationData } from '@ckeditor/ckeditor5-clipboard';
+import { ViewUpcastWriter, type ViewDocument } from '@ssmckinney/ckeditor5-engine';
+import type { ClipboardInputTransformationData } from '@ssmckinney/ckeditor5-clipboard';
 
 import { removeBoldWrapper } from '../filters/removeboldwrapper.js';
 import { transformBlockBrsToParagraphs } from '../filters/br.js';

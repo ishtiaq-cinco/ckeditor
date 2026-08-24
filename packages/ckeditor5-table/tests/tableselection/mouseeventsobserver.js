@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { EditingView } from '@ckeditor/ckeditor5-engine';
+import { EditingView } from '@ssmckinney/ckeditor5-engine';
 import { MouseEventsObserver } from '../../src/tablemouse/mouseeventsobserver.js';
 
 describe( 'table selection', () => {

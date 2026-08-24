@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
-import { modelList } from '../../../ckeditor5-list/tests/list/_utils/utils.js';
-import { isListItemBlock, expandListBlocksToCompleteItems } from '../../../ckeditor5-list/src/list/utils/model.js';
+import { modelList } from '../../../@ssmckinney/ckeditor5-list/tests/list/_utils/utils.js';
+import { isListItemBlock, expandListBlocksToCompleteItems } from '../../../@ssmckinney/ckeditor5-list/src/list/utils/model.js';
 import { ResetIndentUsingOffset } from '../../src/indentcommandbehavior/resetindentusingoffset.js';
 import { ResetIndentUsingClasses } from '../../src/indentcommandbehavior/resetindentusingclasses.js';
 import { IndentBlockListItemCommand } from '../../src/integrations/indentblocklistitemcommand.js';

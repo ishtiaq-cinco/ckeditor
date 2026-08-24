@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { EditingView } from '@ckeditor/ckeditor5-engine';
+import { EditingView } from '@ssmckinney/ckeditor5-engine';
 import { EnterObserver } from '../src/enterobserver.js';
-import { createViewRoot } from '@ckeditor/ckeditor5-engine/tests/view/_utils/createroot.js';
-import { fireBeforeInputDomEvent } from '@ckeditor/ckeditor5-typing/tests/_utils/utils.js';
-import { getCode, env } from '@ckeditor/ckeditor5-utils';
+import { createViewRoot } from '@ssmckinney/ckeditor5-engine/tests/view/_utils/createroot.js';
+import { fireBeforeInputDomEvent } from '@ssmckinney/ckeditor5-typing/tests/_utils/utils.js';
+import { getCode, env } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'EnterObserver', () => {
 	let view, viewDocument, enterSpy;
@@ -82,7 +82,7 @@ describe( 'EnterObserver', () => {
 		expect( enterSpy ).not.toHaveBeenCalled();
 	} );
 
-	// See https://github.com/ckeditor/ckeditor5/issues/13321.
+	// See https://github.com/ssmckinney/ckeditor5/issues/13321.
 	it( 'should handle the insertParagraph input type and fire the soft enter event if shift key is pressed in Safari', () => {
 		vi.spyOn( env, 'isSafari', 'get' ).mockReturnValue( true );
 
@@ -108,7 +108,7 @@ describe( 'EnterObserver', () => {
 		expect( enterSpy.mock.calls[ 1 ][ 1 ] ).toHaveProperty( 'isSoft', false );
 	} );
 
-	// See https://github.com/ckeditor/ckeditor5/issues/13321.
+	// See https://github.com/ssmckinney/ckeditor5/issues/13321.
 	it( 'should handle the insertParagraph input type and fire the enter event if shift key was pressed before in Safari', () => {
 		vi.spyOn( env, 'isSafari', 'get' ).mockReturnValue( true );
 

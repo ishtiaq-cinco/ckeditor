@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { HorizontalLineEditing } from '@ckeditor/ckeditor5-horizontal-line';
-import { ImageCaptionEditing, ImageBlockEditing } from '@ckeditor/ckeditor5-image';
-import { ListEditing } from '@ckeditor/ckeditor5-list';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Input } from '@ckeditor/ckeditor5-typing';
-import { _getModelData, _setModelData, ModelRange } from '@ckeditor/ckeditor5-engine';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { HorizontalLineEditing } from '@ssmckinney/ckeditor5-horizontal-line';
+import { ImageCaptionEditing, ImageBlockEditing } from '@ssmckinney/ckeditor5-image';
+import { ListEditing } from '@ssmckinney/ckeditor5-list';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Input } from '@ssmckinney/ckeditor5-typing';
+import { _getModelData, _setModelData, ModelRange } from '@ssmckinney/ckeditor5-engine';
 import { assertSelectedCells, formatAttributes, modelTable, viewTable } from './_utils/utils.js';
 import { TableEditing } from '../src/tableediting.js';
 import { TableCellPropertiesEditing } from '../src/tablecellproperties/tablecellpropertiesediting.js';
@@ -21,7 +21,7 @@ import { TableWalker } from '../src/tablewalker.js';
 
 import { TableClipboard } from '../src/tableclipboard.js';
 import { TableColumnResize } from '../src/tablecolumnresize.js';
-import { stubUid } from '@ckeditor/ckeditor5-list/tests/list/_utils/uid.js';
+import { stubUid } from '@ssmckinney/ckeditor5-list/tests/list/_utils/uid.js';
 
 describe( 'table clipboard', () => {
 	let editor, model, modelRoot, tableSelection, viewDocument, element, clipboardMarkersUtils, getUniqueMarkerNameStub;

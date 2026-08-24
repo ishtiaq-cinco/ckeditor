@@ -9,7 +9,7 @@
 
 import { get, isObject, merge, set } from 'es-toolkit/compat';
 import type { ViewElementAttributeValue } from './element.js';
-import { type ArrayOrItem, toArray } from '@ckeditor/ckeditor5-utils';
+import { type ArrayOrItem, toArray } from '@ssmckinney/ckeditor5-utils';
 import { isPatternMatched } from './matcher.js';
 
 /**
@@ -537,7 +537,7 @@ export class StylesMap implements ViewElementAttributeValue {
 
 				// For now, the reducers are not returning the full tree of properties.
 				// Casting to string preserves the old behavior until the root cause is fixed.
-				// More can be found in https://github.com/ckeditor/ckeditor5/issues/10399.
+				// More can be found in https://github.com/ssmckinney/ckeditor5/issues/10399.
 				const value = this.getAsString( styleName );
 
 				if ( isPatternMatched( valuePattern, value! ) ) {

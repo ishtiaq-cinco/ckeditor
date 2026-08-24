@@ -7,8 +7,8 @@
  * @module mention/ui/mentionsview
  */
 
-import { ListView } from '@ckeditor/ckeditor5-ui';
-import { Rect, type Locale } from '@ckeditor/ckeditor5-utils';
+import { ListView } from '@ssmckinney/ckeditor5-ui';
+import { Rect, type Locale } from '@ssmckinney/ckeditor5-utils';
 
 import { type MentionListItemView } from './mentionlistitemview.js';
 

@@ -11,7 +11,7 @@
 
 import { ViewElement, type ViewElementAttributes } from './element.js';
 import { ViewNode } from './node.js';
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 import { type ViewDocument } from './document.js';
 import { type ViewDomConverter } from './domconverter.js';
@@ -123,7 +123,7 @@ export class ViewRawElement extends ViewElement {
 ViewRawElement.prototype.is = function( this: ViewRawElement, type: string, name?: string ): boolean {
 	if ( !name ) {
 		return type === 'rawElement' || type === 'view:rawElement' ||
-			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ckeditor/ckeditor5/issues/6529.
+			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ssmckinney/ckeditor5/issues/6529.
 			type === this.name || type === 'view:' + this.name ||
 			type === 'element' || type === 'view:element' ||
 			type === 'node' || type === 'view:node';

@@ -9,13 +9,13 @@ import {
 	KeystrokeHandler,
 	FocusTracker,
 	keyCodes
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 import {
 	View,
 	FocusCycler,
 	ViewCollection,
 	SwitchButtonView
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 import { LinkPropertiesView } from '../../src/ui/linkpropertiesview.js';
 import { LinkManualDecorator } from '../../src/utils/manualdecorator.js';
 

@@ -7,8 +7,8 @@
  * @module media-embed/mediaembedresize/utils/getselectedmediaembededitornodes
  */
 
-import type { ViewElement, ModelElement } from '@ckeditor/ckeditor5-engine';
-import type { Editor } from '@ckeditor/ckeditor5-core';
+import type { ViewElement, ModelElement } from '@ssmckinney/ckeditor5-engine';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
 
 import { getSelectedMediaModelWidget } from '../../utils.js';
 

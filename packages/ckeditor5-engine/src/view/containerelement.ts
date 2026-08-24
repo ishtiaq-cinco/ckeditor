@@ -73,13 +73,13 @@ export class ViewContainerElement extends ViewElement {
 ViewContainerElement.prototype.is = function( this: ViewContainerElement, type: string, name?: string ): boolean {
 	if ( !name ) {
 		return type === 'containerElement' || type === 'view:containerElement' ||
-			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ckeditor/ckeditor5/issues/6529.
+			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ssmckinney/ckeditor5/issues/6529.
 			type === 'element' || type === 'view:element' ||
 			type === 'node' || type === 'view:node';
 	} else {
 		return name === this.name && (
 			type === 'containerElement' || type === 'view:containerElement' ||
-			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ckeditor/ckeditor5/issues/6529.
+			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ssmckinney/ckeditor5/issues/6529.
 			type === 'element' || type === 'view:element'
 		);
 	}

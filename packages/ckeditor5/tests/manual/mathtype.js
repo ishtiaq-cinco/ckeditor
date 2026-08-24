@@ -3,23 +3,23 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { Alignment } from '@ckeditor/ckeditor5-alignment';
-import { Underline, Code, Strikethrough, Subscript, Superscript } from '@ckeditor/ckeditor5-basic-styles';
-import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
-import { Font } from '@ckeditor/ckeditor5-font';
-import { Highlight } from '@ckeditor/ckeditor5-highlight';
-import { Indent } from '@ckeditor/ckeditor5-indent';
-import { Mention } from '@ckeditor/ckeditor5-mention';
-import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
-import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
-import { ImageUpload } from '@ckeditor/ckeditor5-image';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { Alignment } from '@ssmckinney/ckeditor5-alignment';
+import { Underline, Code, Strikethrough, Subscript, Superscript } from '@ssmckinney/ckeditor5-basic-styles';
+import { EasyImage } from '@ssmckinney/ckeditor5-easy-image';
+import { Font } from '@ssmckinney/ckeditor5-font';
+import { Highlight } from '@ssmckinney/ckeditor5-highlight';
+import { Indent } from '@ssmckinney/ckeditor5-indent';
+import { Mention } from '@ssmckinney/ckeditor5-mention';
+import { PasteFromOffice } from '@ssmckinney/ckeditor5-paste-from-office';
+import { RemoveFormat } from '@ssmckinney/ckeditor5-remove-format';
+import { ImageUpload } from '@ssmckinney/ckeditor5-image';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
 
 import MathType from '@wiris/mathtype-ckeditor5/dist/index.js';
 
-import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
+import { CS_CONFIG } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
 
 ClassicEditor
 	.create( {

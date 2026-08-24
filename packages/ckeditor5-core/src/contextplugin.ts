@@ -14,7 +14,7 @@ import {
 	type Locale,
 	type LocaleTranslate,
 	type ObservableMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { type Editor } from './editor/editor.js';
 import type { EditorConfig } from './editor/editorconfig.js';

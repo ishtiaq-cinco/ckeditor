@@ -21,12 +21,12 @@ If you want to see the final product of this tutorial before you plunge in, chec
 
 Start by installing all the necessary dependencies:
 
-* The [`@ckeditor/ckeditor5-core`](https://www.npmjs.com/package/@ckeditor/ckeditor5-core) package which contains the {@link module:core/plugin~Plugin} class.
-* The [`@ckeditor/ckeditor5-ui`](https://www.npmjs.com/package/@ckeditor/ckeditor5-ui) package which contains the UI library and framework.
+* The [`@ssmckinney/ckeditor5-core`](https://www.npmjs.com/package/@ssmckinney/ckeditor5-core) package which contains the {@link module:core/plugin~Plugin} class.
+* The [`@ssmckinney/ckeditor5-ui`](https://www.npmjs.com/package/@ssmckinney/ckeditor5-ui) package which contains the UI library and framework.
 
 ```bash
-npm install --save @ckeditor/ckeditor5-core \
-	@ckeditor/ckeditor5-ui
+npm install --save @ssmckinney/ckeditor5-core \
+	@ssmckinney/ckeditor5-ui
 ```
 
 Your entry point to the plugin is `app.js` and it should look like this (maybe with a couple of different imports):
@@ -34,12 +34,12 @@ Your entry point to the plugin is `app.js` and it should look like this (maybe w
 ```js
 // app.js
 
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { List } from '@ckeditor/ckeditor5-list';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { List } from '@ssmckinney/ckeditor5-list';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 ClassicEditor
 	.create( {
@@ -108,7 +108,7 @@ Let's define the 3 components.
 
 import AbbreviationEditing from './abbreviationediting';
 import AbbreviationUI from './abbreviationui';
-import { Plugin } from 'ckeditor5';
+import { Plugin } from '@ssmckinney/ckeditor5';
 
 export default class Abbreviation extends Plugin {
 	static get requires() {
@@ -120,7 +120,7 @@ export default class Abbreviation extends Plugin {
 ```js
 // abbreviation/abbreviationui.js
 
-import { Plugin } from 'ckeditor5';
+import { Plugin } from '@ssmckinney/ckeditor5';
 
 export default class AbbreviationUI extends Plugin {
 	init() {
@@ -132,7 +132,7 @@ export default class AbbreviationUI extends Plugin {
 ```js
 // abbreviation/abbreviationediting.js
 
-import { Plugin } from 'ckeditor5';
+import { Plugin } from '@ssmckinney/ckeditor5';
 
 export default class AbbreviationEditing extends Plugin {
 	init() {
@@ -146,12 +146,12 @@ Now you need to load the `Abbreviation` plugin in your `app.js` file. The editor
 ```js
 // app.js
 
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { List } from '@ckeditor/ckeditor5-list';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { List } from '@ssmckinney/ckeditor5-list';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 import Abbreviation from './abbreviation/abbreviation'; // ADDED
 
@@ -201,7 +201,7 @@ Update the `AbbreviationEditing` plugin with this definition:
 ```js
 // abbreviation/abbreviationediting.js)
 
-import { Plugin } from 'ckeditor5';
+import { Plugin } from '@ssmckinney/ckeditor5';
 
 export default class AbbreviationEditing extends Plugin {
 	init() {
@@ -240,7 +240,7 @@ We will need to use a callback function, in order to get the title stored as a m
 ```js
 // abbreviation/abbreviationediting.js
 
-import { Plugin } from 'ckeditor5';
+import { Plugin } from '@ssmckinney/ckeditor5';
 
 export default class AbbreviationEditing extends Plugin {
 	init() {
@@ -283,7 +283,7 @@ We also need to grab the title value from content and use it in the model. We ca
 ```js
 // abbreviation/abbreviationediting.js
 
-import { Plugin } from 'ckeditor5';
+import { Plugin } from '@ssmckinney/ckeditor5';
 
 export default class AbbreviationEditing extends Plugin {
 	init() {
@@ -359,12 +359,12 @@ You can now simply add it to the toolbar in `app.js`:
 ```js
 // app.js
 
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { List } from '@ckeditor/ckeditor5-list';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { List } from '@ssmckinney/ckeditor5-list';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 import Abbreviation from './simplebox/abbreviation';
 
@@ -394,8 +394,8 @@ We will use the {@link module:engine/model/model~Model#insertContent `writer.ins
 ```js
 // abbreviation/abbreviationui.js
 
-import { Plugin } from 'ckeditor5';
-import { ButtonView } from '@ckeditor/ckeditor5-ui';
+import { Plugin } from '@ssmckinney/ckeditor5';
+import { ButtonView } from '@ssmckinney/ckeditor5-ui';
 
 class AbbreviationUI extends Plugin {
 	init() {
@@ -433,15 +433,15 @@ If you got lost at any point, this is the final implementation of the plugin. Yo
 
 ```js
 
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { List } from '@ckeditor/ckeditor5-list';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { List } from '@ssmckinney/ckeditor5-list';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
-import { Plugin } from 'ckeditor5';
-import { ButtonView } from '@ckeditor/ckeditor5-ui';
+import { Plugin } from '@ssmckinney/ckeditor5';
+import { ButtonView } from '@ssmckinney/ckeditor5-ui';
 
 class AbbreviationUI extends Plugin {
 	init() {

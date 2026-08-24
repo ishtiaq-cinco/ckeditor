@@ -6,13 +6,13 @@
 /**
  * @module ui/search/text/searchtextqueryview
  */
-import { IconCancel, IconLoupe } from '@ckeditor/ckeditor5-icons';
+import { IconCancel, IconLoupe } from '@ssmckinney/ckeditor5-icons';
 import { ButtonView } from '../../button/buttonview.js';
 import { IconView } from '../../icon/iconview.js';
 import { LabeledFieldView, type LabeledFieldViewCreator } from '../../labeledfield/labeledfieldview.js';
 import { createLabeledInputText } from '../../labeledfield/utils.js';
 import { type InputBase } from '../../input/inputbase.js';
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * A search input field for the {@link module:ui/search/text/searchtextview~SearchTextView} component.

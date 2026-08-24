@@ -7,9 +7,9 @@
  * @module horizontal-line/horizontallinecommand
  */
 
-import type { ModelDocumentSelection, ModelElement, Model, ModelSchema, ModelSelection } from '@ckeditor/ckeditor5-engine';
-import { Command } from '@ckeditor/ckeditor5-core';
-import { findOptimalInsertionRange } from '@ckeditor/ckeditor5-widget';
+import type { ModelDocumentSelection, ModelElement, Model, ModelSchema, ModelSelection } from '@ssmckinney/ckeditor5-engine';
+import { Command } from '@ssmckinney/ckeditor5-core';
+import { findOptimalInsertionRange } from '@ssmckinney/ckeditor5-widget';
 
 /**
  * The horizontal line command.

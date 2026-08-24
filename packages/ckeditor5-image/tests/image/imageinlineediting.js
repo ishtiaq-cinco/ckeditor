@@ -4,16 +4,16 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ViewDataTransfer, _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { LinkImage } from '@ckeditor/ckeditor5-link';
-import { ListEditing } from '@ckeditor/ckeditor5-list';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ViewDataTransfer, _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { LinkImage } from '@ssmckinney/ckeditor5-link';
+import { ListEditing } from '@ssmckinney/ckeditor5-list';
 
-import { normalizeHtml } from '@ckeditor/ckeditor5-utils/tests/_utils/normalizehtml.js';
-import { stubUid } from '@ckeditor/ckeditor5-list/tests/list/_utils/uid.js';
+import { normalizeHtml } from '@ssmckinney/ckeditor5-utils/tests/_utils/normalizehtml.js';
+import { stubUid } from '@ssmckinney/ckeditor5-list/tests/list/_utils/uid.js';
 
 import { ImageBlockEditing } from '../../src/image/imageblockediting.js';
 import { ImageTypeCommand } from '../../src/image/imagetypecommand.js';

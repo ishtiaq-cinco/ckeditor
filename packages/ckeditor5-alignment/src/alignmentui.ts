@@ -7,7 +7,7 @@
  * @module alignment/alignmentui
  */
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 import {
 	type Button,
 	ButtonView,
@@ -17,9 +17,9 @@ import {
 	MenuBarMenuListItemButtonView,
 	MenuBarMenuView,
 	MenuBarMenuListView
-} from '@ckeditor/ckeditor5-ui';
-import { IconAlignCenter, IconAlignJustify, IconAlignLeft, IconAlignRight } from '@ckeditor/ckeditor5-icons';
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-ui';
+import { IconAlignCenter, IconAlignJustify, IconAlignLeft, IconAlignRight } from '@ssmckinney/ckeditor5-icons';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
 import { isSupported, normalizeAlignmentOptions } from './utils.js';
 import type { AlignmentFormat, AlignmentSupportedOption } from './alignmentconfig.js';
@@ -190,7 +190,7 @@ export class AlignmentUI extends Plugin {
 
 			// Focus the editable after executing the command.
 			// Overrides a default behaviour where the focus is moved to the dropdown button.
-			// See https://github.com/ckeditor/ckeditor5/issues/12125.
+			// See https://github.com/ssmckinney/ckeditor5/issues/12125.
 			this.listenTo( dropdownView, 'execute', () => {
 				editor.editing.view.focus();
 			} );

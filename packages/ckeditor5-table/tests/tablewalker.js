@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, beforeEach } from 'vitest';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { _setModelData, _parseModel } from '@ckeditor/ckeditor5-engine';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { _setModelData, _parseModel } from '@ssmckinney/ckeditor5-engine';
 
 import { TableWalker } from '../src/tablewalker.js';
 import { TableEditing } from '../src/tableediting.js';

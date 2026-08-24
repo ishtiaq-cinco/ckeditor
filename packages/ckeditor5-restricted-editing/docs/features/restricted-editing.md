@@ -15,7 +15,7 @@ The restricted editing feature introduces two modes: the standard editing mode a
 
 The demo below lets you emulate both the standard editing mode and the restricted editing mode.
 
-Start by creating a template of the document in the standard editing mode. Select a section of the text and use the enable editing toolbar button {@icon @ckeditor/ckeditor5-icons/theme/icons/content-unlock.svg Enable editing} to turn a selected area into an editable region or remove an existing one.
+Start by creating a template of the document in the standard editing mode. Select a section of the text and use the enable editing toolbar button {@icon @ssmckinney/ckeditor5-icons/theme/icons/content-unlock.svg Enable editing} to turn a selected area into an editable region or remove an existing one.
 
 Then switch to the restricted editing mode to see how the editable and non-editable regions behave.
 
@@ -50,7 +50,7 @@ There are two types of editable fields: inline and block.
 
 You can observe it in the [demo](#demo) while switching between the inline and the block editable field &ndash; the number of active toolbar items will change.
 
-Both block and inline fields can be inserted via the toolbar dropdown {@icon @ckeditor/ckeditor5-icons/theme/icons/content-unlock.svg Enable editing}. The availability of one or both types of fields from the toolbar [can be configured](#configuring-the-toolbar).
+Both block and inline fields can be inserted via the toolbar dropdown {@icon @ssmckinney/ckeditor5-icons/theme/icons/content-unlock.svg Enable editing}. The availability of one or both types of fields from the toolbar [can be configured](#configuring-the-toolbar).
 
 You can imagine a workflow where a certain group of users is responsible for creating templates of documents. At the same time, a second group of users can only fill the gaps (for example, fill in the missing data, like names, dates, product names, etc.).
 
@@ -70,7 +70,7 @@ To initialize the editor in the standard editing mode, add the {@link module:res
 
 <code-switcher>
 ```js
-import { ClassicEditor, StandardEditingMode } from 'ckeditor5';
+import { ClassicEditor, StandardEditingMode } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -93,7 +93,7 @@ To initialize the editor in the restricted editing mode, add the {@link module:r
 
 <code-switcher>
 ```js
-import { ClassicEditor, RestrictedEditingMode } from 'ckeditor5';
+import { ClassicEditor, RestrictedEditingMode } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -134,7 +134,7 @@ The restricted editing mode allows modifying the editor content only in designat
 
 <code-switcher>
 ```js
-import { ClassicEditor, Plugin } from 'ckeditor5';
+import { ClassicEditor, Plugin } from '@ssmckinney/ckeditor5';
 
 class MyPlugin extends Plugin {
 	afterInit() {
@@ -160,7 +160,7 @@ toolbar: [
 ]
 ```
 
-To configure the feature toolbar button for restricted mode, use the `restrictedEditing` call, instead. The Navigate editable regions button {@icon @ckeditor/ckeditor5-icons/theme/icons/content-lock.svg Navigate editable regions} allows for moving between previous/next editable fields.
+To configure the feature toolbar button for restricted mode, use the `restrictedEditing` call, instead. The Navigate editable regions button {@icon @ssmckinney/ckeditor5-icons/theme/icons/content-lock.svg Navigate editable regions} allows for moving between previous/next editable fields.
 
 Example toolbar configuration may look like the one below. Please note that whatever toolbar items maybe enable, the two different types of editable fields [will not support all of them.](#additional-feature-information). From the example below, inline editable fields will only support bold, italic, link, and undo, while images, tables, and list will only be available for block type fields.
 

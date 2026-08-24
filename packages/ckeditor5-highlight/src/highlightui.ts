@@ -7,8 +7,8 @@
  * @module highlight/highlightui
  */
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { IconEraser, IconMarker, IconPen } from '@ckeditor/ckeditor5-icons';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { IconEraser, IconMarker, IconPen } from '@ssmckinney/ckeditor5-icons';
 import {
 	addToolbarToDropdown,
 	createDropdown,
@@ -21,7 +21,7 @@ import {
 	SplitButtonView,
 	ToolbarSeparatorView,
 	type DropdownView
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 
 import type { HighlightOption } from './highlightconfig.js';
 import { type HighlightCommand } from './highlightcommand.js';
@@ -246,7 +246,7 @@ export class HighlightUI extends Plugin {
 
 			// Focus the editable after executing the command.
 			// It overrides a default behaviour where the focus is moved to the dropdown button.
-			// See https://github.com/ckeditor/ckeditor5/issues/12125.
+			// See https://github.com/ssmckinney/ckeditor5/issues/12125.
 			this.listenTo( dropdownView, 'execute', () => {
 				editor.editing.view.focus();
 			} );

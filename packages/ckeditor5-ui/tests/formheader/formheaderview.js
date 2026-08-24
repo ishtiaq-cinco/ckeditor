@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { IconCheck } from '@ckeditor/ckeditor5-icons';
+import { IconCheck } from '@ssmckinney/ckeditor5-icons';
 import { View } from '../../src/view.js';
 import { ViewCollection } from '../../src/viewcollection.js';
 import { FormHeaderView } from '../../src/formheader/formheaderview.js';

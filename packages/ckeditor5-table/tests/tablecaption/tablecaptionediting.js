@@ -4,14 +4,14 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 
 import { TableCaptionEditing } from '../../src/tablecaption/tablecaptionediting.js';
 import { TableEditing } from '../../src/tableediting.js';
-import { priorities } from '@ckeditor/ckeditor5-utils';
+import { priorities } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'TableCaptionEditing', () => {
 	let editor, model, view;

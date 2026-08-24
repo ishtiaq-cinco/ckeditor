@@ -24,7 +24,7 @@ import type {
 	EmptyBlock
 } from './index.js';
 
-declare module '@ckeditor/ckeditor5-core' {
+declare module '@ssmckinney/ckeditor5-core' {
 	interface EditorConfig {
 
 		/**

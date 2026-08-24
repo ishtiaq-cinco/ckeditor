@@ -7,8 +7,8 @@
  * @module font/ui/colorui
  */
 
-import { Plugin, type Editor } from '@ckeditor/ckeditor5-core';
-import type { Batch } from '@ckeditor/ckeditor5-engine';
+import { Plugin, type Editor } from '@ssmckinney/ckeditor5-core';
+import type { Batch } from '@ssmckinney/ckeditor5-engine';
 import {
 	createDropdown,
 	normalizeColorOptions,
@@ -19,7 +19,7 @@ import {
 	type ColorSelectorColorPickerShowEvent,
 	MenuBarMenuView,
 	ColorSelectorView
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 
 import {
 	addColorSelectorToDropdown,
@@ -117,7 +117,7 @@ export class FontColorUIBase extends Plugin {
 		editor.ui.componentFactory.add( this.componentName, locale => {
 			const dropdownView: FontColorSelectorDropdownView = createDropdown( locale );
 			// Font color dropdown rendering is deferred once it gets open to improve performance.
-			// See https://github.com/ckeditor/ckeditor5/issues/6192.
+			// See https://github.com/ssmckinney/ckeditor5/issues/6192.
 			let dropdownContentRendered = false;
 
 			const colorSelectorView = addColorSelectorToDropdown( {
@@ -225,7 +225,7 @@ export class FontColorUIBase extends Plugin {
 			menuView.bind( 'isEnabled' ).to( command );
 
 			// Font color sub-menu rendering is deferred once it gets open to improve performance.
-			// See https://github.com/ckeditor/ckeditor5/issues/6192.
+			// See https://github.com/ssmckinney/ckeditor5/issues/6192.
 			let contentRendered = false;
 
 			const colorSelectorView = new ColorSelectorView( locale, {

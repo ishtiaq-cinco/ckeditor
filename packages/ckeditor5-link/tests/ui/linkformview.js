@@ -6,8 +6,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { LinkFormView } from '../../src/ui/linkformview.js';
 import { LinkButtonView } from '../../src/ui/linkbuttonview.js';
-import { ListView, View, FocusCycler, ViewCollection } from '@ckeditor/ckeditor5-ui';
-import { keyCodes, KeystrokeHandler, FocusTracker } from '@ckeditor/ckeditor5-utils';
+import { ListView, View, FocusCycler, ViewCollection } from '@ssmckinney/ckeditor5-ui';
+import { keyCodes, KeystrokeHandler, FocusTracker } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'LinkFormView', () => {
 	let view;
@@ -337,6 +337,77 @@ describe( 'LinkFormView', () => {
 			expect( spy ).toHaveBeenNthCalledWith( 3, element );
 			expect( spy ).toHaveBeenNthCalledWith( 4, view.backButtonView.element );
 			expect( spy ).toHaveBeenNthCalledWith( 5, view.displayedTextInputView.element );
+
+			view.destroy();
+		} );
+	} );
+
+	describe( 'options list', () => {
+		let button;
+
+		beforeEach( () => {
+			button = new LinkButtonView();
+
+			button.set( {
+				label: 'Link properties'
+			} );
+		} );
+
+		afterEach( () => {
+			button.destroy();
+		} );
+
+		it( 'should stay out of the form until something is added to it', () => {
+			// Header and the two form rows, and nothing else.
+			expect( view.children ).toHaveLength( 3 );
+		} );
+
+		it( 'should add a list view once populated', () => {
+			view.optionsListChildren.add( button );
+
+			const listView = view.children.get( 3 );
+
+			expect( listView ).toBeInstanceOf( ListView );
+			expect( listView.element.classList.contains( 'ck-link-form__options-list' ) ).toBe( true );
+			expect( listView.template.children[ 0 ].get( 0 ).template.children[ 0 ].get( 0 ) ).toBe( button );
+		} );
+
+		it( 'should sit above the providers list, whichever is populated first', () => {
+			const providerButton = new LinkButtonView();
+
+			providerButton.set( { label: 'Provider' } );
+
+			// Providers first, options second — the order in the form must not follow from that.
+			view.providersListChildren.add( providerButton );
+			view.optionsListChildren.add( button );
+
+			expect( view.children.get( 3 ).element.classList.contains( 'ck-link-form__options-list' ) ).toBe( true );
+			expect( view.children.get( 4 ).element.classList.contains( 'ck-link-form__providers-list' ) ).toBe( true );
+
+			providerButton.destroy();
+		} );
+
+		it( 'should register its items in #focusTracker between the save button and the providers list', () => {
+			const view = new LinkFormView( { t: () => {} } );
+			const optionsButton = new LinkButtonView();
+			const providerButton = new LinkButtonView();
+
+			optionsButton.set( { label: 'Link properties' } );
+			providerButton.set( { label: 'Provider' } );
+
+			view.optionsListChildren.add( optionsButton );
+			view.providersListChildren.add( providerButton );
+
+			const spy = vi.spyOn( view.focusTracker, 'add' );
+
+			view.render();
+
+			expect( spy ).toHaveBeenNthCalledWith( 1, view.urlInputView.element );
+			expect( spy ).toHaveBeenNthCalledWith( 2, view.saveButtonView.element );
+			expect( spy ).toHaveBeenNthCalledWith( 3, optionsButton.element );
+			expect( spy ).toHaveBeenNthCalledWith( 4, providerButton.element );
+			expect( spy ).toHaveBeenNthCalledWith( 5, view.backButtonView.element );
+			expect( spy ).toHaveBeenNthCalledWith( 6, view.displayedTextInputView.element );
 
 			view.destroy();
 		} );

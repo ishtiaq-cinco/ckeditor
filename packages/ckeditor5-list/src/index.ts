@@ -123,6 +123,24 @@ export { ListPropertiesUI } from './listproperties/listpropertiesui.js';
 export { ListReversedCommand } from './listproperties/listreversedcommand.js';
 export { ListStartCommand } from './listproperties/liststartcommand.js';
 export { ListStyleCommand } from './listproperties/liststylecommand.js';
+export { ListMarkerColorCommand } from './listproperties/listmarkercolorcommand.js';
+export { ListColumnsCommand } from './listproperties/listcolumnscommand.js';
+
+export {
+	LIST_MARKERS,
+	LIST_COLUMN_COUNTS,
+	LIST_MARKER_CLASS_PREFIX,
+	LIST_COLUMNS_CLASS_PREFIX,
+	createListMarkerStyles,
+	createListColumnsStyles,
+	getListMarkerClass as _getListMarkerClass,
+	getListMarkerFromClasses as _getListMarkerFromClasses,
+	getListColumnsClass as _getListColumnsClass,
+	getListColumnsFromClasses as _getListColumnsFromClasses,
+	isListMarkerStyle as _isListMarkerStyle
+} from './listproperties/utils/markers.js';
+
+export type { ListMarkerDefinition } from './listproperties/utils/markers.js';
 
 // Internal exports for 'listproperties' submodule
 export { listPropertiesUpcastConverter as _listPropertiesUpcastConverter } from './listproperties/converters.js';

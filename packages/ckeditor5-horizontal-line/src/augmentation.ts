@@ -10,7 +10,7 @@ import type {
 	HorizontalLineUI
 } from './index.js';
 
-declare module '@ckeditor/ckeditor5-core' {
+declare module '@ssmckinney/ckeditor5-core' {
 	interface PluginsMap {
 		[ HorizontalLine.pluginName ]: HorizontalLine;
 		[ HorizontalLineEditing.pluginName ]: HorizontalLineEditing;

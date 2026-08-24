@@ -7,7 +7,7 @@
  * @module paste-from-office/filters/removemsattributes
  */
 
-import { ViewUpcastWriter, type ViewDocumentFragment, type ViewElement } from '@ckeditor/ckeditor5-engine';
+import { ViewUpcastWriter, type ViewDocumentFragment, type ViewElement } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * Cleanup MS attributes like styles, attributes and elements.

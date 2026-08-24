@@ -5,8 +5,8 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { FocusCycler, ViewCollection } from '@ckeditor/ckeditor5-ui';
-import { FocusTracker, KeystrokeHandler, Locale, keyCodes } from '@ckeditor/ckeditor5-utils';
+import { FocusCycler, ViewCollection } from '@ssmckinney/ckeditor5-ui';
+import { FocusTracker, KeystrokeHandler, Locale, keyCodes } from '@ssmckinney/ckeditor5-utils';
 
 import { StyleGroupView } from '../../src/ui/stylegroupview.js';
 import { StylePanelView } from '../../src/ui/stylepanelview.js';

@@ -21,7 +21,7 @@ Check out the {@link features/image-upload comprehensive "Image upload" guide} t
 This package is part of our open-source aggregate package.
 
 ```bash
-npm install ckeditor5
+npm install @ssmckinney/ckeditor5
 ```
 
 ## Contribute
@@ -30,7 +30,7 @@ The source code of this package is available on GitHub in [https://github.com/ck
 
 ## External links
 
-* [`@ckeditor/ckeditor5-ckfinder` on npm](https://www.npmjs.com/package/@ckeditor/ckeditor5-ckfinder)
+* [`@ssmckinney/ckeditor5-ckfinder` on npm](https://www.npmjs.com/package/@ssmckinney/ckeditor5-ckfinder)
 * [`ckeditor/ckeditor5-ckfinder` on GitHub](https://github.com/ckeditor/ckeditor5/tree/master/packages/ckeditor5-ckfinder)
-* [Issue tracker](https://github.com/ckeditor/ckeditor5/issues)
+* [Issue tracker](https://github.com/ssmckinney/ckeditor5/issues)
 * [Changelog](https://github.com/ckeditor/ckeditor5/blob/master/CHANGELOG.md)

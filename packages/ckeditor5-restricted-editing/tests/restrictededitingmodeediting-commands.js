@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { Command } from '@ckeditor/ckeditor5-core';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { Command } from '@ssmckinney/ckeditor5-core';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { RestrictedEditingModeEditing } from './../src/restrictededitingmodeediting.js';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
 
 describe( 'RestrictedEditingEditing - commands', () => {
 	let editor;

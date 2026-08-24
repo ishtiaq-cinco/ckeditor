@@ -25,7 +25,7 @@ import { SplitOperation } from '../../src/model/operation/splitoperation.js';
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { ModelLivePosition } from '../../src/model/liveposition.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'Position', () => {
 	let doc, model, root, otherRoot, p, ul, li1, li2, f, o, z, b, a, r, foz, bar;

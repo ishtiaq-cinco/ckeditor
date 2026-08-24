@@ -7,10 +7,10 @@
  * @module emoji/emojimention
  */
 
-import { logWarning, type LocaleTranslate } from '@ckeditor/ckeditor5-utils';
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Mention, type MentionFeed, type MentionFeedObjectItem, type MentionItemRenderer } from '@ckeditor/ckeditor5-mention';
+import { logWarning, type LocaleTranslate } from '@ssmckinney/ckeditor5-utils';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Mention, type MentionFeed, type MentionFeedObjectItem, type MentionItemRenderer } from '@ssmckinney/ckeditor5-mention';
 
 import { EmojiRepository } from './emojirepository.js';
 import { type EmojiPicker } from './emojipicker.js';
@@ -247,7 +247,7 @@ export class EmojiMention extends Plugin {
 			}
 
 			// If the repository plugin is not available, return an empty feed to avoid confusion.
-			// See: https://github.com/ckeditor/ckeditor5/issues/17842.
+			// See: https://github.com/ssmckinney/ckeditor5/issues/17842.
 			if ( !this.emojiRepositoryPlugin.isRepositoryReady ) {
 				return [];
 			}

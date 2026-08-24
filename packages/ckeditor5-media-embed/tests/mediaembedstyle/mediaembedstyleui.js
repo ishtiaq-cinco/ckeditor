@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { global } from '@ckeditor/ckeditor5-utils';
-import { ButtonView, DropdownView, SplitButtonView } from '@ckeditor/ckeditor5-ui';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { global } from '@ssmckinney/ckeditor5-utils';
+import { ButtonView, DropdownView, SplitButtonView } from '@ssmckinney/ckeditor5-ui';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 import { MediaEmbedEditing } from '../../src/mediaembedediting.js';
 import { MediaEmbedStyleEditing } from '../../src/mediaembedstyle/mediaembedstyleediting.js';

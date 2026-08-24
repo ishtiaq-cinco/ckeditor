@@ -5,8 +5,8 @@
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
 
 import { Style } from '../src/style.js';
 import { StyleEditing } from '../src/styleediting.js';

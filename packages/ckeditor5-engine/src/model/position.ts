@@ -22,7 +22,7 @@ import { type Operation } from './operation/operation.js';
 import { type SplitOperation } from './operation/splitoperation.js';
 import { type ModelText } from './text.js';
 
-import { CKEditorError, compareArrays } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, compareArrays } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Represents a position in the model tree.
@@ -229,7 +229,7 @@ export class ModelPosition extends ModelTypeCheckable {
 	 */
 	public get nodeAfter(): ModelNode | null {
 		// Cache the parent and reuse for performance reasons.
-		// See https://github.com/ckeditor/ckeditor5/issues/6579 and https://github.com/ckeditor/ckeditor5/issues/6582.
+		// See https://github.com/ssmckinney/ckeditor5/issues/6579 and https://github.com/ssmckinney/ckeditor5/issues/6582.
 		const parent = this.parent;
 
 		return getNodeAfterPosition( this, parent, getTextNodeAtPosition( this, parent ) );
@@ -240,7 +240,7 @@ export class ModelPosition extends ModelTypeCheckable {
 	 */
 	public get nodeBefore(): ModelNode | null {
 		// Cache the parent and reuse for performance reasons.
-		// See https://github.com/ckeditor/ckeditor5/issues/6579 and https://github.com/ckeditor/ckeditor5/issues/6582.
+		// See https://github.com/ssmckinney/ckeditor5/issues/6579 and https://github.com/ssmckinney/ckeditor5/issues/6582.
 		const parent = this.parent;
 
 		return getNodeBeforePosition( this, parent, getTextNodeAtPosition( this, parent ) );
@@ -1089,7 +1089,7 @@ export type ModelPositionStickiness = 'toNone' | 'toNext' | 'toPrevious';
  * If you start hitting performance issues with {@link module:engine/model/position~ModelPosition#parent `Position#parent`}
  * check if your algorithm does not access it multiple times (which can happen directly or indirectly via other position properties).
  *
- * See https://github.com/ckeditor/ckeditor5/issues/6579.
+ * See https://github.com/ssmckinney/ckeditor5/issues/6579.
  *
  * See also:
  *
@@ -1122,7 +1122,7 @@ export function getTextNodeAtPosition( position: ModelPosition, positionParent: 
  * check if your algorithm does not access those properties multiple times
  * (which can happen directly or indirectly via other position properties).
  *
- * See https://github.com/ckeditor/ckeditor5/issues/6579 and https://github.com/ckeditor/ckeditor5/issues/6582.
+ * See https://github.com/ssmckinney/ckeditor5/issues/6579 and https://github.com/ssmckinney/ckeditor5/issues/6582.
  *
  * See also:
  *

@@ -12,7 +12,7 @@ import { MarkerOperation } from '../../src/model/operation/markeroperation.js';
 import { StylesProcessor } from '../../src/view/stylesmap.js';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-describe( 'Bug ckeditor5-engine@1323', () => {
+describe( 'Bug @ssmckinney/ckeditor5-engine@1323', () => {
 	describe( 'constructor()', () => {
 		let model, editing, root, range;
 

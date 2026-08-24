@@ -7,12 +7,12 @@
  * @module core/editor/editorconfig
  */
 
-import type { ArrayOrItem, Translations } from '@ckeditor/ckeditor5-utils';
+import type { ArrayOrItem, Translations } from '@ssmckinney/ckeditor5-utils';
 import { type Context } from '../context.js';
 import type { PluginConstructor } from '../plugin.js';
 import type { EditorRootAttributes, Editor } from './editor.js';
-import type { MenuBarConfig } from '@ckeditor/ckeditor5-ui';
-import type { EngineConfig } from '@ckeditor/ckeditor5-engine';
+import type { MenuBarConfig } from '@ssmckinney/ckeditor5-ui';
+import type { EngineConfig } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * CKEditor configuration options.
@@ -202,14 +202,14 @@ export interface EditorConfig extends EngineConfig {
 	 * <script type="importmap">
 	 * {
 	 *   "imports": {
-	 *     "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/<VERSION>/ckeditor5.js",
-	 *     "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/<VERSION>/"
+	 *     "@ssmckinney/ckeditor5": "https://cdn.ckeditor.com/@ssmckinney/ckeditor5/<VERSION>/ckeditor5.js",
+	 *     "@ssmckinney/ckeditor5/": "https://cdn.ckeditor.com/@ssmckinney/ckeditor5/<VERSION>/"
 	 *   }
 	 * }
 	 * </script>
 	 * <script type="module">
-	 * import { ClassicEditor, Essentials, Paragraph } from 'ckeditor5';
-	 * import { translations } from 'ckeditor5/dist/translations/pl.js';
+	 * import { ClassicEditor, Essentials, Paragraph } from '@ssmckinney/ckeditor5';
+	 * import { translations } from '@ssmckinney/ckeditor5/dist/translations/pl.js';
 	 *
 	 * await ClassicEditor.create( {
 	 *   attachTo: document.querySelector( '#editor' ),
@@ -228,10 +228,10 @@ export interface EditorConfig extends EngineConfig {
 	 * You can add translation using NPM as well.
 	 *
 	 * ```html
-	 * import { ClassicEditor, Essentials, Paragraph } from 'ckeditor5';
-	 * import { translations } from 'ckeditor5/dist/translations/pl.js';
+	 * import { ClassicEditor, Essentials, Paragraph } from '@ssmckinney/ckeditor5';
+	 * import { translations } from '@ssmckinney/ckeditor5/dist/translations/pl.js';
 	 *
-	 * import 'ckeditor5/dist/styles.css';
+	 * import '@ssmckinney/ckeditor5/dist/styles.css';
 	 *
 	 * await ClassicEditor.create( {
 	 *   attachTo: document.querySelector( '#editor' ),
@@ -609,7 +609,7 @@ export interface EditorConfig extends EngineConfig {
 	 * 	Essentials,
 	 * // The bold plugin.
 	 * 	Bold
-	 * } from 'ckeditor5';
+	 * } from '@ssmckinney/ckeditor5';
 	 *
 	 * const config = {
 	 * 	plugins: [ Essentials, Bold ]

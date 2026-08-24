@@ -4,18 +4,18 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { ListEditing } from '@ckeditor/ckeditor5-list';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { ListEditing } from '@ssmckinney/ckeditor5-list';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
 import { GeneralHtmlSupport } from '../src/generalhtmlsupport.js';
-import { _getModelData, _setModelData, _VIEW_INLINE_FILLER } from '@ckeditor/ckeditor5-engine';
+import { _getModelData, _setModelData, _VIEW_INLINE_FILLER } from '@ssmckinney/ckeditor5-engine';
 
 import { EmptyBlock } from '../src/emptyblock.js';
-import { toWidget, viewToModelPositionOutsideModelElement } from '@ckeditor/ckeditor5-widget';
+import { toWidget, viewToModelPositionOutsideModelElement } from '@ssmckinney/ckeditor5-widget';
 
 describe( 'EmptyBlock', () => {
 	let editor, model, element, view;
@@ -443,7 +443,7 @@ describe( 'EmptyBlock', () => {
 		describe( 'pasting content', () => {
 			it( 'should not add block filler if paste within editor', () => {
 				const dataTransferMock = createDataTransfer( {
-					'application/ckeditor5-editor-id': editor.id,
+					'application/@ssmckinney/ckeditor5-editor-id': editor.id,
 					'text/html': '<p></p><p>Foo</p>'
 				} );
 
@@ -464,7 +464,7 @@ describe( 'EmptyBlock', () => {
 
 			it( 'should add block filler if paste from another editor', () => {
 				const dataTransferMock = createDataTransfer( {
-					'application/ckeditor5-editor-id': 'it-is-absolutely-different-editor',
+					'application/@ssmckinney/ckeditor5-editor-id': 'it-is-absolutely-different-editor',
 					'text/html': '<p></p><p>Foo</p>'
 				} );
 

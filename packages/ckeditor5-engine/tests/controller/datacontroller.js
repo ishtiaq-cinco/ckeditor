@@ -17,11 +17,11 @@ import { ViewDocument } from '../../src/view/document.js';
 import { _getModelData, _setModelData, _stringifyModel, _parseModel } from '../../src/dev-utils/model.js';
 import { _parseView, _stringifyView } from '../../src/dev-utils/view.js';
 
-import { count } from '@ckeditor/ckeditor5-utils';
+import { count } from '@ssmckinney/ckeditor5-utils';
 
 import { UpcastHelpers } from '../../src/conversion/upcasthelpers.js';
 import { DowncastHelpers } from '../../src/conversion/downcasthelpers.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { StylesProcessor } from '../../src/view/stylesmap.js';
 
 describe( 'DataController', () => {
@@ -867,7 +867,7 @@ describe( 'DataController', () => {
 			);
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/8485.
+		// See https://github.com/ssmckinney/ckeditor5/issues/8485.
 		it( 'should convert collapsed markers at element boundary', () => {
 			const modelElement = _parseModel( '<div><paragraph>foo</paragraph></div>', schema );
 			const modelRoot = model.document.getRoot();
@@ -895,7 +895,7 @@ describe( 'DataController', () => {
 			);
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/8485.
+		// See https://github.com/ssmckinney/ckeditor5/issues/8485.
 		it( 'should convert collapsed markers at element boundary in a deeply nested element', () => {
 			const modelElement = _parseModel( '<div><div><div><div><paragraph>foo</paragraph></div></div></div></div>', schema );
 			const modelRoot = model.document.getRoot();
@@ -925,7 +925,7 @@ describe( 'DataController', () => {
 			);
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/8485.
+		// See https://github.com/ssmckinney/ckeditor5/issues/8485.
 		it( 'should skip collapsed markers at other element\'s boundaries', () => {
 			const modelElement = _parseModel( '<div><paragraph>foo</paragraph><paragraph>bar</paragraph></div>', schema );
 			const modelRoot = model.document.getRoot();
@@ -1112,11 +1112,11 @@ describe( 'DataController', () => {
 
 				const container = conversionApi.writer.createElement( 'container' );
 
-				// Create `caption` model element. Thanks to that element the rest of the `ckeditor5-plugin` converters can
+				// Create `caption` model element. Thanks to that element the rest of the `@ssmckinney/ckeditor5-plugin` converters can
 				// recognize this image as a block image with a caption.
 				//
 				// Caption element is also used as a conversion target so Schema can be properly checked for allowed children.
-				// https://github.com/ckeditor/ckeditor5/issues/12797.
+				// https://github.com/ssmckinney/ckeditor5/issues/12797.
 				const caption = conversionApi.writer.createElement( 'caption' );
 
 				// Parse HTML from data-caption attribute and upcast it to model fragment.
@@ -1152,7 +1152,7 @@ describe( 'DataController', () => {
 			const downcastDispatcher = data.downcastDispatcher;
 			const dataProcessor = data.processor;
 
-			// Test whether list modelViewSplitOnInsert is not breaking conversion (see https://github.com/ckeditor/ckeditor5/issues/11490).
+			// Test whether list modelViewSplitOnInsert is not breaking conversion (see https://github.com/ssmckinney/ckeditor5/issues/11490).
 			downcastDispatcher.on( 'insert', ( evt, data, conversionApi ) => {
 				if ( conversionApi.consumable.test( data.item, evt.name ) ) {
 					conversionApi.mapper.toViewPosition( data.range.start );

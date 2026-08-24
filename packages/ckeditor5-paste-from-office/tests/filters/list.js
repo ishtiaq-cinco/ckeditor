@@ -5,7 +5,7 @@
 
 import { describe, it, expect, beforeEach } from 'vitest';
 
-import { HtmlDataProcessor, _stringifyView, ViewDocument, ViewUpcastWriter, StylesProcessor } from '@ckeditor/ckeditor5-engine';
+import { HtmlDataProcessor, _stringifyView, ViewDocument, ViewUpcastWriter, StylesProcessor } from '@ssmckinney/ckeditor5-engine';
 
 import {
 	transformListItemLikeElementsIntoLists,
@@ -706,7 +706,7 @@ describe( 'PasteFromOffice - filters', () => {
 						);
 					} );
 
-					// s/ckeditor5/3
+					// s/@ssmckinney/ckeditor5/3
 					it( 'should handle invalid style with repeated characters', () => {
 						const styles = '@list l0:level1\n' +
 							'{' + 'mso-level-number-format:'.repeat( 100000 ) + '}';

@@ -5,7 +5,7 @@
 
 import { describe, it, expect, beforeEach } from 'vitest';
 import { MarkdownGfmDataProcessor } from '../../src/gfmdataprocessor.js';
-import { _stringifyView, ViewDocument, StylesProcessor } from '@ckeditor/ckeditor5-engine';
+import { _stringifyView, ViewDocument, StylesProcessor } from '@ssmckinney/ckeditor5-engine';
 import { testDataProcessor } from '../../tests/_utils/utils.js';
 
 const testCases = {

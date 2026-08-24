@@ -124,6 +124,13 @@ export { default as IconListStyleSquare } from '../theme/icons/list-style-square
 export { default as IconListStyleUpperLatin } from '../theme/icons/list-style-upper-latin.svg';
 export { default as IconListStyleUpperRoman } from '../theme/icons/list-style-upper-roman.svg';
 export { default as IconListStyleArabicIndic } from '../theme/icons/list-style-arabic-indic.svg';
+export { default as IconListStyleCircleTick } from '../theme/icons/list-style-circle-tick.svg';
+export { default as IconListStyleCircleCross } from '../theme/icons/list-style-circle-cross.svg';
+
+// The marker glyphs on their own, without the surrounding list preview of the icons above. They are what a
+// list actually renders as its bullet, so they are sized for text rather than for a toolbar tile.
+export { default as IconListMarkerCircleTick } from '../theme/icons/list-marker-circle-tick.svg';
+export { default as IconListMarkerCircleCross } from '../theme/icons/list-marker-circle-cross.svg';
 export { default as IconLocal } from '../theme/icons/local.svg';
 export { default as IconLoupe } from '../theme/icons/loupe.svg';
 export { default as IconLowVision } from '../theme/icons/low-vision.svg';

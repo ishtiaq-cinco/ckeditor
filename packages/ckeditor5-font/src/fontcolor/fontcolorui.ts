@@ -7,10 +7,10 @@
  * @module font/fontcolor/fontcolorui
  */
 
-import { IconFontColor } from '@ckeditor/ckeditor5-icons';
+import { IconFontColor } from '@ssmckinney/ckeditor5-icons';
 import { FontColorUIBase } from '../ui/colorui.js';
 import { FONT_COLOR } from '../utils.js';
-import type { Editor } from '@ckeditor/ckeditor5-core';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
 
 /**
  * The font color UI plugin. It introduces the `'fontColor'` dropdown.

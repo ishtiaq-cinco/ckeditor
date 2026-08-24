@@ -7,7 +7,7 @@
  * @module widget/widget
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import {
 	PointerObserver,
@@ -34,9 +34,9 @@ import {
 	type Model,
 	type ModelSelection,
 	type ModelDocumentSelection
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import { Delete, type ViewDocumentDeleteEvent } from '@ckeditor/ckeditor5-typing';
+import { Delete, type ViewDocumentDeleteEvent } from '@ssmckinney/ckeditor5-typing';
 
 import {
 	env,
@@ -46,7 +46,7 @@ import {
 	compareArrays,
 	type EventInfo,
 	type KeystrokeInfo
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { WidgetTypeAround } from './widgettypearound/widgettypearound.js';
 import { getClosestTypeAroundDomButton, getTypeAroundFakeCaretPosition } from './widgettypearound/utils.js';
@@ -122,7 +122,7 @@ export class Widget extends Plugin {
 		// * fake selection can be set correctly,
 		// * any logic depending on (View)Selection#getSelectedElement() also works OK.
 		//
-		// See https://github.com/ckeditor/ckeditor5/issues/9524.
+		// See https://github.com/ssmckinney/ckeditor5/issues/9524.
 		this.editor.editing.downcastDispatcher.on<DowncastSelectionEvent>( 'selection', ( evt, data, conversionApi ) => {
 			const viewWriter = conversionApi.writer;
 			const modelSelection = data.selection;
@@ -170,7 +170,7 @@ export class Widget extends Plugin {
 				// All of them must be marked as selected, for instance [<widget></widget><widget></widget>]
 				for ( const value of range ) {
 					const node = value.item as ViewElement;
-					// Do not mark nested widgets in selected one. See: https://github.com/ckeditor/ckeditor5/issues/4594
+					// Do not mark nested widgets in selected one. See: https://github.com/ssmckinney/ckeditor5/issues/4594
 					if ( isWidget( node ) && !isChild( node, lastMarked ) ) {
 						viewWriter.addClass( WIDGET_SELECTED_CLASS_NAME, node );
 						this._previouslySelected.add( node );
@@ -304,7 +304,7 @@ export class Widget extends Plugin {
 		}
 
 		// Canceling this event on a type around button would suppress the compatibility `mousedown`
-		// event that activates the button on touch devices. See https://github.com/ckeditor/ckeditor5/issues/20103.
+		// event that activates the button on touch devices. See https://github.com/ssmckinney/ckeditor5/issues/20103.
 		if ( getClosestTypeAroundDomButton( domEventData.domTarget ) ) {
 			return;
 		}
@@ -835,7 +835,7 @@ function getElementFromMouseEvent( view: EditingView, domEventData: ViewDocument
 		viewRange = view.domConverter.domRangeToView( domRange );
 	} else {
 		// Fallback to create range in target element. It happens frequently on Safari browser.
-		// See more: https://github.com/ckeditor/ckeditor5/issues/16978
+		// See more: https://github.com/ssmckinney/ckeditor5/issues/16978
 		viewRange = view.createRange( view.createPositionAt( domEventData.target, 0 ) );
 	}
 
@@ -860,7 +860,7 @@ function getElementFromMouseEvent( view: EditingView, domEventData: ViewDocument
 		} else if ( viewPosition.isAtStart && viewPosition.nodeAfter ) {
 			// Click before a widget tend to return position at the start of the editable element
 			// so use the node after it if range is at the start of a parent.
-			// See more: https://github.com/ckeditor/ckeditor5/issues/16992
+			// See more: https://github.com/ssmckinney/ckeditor5/issues/16992
 			viewNode = viewPosition.nodeAfter as ViewNode;
 		}
 	}

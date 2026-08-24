@@ -87,7 +87,7 @@ function shouldNodeBeIncluded( node: unknown ): node is Record<string, unknown> 
 		// This flag is meant to exclude singletons shared across editor instances. So when an error is thrown in one editor,
 		// the other editors connected through the reference to the same singleton are not restarted. This is a temporary workaround
 		// until a better solution is found.
-		// More in https://github.com/ckeditor/ckeditor5/issues/12292.
+		// More in https://github.com/ssmckinney/ckeditor5/issues/12292.
 		( node as any )._watchdogExcluded ||
 
 		// Skip native DOM objects, e.g. Window, nodes, events, etc.

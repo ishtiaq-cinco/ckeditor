@@ -7,9 +7,9 @@
  * @module ckbox/ckboximageedit/utils
  */
 
-import { global } from '@ckeditor/ckeditor5-utils';
+import { global } from '@ssmckinney/ckeditor5-utils';
 
-import type { ModelElement } from '@ckeditor/ckeditor5-engine';
+import type { ModelElement } from '@ssmckinney/ckeditor5-engine';
 import type { CKBoxConfig } from '../ckboxconfig.js';
 
 /**

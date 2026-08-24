@@ -4,13 +4,13 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { AlignmentEditing } from '@ckeditor/ckeditor5-alignment';
-import { TableCellPropertiesEditing, TableEditing, TablePropertiesEditing } from '@ckeditor/ckeditor5-table';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { modelTable } from '@ckeditor/ckeditor5-table/tests/_utils/utils.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { AlignmentEditing } from '@ssmckinney/ckeditor5-alignment';
+import { TableCellPropertiesEditing, TableEditing, TablePropertiesEditing } from '@ssmckinney/ckeditor5-table';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { modelTable } from '@ssmckinney/ckeditor5-table/tests/_utils/utils.js';
 
 import { ImageStyleEditing } from '../../src/imagestyle/imagestyleediting.js';
 import { ImageBlockEditing } from '../../src/image/imageblockediting.js';
@@ -912,7 +912,7 @@ describe( 'ImageStyleEditing', () => {
 					);
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/8270.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8270.
 				it( 'should stop conversion when model element is not found', async () => {
 					const customEditor = await VirtualTestEditor
 						.create( {
@@ -1071,7 +1071,7 @@ describe( 'ImageStyleEditing', () => {
 					);
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/8270.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8270.
 				it( 'should stop conversion when model element is not found', async () => {
 					const customEditor = await VirtualTestEditor
 						.create( {

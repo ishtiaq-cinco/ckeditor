@@ -7,20 +7,20 @@
  * @module widget/widgettypearound/widgettypearound
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { IconReturnArrow } from '@ckeditor/ckeditor5-icons';
-import { Template } from '@ckeditor/ckeditor5-ui';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { IconReturnArrow } from '@ssmckinney/ckeditor5-icons';
+import { Template } from '@ssmckinney/ckeditor5-ui';
 
 import {
 	Enter,
 	type ViewDocumentEnterEvent
-} from '@ckeditor/ckeditor5-enter';
+} from '@ssmckinney/ckeditor5-enter';
 
 import {
 	Delete,
 	type ViewDocumentDeleteEvent,
 	type ViewDocumentInsertTextEvent
-} from '@ckeditor/ckeditor5-typing';
+} from '@ssmckinney/ckeditor5-typing';
 
 import {
 	env,
@@ -31,7 +31,7 @@ import {
 	type GetCallbackOptions,
 	type ObservableChangeEvent,
 	type KeystrokeInfo
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import type {
 	BubblingEventInfo,
@@ -51,7 +51,7 @@ import type {
 	ModelDeleteContentEvent,
 	ModelInsertContentEvent,
 	ModelInsertObjectEvent
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import {
 	isTypeAroundWidget,
@@ -65,7 +65,7 @@ import {
 import { isWidget } from '../utils.js';
 import { type Widget } from '../widget.js';
 
-// @if CK_DEBUG_TYPING // import { _buildLogMessage } from '@ckeditor/ckeditor5-engine/src/dev-utils/utils.js';
+// @if CK_DEBUG_TYPING // import { _buildLogMessage } from '@ssmckinney/ckeditor5-engine/src/dev-utils/utils.js';
 
 import '../../theme/widgettypearound.css';
 

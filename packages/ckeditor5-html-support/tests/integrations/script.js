@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 import { GeneralHtmlSupport } from '../../src/generalhtmlsupport.js';
 import { getModelDataWithAttributes } from '../_utils/utils.js';
-import { _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { ScriptElementSupport } from '../../src/integrations/script.js';
 
 describe( 'ScriptElementSupport', () => {
@@ -101,7 +101,7 @@ describe( 'ScriptElementSupport', () => {
 		expect( editor.getData() ).toBe( `<p>Foo</p><script type="c++">${ CODE_CPP }</script>` );
 	} );
 
-	// See: https://github.com/ckeditor/ckeditor5/issues/11247
+	// See: https://github.com/ssmckinney/ckeditor5/issues/11247
 	it( 'should allow element in the empty editor', () => {
 		editor.setData( `<script>${ CODE }</script>` );
 

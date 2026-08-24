@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
-import { Rect, global } from '@ckeditor/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { SourceEditing } from '@ssmckinney/ckeditor5-source-editing';
+import { Rect, global } from '@ssmckinney/ckeditor5-utils';
 
 import { BalloonPanelView } from '../../src/index.js';
 import { View } from '../../src/view.js';

@@ -7,7 +7,7 @@
  * @module fullscreen/fullscreen
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import { FullscreenEditing } from './fullscreenediting.js';
 import { FullscreenUI } from './fullscreenui.js';

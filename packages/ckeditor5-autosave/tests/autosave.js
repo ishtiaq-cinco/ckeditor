@@ -3,10 +3,10 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { Autosave } from '../src/autosave.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { PendingActions } from '@ckeditor/ckeditor5-core';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { PendingActions } from '@ssmckinney/ckeditor5-core';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 describe( 'Autosave', () => {

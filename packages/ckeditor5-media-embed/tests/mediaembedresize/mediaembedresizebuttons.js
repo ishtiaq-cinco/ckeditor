@@ -9,12 +9,12 @@ import {
 	IconObjectSizeMedium,
 	IconObjectSizeLarge,
 	IconObjectSizeFull
-} from '@ckeditor/ckeditor5-icons';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { DropdownView, ButtonView } from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-icons';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { DropdownView, ButtonView } from '@ssmckinney/ckeditor5-ui';
 
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 import { MediaEmbedEditing } from '../../src/mediaembedediting.js';
 import { MediaEmbedResizeEditing } from '../../src/mediaembedresize/mediaembedresizeediting.js';

@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 import { Table } from '../src/table.js';
 import { PlainTableOutput } from '../src/plaintableoutput.js';
 import { modelTable } from './_utils/utils.js';
@@ -520,7 +520,7 @@ describe( 'PlainTableOutput', () => {
 				await testEditor.destroy();
 			} );
 
-			// See: https://github.com/ckeditor/ckeditor5/issues/11394
+			// See: https://github.com/ssmckinney/ckeditor5/issues/11394
 			it( 'should allow overriding image caption converters', async () => {
 				const testEditor = await ClassicTestEditor.create( editorElement, {
 					plugins: [ ArticlePluginSet, Table, TableCaptionEditing, PlainTableOutput, ClipboardPipeline ],

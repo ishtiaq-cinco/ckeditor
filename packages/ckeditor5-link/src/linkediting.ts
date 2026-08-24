@@ -7,7 +7,7 @@
  * @module link/linkediting
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import type {
 	ModelSchema,
 	ModelWriter,
@@ -18,22 +18,23 @@ import type {
 	ViewDowncastWriter,
 	DowncastAttributeEvent,
 	ModelItem
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 import {
 	Input,
 	TwoStepCaretMovement,
 	inlineHighlight
-} from '@ckeditor/ckeditor5-typing';
+} from '@ssmckinney/ckeditor5-typing';
 import {
 	ClipboardPipeline,
 	type ClipboardContentInsertionEvent
-} from '@ckeditor/ckeditor5-clipboard';
-import { keyCodes, env, type GetCallback, priorities } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-clipboard';
+import { keyCodes, env, type GetCallback, priorities } from '@ssmckinney/ckeditor5-utils';
 
 import { LinkCommand } from './linkcommand.js';
 import { UnlinkCommand } from './unlinkcommand.js';
 import { areDecoratorsConflicting } from './utils/conflictingdecorators.js';
 import { LinkManualDecorator } from './utils/manualdecorator.js';
+import { getBuiltinDecorators } from './utils/builtindecorators.js';
 import {
 	createLinkElement,
 	ensureSafeUrl,
@@ -103,6 +104,8 @@ export class LinkEditing extends Plugin {
 		editor.config.define( 'link', {
 			allowCreatingEmptyLinks: false,
 			addTargetToExternalLinks: false,
+			builtinDecorators: false,
+			defaultProtocol: 'https://',
 			toolbar: [ 'linkPreview', '|', 'editLink', 'linkProperties', 'unlink' ]
 		} );
 	}
@@ -143,7 +146,12 @@ export class LinkEditing extends Plugin {
 		editor.commands.add( 'link', new LinkCommand( editor ) );
 		editor.commands.add( 'unlink', new UnlinkCommand( editor ) );
 
-		const linkDecorators = getLocalizedDecorators( editor.t, normalizeDecorators( editor.config.get( 'link.decorators' ) ) );
+		// Decorators declared by the integrator are applied on top of the built-in ones, so they win on a
+		// name clash and a project can override a single one without redeclaring the rest.
+		const linkDecorators = getLocalizedDecorators( editor.t, normalizeDecorators( {
+			...getBuiltinDecorators( editor.config.get( 'link.builtinDecorators' ) ),
+			...editor.config.get( 'link.decorators' )
+		} ) );
 
 		this._enableAutomaticDecorators( linkDecorators
 			.filter( ( item ): item is NormalizedLinkDecoratorAutomaticDefinition => item.mode === DECORATOR_AUTOMATIC ) );

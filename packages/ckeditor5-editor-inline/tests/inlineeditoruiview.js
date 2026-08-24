@@ -5,10 +5,10 @@
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { InlineEditorUIView } from '../src/inlineeditoruiview.js';
-import { EditingView } from '@ckeditor/ckeditor5-engine';
-import { ToolbarView, BalloonPanelView, InlineEditableUIView, MenuBarView } from '@ckeditor/ckeditor5-ui';
-import { Locale, Rect, toUnit, global, ResizeObserver } from '@ckeditor/ckeditor5-utils';
-import { createViewRoot } from '@ckeditor/ckeditor5-engine/tests/view/_utils/createroot.js';
+import { EditingView } from '@ssmckinney/ckeditor5-engine';
+import { ToolbarView, BalloonPanelView, InlineEditableUIView, MenuBarView } from '@ssmckinney/ckeditor5-ui';
+import { Locale, Rect, toUnit, global, ResizeObserver } from '@ssmckinney/ckeditor5-utils';
+import { createViewRoot } from '@ssmckinney/ckeditor5-engine/tests/view/_utils/createroot.js';
 
 const toPx = toUnit( 'px' );
 

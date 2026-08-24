@@ -7,7 +7,7 @@
  * @module link/linkconfig
  */
 
-import type { ArrayOrItem } from '@ckeditor/ckeditor5-utils';
+import type { ArrayOrItem } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * The configuration of the {@link module:link/link~Link link feature}.
@@ -44,7 +44,18 @@ export interface LinkConfig {
 	 * 	.catch( ... );
 	 * ```
 	 *
-	 * **NOTE:** If no configuration is provided, the editor will not auto-fix the links.
+	 * Set it to an empty string to switch the behaviour off, leaving a typed `ckeditor.com` as it was:
+	 *
+	 * ```ts
+	 * link: {
+	 * 	defaultProtocol: ''
+	 * }
+	 * ```
+	 *
+	 * **NOTE**: {@link module:link/autolink~AutoLink} needs this to do anything at all. It bails out on a URL with
+	 * no protocol, so without a default it would only ever link text that was typed with one.
+	 *
+	 * @default 'https://'
 	 */
 	defaultProtocol?: string;
 
@@ -125,6 +136,52 @@ export interface LinkConfig {
 	 * @default false
 	 */
 	addTargetToExternalLinks?: boolean;
+
+	/**
+	 * Enables the manual decorators that ship with the link feature, so that common link attributes do not have to be
+	 * spelled out in {@link module:link/linkconfig~LinkConfig#decorators `config.link.decorators`}.
+	 *
+	 * Pass `true` for all of them, or a list of names to pick:
+	 *
+	 * ```ts
+	 * ClassicEditor
+	 * 	.create( {
+	 * 		link: {
+	 * 			builtinDecorators: true
+	 * 			// ...or: [ 'openInNewTab', 'noFollow', 'noIndex' ]
+	 * 		}
+	 * 	} )
+	 * 	.then( ... )
+	 * 	.catch( ... );
+	 * ```
+	 *
+	 * The available names and the attributes they write are listed in
+	 * {@link module:link/utils/builtindecorators~BUILTIN_LINK_DECORATORS}.
+	 *
+	 * Each one becomes a switch in the "Link properties" panel, reachable both from the link toolbar and from the
+	 * button below the link form — the latter is what lets the options be chosen while the link is still being created.
+	 *
+	 * Anything declared in {@link module:link/linkconfig~LinkConfig#decorators `config.link.decorators`} is applied on
+	 * top of these and wins on a name clash, so a project can override a single label or attribute set without
+	 * redeclaring the rest:
+	 *
+	 * ```ts
+	 * link: {
+	 * 	builtinDecorators: true,
+	 * 	decorators: {
+	 * 		// Keeps the other five, replaces this one.
+	 * 		noFollow: { mode: 'manual', label: 'Do not follow', attributes: { rel: 'nofollow' } }
+	 * 	}
+	 * }
+	 * ```
+	 *
+	 * **Note**: `openInNewTab` manages the `target` attribute. As with any manual decorator that does so,
+	 * {@link module:link/linkconfig~LinkConfig#addTargetToExternalLinks `config.link.addTargetToExternalLinks`} should
+	 * remain `undefined` or `false` to not interfere with it.
+	 *
+	 * @default false
+	 */
+	builtinDecorators?: boolean | Array<LinkBuiltinDecoratorName>;
 
 	/**
 	 * Decorators provide an easy way to configure and manage additional link attributes in the editor content. There are
@@ -225,6 +282,20 @@ export interface LinkConfig {
  * {@glink features/link#custom-link-attributes-decorators link feature guide} for general information.
  */
 export type LinkDecoratorDefinition = LinkDecoratorAutomaticDefinition | LinkDecoratorManualDefinition;
+
+/**
+ * The name of a manual decorator that ships with the link feature, accepted by
+ * {@link module:link/linkconfig~LinkConfig#builtinDecorators `config.link.builtinDecorators`}.
+ *
+ * See {@link module:link/utils/builtindecorators~BUILTIN_LINK_DECORATORS} for what each one writes.
+ */
+export type LinkBuiltinDecoratorName =
+	| 'openInNewTab'
+	| 'noFollow'
+	| 'noIndex'
+	| 'sponsored'
+	| 'ugc'
+	| 'downloadable';
 
 /**
  * Describes an automatic {@link module:link/linkconfig~LinkConfig#decorators link decorator}. This decorator type matches

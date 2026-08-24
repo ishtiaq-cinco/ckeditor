@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Locale, env } from '@ckeditor/ckeditor5-utils';
+import { Locale, env } from '@ssmckinney/ckeditor5-utils';
 import { AccessibilityHelpContentView } from '../../../src/editorui/accessibilityhelp/accessibilityhelpcontentview.js';
 
 describe( 'AccessibilityHelpContentView', () => {

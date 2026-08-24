@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 import { DropdownMenuRootListView } from '../../../src/dropdown/menu/dropdownmenurootlistview.js';
 import { createMockMenuDefinition } from './_utils/dropdowntreemock.js';

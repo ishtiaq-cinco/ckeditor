@@ -4,11 +4,11 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { global } from '@ckeditor/ckeditor5-utils';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { global } from '@ssmckinney/ckeditor5-utils';
 
 import { ShowBlocks } from '../src/showblocks.js';
 import { ShowBlocksEditing } from '../src/showblocksediting.js';

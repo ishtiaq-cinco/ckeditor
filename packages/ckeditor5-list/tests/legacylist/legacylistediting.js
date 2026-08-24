@@ -11,21 +11,21 @@ import { LegacyListEditing } from '../../src/legacylist/legacylistediting.js';
 import { LegacyListCommand } from '../../src/legacylist/legacylistcommand.js';
 import { LegacyIndentCommand } from '../../src/legacylist/legacyindentcommand.js';
 
-import { ModelRange, _getModelData, _parseModel, _setModelData, _getViewData, _parseView } from '@ckeditor/ckeditor5-engine';
+import { ModelRange, _getModelData, _parseModel, _setModelData, _getViewData, _parseView } from '@ssmckinney/ckeditor5-engine';
 
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { IndentEditing } from '@ckeditor/ckeditor5-indent';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { IndentEditing } from '@ssmckinney/ckeditor5-indent';
 
-import { getCode } from '@ckeditor/ckeditor5-utils';
-import { TableEditing, TableKeyboard } from '@ckeditor/ckeditor5-table';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { modelTable } from '@ckeditor/ckeditor5-table/tests/_utils/utils.js';
+import { getCode } from '@ssmckinney/ckeditor5-utils';
+import { TableEditing, TableKeyboard } from '@ssmckinney/ckeditor5-table';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { modelTable } from '@ssmckinney/ckeditor5-table/tests/_utils/utils.js';
 
 describe( 'LegacyListEditing', () => {
 	let editor, model, modelDoc, modelRoot, view, viewDoc, viewRoot;
@@ -559,7 +559,7 @@ describe( 'LegacyListEditing', () => {
 				'<p>foo</p><ul><li>xxx</li><li>yyy</li></ul>'
 			);
 
-			// #ckeditor5/1399
+			// #@ssmckinney/ckeditor5/1399
 			testList( 'single item with `font-weight` style',
 				'<ol><li style="font-weight: bold">foo</li></ol>', '<ol><li><strong>foo</strong></li></ol>' );
 
@@ -4541,7 +4541,7 @@ describe( 'LegacyListEditing', () => {
 			expect( _getViewData( editor.editing.view, { withoutSelection: true } ) ).toBe( '<ul><li>a</li><li>b</li></ul>' );
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/11490.
+		// See https://github.com/ssmckinney/ckeditor5/issues/11490.
 		it( 'model view split converter should not fire if change was already consumed', () => {
 			model.schema.register( 'container', {
 				allowWhere: '$block',
@@ -4794,7 +4794,7 @@ describe( 'LegacyListEditing', () => {
 			);
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/1572
+		// https://github.com/ssmckinney/ckeditor5/issues/1572
 		it( 'should not crash if list item contains autoparagraphed block that will be split', () => {
 			// Creating a new editor as we need HeadingEditing. Cannot add HeadingEditing to the `describe` at the beginning of the
 			// test file because other tests assume that headings are not available.

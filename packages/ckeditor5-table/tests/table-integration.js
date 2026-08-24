@@ -5,23 +5,23 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { Widget } from '@ckeditor/ckeditor5-widget';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { ListEditing } from '@ckeditor/ckeditor5-list';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { ListEditing } from '@ssmckinney/ckeditor5-list';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import {
 	_getModelData,
 	_setModelData,
-	_parseView } from '@ckeditor/ckeditor5-engine';
+	_parseView } from '@ssmckinney/ckeditor5-engine';
 
 import { TableEditing } from '../src/tableediting.js';
 import { modelTable, viewTable } from './_utils/utils.js';
-import { stubUid } from '@ckeditor/ckeditor5-list/tests/list/_utils/uid.js';
+import { stubUid } from '@ssmckinney/ckeditor5-list/tests/list/_utils/uid.js';
 
 describe( 'Table feature – integration', () => {
 	afterEach( () => {
@@ -232,7 +232,7 @@ describe( 'Table feature – integration with markers', () => {
 			.to.equal( '<table><tableRow><tableCell><paragraph></paragraph></tableCell></tableRow></table>' );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/10116
+	// https://github.com/ssmckinney/ckeditor5/issues/10116
 	describe( 'markers converted to UI elements and vice versa', () => {
 		function CustomPlugin( editor ) {
 			editor.conversion.for( 'upcast' ).elementToMarker( { view: 'foo', model: 'bar' } );

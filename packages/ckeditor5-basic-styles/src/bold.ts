@@ -7,7 +7,7 @@
  * @module basic-styles/bold
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { BoldEditing } from './bold/boldediting.js';
 import { BoldUI } from './bold/boldui.js';
 

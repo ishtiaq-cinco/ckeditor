@@ -7,8 +7,8 @@
  * @module image/imagesizeattributes
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import type { DowncastDispatcher, DowncastAttributeEvent, ViewElement, ModelElement } from '@ckeditor/ckeditor5-engine';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import type { DowncastDispatcher, DowncastAttributeEvent, ViewElement, ModelElement } from '@ssmckinney/ckeditor5-engine';
 import { ImageUtils } from './imageutils.js';
 import { widthAndHeightStylesAreBothSet, getSizeValueIfInPx } from './image/utils.js';
 
@@ -174,7 +174,7 @@ export class ImageSizeAttributes extends Plugin {
 					viewWriter.setAttribute( 'loading', 'lazy', img );
 				}
 
-				// Do not set aspect-ratio for pictures. See https://github.com/ckeditor/ckeditor5/issues/14579.
+				// Do not set aspect-ratio for pictures. See https://github.com/ssmckinney/ckeditor5/issues/14579.
 				if ( data.item.hasAttribute( 'sources' ) ) {
 					return;
 				}

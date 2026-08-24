@@ -3,12 +3,12 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { Widget, toWidget } from '@ckeditor/ckeditor5-widget';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { Widget, toWidget } from '@ssmckinney/ckeditor5-widget';
 
 import { ClickObserver } from '../../../../src/view/observer/clickobserver.js';
 import { CompositionObserver } from '../../../../src/view/observer/compositionobserver.js';
@@ -16,11 +16,11 @@ import { FocusObserver } from '../../../../src/view/observer/focusobserver.js';
 import { InputObserver } from '../../../../src/view/observer/inputobserver.js';
 import { KeyObserver } from '../../../../src/view/observer/keyobserver.js';
 import { MouseObserver } from '../../../../src/view/observer/mouseobserver.js';
-import { _TableMouseEventsObserver } from '@ckeditor/ckeditor5-table';
-import { _DeleteObserver } from '@ckeditor/ckeditor5-typing';
-import { ClipboardObserver } from '@ckeditor/ckeditor5-clipboard';
-import { EnterObserver } from '@ckeditor/ckeditor5-enter';
-import { ImageLoadObserver } from '@ckeditor/ckeditor5-image';
+import { _TableMouseEventsObserver } from '@ssmckinney/ckeditor5-table';
+import { _DeleteObserver } from '@ssmckinney/ckeditor5-typing';
+import { ClipboardObserver } from '@ssmckinney/ckeditor5-clipboard';
+import { EnterObserver } from '@ssmckinney/ckeditor5-enter';
+import { ImageLoadObserver } from '@ssmckinney/ckeditor5-image';
 
 class SimpleWidgetEditing extends Plugin {
 	static get requires() {

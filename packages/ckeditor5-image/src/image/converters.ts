@@ -16,8 +16,8 @@ import {
 	type ViewElementAttributes,
 	type DowncastAttributeEvent,
 	type Consumables
-} from '@ckeditor/ckeditor5-engine';
-import { first, type GetCallback } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-engine';
+import { first, type GetCallback } from '@ssmckinney/ckeditor5-utils';
 import { type ImageUtils } from '../imageutils.js';
 import { getViewImageType, isImageTypePlaceable } from './utils.js';
 
@@ -343,7 +343,7 @@ export function downcastSourcesAttribute( imageUtils: ImageUtils ): ( dispatcher
 
 			const hasPictureElement = imgElement.parent!.is( 'element', 'picture' );
 
-			// Reuse existing <picture> element (https://github.com/ckeditor/ckeditor5/issues/17192) or create a new one.
+			// Reuse existing <picture> element (https://github.com/ssmckinney/ckeditor5/issues/17192) or create a new one.
 			const pictureElement = hasPictureElement ? imgElement.parent : viewWriter.createContainerElement( 'picture', null );
 
 			if ( !hasPictureElement ) {

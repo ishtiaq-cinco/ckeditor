@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect, beforeEach } from 'vitest';
-import { Editor } from '@ckeditor/ckeditor5-core';
-import { Model, _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { Editor } from '@ssmckinney/ckeditor5-core';
+import { Model, _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { ListReversedCommand } from '../../src/listproperties/listreversedcommand.js';
 import { modelList } from '../list/_utils/utils.js';

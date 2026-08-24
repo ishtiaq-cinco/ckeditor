@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { LinkEditing, LinkImageEditing } from '@ckeditor/ckeditor5-link';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { LinkEditing, LinkImageEditing } from '@ssmckinney/ckeditor5-link';
 import {
 	PictureEditing,
 	ImageUploadEditing,
@@ -15,12 +15,12 @@ import {
 	ImageBlockEditing,
 	ImageInlineEditing,
 	ImageCaptionEditing
-} from '@ckeditor/ckeditor5-image';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+} from '@ssmckinney/ckeditor5-image';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 import { CloudServicesCoreMock } from './_utils/cloudservicescoremock.js';
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
-import { TokenMock } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { TokenMock } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
 
 import { CKBoxEditing } from '../src/ckboxediting.js';
 import { CKBoxCommand } from '../src/ckboxcommand.js';

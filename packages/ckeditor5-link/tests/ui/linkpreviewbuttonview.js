@@ -5,7 +5,7 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { LinkPreviewButtonView } from '../../src/ui/linkpreviewbuttonview.js';
-import { ButtonView } from '@ckeditor/ckeditor5-ui';
+import { ButtonView } from '@ssmckinney/ckeditor5-ui';
 
 describe( 'LinkPreviewButtonView', () => {
 	let view;

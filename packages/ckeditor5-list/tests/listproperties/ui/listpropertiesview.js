@@ -15,13 +15,13 @@ import {
 	SwitchButtonView,
 	View,
 	ViewCollection
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 
 import {
 	FocusTracker,
 	KeystrokeHandler,
 	keyCodes
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 describe( 'ListPropertiesView', () => {
 	let view, locale;
@@ -514,7 +514,7 @@ describe( 'ListPropertiesView', () => {
 						expect( spy ).toHaveBeenCalledOnce();
 					} );
 
-					// https://github.com/ckeditor/ckeditor5/issues/12340
+					// https://github.com/ssmckinney/ckeditor5/issues/12340
 					it( 'should work regardless of the geometry of the grid', () => {
 						view.stylesView.element.style.gridTemplateColumns = 'repeat(2, 1fr)';
 

@@ -3,10 +3,10 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 window.setInterval( function() {
 	console.log( _getModelData( window.editor.model ) );

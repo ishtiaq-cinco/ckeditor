@@ -7,9 +7,9 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 import { DeleteObserver } from '../src/deleteobserver.js';
 
-import { EditingView, ViewDocumentDomEventData, _setViewData, StylesProcessor } from '@ckeditor/ckeditor5-engine';
-import { createViewRoot } from '@ckeditor/ckeditor5-engine/tests/view/_utils/createroot.js';
-import { env, getCode } from '@ckeditor/ckeditor5-utils';
+import { EditingView, ViewDocumentDomEventData, _setViewData, StylesProcessor } from '@ssmckinney/ckeditor5-engine';
+import { createViewRoot } from '@ssmckinney/ckeditor5-engine/tests/view/_utils/createroot.js';
+import { env, getCode } from '@ssmckinney/ckeditor5-utils';
 import { fireBeforeInputDomEvent } from './_utils/utils.js';
 
 describe( 'Delete', () => {

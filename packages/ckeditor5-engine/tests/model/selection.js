@@ -11,10 +11,10 @@ import { ModelRange } from '../../src/model/range.js';
 import { ModelPosition } from '../../src/model/position.js';
 import { ModelLiveRange } from '../../src/model/liverange.js';
 import { ModelSelection } from '../../src/model/selection.js';
-import { count } from '@ckeditor/ckeditor5-utils';
+import { count } from '@ssmckinney/ckeditor5-utils';
 import { _parseModel, _setModelData } from '../../src/dev-utils/model.js';
 import { ModelSchema } from '../../src/model/schema.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 import { stringifyBlocks } from './_utils/utils.js';
 

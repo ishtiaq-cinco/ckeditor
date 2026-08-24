@@ -19,7 +19,7 @@
 .ck.ck-button.ck-switchbutton {
 	/* Unlike a regular button, the switch button text color and background should never change.
 	 * Changing toggle switch (background, outline) is enough to carry the information about the
-	 * state of the entire component (https://github.com/ckeditor/ckeditor5/issues/12519)
+	 * state of the entire component (https://github.com/ssmckinney/ckeditor5/issues/12519)
 	 */
 	&, &:hover, &:focus, &:active, &.ck-on:hover, &.ck-on:focus, &.ck-on:active {
 		color: inherit;

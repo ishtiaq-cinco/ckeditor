@@ -7,10 +7,10 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
 import { FontFamilyEditing } from './../../src/fontfamily/fontfamilyediting.js';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'FontFamilyEditing', () => {
 	let editor, doc;

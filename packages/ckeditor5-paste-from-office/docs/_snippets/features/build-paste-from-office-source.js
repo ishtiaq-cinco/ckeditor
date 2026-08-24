@@ -26,7 +26,7 @@ import {
 	Alignment,
 	Font,
 	HorizontalLine
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 import { ClassicEditor } from '@snippets/index.js';
 
 const defaultConfig = { ...ClassicEditor.defaultConfig };

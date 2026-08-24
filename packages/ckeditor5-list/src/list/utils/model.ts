@@ -15,9 +15,9 @@ import type {
 	ModelWriter,
 	ModelItem,
 	ModelSchema
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import { uid, toArray, type ArrayOrItem } from '@ckeditor/ckeditor5-utils';
+import { uid, toArray, type ArrayOrItem } from '@ssmckinney/ckeditor5-utils';
 
 import { ListWalker, type ListWalkerOptions, SiblingListBlocksIterator } from './listwalker.js';
 import { type ListType } from '../listediting.js';

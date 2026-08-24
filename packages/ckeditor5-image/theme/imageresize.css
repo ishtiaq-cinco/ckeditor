@@ -31,7 +31,7 @@
 
 .ck.ck-editor__editable {
 	/* The resized inline image nested in the table should respect its parent size.
-	See https://github.com/ckeditor/ckeditor5/issues/9117. */
+	See https://github.com/ssmckinney/ckeditor5/issues/9117. */
 	& td,
 	& th {
 		& .image-inline.image_resized img {

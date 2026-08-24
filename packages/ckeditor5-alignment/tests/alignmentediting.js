@@ -6,12 +6,12 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
 import { AlignmentEditing } from '../src/alignmentediting.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ImageCaptionEditing } from '@ckeditor/ckeditor5-image';
-import { ListEditing } from '@ckeditor/ckeditor5-list';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ImageCaptionEditing } from '@ssmckinney/ckeditor5-image';
+import { ListEditing } from '@ssmckinney/ckeditor5-list';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { AlignmentCommand } from '../src/alignmentcommand.js';
 

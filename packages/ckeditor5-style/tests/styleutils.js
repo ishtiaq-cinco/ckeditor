@@ -5,10 +5,10 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 import { StyleUtils } from '../src/styleutils.js';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
 
 describe( 'StyleUtils', () => {
 	let editor, element, styleUtils, dataSchema;

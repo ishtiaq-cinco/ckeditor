@@ -406,7 +406,7 @@ You are going to extend the basic implementation presented in ["The anatomy of t
 
 <code-switcher>
 ```js
-import { ClassicEditor, Essentials, Paragraph, Image, ImageUpload } from 'ckeditor5';
+import { ClassicEditor, Essentials, Paragraph, Image, ImageUpload } from '@ssmckinney/ckeditor5';
 
 class MyUploadAdapter {
 	// MyUploadAdapter class definition.
@@ -444,7 +444,7 @@ Here is what the complete implementation of an `XMLHttpRequest`–based upload a
 
 <code-switcher>
 ```js
-import { ClassicEditor, Essentials, Paragraph, Image, ImageUpload } from 'ckeditor5';
+import { ClassicEditor, Essentials, Paragraph, Image, ImageUpload } from '@ssmckinney/ckeditor5';
 
 class MyUploadAdapter {
 	constructor( loader ) {

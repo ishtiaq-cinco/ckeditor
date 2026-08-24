@@ -4,18 +4,18 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { global } from '@ckeditor/ckeditor5-utils';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { ImageEditing, ImageBlockEditing, ImageUploadEditing, ImageUploadProgress, PictureEditing } from '@ckeditor/ckeditor5-image';
+import { global } from '@ssmckinney/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { ImageEditing, ImageBlockEditing, ImageUploadEditing, ImageUploadProgress, PictureEditing } from '@ssmckinney/ckeditor5-image';
 
 import { CKBoxImageEditEditing } from '../../src/ckboximageedit/ckboximageeditediting.js';
 import { CKBoxImageEditCommand } from '../../src/ckboximageedit/ckboximageeditcommand.js';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
-import { TokenMock } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
+import { TokenMock } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
 import { CloudServicesCoreMock } from '../_utils/cloudservicescoremock.js';
 import { CKBoxUtils } from '../../src/ckboxutils.js';
 

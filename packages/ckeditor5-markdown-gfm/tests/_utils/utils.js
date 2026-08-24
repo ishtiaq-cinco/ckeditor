@@ -5,7 +5,7 @@
 
 import { expect } from 'vitest';
 import { MarkdownGfmDataProcessor } from '../../src/gfmdataprocessor.js';
-import { _stringifyView, ViewDocument, StylesProcessor } from '@ckeditor/ckeditor5-engine';
+import { _stringifyView, ViewDocument, StylesProcessor } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * Tests MarkdownGfmDataProcessor.

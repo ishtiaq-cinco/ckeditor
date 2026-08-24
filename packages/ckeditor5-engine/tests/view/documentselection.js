@@ -11,10 +11,10 @@ import { ViewDocument } from '../../src/view/document.js';
 import { ViewElement } from '../../src/view/element.js';
 import { ViewText } from '../../src/view/text.js';
 import { ViewPosition } from '../../src/view/position.js';
-import { count } from '@ckeditor/ckeditor5-utils';
+import { count } from '@ssmckinney/ckeditor5-utils';
 import { createViewRoot } from './_utils/createroot.js';
 import { _parseView } from '../../src/dev-utils/view.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { StylesProcessor } from '../../src/view/stylesmap.js';
 
 describe( 'ViewDocumentSelection', () => {

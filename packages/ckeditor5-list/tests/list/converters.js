@@ -8,19 +8,19 @@ import { ListPropertiesEditing } from '../../src/listproperties/listpropertiesed
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { ModelRange, _getModelData, _parseModel, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
+import { ModelRange, _getModelData, _parseModel, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
 
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { IndentEditing } from '@ckeditor/ckeditor5-indent';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { AlignmentEditing } from '@ckeditor/ckeditor5-alignment';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { IndentEditing } from '@ssmckinney/ckeditor5-indent';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { AlignmentEditing } from '@ssmckinney/ckeditor5-alignment';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 import { stubUid } from './_utils/uid.js';
 
 describe( 'ListEditing - converters', () => {

@@ -9,10 +9,10 @@ import { View } from '../src/view.js';
 import { ViewCollection } from '../src/viewcollection.js';
 import { UIModel } from '../src/model.js';
 
-import { EmitterMixin, DomEmitterMixin } from '@ckeditor/ckeditor5-utils';
-import { normalizeHtml } from '@ckeditor/ckeditor5-utils/tests/_utils/normalizehtml.js';
+import { EmitterMixin, DomEmitterMixin } from '@ssmckinney/ckeditor5-utils';
+import { normalizeHtml } from '@ssmckinney/ckeditor5-utils/tests/_utils/normalizehtml.js';
 
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 let el, text;
 const injectedElements = [];

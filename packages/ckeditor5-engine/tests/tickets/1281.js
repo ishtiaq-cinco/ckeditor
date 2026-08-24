@@ -3,14 +3,14 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 import { ModelPosition } from '../../src/model/position.js';
 
 import { _setModelData, _getModelData } from '../../src/dev-utils/model.js';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
-describe( 'Bug ckeditor5-engine#1281', () => {
+describe( 'Bug @ssmckinney/ckeditor5-engine#1281', () => {
 	let element, editor, model;
 
 	beforeEach( () => {

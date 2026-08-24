@@ -3,13 +3,13 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { IconLink } from '@ckeditor/ckeditor5-icons';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { IconLink } from '@ssmckinney/ckeditor5-icons';
 import { LinkUI } from '../../src/linkui.js';
 import { Link } from '../../src/link.js';
 
@@ -148,7 +148,13 @@ ClassicEditor
 			Link, Typing, Paragraph, Undo, Enter,
 			SocialLinksPlugin, ShopsLinksPlugin, EmptyLinkList, CKLinkList
 		],
-		toolbar: [ 'link', 'undo', 'redo' ]
+		toolbar: [ 'link', 'undo', 'redo' ],
+
+		// So that the options row and the providers row appear in the same form: the options row
+		// must sit directly under the URL field, above the providers, however they were registered.
+		link: {
+			builtinDecorators: true
+		}
 	} )
 	.then( editor => {
 		window.editor = editor;

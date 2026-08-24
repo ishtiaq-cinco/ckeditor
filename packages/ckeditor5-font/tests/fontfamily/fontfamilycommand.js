@@ -7,7 +7,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { FontFamilyCommand } from '../../src/fontfamily/fontfamilycommand.js';
 import { FontCommand } from '../../src/fontcommand.js';
 
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
 
 describe( 'FontFamilyCommand', () => {
 	let editor, command;

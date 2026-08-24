@@ -7,8 +7,8 @@
  * @module ui/colorgrid/colortileview
  */
 
-import { IconColorTileCheck } from '@ckeditor/ckeditor5-icons';
-import { env, type Locale } from '@ckeditor/ckeditor5-utils';
+import { IconColorTileCheck } from '@ssmckinney/ckeditor5-icons';
+import { env, type Locale } from '@ssmckinney/ckeditor5-utils';
 import { ButtonView } from '../button/buttonview.js';
 
 /**
@@ -39,7 +39,7 @@ export class ColorTileView extends ButtonView {
 		this.extendTemplate( {
 			attributes: {
 				style: {
-					// https://github.com/ckeditor/ckeditor5/issues/14907
+					// https://github.com/ssmckinney/ckeditor5/issues/14907
 					backgroundColor: bind.to( 'color', color => env.isMediaForcedColors ? null : color )
 				},
 				class: [

@@ -7,24 +7,24 @@ declare global {
 	interface Window { CKEditorInspector: any }
 }
 
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Image, ImageCaption, ImageStyle, ImageToolbar } from '@ckeditor/ckeditor5-image';
-import { Indent } from '@ckeditor/ckeditor5-indent';
-import { Link } from '@ckeditor/ckeditor5-link';
-import { List } from '@ckeditor/ckeditor5-list';
-import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
-import { SpecialCharacters, SpecialCharactersEssentials } from '@ckeditor/ckeditor5-special-characters';
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Autoformat } from '@ssmckinney/ckeditor5-autoformat';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Image, ImageCaption, ImageStyle, ImageToolbar } from '@ssmckinney/ckeditor5-image';
+import { Indent } from '@ssmckinney/ckeditor5-indent';
+import { Link } from '@ssmckinney/ckeditor5-link';
+import { List } from '@ssmckinney/ckeditor5-list';
+import { MediaEmbed } from '@ssmckinney/ckeditor5-media-embed';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Table, TableToolbar } from '@ssmckinney/ckeditor5-table';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { FindAndReplace } from '@ssmckinney/ckeditor5-find-and-replace';
+import { SpecialCharacters, SpecialCharactersEssentials } from '@ssmckinney/ckeditor5-special-characters';
+import { SourceEditing } from '@ssmckinney/ckeditor5-source-editing';
 import { ButtonView, Dialog, View } from '../../../src/index.js';
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 
 class ViewWithEscSupport extends View {
 	declare public count: number;

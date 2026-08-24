@@ -8,8 +8,8 @@ import { describe, it, expect, vi, afterEach } from 'vitest';
 import { Editor } from '../../src/editor/editor.js';
 import { VirtualTestEditor } from '../../tests/_utils/virtualtesteditor.js';
 
-import { HtmlDataProcessor, ModelRootElement } from '@ckeditor/ckeditor5-engine';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { HtmlDataProcessor, ModelRootElement } from '@ssmckinney/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 describe( 'VirtualTestEditor', () => {
 	afterEach( () => {

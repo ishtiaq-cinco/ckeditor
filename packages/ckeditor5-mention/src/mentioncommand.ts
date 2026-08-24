@@ -7,9 +7,9 @@
  * @module mention/mentioncommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
-import type { ModelRange } from '@ckeditor/ckeditor5-engine';
-import { CKEditorError, toMap } from '@ckeditor/ckeditor5-utils';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
+import type { ModelRange } from '@ssmckinney/ckeditor5-engine';
+import { CKEditorError, toMap } from '@ssmckinney/ckeditor5-utils';
 
 import { _addMentionAttributes } from './mentionediting.js';
 
@@ -176,7 +176,7 @@ export class MentionCommand extends Command {
 			// Don't add a white space if either of the following is true:
 			// * there's already one after the mention;
 			// * the mention was inserted in the empty matching brackets.
-			// https://github.com/ckeditor/ckeditor5/issues/4651
+			// https://github.com/ssmckinney/ckeditor5/issues/4651
 			if ( !isInsertedInBrackets && !isFollowedByWhiteSpace ) {
 				model.insertContent( writer.createText( ' ', currentAttributes ), range!.start.getShiftedBy( mentionText.length ) );
 			}

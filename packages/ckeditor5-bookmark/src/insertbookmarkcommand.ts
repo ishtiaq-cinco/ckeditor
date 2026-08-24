@@ -13,9 +13,9 @@ import type {
 	ModelPosition,
 	ModelSchema,
 	ModelSchemaContextDefinition
-} from '@ckeditor/ckeditor5-engine';
-import { logWarning } from '@ckeditor/ckeditor5-utils';
-import { Command } from '@ckeditor/ckeditor5-core';
+} from '@ssmckinney/ckeditor5-engine';
+import { logWarning } from '@ssmckinney/ckeditor5-utils';
+import { Command } from '@ssmckinney/ckeditor5-core';
 
 import { isBookmarkIdValid } from './utils.js';
 

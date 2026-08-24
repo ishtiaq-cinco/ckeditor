@@ -7,7 +7,7 @@
  * @module ui/textarea/textareaview
  */
 
-import { Rect, type Locale, toUnit, getBorderWidths, global, CKEditorError, isVisible, ResizeObserver } from '@ckeditor/ckeditor5-utils';
+import { Rect, type Locale, toUnit, getBorderWidths, global, CKEditorError, isVisible, ResizeObserver } from '@ssmckinney/ckeditor5-utils';
 import { InputBase } from '../input/inputbase.js';
 
 import '../../theme/components/input/input.css';

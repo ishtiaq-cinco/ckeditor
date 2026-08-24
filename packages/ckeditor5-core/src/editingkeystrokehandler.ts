@@ -7,7 +7,7 @@
  * @module core/editingkeystrokehandler
  */
 
-import { KeystrokeHandler, type PriorityString } from '@ckeditor/ckeditor5-utils';
+import { KeystrokeHandler, type PriorityString } from '@ssmckinney/ckeditor5-utils';
 
 import { type Editor } from './editor/editor.js';
 

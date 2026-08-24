@@ -8,9 +8,9 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { InsertTextObserver } from '../src/inserttextobserver.js';
 import { fireBeforeInputDomEvent, fireCompositionEndDomEvent } from './_utils/utils.js';
 
-import { EditingView, _setViewData } from '@ckeditor/ckeditor5-engine';
-import { createViewRoot } from '@ckeditor/ckeditor5-engine/tests/view/_utils/createroot.js';
-import { env } from '@ckeditor/ckeditor5-utils';
+import { EditingView, _setViewData } from '@ssmckinney/ckeditor5-engine';
+import { createViewRoot } from '@ssmckinney/ckeditor5-engine/tests/view/_utils/createroot.js';
+import { env } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'InsertTextObserver', () => {
 	let view, viewDocument, insertTextEventSpy;
@@ -224,7 +224,7 @@ describe( 'InsertTextObserver', () => {
 		expect( insertTextEventSpy ).not.toHaveBeenCalled();
 	} );
 
-	// See https://github.com/ckeditor/ckeditor5/issues/14569.
+	// See https://github.com/ssmckinney/ckeditor5/issues/14569.
 	it( 'should flush focus observer to enable selection rendering', () => {
 		_setViewData( view, '<p>fo{}o</p>' );
 

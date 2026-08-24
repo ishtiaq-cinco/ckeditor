@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach, beforeAll, afterAll } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { add as addTranslations, _clearTranslations } from '@ckeditor/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { add as addTranslations, _clearTranslations } from '@ssmckinney/ckeditor5-utils';
 import { Heading } from '../src/heading.js';
 import { getLocalizedOptions } from '../src/utils.js';
 

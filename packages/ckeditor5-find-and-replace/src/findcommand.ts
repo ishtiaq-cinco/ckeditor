@@ -7,8 +7,8 @@
  * @module find-and-replace/findcommand
 */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
-import type { Collection } from '@ckeditor/ckeditor5-utils';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
+import type { Collection } from '@ssmckinney/ckeditor5-utils';
 
 import type { FindAndReplaceState, FindCallback } from './findandreplacestate.js';
 import type { FindResultType } from './findandreplace.js';

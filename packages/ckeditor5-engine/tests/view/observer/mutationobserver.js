@@ -153,7 +153,7 @@ describe( 'MutationObserver', () => {
 		] );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/12759.
+	// https://github.com/ssmckinney/ckeditor5/issues/12759.
 	it( 'should not handle added attribute mutation', () => {
 		domRoot.childNodes[ 0 ].setAttribute( 'foo', 'bar' );
 
@@ -163,7 +163,7 @@ describe( 'MutationObserver', () => {
 		expect( spyForceRender ).not.toHaveBeenCalled();
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/12759.
+	// https://github.com/ssmckinney/ckeditor5/issues/12759.
 	it( 'should not handle removed attribute mutation', () => {
 		view.change( writer => {
 			writer.setAttribute( 'foo', 'bar', viewRoot.getChild( 0 ) );
@@ -177,7 +177,7 @@ describe( 'MutationObserver', () => {
 		expect( spyForceRender ).not.toHaveBeenCalled();
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/12759.
+	// https://github.com/ssmckinney/ckeditor5/issues/12759.
 	it( 'should not handle attribute value mutation', () => {
 		view.change( writer => {
 			writer.setAttribute( 'foo', 'bar', viewRoot.getChild( 0 ) );
@@ -252,7 +252,7 @@ describe( 'MutationObserver', () => {
 		] );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/692 Scenario 1.
+	// https://github.com/ssmckinney/ckeditor5/issues/692 Scenario 1.
 	it( 'should handle space after inline filler at the end of container', () => {
 		const { view: viewContainer, selection } = _parseView(
 			'<container:p>foo<attribute:b>[]</attribute:b></container:p>'
@@ -282,7 +282,7 @@ describe( 'MutationObserver', () => {
 		] );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/692 Scenario 3.
+	// https://github.com/ssmckinney/ckeditor5/issues/692 Scenario 3.
 	it( 'should handle space after inline filler at the end of container (typing after bold)', () => {
 		const { view: viewContainer, selection } = _parseView(
 			'<container:p>foo<attribute:b>bar</attribute:b>[]</container:p>'
@@ -312,7 +312,7 @@ describe( 'MutationObserver', () => {
 		] );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/692 Scenario 2.
+	// https://github.com/ssmckinney/ckeditor5/issues/692 Scenario 2.
 	it( 'should handle space after inline filler at the beginning of container', () => {
 		const { view: viewContainer, selection } = _parseView(
 			'<container:p><attribute:b>[]</attribute:b>foo</container:p>'

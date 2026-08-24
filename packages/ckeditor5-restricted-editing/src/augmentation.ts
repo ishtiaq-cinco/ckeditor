@@ -17,7 +17,7 @@ import type {
 	RestrictedEditingExceptionAutoCommand
 } from './index.js';
 
-declare module '@ckeditor/ckeditor5-core' {
+declare module '@ssmckinney/ckeditor5-core' {
 	interface PluginsMap {
 		[ RestrictedEditingMode.pluginName ]: RestrictedEditingMode;
 		[ RestrictedEditingModeEditing.pluginName ]: RestrictedEditingModeEditing;

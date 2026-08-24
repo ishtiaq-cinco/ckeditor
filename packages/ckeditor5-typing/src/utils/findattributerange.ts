@@ -7,7 +7,7 @@
  * @module typing/utils/findattributerange
  */
 
-import type { ModelPosition, Model, ModelRange } from '@ckeditor/ckeditor5-engine';
+import type { ModelPosition, Model, ModelRange } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * Returns a model range that covers all consecutive nodes with the same `attributeName` and its `value`

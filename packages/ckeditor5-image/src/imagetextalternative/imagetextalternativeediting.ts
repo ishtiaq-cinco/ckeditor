@@ -7,7 +7,7 @@
  * @module image/imagetextalternative/imagetextalternativeediting
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { ImageTextAlternativeCommand } from './imagetextalternativecommand.js';
 import { ImageUtils } from '../imageutils.js';
 

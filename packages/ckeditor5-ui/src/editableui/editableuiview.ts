@@ -9,9 +9,9 @@
 
 import { View } from '../view.js';
 
-import type { EditingView } from '@ckeditor/ckeditor5-engine';
-import { toArray, type Locale, type ObservableChangeEvent } from '@ckeditor/ckeditor5-utils';
-import type { ViewRootElementDefinition } from '@ckeditor/ckeditor5-core';
+import type { EditingView } from '@ssmckinney/ckeditor5-engine';
+import { toArray, type Locale, type ObservableChangeEvent } from '@ssmckinney/ckeditor5-utils';
+import type { ViewRootElementDefinition } from '@ssmckinney/ckeditor5-core';
 
 import { isElement as _isElement } from 'es-toolkit/compat';
 
@@ -170,7 +170,7 @@ export class EditableUIView extends View {
 		// While executing one callback the `isRenderingInProgress` observable is changing what causes executing another
 		// callback and render is called inside the already pending render.
 		// We need to be sure that callback is executed only when the value has changed from `true` to `false`.
-		// See https://github.com/ckeditor/ckeditor5/issues/1676.
+		// See https://github.com/ssmckinney/ckeditor5/issues/1676.
 		function updateAfterRender( view: EditableUIView ) {
 			editingView.once<ObservableChangeEvent<boolean>>( 'change:isRenderingInProgress', ( evt, name, value ) => {
 				if ( !value ) {

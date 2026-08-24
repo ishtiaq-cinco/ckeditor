@@ -5,7 +5,7 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { EmojiSearchView } from '../../src/ui/emojisearchview.js';
-import { SearchInfoView } from '@ckeditor/ckeditor5-ui';
+import { SearchInfoView } from '@ssmckinney/ckeditor5-ui';
 import { EmojiGridView } from '../../src/ui/emojigridview.js';
 
 describe( 'EmojiSearchView', () => {

@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { EmitterMixin, CKEditorError, Config } from '@ckeditor/ckeditor5-utils';
+import { EmitterMixin, CKEditorError, Config } from '@ssmckinney/ckeditor5-utils';
 import { Model } from '../../src/model/model.js';
 import { ModelText } from '../../src/model/text.js';
 import { ModelElement } from '../../src/model/element.js';
@@ -15,7 +15,7 @@ import { ModelDocumentFragment } from '../../src/model/documentfragment.js';
 import { Batch } from '../../src/model/batch.js';
 import { NoOperation } from '../../src/model/operation/nooperation.js';
 import { _getModelData, _setModelData, _stringifyModel } from '../../src/dev-utils/model.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'Model', () => {
 	let model, schema, changes;

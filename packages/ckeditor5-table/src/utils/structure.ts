@@ -7,7 +7,7 @@
  * @module table/utils/structure
  */
 
-import type { ModelElement, ModelNode, ModelWriter, ViewElement } from '@ckeditor/ckeditor5-engine';
+import type { ModelElement, ModelNode, ModelWriter, ViewElement } from '@ssmckinney/ckeditor5-engine';
 
 import { TableWalker, type TableSlot } from '../tablewalker.js';
 import { createEmptyTableCell, updateNumericAttribute } from './common.js';

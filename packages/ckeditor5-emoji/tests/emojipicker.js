@@ -4,13 +4,13 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ContextualBalloon, Dialog, ButtonView, MenuBarMenuListItemButtonView } from '@ckeditor/ckeditor5-ui';
-import { _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ContextualBalloon, Dialog, ButtonView, MenuBarMenuListItemButtonView } from '@ssmckinney/ckeditor5-ui';
+import { _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 import { EmojiPicker } from '../src/emojipicker.js';
 import { EmojiRepository } from '../src/emojirepository.js';
@@ -447,7 +447,7 @@ describe( 'EmojiPicker', () => {
 			} ).not.toThrow();
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/17819.
+		// See https://github.com/ssmckinney/ckeditor5/issues/17819.
 		it( 'should not change the selection after opening the UI', async () => {
 			_setModelData(
 				editor.model,
@@ -461,7 +461,7 @@ describe( 'EmojiPicker', () => {
 			);
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/17964
+		// See https://github.com/ssmckinney/ckeditor5/issues/17964
 		it( 'should have the ck-emoji-picker-balloon class to make sure z-index does not conflict with the dialog system', () => {
 			emojiPicker.showUI();
 

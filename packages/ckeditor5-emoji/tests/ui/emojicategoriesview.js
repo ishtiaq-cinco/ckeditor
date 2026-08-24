@@ -5,7 +5,7 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { EmojiCategoriesView } from '../../src/ui/emojicategoriesview.js';
-import { ViewCollection } from '@ckeditor/ckeditor5-ui';
+import { ViewCollection } from '@ssmckinney/ckeditor5-ui';
 
 describe( 'EmojiCategoriesView', () => {
 	let locale, emojiCategoriesView, emojiCategories;

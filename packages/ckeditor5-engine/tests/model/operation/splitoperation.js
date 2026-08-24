@@ -11,7 +11,7 @@ import { ModelPosition } from '../../../src/model/position.js';
 import { ModelElement } from '../../../src/model/element.js';
 import { ModelText } from '../../../src/model/text.js';
 
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'SplitOperation', () => {
 	let model, doc, root, gy, gyPos;

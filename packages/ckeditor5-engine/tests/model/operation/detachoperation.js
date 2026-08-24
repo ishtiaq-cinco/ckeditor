@@ -10,7 +10,7 @@ import { DetachOperation } from '../../../src/model/operation/detachoperation.js
 import { ModelPosition } from '../../../src/model/position.js';
 import { ModelDocumentFragment } from '../../../src/model/documentfragment.js';
 import { ModelElement } from '../../../src/model/element.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'DetachOperation', () => {
 	let model, doc, docFrag, element;

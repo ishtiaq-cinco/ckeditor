@@ -7,7 +7,7 @@
  * @module core/legacyerrors
  */
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 /* v8 ignore next 9 -- @preserve */
 if ( false ) {

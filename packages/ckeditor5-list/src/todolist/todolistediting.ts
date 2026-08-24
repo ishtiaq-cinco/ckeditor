@@ -20,7 +20,7 @@ import {
 	type ModelSelectionChangeRangeEvent,
 	type ModelDocumentFragment,
 	type ModelElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import {
 	getCode,
@@ -28,9 +28,9 @@ import {
 	getLocalizedArrowKeyCodeDirection,
 	type GetCallback,
 	type Locale
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import { getAllListItemBlocks, isFirstBlockOfListItem, isListItemBlock } from '../list/utils/model.js';
 import {
@@ -361,7 +361,7 @@ export class TodoListEditing extends Plugin {
 	 *
 	 * Some say it's a hack :) Moving the selection only for executing the command on a certain node and restoring it after,
 	 * is not a clear solution. We need to design an API for using commands beyond the selection range.
-	 * See https://github.com/ckeditor/ckeditor5/issues/1954.
+	 * See https://github.com/ssmckinney/ckeditor5/issues/1954.
 	 */
 	private _handleCheckmarkChange( listItem: ModelElement ): void {
 		const editor = this.editor;
@@ -435,7 +435,7 @@ function todoListItemUpcastConverter(): GetCallback<UpcastElementEvent> {
 		// During the upcast, we need to ensure that all items of the same list have the same checked state. From time to time
 		// the checked state of the items can be different when the user pastes content from the clipboard with <input type="checkbox">
 		// that has checked state set to true. In such cases, we need to ensure that all items of the same list have the same checked state.
-		// See more: https://github.com/ckeditor/ckeditor5/issues/15602
+		// See more: https://github.com/ssmckinney/ckeditor5/issues/15602
 		for ( const [ , items ] of groupedItems.entries() ) {
 			if ( items.some( item => item.getAttribute( 'todoListChecked' ) ) ) {
 				for ( const item of items ) {

@@ -18,8 +18,8 @@ import {
 	type Locale,
 	type DecoratedMethodEvent,
 	type KeystrokeHandlerOptions
-} from '@ckeditor/ckeditor5-utils';
-import { IconCancel } from '@ckeditor/ckeditor5-icons';
+} from '@ssmckinney/ckeditor5-utils';
+import { IconCancel } from '@ssmckinney/ckeditor5-icons';
 import { ViewCollection } from '../viewcollection.js';
 import { View } from '../view.js';
 import { FormHeaderView } from '../formheader/formheaderview.js';
@@ -42,7 +42,7 @@ import { type EditorUI } from '../editorui/editorui.js';
 
 import '../../theme/components/dialog/dialog.css';
 import type { DialogPositionCallback } from './dialog.js';
-// @if CK_DEBUG_DIALOG // import { RectDrawer } from '@ckeditor/ckeditor5-utils/tests/_utils/rectdrawer.js';
+// @if CK_DEBUG_DIALOG // import { RectDrawer } from '@ssmckinney/ckeditor5-utils/tests/_utils/rectdrawer.js';
 
 /**
  * Available dialog view positions:
@@ -307,7 +307,7 @@ export class DialogView extends DialogViewBase implements DraggableView {
 
 		this.keystrokes.set( 'Esc', ( data, cancel ) => {
 			// Do not react to the Esc key if the event has already been handled and defaultPrevented
-			// by some logic of the dialog guest (child) view (https://github.com/ckeditor/ckeditor5/issues/17343).
+			// by some logic of the dialog guest (child) view (https://github.com/ssmckinney/ckeditor5/issues/17343).
 			if ( !data.defaultPrevented ) {
 				this.fire<DialogViewCloseEvent>( 'close', { source: 'escKeyPress' } );
 				cancel();

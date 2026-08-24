@@ -7,7 +7,7 @@
  * @module core/accessibility
  */
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 import { type Editor } from './editor/editor.js';
 
 const DEFAULT_CATEGORY_ID = 'contentEditing' as const;

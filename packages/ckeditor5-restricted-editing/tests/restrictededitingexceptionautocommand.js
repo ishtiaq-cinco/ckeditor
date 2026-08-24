@@ -7,10 +7,10 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 import { RestrictedEditingExceptionAutoCommand, StandardEditingModeEditing } from '../src/index.js';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 
-import { Command } from '@ckeditor/ckeditor5-core';
+import { Command } from '@ssmckinney/ckeditor5-core';
 
 describe( 'RestrictedEditingExceptionAutoCommand', () => {
 	let editor, model, command, blockCommand, inlineCommand, editorExecuteSpy;

@@ -1,7 +1,7 @@
 CKEditor&nbsp;5 image feature
 ========================================
 
-[![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-image.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-image)
+[![npm version](https://badge.fury.io/js/%40ckeditor%2F@ssmckinney/ckeditor5-image.svg)](https://www.npmjs.com/package/@ssmckinney/ckeditor5-image)
 [![codecov](https://codecov.io/gh/ckeditor/ckeditor5/branch/master/graph/badge.svg)](https://codecov.io/gh/ckeditor/ckeditor5)
 [![CircleCI](https://circleci.com/gh/ckeditor/ckeditor5.svg?style=shield)](https://app.circleci.com/pipelines/github/ckeditor/ckeditor5?branch=master)
 
@@ -9,10 +9,10 @@ This package implements the image feature for CKEditor&nbsp;5. The feature is in
 
 ## Installation
 
-This plugin is part of the `ckeditor5` package. Install the whole package to use it.
+This plugin is part of the `@ssmckinney/ckeditor5` package. Install the whole package to use it.
 
 ```bash
-npm install ckeditor5
+npm install @ssmckinney/ckeditor5
 ```
 
 ## Create free account
@@ -21,11 +21,11 @@ If you want to check full CKEditor&nbsp;5 capabilities, sign up for a [free non-
 
 ## Demo
 
-Check out the demos in the [image feature guides](https://ckeditor.com/docs/ckeditor5/latest/features/images/images-overview.html#demo).
+Check out the demos in the [image feature guides](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/images/images-overview.html#demo).
 
 ## Documentation
 
-See the [`@ckeditor/ckeditor5-image` package](https://ckeditor.com/docs/ckeditor5/latest/api/image.html) page in [CKEditor&nbsp;5 documentation](https://ckeditor.com/docs/ckeditor5/latest/).
+See the [`@ssmckinney/ckeditor5-image` package](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/api/image.html) page in [CKEditor&nbsp;5 documentation](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/).
 
 ## License
 

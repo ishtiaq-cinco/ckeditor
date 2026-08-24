@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Locale } from '@ckeditor/ckeditor5-utils';
-import { ButtonView, LabeledFieldView } from '@ckeditor/ckeditor5-ui';
+import { Locale } from '@ssmckinney/ckeditor5-utils';
+import { ButtonView, LabeledFieldView } from '@ssmckinney/ckeditor5-ui';
 import { MediaEmbedCustomResizeFormView } from '../../../src/mediaembedresize/ui/mediaembedcustomresizeformview.js';
 
 describe( 'MediaEmbedCustomResizeFormView', () => {

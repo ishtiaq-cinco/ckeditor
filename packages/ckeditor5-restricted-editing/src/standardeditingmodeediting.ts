@@ -7,8 +7,8 @@
  * @module restricted-editing/standardeditingmodeediting
  */
 
-import { Plugin, type Editor } from '@ckeditor/ckeditor5-core';
-import { Matcher, type ModelElement, type UpcastElementEvent } from '@ckeditor/ckeditor5-engine';
+import { Plugin, type Editor } from '@ssmckinney/ckeditor5-core';
+import { Matcher, type ModelElement, type UpcastElementEvent } from '@ssmckinney/ckeditor5-engine';
 
 import { RestrictedEditingExceptionCommand } from './restrictededitingexceptioncommand.js';
 import { RestrictedEditingExceptionBlockCommand } from './restrictededitingexceptionblockcommand.js';
@@ -199,7 +199,7 @@ export class StandardEditingModeEditing extends Plugin {
 function registerFallbackUpcastConverter( editor: Editor ) {
 	const matcher = new Matcher( { name: 'span', classes: 'restricted-editing-exception' } );
 
-	// See: https://github.com/ckeditor/ckeditor5/issues/16376.
+	// See: https://github.com/ssmckinney/ckeditor5/issues/16376.
 	editor.conversion.for( 'upcast' ).add(
 		dispatcher => dispatcher.on<UpcastElementEvent>( 'element:span', ( evt, data, conversionApi ) => {
 			const matcherResult = matcher.match( data.viewItem );

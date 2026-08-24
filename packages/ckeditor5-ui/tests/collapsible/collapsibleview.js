@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { IconDropdownArrow } from '@ckeditor/ckeditor5-icons';
+import { IconDropdownArrow } from '@ssmckinney/ckeditor5-icons';
 import { CollapsibleView } from '../../src/collapsible/collapsibleview.js';
 import { ButtonView } from '../../src/button/buttonview.js';
 

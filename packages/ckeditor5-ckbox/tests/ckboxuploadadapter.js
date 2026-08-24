@@ -5,23 +5,23 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { Image, ImageUploadEditing, ImageUploadProgress, PictureEditing } from '@ckeditor/ckeditor5-image';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { FileRepository } from '@ckeditor/ckeditor5-upload';
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { Image, ImageUploadEditing, ImageUploadProgress, PictureEditing } from '@ssmckinney/ckeditor5-image';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { FileRepository } from '@ssmckinney/ckeditor5-upload';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 import { CKBoxEditing } from '../src/ckboxediting.js';
 import { CKBoxUploadAdapter } from '../src/ckboxuploadadapter.js';
 
-import { createNativeFileMock, NativeFileReaderMock, UploadAdapterMock } from '@ckeditor/ckeditor5-upload/tests/_utils/mocks.js';
-import { TokenMock } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
+import { createNativeFileMock, NativeFileReaderMock, UploadAdapterMock } from '@ssmckinney/ckeditor5-upload/tests/_utils/mocks.js';
+import { TokenMock } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
 
 import { CloudServicesCoreMock } from './_utils/cloudservicescoremock.js';
 
-import { _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { CKBoxUtils } from '../src/ckboxutils.js';
 
 const BASE64_SAMPLE = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=';

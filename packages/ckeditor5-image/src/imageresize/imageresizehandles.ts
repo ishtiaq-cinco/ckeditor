@@ -7,9 +7,9 @@
  * @module image/imageresize/imageresizehandles
  */
 
-import type { ModelElement, ViewElement } from '@ckeditor/ckeditor5-engine';
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { WidgetResize } from '@ckeditor/ckeditor5-widget';
+import type { ModelElement, ViewElement } from '@ssmckinney/ckeditor5-engine';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { WidgetResize } from '@ssmckinney/ckeditor5-widget';
 import { ImageUtils } from '../imageutils.js';
 
 import { ImageLoadObserver, type ImageLoadedEvent } from '../image/imageloadobserver.js';

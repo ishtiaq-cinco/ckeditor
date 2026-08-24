@@ -5,8 +5,8 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { MediaFormView } from '../../src/ui/mediaformview.js';
-import { View } from '@ckeditor/ckeditor5-ui';
-import { KeystrokeHandler, FocusTracker } from '@ckeditor/ckeditor5-utils';
+import { View } from '@ssmckinney/ckeditor5-ui';
+import { KeystrokeHandler, FocusTracker } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'MediaFormView', () => {
 	let view;

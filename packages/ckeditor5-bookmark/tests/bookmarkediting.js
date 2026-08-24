@@ -9,25 +9,25 @@ import { BookmarkEditing } from '../src/bookmarkediting.js';
 import { InsertBookmarkCommand } from '../src/insertbookmarkcommand.js';
 import { UpdateBookmarkCommand } from '../src/updatebookmarkcommand.js';
 
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ImageInline, ImageBlock } from '@ckeditor/ckeditor5-image';
-import { Link } from '@ckeditor/ckeditor5-link';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { Table } from '@ckeditor/ckeditor5-table';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ImageInline, ImageBlock } from '@ssmckinney/ckeditor5-image';
+import { Link } from '@ssmckinney/ckeditor5-link';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { Table } from '@ssmckinney/ckeditor5-table';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 import { ModelElement,
 	_setModelData,
 	_getModelData,
 	_stringifyModel,
-	_getViewData } from '@ckeditor/ckeditor5-engine';
-import { isWidget, getLabel } from '@ckeditor/ckeditor5-widget';
+	_getViewData } from '@ssmckinney/ckeditor5-engine';
+import { isWidget, getLabel } from '@ssmckinney/ckeditor5-widget';
 
 describe( 'BookmarkEditing', () => {
 	// eslint-disable-next-line @stylistic/max-len

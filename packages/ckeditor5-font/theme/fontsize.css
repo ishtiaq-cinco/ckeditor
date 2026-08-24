@@ -13,7 +13,7 @@
 }
 
 /* Styles should be prefixed with the `.ck-content` class.
-See https://github.com/ckeditor/ckeditor5/issues/6636 */
+See https://github.com/ssmckinney/ckeditor5/issues/6636 */
 .ck-content {
 	& .text-tiny {
 		font-size: var(--ck-content-font-size-tiny);

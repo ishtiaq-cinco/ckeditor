@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { IconColorTileCheck } from '@ckeditor/ckeditor5-icons';
+import { IconColorTileCheck } from '@ssmckinney/ckeditor5-icons';
 import { ColorTileView } from '../../src/colorgrid/colortileview.js';
 import { ButtonView } from '../../src/button/buttonview.js';
-import { env } from '@ckeditor/ckeditor5-utils';
+import { env } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'ColorTileView', () => {
 	let colorTile;
@@ -41,7 +41,7 @@ describe( 'ColorTileView', () => {
 		expect( colorTile.element.classList.contains( 'ck-color-selector__color-tile_bordered' ) ).toBe( true );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/14907
+	// https://github.com/ssmckinney/ckeditor5/issues/14907
 	it( 'should not set the background-color in the forced-colors mode for a better UX (displaying a label instead)', () => {
 		vi.spyOn( env, 'isMediaForcedColors', 'get' ).mockReturnValue( true );
 

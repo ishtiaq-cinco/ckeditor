@@ -5,19 +5,19 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 import { Title } from '../src/title.js';
 import { Heading } from '../src/heading.js';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { Image, ImageUpload } from '@ckeditor/ckeditor5-image';
-import { Undo } from '@ckeditor/ckeditor5-undo';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { Image, ImageUpload } from '@ssmckinney/ckeditor5-image';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
 
-import { _setModelData, _getModelData, _stringifyModel } from '@ckeditor/ckeditor5-engine';
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
+import { _setModelData, _getModelData, _stringifyModel } from '@ssmckinney/ckeditor5-engine';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'Title', () => {
 	let element, editor, model;

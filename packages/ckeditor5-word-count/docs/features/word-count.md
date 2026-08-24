@@ -56,7 +56,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, WordCount } from 'ckeditor5';
+import { ClassicEditor, WordCount } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {

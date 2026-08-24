@@ -7,8 +7,8 @@
  * @module heading/headingconfig
  */
 
-import type { ArrayOrItem } from '@ckeditor/ckeditor5-utils';
-import type { MatcherPattern, ViewElementDefinition } from '@ckeditor/ckeditor5-engine';
+import type { ArrayOrItem } from '@ssmckinney/ckeditor5-utils';
+import type { MatcherPattern, ViewElementDefinition } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * The configuration of the heading feature.

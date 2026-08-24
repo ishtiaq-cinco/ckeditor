@@ -19,7 +19,7 @@ import {
 	count,
 	isIterable,
 	type EmitterMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { type ViewElement } from './element.js';
 import { type ViewItem } from './item.js';

@@ -10,8 +10,8 @@ import {
 	addColorSelectorToDropdown,
 	renderDowncastElement
 } from './../src/utils.js';
-import { createDropdown, ColorSelectorView } from '@ckeditor/ckeditor5-ui';
-import { Locale } from '@ckeditor/ckeditor5-utils';
+import { createDropdown, ColorSelectorView } from '@ssmckinney/ckeditor5-ui';
+import { Locale } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'utils', () => {
 	afterEach( () => {

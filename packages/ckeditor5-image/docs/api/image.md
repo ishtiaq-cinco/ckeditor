@@ -27,7 +27,7 @@ See the {@link features/images-overview image feature guide} and the documentati
 This package is part of our open-source aggregate package.
 
 ```bash
-npm install ckeditor5
+npm install @ssmckinney/ckeditor5
 ```
 
 ## Contribute
@@ -36,7 +36,7 @@ The source code of this package is available on GitHub in [https://github.com/ck
 
 ## External links
 
-* [`@ckeditor/ckeditor5-image` on npm](https://www.npmjs.com/package/@ckeditor/ckeditor5-image)
+* [`@ssmckinney/ckeditor5-image` on npm](https://www.npmjs.com/package/@ssmckinney/ckeditor5-image)
 * [`ckeditor/ckeditor5-image` on GitHub](https://github.com/ckeditor/ckeditor5/tree/master/packages/ckeditor5-image)
-* [Issue tracker](https://github.com/ckeditor/ckeditor5/issues)
+* [Issue tracker](https://github.com/ssmckinney/ckeditor5/issues)
 * [Changelog](https://github.com/ckeditor/ckeditor5/blob/master/CHANGELOG.md)

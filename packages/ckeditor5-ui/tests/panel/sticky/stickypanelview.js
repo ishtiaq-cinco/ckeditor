@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Rect, global, env } from '@ckeditor/ckeditor5-utils';
+import { Rect, global, env } from '@ssmckinney/ckeditor5-utils';
 import { StickyPanelView } from '../../../src/panel/sticky/stickypanelview.js';
 import { View } from '../../../src/view.js';
 import { LabelView } from '../../../src/label/labelview.js';

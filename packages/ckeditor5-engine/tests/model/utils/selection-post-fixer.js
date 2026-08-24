@@ -850,7 +850,7 @@ describe( 'Selection post-fixer', () => {
 				// action does not affect ranges, the post-fixer should not set a new selection and,
 				// in consequence, should not clear the selection attribute (like it normally would when
 				// a new selection is set).
-				// https://github.com/ckeditor/ckeditor5/issues/6693
+				// https://github.com/ssmckinney/ckeditor5/issues/6693
 				model.change( writer => {
 					writer.setSelectionAttribute( 'foo', 'bar' );
 				} );
@@ -1070,7 +1070,7 @@ describe( 'Selection post-fixer', () => {
 			it( 'should fix multi-range selection with equal ranges', () => {
 				// It may happen that multi-range selection contains equal ranges.
 				// Duplicated ranges should be ommited from the final (merged) selection.
-				// https://github.com/ckeditor/ckeditor5/issues/7892
+				// https://github.com/ssmckinney/ckeditor5/issues/7892
 				model.change( writer => {
 					const firstRange = writer.createRange(
 						writer.createPositionAt( modelRoot.getChild( 1 ).getChild( 0 ), 3 )

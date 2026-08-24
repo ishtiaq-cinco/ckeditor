@@ -9,7 +9,7 @@
 
 import { ButtonView } from '../../button/buttonview.js';
 
-import { toUnit, type Locale } from '@ckeditor/ckeditor5-utils';
+import { toUnit, type Locale } from '@ssmckinney/ckeditor5-utils';
 
 import '../../../theme/components/toolbar/blocktoolbar.css';
 

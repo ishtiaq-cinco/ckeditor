@@ -12,9 +12,9 @@ import {
 	BubblingEventInfo,
 	ViewDocumentDomEventData,
 	type ViewDocumentKeyDownEvent
-} from '@ckeditor/ckeditor5-engine';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-engine';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
 import { DeleteCommand } from './deletecommand.js';
 import { DeleteObserver, type DeleteEventData, type ViewDocumentDeleteEvent } from './deleteobserver.js';
 
@@ -89,7 +89,7 @@ export class Delete extends Plugin {
 			view.scrollToTheSelection();
 		}, { priority: 'low' } );
 
-		// Handle the Backspace key while at the beginning of a nested editable. See https://github.com/ckeditor/ckeditor5/issues/17383.
+		// Handle the Backspace key while at the beginning of a nested editable. See https://github.com/ssmckinney/ckeditor5/issues/17383.
 		this.listenTo<ViewDocumentKeyDownEvent>( viewDocument, 'keydown', ( evt, data ) => {
 			if (
 				viewDocument.isComposing ||

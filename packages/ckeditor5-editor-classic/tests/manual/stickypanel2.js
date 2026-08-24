@@ -4,13 +4,13 @@
  */
 
 import { ClassicEditor } from '../../src/classiceditor.js';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Link } from '@ckeditor/ckeditor5-link';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { ButtonView } from '@ckeditor/ckeditor5-ui';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Link } from '@ssmckinney/ckeditor5-link';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { ButtonView } from '@ssmckinney/ckeditor5-ui';
 
 ClassicEditor
 	.create( {

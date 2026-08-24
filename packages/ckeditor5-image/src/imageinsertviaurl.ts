@@ -7,7 +7,7 @@
  * @module image/imageinsertviaurl
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { ImageInsertUI } from './imageinsert/imageinsertui.js';
 import { ImageInsertViaUrlUI } from './imageinsert/imageinsertviaurlui.js';
 

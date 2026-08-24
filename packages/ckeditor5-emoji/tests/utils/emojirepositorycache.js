@@ -6,8 +6,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { EmojiRepositoryCache } from '../../src/utils/emojirepositorycache.js';
 
-const URL_V16 = 'https://cdn.ckeditor.com/ckeditor5/data/emoji/16/en.json';
-const URL_V15 = 'https://cdn.ckeditor.com/ckeditor5/data/emoji/15/en.json';
+const URL_V16 = 'https://cdn.ckeditor.com/@ssmckinney/ckeditor5/data/emoji/16/en.json';
+const URL_V15 = 'https://cdn.ckeditor.com/@ssmckinney/ckeditor5/data/emoji/15/en.json';
 
 const RAW_EMOJI = [
 	{ annotation: 'neutral face', emoji: '😐️', group: 0, order: 1, version: 15 },

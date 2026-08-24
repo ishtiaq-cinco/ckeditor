@@ -7,7 +7,7 @@
  * @module alignment/utils
  */
 
-import { CKEditorError, logWarning, type Locale } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, logWarning, type Locale } from '@ssmckinney/ckeditor5-utils';
 import type { AlignmentFormat, AlignmentSupportedOption } from './alignmentconfig.js';
 
 /**

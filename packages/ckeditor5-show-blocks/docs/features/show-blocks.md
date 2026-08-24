@@ -11,7 +11,7 @@ The show blocks feature allows the content creators to visualize all block-level
 
 ## Demo
 
-Toggle the block elements visibility with the show block {@icon @ckeditor/ckeditor5-icons/theme/icons/show-blocks.svg Show blocks} toolbar button to see the feature in action. The content remains editable, so you can see how the blocks adjust to the content structure on the go. These outlines are not visible in the {@link features/export-pdf export to PDF} and {@link features/export-word export to Word} features, so there is no need to remove them before exporting.
+Toggle the block elements visibility with the show block {@icon @ssmckinney/ckeditor5-icons/theme/icons/show-blocks.svg Show blocks} toolbar button to see the feature in action. The content remains editable, so you can see how the blocks adjust to the content structure on the go. These outlines are not visible in the {@link features/export-pdf export to PDF} and {@link features/export-word export to Word} features, so there is no need to remove them before exporting.
 
 {@snippet features/show-blocks}
 
@@ -25,7 +25,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, ShowBlocks } from 'ckeditor5';
+import { ClassicEditor, ShowBlocks } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -44,7 +44,7 @@ ClassicEditor
 
 ## Known issues
 
-* The show blocks feature does not support widgets, yet. It means it will currently not show block outlines for example for images or tables. Feel free to upvote 👍&nbsp; [this issue on GitHub](https://github.com/ckeditor/ckeditor5/issues/14869) if it is important for you.
+* The show blocks feature does not support widgets, yet. It means it will currently not show block outlines for example for images or tables. Feel free to upvote 👍&nbsp; [this issue on GitHub](https://github.com/ssmckinney/ckeditor5/issues/14869) if it is important for you.
 * At present, the show blocks feature is not yet fully compatible with the {@link features/pagination pagination} feature. Using these two together may result in errors.
 
 ## Related features

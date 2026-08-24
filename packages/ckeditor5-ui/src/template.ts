@@ -20,7 +20,7 @@ import {
 	type Observable,
 	type ObservableChangeEvent,
 	type EmitterMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { isObject, cloneDeepWith } from 'es-toolkit/compat';
 

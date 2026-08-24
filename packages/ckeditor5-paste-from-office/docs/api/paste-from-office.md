@@ -15,7 +15,7 @@ See the {@link module:paste-from-office/pastefromoffice~PasteFromOffice} plugin 
 This package is part of our open-source aggregate package.
 
 ```bash
-npm install ckeditor5
+npm install @ssmckinney/ckeditor5
 ```
 
 ## Contribute
@@ -24,7 +24,7 @@ The source code of this package is available on GitHub in [https://github.com/ck
 
 ## External links
 
-* [`@ckeditor/ckeditor5-paste-from-office` on npm](https://www.npmjs.com/package/@ckeditor/ckeditor5-paste-from-office)
+* [`@ssmckinney/ckeditor5-paste-from-office` on npm](https://www.npmjs.com/package/@ssmckinney/ckeditor5-paste-from-office)
 * [`ckeditor/ckeditor5-paste-from-office` on GitHub](https://github.com/ckeditor/ckeditor5/tree/master/packages/ckeditor5-paste-from-office)
-* [Issue tracker](https://github.com/ckeditor/ckeditor5/issues)
+* [Issue tracker](https://github.com/ssmckinney/ckeditor5/issues)
 * [Changelog](https://github.com/ckeditor/ckeditor5/blob/master/CHANGELOG.md)

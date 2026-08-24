@@ -12,7 +12,7 @@ import {
 	ViewDocumentFragment,
 	_stringifyView,
 	_parseView
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 describe( 'HtmlPageDataProcessor', () => {
 	let dataProcessor, viewDocument;

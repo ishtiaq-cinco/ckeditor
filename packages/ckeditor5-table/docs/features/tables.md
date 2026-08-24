@@ -15,9 +15,9 @@ The table feature provides tools for creating and editing tables. Tables are gre
 
 ## Demo
 
-Use the insert table button {@icon @ckeditor/ckeditor5-icons/theme/icons/table.svg Insert table} to insert a new table into the content. Click inside the table to open a contextual toolbar. The toolbar lets you add or remove columns {@icon @ckeditor/ckeditor5-icons/theme/icons/table-column.svg Table column} and rows {@icon @ckeditor/ckeditor5-icons/theme/icons/table-row.svg Table row}. You can also merge or split cells {@icon @ckeditor/ckeditor5-icons/theme/icons/table-merge-cell.svg Table cell}.
+Use the insert table button {@icon @ssmckinney/ckeditor5-icons/theme/icons/table.svg Insert table} to insert a new table into the content. Click inside the table to open a contextual toolbar. The toolbar lets you add or remove columns {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-column.svg Table column} and rows {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-row.svg Table row}. You can also merge or split cells {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-merge-cell.svg Table cell}.
 
-Try toggling the caption on and off {@icon @ckeditor/ckeditor5-icons/theme/icons/caption.svg Table caption}. You can also change the properties of the entire table {@icon @ckeditor/ckeditor5-icons/theme/icons/table-properties.svg Table properties} or individual cells {@icon @ckeditor/ckeditor5-icons/theme/icons/table-cell-properties.svg Cell properties}. To control the width of a column, click and drag its edge.
+Try toggling the caption on and off {@icon @ssmckinney/ckeditor5-icons/theme/icons/caption.svg Table caption}. You can also change the properties of the entire table {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-properties.svg Table properties} or individual cells {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-cell-properties.svg Cell properties}. To control the width of a column, click and drag its edge.
 
 {@snippet features/tables}
 
@@ -27,7 +27,7 @@ You may look for more interesting details in the [Tables in CKEditor&nbsp;5](htt
 
 The basic table features allow users to insert tables into content, add or remove columns and rows and merge or split cells.
 
-The [`@ckeditor/ckeditor5-table`](https://www.npmjs.com/package/@ckeditor/ckeditor5-table) package contains multiple plugins that implement various table-related features. The {@link module:table/table~Table `Table`} plugin is at the core of the ecosystem and it provides the table functionality. There are many other features that extend the editor capabilities:
+The [`@ssmckinney/ckeditor5-table`](https://www.npmjs.com/package/@ssmckinney/ckeditor5-table) package contains multiple plugins that implement various table-related features. The {@link module:table/table~Table `Table`} plugin is at the core of the ecosystem and it provides the table functionality. There are many other features that extend the editor capabilities:
 
 ## Table selection
 
@@ -42,11 +42,11 @@ The table selection plugin is loaded automatically by the `Table` plugin and can
 
 You can move tables horizontally to create a desired document layout. There are five alignment options in tables:
 
-* Left (block) {@icon @ckeditor/ckeditor5-icons/theme/icons/object-left.svg Table cell aligment}: A table aligns to the left. The table does not influence the flow of other content.
-* Center {@icon @ckeditor/ckeditor5-icons/theme/icons/object-center.svg Table cell aligment}: A table is horizontally centered, with equal amounts of space on both sides.
-* Right (block) {@icon @ckeditor/ckeditor5-icons/theme/icons/object-right.svg Table cell aligment}: A table is aligned to the right. The table does not influence the flow of other content.
-* Left (wrap) {@icon @ckeditor/ckeditor5-icons/theme/icons/object-inline-left.svg Table cell aligment}: A table aligns to the left, and other content wraps around it.
-* Right (wrap) {@icon @ckeditor/ckeditor5-icons/theme/icons/object-inline-right.svg Table cell aligment}: A table aligns to the right, and other content wraps around it.
+* Left (block) {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-left.svg Table cell aligment}: A table aligns to the left. The table does not influence the flow of other content.
+* Center {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-center.svg Table cell aligment}: A table is horizontally centered, with equal amounts of space on both sides.
+* Right (block) {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-right.svg Table cell aligment}: A table is aligned to the right. The table does not influence the flow of other content.
+* Left (wrap) {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-inline-left.svg Table cell aligment}: A table aligns to the left, and other content wraps around it.
+* Right (wrap) {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-inline-right.svg Table cell aligment}: A table aligns to the right, and other content wraps around it.
 
 {@img assets/img/table-alignment-options.png 600 Table alignment options}
 
@@ -58,7 +58,7 @@ You can also control how the alignment appears in the editor's output. Learn mor
 
 Two types of table cells can contain content: data cells (the default type) and header cells. Header cells provide semantic labelling for rows or columns, helping the browser or a screen reader understand the data arrangement and relations.
 
-To change cell type, click the cell and use the cell properties icon {@icon @ckeditor/ckeditor5-icons/theme/icons/table-cell-properties.svg Table cell properties} from the table toolbar. Once there, choose the desired cell type.
+To change cell type, click the cell and use the cell properties icon {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-cell-properties.svg Table cell properties} from the table toolbar. Once there, choose the desired cell type.
 
 {@img assets/img/table-cell-type.png 605 Table cell type}
 
@@ -93,7 +93,7 @@ CKEditor&nbsp;5 allows nesting tables inside other table's cells. This may be us
 
 <!-- We may reconsider this demo, as the feature will still work in the first one -->
 
-You can test this feature in the demo below by adding a new table in the blank "abandoned" section at the bottom of the existing table. Click inside a cell and use the insert table button {@icon @ckeditor/ckeditor5-icons/theme/icons/table.svg Insert table}. A nested table will appear inside the cell.
+You can test this feature in the demo below by adding a new table in the blank "abandoned" section at the bottom of the existing table. Click inside a cell and use the insert table button {@icon @ssmckinney/ckeditor5-icons/theme/icons/table.svg Insert table}. A nested table will appear inside the cell.
 
 {@snippet features/table-nesting}
 
@@ -103,11 +103,11 @@ You can test this feature in the demo below by adding a new table in the blank "
 
 ### Known issues
 
-While table nesting is fully functional, the Markdown code generated with the {@link features/autoformat Markdown output} feature will not properly render nested tables ([#9475](https://github.com/ckeditor/ckeditor5/issues/9475)). Feel free to upvote 👍&nbsp; this issue on GitHub if it is important for you.
+While table nesting is fully functional, the Markdown code generated with the {@link features/autoformat Markdown output} feature will not properly render nested tables ([#9475](https://github.com/ssmckinney/ckeditor5/issues/9475)). Feel free to upvote 👍&nbsp; this issue on GitHub if it is important for you.
 
 ## Table contextual toolbar
 
-The {@link module:table/tabletoolbar~TableToolbar} plugin introduces a contextual toolbar for table. The toolbar appears when a table or a cell is selected and contains various table-related buttons. These would typically include add or remove columns {@icon @ckeditor/ckeditor5-icons/theme/icons/table-column.svg Table column} and rows {@icon @ckeditor/ckeditor5-icons/theme/icons/table-row.svg Table row} and merge or split cells {@icon @ckeditor/ckeditor5-icons/theme/icons/table-merge-cell.svg Table cell}. If these features are configured, the toolbar will also contain buttons for captions {@icon @ckeditor/ckeditor5-icons/theme/icons/caption.svg Table caption} and table {@icon @ckeditor/ckeditor5-icons/theme/icons/table-properties.svg Table properties} and cell {@icon @ckeditor/ckeditor5-icons/theme/icons/table-cell-properties.svg Cell properties} properties.
+The {@link module:table/tabletoolbar~TableToolbar} plugin introduces a contextual toolbar for table. The toolbar appears when a table or a cell is selected and contains various table-related buttons. These would typically include add or remove columns {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-column.svg Table column} and rows {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-row.svg Table row} and merge or split cells {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-merge-cell.svg Table cell}. If these features are configured, the toolbar will also contain buttons for captions {@icon @ssmckinney/ckeditor5-icons/theme/icons/caption.svg Table caption} and table {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-properties.svg Table properties} and cell {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-cell-properties.svg Cell properties} properties.
 
 {@img assets/img/table-toolbar.png 569 An extended contextual toolbar.}
 

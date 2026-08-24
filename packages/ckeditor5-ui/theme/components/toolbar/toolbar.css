@@ -23,7 +23,7 @@
 
 		/*
 		 * These margins make the separators look better in balloon toolbars (when aligned with the "tip").
-		 * See https://github.com/ckeditor/ckeditor5/issues/7493.
+		 * See https://github.com/ssmckinney/ckeditor5/issues/7493.
 		 */
 		margin-top: var(--ck-spacing-small);
 		margin-bottom: var(--ck-spacing-small);
@@ -47,7 +47,7 @@
 
 	& > .ck-toolbar__items {
 		& > *:not(.ck-toolbar__line-break) {
-			/* (https://github.com/ckeditor/ckeditor5/issues/11) Separate toolbar items. */
+			/* (https://github.com/ssmckinney/ckeditor5/issues/11) Separate toolbar items. */
 			margin-right: var(--ck-spacing-small);
 		}
 
@@ -73,7 +73,7 @@
 		/* Items in a vertical toolbar span the entire width. */
 		padding: 0;
 
-		/* Specificity matters here. See https://github.com/ckeditor/ckeditor5/issues/3408. */
+		/* Specificity matters here. See https://github.com/ssmckinney/ckeditor5/issues/3408. */
 		& > .ck-toolbar__items > .ck {
 			/* Items in a vertical toolbar should span the horizontal space. */
 			width: 100%;
@@ -163,7 +163,7 @@
 	}
 
 	&:not(.ck-toolbar_compact) > .ck-toolbar__items > .ck {
-		/* (https://github.com/ckeditor/ckeditor5/issues/11) Separate toolbar items. */
+		/* (https://github.com/ssmckinney/ckeditor5/issues/11) Separate toolbar items. */
 		margin-left: var(--ck-spacing-small);
 	}
 

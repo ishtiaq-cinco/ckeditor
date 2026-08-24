@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { AutoLink } from 'ckeditor5';
+import { AutoLink } from '@ssmckinney/ckeditor5';
 import {
 	CS_CONFIG,
 	TOKEN_URL,

@@ -7,8 +7,8 @@
  * @module html-support/integrations/customelement
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { ViewUpcastWriter, type ViewDocumentFragment, type ViewNode } from '@ckeditor/ckeditor5-engine';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { ViewUpcastWriter, type ViewDocumentFragment, type ViewNode } from '@ssmckinney/ckeditor5-engine';
 
 import { DataSchema } from '../dataschema.js';
 import { DataFilter, type HtmlSupportDataFilterRegisterEvent } from '../datafilter.js';

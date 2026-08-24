@@ -4,12 +4,12 @@
  */
 
 import { beforeAll, afterAll, beforeEach, afterEach, describe, expect, it, vi } from 'vitest';
-import { IconFontSize } from '@ckeditor/ckeditor5-icons';
+import { IconFontSize } from '@ssmckinney/ckeditor5-icons';
 import { FontSizeEditing } from '../../src/fontsize/fontsizeediting.js';
 import { FontSizeUI } from '../../src/fontsize/fontsizeui.js';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { _clearTranslations, add as addTranslations } from '@ckeditor/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { _clearTranslations, add as addTranslations } from '@ssmckinney/ckeditor5-utils';
 import { normalizeOptions } from '../../src/fontsize/utils.js';
 
 describe( 'FontSizeUI', () => {
@@ -136,7 +136,7 @@ describe( 'FontSizeUI', () => {
 			beforeEach( () => {
 				// Each test case in this group creates its own element, so make sure to delete editor created in
 				// the main beforeEach in this file, as later element and editor vars are overridden.
-				// See https://github.com/ckeditor/ckeditor5/issues/6002.
+				// See https://github.com/ssmckinney/ckeditor5/issues/6002.
 				element.remove();
 				return editor.destroy();
 			} );

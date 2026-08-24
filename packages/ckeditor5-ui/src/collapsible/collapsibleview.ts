@@ -7,12 +7,12 @@
  * @module ui/collapsible/collapsibleview
  */
 
-import { IconDropdownArrow } from '@ckeditor/ckeditor5-icons';
+import { IconDropdownArrow } from '@ssmckinney/ckeditor5-icons';
 import { View } from '../view.js';
 import { ButtonView } from '../button/buttonview.js';
 import { type ViewCollection } from '../viewcollection.js';
 import type { FocusableView } from '../focuscycler.js';
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
 import '../../theme/components/collapsible/collapsible.css';
 

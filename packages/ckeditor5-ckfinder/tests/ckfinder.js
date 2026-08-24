@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { global } from '@ckeditor/ckeditor5-utils';
-import { CKFinderUploadAdapter } from '@ckeditor/ckeditor5-adapter-ckfinder';
-import { Image } from '@ckeditor/ckeditor5-image';
-import { Link } from '@ckeditor/ckeditor5-link';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { global } from '@ssmckinney/ckeditor5-utils';
+import { CKFinderUploadAdapter } from '@ssmckinney/ckeditor5-adapter-ckfinder';
+import { Image } from '@ssmckinney/ckeditor5-image';
+import { Link } from '@ssmckinney/ckeditor5-link';
 
 import { CKFinder } from '../src/ckfinder.js';
 import { CKFinderUI } from '../src/ckfinderui.js';

@@ -13,7 +13,7 @@ import {
 	IconObjectInlineRight,
 	IconObjectLeft,
 	IconObjectRight
-} from '@ckeditor/ckeditor5-icons';
+} from '@ssmckinney/ckeditor5-icons';
 import type { MediaStyleDropdownDefinition, NormalizedMediaStyleOption } from '../mediaembedconfig.js';
 
 /**

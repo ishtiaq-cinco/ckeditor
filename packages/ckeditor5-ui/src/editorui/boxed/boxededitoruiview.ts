@@ -11,7 +11,7 @@ import { EditorUIView } from '../editoruiview.js';
 import { LabelView } from '../../label/labelview.js';
 import { type ViewCollection } from '../../viewcollection.js';
 
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * The boxed editor UI view class. This class represents an editor interface

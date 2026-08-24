@@ -7,7 +7,7 @@
  * @module core/plugincollection
  */
 
-import { CKEditorError, EmitterMixin, type EmitterMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, EmitterMixin, type EmitterMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 import type { LoadedPlugins, PluginClassConstructor, PluginConstructor, PluginInterface } from './plugin.js';
 
 const PluginCollectionBase: EmitterMixinConstructor = /* #__PURE__ */ EmitterMixin();
@@ -666,7 +666,7 @@ export type PluginEntry<TContext> = [ PluginConstructor<TContext>, PluginInterfa
  * 	}
  * }
  *
- * declare module '@ckeditor/ckeditor5-core' {
+ * declare module '@ssmckinney/ckeditor5-core' {
  * 	interface PluginsMap {
  * 		[ MyPlugin.pluginName ]: MyPlugin;
  * 	}

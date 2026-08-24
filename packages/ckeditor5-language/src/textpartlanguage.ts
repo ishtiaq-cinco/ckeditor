@@ -7,7 +7,7 @@
  * @module language/textpartlanguage
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import { TextPartLanguageEditing } from './textpartlanguageediting.js';
 import { TextPartLanguageUI } from './textpartlanguageui.js';

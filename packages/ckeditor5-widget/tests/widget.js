@@ -3,12 +3,12 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 import { Widget } from '../src/widget.js';
 import { WidgetTypeAround } from '../src/widgettypearound/widgettypearound.js';
-import { Typing, Delete } from '@ckeditor/ckeditor5-typing';
+import { Typing, Delete } from '@ssmckinney/ckeditor5-typing';
 import {
 	MouseObserver,
 	PointerObserver,
@@ -19,9 +19,9 @@ import {
 	EditingView,
 	ViewRootEditableElement,
 	ViewEditableElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 import { toWidget } from '../src/utils.js';
-import { getCode, keyCodes, toArray, env } from '@ckeditor/ckeditor5-utils';
+import { getCode, keyCodes, toArray, env } from '@ssmckinney/ckeditor5-utils';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 describe( 'Widget', () => {
@@ -553,7 +553,7 @@ describe( 'Widget', () => {
 		env.isiOS = false;
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/20103
+	// https://github.com/ssmckinney/ckeditor5/issues/20103
 	it( 'should do nothing on pointerdown on a widget type around button (Android)', () => {
 		env.isAndroid = true;
 
@@ -3103,7 +3103,7 @@ describe( 'Widget', () => {
 		}
 
 		// Let's make this integration tests real which will help covering
-		// cases like https://github.com/ckeditor/ckeditor5/issues/753.
+		// cases like https://github.com/ssmckinney/ckeditor5/issues/753.
 		// Originally, this test file used the Delete feature only which was not "integrational" enough.
 		it( 'tests are executed with the Typing feature', () => {
 			expect( editor.plugins.get( 'Typing' ) ).not.toBeUndefined();

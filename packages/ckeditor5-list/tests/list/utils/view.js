@@ -15,7 +15,7 @@ import {
 	isListView
 } from '../../../src/list/utils/view.js';
 
-import { ViewUpcastWriter, ViewDowncastWriter, StylesProcessor, ViewDocument, _parseView } from '@ckeditor/ckeditor5-engine';
+import { ViewUpcastWriter, ViewDowncastWriter, StylesProcessor, ViewDocument, _parseView } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'List - utils - view', () => {
 	let viewUpcastWriter, viewDowncastWriter;

@@ -11,8 +11,8 @@ import { Watchdog, type WatchdogConfig, type WatchdogState } from './watchdog.js
 import { EditorWatchdog, type EditorWatchdogCreatorFunction } from './editorwatchdog.js';
 import { areConnectedThroughProperties } from './utils/areconnectedthroughproperties.js';
 import { getSubNodes } from './utils/getsubnodes.js';
-import type { ArrayOrItem, CKEditorError } from '@ckeditor/ckeditor5-utils';
-import type { Context, Editor, EditorConfig, ContextConfig } from '@ckeditor/ckeditor5-core';
+import type { ArrayOrItem, CKEditorError } from '@ssmckinney/ckeditor5-utils';
+import type { Context, Editor, EditorConfig, ContextConfig } from '@ssmckinney/ckeditor5-core';
 
 const mainQueueId = Symbol( 'MainQueueId' );
 

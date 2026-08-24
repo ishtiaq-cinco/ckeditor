@@ -1,7 +1,7 @@
 CKEditor&nbsp;5 utilities
 ========================================
 
-[![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-utils.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-utils)
+[![npm version](https://badge.fury.io/js/%40ckeditor%2F@ssmckinney/ckeditor5-utils.svg)](https://www.npmjs.com/package/@ssmckinney/ckeditor5-utils)
 [![codecov](https://codecov.io/gh/ckeditor/ckeditor5/branch/master/graph/badge.svg)](https://codecov.io/gh/ckeditor/ckeditor5)
 [![CircleCI](https://circleci.com/gh/ckeditor/ckeditor5.svg?style=shield)](https://app.circleci.com/pipelines/github/ckeditor/ckeditor5?branch=master)
 
@@ -9,10 +9,10 @@ Various utilities used by CKEditor&nbsp;5 and its features. This is a sort of  C
 
 ## Installation
 
-This plugin is part of the `ckeditor5` package. Install the whole package to use it.
+This plugin is part of the `@ssmckinney/ckeditor5` package. Install the whole package to use it.
 
 ```bash
-npm install ckeditor5
+npm install @ssmckinney/ckeditor5
 ```
 
 ## Create free account
@@ -21,7 +21,7 @@ If you want to check full CKEditor&nbsp;5 capabilities, sign up for a [free non-
 
 ## Documentation
 
-See the [`@ckeditor/ckeditor5-utils` package](https://ckeditor.com/docs/ckeditor5/latest/api/utils.html) page in [CKEditor&nbsp;5 documentation](https://ckeditor.com/docs/ckeditor5/latest/).
+See the [`@ssmckinney/ckeditor5-utils` package](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/api/utils.html) page in [CKEditor&nbsp;5 documentation](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/).
 
 ## License
 

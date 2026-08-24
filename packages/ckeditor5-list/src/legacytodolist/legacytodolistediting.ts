@@ -22,9 +22,9 @@ import type {
 	RenameOperation,
 	ModelSelectionChangeRangeEvent,
 	ModelDocumentFragment
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import {
 	getCode,
@@ -32,7 +32,7 @@ import {
 	getLocalizedArrowKeyCodeDirection,
 	type Locale,
 	type GetCallback
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { LegacyListCommand } from '../legacylist/legacylistcommand.js';
 import { LegacyListEditing } from '../legacylist/legacylistediting.js';
@@ -207,7 +207,7 @@ export class LegacyTodoListEditing extends Plugin {
 	 *
 	 * Some say it's a hack :) Moving the selection only for executing the command on a certain node and restoring it after,
 	 * is not a clear solution. We need to design an API for using commands beyond the selection range.
-	 * See https://github.com/ckeditor/ckeditor5/issues/1954.
+	 * See https://github.com/ssmckinney/ckeditor5/issues/1954.
 	 */
 	private _handleCheckmarkChange( listItem: ModelElement ) {
 		const editor = this.editor;

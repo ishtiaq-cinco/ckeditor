@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { global } from '@ckeditor/ckeditor5-utils';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { DecoupledEditor } from '@ckeditor/ckeditor5-editor-decoupled';
-import { InlineEditor } from '@ckeditor/ckeditor5-editor-inline';
-import { BalloonEditor } from '@ckeditor/ckeditor5-editor-balloon';
-import { MultiRootEditor } from '@ckeditor/ckeditor5-editor-multi-root';
-import { removeEditorBodyOrphans } from '@ckeditor/ckeditor5-core/tests/_utils/cleanup.js';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { global } from '@ssmckinney/ckeditor5-utils';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { DecoupledEditor } from '@ssmckinney/ckeditor5-editor-decoupled';
+import { InlineEditor } from '@ssmckinney/ckeditor5-editor-inline';
+import { BalloonEditor } from '@ssmckinney/ckeditor5-editor-balloon';
+import { MultiRootEditor } from '@ssmckinney/ckeditor5-editor-multi-root';
+import { removeEditorBodyOrphans } from '@ssmckinney/ckeditor5-core/tests/_utils/cleanup.js';
 
 import { FullscreenCommand } from '../src/fullscreencommand.js';
 import { FullscreenClassicEditorHandler } from '../src/handlers/classiceditorhandler.js';

@@ -6,9 +6,9 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { ImageInsertFormView } from '../../../src/imageinsert/ui/imageinsertformview.js';
 import { ImageInsertUrlView } from '../../../src/imageinsert/ui/imageinserturlview.js';
-import { ButtonView, FocusCycler, ViewCollection, CollapsibleView } from '@ckeditor/ckeditor5-ui';
+import { ButtonView, FocusCycler, ViewCollection, CollapsibleView } from '@ssmckinney/ckeditor5-ui';
 
-import { keyCodes, KeystrokeHandler, FocusTracker } from '@ckeditor/ckeditor5-utils';
+import { keyCodes, KeystrokeHandler, FocusTracker } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'ImageInsertFormView', () => {
 	let view;

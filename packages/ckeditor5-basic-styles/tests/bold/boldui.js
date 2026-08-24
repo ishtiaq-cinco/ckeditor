@@ -5,12 +5,12 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { BoldEditing } from '../../src/bold/boldediting.js';
 import { BoldUI } from '../../src/bold/boldui.js';
-import { ButtonView } from '@ckeditor/ckeditor5-ui';
+import { ButtonView } from '@ssmckinney/ckeditor5-ui';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 describe( 'BoldUI', () => {
 	let editor, boldView, editorElement;

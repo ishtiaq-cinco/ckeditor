@@ -7,7 +7,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { Highlight } from './../src/highlight.js';
 import { HighlightEditing } from './../src/highlightediting.js';
 import { HighlightUI } from './../src/highlightui.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 describe( 'Highlight', () => {
 	let editor, element;

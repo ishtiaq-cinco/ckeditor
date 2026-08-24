@@ -3,16 +3,16 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
 
-import { Enter, ShiftEnter } from '@ckeditor/ckeditor5-enter';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Undo } from '@ckeditor/ckeditor5-undo';
+import { Enter, ShiftEnter } from '@ssmckinney/ckeditor5-enter';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
 
 import { Link } from '../../src/link.js';
 import { AutoLink } from '../../src/autolink.js';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
 
 ClassicEditor
 	.create( {

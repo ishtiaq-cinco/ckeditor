@@ -10,7 +10,7 @@
 import { LegacyListEditing } from './legacylist/legacylistediting.js';
 import { ListUI } from './list/listui.js';
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 /**
  * The legacy list feature.

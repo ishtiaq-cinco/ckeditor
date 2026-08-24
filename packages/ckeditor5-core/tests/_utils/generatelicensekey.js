@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { releaseDate, crc32 } from '@ckeditor/ckeditor5-utils';
+import { releaseDate, crc32 } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Generates a license key for testing purposes.

@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { IconContentUnlock } from '@ckeditor/ckeditor5-icons';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { ButtonView, DropdownView, MenuBarMenuListItemButtonView } from '@ckeditor/ckeditor5-ui';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { IconContentUnlock } from '@ssmckinney/ckeditor5-icons';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ButtonView, DropdownView, MenuBarMenuListItemButtonView } from '@ssmckinney/ckeditor5-ui';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 import { StandardEditingModeUI } from '../src/standardeditingmodeui.js';
 import { StandardEditingModeEditing } from '../src/standardeditingmodeediting.js';

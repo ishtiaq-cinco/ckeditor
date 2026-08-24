@@ -4,15 +4,15 @@
  */
 
 import { Essentials } from '../src/essentials.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { Enter, ShiftEnter } from '@ckeditor/ckeditor5-enter';
-import { SelectAll } from '@ckeditor/ckeditor5-select-all';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { AccessibilityHelp } from '@ckeditor/ckeditor5-ui';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { Enter, ShiftEnter } from '@ssmckinney/ckeditor5-enter';
+import { SelectAll } from '@ssmckinney/ckeditor5-select-all';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { AccessibilityHelp } from '@ssmckinney/ckeditor5-ui';
 
 describe( 'Essentials preset', () => {
 	let editor, editorElement;

@@ -21,7 +21,7 @@ To edit a block inside a list item, press <kbd>Enter</kbd> to create a new line 
 
 ## Indenting lists
 
-Besides controlling {@link features/indent text block indentation}, the indent {@icon @ckeditor/ckeditor5-icons/theme/icons/indent.svg Indent} and outdent {@icon @ckeditor/ckeditor5-icons/theme/icons/outdent.svg Outdent} buttons allow for indenting list items (nesting them).
+Besides controlling {@link features/indent text block indentation}, the indent {@icon @ssmckinney/ckeditor5-icons/theme/icons/indent.svg Indent} and outdent {@icon @ssmckinney/ckeditor5-icons/theme/icons/outdent.svg Outdent} buttons allow for indenting list items (nesting them).
 
 This mechanism is transparent to the user. From the code perspective, the buttons are implemented by the {@link module:indent/indent~Indent} plugin. Neither these buttons nor the respective commands implement any functionality by default.
 
@@ -42,7 +42,7 @@ By default, each nested list item can only be one level deeper than its parent. 
 
 <code-switcher>
 ```js
-import { ClassicEditor, List } from 'ckeditor5';
+import { ClassicEditor, List } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -68,7 +68,7 @@ If your editor does not need this level of richness &ndash; for example in short
 
 <code-switcher>
 ```js
-import { ClassicEditor, List } from 'ckeditor5';
+import { ClassicEditor, List } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -100,7 +100,7 @@ To prevent this behavior, enable the {@link module:list/list/adjacentlistssuppor
 
 <code-switcher>
 ```js
-import { ClassicEditor, List, AdjacentListsSupport } from 'ckeditor5';
+import { ClassicEditor, List, AdjacentListsSupport } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -112,4 +112,4 @@ ClassicEditor
 ```
 </code-switcher>
 
-This feature only works for pasted contents or on data load, it does not support entering adjacent lists via the editor UI. Find more about it in the `#changes-to-list-merging` section of `Update to 41.x` guide in the {@link updating/updating-from-older-versions updating from older versions}  guide. If you are interested in this functionality, refer to [this issue on GitHub](https://github.com/ckeditor/ckeditor5/issues/14478).
+This feature only works for pasted contents or on data load, it does not support entering adjacent lists via the editor UI. Find more about it in the `#changes-to-list-merging` section of `Update to 41.x` guide in the {@link updating/updating-from-older-versions updating from older versions}  guide. If you are interested in this functionality, refer to [this issue on GitHub](https://github.com/ssmckinney/ckeditor5/issues/14478).

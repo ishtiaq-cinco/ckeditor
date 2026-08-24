@@ -7,11 +7,11 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
 import { ItalicEditing } from '../../src/italic/italicediting.js';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 import { AttributeCommand } from '../../src/attributecommand.js';
 
-import { _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
+import { _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'ItalicEditing', () => {
 	let editor, model;

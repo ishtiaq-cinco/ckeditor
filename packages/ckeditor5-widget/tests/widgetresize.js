@@ -7,11 +7,11 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { WidgetResize } from '../src/widgetresize.js';
 
 // ClassicTestEditor can't be used, as it doesn't handle the focus, which is needed to test resizer visual cues.
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 
 import { toWidget } from '../src/utils.js';
-import { _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
 
 import { resizerMouseSimulator, focusEditor, getHandleCenterPoint, getWidgetDomParts } from './widgetresize/_utils/utils.js';
 
@@ -533,7 +533,7 @@ describe( 'WidgetResize', () => {
 		} );
 
 		// Note that ultimately width should be changed, but through a model converter, not with direct view changes.
-		// See https://github.com/ckeditor/ckeditor5/issues/6060.
+		// See https://github.com/ssmckinney/ckeditor5/issues/6060.
 		it( 'restores the original view width after resize is done', () => {
 			createResizer();
 
@@ -693,7 +693,7 @@ describe( 'WidgetResize', () => {
 	} );
 
 	describe( 'init()', () => {
-		// https://github.com/ckeditor/ckeditor5/issues/10156
+		// https://github.com/ssmckinney/ckeditor5/issues/10156
 		it( 'removes references to and destroys resizers of widget removed from the model document', () => {
 			const plugin = editor.plugins.get( WidgetResize );
 			const resizer = plugin.attachTo( gerResizerOptions( editor ) );
@@ -709,7 +709,7 @@ describe( 'WidgetResize', () => {
 			expect( resizerDestroySpy ).toHaveBeenCalledOnce();
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/10266
+		// https://github.com/ssmckinney/ckeditor5/issues/10266
 		it( 'removes references to and destroys resizers of widgets moved in the model document (but re-rendered in view)', () => {
 			const plugin = editor.plugins.get( WidgetResize );
 			const resizer = plugin.attachTo( gerResizerOptions( editor ) );
@@ -773,7 +773,7 @@ describe( 'WidgetResize', () => {
 
 			resizer.cancel();
 
-			// Value should be restored to the initial value (https://github.com/ckeditor/ckeditor5/issues/6060).
+			// Value should be restored to the initial value (https://github.com/ssmckinney/ckeditor5/issues/6060).
 			expect( widget.getStyle( 'width' ) ).toBe( INITIAL_WIDGET_WIDTH );
 		} );
 	} );

@@ -106,18 +106,18 @@ The file containing custom variables can be named `custom.css` and it will look 
     --ck-color-tooltip-background: hsl(252, 7%, 14%);
     --ck-color-tooltip-text: hsl(0, 0%, 93%);
 
-    /* -- Overrides the default colors used by the ckeditor5-image package. --------------------- */
+    /* -- Overrides the default colors used by the @ssmckinney/ckeditor5-image package. --------------------- */
 
     --ck-content-color-image-caption-background: hsl(0, 0%, 97%);
     --ck-content-color-image-caption-text: hsl(0, 0%, 20%);
 
-    /* -- Overrides the default colors used by the ckeditor5-widget package. -------------------- */
+    /* -- Overrides the default colors used by the @ssmckinney/ckeditor5-widget package. -------------------- */
 
     --ck-color-widget-blurred-border: hsl(0, 0%, 87%);
     --ck-color-widget-hover-border: hsl(43, 100%, 68%);
     --ck-color-widget-editable-focus-background: var(--ck-custom-white);
 
-    /* -- Overrides the default colors used by the ckeditor5-link package. ---------------------- */
+    /* -- Overrides the default colors used by the @ssmckinney/ckeditor5-link package. ---------------------- */
 
     --ck-color-link-default: hsl(190, 100%, 75%);
 }
@@ -138,9 +138,9 @@ Depending on your setup method, you can either import a style sheet into your `j
 
 
 ```js
-import { ClassicEditor } from 'ckeditor5';
+import { ClassicEditor } from '@ssmckinney/ckeditor5';
 
-import 'ckeditor5/ckeditor5.css';
+import '@ssmckinney/ckeditor5/ckeditor5.css';
 
 // Override the default styles.
 import 'custom.css';

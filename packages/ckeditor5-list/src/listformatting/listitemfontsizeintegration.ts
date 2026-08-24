@@ -7,10 +7,10 @@
  * @module list/listformatting/listitemfontsizeintegration
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import type { ViewElement } from '@ckeditor/ckeditor5-engine';
-import { env } from '@ckeditor/ckeditor5-utils';
-import { _normalizeFontSizeOptions } from '@ckeditor/ckeditor5-font';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import type { ViewElement } from '@ssmckinney/ckeditor5-engine';
+import { env } from '@ssmckinney/ckeditor5-utils';
+import { _normalizeFontSizeOptions } from '@ssmckinney/ckeditor5-font';
 
 import { ListEditing } from '../list/listediting.js';
 import type { ListFormatting } from '../listformatting.js';
@@ -78,7 +78,7 @@ export class ListItemFontSizeIntegration extends Plugin {
 						else if ( fontSizeOption.view.classes ) {
 							writer.addClass( `ck-list-marker-font-size-${ value }`, viewElement );
 
-							// See: https://github.com/ckeditor/ckeditor5/issues/18790.
+							// See: https://github.com/ssmckinney/ckeditor5/issues/18790.
 							if ( env.isSafari && !( options && options.dataPipeline ) ) {
 								writer.setStyle( '--ck-content-list-marker-dummy-font-size', '0', viewElement );
 							}

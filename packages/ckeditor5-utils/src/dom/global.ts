@@ -22,7 +22,7 @@ export interface GlobalType {
  * testing, i.e. stubbing native properties:
  *
  * ```ts
- * import { global } from 'ckeditor5';
+ * import { global } from '@ssmckinney/ckeditor5';
  *
  * // This stub will work for any code using global module.
  * vi.spyOn( global, 'window', 'get' ).mockReturnValue( {
@@ -32,7 +32,7 @@ export interface GlobalType {
  * console.log( global.window.innerWidth );
  * ```
  */
-let globalVar: GlobalType; // named globalVar instead of global: https://github.com/ckeditor/ckeditor5/issues/12971
+let globalVar: GlobalType; // named globalVar instead of global: https://github.com/ssmckinney/ckeditor5/issues/12971
 
 // In some environments window and document API might not be available.
 try {

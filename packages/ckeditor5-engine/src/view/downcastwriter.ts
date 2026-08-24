@@ -20,7 +20,7 @@ import { ViewAttributeElement } from './attributeelement.js';
 import { ViewEmptyElement } from './emptyelement.js';
 import { ViewUIElement } from './uielement.js';
 import { ViewRawElement } from './rawelement.js';
-import { CKEditorError, isIterable, type ArrayOrItem } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, isIterable, type ArrayOrItem } from '@ssmckinney/ckeditor5-utils';
 import { ViewDocumentFragment } from './documentfragment.js';
 import { ViewText } from './text.js';
 import { ViewEditableElement } from './editableelement.js';

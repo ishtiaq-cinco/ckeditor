@@ -7,16 +7,16 @@
  * @module ui/editorui/accessibilityhelp/accessibilityhelp
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { IconAccessibility } from '@ckeditor/ckeditor5-icons';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { IconAccessibility } from '@ssmckinney/ckeditor5-icons';
 import { ButtonView } from '../../button/buttonview.js';
 import { Dialog } from '../../dialog/dialog.js';
 import { MenuBarMenuListItemButtonView } from '../../menubar/menubarmenulistitembuttonview.js';
 import { AccessibilityHelpContentView } from './accessibilityhelpcontentview.js';
-import { getEnvKeystrokeText } from '@ckeditor/ckeditor5-utils';
+import { getEnvKeystrokeText } from '@ssmckinney/ckeditor5-utils';
 import type { EditorUIReadyEvent } from '../../editorui/editorui.js';
-import type { AddRootEvent } from '@ckeditor/ckeditor5-editor-multi-root';
-import type { ViewDowncastWriter, ViewRootEditableElement } from '@ckeditor/ckeditor5-engine';
+import type { AddRootEvent } from '@ssmckinney/ckeditor5-editor-multi-root';
+import type { ViewDowncastWriter, ViewRootEditableElement } from '@ssmckinney/ckeditor5-engine';
 
 import '../../../theme/components/editorui/accessibilityhelp.css';
 

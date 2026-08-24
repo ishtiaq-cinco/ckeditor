@@ -11,8 +11,8 @@ import { AttributeOperation } from '../../../src/model/operation/attributeoperat
 import { ModelPosition } from '../../../src/model/position.js';
 import { ModelRange } from '../../../src/model/range.js';
 
-import { count } from '@ckeditor/ckeditor5-utils';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { count } from '@ssmckinney/ckeditor5-utils';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'AttributeOperation', () => {
 	let model, doc, root;

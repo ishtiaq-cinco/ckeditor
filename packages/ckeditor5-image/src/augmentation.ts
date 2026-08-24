@@ -46,11 +46,11 @@ import type {
 	UploadImageCommand
 } from './index.js';
 
-declare module '@ckeditor/ckeditor5-core' {
+declare module '@ssmckinney/ckeditor5-core' {
 	interface EditorConfig {
 
 		/**
-		 * The configuration of the image features. Used by the image features in the `@ckeditor/ckeditor5-image` package.
+		 * The configuration of the image features. Used by the image features in the `@ssmckinney/ckeditor5-image` package.
 		 *
 		 * Read more in {@link module:image/imageconfig~ImageConfig}.
 		 */

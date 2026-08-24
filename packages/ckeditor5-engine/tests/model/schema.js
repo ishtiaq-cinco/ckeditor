@@ -19,7 +19,7 @@ import { ModelRange } from '../../src/model/range.js';
 import { _getModelData, _setModelData, _stringifyModel, _parseModel } from '../../src/dev-utils/model.js';
 
 import { AttributeOperation } from '../../src/model/operation/attributeoperation.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'Schema', () => {
 	let schema, root1, r1p1, r1p2, r1bQ, r1bQp, root2;
@@ -2216,7 +2216,7 @@ describe( 'Schema', () => {
 			} );
 		} );
 
-		// Related to https://github.com/ckeditor/ckeditor5/issues/15246.
+		// Related to https://github.com/ssmckinney/ckeditor5/issues/15246.
 		it( 'should filter out only non-allowed root attributes', () => {
 			schema.extend( '$root', { allowAttributes: 'allowed' } );
 

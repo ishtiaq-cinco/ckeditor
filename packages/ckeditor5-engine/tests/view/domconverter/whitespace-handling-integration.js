@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ImageInlineEditing } from '@ckeditor/ckeditor5-image';
-import { ShiftEnter } from '@ckeditor/ckeditor5-enter';
-import { createElement } from '@ckeditor/ckeditor5-utils';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ImageInlineEditing } from '@ssmckinney/ckeditor5-image';
+import { ShiftEnter } from '@ssmckinney/ckeditor5-enter';
+import { createElement } from '@ssmckinney/ckeditor5-utils';
 
 import { _getModelData } from '../../../src/dev-utils/model.js';
 import { getViewFillerOffset } from '../../../src/index.js';
@@ -1038,7 +1038,7 @@ describe( 'DomConverter – whitespace handling – integration', () => {
 		} );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/1024
+	// https://github.com/ssmckinney/ckeditor5/issues/1024
 	describe( 'whitespaces around <br>s', () => {
 		beforeEach( () => {
 			return VirtualTestEditor

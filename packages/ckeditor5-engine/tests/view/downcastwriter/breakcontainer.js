@@ -10,7 +10,7 @@ import { _stringifyView, _parseView } from '../../../src/dev-utils/view.js';
 import { ViewContainerElement } from '../../../src/view/containerelement.js';
 import { ViewPosition } from '../../../src/view/position.js';
 import { ViewDocument } from '../../../src/view/document.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { StylesProcessor } from '../../../src/view/stylesmap.js';
 
 describe( 'DowncastWriter', () => {

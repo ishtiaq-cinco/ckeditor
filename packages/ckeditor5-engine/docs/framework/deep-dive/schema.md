@@ -945,7 +945,7 @@ Similarly, commands &ndash; if implemented correctly &ndash; {@link module:core/
 Finally, the schema plays a crucial role during the conversion from the view to the model (also called "upcasting"). During this process converters decide whether they can convert specific view elements or attributes to the given positions in the model. Thanks to that if you tried to load incorrect data to the editor or when you paste content copied from another website, the structure and attributes of the data get adjusted to the current schema rules.
 
 <info-box>
-	Some features may miss schema checks. If you happen to find such a scenario, do not hesitate to [report it to us](https://github.com/ckeditor/ckeditor5/issues).
+	Some features may miss schema checks. If you happen to find such a scenario, do not hesitate to [report it to us](https://github.com/ssmckinney/ckeditor5/issues).
 </info-box>
 
 <style>

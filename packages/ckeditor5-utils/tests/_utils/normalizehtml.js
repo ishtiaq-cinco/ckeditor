@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { HtmlDataProcessor, _stringifyView, StylesProcessor, ViewDocument } from '@ckeditor/ckeditor5-engine';
+import { HtmlDataProcessor, _stringifyView, StylesProcessor, ViewDocument } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * Parses given string of HTML and returns normalized HTML.

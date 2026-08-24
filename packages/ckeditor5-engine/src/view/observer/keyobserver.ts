@@ -10,7 +10,7 @@
 import { DomEventObserver } from './domeventobserver.js';
 import { type ViewDocumentDomEventData } from './domeventdata.js';
 import type { BubblingEvent } from './bubblingemittermixin.js';
-import { getCode, type KeystrokeInfo } from '@ckeditor/ckeditor5-utils';
+import { getCode, type KeystrokeInfo } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Observer for events connected with pressing keyboard keys.

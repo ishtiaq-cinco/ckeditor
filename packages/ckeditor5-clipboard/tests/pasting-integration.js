@@ -4,15 +4,15 @@
  */
 
 import { describe, it, beforeEach, afterEach, expect } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 import { Clipboard } from '../src/clipboard.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { Link } from '@ckeditor/ckeditor5-link';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { Link } from '@ssmckinney/ckeditor5-link';
 
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'Pasting – integration', () => {
 	let element;
@@ -28,7 +28,7 @@ describe( 'Pasting – integration', () => {
 	} );
 
 	describe( 'inline styles', () => {
-		// See https://github.com/ckeditor/ckeditor5/issues/477.
+		// See https://github.com/ssmckinney/ckeditor5/issues/477.
 		it( 'pastes inline styles and links (no block)', () => {
 			return ClassicTestEditor
 				.create( element, { plugins: [ Clipboard, Paragraph, Bold, Italic, Link ] } )
@@ -192,7 +192,7 @@ describe( 'Pasting – integration', () => {
 	} );
 
 	describe( 'links', () => {
-		// See https://github.com/ckeditor/ckeditor5/issues/15036.
+		// See https://github.com/ssmckinney/ckeditor5/issues/15036.
 		it( 'should not convert parts of the link address which look like HTML entities', () => {
 			return ClassicTestEditor
 				.create( element, { plugins: [ Clipboard, Paragraph, Bold, Italic, Link ] } )

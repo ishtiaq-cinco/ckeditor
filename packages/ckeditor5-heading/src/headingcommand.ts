@@ -7,10 +7,10 @@
  * @module heading/headingcommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
-import { first } from '@ckeditor/ckeditor5-utils';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
+import { first } from '@ssmckinney/ckeditor5-utils';
 
-import type { ModelElement, ModelSchema } from '@ckeditor/ckeditor5-engine';
+import type { ModelElement, ModelSchema } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * The heading command. It is used by the {@link module:heading/heading~Heading heading feature} to apply headings.

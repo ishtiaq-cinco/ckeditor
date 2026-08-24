@@ -8,7 +8,7 @@ import { Context } from '../src/context.js';
 import { ContextPlugin } from '../src/contextplugin.js';
 import { Plugin } from '../src/plugin.js';
 import { ClassicTestEditor } from './_utils/classictesteditor.js';
-import { Config, Locale, CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { Config, Locale, CKEditorError } from '@ssmckinney/ckeditor5-utils';
 import { VirtualTestEditor } from './_utils/virtualtesteditor.js';
 
 describe( 'Context', () => {

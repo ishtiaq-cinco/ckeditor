@@ -3,17 +3,17 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
-import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
-import { Image, ImageUpload, ImageInsert, ImageStyle } from '@ckeditor/ckeditor5-image';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { Table, TableToolbar } from '@ssmckinney/ckeditor5-table';
+import { EasyImage } from '@ssmckinney/ckeditor5-easy-image';
+import { Image, ImageUpload, ImageInsert, ImageStyle } from '@ssmckinney/ckeditor5-image';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
 
 import { StandardEditingMode } from '../../src/standardeditingmode.js';
 import { RestrictedEditingMode } from '../../src/restrictededitingmode.js';
 
-import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
+import { CS_CONFIG } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
 
 const restrictedModeButton = document.getElementById( 'mode-restricted' );
 const standardModeButton = document.getElementById( 'mode-standard' );

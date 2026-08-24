@@ -3,25 +3,25 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
 
-import { Strikethrough, Code, Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { TableProperties, TableCellProperties, Table, TableToolbar } from '@ckeditor/ckeditor5-table';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { List, ListProperties } from '@ckeditor/ckeditor5-list';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Image, ImageCaption, ImageStyle, ImageToolbar } from '@ckeditor/ckeditor5-image';
-import { Indent } from '@ckeditor/ckeditor5-indent';
-import { Link } from '@ckeditor/ckeditor5-link';
-import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
+import { Strikethrough, Code, Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { TableProperties, TableCellProperties, Table, TableToolbar } from '@ssmckinney/ckeditor5-table';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { List, ListProperties } from '@ssmckinney/ckeditor5-list';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Autoformat } from '@ssmckinney/ckeditor5-autoformat';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Image, ImageCaption, ImageStyle, ImageToolbar } from '@ssmckinney/ckeditor5-image';
+import { Indent } from '@ssmckinney/ckeditor5-indent';
+import { Link } from '@ssmckinney/ckeditor5-link';
+import { MediaEmbed } from '@ssmckinney/ckeditor5-media-embed';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { HorizontalLine } from '@ssmckinney/ckeditor5-horizontal-line';
 import { Markdown } from '../../../src/markdown.js';
 import { PasteFromMarkdownExperimental } from '../../../src/pastefrommarkdownexperimental.js';
-import { FontFamily } from '@ckeditor/ckeditor5-font';
+import { FontFamily } from '@ssmckinney/ckeditor5-font';
 
 ClassicEditor
 	.create( {

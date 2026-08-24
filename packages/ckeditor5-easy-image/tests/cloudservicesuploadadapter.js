@@ -4,14 +4,14 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { CloudServicesUploadAdapter } from '../src/cloudservicesuploadadapter.js';
-import { FileRepository } from '@ckeditor/ckeditor5-upload';
-import { CloudServices, CloudServicesCore } from '@ckeditor/ckeditor5-cloud-services';
+import { FileRepository } from '@ssmckinney/ckeditor5-upload';
+import { CloudServices, CloudServicesCore } from '@ssmckinney/ckeditor5-cloud-services';
 
 import { UploadGatewayMock } from './_utils/uploadgatewaymock.js';
-import { createNativeFileMock } from '@ckeditor/ckeditor5-upload/tests/_utils/mocks.js';
-import { TokenMock } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
+import { createNativeFileMock } from '@ssmckinney/ckeditor5-upload/tests/_utils/mocks.js';
+import { TokenMock } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
 
 // EasyImage requires the `CloudServicesCore` plugin as a dependency.
 // In order to mock the `Token` and `UploadGateway` classes, we create a new class that extend the `CloudServicesCore` plugin

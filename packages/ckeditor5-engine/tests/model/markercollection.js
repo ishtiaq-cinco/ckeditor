@@ -10,7 +10,7 @@ import { ModelRange } from '../../src/model/range.js';
 import { ModelLiveRange } from '../../src/model/liverange.js';
 import { ModelText } from '../../src/model/text.js';
 import { Model } from '../../src/model/model.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'MarkerCollection', () => {
 	let markers, range, range2, doc, root;

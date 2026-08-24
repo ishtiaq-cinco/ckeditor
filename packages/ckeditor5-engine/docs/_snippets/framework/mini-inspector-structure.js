@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { Essentials, Paragraph } from 'ckeditor5';
+import { Essentials, Paragraph } from '@ssmckinney/ckeditor5';
 import MiniCKEditorInspector from '@ckeditor/ckeditor5-inspector/build/miniinspector.js';
 import { MiniInspectorEditor } from '@snippets/mini-inspector.js';
 

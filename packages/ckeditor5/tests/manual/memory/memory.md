@@ -23,7 +23,7 @@
         --disable-extensions \
         --disable-plugins \
         --incognito \
-        http://localhost:8125/ckeditor5/tests/manual/memory/memory.html
+        http://localhost:8125/@ssmckinney/ckeditor5/tests/manual/memory/memory.html
     ```
 
     The above will run Chrome without extensions or plugins in incognito mode and open manual tests page.

@@ -5,13 +5,13 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
 
 import { LegacyListPropertiesEditing } from '../../src/legacylistproperties/legacylistpropertiesediting.js';
 import { LegacyTodoListEditing } from '../../src/legacytodolist/legacytodolistediting.js';
@@ -383,7 +383,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					);
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/8262.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8262.
 				describe( 'list conversion with surrounding text nodes', () => {
 					let editor;
 
@@ -474,7 +474,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					);
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/8081.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8081.
 				it( 'should convert properly nested list styles', () => {
 					// ■ Level 0
 					//     ▶ Level 0.1
@@ -858,7 +858,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					);
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/8072.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8072.
 				it( 'should not throw when indenting a list without any other content in the editor', () => {
 					_setModelData( model,
 						'<listItem listIndent="0" listStyle="default" listType="bulleted">Foo</listItem>' +
@@ -1094,7 +1094,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					return editor.destroy();
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/7930.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/7930.
 				it( 'should restore proper list style attribute after undo merging lists', () => {
 				// ○ 1.
 				// ○ 2.
@@ -1497,7 +1497,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					);
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/8073.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8073.
 				it( 'should not crash when removing a content between intended lists', () => {
 					_setModelData( model,
 						'<listItem listIndent="0" listStyle="default" listType="bulleted">aaaa</listItem>' +
@@ -1536,7 +1536,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					);
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/8642.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8642.
 				it( 'should not crash when removing entire list item followed by a paragraph element with another list', () => {
 					_setModelData( model,
 						'<listItem listIndent="0" listStyle="default" listType="bulleted">aaaa</listItem>' +
@@ -2015,7 +2015,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					);
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/8262.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8262.
 				describe( 'list conversion with surrounding text nodes', () => {
 					let editor;
 
@@ -2773,7 +2773,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					return editor.destroy();
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/7930.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/7930.
 				it( 'should restore proper reversed attribute after undo merging lists', () => {
 				// ○ 1.
 				// ○ 2.
@@ -3175,7 +3175,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					);
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/8073.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8073.
 				it( 'should not crash when removing a content between intended lists', () => {
 					_setModelData( model,
 						'<listItem listIndent="0" listReversed="false" listType="numbered">aaaa</listItem>' +
@@ -3193,7 +3193,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					);
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/8642.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8642.
 				it( 'should not crash when removing entire list item followed by a paragraph element with another list', () => {
 					_setModelData( model,
 						'<listItem listIndent="0" listReversed="true" listType="numbered">aaaa</listItem>' +
@@ -3723,7 +3723,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					);
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/8262.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8262.
 				describe( 'list conversion with surrounding text nodes', () => {
 					let editor;
 
@@ -4481,7 +4481,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					return editor.destroy();
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/7930.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/7930.
 				it( 'should restore proper start attribute after undo merging lists', () => {
 				// ○ 1.
 				// ○ 2.
@@ -4883,7 +4883,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					);
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/8073.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8073.
 				it( 'should not crash when removing a content between intended lists', () => {
 					_setModelData( model,
 						'<listItem listIndent="0" listStart="1" listType="numbered">aaaa</listItem>' +
@@ -4901,7 +4901,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					);
 				} );
 
-				// See: https://github.com/ckeditor/ckeditor5/issues/8642.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8642.
 				it( 'should not crash when removing entire list item followed by a paragraph element with another list', () => {
 					_setModelData( model,
 						'<listItem listIndent="0" listStart="1" listType="numbered">aaaa</listItem>' +
@@ -5413,7 +5413,7 @@ describe( 'LegacyListPropertiesEditing', () => {
 					);
 				} );
 
-				// https://github.com/ckeditor/ckeditor5/issues/13858
+				// https://github.com/ssmckinney/ckeditor5/issues/13858
 				it( 'should not convert if the schema does not allow it in the given context', () => {
 					editor.model.schema.register( 'disallowedContext', {
 						inheritAllFrom: '$blockObject'

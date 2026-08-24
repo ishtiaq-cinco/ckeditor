@@ -14,11 +14,11 @@ import type {
 	TypingConfig
 } from './index.js';
 
-declare module '@ckeditor/ckeditor5-core' {
+declare module '@ssmckinney/ckeditor5-core' {
 	interface EditorConfig {
 
 		/**
-		 * The configuration of the typing features. Used by the features from the `@ckeditor/ckeditor5-typing` package.
+		 * The configuration of the typing features. Used by the features from the `@ssmckinney/ckeditor5-typing` package.
 		 *
 		 * Read more in {@link module:typing/typingconfig~TypingConfig}.
 		 */

@@ -4,12 +4,12 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ModelElement, _setModelData } from '@ckeditor/ckeditor5-engine';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
+import { ModelElement, _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
 import { Table } from '../../src/table.js';
 import { modelTable } from '../_utils/utils.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 import { TableColumnResize } from '../../src/tablecolumnresize.js';
 import {
@@ -610,7 +610,7 @@ describe( 'TableColumnResize utils', () => {
 	describe( 'getTableWidthInPixels()', () => {
 		// Because the `window.getComputedStyle()` for colgroup will always return 0px on Safari, we needed to change the calculations
 		// to be based on tbody element instead - which works ok in all main browsers.
-		// See https://github.com/ckeditor/ckeditor5/issues/1466 for reference.
+		// See https://github.com/ssmckinney/ckeditor5/issues/1466 for reference.
 		it( 'returns a correct value on Safari', () => {
 			editor.setData(
 				`<figure class="table">

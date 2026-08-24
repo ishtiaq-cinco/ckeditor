@@ -7,8 +7,8 @@
  * @module fullscreen/fullscreenediting
  */
 
-import { Plugin, type Editor } from '@ckeditor/ckeditor5-core';
-import { env } from '@ckeditor/ckeditor5-utils';
+import { Plugin, type Editor } from '@ssmckinney/ckeditor5-core';
+import { env } from '@ssmckinney/ckeditor5-utils';
 
 import { FullscreenCommand } from './fullscreencommand.js';
 
@@ -57,7 +57,7 @@ export class FullscreenEditing extends Plugin {
 
 			// On non-Chromium browsers, the editor view and toolbar are not blurred properly after moving the editable,
 			// even though the `document.activeElement` is changed. Hence we need to blur them manually.
-			// Fixes https://github.com/ckeditor/ckeditor5/issues/18250 and https://github.com/ckeditor/ckeditor5/issues/18247.
+			// Fixes https://github.com/ssmckinney/ckeditor5/issues/18250 and https://github.com/ssmckinney/ckeditor5/issues/18247.
 			if ( !env.isBlink ) {
 				this.editor.editing.view.document.isFocused = false;
 				this.editor.ui.view.toolbar!.focusTracker.focusedElement = null;

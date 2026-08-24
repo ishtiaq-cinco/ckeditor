@@ -37,7 +37,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, Bold, Italic, Essentials, Markdown } from 'ckeditor5';
+import { ClassicEditor, Bold, Italic, Essentials, Markdown } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -89,9 +89,9 @@ When converting the output produced by this data processor, make sure to use a c
 
 While the Markdown plugin is stable and ready to use, some issues are still being worked on. Feel free to upvote 👍&nbsp; these on GitHub if you would like to see this introduced.
 
-* Pasting Markdown-formatted content does not automatically convert the pasted syntax markers into properly formatted content. GitHub issues: [#2321](https://github.com/ckeditor/ckeditor5/issues/2321), [#2322](https://github.com/ckeditor/ckeditor5/issues/2322).
-* The Markdown code generated with the Markdown output feature will not properly render {@link features/tables#nesting-tables nested tables}. GitHub issue: [#9475](https://github.com/ckeditor/ckeditor5/issues/9475).
-* Code blocks inside To-do lists will not properly render. GitHub issue: [#18754](https://github.com/ckeditor/ckeditor5/issues/18754).
+* Pasting Markdown-formatted content does not automatically convert the pasted syntax markers into properly formatted content. GitHub issues: [#2321](https://github.com/ssmckinney/ckeditor5/issues/2321), [#2322](https://github.com/ssmckinney/ckeditor5/issues/2322).
+* The Markdown code generated with the Markdown output feature will not properly render {@link features/tables#nesting-tables nested tables}. GitHub issue: [#9475](https://github.com/ssmckinney/ckeditor5/issues/9475).
+* Code blocks inside To-do lists will not properly render. GitHub issue: [#18754](https://github.com/ssmckinney/ckeditor5/issues/18754).
 
 ## Related features
 

@@ -7,15 +7,15 @@
  * @module link/linkui
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { IconLink, IconPencil, IconUnlink, IconSettings } from '@ckeditor/ckeditor5-icons';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { IconLink, IconPencil, IconUnlink, IconSettings } from '@ssmckinney/ckeditor5-icons';
 import {
 	ClickObserver,
 	type ViewAttributeElement,
 	type ViewDocumentClickEvent,
 	type ViewElement,
 	type ViewPosition
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 import {
 	ButtonView,
 	SwitchButtonView,
@@ -26,10 +26,10 @@ import {
 	ToolbarView,
 	type ViewWithCssTransitionDisabler,
 	type ButtonExecuteEvent
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 
-import { Collection, type ObservableChangeEvent, type DomOptimalPositionOptions } from '@ckeditor/ckeditor5-utils';
-import { isWidget } from '@ckeditor/ckeditor5-widget';
+import { Collection, type ObservableChangeEvent, type DomOptimalPositionOptions } from '@ssmckinney/ckeditor5-utils';
+import { isWidget } from '@ssmckinney/ckeditor5-widget';
 
 import { LinkEditing } from './linkediting.js';
 
@@ -192,7 +192,7 @@ export class LinkUI extends Plugin {
 	public override destroy(): void {
 		super.destroy();
 
-		// Destroy created UI components as they are not automatically destroyed (see https://github.com/ckeditor/ckeditor5/issues/1341).
+		// Destroy created UI components as they are not automatically destroyed (see https://github.com/ssmckinney/ckeditor5/issues/1341).
 		if ( this.propertiesView ) {
 			this.propertiesView.destroy();
 		}
@@ -349,7 +349,33 @@ export class LinkUI extends Plugin {
 			provider => this._createLinksListProviderButton( provider )
 		);
 
+		// The properties panel is reachable from the form and not only from the link toolbar, because the
+		// toolbar shows for an existing link only — which left no way to pick link options while the link
+		// was still being created. Worth a button only when there is something behind it.
+		if ( linkCommand.manualDecorators.length ) {
+			formView.optionsListChildren.add( this._createLinkPropertiesButton() );
+		}
+
 		return formView;
+	}
+
+	/**
+	 * Creates the button that opens the {@link #propertiesView} from within the {@link #formView}.
+	 */
+	private _createLinkPropertiesButton(): LinkButtonView {
+		const editor = this.editor;
+		const t = editor.locale.t;
+		const button = new LinkButtonView( editor.locale );
+
+		button.set( {
+			label: t( 'Link properties' )
+		} );
+
+		this.listenTo( button, 'execute', () => {
+			this._addPropertiesView();
+		} );
+
+		return button;
 	}
 
 	/**
@@ -419,12 +445,16 @@ export class LinkUI extends Plugin {
 
 		const view = new ( CssTransitionDisablerMixin( LinkPropertiesView ) )( editor.locale );
 
-		// Hide the panel after clicking the back button.
+		// Go back to wherever the panel was opened from: the form below it, or the document.
 		this.listenTo( view, 'back', () => {
 			// Move focus back to the editing view to prevent from losing it while current view is removed.
 			editor.editing.view.focus();
 
 			this._removePropertiesView();
+
+			if ( this._isFormInPanel ) {
+				this.formView!.focus();
+			}
 		} );
 
 		view.listChildren.bindTo( linkCommand.manualDecorators ).using( manualDecorator => {
@@ -442,6 +472,17 @@ export class LinkUI extends Plugin {
 			} );
 
 			button.on( 'execute', () => {
+				// Opened from the form, the link may not exist yet, so there is no `linkCommand.value` to
+				// execute against. Record the choice on the decorator instead: `#_getDecoratorSwitchesState()`
+				// reads it back when the form is submitted, which also means the URL, the displayed text and
+				// the options land as a single undo step. `#_removeFormView()` restores the decorators from
+				// the model afterwards, which is what discards these again if the form is dismissed.
+				if ( this._isFormInPanel ) {
+					manualDecorator.value = !button.isOn;
+
+					return;
+				}
+
 				editor.execute( 'link', linkCommand.value!, {
 					...this._getDecoratorSwitchesState(),
 					[ manualDecorator.id ]: !button.isOn
@@ -731,7 +772,7 @@ export class LinkUI extends Plugin {
 
 		// Handle the `Ctrl+K` keystroke and show the panel.
 		editor.keystrokes.set( LINK_KEYSTROKE, ( keyEvtData, cancel ) => {
-			// Prevent focusing the search bar in FF, Chrome and Edge. See https://github.com/ckeditor/ckeditor5/issues/4811.
+			// Prevent focusing the search bar in FF, Chrome and Edge. See https://github.com/ssmckinney/ckeditor5/issues/4811.
 			cancel();
 
 			if ( editor.commands.get( 'link' )!.isEnabled ) {
@@ -776,7 +817,7 @@ export class LinkUI extends Plugin {
 				// Focusing on the editable during a click outside the balloon panel might
 				// cause the selection to move to the beginning of the editable, so we avoid
 				// focusing on it during this action.
-				// See: https://github.com/ckeditor/ckeditor5/issues/18253
+				// See: https://github.com/ssmckinney/ckeditor5/issues/18253
 				this._hideUI( false );
 			}
 		} );
@@ -939,13 +980,20 @@ export class LinkUI extends Plugin {
 	 */
 	private _removeFormView( updateFocus: boolean = true ): void {
 		if ( this._isFormInPanel ) {
+			const linkCommand: LinkCommand = this.editor.commands.get( 'link' )!;
+
 			// Blur the input element before removing it from DOM to prevent issues in some browsers.
-			// See https://github.com/ckeditor/ckeditor5/issues/1501.
+			// See https://github.com/ssmckinney/ckeditor5/issues/1501.
 			this.formView!.saveButtonView.focus();
 
 			// Reset fields to update the state of the submit button.
 			this.formView!.displayedTextInputView.fieldView.reset();
 			this.formView!.urlInputView.fieldView.reset();
+
+			// Re-read the switches in the properties panel from the model, the same way the inputs above are
+			// reset. On submit the options have just been written there, so this is a no-op; on cancel it is
+			// what throws away options picked while the form was open.
+			linkCommand.restoreManualDecoratorStates();
 
 			this._balloon.remove( this.formView! );
 
@@ -972,7 +1020,7 @@ export class LinkUI extends Plugin {
 		// When there's no link under the selection, go straight to the editing UI.
 		if ( !this._getSelectedLinkElement() ) {
 			// Show visual selection on a text without a link when the contextual balloon is displayed.
-			// See https://github.com/ckeditor/ckeditor5/issues/4721.
+			// See https://github.com/ssmckinney/ckeditor5/issues/4721.
 			this._showFakeVisualSelection();
 
 			this._addToolbarView();

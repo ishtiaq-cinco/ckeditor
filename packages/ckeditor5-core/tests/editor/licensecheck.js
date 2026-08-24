@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { CKEditorError, global } from '@ckeditor/ckeditor5-utils';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { CKEditorError, global } from '@ssmckinney/ckeditor5-utils';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { Editor } from '../../src/editor/editor.js';
 import { Plugin } from '../../src/plugin.js';
 import { generateLicenseKey } from '../_utils/generatelicensekey.js';

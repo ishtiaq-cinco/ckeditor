@@ -5,19 +5,19 @@
 
 import { describe, beforeEach } from 'vitest';
 
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ShiftEnter } from '@ckeditor/ckeditor5-enter';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Bold, Underline, Italic, Strikethrough } from '@ckeditor/ckeditor5-basic-styles';
-import { Link } from '@ckeditor/ckeditor5-link';
-import { List, ListProperties } from '@ckeditor/ckeditor5-list';
-import { stubUid } from '@ckeditor/ckeditor5-list/tests/list/_utils/uid.js';
-import { Image } from '@ckeditor/ckeditor5-image';
-import { Table, TableProperties, TableCellProperties } from '@ckeditor/ckeditor5-table';
-import { FontBackgroundColor, FontColor } from '@ckeditor/ckeditor5-font';
-import { PageBreak } from '@ckeditor/ckeditor5-page-break';
-import { Bookmark } from '@ckeditor/ckeditor5-bookmark';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ShiftEnter } from '@ssmckinney/ckeditor5-enter';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Bold, Underline, Italic, Strikethrough } from '@ssmckinney/ckeditor5-basic-styles';
+import { Link } from '@ssmckinney/ckeditor5-link';
+import { List, ListProperties } from '@ssmckinney/ckeditor5-list';
+import { stubUid } from '@ssmckinney/ckeditor5-list/tests/list/_utils/uid.js';
+import { Image } from '@ssmckinney/ckeditor5-image';
+import { Table, TableProperties, TableCellProperties } from '@ssmckinney/ckeditor5-table';
+import { FontBackgroundColor, FontColor } from '@ssmckinney/ckeditor5-font';
+import { PageBreak } from '@ssmckinney/ckeditor5-page-break';
+import { Bookmark } from '@ssmckinney/ckeditor5-bookmark';
 
 import { PasteFromOffice } from '../../src/pastefromoffice.js';
 import { generateTests } from '../_utils/utils.js';
@@ -120,7 +120,7 @@ describe( 'PasteFromOffice - integration', () => {
 		}
 	} );
 
-	// See: https://github.com/ckeditor/ckeditor5/issues/7684.
+	// See: https://github.com/ssmckinney/ckeditor5/issues/7684.
 	generateIntegrationTests( {
 		input: 'font-without-table-properties',
 		editorConfig: {

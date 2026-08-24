@@ -7,8 +7,8 @@
  * @module link/unlinkcommand
  */
 
-import { Command } from '@ckeditor/ckeditor5-core';
-import { findAttributeRange } from '@ckeditor/ckeditor5-typing';
+import { Command } from '@ssmckinney/ckeditor5-core';
+import { findAttributeRange } from '@ssmckinney/ckeditor5-typing';
 
 import { type LinkCommand } from './linkcommand.js';
 import { isLinkableElement } from './utils.js';
@@ -27,7 +27,7 @@ export class UnlinkCommand extends Command {
 
 		// A check for any integration that allows linking elements (e.g. `LinkImage`).
 		// Currently the selection reads attributes from text nodes only.
-		// See https://github.com/ckeditor/ckeditor5/issues/7429 and https://github.com/ckeditor/ckeditor5/issues/7465.
+		// See https://github.com/ssmckinney/ckeditor5/issues/7429 and https://github.com/ssmckinney/ckeditor5/issues/7465.
 		if ( isLinkableElement( selectedElement, model.schema ) ) {
 			this.isEnabled = model.schema.checkAttribute( selectedElement, 'linkHref' );
 		} else {

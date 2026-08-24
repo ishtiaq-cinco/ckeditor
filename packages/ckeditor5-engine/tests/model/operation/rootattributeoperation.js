@@ -8,7 +8,7 @@ import { Model } from '../../../src/model/model.js';
 import { ModelDocumentFragment } from '../../../src/model/documentfragment.js';
 import { ModelElement } from '../../../src/model/element.js';
 import { RootAttributeOperation } from '../../../src/model/operation/rootattributeoperation.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'RootAttributeOperation', () => {
 	let model, doc, root;

@@ -8,7 +8,7 @@ import { ModelElement } from '../../src/model/element.js';
 import { ModelText } from '../../src/model/text.js';
 import { ModelTextProxy } from '../../src/model/textproxy.js';
 import { ModelDocumentFragment } from '../../src/model/documentfragment.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'DocumentFragment', () => {
 	describe( 'constructor()', () => {

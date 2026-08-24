@@ -35,7 +35,7 @@ Assuming that you have implemented some form of the `saveData()` function that s
 
 <code-switcher>
 ```js
-import { ClassicEditor, Autosave } from 'ckeditor5';
+import { ClassicEditor, Autosave } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {

@@ -7,7 +7,7 @@ import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { FontSize } from './../src/fontsize.js';
 import { FontSizeEditing } from './../src/fontsize/fontsizeediting.js';
 import { FontSizeUI } from './../src/fontsize/fontsizeui.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 describe( 'FontSize', () => {
 	let element, editor;

@@ -9,7 +9,7 @@ import {
 	AutocompleteView,
 	SearchTextView
 } from '../../src/index.js';
-import { Locale, Rect, global, keyCodes } from '@ckeditor/ckeditor5-utils';
+import { Locale, Rect, global, keyCodes } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'AutocompleteView', () => {
 	let view, filteredView;

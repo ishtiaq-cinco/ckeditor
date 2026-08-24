@@ -686,7 +686,7 @@ describe( 'Matcher', () => {
 		} );
 
 		// With current way the style reducers work, this test is passing when it shouldn't.
-		// The problem is described in https://github.com/ckeditor/ckeditor5/issues/10399.
+		// The problem is described in https://github.com/ssmckinney/ckeditor5/issues/10399.
 		// Until the proper fix is ready, this test should be skipped.
 		it.skip( 'should match element expanded styles when CSS shorthand is used', () => {
 			const pattern = {

@@ -7,8 +7,8 @@
  * @module restricted-editing/restrictededitingexceptionautocommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
-import { count } from '@ckeditor/ckeditor5-utils';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
+import { count } from '@ssmckinney/ckeditor5-utils';
 import type { RestrictedEditingExceptionCommand } from './restrictededitingexceptioncommand.js';
 import type { RestrictedEditingExceptionBlockCommand } from './restrictededitingexceptionblockcommand.js';
 

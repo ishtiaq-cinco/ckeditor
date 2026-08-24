@@ -7,7 +7,7 @@
  * @module table/utils/table-properties
  */
 
-import type { BoxStyleSides } from '@ckeditor/ckeditor5-engine';
+import type { BoxStyleSides } from '@ssmckinney/ckeditor5-engine';
 import { isObject } from 'es-toolkit/compat';
 
 /**
@@ -172,7 +172,7 @@ export function getNormalizedDefaultTableProperties(
 ): NormalizedDefaultProperties {
 	return getNormalizedDefaultProperties( {
 		// It adds support for border none in the table element, keep it in sync with the content styles
-		// See more: https://github.com/ckeditor/ckeditor5/issues/6841#issuecomment-1959195608
+		// See more: https://github.com/ssmckinney/ckeditor5/issues/6841#issuecomment-1959195608
 		borderStyle: 'double',
 		borderColor: 'hsl(0, 0%, 70%)',
 		borderWidth: '1px',
@@ -193,7 +193,7 @@ export function getNormalizedDefaultCellProperties(
 ): NormalizedDefaultProperties {
 	return getNormalizedDefaultProperties( {
 		// It adds support for border none in the table element, keep it in sync with the content styles
-		// See more: https://github.com/ckeditor/ckeditor5/issues/6841#issuecomment-1959195608
+		// See more: https://github.com/ssmckinney/ckeditor5/issues/6841#issuecomment-1959195608
 		borderStyle: 'solid',
 		borderColor: 'hsl(0, 0%, 75%)',
 		borderWidth: '1px',

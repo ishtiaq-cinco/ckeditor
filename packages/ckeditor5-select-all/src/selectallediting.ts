@@ -7,10 +7,10 @@
  * @module select-all/selectallediting
  */
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { getCode, parseKeystroke } from '@ckeditor/ckeditor5-utils';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { getCode, parseKeystroke } from '@ssmckinney/ckeditor5-utils';
 import { SelectAllCommand } from './selectallcommand.js';
-import type { ViewDocumentKeyDownEvent } from '@ckeditor/ckeditor5-engine';
+import type { ViewDocumentKeyDownEvent } from '@ssmckinney/ckeditor5-engine';
 
 const SELECT_ALL_KEYSTROKE = /* #__PURE__ */ parseKeystroke( 'Ctrl+A' );
 

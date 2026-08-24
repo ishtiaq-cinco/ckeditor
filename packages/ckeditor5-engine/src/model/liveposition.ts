@@ -15,7 +15,7 @@ import { type ModelItem } from './item.js';
 import { type Operation } from './operation/operation.js';
 import { type ModelRootElement } from './rootelement.js';
 
-import { CKEditorError, EmitterMixin, type EmitterMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, EmitterMixin, type EmitterMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 
 const ModelLivePositionBase: EmitterMixinConstructor<typeof ModelPosition> = /* #__PURE__ */ EmitterMixin( ModelPosition );
 
@@ -114,7 +114,7 @@ export class ModelLivePosition extends ModelLivePositionBase {
 // Proper overload would interfere with that.
 ModelLivePosition.prototype.is = function( type: string ): boolean {
 	return type === 'livePosition' || type === 'model:livePosition' ||
-		// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ckeditor/ckeditor5/issues/6529.
+		// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ssmckinney/ckeditor5/issues/6529.
 		type == 'position' || type === 'model:position';
 } as any;
 

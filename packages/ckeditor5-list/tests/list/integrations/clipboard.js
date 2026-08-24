@@ -9,17 +9,17 @@ import { ListEditing } from '../../../src/list/listediting.js';
 import { isListItemBlock } from '../../../src/list/utils/model.js';
 import { modelList } from '../_utils/utils.js';
 
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { ClipboardPipeline, PastePlainText } from '@ckeditor/ckeditor5-clipboard';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ImageBlockEditing, ImageInlineEditing } from '@ckeditor/ckeditor5-image';
-import { Widget } from '@ckeditor/ckeditor5-widget';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { ClipboardPipeline, PastePlainText } from '@ssmckinney/ckeditor5-clipboard';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ImageBlockEditing, ImageInlineEditing } from '@ssmckinney/ckeditor5-image';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import {
 	_getModelData,
 	_parseModel,
@@ -28,7 +28,7 @@ import {
 	_parseView,
 	_stringifyView,
 	ModelLiveRange
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { stubUid } from '../_utils/uid.js';
 
@@ -122,7 +122,7 @@ describe( 'ListEditing integrations: clipboard copy & paste', () => {
 		} );
 
 		describe( 'UX enhancements', () => {
-			// https://github.com/ckeditor/ckeditor5/issues/11608.
+			// https://github.com/ssmckinney/ckeditor5/issues/11608.
 			describe( 'stripping list when a content of a single block was selected', () => {
 				// Note: this allows the heuristics in ImageInlineEditing to kick in.
 				it( 'should return an object stripped of list attributes, if that object was selected as a first list item block', () => {
@@ -431,7 +431,7 @@ describe( 'ListEditing integrations: clipboard copy & paste', () => {
 			);
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/19994
+		// https://github.com/ssmckinney/ckeditor5/issues/19994
 		it( 'should not apply list attributes to text nodes even if schema allows all attributes on $text', () => {
 			model.schema.addAttributeCheck( context => {
 				if ( context.endsWith( '$text' ) ) {
@@ -456,7 +456,7 @@ describe( 'ListEditing integrations: clipboard copy & paste', () => {
 			);
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/19994
+		// https://github.com/ssmckinney/ckeditor5/issues/19994
 		it( 'should not apply list attributes to an inline object even if schema allows all attributes on it', () => {
 			model.schema.addAttributeCheck( context => {
 				if ( context.endsWith( '$text' ) ) {
@@ -483,7 +483,7 @@ describe( 'ListEditing integrations: clipboard copy & paste', () => {
 			);
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/19994
+		// https://github.com/ssmckinney/ckeditor5/issues/19994
 		it( 'should not apply list attributes to text and inline nodes when schema allows all attributes', () => {
 			model.schema.addAttributeCheck( () => true );
 

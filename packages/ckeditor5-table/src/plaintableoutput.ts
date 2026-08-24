@@ -7,8 +7,8 @@
  * @module table/plaintableoutput
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import type { UpcastElementEvent } from '@ckeditor/ckeditor5-engine';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import type { UpcastElementEvent } from '@ssmckinney/ckeditor5-engine';
 
 import { Table } from './table.js';
 
@@ -50,7 +50,7 @@ export class PlainTableOutput extends Plugin {
 			dispatcher.on<UpcastElementEvent>( 'element:table', ( evt, data, conversionApi ) => {
 				// It's not necessary to upcast the `table` class. This class was only added in data downcast
 				// to center a plain table in the editor output.
-				// See: https://github.com/ckeditor/ckeditor5/issues/17888.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/17888.
 				conversionApi.consumable.consume( data.viewItem, { classes: 'table' } );
 			} );
 		} );

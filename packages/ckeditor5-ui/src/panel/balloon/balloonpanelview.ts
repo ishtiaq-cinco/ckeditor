@@ -24,7 +24,7 @@ import {
 	type DomOptimalPositionOptions,
 	Rect,
 	type PositioningFunction
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { isElement } from 'es-toolkit/compat';
 import '../../../theme/components/panel/balloonpanel.css';

@@ -67,7 +67,7 @@ import { type ModelWriter } from '../model/writer.js';
 import { type ModelNode } from '../model/node.js';
 import { type ModelElement } from '../model/element.js';
 
-import { toMap, type EventInfo } from '@ckeditor/ckeditor5-utils';
+import { toMap, type EventInfo } from '@ssmckinney/ckeditor5-utils';
 
 import { isPlainObject } from 'es-toolkit/compat';
 

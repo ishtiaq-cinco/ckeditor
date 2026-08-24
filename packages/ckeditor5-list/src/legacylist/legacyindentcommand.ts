@@ -7,9 +7,9 @@
  * @module list/legacylist/legacyindentcommand
  */
 
-import type { ModelElement } from '@ckeditor/ckeditor5-engine';
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
-import { first } from '@ckeditor/ckeditor5-utils';
+import type { ModelElement } from '@ssmckinney/ckeditor5-engine';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
+import { first } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * The list indent command. It is used by the {@link module:list/legacylist~LegacyList legacy list feature}.

@@ -3,16 +3,16 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { CodeBlockEditing } from '@ckeditor/ckeditor5-code-block';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { ModelElement, _setModelData, _getModelData, _stringifyModel, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { env } from '@ckeditor/ckeditor5-utils';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { CodeBlockEditing } from '@ssmckinney/ckeditor5-code-block';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ModelElement, _setModelData, _getModelData, _stringifyModel, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { env } from '@ssmckinney/ckeditor5-utils';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 import { stubUid } from '../list/_utils/uid.js';
@@ -358,7 +358,7 @@ describe( 'ListItemBoldIntegration', () => {
 			);
 		} );
 
-		// See: https://github.com/ckeditor/ckeditor5/issues/18790.
+		// See: https://github.com/ssmckinney/ckeditor5/issues/18790.
 		it( 'should add dummy style for a Safari glitch (in editing pipeline only)', () => {
 			vi.spyOn( env, 'isSafari', 'get' ).mockReturnValue( true );
 

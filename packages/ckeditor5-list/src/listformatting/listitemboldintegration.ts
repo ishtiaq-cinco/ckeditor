@@ -7,8 +7,8 @@
  * @module list/listformatting/listitemboldintegration
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { env } from '@ckeditor/ckeditor5-utils';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { env } from '@ssmckinney/ckeditor5-utils';
 
 import { ListEditing } from '../list/listediting.js';
 import type { ListFormatting } from '../listformatting.js';
@@ -64,7 +64,7 @@ export class ListItemBoldIntegration extends Plugin {
 				if ( value ) {
 					writer.addClass( 'ck-list-marker-bold', viewElement );
 
-					// See: https://github.com/ckeditor/ckeditor5/issues/18790.
+					// See: https://github.com/ssmckinney/ckeditor5/issues/18790.
 					if ( env.isSafari && !( options && options.dataPipeline ) ) {
 						writer.setStyle( '--ck-content-list-marker-dummy-bold', '0', viewElement );
 					}

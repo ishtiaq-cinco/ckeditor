@@ -7,14 +7,14 @@
  * @module essentials/essentials
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { Enter, ShiftEnter } from '@ckeditor/ckeditor5-enter';
-import { SelectAll } from '@ckeditor/ckeditor5-select-all';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { AccessibilityHelp } from '@ckeditor/ckeditor5-ui';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { Enter, ShiftEnter } from '@ssmckinney/ckeditor5-enter';
+import { SelectAll } from '@ssmckinney/ckeditor5-select-all';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { AccessibilityHelp } from '@ssmckinney/ckeditor5-ui';
 
 /**
  * A plugin including all essential editing features. It represents a set of features that enables similar functionalities

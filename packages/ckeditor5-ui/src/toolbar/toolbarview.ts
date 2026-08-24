@@ -33,7 +33,7 @@ import {
 	type CollectionRemoveEvent,
 	type Locale,
 	type ObservableChangeEvent
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 import {
 	IconAlignLeft,
 	IconBold,
@@ -44,8 +44,8 @@ import {
 	IconThreeVerticalDots,
 	IconPilcrow,
 	IconDragIndicator
-} from '@ckeditor/ckeditor5-icons';
-import type { ToolbarConfig, ToolbarConfigItem } from '@ckeditor/ckeditor5-core';
+} from '@ssmckinney/ckeditor5-icons';
+import type { ToolbarConfig, ToolbarConfigItem } from '@ssmckinney/ckeditor5-core';
 
 import { isObject } from 'es-toolkit/compat';
 
@@ -431,7 +431,7 @@ export class ToolbarView extends View implements DropdownPanelFocusable {
 
 				if ( item === '-' ) {
 					// The toolbar line breaks must not be rendered when toolbar grouping is enabled.
-					// (https://github.com/ckeditor/ckeditor5/issues/8582)
+					// (https://github.com/ssmckinney/ckeditor5/issues/8582)
 					if ( this.options.shouldGroupWhenFull ) {
 						/**
 						 * The toolbar multiline breaks (`-` items) only work when the automatic button grouping
@@ -945,7 +945,7 @@ class DynamicGrouping implements ToolbarBehavior {
 		// and that would cause all items to be grouped. Instead, queue the grouping so it runs next time
 		// the toolbar is visible (the next ResizeObserver callback execution). This is handy because
 		// the grouping could be caused by increasing the #maxWidth when the toolbar was invisible and the next
-		// time it shows up, some items could actually be ungrouped (https://github.com/ckeditor/ckeditor5/issues/6575).
+		// time it shows up, some items could actually be ungrouped (https://github.com/ssmckinney/ckeditor5/issues/6575).
 		if ( !isVisible( this.viewElement ) ) {
 			this.shouldUpdateGroupingOnNextResize = true;
 
@@ -1102,7 +1102,7 @@ class DynamicGrouping implements ToolbarBehavior {
 		dropdown.class = 'ck-toolbar__grouped-dropdown';
 
 		// Make sure the dropdown never sticks out to the left/right. It should be under the main toolbar.
-		// (https://github.com/ckeditor/ckeditor5/issues/5608)
+		// (https://github.com/ssmckinney/ckeditor5/issues/5608)
 		dropdown.panelPosition = locale.uiLanguageDirection === 'ltr' ? 'sw' : 'se';
 
 		addToolbarToDropdown( dropdown, this.groupedItems );

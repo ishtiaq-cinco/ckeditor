@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { normalizeHtml } from '@ckeditor/ckeditor5-utils/tests/_utils/normalizehtml.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { normalizeHtml } from '@ssmckinney/ckeditor5-utils/tests/_utils/normalizehtml.js';
 import {
 	ImageCaptionEditing,
 	ImageBlockEditing,
@@ -15,7 +15,7 @@ import {
 	ImageEditing,
 	ImageUtils,
 	PictureEditing
-} from '@ckeditor/ckeditor5-image';
+} from '@ssmckinney/ckeditor5-image';
 
 import { LinkImageEditing } from '../src/linkimageediting.js';
 import { LinkEditing } from '../src/linkediting.js';
@@ -861,7 +861,7 @@ describe( 'LinkImageEditing', () => {
 					} );
 			} );
 
-			// See: https://github.com/ckeditor/ckeditor5/issues/19024.
+			// See: https://github.com/ssmckinney/ckeditor5/issues/19024.
 			it( 'should convert a link with manual decorator and the caption element', async () => {
 				const editor = await VirtualTestEditor.create( {
 					plugins: [ Paragraph, ImageBlockEditing, LinkImageEditing, ImageCaptionEditing ],
@@ -1304,7 +1304,7 @@ describe( 'LinkImageEditing', () => {
 			} );
 
 			it( 'should upcast the decorators when linked image (figure > a > img)', () => {
-				// (https://github.com/ckeditor/ckeditor5/issues/7975)
+				// (https://github.com/ssmckinney/ckeditor5/issues/7975)
 				editor.setData(
 					'<figure class="image">' +
 						'<a class="gallery highlighted" href="https://cksource.com" target="_blank" ' +
@@ -1338,7 +1338,7 @@ describe( 'LinkImageEditing', () => {
 			} );
 
 			it( 'should upcast the decorators when linked image (a > img)', () => {
-				// (https://github.com/ckeditor/ckeditor5/issues/7975)
+				// (https://github.com/ssmckinney/ckeditor5/issues/7975)
 				editor.setData(
 					'<a class="gallery highlighted" href="https://cksource.com" target="_blank" rel="noopener noreferrer"' +
 					'download="download" style="text-decoration:underline;">' +
@@ -1570,7 +1570,7 @@ describe( 'LinkImageEditing', () => {
 				);
 			} );
 
-			// See https://github.com/ckeditor/ckeditor5/issues/8401.
+			// See https://github.com/ssmckinney/ckeditor5/issues/8401.
 			it( 'should downcast without error if the image already has no link', () => {
 				_setModelData( model,
 					'[<imageBlock alt="bar" src="assets/sample.png"></imageBlock>]'
@@ -1601,7 +1601,7 @@ describe( 'LinkImageEditing', () => {
 				);
 			} );
 
-			// See https://github.com/ckeditor/ckeditor5/issues/8401.
+			// See https://github.com/ssmckinney/ckeditor5/issues/8401.
 			describe( 'order of model updates', () => {
 				it( 'should not affect converters - base link attributes first', () => {
 					_setModelData( model,

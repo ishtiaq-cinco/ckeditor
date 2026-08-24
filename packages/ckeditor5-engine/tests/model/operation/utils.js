@@ -13,7 +13,7 @@ import { ModelPosition } from '../../../src/model/position.js';
 import { ModelRange } from '../../../src/model/range.js';
 import * as utils from '../../../src/model/operation/utils.js';
 import { _getModelData } from '../../../src/dev-utils/model.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 let model, doc, root;
 

@@ -5,14 +5,14 @@
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { FindAndReplaceEditing } from '../src/findandreplaceediting.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
 
-import { uid, Collection } from '@ckeditor/ckeditor5-utils';
+import { uid, Collection } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'ReplaceAllCommand', () => {
 	let editor, model, command;

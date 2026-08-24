@@ -6,15 +6,15 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { Typing } from '../src/typing.js';
 import { DeleteCommand } from '../src/deletecommand.js';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { List } from '@ckeditor/ckeditor5-list';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Image, ImageCaption } from '@ckeditor/ckeditor5-image';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { List } from '@ssmckinney/ckeditor5-list';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Image, ImageCaption } from '@ssmckinney/ckeditor5-image';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'Delete integration', () => {
 	let editor, model;
@@ -205,7 +205,7 @@ describe( 'Delete integration', () => {
 		} );
 	} );
 
-	// See: https://github.com/ckeditor/ckeditor5/issues/1064
+	// See: https://github.com/ssmckinney/ckeditor5/issues/1064
 	it( 'should remove entire word in a paragraph that contains the soft break', () => {
 		_setModelData( model, '<paragraph>Foo.<softBreak></softBreak>Bar[]</paragraph>' );
 

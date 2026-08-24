@@ -27,7 +27,7 @@ import type {
 	UnderlineUI
 } from './index.js';
 
-declare module '@ckeditor/ckeditor5-core' {
+declare module '@ssmckinney/ckeditor5-core' {
 	interface PluginsMap {
 		[ Superscript.pluginName ]: Superscript;
 		[ Subscript.pluginName ]: Subscript;

@@ -5,7 +5,7 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { Token } from '../../src/token/token.js';
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'Token', () => {
 	let requests;
@@ -301,7 +301,7 @@ describe( 'Token', () => {
 			expect( requests.length ).toBe( 2 );
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/17462.
+		// See https://github.com/ssmckinney/ckeditor5/issues/17462.
 		it( 'should stop refreshing the token when editor destroyed before token request rejects', async () => {
 			const consoleWarnStub = vi.spyOn( console, 'warn' ).mockReturnValue( undefined );
 
@@ -341,7 +341,7 @@ describe( 'Token', () => {
 			expect( requests.length ).toBe( 1 );
 		} );
 
-		// Related to https://github.com/ckeditor/ckeditor5/issues/17462.
+		// Related to https://github.com/ssmckinney/ckeditor5/issues/17462.
 		it( 'should stop refreshing the token when editor destroyed before token request resolves', async () => {
 			const token = new Token( 'http://token-endpoint', { autoRefresh: true } );
 			const registerRefreshTokenTimeoutSpy = vi.spyOn( token, '_registerRefreshTokenTimeout' );

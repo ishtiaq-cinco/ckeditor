@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { MediaEmbed } from '@ssmckinney/ckeditor5-media-embed';
 import { GeneralHtmlSupport } from '../../src/generalhtmlsupport.js';
 import { getModelDataWithAttributes } from '../_utils/utils.js';
 import { range } from 'es-toolkit/compat';
@@ -917,7 +917,7 @@ describe( 'MediaEmbedElementSupport', () => {
 		// 	} );
 
 		// 	// TODO: this should pass, but oembed attributes are not applied in the editing view.
-		// 	// Should be fixed by https://github.com/ckeditor/ckeditor5/issues/11532
+		// 	// Should be fixed by https://github.com/ssmckinney/ckeditor5/issues/11532
 		// 	// expect(_getViewData( editor.editing.view, { withoutSelection: true } ) ).toBe(
 		// 	// 	'<figure class="ck-widget ck-widget_selected media foobar" contenteditable="false"' +
 		// 	// 			' style="font-size:12px;text-align:center;" data-figure="bar">' +
@@ -1432,7 +1432,7 @@ describe( 'MediaEmbedElementSupport', () => {
 		// 	} );
 
 		// 	// TODO: this should pass, but oembed attributes are not applied in the editing view.
-		// 	// Should be fixed by https://github.com/ckeditor/ckeditor5/issues/11532
+		// 	// Should be fixed by https://github.com/ssmckinney/ckeditor5/issues/11532
 		// 	// expect(_getViewData( editor.editing.view, { withoutSelection: true } ) ).toBe(
 		// 	// 	'<figure class="ck-widget ck-widget_selected foobar" contenteditable="false"' +
 		// 	// 			' style="font-size:12px;text-align:center;" data-figure="bar">' +

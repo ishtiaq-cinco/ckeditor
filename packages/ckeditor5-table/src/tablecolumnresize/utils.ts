@@ -7,9 +7,9 @@
  * @module table/tablecolumnresize/utils
  */
 
-import type { Editor } from '@ckeditor/ckeditor5-core';
-import type { ModelElement, Model, ViewElement, ViewNode, ModelWriter } from '@ckeditor/ckeditor5-engine';
-import { global } from '@ckeditor/ckeditor5-utils';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
+import type { ModelElement, Model, ViewElement, ViewNode, ModelWriter } from '@ssmckinney/ckeditor5-engine';
+import { global } from '@ssmckinney/ckeditor5-utils';
 import { type TableUtils } from '../tableutils.js';
 import {
 	COLUMN_WIDTH_PRECISION,
@@ -46,7 +46,7 @@ export function getChangedResizedTables( model: Model ): Set<ModelElement> {
 
 			case 'remove':
 				// If the whole table is removed, there's no need to update its column widths.
-				// See https://github.com/ckeditor/ckeditor5/issues/12201.
+				// See https://github.com/ssmckinney/ckeditor5/issues/12201.
 				referencePosition = [ 'tableRow', 'tableCell' ].includes( change.name ) ?
 					change.position :
 					null;
@@ -110,7 +110,7 @@ export function getColumnMinWidthAsPercentage( modelTable: ModelElement, editor:
  * @returns The width of the table in pixels.
  */
 export function getTableWidthInPixels( modelTable: ModelElement, editor: Editor ): number {
-	// It is possible for a table to not have a <tbody> element - see https://github.com/ckeditor/ckeditor5/issues/11878.
+	// It is possible for a table to not have a <tbody> element - see https://github.com/ssmckinney/ckeditor5/issues/11878.
 	const referenceElement =
 		getChildrenViewElement( modelTable, 'tbody', editor ) ||
 		getChildrenViewElement( modelTable, 'thead', editor ) ||
@@ -148,7 +148,7 @@ export function getElementWidthInPixels( domElement: HTMLElement ): number {
 	const styles = global.window.getComputedStyle( domElement );
 
 	// In the 'border-box' box sizing algorithm, the element's width
-	// already includes the padding and border width (https://github.com/ckeditor/ckeditor5/issues/12335).
+	// already includes the padding and border width (https://github.com/ssmckinney/ckeditor5/issues/12335).
 	if ( styles.boxSizing === 'border-box' ) {
 		return parseFloat( styles.width ) -
 			parseFloat( styles.paddingLeft ) -
@@ -329,7 +329,7 @@ export function getDomCellOuterWidth( domCell: HTMLElement ): number {
 	const styles = global.window.getComputedStyle( domCell );
 
 	// In the 'border-box' box sizing algorithm, the element's width
-	// already includes the padding and border width (https://github.com/ckeditor/ckeditor5/issues/12335).
+	// already includes the padding and border width (https://github.com/ssmckinney/ckeditor5/issues/12335).
 	if ( styles.boxSizing === 'border-box' ) {
 		return parseInt( styles.width );
 	} else {
@@ -441,7 +441,7 @@ export function translateColSpanAttribute( element: ModelElement, writer: ModelW
 
 		// Translate the `colSpan` model attribute on to the proper number of column widths
 		// and remove it from the element.
-		// See https://github.com/ckeditor/ckeditor5/issues/14521#issuecomment-1662102889 for more details.
+		// See https://github.com/ssmckinney/ckeditor5/issues/14521#issuecomment-1662102889 for more details.
 		for ( let i = 0; i < colSpan; i++ ) {
 			acc.push( columnWidth );
 		}

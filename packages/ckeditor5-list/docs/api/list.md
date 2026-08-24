@@ -19,7 +19,7 @@ See the {@link features/lists lists} and {@link features/todo-lists to-do list f
 This package is part of our open-source aggregate package.
 
 ```bash
-npm install ckeditor5
+npm install @ssmckinney/ckeditor5
 ```
 
 ## Contribute
@@ -28,7 +28,7 @@ The source code of this package is available on GitHub at [https://github.com/ck
 
 ## External links
 
-* [`@ckeditor/ckeditor5-list` on npm](https://www.npmjs.com/package/@ckeditor/ckeditor5-list)
+* [`@ssmckinney/ckeditor5-list` on npm](https://www.npmjs.com/package/@ssmckinney/ckeditor5-list)
 * [`ckeditor/ckeditor5-list` on GitHub](https://github.com/ckeditor/ckeditor5/tree/master/packages/ckeditor5-list)
-* [Issue tracker](https://github.com/ckeditor/ckeditor5/issues)
+* [Issue tracker](https://github.com/ssmckinney/ckeditor5/issues)
 * [Changelog](https://github.com/ckeditor/ckeditor5/blob/master/CHANGELOG.md)

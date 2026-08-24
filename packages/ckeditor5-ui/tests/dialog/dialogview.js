@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { IconCancel } from '@ckeditor/ckeditor5-icons';
-import { FocusTracker, KeystrokeHandler, Locale, global, keyCodes } from '@ckeditor/ckeditor5-utils';
+import { IconCancel } from '@ssmckinney/ckeditor5-icons';
+import { FocusTracker, KeystrokeHandler, Locale, global, keyCodes } from '@ssmckinney/ckeditor5-utils';
 import { ButtonView, FormHeaderView, View, ViewCollection } from '../../src/index.js';
 import { DialogView, DialogViewPosition } from '../../src/dialog/dialogview.js';
 

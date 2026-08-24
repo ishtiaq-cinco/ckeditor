@@ -5,8 +5,8 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { EmojiGridView } from '../../src/ui/emojigridview.js';
-import { ViewCollection, ButtonView } from '@ckeditor/ckeditor5-ui';
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
+import { ViewCollection, ButtonView } from '@ssmckinney/ckeditor5-ui';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'EmojiGridView', () => {
 	let view, locale, emojiCategories;

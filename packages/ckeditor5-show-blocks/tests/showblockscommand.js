@@ -4,13 +4,13 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { global } from '@ckeditor/ckeditor5-utils';
-import { Command } from '@ckeditor/ckeditor5-core';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { MultiRootEditor } from '@ckeditor/ckeditor5-editor-multi-root';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
+import { global } from '@ssmckinney/ckeditor5-utils';
+import { Command } from '@ssmckinney/ckeditor5-core';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { MultiRootEditor } from '@ssmckinney/ckeditor5-editor-multi-root';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
 
 import { ShowBlocksCommand } from '../src/showblockscommand.js';
 

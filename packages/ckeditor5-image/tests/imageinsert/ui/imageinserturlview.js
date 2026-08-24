@@ -5,11 +5,11 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { LabeledFieldView, InputTextView } from '@ckeditor/ckeditor5-ui';
+import { LabeledFieldView, InputTextView } from '@ssmckinney/ckeditor5-ui';
 
 import { ImageInsertUrlView } from '../../../src/imageinsert/ui/imageinserturlview.js';
 
-import { KeystrokeHandler } from '@ckeditor/ckeditor5-utils';
+import { KeystrokeHandler } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'ImageInsertUrlView', () => {
 	let view;

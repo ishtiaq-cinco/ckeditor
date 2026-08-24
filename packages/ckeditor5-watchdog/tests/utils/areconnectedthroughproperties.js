@@ -5,7 +5,7 @@
 
 import { describe, it, expect, afterEach } from 'vitest';
 import { areConnectedThroughProperties } from '../../src/utils/areconnectedthroughproperties.js';
-import { Editor } from '@ckeditor/ckeditor5-core';
+import { Editor } from '@ssmckinney/ckeditor5-core';
 
 describe( 'areConnectedThroughProperties()', () => {
 	it( 'should return `false` if one of the value is primitive #1', () => {

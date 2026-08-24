@@ -215,7 +215,7 @@
 			}
 			/*
 			* This value should match with the default margins of the block elements (like .media, .image or .table)
-			* to avoid a content jumping when the fake selection container shows up (See https://github.com/ckeditor/ckeditor5/issues/9825).
+			* to avoid a content jumping when the fake selection container shows up (See https://github.com/ssmckinney/ckeditor5/issues/9825).
 			*/
 			&:last-child,
 			/* Fallback for hidden fake selection div */

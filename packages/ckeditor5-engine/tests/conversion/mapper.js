@@ -537,7 +537,7 @@ describe( 'Mapper', () => {
 
 			// Below tests whether the cache is correctly built and invalidated in a particular scenario that involves nested attribute
 			// elements and cached model position after an attribute element. It was discovered when fixing
-			// https://github.com/ckeditor/ckeditor5/issues/18678, but this is not the case described in the issue.
+			// https://github.com/ssmckinney/ckeditor5/issues/18678, but this is not the case described in the issue.
 			it( 'should correctly invalidate cache and map position if nested attribute was earlier partially invalidated', () => {
 				// We need to create a different model and view for this sample as the one used in other tests cannot reproduce this.
 				//

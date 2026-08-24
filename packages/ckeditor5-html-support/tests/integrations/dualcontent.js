@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { ShiftEnter } from '@ckeditor/ckeditor5-enter';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
-import { ImageInlineEditing } from '@ckeditor/ckeditor5-image';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { ShiftEnter } from '@ssmckinney/ckeditor5-enter';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
+import { ImageInlineEditing } from '@ssmckinney/ckeditor5-image';
 import { GeneralHtmlSupport } from '../../src/generalhtmlsupport.js';
 import { getModelDataWithAttributes } from '../_utils/utils.js';
-import { _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { DualContentModelElementSupport } from '../../src/integrations/dualcontent.js';
 
 describe( 'DualContentModelElementSupport', () => {
@@ -324,7 +324,7 @@ describe( 'DualContentModelElementSupport', () => {
 			);
 		} );
 
-		// See: https://github.com/ckeditor/ckeditor5/issues/19709.
+		// See: https://github.com/ssmckinney/ckeditor5/issues/19709.
 		it( 'should upcast description list div elements as well as inline content in div in dd', () => {
 			allowAllEditor.setData(
 				'<dl>' +

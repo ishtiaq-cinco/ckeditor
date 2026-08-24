@@ -7,7 +7,7 @@
  * @module table/tablelayout/commands/tabletypecommand
  */
 
-import { Command } from '@ckeditor/ckeditor5-core';
+import { Command } from '@ssmckinney/ckeditor5-core';
 
 import { getSelectionAffectedTable } from '../../utils/common.js';
 import type { TableType } from '../../tableconfig.js';

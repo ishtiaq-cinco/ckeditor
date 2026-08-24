@@ -9,20 +9,20 @@ import { DragDrop } from '../src/dragdrop.js';
 import { DragDropTarget } from '../src/dragdroptarget.js';
 import { PastePlainText } from '../src/pasteplaintext.js';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Table } from '@ckeditor/ckeditor5-table';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
-import { ShiftEnter } from '@ckeditor/ckeditor5-enter';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
-import { Image, ImageCaption } from '@ckeditor/ckeditor5-image';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Table } from '@ssmckinney/ckeditor5-table';
+import { HorizontalLine } from '@ssmckinney/ckeditor5-horizontal-line';
+import { ShiftEnter } from '@ssmckinney/ckeditor5-enter';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
+import { Image, ImageCaption } from '@ssmckinney/ckeditor5-image';
 
-import { ModelLiveRange, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { ModelLiveRange, _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { CustomTitle } from './utils/customtitleplugin.js';
-import { toWidget, toWidgetEditable } from '@ckeditor/ckeditor5-widget';
+import { toWidget, toWidgetEditable } from '@ssmckinney/ckeditor5-widget';
 
 describe( 'Drag and Drop target', () => {
 	let editorElement, editor, model, view, viewDocument, root, mapper, domConverter, dragDropTarget;

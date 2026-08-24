@@ -7,10 +7,10 @@ import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
 import { AlignmentCommand } from '../src/alignmentcommand.js';
 
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
 
-import { Command } from '@ckeditor/ckeditor5-core';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { Command } from '@ssmckinney/ckeditor5-core';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
 
 describe( 'AlignmentCommand', () => {
 	let editor, model, command;

@@ -4,13 +4,13 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { global, keyCodes } from '@ckeditor/ckeditor5-utils';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { Undo } from '@ckeditor/ckeditor5-undo';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { global, keyCodes } from '@ssmckinney/ckeditor5-utils';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
 import { PasteFromMarkdownExperimental } from '../src/pastefrommarkdownexperimental.js';
 
 describe( 'PasteFromMarkdownExperimental', () => {

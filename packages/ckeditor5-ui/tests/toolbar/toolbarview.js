@@ -15,7 +15,7 @@ import {
 	Rect,
 	Locale,
 	ResizeObserver
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 import { ComponentFactory } from '../../src/componentfactory.js';
 import { FocusCycler } from '../../src/focuscycler.js';
 import { ViewCollection } from '../../src/viewcollection.js';
@@ -30,7 +30,7 @@ import {
 	IconPlus,
 	IconText,
 	IconThreeVerticalDots
-} from '@ckeditor/ckeditor5-icons';
+} from '@ssmckinney/ckeditor5-icons';
 
 describe( 'ToolbarView', () => {
 	let locale, view;
@@ -690,7 +690,7 @@ describe( 'ToolbarView', () => {
 			expect( consoleWarnStub.mock.calls[ 0 ][ 2 ] ).toBeTypeOf( 'string' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/8582
+		// https://github.com/ssmckinney/ckeditor5/issues/8582
 		it( 'does not render line separator when the button grouping option is enabled', () => {
 			// Catch warn to stop tests from failing in production mode.
 			vi.spyOn( console, 'warn' ).mockImplementation( () => {} );
@@ -1238,7 +1238,7 @@ describe( 'ToolbarView', () => {
 				expect( ungroupedItems.map( i => i ) ).toEqual( [ itemB, itemD ] );
 			} );
 
-			it( 'doesn\'t throw when removing the first of grouped items', () => { // (https://github.com/ckeditor/ckeditor5/issues/7655)
+			it( 'doesn\'t throw when removing the first of grouped items', () => { // (https://github.com/ssmckinney/ckeditor5/issues/7655)
 				const items = [ focusable(), focusable(), focusable(), focusable() ];
 				view.element.style.width = '200px';
 				view.items.addMany( items );
@@ -1622,7 +1622,7 @@ describe( 'ToolbarView', () => {
 					.toEqual( groupedItems.map( i => i ) );
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/5608
+			// https://github.com/ssmckinney/ckeditor5/issues/5608
 			it( 'has the proper position depending on the UI language direction (LTR UI)', () => {
 				const locale = new Locale( { uiLanguage: 'en' } );
 				const view = new ToolbarView( locale, { shouldGroupWhenFull: true } );
@@ -1633,7 +1633,7 @@ describe( 'ToolbarView', () => {
 				view.destroy();
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/5608
+			// https://github.com/ssmckinney/ckeditor5/issues/5608
 			it( 'has the proper position depending on the UI language direction (RTL UI)', () => {
 				const locale = new Locale( { uiLanguage: 'ar' } );
 				const view = new ToolbarView( locale, { shouldGroupWhenFull: true } );

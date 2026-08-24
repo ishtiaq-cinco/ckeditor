@@ -7,8 +7,8 @@
  * @module table/tableediting
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import type { ModelPositionOffset, ViewElement, DowncastSlotFilter } from '@ckeditor/ckeditor5-engine';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import type { ModelPositionOffset, ViewElement, DowncastSlotFilter } from '@ssmckinney/ckeditor5-engine';
 
 import { upcastTable, ensureParagraphInTableCell, skipEmptyTableRow, upcastTableFigure } from './converters/upcasttable.js';
 import {

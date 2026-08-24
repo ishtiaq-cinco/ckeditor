@@ -7,11 +7,11 @@
  * @module emoji/emojipicker
  */
 
-import { ButtonView, clickOutsideHandler, ContextualBalloon, Dialog, MenuBarMenuListItemButtonView } from '@ckeditor/ckeditor5-ui';
-import type { DomOptimalPositionOptions } from '@ckeditor/ckeditor5-utils';
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { IconEmoji } from '@ckeditor/ckeditor5-icons';
+import { ButtonView, clickOutsideHandler, ContextualBalloon, Dialog, MenuBarMenuListItemButtonView } from '@ssmckinney/ckeditor5-ui';
+import type { DomOptimalPositionOptions } from '@ssmckinney/ckeditor5-utils';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { IconEmoji } from '@ssmckinney/ckeditor5-icons';
 
 import { EmojiCommand } from './emojicommand.js';
 import { EmojiRepository } from './emojirepository.js';
@@ -133,7 +133,7 @@ export class EmojiPicker extends Plugin {
 	 */
 	public showUI( searchValue: string = '' ): void {
 		// Show visual selection on a text when the contextual balloon is displayed.
-		// See https://github.com/ckeditor/ckeditor5/issues/17654.
+		// See https://github.com/ssmckinney/ckeditor5/issues/17654.
 		this._showFakeVisualSelection();
 
 		if ( !this.emojiPickerView ) {
@@ -262,7 +262,7 @@ export class EmojiPicker extends Plugin {
 				// Focusing on the editable during a click outside the balloon panel might
 				// cause the selection to move to the beginning of the editable, so we avoid
 				// focusing on it during this action.
-				// See: https://github.com/ckeditor/ckeditor5/issues/18253
+				// See: https://github.com/ssmckinney/ckeditor5/issues/18253
 				this._hideUI( false );
 			},
 			activator: () => this.balloonPlugin.visibleView === emojiPickerFormView

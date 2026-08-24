@@ -4,13 +4,13 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { global } from '@ckeditor/ckeditor5-utils';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
+import { global } from '@ssmckinney/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
 import { EmojiRepository } from '../src/emojirepository.js';
 import { EmojiUtils } from '../src/emojiutils.js';
-import { generateLicenseKey } from '@ckeditor/ckeditor5-core/tests/_utils/generatelicensekey.js';
+import { generateLicenseKey } from '@ssmckinney/ckeditor5-core/tests/_utils/generatelicensekey.js';
 
 class EmojiUtilsMockVersion15 extends EmojiUtils {
 	getEmojiSupportedVersionByOs() {
@@ -103,7 +103,7 @@ describe( 'EmojiRepository', () => {
 
 			const cdnUrl = new URL( fetchStub.mock.calls[ 0 ][ 0 ] );
 
-			expect( cdnUrl.href ).toSatisfy( input => input.startsWith( 'https://cdn.ckeditor.com/ckeditor5/data/emoji/16/en.json' ) );
+			expect( cdnUrl.href ).toSatisfy( input => input.startsWith( 'https://cdn.ckeditor.com/@ssmckinney/ckeditor5/data/emoji/16/en.json' ) );
 			expect( cdnUrl.searchParams.has( 'editorVersion' ) ).toBe( true );
 
 			domElement.remove();
@@ -144,7 +144,7 @@ describe( 'EmojiRepository', () => {
 
 			const cdnUrl = new URL( fetchStub.mock.calls[ 0 ][ 0 ] );
 
-			expect( cdnUrl.href ).toSatisfy( input => input.startsWith( 'https://cdn.ckeditor.com/ckeditor5/data/emoji/16/en.json' ) );
+			expect( cdnUrl.href ).toSatisfy( input => input.startsWith( 'https://cdn.ckeditor.com/@ssmckinney/ckeditor5/data/emoji/16/en.json' ) );
 
 			const results = getCachedResults( editor.plugins.get( EmojiRepository ) );
 
@@ -187,8 +187,8 @@ describe( 'EmojiRepository', () => {
 			const cdnUrl1 = new URL( fetchStub.mock.calls[ 0 ][ 0 ] );
 			const cdnUrl2 = new URL( fetchStub.mock.calls[ 1 ][ 0 ] );
 
-			expect( cdnUrl1.href ).toSatisfy( input => input.startsWith( 'https://cdn.ckeditor.com/ckeditor5/data/emoji/16/en.json' ) );
-			expect( cdnUrl2.href ).toSatisfy( input => input.startsWith( 'https://cdn.ckeditor.com/ckeditor5/data/emoji/15/en.json' ) );
+			expect( cdnUrl1.href ).toSatisfy( input => input.startsWith( 'https://cdn.ckeditor.com/@ssmckinney/ckeditor5/data/emoji/16/en.json' ) );
+			expect( cdnUrl2.href ).toSatisfy( input => input.startsWith( 'https://cdn.ckeditor.com/@ssmckinney/ckeditor5/data/emoji/15/en.json' ) );
 
 			const resultsFor16 = getCachedResults( editor1.plugins.get( EmojiRepository ) );
 			const resultsFor15 = getCachedResults( editor2.plugins.get( EmojiRepository ) );
@@ -484,7 +484,7 @@ describe( 'EmojiRepository', () => {
 				resolve( new Response( response ) );
 			}, {
 				emoji: {
-					definitionsUrl: 'https://cdn.ckeditor.com/ckeditor5/data/emoji/16/en.json',
+					definitionsUrl: 'https://cdn.ckeditor.com/@ssmckinney/ckeditor5/data/emoji/16/en.json',
 					version: 15
 				}
 			} );
@@ -574,7 +574,7 @@ describe( 'EmojiRepository', () => {
 			}, {
 				licenseKey,
 				emoji: {
-					definitionsUrl: 'https://cdn.ckeditor.com/ckeditor5/data/emoji/16/en.json'
+					definitionsUrl: 'https://cdn.ckeditor.com/@ssmckinney/ckeditor5/data/emoji/16/en.json'
 				}
 			} );
 

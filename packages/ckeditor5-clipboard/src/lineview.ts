@@ -9,8 +9,8 @@
 
 /* istanbul ignore file -- @preserve */
 
-import { View } from '@ckeditor/ckeditor5-ui';
-import { toUnit } from '@ckeditor/ckeditor5-utils';
+import { View } from '@ssmckinney/ckeditor5-ui';
+import { toUnit } from '@ssmckinney/ckeditor5-utils';
 
 const toPx = /* #__PURE__ */ toUnit( 'px' );
 

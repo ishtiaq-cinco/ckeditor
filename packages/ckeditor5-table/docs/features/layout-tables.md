@@ -63,7 +63,7 @@ The CKEditor&nbsp;5 table feature offers several approaches and plugins responsi
 
 ## Demo
 
-Check the editor below to see the layout tables plugin in action. Use the layout table {@icon @ckeditor/ckeditor5-icons/theme/icons/table-layout.svg} toolbar button to insert a new layout table.
+Check the editor below to see the layout tables plugin in action. Use the layout table {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-layout.svg} toolbar button to insert a new layout table.
 
 {@snippet features/table-layout}
 
@@ -79,7 +79,7 @@ There are several table types available in CKEditor&nbsp;5. To switch between th
 
 When a table is selected, you can toggle its type in one of two ways:
 
-1. If the {@link module:table/tableproperties~TableProperties} plugin is enabled, the table properties button {@icon @ckeditor/ckeditor5-icons/theme/icons/table-properties.svg} will include a "Table type" dropdown option that allows switching between regular content tables and layout tables.
+1. If the {@link module:table/tableproperties~TableProperties} plugin is enabled, the table properties button {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-properties.svg} will include a "Table type" dropdown option that allows switching between regular content tables and layout tables.
 
 2. If the {@link module:table/tableproperties~TableProperties} plugin is not available, you can use the dedicated `tableType` toolbar button to change the table type.
 
@@ -95,7 +95,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, Table, TableLayout } from 'ckeditor5';
+import { ClassicEditor, Table, TableLayout } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -116,7 +116,7 @@ By default, external tables are loaded using internal heuristics. This can be co
 
 <code-switcher>
 ```js
-import { ClassicEditor, Table, TableLayout } from 'ckeditor5';
+import { ClassicEditor, Table, TableLayout } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -139,7 +139,7 @@ By default, the `<figure>` wrapper is preserved on content tables. To strip the 
 
 <code-switcher>
 ```js
-import { ClassicEditor, Table, TableLayout } from 'ckeditor5';
+import { ClassicEditor, Table, TableLayout } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -172,7 +172,7 @@ When the {@link module:table/tableproperties~TableProperties} plugin is availabl
 <!-- Uodate main toolbar to table dropdown eventually. In both. -->
 <code-switcher>
 ```js
-import { ClassicEditor, Table, TableLayout, TableProperties, TableToolbar } from 'ckeditor5';
+import { ClassicEditor, Table, TableLayout, TableProperties, TableToolbar } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -198,7 +198,7 @@ If the `TableProperties` plugin is not available, you can use the dedicated `tab
 
 <code-switcher>
 ```js
-import { ClassicEditor, Table, TableLayout, TableToolbar } from 'ckeditor5';
+import { ClassicEditor, Table, TableLayout, TableToolbar } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -220,7 +220,7 @@ You can configure the main editor toolbar to use the content and layout tables s
 
 <code-switcher>
 ```js
-import { ClassicEditor, Table, TableLayout } from 'ckeditor5';
+import { ClassicEditor, Table, TableLayout } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {

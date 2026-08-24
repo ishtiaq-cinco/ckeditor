@@ -4,12 +4,12 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { TableEditing } from '../../src/tableediting.js';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
 
 describe( 'Table cell paragraph post-fixer', () => {
 	let editor, model, root;

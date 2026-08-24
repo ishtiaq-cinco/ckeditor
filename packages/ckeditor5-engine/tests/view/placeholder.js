@@ -256,7 +256,7 @@ describe( 'placeholder', () => {
 			expect( viewRoot.getChild( 0 ).hasClass( 'ck-placeholder' ) ).toBe( false );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/9009
+		// https://github.com/ssmckinney/ckeditor5/issues/9009
 		it( 'should not set class when multiple children and some other element has content (isDirectHost=false)', () => {
 			_setViewData( view, '<p></p><p>foobar</p>' );
 			viewDocument.isFocused = false;
@@ -272,7 +272,7 @@ describe( 'placeholder', () => {
 			expect( viewRoot.getChild( 0 ).hasClass( 'ck-placeholder' ) ).toBe( false );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/9046
+		// https://github.com/ssmckinney/ckeditor5/issues/9046
 		it( 'should set attribute for the direct placeholder even if there is also indirect one (isDirectHost=false)', () => {
 			_setViewData( view, '<p></p>' );
 			viewDocument.isFocused = false;
@@ -361,7 +361,7 @@ describe( 'placeholder', () => {
 			expect( viewRoot.getChild( 0 ).hasClass( 'ck-placeholder' ) ).toBe( false );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/14354
+		// https://github.com/ssmckinney/ckeditor5/issues/14354
 		it( 'should remove placeholder when suitable child is wrapped with an attribute element (isDirectHost=false)', () => {
 			_setViewData( view, '<container:p></container:p>' );
 			viewDocument.isFocused = false;
@@ -399,7 +399,7 @@ describe( 'placeholder', () => {
 			expect( viewRoot.getChild( 0 ).getChild( 0 ).hasClass( 'ck-placeholder' ) ).toBe( false );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/18149
+		// https://github.com/ssmckinney/ckeditor5/issues/18149
 		it( 'should remove placeholder when suitable child is moved after suitable one (isDirectHost=false)', () => {
 			_setViewData( view, '<container:p></container:p>' );
 			viewDocument.isFocused = false;

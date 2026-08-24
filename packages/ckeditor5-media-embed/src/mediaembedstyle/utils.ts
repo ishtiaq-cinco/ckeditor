@@ -7,8 +7,8 @@
  * @module media-embed/mediaembedstyle/utils
  */
 
-import { logWarning } from '@ckeditor/ckeditor5-utils';
-import type { ToolbarConfigItem } from '@ckeditor/ckeditor5-core';
+import { logWarning } from '@ssmckinney/ckeditor5-utils';
+import type { ToolbarConfigItem } from '@ssmckinney/ckeditor5-core';
 import type {
 	MediaStyleConfig,
 	MediaStyleDropdownDefinition,

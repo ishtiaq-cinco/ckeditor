@@ -7,8 +7,8 @@
  * @module list/legacylist/legacylistutils
  */
 
-import type { ModelElement, Model, ModelPosition } from '@ckeditor/ckeditor5-engine';
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import type { ModelElement, Model, ModelPosition } from '@ssmckinney/ckeditor5-engine';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 
 import {
 	getListTypeFromListStyleType,

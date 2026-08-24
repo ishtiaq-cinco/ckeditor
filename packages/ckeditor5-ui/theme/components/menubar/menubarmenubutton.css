@@ -47,7 +47,7 @@
 
 			/*
 			 * Top-level buttons don't use ellipsis and overflow: hidden clips descenders.
-			 *  See https://github.com/ckeditor/ckeditor5/issues/17422.
+			 *  See https://github.com/ssmckinney/ckeditor5/issues/17422.
 			 */
 			overflow: visible;
 		}

@@ -5,16 +5,16 @@
 
 import { expect } from 'vitest';
 
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
 
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { ImageBlockEditing } from '@ckeditor/ckeditor5-image';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { ImageBlockEditing } from '@ssmckinney/ckeditor5-image';
 
 import { _getModelData, _parseModel } from '../../../../src/dev-utils/model.js';
 import { transformOperationSets } from '../../../../src/model/operation/transform.js';

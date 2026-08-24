@@ -10,7 +10,7 @@
 import { ParagraphCommand } from './paragraphcommand.js';
 import { InsertParagraphCommand } from './insertparagraphcommand.js';
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 
 /**
  * The paragraph feature for the editor.

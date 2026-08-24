@@ -7,14 +7,14 @@
  * @module ui/badge/badge
  */
 
-import type { Editor } from '@ckeditor/ckeditor5-core';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
 
 import {
 	Rect,
 	DomEmitterMixin,
 	type DomOptimalPositionOptions,
 	type DomEmitterMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { type View } from '../view.js';
 import { BalloonPanelView } from '../panel/balloon/balloonpanelview.js';

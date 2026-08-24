@@ -7,7 +7,7 @@
  * @module core/editor/utils/securesourceelement
  */
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 import type { Editor, EditorDestroyEvent } from '../editor.js';
 

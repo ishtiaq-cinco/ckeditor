@@ -7,7 +7,7 @@
  * @module table/commands/splitcellcommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
 import { type TableUtils } from '../tableutils.js';
 
 /**

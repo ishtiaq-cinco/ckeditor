@@ -5,10 +5,10 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { ContextWatchdog } from '../src/contextwatchdog.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Context } from '@ckeditor/ckeditor5-core';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Context } from '@ssmckinney/ckeditor5-core';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'ContextWatchdog', () => {
 	let element1, element2;

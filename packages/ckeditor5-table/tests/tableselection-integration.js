@@ -4,21 +4,21 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Delete, Input } from '@ckeditor/ckeditor5-typing';
-import { Clipboard, ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Delete, Input } from '@ssmckinney/ckeditor5-typing';
+import { Clipboard, ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { HorizontalLine } from '@ssmckinney/ckeditor5-horizontal-line';
 
 import { TableEditing } from '../src/tableediting.js';
 import { TableSelection } from '../src/tableselection.js';
 import { TableClipboard } from '../src/tableclipboard.js';
 
-import { _getModelData, _setModelData, ViewDocumentDomEventData } from '@ckeditor/ckeditor5-engine';
+import { _getModelData, _setModelData, ViewDocumentDomEventData } from '@ssmckinney/ckeditor5-engine';
 
 import { assertSelectedCells, modelTable } from './_utils/utils.js';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
 
 describe( 'TableSelection - integration', () => {
 	let editor, model, tableSelection, modelRoot, element, viewDocument;
@@ -223,7 +223,7 @@ describe( 'TableSelection - integration', () => {
 			);
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/7659.
+		// https://github.com/ssmckinney/ckeditor5/issues/7659.
 		// The fix is in the `DocumentSelection` class but this test is here to make sure that the fix works
 		// and that the behavior won't change in the future.
 		it( 'should not fix selection if not all ranges were removed', () => {

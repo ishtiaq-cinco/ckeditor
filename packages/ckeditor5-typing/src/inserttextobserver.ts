@@ -7,7 +7,7 @@
  * @module typing/inserttextobserver
  */
 
-import { env, EventInfo } from '@ckeditor/ckeditor5-utils';
+import { env, EventInfo } from '@ssmckinney/ckeditor5-utils';
 
 import {
 	ViewDocumentDomEventData,
@@ -18,9 +18,9 @@ import {
 	type ViewDocumentInputEvent,
 	type ViewDocumentSelection,
 	type ViewSelection
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-// @if CK_DEBUG_TYPING // import { _buildLogMessage } from '@ckeditor/ckeditor5-engine/src/dev-utils/utils.js';
+// @if CK_DEBUG_TYPING // import { _buildLogMessage } from '@ssmckinney/ckeditor5-engine/src/dev-utils/utils.js';
 
 const TYPING_INPUT_TYPES = [
 	// For collapsed range:
@@ -90,7 +90,7 @@ export class InsertTextObserver extends Observer {
 			} ) );
 
 			// Stop the beforeinput event if `delete` event was stopped.
-			// https://github.com/ckeditor/ckeditor5/issues/753
+			// https://github.com/ssmckinney/ckeditor5/issues/753
 			if ( eventInfo.stop.called ) {
 				evt.stop();
 			}

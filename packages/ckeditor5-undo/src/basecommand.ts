@@ -7,7 +7,7 @@
  * @module undo/basecommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
 
 import {
 	transformOperationSets,
@@ -16,7 +16,7 @@ import {
 	type DataControllerSetEvent,
 	type ModelRange,
 	NoOperation
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 /**
  * Base class for the undo feature commands: {@link module:undo/undocommand~UndoCommand} and {@link module:undo/redocommand~RedoCommand}.

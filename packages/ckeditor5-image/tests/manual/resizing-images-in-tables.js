@@ -3,13 +3,13 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 import { ImageResize } from '../../src/imageresize.js';
-import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
+import { EasyImage } from '@ssmckinney/ckeditor5-easy-image';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
 import { ImageUpload } from '../../src/imageupload.js';
-import { UploadAdapterMock } from '@ckeditor/ckeditor5-upload/tests/_utils/mocks.js';
+import { UploadAdapterMock } from '@ssmckinney/ckeditor5-upload/tests/_utils/mocks.js';
 
 ( async () => {
 	window.editorPx = await createEditor( document.querySelector( '#editor-px' ), 'px' );

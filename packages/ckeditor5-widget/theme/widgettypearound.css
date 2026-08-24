@@ -305,7 +305,7 @@
  * Hide type around buttons when the widget is selected as a child of a selected
  * nested editable (e.g. mulit-cell table selection).
  *
- * See https://github.com/ckeditor/ckeditor5/issues/7263.
+ * See https://github.com/ssmckinney/ckeditor5/issues/7263.
  */
 
 .ck-editor__nested-editable.ck-editor__editable_selected {

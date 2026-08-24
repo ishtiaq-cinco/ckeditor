@@ -7,7 +7,7 @@
  * @module table/tablelayout
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { TableLayoutUI } from './tablelayout/tablelayoutui.js';
 
 import { TableLayoutEditing } from './tablelayout/tablelayoutediting.js';

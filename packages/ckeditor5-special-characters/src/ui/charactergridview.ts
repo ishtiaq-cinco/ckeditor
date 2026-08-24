@@ -12,13 +12,13 @@ import {
 	ButtonView,
 	addKeyboardHandlingForGrid,
 	type ViewCollection
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 import {
 	KeystrokeHandler,
 	FocusTracker,
 	global,
 	type Locale
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import '../../theme/charactergrid.css';
 
@@ -108,7 +108,7 @@ export class CharacterGridView extends View<HTMLDivElement> {
 		} );
 
 		// Labels are vital for the users to understand what character they're looking at.
-		// For now we're using native title attribute for that, see https://github.com/ckeditor/ckeditor5/issues/5817.
+		// For now we're using native title attribute for that, see https://github.com/ssmckinney/ckeditor5/issues/5817.
 		tile.extendTemplate( {
 			attributes: {
 				title: name

@@ -230,7 +230,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, Style, GeneralHtmlSupport } from 'ckeditor5';
+import { ClassicEditor, Style, GeneralHtmlSupport } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {

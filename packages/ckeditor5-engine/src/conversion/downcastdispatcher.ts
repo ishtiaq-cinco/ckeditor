@@ -11,7 +11,7 @@ import { ModelConsumable } from './modelconsumable.js';
 import { compareMarkersForDowncast } from './comparemarkers.js';
 import { ModelRange } from '../model/range.js';
 
-import { EmitterMixin, type EmitterMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { EmitterMixin, type EmitterMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 
 import type { Differ, DifferItem, DifferItemReinsert } from '../model/differ.js';
 import type { MarkerCollection, Marker } from '../model/markercollection.js';
@@ -193,7 +193,7 @@ export class DowncastDispatcher extends DowncastDispatcherBase {
 		}
 
 		// Remove mappings for all removed view elements.
-		// Remove these mappings as soon as they are not needed (https://github.com/ckeditor/ckeditor5/issues/15411).
+		// Remove these mappings as soon as they are not needed (https://github.com/ssmckinney/ckeditor5/issues/15411).
 		conversionApi.mapper.flushDeferredBindings();
 
 		for ( const markerName of conversionApi.mapper.flushUnboundMarkerNames() ) {

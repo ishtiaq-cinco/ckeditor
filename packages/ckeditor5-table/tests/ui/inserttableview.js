@@ -4,9 +4,9 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { ViewCollection, ButtonView } from '@ckeditor/ckeditor5-ui';
+import { ViewCollection, ButtonView } from '@ssmckinney/ckeditor5-ui';
 import { InsertTableView } from '../../src/ui/inserttableview.js';
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'InsertTableView', () => {
 	let view, locale;

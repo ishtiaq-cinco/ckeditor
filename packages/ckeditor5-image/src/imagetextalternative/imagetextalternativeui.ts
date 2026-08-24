@@ -7,15 +7,15 @@
  * @module image/imagetextalternative/imagetextalternativeui
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import {
 	ButtonView,
 	ContextualBalloon,
 	clickOutsideHandler,
 	CssTransitionDisablerMixin,
 	type ViewWithCssTransitionDisabler
-} from '@ckeditor/ckeditor5-ui';
-import { IconTextAlternative } from '@ckeditor/ckeditor5-icons';
+} from '@ssmckinney/ckeditor5-ui';
+import { IconTextAlternative } from '@ssmckinney/ckeditor5-icons';
 
 import {
 	TextAlternativeFormView,
@@ -76,7 +76,7 @@ export class ImageTextAlternativeUI extends Plugin {
 	public override destroy(): void {
 		super.destroy();
 
-		// Destroy created UI components as they are not automatically destroyed (see https://github.com/ckeditor/ckeditor5/issues/1341).
+		// Destroy created UI components as they are not automatically destroyed (see https://github.com/ssmckinney/ckeditor5/issues/1341).
 		if ( this._form ) {
 			this._form.destroy();
 		}
@@ -206,7 +206,7 @@ export class ImageTextAlternativeUI extends Plugin {
 		}
 
 		// Blur the input element before removing it from DOM to prevent issues in some browsers.
-		// See https://github.com/ckeditor/ckeditor5/issues/1501.
+		// See https://github.com/ssmckinney/ckeditor5/issues/1501.
 		if ( this._form!.focusTracker.isFocused ) {
 			this._form!.saveButtonView.focus();
 		}

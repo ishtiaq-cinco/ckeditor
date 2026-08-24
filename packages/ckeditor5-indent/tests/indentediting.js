@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { MultiCommand } from '@ckeditor/ckeditor5-core';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { MultiCommand } from '@ssmckinney/ckeditor5-core';
 
 import { IndentEditing } from '../src/indentediting.js';
 

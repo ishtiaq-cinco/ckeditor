@@ -13,7 +13,7 @@ Any class can become an event emitter. All you need to do is mix the {@link modu
 
 <code-switcher>
 ```js
-import { EmitterMixin, mix } from 'ckeditor5';
+import { EmitterMixin, mix } from '@ssmckinney/ckeditor5';
 
 class AnyClass {
 	// Class's code.
@@ -154,7 +154,7 @@ It is sometimes useful to know if an event was stopped by any of the listeners. 
 
 <code-switcher>
 ```js
-import { EventInfo } from 'ckeditor5';
+import { EventInfo } from '@ssmckinney/ckeditor5';
 
 // Prepare the event info...
 const eventInfo = new EventInfo( this, 'eventName' );
@@ -293,7 +293,7 @@ Listeners registered in the context of a custom callback function:
 
 <code-switcher>
 ```js
-import { isWidget } from 'ckeditor5';
+import { isWidget } from '@ssmckinney/ckeditor5';
 
 this.listenTo( view.document, 'arrowKey', ( evt, data ) => {
 	// Listener's code.

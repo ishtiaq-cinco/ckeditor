@@ -7,7 +7,7 @@
  * @module heading/heading
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import { HeadingEditing } from './headingediting.js';
 import { HeadingUI } from './headingui.js';

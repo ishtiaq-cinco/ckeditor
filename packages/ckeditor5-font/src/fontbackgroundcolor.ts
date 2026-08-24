@@ -7,7 +7,7 @@
  * @module font/fontbackgroundcolor
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { FontBackgroundColorEditing } from './fontbackgroundcolor/fontbackgroundcolorediting.js';
 import { FontBackgroundColorUI } from './fontbackgroundcolor/fontbackgroundcolorui.js';
 

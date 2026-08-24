@@ -7,7 +7,7 @@
  * @module word-count/utils
  */
 
-import type { ModelElement, ModelItem } from '@ckeditor/ckeditor5-engine';
+import type { ModelElement, ModelItem } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * Returns a plain text representation of an element and its children.

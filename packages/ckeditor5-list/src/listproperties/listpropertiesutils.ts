@@ -7,7 +7,7 @@
  * @module list/listproperties/listpropertiesutils
  */
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 import {
 	getAllSupportedStyleTypes,
 	getListStyleTypeFromTypeAttribute,

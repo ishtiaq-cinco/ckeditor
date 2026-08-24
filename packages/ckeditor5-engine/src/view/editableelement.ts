@@ -8,7 +8,7 @@
  */
 
 import { ViewContainerElement } from './containerelement.js';
-import { ObservableMixin, type ObservableMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { ObservableMixin, type ObservableMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 import type { ViewSelectionChangeEvent } from './selection.js';
 import type { ViewElementAttributes } from './element.js';
 import { type ViewDocument } from './document.js';
@@ -117,14 +117,14 @@ export class ViewEditableElement extends ViewEditableElementBase {
 ViewEditableElement.prototype.is = function( this: ViewEditableElement, type: string, name?: string ): boolean {
 	if ( !name ) {
 		return type === 'editableElement' || type === 'view:editableElement' ||
-			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ckeditor/ckeditor5/issues/6529.
+			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ssmckinney/ckeditor5/issues/6529.
 			type === 'containerElement' || type === 'view:containerElement' ||
 			type === 'element' || type === 'view:element' ||
 			type === 'node' || type === 'view:node';
 	} else {
 		return name === this.name && (
 			type === 'editableElement' || type === 'view:editableElement' ||
-			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ckeditor/ckeditor5/issues/6529.
+			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ssmckinney/ckeditor5/issues/6529.
 			type === 'containerElement' || type === 'view:containerElement' ||
 			type === 'element' || type === 'view:element'
 		);

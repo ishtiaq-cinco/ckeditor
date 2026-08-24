@@ -26,14 +26,14 @@ import {
 	type ListDropdownItemDefinition,
 	type NormalizedColorOption,
 	type ColorPickerConfig
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 import {
 	Collection,
 	KeystrokeHandler,
 	FocusTracker,
 	type Locale,
 	type ObservableChangeEvent
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 import {
 	IconAlignBottom,
 	IconAlignCenter,
@@ -43,7 +43,7 @@ import {
 	IconAlignRight,
 	IconAlignTop,
 	IconPreviousArrow
-} from '@ckeditor/ckeditor5-icons';
+} from '@ssmckinney/ckeditor5-icons';
 
 import {
 	fillToolbar,
@@ -582,7 +582,7 @@ export class TableCellPropertiesView extends View {
 		// Reset the border color and width fields depending on the `border-style` value.
 		this.on<ObservableChangeEvent<string>>( 'change:borderStyle', ( evt, name, newValue, oldValue ) => {
 			// When removing the border (`border-style:none`), clear the remaining `border-*` properties.
-			// See: https://github.com/ckeditor/ckeditor5/issues/6227.
+			// See: https://github.com/ssmckinney/ckeditor5/issues/6227.
 			if ( !isBorderStyleSet( newValue ) ) {
 				this.borderColor = '';
 				this.borderWidth = '';

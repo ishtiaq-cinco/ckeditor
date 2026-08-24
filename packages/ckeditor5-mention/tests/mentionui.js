@@ -5,19 +5,19 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach, beforeAll, afterAll } from 'vitest';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { keyCodes, global, EventInfo, env } from '@ckeditor/ckeditor5-utils';
-import { _setModelData, ViewDocumentDomEventData } from '@ckeditor/ckeditor5-engine';
-import { ContextualBalloon } from '@ckeditor/ckeditor5-ui';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { keyCodes, global, EventInfo, env } from '@ssmckinney/ckeditor5-utils';
+import { _setModelData, ViewDocumentDomEventData } from '@ssmckinney/ckeditor5-engine';
+import { ContextualBalloon } from '@ssmckinney/ckeditor5-ui';
 
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
 
 import { MentionUI, createRegExp } from '../src/mentionui.js';
 import { MentionEditing } from '../src/mentionediting.js';
 import { MentionsView } from '../src/ui/mentionsview.js';
-import { assertCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { assertCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'MentionUI', () => {
 	let editor, model, doc, editingView, mentionUI, editorElement, mentionsView, panelView;
@@ -138,7 +138,7 @@ describe( 'MentionUI', () => {
 			expect( panelView.isVisible ).toBe( false );
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/17964
+		// See https://github.com/ssmckinney/ckeditor5/issues/17964
 		it( 'should have the ck-mention-balloon class to make sure z-index does not conflict with the dialog system', () => {
 			expect( balloonAddSpy.mock.calls.length ).toEqual( 1 );
 			expect( balloonAddSpy.mock.calls[ 0 ][ 0 ].balloonClassName ).toEqual( 'ck-mention-balloon' );
@@ -1143,7 +1143,7 @@ describe( 'MentionUI', () => {
 			} );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/11400
+		// https://github.com/ssmckinney/ckeditor5/issues/11400
 		describe( 'matching with whitespaces', () => {
 			const feedItems = [
 				{ id: '@foo', name: 'Foo' },
@@ -2282,7 +2282,7 @@ describe( 'MentionUI', () => {
 							feed: [
 								'$a1', '$a2', '$a3', '$a4',
 								// A case of mention with a marker character from other feed.
-								// See https://github.com/ckeditor/ckeditor5/issues/6398.
+								// See https://github.com/ssmckinney/ckeditor5/issues/6398.
 								'$a@'
 							]
 						}

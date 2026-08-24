@@ -33,7 +33,7 @@ import {
 	type Locale,
 	type ObservableChangeEvent,
 	type PositioningFunction
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 import { cloneDeep } from 'es-toolkit/compat';
 
 const NESTED_PANEL_HORIZONTAL_OFFSET = 5;
@@ -174,7 +174,7 @@ export const MenuBarBehaviors = {
 			if ( !isOpen ) {
 				// Keep the focus border if the menu bar was closed by a keyboard interaction (Esc key).
 				// The user remains in the keyboard navigation mode and can traverse the main categories.
-				// See https://github.com/ckeditor/ckeditor5/issues/16719.
+				// See https://github.com/ssmckinney/ckeditor5/issues/16719.
 				if ( !isKeyPressed ) {
 					menuBarView.isFocusBorderEnabled = false;
 				}

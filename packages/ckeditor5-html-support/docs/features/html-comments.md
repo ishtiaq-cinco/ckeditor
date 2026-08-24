@@ -16,7 +16,7 @@ By default, the editor filters out all HTML comments on initialization. The {@li
 
 ## Demo
 
-The editor below is configured to keep HTML comments in the document content. You can view the source of the document using the {@link features/source-editing-enhanced Enhanced source code editing} feature. Toggle the Enhanced source code editing mode {@icon @ckeditor/ckeditor5-icons/theme/icons/source.svg Source editing} to see there is an HTML comment in the document source. Try uncommenting the paragraph below the picture. Once you leave the source editing mode, you will see this paragraph in the editable area.
+The editor below is configured to keep HTML comments in the document content. You can view the source of the document using the {@link features/source-editing-enhanced Enhanced source code editing} feature. Toggle the Enhanced source code editing mode {@icon @ssmckinney/ckeditor5-icons/theme/icons/source.svg Source editing} to see there is an HTML comment in the document source. Try uncommenting the paragraph below the picture. Once you leave the source editing mode, you will see this paragraph in the editable area.
 
 {@snippet features/html-comment}
 
@@ -26,7 +26,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { HtmlComment } from 'ckeditor5';
+import { HtmlComment } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -42,9 +42,9 @@ HTML comment feature does not require any configuration.
 
 ## Known issues
 
-The main issue with the HTML comments feature is that comments can be easily repositioned or lost in various cases (see [#10118](https://github.com/ckeditor/ckeditor5/issues/10118)).
+The main issue with the HTML comments feature is that comments can be easily repositioned or lost in various cases (see [#10118](https://github.com/ssmckinney/ckeditor5/issues/10118)).
 
-We are open for feedback, so if you find any issue, feel free to report it in the [main CKEditor&nbsp;5 repository](https://github.com/ckeditor/ckeditor5/issues/).
+We are open for feedback, so if you find any issue, feel free to report it in the [main CKEditor&nbsp;5 repository](https://github.com/ssmckinney/ckeditor5/issues/).
 
 ## Related features
 

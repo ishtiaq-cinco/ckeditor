@@ -19,7 +19,7 @@ import { type WidgetToolbarRepository } from './widgettoolbarrepository.js';
 import {
 	Plugin,
 	type Editor
-} from '@ckeditor/ckeditor5-core';
+} from '@ssmckinney/ckeditor5-core';
 
 import {
 	MouseObserver,
@@ -29,16 +29,16 @@ import {
 	type ViewContainerElement,
 	type ViewDocumentMouseDownEvent,
 	type ViewSelectionChangeEvent
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import type { EditorUIUpdateEvent } from '@ckeditor/ckeditor5-ui';
+import type { EditorUIUpdateEvent } from '@ssmckinney/ckeditor5-ui';
 
 import {
 	DomEmitterMixin,
 	global,
 	type DomEmitter,
 	type EventInfo
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { throttle } from 'es-toolkit/compat';
 
@@ -120,8 +120,8 @@ export class WidgetResize extends Plugin {
 		this.editor.ui.on<EditorUIUpdateEvent>( 'update', this._redrawSelectedResizerThrottled );
 
 		// Remove view widget-resizer mappings for widgets that have been removed from the document.
-		// https://github.com/ckeditor/ckeditor5/issues/10156
-		// https://github.com/ckeditor/ckeditor5/issues/10266
+		// https://github.com/ssmckinney/ckeditor5/issues/10156
+		// https://github.com/ssmckinney/ckeditor5/issues/10266
 		this.editor.model.document.on<ModelDocumentChangeEvent>( 'change', () => {
 			for ( const [ viewElement, resizer ] of this._resizers ) {
 				if ( !viewElement.isAttached() ) {
@@ -267,7 +267,7 @@ export class WidgetResize extends Plugin {
 		if ( this._activeResizer ) {
 			this._activeResizer.begin( resizeHandle );
 
-			// Do not call other events when resizing. See: https://github.com/ckeditor/ckeditor5/issues/6755.
+			// Do not call other events when resizing. See: https://github.com/ssmckinney/ckeditor5/issues/6755.
 			event.stop();
 			domEventData.preventDefault();
 		}

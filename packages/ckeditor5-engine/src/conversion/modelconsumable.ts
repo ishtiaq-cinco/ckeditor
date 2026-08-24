@@ -9,7 +9,7 @@
 
 import { ModelTextProxy } from '../model/textproxy.js';
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 import { type ModelItem } from '../model/item.js';
 import { type ModelSelection } from '../model/selection.js';

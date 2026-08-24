@@ -18,7 +18,7 @@ import { type ModelSelection } from '../selection.js';
 import { type ModelText } from '../text.js';
 import { type ModelNode } from '../node.js';
 
-import { isInsideSurrogatePair, isInsideCombinedSymbol, isInsideEmojiSequence } from '@ckeditor/ckeditor5-utils';
+import { isInsideSurrogatePair, isInsideCombinedSymbol, isInsideEmojiSequence } from '@ssmckinney/ckeditor5-utils';
 
 const wordBoundaryCharacters = ' ,.?!:;"-()';
 

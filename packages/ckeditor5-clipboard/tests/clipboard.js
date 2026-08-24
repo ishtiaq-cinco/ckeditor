@@ -9,8 +9,8 @@ import { ClipboardMarkersUtils } from '../src/clipboardmarkersutils.js';
 import { ClipboardPipeline } from '../src/clipboardpipeline.js';
 import { DragDrop } from '../src/dragdrop.js';
 import { PastePlainText } from '../src/pasteplaintext.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { global } from '@ckeditor/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { global } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'Clipboard Feature', () => {
 	let editor, domElement;

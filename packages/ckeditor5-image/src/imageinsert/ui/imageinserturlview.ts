@@ -13,8 +13,10 @@ import {
 	createLabeledInputText,
 	submitHandler,
 	type InputTextView
-} from '@ckeditor/ckeditor5-ui';
-import { KeystrokeHandler, type Locale } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-ui';
+import { KeystrokeHandler, type Locale } from '@ssmckinney/ckeditor5-utils';
+
+import type { ImageResponsiveBreakpoint } from '../../imageconfig.js';
 
 /**
  * The insert an image via URL view.
@@ -26,8 +28,22 @@ import { KeystrokeHandler, type Locale } from '@ckeditor/ckeditor5-utils';
 export class ImageInsertUrlView extends View {
 	/**
 	 * The URL input field view.
+	 *
+	 * With {@link #breakpoints} configured this is the `<img src>` of the generated `<picture>`: the fallback a
+	 * viewport matching no breakpoint resolves to, which is why it stays the only field that must be filled in.
 	 */
 	public urlInputView: LabeledFieldView<InputTextView>;
+
+	/**
+	 * The breakpoints this form collects a URL for, in the order they are shown.
+	 */
+	public readonly breakpoints: Array<ImageResponsiveBreakpoint>;
+
+	/**
+	 * One input view per entry in {@link #breakpoints}, in the same order. Empty when the form is a plain
+	 * single-URL one.
+	 */
+	public readonly breakpointInputViews: Array<LabeledFieldView<InputTextView>>;
 
 	/**
 	 * The value of the URL input.
@@ -59,8 +75,9 @@ export class ImageInsertUrlView extends View {
 	 * Creates a view for the dropdown panel of {@link module:image/imageinsert/imageinsertui~ImageInsertUI}.
 	 *
 	 * @param locale The localization services instance.
+	 * @param breakpoints Breakpoints to collect an additional URL for. Omit for the plain single-URL form.
 	 */
-	constructor( locale: Locale ) {
+	constructor( locale: Locale, breakpoints: Array<ImageResponsiveBreakpoint> = [] ) {
 		super( locale );
 
 		this.set( 'imageURLInputValue', '' );
@@ -69,7 +86,9 @@ export class ImageInsertUrlView extends View {
 
 		this.keystrokes = new KeystrokeHandler();
 
+		this.breakpoints = breakpoints;
 		this.urlInputView = this._createUrlInputView();
+		this.breakpointInputViews = breakpoints.map( breakpoint => this._createBreakpointInputView( breakpoint ) );
 
 		this.setTemplate( {
 			tag: 'form',
@@ -84,6 +103,7 @@ export class ImageInsertUrlView extends View {
 
 			children: [
 				this.urlInputView,
+				...this.breakpointInputViews,
 				{
 					tag: 'div',
 					attributes: {
@@ -95,6 +115,43 @@ export class ImageInsertUrlView extends View {
 				}
 			]
 		} );
+	}
+
+	/**
+	 * The `sources` model attribute described by the breakpoint fields: one entry per filled-in field, in
+	 * {@link #breakpoints} order.
+	 *
+	 * A blank field contributes nothing rather than an empty `<source>`, so that viewport falls through to the
+	 * `<img src>` — which is the point of leaving it blank.
+	 */
+	public get sources(): Array<ImageSourceDefinition> {
+		const sources: Array<ImageSourceDefinition> = [];
+
+		for ( const [ index, breakpoint ] of this.breakpoints.entries() ) {
+			const srcset = this.breakpointInputViews[ index ].fieldView.element?.value.trim();
+
+			if ( srcset ) {
+				// `srcset` first to match the order `upcastPicture()` collects them in, so that opening the form
+				// and saving it again does not reshuffle the attributes of sources it did not change.
+				sources.push( { srcset, media: breakpoint.media } );
+			}
+		}
+
+		return sources;
+	}
+
+	/**
+	 * Fills the breakpoint fields in from a `sources` model attribute, matching entries to fields by their media
+	 * query. Sources whose media query matches no configured breakpoint are left alone by the form, but they are
+	 * also not shown — see {@link module:image/imageinsert/imageinsertviaurlui~ImageInsertViaUrlUI}, which keeps
+	 * them.
+	 */
+	public set sources( value: Array<ImageSourceDefinition> ) {
+		for ( const [ index, breakpoint ] of this.breakpoints.entries() ) {
+			const source = value.find( source => source.media === breakpoint.media );
+
+			this.breakpointInputViews[ index ].fieldView.value = source ? source.srcset : '';
+		}
 	}
 
 	/**
@@ -146,9 +203,58 @@ export class ImageInsertUrlView extends View {
 	}
 
 	/**
+	 * Creates an input view for a single breakpoint.
+	 */
+	private _createBreakpointInputView( breakpoint: ImageResponsiveBreakpoint ): LabeledFieldView<InputTextView> {
+		const locale = this.locale!;
+		const inputView = new LabeledFieldView( locale, createLabeledInputText );
+
+		inputView.label = breakpoint.label;
+
+		// The media query is the only thing that says what the field actually governs, and it is not something
+		// the label can carry for an arbitrary configured breakpoint.
+		inputView.infoText = breakpoint.media;
+		inputView.class = 'ck-image-insert-url__breakpoint';
+
+		inputView.bind( 'isEnabled' ).to( this );
+
+		inputView.fieldView.inputMode = 'url';
+		inputView.fieldView.placeholder = 'https://example.com/image.png';
+
+		return inputView;
+	}
+
+	/**
 	 * Focuses the view.
 	 */
 	public focus(): void {
 		this.urlInputView.focus();
 	}
+}
+
+/**
+ * A single entry of the `sources` model attribute brought by {@link module:image/pictureediting~PictureEditing},
+ * downcast into one `<source>` element of a `<picture>`.
+ */
+export interface ImageSourceDefinition {
+
+	/**
+	 * The `srcset` attribute of the generated `<source>`.
+	 */
+	srcset: string;
+
+	/**
+	 * The `media` attribute of the generated `<source>`.
+	 */
+	media?: string;
+
+	/**
+	 * The `type` attribute of the generated `<source>`, for example `'image/webp'`.
+	 */
+	type?: string;
+
+	/**
+	 * The `sizes` attribute of the generated `<source>`.
+	 */
+	sizes?: string;
 }

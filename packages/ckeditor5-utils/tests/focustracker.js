@@ -7,7 +7,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { FocusTracker } from '../src/focustracker.js';
 import { global } from '../src/dom/global.js';
 import { expectToThrowCKEditorError } from './_utils/utils.js';
-import { View } from '@ckeditor/ckeditor5-ui';
+import { View } from '@ssmckinney/ckeditor5-ui';
 
 describe( 'FocusTracker', () => {
 	let focusTracker, container, containerFirstInput, containerSecondInput;

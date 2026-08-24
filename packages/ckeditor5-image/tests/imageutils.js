@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { ViewDowncastWriter, ViewDocument, ModelElement, StylesProcessor, _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
-import { isWidget, getLabel } from '@ckeditor/ckeditor5-widget';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ViewDowncastWriter, ViewDocument, ModelElement, StylesProcessor, _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
+import { isWidget, getLabel } from '@ssmckinney/ckeditor5-widget';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 import { ImageBlockEditing } from '../src/image/imageblockediting.js';
 import { ImageInlineEditing } from '../src/image/imageinlineediting.js';
@@ -164,7 +164,7 @@ describe( 'ImageUtils plugin', () => {
 			expect( imageUtils.getClosestSelectedImageWidget( selection ) ).toBeNull();
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/11972.
+		// See https://github.com/ssmckinney/ckeditor5/issues/11972.
 		it( 'should return null if view selection is empty', () => {
 			const selection = writer.createSelection();
 

@@ -18,7 +18,7 @@ import type { ModelSelectable } from '../selection.js';
 
 import { type ModelDocument } from '../document.js';
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Operation to insert one or more nodes at given position in the model.

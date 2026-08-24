@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
-import { ListItemView, DropdownView, SplitButtonView } from '@ckeditor/ckeditor5-ui';
+import { ListItemView, DropdownView, SplitButtonView } from '@ssmckinney/ckeditor5-ui';
 import { TableEditing } from '../../src/tableediting.js';
 import { TableLayoutUI } from '../../src/tablelayout/tablelayoutui.js';
 import { TableLayoutEditing } from '../../src/tablelayout/tablelayoutediting.js';
 import { InsertTableView } from '../../src/ui/inserttableview.js';
-import { IconTableLayout, IconTableProperties } from '@ckeditor/ckeditor5-icons';
+import { IconTableLayout, IconTableProperties } from '@ssmckinney/ckeditor5-icons';
 import { TableProperties } from '../../src/tableproperties.js';
 import { TableTypeCommand } from '../../src/tablelayout/commands/tabletypecommand.js';
 import { TableUI } from '../../src/tableui.js';
@@ -60,7 +60,7 @@ describe( 'TableLayoutUI', () => {
 
 			document.body.appendChild( insertTableLayout.element );
 
-			// Dropdown is lazy loaded, so make sure it's open. See https://github.com/ckeditor/ckeditor5/issues/6193.
+			// Dropdown is lazy loaded, so make sure it's open. See https://github.com/ssmckinney/ckeditor5/issues/6193.
 			insertTableLayout.isOpen = true;
 		} );
 
@@ -116,7 +116,7 @@ describe( 'TableLayoutUI', () => {
 				insertTableLayout.render();
 				document.body.appendChild( insertTableLayout.element );
 
-				insertTableLayout.isOpen = true; // Dropdown is lazy loaded (https://github.com/ckeditor/ckeditor5/issues/6193).
+				insertTableLayout.isOpen = true; // Dropdown is lazy loaded (https://github.com/ssmckinney/ckeditor5/issues/6193).
 				insertTableLayout.isOpen = false;
 			} );
 

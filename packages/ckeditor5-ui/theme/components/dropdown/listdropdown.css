@@ -5,7 +5,7 @@
 
 .ck.ck-dropdown > .ck-dropdown__panel > .ck-list {
 	/* Disabled radius of top-left border to be consistent with .dropdown__button
-	https://github.com/ckeditor/ckeditor5/issues/816 */
+	https://github.com/ssmckinney/ckeditor5/issues/816 */
 	border-radius: var(--ck-rounded-corners-radius);
 	border-top-left-radius: 0;
 
