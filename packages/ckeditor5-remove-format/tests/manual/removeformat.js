@@ -3,18 +3,18 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { global } from '@ckeditor/ckeditor5-utils';
+import { global } from '@ssmckinney/ckeditor5-utils';
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Bold, Italic, Underline } from '@ckeditor/ckeditor5-basic-styles';
-import { Enter, ShiftEnter } from '@ckeditor/ckeditor5-enter';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { Image, ImageCaption, ImageToolbar, ImageResize } from '@ckeditor/ckeditor5-image';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Bold, Italic, Underline } from '@ssmckinney/ckeditor5-basic-styles';
+import { Enter, ShiftEnter } from '@ssmckinney/ckeditor5-enter';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { Image, ImageCaption, ImageToolbar, ImageResize } from '@ssmckinney/ckeditor5-image';
 import { RemoveFormat } from '../../src/removeformat.js';
-import { Link } from '@ckeditor/ckeditor5-link';
+import { Link } from '@ssmckinney/ckeditor5-link';
 
 ClassicEditor
 	.create( {

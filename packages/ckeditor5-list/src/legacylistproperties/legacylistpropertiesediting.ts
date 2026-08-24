@@ -7,7 +7,7 @@
  * @module list/legacylistproperties/legacylistpropertiesediting
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import type {
 	DifferItem,
@@ -21,7 +21,7 @@ import type {
 	UpcastElementEvent,
 	ViewElement,
 	ModelWriter
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { LegacyListEditing } from '../legacylist/legacylistediting.js';
 import { LegacyListStyleCommand } from './legacyliststylecommand.js';
@@ -156,7 +156,7 @@ export class LegacyListPropertiesEditing extends Plugin {
 	 * <listItem listIndent="0" listType="bulleted" listStyle="square">UL List item 2</listItem>
 	 * ```
 	 *
-	 * See https://github.com/ckeditor/ckeditor5/issues/7879.
+	 * See https://github.com/ssmckinney/ckeditor5/issues/7879.
 	 *
 	 * @param attributeStrategies Strategies for the enabled attributes.
 	 */
@@ -210,7 +210,7 @@ export class LegacyListPropertiesEditing extends Plugin {
 
 			// The outermost list item may not exist while removing elements between lists with different value
 			// of the `listIndent` attribute. In such a case we don't want to update anything.
-			// See: https://github.com/ckeditor/ckeditor5/issues/8073.
+			// See: https://github.com/ssmckinney/ckeditor5/issues/8073.
 			if ( !mostOuterItemList ) {
 				return;
 			}
@@ -241,7 +241,7 @@ export class LegacyListPropertiesEditing extends Plugin {
 				} );
 
 				// If the selection ends in a non-list element, there are no <listItem>s that would require adjustments.
-				// See: https://github.com/ckeditor/ckeditor5/issues/8642.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8642.
 				if ( !secondListMostOuterItem ) {
 					firstMostOuterItem = null;
 					return;
@@ -381,7 +381,7 @@ function createAttributeStrategies( enabledProperties: ListPropertiesConfig ) {
 function upcastListItemAttributes( attributeStrategies: Array<AttributeStrategy> ) {
 	return ( dispatcher: UpcastDispatcher ) => {
 		dispatcher.on<UpcastElementEvent>( 'element:li', ( evt, data, conversionApi ) => {
-			// https://github.com/ckeditor/ckeditor5/issues/13858
+			// https://github.com/ssmckinney/ckeditor5/issues/13858
 			if ( !data.modelRange ) {
 				return;
 			}
@@ -651,7 +651,7 @@ function fixListAttributesOnListItemElements( editor: Editor, attributeStrategie
 					existingListItem = existingListItem.previousSibling;
 
 					// If the item does not exist, most probably there is no other content in the editor.
-					// See: https://github.com/ckeditor/ckeditor5/issues/8072.
+					// See: https://github.com/ssmckinney/ckeditor5/issues/8072.
 					if ( !existingListItem ) {
 						break;
 					}
@@ -678,7 +678,7 @@ function fixListAttributesOnListItemElements( editor: Editor, attributeStrategie
 					wasFixed = true;
 				} else {
 					// Adjust the `listStyle`, `listReversed` and `listStart`
-					// attributes for inserted (pasted) items. See https://github.com/ckeditor/ckeditor5/issues/8160.
+					// attributes for inserted (pasted) items. See https://github.com/ssmckinney/ckeditor5/issues/8160.
 					//
 					// ■ List item 1. // [listStyle="square", listType="bulleted"]
 					//     ○ List item 1.1. // [listStyle="circle", listType="bulleted"]

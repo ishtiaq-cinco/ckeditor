@@ -7,7 +7,7 @@
  * @module ui/menubar/menubarmenulistitemfiledialogbuttonview
  */
 
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 import { FileDialogListItemButtonView } from '../button/filedialogbuttonview.js';
 
 import '../../theme/components/menubar/menubarmenulistitembutton.css';

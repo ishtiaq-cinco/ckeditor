@@ -7,8 +7,8 @@
  * @module typing/input
  */
 
-import { Plugin, type Editor } from '@ckeditor/ckeditor5-core';
-import { env } from '@ckeditor/ckeditor5-utils';
+import { Plugin, type Editor } from '@ssmckinney/ckeditor5-core';
+import { env } from '@ssmckinney/ckeditor5-utils';
 
 import { InsertTextCommand, type InsertTextCommandOptions } from './inserttextcommand.js';
 import { InsertTextObserver, type ViewDocumentInsertTextEvent } from './inserttextobserver.js';
@@ -28,11 +28,11 @@ import {
 	type ViewDocumentKeyDownEvent,
 	type ViewDocumentMutationsEvent,
 	type ViewDocumentInputEvent
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { debounce } from 'es-toolkit/compat';
 
-// @if CK_DEBUG_TYPING // import { _debouncedLine, _buildLogMessage } from '@ckeditor/ckeditor5-engine/src/dev-utils/utils.js';
+// @if CK_DEBUG_TYPING // import { _debouncedLine, _buildLogMessage } from '@ssmckinney/ckeditor5-engine/src/dev-utils/utils.js';
 
 /**
  * Handles text input coming from the keyboard or other input methods.
@@ -136,7 +136,7 @@ export class Input extends Plugin {
 						// and the second event flushes changes, and it's original targetRanges,
 						// which were initially good, now refer to a removed element.
 						// This is not reproducible on Mac/Linux as they enter composition mode.
-						// See more: https://github.com/ckeditor/ckeditor5/issues/18926.
+						// See more: https://github.com/ssmckinney/ckeditor5/issues/18926.
 						return viewRange.root.is( 'rootElement' );
 					} )
 					.map( viewRange => mapper.toModelRange( viewRange ) )

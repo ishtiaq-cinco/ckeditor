@@ -7,14 +7,14 @@
  * @module font/fontcommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
 import {
 	ModelDocumentSelection,
 	type Batch,
 	type ModelWriter,
 	type ModelRange,
 	type ModelElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 /**
  * The base font command.

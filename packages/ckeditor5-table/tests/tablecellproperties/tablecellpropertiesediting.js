@@ -5,9 +5,9 @@
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { AlignmentEditing } from '@ckeditor/ckeditor5-alignment';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { AlignmentEditing } from '@ssmckinney/ckeditor5-alignment';
 
 import { TableEditing } from '../../src/tableediting.js';
 import { TableLayoutEditing } from '../../src/tablelayout/tablelayoutediting.js';
@@ -23,7 +23,7 @@ import { TableCellVerticalAlignmentCommand } from '../../src/tablecellproperties
 import { TableCellPaddingCommand } from '../../src/tablecellproperties/commands/tablecellpaddingcommand.js';
 import { TableCellBackgroundColorCommand } from '../../src/tablecellproperties/commands/tablecellbackgroundcolorcommand.js';
 
-import { _getModelData, _getViewData, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { _getModelData, _getViewData, _setModelData } from '@ssmckinney/ckeditor5-engine';
 import { assertTableCellStyle, assertTRBLAttribute, modelTable, viewTable } from '../_utils/utils.js';
 
 describe( 'table cell properties', () => {

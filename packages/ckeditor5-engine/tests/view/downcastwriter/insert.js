@@ -15,7 +15,7 @@ import { ViewPosition } from '../../../src/view/position.js';
 import { _stringifyView, _parseView } from '../../../src/dev-utils/view.js';
 import { ViewAttributeElement } from '../../../src/view/attributeelement.js';
 import { ViewDocument } from '../../../src/view/document.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { StylesProcessor } from '../../../src/view/stylesmap.js';
 
 describe( 'DowncastWriter', () => {

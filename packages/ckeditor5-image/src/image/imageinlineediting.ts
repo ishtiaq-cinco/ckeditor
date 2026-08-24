@@ -7,13 +7,13 @@
  * @module image/image/imageinlineediting
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import {
 	ClipboardPipeline,
 	type ClipboardInputTransformationEvent,
 	type ClipboardContentInsertionEvent
-} from '@ckeditor/ckeditor5-clipboard';
-import { ViewUpcastWriter, type ViewElement } from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-clipboard';
+import { ViewUpcastWriter, type ViewElement } from '@ssmckinney/ckeditor5-engine';
 
 import {
 	downcastImageAttribute,

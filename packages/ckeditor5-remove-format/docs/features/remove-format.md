@@ -13,7 +13,7 @@ The remove format feature lets you quickly remove any text formatting applied us
 
 ## Demo
 
-Select the content you want to clean up and press the remove format button {@icon @ckeditor/ckeditor5-icons/theme/icons/remove-format.svg remove format} in the toolbar.
+Select the content you want to clean up and press the remove format button {@icon @ssmckinney/ckeditor5-icons/theme/icons/remove-format.svg remove format} in the toolbar.
 
 {@snippet features/remove-format}
 
@@ -27,7 +27,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, RemoveFormat } from 'ckeditor5';
+import { ClassicEditor, RemoveFormat } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {

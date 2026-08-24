@@ -15,7 +15,7 @@ import { MutationObserver } from '../../../src/view/observer/mutationobserver.js
 import { createViewRoot } from '../_utils/createroot.js';
 import { _parseView } from '../../../src/dev-utils/view.js';
 import { StylesProcessor } from '../../../src/view/stylesmap.js';
-import { env, priorities } from '@ckeditor/ckeditor5-utils';
+import { env, priorities } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'SelectionObserver', () => {
 	let view, viewDocument, viewRoot, selectionObserver, domRoot, domMain, domDocument;
@@ -105,7 +105,7 @@ describe( 'SelectionObserver', () => {
 		} );
 	} );
 
-	// See https://github.com/ckeditor/ckeditor5/issues/14569.
+	// See https://github.com/ssmckinney/ckeditor5/issues/14569.
 	it( 'should call focusObserver#flush when selection is in the editable but not changed', () => {
 		// Set DOM selection.
 		changeDomSelection();
@@ -148,7 +148,7 @@ describe( 'SelectionObserver', () => {
 		} );
 	} );
 
-	// See https://github.com/ckeditor/ckeditor5/issues/18514.
+	// See https://github.com/ssmckinney/ckeditor5/issues/18514.
 	it( 'should fire selectionChange while editable is not focused but the editor is in read-only mode', () => {
 		const spy = vi.fn();
 
@@ -571,7 +571,7 @@ describe( 'SelectionObserver', () => {
 		} );
 	} );
 
-	// See: https://github.com/ckeditor/ckeditor5/issues/18744
+	// See: https://github.com/ssmckinney/ckeditor5/issues/18744
 	it( 'should not crash even if domConverter returns view range with items detached from root', () => {
 		const { domConverter } = selectionObserver;
 

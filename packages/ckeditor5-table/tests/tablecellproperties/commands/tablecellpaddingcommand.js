@@ -3,10 +3,10 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 

@@ -10,7 +10,7 @@
 import { View } from '../view.js';
 import { ButtonView } from './buttonview.js';
 
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
 import '../../theme/components/button/switchbutton.css';
 

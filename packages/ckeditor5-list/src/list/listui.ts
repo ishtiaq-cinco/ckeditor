@@ -8,8 +8,8 @@
  */
 
 import { createUIComponents } from './utils.js';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { IconBulletedList, IconNumberedList } from '@ckeditor/ckeditor5-icons';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { IconBulletedList, IconNumberedList } from '@ssmckinney/ckeditor5-icons';
 
 /**
  * The list UI feature. It introduces the `'numberedList'` and `'bulletedList'` buttons that

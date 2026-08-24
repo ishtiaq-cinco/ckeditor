@@ -7,14 +7,14 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 import { GeneralHtmlSupport } from '../../src/generalhtmlsupport.js';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ListEditing } from '@ckeditor/ckeditor5-list';
-import { stubUid } from '@ckeditor/ckeditor5-list/tests/list/_utils/uid.js';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ListEditing } from '@ssmckinney/ckeditor5-list';
+import { stubUid } from '@ssmckinney/ckeditor5-list/tests/list/_utils/uid.js';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
 
 import { getModelDataWithAttributes } from '../_utils/utils.js';
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
 import { ListElementSupport } from '../../src/integrations/list.js';
 
 describe( 'ListElementSupport', () => {
@@ -1285,7 +1285,7 @@ describe( 'ListElementSupport', () => {
 	} );
 
 	describe( '#15527 and #15565', () => {
-		// See https://github.com/ckeditor/ckeditor5/issues/15527.
+		// See https://github.com/ssmckinney/ckeditor5/issues/15527.
 		it( 'should not remove attribute from other elements (inside GHS div)', () => {
 			const dataFilter = editor.plugins.get( 'DataFilter' );
 
@@ -1344,7 +1344,7 @@ describe( 'ListElementSupport', () => {
 			} );
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/15565.
+		// See https://github.com/ssmckinney/ckeditor5/issues/15565.
 		it( 'should not remove attribute from other elements (inside table cell)', () => {
 			const dataFilter = editor.plugins.get( 'DataFilter' );
 

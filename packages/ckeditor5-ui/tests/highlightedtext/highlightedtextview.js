@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { HighlightedTextView } from '@ckeditor/ckeditor5-ui';
-import { global } from '@ckeditor/ckeditor5-utils';
+import { HighlightedTextView } from '@ssmckinney/ckeditor5-ui';
+import { global } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'TemplateListButtonView', () => {
 	let view;

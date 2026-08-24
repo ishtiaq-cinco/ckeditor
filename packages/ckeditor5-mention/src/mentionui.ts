@@ -7,19 +7,19 @@
  * @module mention/mentionui
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import type {
 	ViewDocumentKeyDownEvent,
 	Marker,
 	ModelPosition
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import {
 	ButtonView,
 	ContextualBalloon,
 	clickOutsideHandler
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 
 import {
 	CKEditorError,
@@ -29,9 +29,9 @@ import {
 	keyCodes,
 	logWarning,
 	type DomOptimalPositionOptions
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
-import { TextWatcher, type TextWatcherMatchedEvent } from '@ckeditor/ckeditor5-typing';
+import { TextWatcher, type TextWatcherMatchedEvent } from '@ssmckinney/ckeditor5-typing';
 
 import { debounce } from 'es-toolkit/compat';
 
@@ -216,7 +216,7 @@ export class MentionUI extends Plugin {
 	public override destroy(): void {
 		super.destroy();
 
-		// Destroy created UI components as they are not automatically destroyed (see https://github.com/ckeditor/ckeditor5/issues/1341).
+		// Destroy created UI components as they are not automatically destroyed (see https://github.com/ssmckinney/ckeditor5/issues/1341).
 		this._mentionsView.destroy();
 	}
 
@@ -241,7 +241,7 @@ export class MentionUI extends Plugin {
 
 			const { dropdownLimit: markerDropdownLimit } = this._mentionsConfigurations.get( marker )!;
 
-			// Set to 10 by default for backwards compatibility. See: https://github.com/ckeditor/ckeditor5/issues/10479
+			// Set to 10 by default for backwards compatibility. See: https://github.com/ssmckinney/ckeditor5/issues/10479
 			const dropdownLimit = markerDropdownLimit || this.editor.config.get( 'mention.dropdownLimit' ) || 10;
 
 			if ( mentionsView.items.length >= dropdownLimit ) {
@@ -674,7 +674,7 @@ function getBalloonPanelPositions(
  * Keeps the panel within the viewport horizontally, so it does not get cut off
  * when the caret is close to the screen edge (e.g. on mobile).
  *
- * See https://github.com/ckeditor/ckeditor5/issues/20182.
+ * See https://github.com/ssmckinney/ckeditor5/issues/20182.
  */
 function fitLeftInViewport( left: number, balloonRect: Rect, viewportRect: Rect ): number {
 	return Math.max( viewportRect.left, Math.min( left, viewportRect.right - balloonRect.width ) );
@@ -834,7 +834,7 @@ function isPositionInExistingMention( position: ModelPosition ): boolean | null 
 /**
  * Checks if the closest marker offset is at the beginning of a mention.
  *
- * See https://github.com/ckeditor/ckeditor5/issues/11400.
+ * See https://github.com/ssmckinney/ckeditor5/issues/11400.
  */
 function isMarkerInExistingMention( markerPosition: ModelPosition ): boolean | null {
 	const nodeAfter = markerPosition.nodeAfter;

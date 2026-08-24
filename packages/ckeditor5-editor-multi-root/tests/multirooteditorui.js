@@ -5,9 +5,9 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { MultiRootEditor } from '../src/multirooteditor.js';
-import { EditorUI, View } from '@ckeditor/ckeditor5-ui';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { EditorUI, View } from '@ssmckinney/ckeditor5-ui';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 
 describe( 'MultiRootEditorUI', () => {
 	let editor, view, ui;
@@ -666,7 +666,7 @@ describe( 'MultiRootEditorUI', () => {
 		// It happens quite often in the strict mode of the React integration. In such case, the editor
 		// component is being unmounted after editable component is detached from the DOM. In such scenario,
 		// the root doesn't contain the DOM editable anymore. This test ensures that the editor does not throw.
-		// Issue: https://github.com/ckeditor/ckeditor5/issues/16561
+		// Issue: https://github.com/ssmckinney/ckeditor5/issues/16561
 		it( 'should not throw when trying to detach a DOM root that was not attached to editing view', async () => {
 			const newEditor = await MultiRootEditor.create( { foo: '', bar: '' } );
 			const editingView = newEditor.editing.view;
@@ -678,7 +678,7 @@ describe( 'MultiRootEditorUI', () => {
 			await newEditor.destroy();
 		} );
 
-		// Issue: https://github.com/ckeditor/ckeditor5/issues/16561
+		// Issue: https://github.com/ssmckinney/ckeditor5/issues/16561
 		it( 'should not throw error when it was called twice', async () => {
 			const newEditor = await MultiRootEditor.create( { foo: '', bar: '' } );
 

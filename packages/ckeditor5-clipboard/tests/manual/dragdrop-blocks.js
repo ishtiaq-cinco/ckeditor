@@ -3,44 +3,44 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { Bold, Italic, Underline, Strikethrough, Superscript, Subscript, Code } from '@ckeditor/ckeditor5-basic-styles';
-import { Heading, HeadingButtonsUI } from '@ckeditor/ckeditor5-heading';
-import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageResize, ImageInsert, AutoImage, ImageUpload } from '@ckeditor/ckeditor5-image';
-import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
-import { Link, LinkImage, AutoLink } from '@ckeditor/ckeditor5-link';
-import { List, ListProperties } from '@ckeditor/ckeditor5-list';
-import { Paragraph, ParagraphButtonUI } from '@ckeditor/ckeditor5-paragraph';
-import { Table, TableToolbar, TableProperties, TableCellProperties, TableCaption, TableColumnResize } from '@ckeditor/ckeditor5-table';
-import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
-import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
-import { FontColor, FontBackgroundColor, FontFamily, FontSize } from '@ckeditor/ckeditor5-font';
-import { Highlight } from '@ckeditor/ckeditor5-highlight';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
-import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed';
-import { Mention } from '@ckeditor/ckeditor5-mention';
-import { TextTransformation, Typing } from '@ckeditor/ckeditor5-typing';
-import { Alignment } from '@ckeditor/ckeditor5-alignment';
-import { PageBreak } from '@ckeditor/ckeditor5-page-break';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { TextPartLanguage } from '@ckeditor/ckeditor5-language';
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
-import { Style } from '@ckeditor/ckeditor5-style';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-import { DecoupledEditor } from '@ckeditor/ckeditor5-editor-decoupled';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { BalloonEditor } from '@ckeditor/ckeditor5-editor-balloon';
-import { BlockToolbar } from '@ckeditor/ckeditor5-ui';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Autoformat } from '@ssmckinney/ckeditor5-autoformat';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { Bold, Italic, Underline, Strikethrough, Superscript, Subscript, Code } from '@ssmckinney/ckeditor5-basic-styles';
+import { Heading, HeadingButtonsUI } from '@ssmckinney/ckeditor5-heading';
+import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageResize, ImageInsert, AutoImage, ImageUpload } from '@ssmckinney/ckeditor5-image';
+import { Indent, IndentBlock } from '@ssmckinney/ckeditor5-indent';
+import { Link, LinkImage, AutoLink } from '@ssmckinney/ckeditor5-link';
+import { List, ListProperties } from '@ssmckinney/ckeditor5-list';
+import { Paragraph, ParagraphButtonUI } from '@ssmckinney/ckeditor5-paragraph';
+import { Table, TableToolbar, TableProperties, TableCellProperties, TableCaption, TableColumnResize } from '@ssmckinney/ckeditor5-table';
+import { RemoveFormat } from '@ssmckinney/ckeditor5-remove-format';
+import { FindAndReplace } from '@ssmckinney/ckeditor5-find-and-replace';
+import { FontColor, FontBackgroundColor, FontFamily, FontSize } from '@ssmckinney/ckeditor5-font';
+import { Highlight } from '@ssmckinney/ckeditor5-highlight';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { EasyImage } from '@ssmckinney/ckeditor5-easy-image';
+import { HtmlEmbed } from '@ssmckinney/ckeditor5-html-embed';
+import { Mention } from '@ssmckinney/ckeditor5-mention';
+import { TextTransformation, Typing } from '@ssmckinney/ckeditor5-typing';
+import { Alignment } from '@ssmckinney/ckeditor5-alignment';
+import { PageBreak } from '@ssmckinney/ckeditor5-page-break';
+import { HorizontalLine } from '@ssmckinney/ckeditor5-horizontal-line';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { TextPartLanguage } from '@ssmckinney/ckeditor5-language';
+import { SourceEditing } from '@ssmckinney/ckeditor5-source-editing';
+import { Style } from '@ssmckinney/ckeditor5-style';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
+import { DecoupledEditor } from '@ssmckinney/ckeditor5-editor-decoupled';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { BalloonEditor } from '@ssmckinney/ckeditor5-editor-balloon';
+import { BlockToolbar } from '@ssmckinney/ckeditor5-ui';
 
 import { Clipboard, DragDrop } from '../../src/index.js';
 
-import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
+import { CS_CONFIG } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
 
 ClassicEditor
 	.create( {

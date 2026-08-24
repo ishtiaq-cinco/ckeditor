@@ -17,13 +17,13 @@ import {
 	ListItemView,
 	type SwitchButtonView,
 	type FocusableView
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 import {
 	FocusTracker,
 	KeystrokeHandler,
 	type Locale
-} from '@ckeditor/ckeditor5-utils';
-import { IconPreviousArrow } from '@ckeditor/ckeditor5-icons';
+} from '@ssmckinney/ckeditor5-utils';
+import { IconPreviousArrow } from '@ssmckinney/ckeditor5-icons';
 
 import '../../theme/linkproperties.css';
 

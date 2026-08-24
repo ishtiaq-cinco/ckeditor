@@ -7,7 +7,7 @@
  * @module clipboard/clipboardobserver
  */
 
-import { EventInfo, getRangeFromMouseEvent } from '@ckeditor/ckeditor5-utils';
+import { EventInfo, getRangeFromMouseEvent } from '@ssmckinney/ckeditor5-utils';
 
 import {
 	ViewDataTransfer,
@@ -17,7 +17,7 @@ import {
 	type ViewDocumentFragment,
 	type ViewElement,
 	type ViewRange
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { plainTextToHtml } from './utils/plaintexttohtml.js';
 
@@ -38,7 +38,7 @@ import { plainTextToHtml } from './utils/plaintexttohtml.js';
  * * {@link module:engine/view/document~ViewDocument#event:dragenter},
  * * {@link module:engine/view/document~ViewDocument#event:dragleave}.
  *
- * **Note**: This observer is not available by default (ckeditor5-engine does not add it on its own).
+ * **Note**: This observer is not available by default (@ssmckinney/ckeditor5-engine does not add it on its own).
  * To make it available, it needs to be added to {@link module:engine/view/document~ViewDocument} by using
  * the {@link module:engine/view/view~EditingView#addObserver `View#addObserver()`} method. Alternatively, you can load the
  * {@link module:clipboard/clipboard~Clipboard} plugin which adds this observer automatically (because it uses it).

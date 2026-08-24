@@ -14,7 +14,7 @@ Since there is a large number of emojis, they have been conveniently divided int
 
 ## Demo
 
-Use the emoji toolbar button {@icon @ckeditor/ckeditor5-icons/theme/icons/emoji.svg Emoji} in the editor below to open a panel with a table of selectable emojis. You may also trigger the emoji UI while writing the content by typing the pre-configured `:` marker followed by at least two letters of desired emoji name. Then, you can either choose which emoji to insert from the suggestion list or select the `Show all emoji...` option to open the full panel. The marker must be preceded by a space to work.
+Use the emoji toolbar button {@icon @ssmckinney/ckeditor5-icons/theme/icons/emoji.svg Emoji} in the editor below to open a panel with a table of selectable emojis. You may also trigger the emoji UI while writing the content by typing the pre-configured `:` marker followed by at least two letters of desired emoji name. Then, you can either choose which emoji to insert from the suggestion list or select the `Show all emoji...` option to open the full panel. The marker must be preceded by a space to work.
 
 There is an option to set the skin tone of the emojis next to the search field, too.
 
@@ -32,7 +32,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, Emoji, Mention } from 'ckeditor5';
+import { ClassicEditor, Emoji, Mention } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -180,7 +180,7 @@ The database of English emoji is loaded by default from our CDN. Make sure that 
 
 If you do not want to use our distribution and prefer to self-host emoji, you can use the {@link module:emoji/emojiconfig~EmojiConfig#definitionsUrl `definitionsUrl`} option. You can download the data directly from the package mentioned above or from our CDN, and place it under a static assets URL, for example:
 
-1. Download the latest emoji database from [https://cdn.ckeditor.com/ckeditor5/data/emoji/16/en.json](https://cdn.ckeditor.com/ckeditor5/data/emoji/16/en.json), or download version 15 for older Unicode versions.
+1. Download the latest emoji database from [https://cdn.ckeditor.com/@ssmckinney/ckeditor5/data/emoji/16/en.json](https://cdn.ckeditor.com/@ssmckinney/ckeditor5/data/emoji/16/en.json), or download version 15 for older Unicode versions.
 2. Place the downloaded file in your application's assets folder, for example `public/emoji/en.json`. The specific location may vary depending on your framework and setup.
 3. Update the configuration option `definitionsUrl` to point to the URL of your assets, for example: `https://example.com/emoji/en.json`.
 
@@ -233,7 +233,7 @@ The emoji repository could not be loaded due to a network issue, CORS restrictio
 
 For more details on configuring CSP, see the {@link getting-started/setup/csp Content Security Policy} guide.
 
-By following these steps, you should be able to resolve common issues with the emoji plugin in CKEditor&nbsp;5. If problems persist, check your browser console for additional error messages or consult the CKEditor 5 [GitHub repository for support](https://github.com/ckeditor/ckeditor5/issues).
+By following these steps, you should be able to resolve common issues with the emoji plugin in CKEditor&nbsp;5. If problems persist, check your browser console for additional error messages or consult the CKEditor 5 [GitHub repository for support](https://github.com/ssmckinney/ckeditor5/issues).
 
 ## Related features
 

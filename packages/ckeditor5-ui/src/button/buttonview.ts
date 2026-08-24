@@ -23,7 +23,7 @@ import {
 	delay,
 	type Locale,
 	type DelayedFunc
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import '../../theme/components/button/button.css';
 
@@ -316,7 +316,7 @@ export class ButtonView extends View<HTMLButtonElement> implements Button {
 		);
 
 		// On Safari we have to force the focus on a button on click as it's the only browser
-		// that doesn't do that automatically. See https://github.com/ckeditor/ckeditor5/issues/12115.
+		// that doesn't do that automatically. See https://github.com/ssmckinney/ckeditor5/issues/12115.
 		if ( env.isSafari ) {
 			/* v8 ignore else -- @preserve */
 			if ( !this._focusDelayed ) {

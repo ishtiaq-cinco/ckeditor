@@ -5,9 +5,9 @@
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { HighlightCommand } from './../src/highlightcommand.js';
-import { Command } from '@ckeditor/ckeditor5-core';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { Command } from '@ssmckinney/ckeditor5-core';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'HighlightCommand', () => {
 	let editor, model, doc, root, command;
@@ -224,7 +224,7 @@ describe( 'HighlightCommand', () => {
 			} );
 
 			describe( 'on not collapsed range', () => {
-				// https://github.com/ckeditor/ckeditor5/issues/18430
+				// https://github.com/ssmckinney/ckeditor5/issues/18430
 				it(
 					'when applying highlight to range that includes empty paragraph, empty paragraph should get selection:highlight',
 					() => {

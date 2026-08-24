@@ -4,8 +4,8 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { ButtonView, View } from '@ckeditor/ckeditor5-ui';
-import { Locale } from '@ckeditor/ckeditor5-utils';
+import { ButtonView, View } from '@ssmckinney/ckeditor5-ui';
+import { Locale } from '@ssmckinney/ckeditor5-utils';
 
 import { StyleGridButtonView } from '../../src/ui/stylegridbuttonview.js';
 

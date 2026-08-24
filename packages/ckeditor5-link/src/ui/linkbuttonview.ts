@@ -7,9 +7,9 @@
  * @module link/ui/linkbuttonview
  */
 
-import { IconNextArrow } from '@ckeditor/ckeditor5-icons';
-import { ButtonView, IconView } from '@ckeditor/ckeditor5-ui';
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import { IconNextArrow } from '@ssmckinney/ckeditor5-icons';
+import { ButtonView, IconView } from '@ssmckinney/ckeditor5-ui';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Represents a view for a dropdown menu button.

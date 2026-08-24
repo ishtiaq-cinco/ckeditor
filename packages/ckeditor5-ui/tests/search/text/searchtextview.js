@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { FocusTracker, KeystrokeHandler, Locale, keyCodes } from '@ckeditor/ckeditor5-utils';
+import { FocusTracker, KeystrokeHandler, Locale, keyCodes } from '@ssmckinney/ckeditor5-utils';
 import {
 	FocusCycler,
 	InputNumberView,

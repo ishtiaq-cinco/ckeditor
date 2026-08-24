@@ -7,7 +7,7 @@ import { describe, it, expect, beforeEach, beforeAll } from 'vitest';
 import { ViewRawElement } from '../../src/view/rawelement.js';
 import { ViewElement } from '../../src/view/element.js';
 import { ViewDocument } from '../../src/view/document.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { StylesProcessor } from '../../src/view/stylesmap.js';
 import { ViewRootEditableElement } from '../../src/index.js';
 

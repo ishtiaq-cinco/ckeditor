@@ -7,13 +7,13 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { EditorUI } from '../../src/editorui/editorui.js';
 import { View } from '../../src/view.js';
 import { BalloonPanelView } from '../../src/panel/balloon/balloonpanelview.js';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { global } from '@ckeditor/ckeditor5-utils';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { global } from '@ssmckinney/ckeditor5-utils';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { TooltipManager } from '../../src/tooltipmanager.js';
-import { Editor } from '@ckeditor/ckeditor5-core';
+import { Editor } from '@ssmckinney/ckeditor5-core';
 
 describe( 'TooltipManager', () => {
 	let editor, element, tooltipManager;
@@ -96,7 +96,7 @@ describe( 'TooltipManager', () => {
 				expect( stopListeningSpy.mock.calls[ 2 ] ).toEqual( [] );
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/12602
+			// https://github.com/ssmckinney/ckeditor5/issues/12602
 			it( 'should avoid destroying #balloonPanelView until the last editor gets destroyed', async () => {
 				const spy = vi.spyOn( tooltipManager.balloonPanelView, 'destroy' );
 				const elements = getElementsWithTooltips( {
@@ -577,7 +577,7 @@ describe( 'TooltipManager', () => {
 		} );
 
 		// Ensure that all changes to the tooltip are set before pinning it due to positioning issues.
-		// See https://github.com/ckeditor/ckeditor5/issues/16365
+		// See https://github.com/ssmckinney/ckeditor5/issues/16365
 		it( 'should set proper class to ballonPanelView before the tooltip is shown', () => {
 			const { balloonPanelView } = tooltipManager;
 

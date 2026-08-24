@@ -8,7 +8,7 @@ import {
 	FontSize,
 	FontFamily,
 	FontColor
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 import {
 	CS_CONFIG,
 	TOKEN_URL,

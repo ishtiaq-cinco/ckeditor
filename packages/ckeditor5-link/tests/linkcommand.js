@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
 import { LinkCommand } from '../src/linkcommand.js';
 import { LinkManualDecorator } from '../src/utils/manualdecorator.js';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { AutomaticLinkDecorators } from '../src/utils/automaticdecorators.js';
 import { LinkEditing } from '../src/linkediting.js';
 
@@ -750,7 +750,7 @@ describe( 'LinkCommand', () => {
 				expect( _getModelData( model ) ).toBe( '<paragraph>foo[]bar</paragraph>' );
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/8210
+			// https://github.com/ssmckinney/ckeditor5/issues/8210
 			it( 'should insert text with `linkHref` attribute just after text node with the same `linkHref` attribute', () => {
 				_setModelData( model, '<$text linkHref="url">foo</$text>[]bar' );
 

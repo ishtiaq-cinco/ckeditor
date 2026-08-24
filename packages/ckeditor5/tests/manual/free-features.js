@@ -3,26 +3,26 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Alignment } from '@ckeditor/ckeditor5-alignment';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { AutoImage, ImageInsert } from '@ckeditor/ckeditor5-image';
-import { AutoLink, LinkImage } from '@ckeditor/ckeditor5-link';
-import { Code, Strikethrough, Subscript, Superscript, Underline } from '@ckeditor/ckeditor5-basic-styles';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { FontBackgroundColor, FontColor, FontFamily, FontSize } from '@ckeditor/ckeditor5-font';
-import { Highlight } from '@ckeditor/ckeditor5-highlight';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
-import { IndentBlock } from '@ckeditor/ckeditor5-indent';
-import { Mention } from '@ckeditor/ckeditor5-mention';
-import { ShowBlocks } from '@ckeditor/ckeditor5-show-blocks';
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
-import { TextTransformation } from '@ckeditor/ckeditor5-typing';
-import { TextPartLanguage } from '@ckeditor/ckeditor5-language';
-import { TodoList } from '@ckeditor/ckeditor5-list';
-import { Style } from '@ckeditor/ckeditor5-style';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-import { Fullscreen } from '@ckeditor/ckeditor5-fullscreen';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Alignment } from '@ssmckinney/ckeditor5-alignment';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { AutoImage, ImageInsert } from '@ssmckinney/ckeditor5-image';
+import { AutoLink, LinkImage } from '@ssmckinney/ckeditor5-link';
+import { Code, Strikethrough, Subscript, Superscript, Underline } from '@ssmckinney/ckeditor5-basic-styles';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { FontBackgroundColor, FontColor, FontFamily, FontSize } from '@ssmckinney/ckeditor5-font';
+import { Highlight } from '@ssmckinney/ckeditor5-highlight';
+import { HorizontalLine } from '@ssmckinney/ckeditor5-horizontal-line';
+import { IndentBlock } from '@ssmckinney/ckeditor5-indent';
+import { Mention } from '@ssmckinney/ckeditor5-mention';
+import { ShowBlocks } from '@ssmckinney/ckeditor5-show-blocks';
+import { SourceEditing } from '@ssmckinney/ckeditor5-source-editing';
+import { TextTransformation } from '@ssmckinney/ckeditor5-typing';
+import { TextPartLanguage } from '@ssmckinney/ckeditor5-language';
+import { TodoList } from '@ssmckinney/ckeditor5-list';
+import { Style } from '@ssmckinney/ckeditor5-style';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
+import { Fullscreen } from '@ssmckinney/ckeditor5-fullscreen';
 
 // For simplicity this is not blocked right now by the license key. We can do that later.
 ClassicEditor

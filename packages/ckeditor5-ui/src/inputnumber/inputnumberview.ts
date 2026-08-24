@@ -9,7 +9,7 @@
 
 import { InputView } from '../input/inputview.js';
 
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * The number input view class.

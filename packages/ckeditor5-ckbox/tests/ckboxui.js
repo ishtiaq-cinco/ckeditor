@@ -5,8 +5,8 @@
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 
-import { ButtonView, UIModel, MenuBarMenuListItemButtonView } from '@ckeditor/ckeditor5-ui';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
+import { ButtonView, UIModel, MenuBarMenuListItemButtonView } from '@ssmckinney/ckeditor5-ui';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
 import {
 	PictureEditing,
 	ImageUploadEditing,
@@ -14,11 +14,11 @@ import {
 	ImageBlockEditing,
 	ImageInlineEditing,
 	ImageInsertUI
-} from '@ckeditor/ckeditor5-image';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+} from '@ssmckinney/ckeditor5-image';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { CloudServicesCoreMock } from './_utils/cloudservicescoremock.js';
-import { IconImageAssetManager, IconBrowseFiles } from '@ckeditor/ckeditor5-icons';
+import { IconImageAssetManager, IconBrowseFiles } from '@ssmckinney/ckeditor5-icons';
 
 import { CKBoxUI } from '../src/ckboxui.js';
 import { CKBoxEditing } from '../src/ckboxediting.js';

@@ -42,7 +42,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, Bold, EditorWatchdog, Essentials, Italic, Paragraph } from 'ckeditor5';
+import { ClassicEditor, Bold, EditorWatchdog, Essentials, Italic, Paragraph } from '@ssmckinney/ckeditor5';
 
 // Create a watchdog for the given editor type.
 const watchdog = new EditorWatchdog( ClassicEditor );
@@ -153,7 +153,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, ContextWatchdog, Bold, Italic, Context, Essentials, Paragraph } from 'ckeditor5';
+import { ClassicEditor, ContextWatchdog, Bold, Italic, Context, Essentials, Paragraph } from '@ssmckinney/ckeditor5';
 
 // Create a context watchdog and pass the context class with optional watchdog configuration:
 const watchdog = new ContextWatchdog( Context, {

@@ -7,14 +7,14 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
 import { Title } from '../src/title.js';
 import { Heading } from '../src/heading.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { _getModelData } from '@ssmckinney/ckeditor5-engine';
 
-import { MultiRootEditor } from '@ckeditor/ckeditor5-editor-multi-root';
+import { MultiRootEditor } from '@ssmckinney/ckeditor5-editor-multi-root';
 
 describe( 'Title integration with feature', () => {
 	let editor, model, doc, element;
@@ -41,7 +41,7 @@ describe( 'Title integration with feature', () => {
 	} );
 
 	describe( 'basic styles', () => {
-		// See: https://github.com/ckeditor/ckeditor5/issues/6427
+		// See: https://github.com/ssmckinney/ckeditor5/issues/6427
 		it( 'should work when basic styles are applied to the content', () => {
 			editor.setData( '<h1>Title</h1><p>Foo</p>' );
 

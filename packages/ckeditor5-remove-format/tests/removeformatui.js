@@ -4,15 +4,15 @@
  */
 
 import { beforeAll, afterAll, beforeEach, afterEach, describe, it, expect, vi } from 'vitest';
-import { IconRemoveFormat } from '@ckeditor/ckeditor5-icons';
+import { IconRemoveFormat } from '@ssmckinney/ckeditor5-icons';
 import { RemoveFormat } from '../src/removeformat.js';
 import { RemoveFormatUI } from '../src/removeformatui.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { ButtonView, MenuBarMenuListItemButtonView } from '@ckeditor/ckeditor5-ui';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ButtonView, MenuBarMenuListItemButtonView } from '@ssmckinney/ckeditor5-ui';
 import {
 	_clearTranslations,
 	add as addTranslations
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 describe( 'RemoveFormatUI', () => {
 	let editor, element, button;

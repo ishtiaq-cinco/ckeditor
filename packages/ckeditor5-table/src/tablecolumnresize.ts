@@ -7,7 +7,7 @@
  * @module table/tablecolumnresize
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { TableColumnResizeEditing } from './tablecolumnresize/tablecolumnresizeediting.js';
 import { TableCellWidthEditing } from './tablecellwidth/tablecellwidthediting.js';
 

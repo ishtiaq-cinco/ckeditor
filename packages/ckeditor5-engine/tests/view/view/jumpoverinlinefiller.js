@@ -8,7 +8,7 @@ import { EditingView } from '../../../src/view/view.js';
 import { INLINE_FILLER_LENGTH, isInlineFiller, startsWithFiller } from '../../../src/view/filler.js';
 
 import { createViewRoot } from '../_utils/createroot.js';
-import { keyCodes, createElement } from '@ckeditor/ckeditor5-utils';
+import { keyCodes, createElement } from '@ssmckinney/ckeditor5-utils';
 
 import { _parseView, _setViewData } from '../../../src/dev-utils/view.js';
 import { StylesProcessor } from '../../../src/view/stylesmap.js';

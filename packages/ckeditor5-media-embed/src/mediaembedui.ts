@@ -7,13 +7,13 @@
  * @module media-embed/mediaembedui
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { IconMedia } from '@ckeditor/ckeditor5-icons';
-import { ButtonView, CssTransitionDisablerMixin, MenuBarMenuListItemButtonView, Dialog } from '@ckeditor/ckeditor5-ui';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { IconMedia } from '@ssmckinney/ckeditor5-icons';
+import { ButtonView, CssTransitionDisablerMixin, MenuBarMenuListItemButtonView, Dialog } from '@ssmckinney/ckeditor5-ui';
 
 import { MediaFormView } from './ui/mediaformview.js';
 import { MediaEmbedEditing } from './mediaembedediting.js';
-import type { LocaleTranslate } from '@ckeditor/ckeditor5-utils';
+import type { LocaleTranslate } from '@ssmckinney/ckeditor5-utils';
 import { type MediaRegistry } from './mediaregistry.js';
 
 /**

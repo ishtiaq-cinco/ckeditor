@@ -4,17 +4,17 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
 import { TableToolbar } from '../src/tabletoolbar.js';
 import { Table } from '../src/table.js';
-import { global } from '@ckeditor/ckeditor5-utils';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { ButtonView, View } from '@ckeditor/ckeditor5-ui';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
-import { WidgetToolbarRepository } from '@ckeditor/ckeditor5-widget';
-import { ImageToolbar, Image, ImageStyle } from '@ckeditor/ckeditor5-image';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
+import { global } from '@ssmckinney/ckeditor5-utils';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { ButtonView, View } from '@ssmckinney/ckeditor5-ui';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { WidgetToolbarRepository } from '@ssmckinney/ckeditor5-widget';
+import { ImageToolbar, Image, ImageStyle } from '@ssmckinney/ckeditor5-image';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
 
 describe( 'TableToolbar', () => {
 	afterEach( () => {

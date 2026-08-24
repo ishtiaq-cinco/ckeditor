@@ -4,12 +4,12 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import {
 	FocusTracker,
 	KeystrokeHandler,
 	Locale
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { DropdownMenuButtonView } from '../../../src/dropdown/menu/dropdownmenubuttonview.js';
 import { DropdownMenuNestedMenuPanelView } from '../../../src/dropdown/menu/dropdownmenunestedmenupanelview.js';

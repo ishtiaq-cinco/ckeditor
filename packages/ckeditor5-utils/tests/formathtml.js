@@ -251,7 +251,7 @@ describe( 'formatHtml()', () => {
 		expect( formatHtml( source ) ).to.equal( sourceFormatted );
 	} );
 
-	// See https://github.com/ckeditor/ckeditor5/issues/18360.
+	// See https://github.com/ssmckinney/ckeditor5/issues/18360.
 	it( 'should recognize single line code block', () => {
 		const source = '' +
 			'<p>' +
@@ -348,7 +348,7 @@ describe( 'formatHtml()', () => {
 		expect( formatHtml( source ) ).to.equal( sourceFormatted );
 	} );
 
-	// More about this case in https://github.com/ckeditor/ckeditor5/issues/10698.
+	// More about this case in https://github.com/ssmckinney/ckeditor5/issues/10698.
 	it( 'should not crash when a pathological <iframe> content appears in source', () => {
 		const source =
 			'<p>' +

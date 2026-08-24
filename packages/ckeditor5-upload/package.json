@@ -1,21 +1,21 @@
 {
-  "name": "@ckeditor/ckeditor5-upload",
+  "name": "@ssmckinney/ckeditor5-upload",
   "version": "48.3.0",
   "description": "Upload feature for CKEditor 5.",
   "license": "SEE LICENSE IN LICENSE.md",
   "author": "CKSource (http://cksource.com/)",
   "homepage": "https://ckeditor.com/ckeditor-5",
-  "bugs": "https://github.com/ckeditor/ckeditor5/issues",
+  "bugs": "https://github.com/ssmckinney/ckeditor5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5.git",
+    "url": "https://github.com/ssmckinney/ckeditor5.git",
     "directory": "packages/ckeditor5-upload"
   },
   "keywords": [
     "ckeditor",
     "ckeditor5",
     "ckeditor 5",
-    "ckeditor5-lib"
+    "@ssmckinney/ckeditor5-lib"
   ],
   "type": "module",
   "main": "./src/index.ts",
@@ -34,8 +34,8 @@
     }
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-core": "workspace:*",
-    "@ckeditor/ckeditor5-utils": "workspace:*"
+    "@ssmckinney/ckeditor5-utils": "workspace:*",
+    "@ssmckinney/ckeditor5-core": "workspace:*"
   },
   "devDependencies": {
     "@vitest/browser-playwright": "^4.1.8",
@@ -51,7 +51,7 @@
   },
   "files": [
     "dist",
-    "ckeditor5-metadata.json",
+    "@ssmckinney/ckeditor5-metadata.json",
     "CHANGELOG.md"
   ]
 }

@@ -11,7 +11,7 @@ import { DomEventObserver } from './domeventobserver.js';
 import { type ViewDocumentDomEventData } from './domeventdata.js';
 import { type ViewRange } from '../range.js';
 import { ViewDataTransfer } from '../datatransfer.js';
-import { env, isText, indexOf } from '@ckeditor/ckeditor5-utils';
+import { env, isText, indexOf } from '@ssmckinney/ckeditor5-utils';
 import { INLINE_FILLER_LENGTH, startsWithFiller } from '../filler.js';
 
 // @if CK_DEBUG_TYPING // import { _debouncedLine, _buildLogMessage } from '../../dev-utils/utils.js';
@@ -94,8 +94,8 @@ export class InputObserver extends DomEventObserver<'beforeinput'> {
 			targetRanges = domTargetRanges.map( domRange => {
 				// Sometimes browser provides range that starts before editable node.
 				// We try to fall back to collapsed range at the valid end position.
-				// See https://github.com/ckeditor/ckeditor5/issues/14411.
-				// See https://github.com/ckeditor/ckeditor5/issues/14050.
+				// See https://github.com/ssmckinney/ckeditor5/issues/14411.
+				// See https://github.com/ssmckinney/ckeditor5/issues/14050.
 				let viewStart = view.domConverter.domPositionToView( domRange.startContainer, domRange.startOffset );
 				const viewEnd = view.domConverter.domPositionToView( domRange.endContainer, domRange.endOffset );
 
@@ -179,7 +179,7 @@ export class InputObserver extends DomEventObserver<'beforeinput'> {
 		// instead of firing insertParagraph beforeInput event.
 		// Fire the correct type of beforeInput event and ignore the replaced fragment of text because
 		// it wants to replace "test" with "test\n".
-		// https://github.com/ckeditor/ckeditor5/issues/12368.
+		// https://github.com/ssmckinney/ckeditor5/issues/12368.
 		if ( env.isAndroid && domEvent.inputType == 'insertCompositionText' && data && data.endsWith( '\n' ) ) {
 			this.fire( domEvent.type, domEvent, {
 				inputType: 'insertParagraph',
@@ -194,7 +194,7 @@ export class InputObserver extends DomEventObserver<'beforeinput'> {
 		}
 
 		// Normalize the insertText data that includes new-line characters.
-		// https://github.com/ckeditor/ckeditor5/issues/2045.
+		// https://github.com/ssmckinney/ckeditor5/issues/2045.
 		if ( [ 'insertText', 'insertReplacementText' ].includes( domEvent.inputType ) && data && data.includes( '\n' ) ) {
 			// There might be a single new-line or double for new paragraph, but we translate
 			// it to paragraphs as it is our default action for enter handling.

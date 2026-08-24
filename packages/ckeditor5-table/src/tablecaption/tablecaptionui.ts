@@ -6,9 +6,9 @@
 /**
 * @module table/tablecaption/tablecaptionui
 */
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { ButtonView } from '@ckeditor/ckeditor5-ui';
-import { IconCaption } from '@ckeditor/ckeditor5-icons';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { ButtonView } from '@ssmckinney/ckeditor5-ui';
+import { IconCaption } from '@ssmckinney/ckeditor5-icons';
 import { type ToggleTableCaptionCommand } from './toggletablecaptioncommand.js';
 
 import { getCaptionFromModelSelection } from './utils.js';

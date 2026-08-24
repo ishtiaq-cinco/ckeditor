@@ -15,7 +15,7 @@ import { BR_FILLER, INLINE_FILLER, INLINE_FILLER_LENGTH, NBSP_FILLER, MARKED_NBS
 import { StylesProcessor } from '../../../src/view/stylesmap.js';
 import { _parseView, _stringifyView } from '../../../src/dev-utils/view.js';
 
-import { count, createElement, env } from '@ckeditor/ckeditor5-utils';
+import { count, createElement, env } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'DomConverter', () => {
 	let converter, viewDocument;
@@ -404,7 +404,7 @@ describe( 'DomConverter', () => {
 			} );
 
 			// This TC ensures that the algorithm stops on <br>.
-			// If not, situations like https://github.com/ckeditor/ckeditor5/issues/1024#issuecomment-393109558 might occur.
+			// If not, situations like https://github.com/ssmckinney/ckeditor5/issues/1024#issuecomment-393109558 might occur.
 			it( 'after a <br> – when <br> is preceeded with a nbsp', () => {
 				const domP = createElement( document, 'p', {}, [
 					document.createTextNode( 'foo\u00a0' ),
@@ -712,7 +712,7 @@ describe( 'DomConverter', () => {
 				expect( view.data ).toBe( 'foo' );
 			} );
 
-			// See https://github.com/ckeditor/ckeditor5/issues/692.
+			// See https://github.com/ssmckinney/ckeditor5/issues/692.
 			it( 'should not remove space after inline filler if previous node nor next node does not exist', () => {
 				const text = document.createTextNode( INLINE_FILLER + ' ' );
 				const view = converter.domToView( text );
@@ -928,7 +928,7 @@ describe( 'DomConverter', () => {
 			expect( _stringifyView( viewP, viewPosition ) ).toBe( '<p>foo[]</p>' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/12575.
+		// https://github.com/ssmckinney/ckeditor5/issues/12575.
 		it( 'should convert position between inline filler and br element', () => {
 			const domFiller = document.createTextNode( INLINE_FILLER );
 			const domBr = createElement( document, 'br' );
@@ -944,7 +944,7 @@ describe( 'DomConverter', () => {
 			expect( _stringifyView( viewP, viewPosition ) ).toBe( '<p>[]<br></br></p>' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/12575.
+		// https://github.com/ssmckinney/ckeditor5/issues/12575.
 		it( 'should convert position between inline filler and br element (multiple br elements)', () => {
 			const domFiller = document.createTextNode( INLINE_FILLER );
 			const domBr1 = createElement( document, 'br' );
@@ -1223,7 +1223,7 @@ describe( 'DomConverter', () => {
 			domP.remove();
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/12375
+		// https://github.com/ssmckinney/ckeditor5/issues/12375
 		// It happens on Safari that current selection doesn't make any sense.
 		it( 'should not throw when selection.focusOffset is greater than the number of elements', () => {
 			const domFoo = document.createTextNode( 'foo' );
@@ -1327,7 +1327,7 @@ describe( 'DomConverter', () => {
 			domContainer.remove();
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/9635.
+		// See https://github.com/ssmckinney/ckeditor5/issues/9635.
 		describe( 'restricted objects in Firefox', () => {
 			it( 'not throw if selection is anchored in the restricted object', () => {
 				vi.spyOn( env, 'isGecko', 'get' ).mockReturnValue( true );

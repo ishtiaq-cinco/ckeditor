@@ -19,7 +19,7 @@ import {
 	AutoImage,
 	LinkImage,
 	RemoveFormat
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 import { ClassicEditor } from '@snippets/index.js';
 
 export class BasicStylesEditor extends ClassicEditor {

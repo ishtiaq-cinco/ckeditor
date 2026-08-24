@@ -7,8 +7,8 @@
  * @module bookmark/bookmarkui
  */
 
-import type { LinksProviderDetailedItem, LinksProviderListItem } from '@ckeditor/ckeditor5-link';
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import type { LinksProviderDetailedItem, LinksProviderListItem } from '@ssmckinney/ckeditor5-link';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import {
 	ButtonView,
 	ContextualBalloon,
@@ -18,17 +18,17 @@ import {
 	LabelView,
 	BalloonPanelView,
 	type ViewWithCssTransitionDisabler
-} from '@ckeditor/ckeditor5-ui';
-import { IconBookmark, IconRemove, IconBookmarkMedium, IconBookmarkSmall, IconPencil } from '@ckeditor/ckeditor5-icons';
+} from '@ssmckinney/ckeditor5-ui';
+import { IconBookmark, IconRemove, IconBookmarkMedium, IconBookmarkSmall, IconPencil } from '@ssmckinney/ckeditor5-icons';
 import {
 	type ModelElement,
 	type ViewDocumentSelection,
 	type ViewElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import type { DomOptimalPositionOptions } from '@ckeditor/ckeditor5-utils';
-import type { DeleteCommand } from '@ckeditor/ckeditor5-typing';
-import { isWidget, WidgetToolbarRepository } from '@ckeditor/ckeditor5-widget';
+import type { DomOptimalPositionOptions } from '@ssmckinney/ckeditor5-utils';
+import type { DeleteCommand } from '@ssmckinney/ckeditor5-typing';
+import { isWidget, WidgetToolbarRepository } from '@ssmckinney/ckeditor5-widget';
 
 import { BookmarkFormView, type BookmarkFormViewCancelEvent, type BookmarkFormValidatorCallback } from './ui/bookmarkformview.js';
 import { type UpdateBookmarkCommand } from './updatebookmarkcommand.js';
@@ -162,7 +162,7 @@ export class BookmarkUI extends Plugin {
 	public override destroy(): void {
 		super.destroy();
 
-		// Destroy created UI components as they are not automatically destroyed (see https://github.com/ckeditor/ckeditor5/issues/1341).
+		// Destroy created UI components as they are not automatically destroyed (see https://github.com/ssmckinney/ckeditor5/issues/1341).
 		if ( this.formView ) {
 			this.formView.destroy();
 		}
@@ -437,7 +437,7 @@ export class BookmarkUI extends Plugin {
 				// Focusing on the editable during a click outside the balloon panel might
 				// cause the selection to move to the beginning of the editable, so we avoid
 				// focusing on it during this action.
-				// See: https://github.com/ckeditor/ckeditor5/issues/18253
+				// See: https://github.com/ssmckinney/ckeditor5/issues/18253
 				this._hideFormView( false );
 			}
 		} );
@@ -481,7 +481,7 @@ export class BookmarkUI extends Plugin {
 	 */
 	private _removeFormView( updateFocus: boolean = true ): void {
 		// Blur the input element before removing it from DOM to prevent issues in some browsers.
-		// See https://github.com/ckeditor/ckeditor5/issues/1501.
+		// See https://github.com/ssmckinney/ckeditor5/issues/1501.
 		this.formView!.saveButtonView.focus();
 
 		// Reset the ID field to update the state of the submit button.

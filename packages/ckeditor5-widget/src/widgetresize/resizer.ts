@@ -7,7 +7,7 @@
  * @module widget/widgetresize/resizer
  */
 
-import { Template } from '@ckeditor/ckeditor5-ui';
+import { Template } from '@ssmckinney/ckeditor5-ui';
 import {
 	Rect,
 	ObservableMixin,
@@ -15,13 +15,13 @@ import {
 	type ObservableChangeEvent,
 	type DecoratedMethodEvent,
 	type ObservableMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { WidgetResizeState } from './resizerstate.js';
 import { SizeView } from './sizeview.js';
 
 import type { WidgetResizerOptions } from '../widgetresize.js';
-import type { ViewElement } from '@ckeditor/ckeditor5-engine';
+import type { ViewElement } from '@ssmckinney/ckeditor5-engine';
 
 const WidgetResizerBase: ObservableMixinConstructor = /* #__PURE__ */ ObservableMixin();
 
@@ -98,7 +98,7 @@ export class WidgetResizer extends WidgetResizerBase {
 
 		this.on( 'commit', event => {
 			// State might not be initialized yet. In this case, prevent further handling and make sure that the resizer is
-			// cleaned up (https://github.com/ckeditor/ckeditor5/issues/5195).
+			// cleaned up (https://github.com/ssmckinney/ckeditor5/issues/5195).
 			if ( !this.state.proposedWidth && !this.state.proposedWidthPercents ) {
 				this._cleanup();
 				event.stop();
@@ -320,7 +320,7 @@ export class WidgetResizer extends WidgetResizerBase {
 		// Otherwise, if View#change() was always called, this would cause EditorUI#update
 		// loops because the WidgetResize plugin listens to EditorUI#update and updates
 		// the resizer.
-		// https://github.com/ckeditor/ckeditor5/issues/7633
+		// https://github.com/ssmckinney/ckeditor5/issues/7633
 		if ( compareArrays( currentDimensions, newDimensions ) !== 'same' ) {
 			this._options.editor.editing.view.change( writer => {
 				writer.setStyle( {

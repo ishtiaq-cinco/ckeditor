@@ -15,6 +15,11 @@ const LIST_STYLE_TYPES: Array<{ listStyle: string; typeAttribute: string | null;
 	{ listStyle: 'disc', typeAttribute: 'disc', listType: 'bulleted' },
 	{ listStyle: 'circle', typeAttribute: 'circle', listType: 'bulleted' },
 	{ listStyle: 'square', typeAttribute: 'square', listType: 'bulleted' },
+
+	// No `type` attribute exists for these: they are painted from an SVG and travel as a class.
+	// See `module:list/listproperties/utils/markers`.
+	{ listStyle: 'circle-tick', typeAttribute: null, listType: 'bulleted' },
+	{ listStyle: 'circle-cross', typeAttribute: null, listType: 'bulleted' },
 	{ listStyle: 'decimal', typeAttribute: '1', listType: 'numbered' },
 	{ listStyle: 'decimal-leading-zero', typeAttribute: null, listType: 'numbered' },
 	{ listStyle: 'lower-roman', typeAttribute: 'i', listType: 'numbered' },

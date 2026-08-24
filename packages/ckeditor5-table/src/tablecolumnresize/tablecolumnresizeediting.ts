@@ -17,9 +17,9 @@ import {
 	type EventInfo,
 	type DomEmitter,
 	type ObservableChangeEvent
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import type {
 	Differ,
@@ -29,7 +29,7 @@ import type {
 	ModelElement,
 	ViewElement,
 	ViewNode
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { MouseEventsObserver } from '../tablemouse/mouseeventsobserver.js';
 import { TableEditing } from '../tableediting.js';
@@ -214,7 +214,7 @@ export class TableColumnResizeEditing extends Plugin {
 		// Currently the states of column resize and table resize (which is actually the last column resize) features
 		// are bound together. They can be separated in the future by adding distinct listeners and applying
 		// different CSS classes (e.g. `ck-column-resize_disabled` and `ck-table-resize_disabled`) to the editor root.
-		// See https://github.com/ckeditor/ckeditor5/issues/12148 for the details.
+		// See https://github.com/ssmckinney/ckeditor5/issues/12148 for the details.
 		this.bind( '_isResizingAllowed' ).to(
 			editor, 'isReadOnly',
 			columnResizePlugin, 'isEnabled',
@@ -462,7 +462,7 @@ export class TableColumnResizeEditing extends Plugin {
 					const viewColWidth = viewElement.getStyle( 'width' );
 
 					// 'pt' is the default unit for table column width pasted from MS Office.
-					// See https://github.com/ckeditor/ckeditor5/issues/14521#issuecomment-1662102889 for more details.
+					// See https://github.com/ssmckinney/ckeditor5/issues/14521#issuecomment-1662102889 for more details.
 					if ( !viewColWidth || ( !viewColWidth.endsWith( '%' ) && !viewColWidth.endsWith( 'pt' ) ) ) {
 						return 'auto';
 					}
@@ -474,7 +474,7 @@ export class TableColumnResizeEditing extends Plugin {
 
 		// The `col[span]` attribute is present in tables pasted from MS Excel. We use it to set the temporary `colSpan` model attribute,
 		// which is consumed during the `colgroup` element upcast.
-		// See https://github.com/ckeditor/ckeditor5/issues/14521#issuecomment-1662102889 for more details.
+		// See https://github.com/ssmckinney/ckeditor5/issues/14521#issuecomment-1662102889 for more details.
 		conversion.for( 'upcast' ).attributeToAttribute( {
 			view: {
 				name: 'col',

@@ -10,7 +10,7 @@ import { Command } from '../src/command.js';
 import { Context } from '../src/context.js';
 import { Plugin } from '../src/plugin.js';
 import { ContextPlugin } from '../src/contextplugin.js';
-import { expectToThrowCKEditorError, expectToRejectWithCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError, expectToRejectWithCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 let editor, availablePlugins;
 let PluginA, PluginB, PluginC, PluginD, PluginE, PluginF, PluginG, PluginH, PluginI, PluginJ, PluginK, PluginX, PluginFoo, AnotherPluginFoo;

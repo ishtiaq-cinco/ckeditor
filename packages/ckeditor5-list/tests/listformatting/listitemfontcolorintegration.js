@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { CodeBlockEditing } from '@ckeditor/ckeditor5-code-block';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { FontColorEditing } from '@ckeditor/ckeditor5-font';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { ModelElement, _setModelData, _getModelData, _stringifyModel, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { CodeBlockEditing } from '@ssmckinney/ckeditor5-code-block';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { FontColorEditing } from '@ssmckinney/ckeditor5-font';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ModelElement, _setModelData, _getModelData, _stringifyModel, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
 
 import { stubUid } from '../list/_utils/uid.js';
 import { ListEditing } from '../../src/list/listediting.js';

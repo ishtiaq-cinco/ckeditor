@@ -7,7 +7,7 @@
  * @module media-embed/mediaembedresize
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { MediaEmbedResizeEditing } from './mediaembedresize/mediaembedresizeediting.js';
 import { MediaEmbedResizeHandles } from './mediaembedresize/mediaembedresizehandles.js';
 import { MediaEmbedResizeButtons } from './mediaembedresize/mediaembedresizebuttons.js';

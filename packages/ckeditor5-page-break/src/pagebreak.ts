@@ -7,8 +7,8 @@
  * @module page-break/pagebreak
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { Widget } from '@ckeditor/ckeditor5-widget';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
 
 import { PageBreakEditing } from './pagebreakediting.js';
 import { PageBreakUI } from './pagebreakui.js';

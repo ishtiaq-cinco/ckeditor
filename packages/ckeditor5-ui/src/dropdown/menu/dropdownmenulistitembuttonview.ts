@@ -7,7 +7,7 @@
  * @module ui/dropdown/menu/dropdownmenulistitembuttonview
  */
 
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
 import { ButtonView } from '../../button/buttonview.js';
 

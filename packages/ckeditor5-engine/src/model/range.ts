@@ -21,7 +21,7 @@ import { type MoveOperation } from './operation/moveoperation.js';
 import { type Operation } from './operation/operation.js';
 import { type SplitOperation } from './operation/splitoperation.js';
 
-import { CKEditorError, compareArrays } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, compareArrays } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Represents a range in the model tree.

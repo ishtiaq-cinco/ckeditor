@@ -5,14 +5,14 @@
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { RemoveFormat } from '@ssmckinney/ckeditor5-remove-format';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { Style } from '../../src/style.js';
 

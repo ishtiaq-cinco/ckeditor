@@ -7,15 +7,15 @@
  * @module html-support/integrations/image
  */
 
-import { type Editor, Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { type Editor, Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import type {
 	DowncastAttributeEvent,
 	DowncastDispatcher,
 	ModelElement,
 	ModelNode,
 	UpcastDispatcher
-} from '@ckeditor/ckeditor5-engine';
-import type { ImageUtils } from '@ckeditor/ckeditor5-image';
+} from '@ssmckinney/ckeditor5-engine';
+import type { ImageUtils } from '@ssmckinney/ckeditor5-image';
 
 import { DataFilter, type HtmlSupportDataFilterRegisterEvent } from '../datafilter.js';
 import { type GHSViewAttributes, setViewAttributes, updateViewAttributes } from '../utils.js';

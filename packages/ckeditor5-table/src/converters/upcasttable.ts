@@ -7,11 +7,11 @@
  * @module table/converters/upcasttable
  */
 
-import type { ModelElement, UpcastDispatcher, UpcastElementEvent, ViewElement, ViewNode } from '@ckeditor/ckeditor5-engine';
+import type { ModelElement, UpcastDispatcher, UpcastElementEvent, ViewElement, ViewNode } from '@ssmckinney/ckeditor5-engine';
 
 import { createEmptyTableCell } from '../utils/common.js';
 import { getViewTableFromWrapper } from '../utils/structure.js';
-import { first } from '@ckeditor/ckeditor5-utils';
+import { first } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Returns a function that converts the table view representation:
@@ -262,7 +262,7 @@ function scanTable( viewTable: ViewElement ) {
 		}
 
 		// There might be some extra empty text nodes between the `<tr>`s.
-		// Make sure further code operates on `tr`s only. (https://github.com/ckeditor/ckeditor5/issues/145)
+		// Make sure further code operates on `tr`s only. (https://github.com/ssmckinney/ckeditor5/issues/145)
 		const trs = Array.from( tableChild.getChildren() ).filter(
 			( el: ViewNode ): el is ViewElement & { name: 'tr' } => el.is( 'element', 'tr' )
 		);
@@ -343,7 +343,7 @@ function scanTable( viewTable: ViewElement ) {
 					// These conditions handles the case when the first column is a <th> element and it's the only column in the row.
 					// This case is problematic because it's not clear if this row should be a heading row or not, as it may be result
 					// of the cell span from the previous row.
-					// Issue: https://github.com/ckeditor/ckeditor5/issues/17556
+					// Issue: https://github.com/ssmckinney/ckeditor5/issues/17556
 					( maxPrevColumns === null || trColumns.length === maxPrevColumns ) &&
 					trColumns.every( e => e.is( 'element', 'th' ) ) &&
 					// If there is at least one "normal" table row between heading rows, then stop accumulating heading rows.

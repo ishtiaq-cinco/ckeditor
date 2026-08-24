@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
 
 import { TextPartLanguageEditing } from '../src/textpartlanguageediting.js';
 import { TextPartLanguageCommand } from '../src/textpartlanguagecommand.js';

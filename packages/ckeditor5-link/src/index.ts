@@ -56,8 +56,14 @@ export type {
 export { AutomaticLinkDecorators, type LinkDecoratorConflictChecker } from './utils/automaticdecorators.js';
 export { LinkManualDecorator } from './utils/manualdecorator.js';
 
+export {
+	BUILTIN_LINK_DECORATORS,
+	getBuiltinDecorators as _getBuiltinLinkDecorators
+} from './utils/builtindecorators.js';
+
 export type {
 	LinkConfig,
+	LinkBuiltinDecoratorName,
 	LinkDecoratorDefinition,
 	LinkDecoratorAutomaticDefinition,
 	LinkDecoratorManualDefinition

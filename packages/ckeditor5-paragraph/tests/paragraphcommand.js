@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
 import { ParagraphCommand } from '../src/paragraphcommand.js';
 
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'ParagraphCommand', () => {
 	let editor, model, document, command, root, schema;

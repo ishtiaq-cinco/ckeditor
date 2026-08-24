@@ -3,9 +3,9 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
 
 ClassicEditor
 	.create( {

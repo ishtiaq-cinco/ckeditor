@@ -10,7 +10,7 @@ import type {
 	ShowBlocksUI
 } from './index.js';
 
-declare module '@ckeditor/ckeditor5-core' {
+declare module '@ssmckinney/ckeditor5-core' {
 	interface PluginsMap {
 		[ ShowBlocks.pluginName ]: ShowBlocks;
 		[ ShowBlocksEditing.pluginName ]: ShowBlocksEditing;

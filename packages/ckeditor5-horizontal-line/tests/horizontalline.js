@@ -5,7 +5,7 @@
 
 import { describe, it, expect } from 'vitest';
 
-import { Widget } from '@ckeditor/ckeditor5-widget';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
 
 import { HorizontalLine } from '../src/horizontalline.js';
 import { HorizontalLineEditing } from '../src/horizontallineediting.js';

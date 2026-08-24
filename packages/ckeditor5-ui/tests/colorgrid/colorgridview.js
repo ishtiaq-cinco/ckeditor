@@ -9,7 +9,7 @@ import { ColorGridView } from './../../src/colorgrid/colorgridview.js';
 import { ColorTileView } from '../../src/colorgrid/colortileview.js';
 
 import { ViewCollection } from '../../src/viewcollection.js';
-import { FocusTracker, KeystrokeHandler, keyCodes } from '@ckeditor/ckeditor5-utils';
+import { FocusTracker, KeystrokeHandler, keyCodes } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'ColorGridView', () => {
 	let locale, view;

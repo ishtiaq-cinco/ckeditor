@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ListProperties, TodoList, ImageResize } from 'ckeditor5';
+import { ListProperties, TodoList, ImageResize } from '@ssmckinney/ckeditor5';
 import {
 	CS_CONFIG,
 	TOKEN_URL,

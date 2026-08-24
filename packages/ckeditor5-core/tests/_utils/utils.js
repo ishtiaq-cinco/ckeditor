@@ -14,7 +14,7 @@ export const testUtils = {
 	 *
 	 * Usage:
 	 *
-	 *		import { testUtils } from '@ckeditor/ckeditor5-core/tests/_utils/utils';
+	 *		import { testUtils } from '@ssmckinney/ckeditor5-core/tests/_utils/utils';
 	 *
 	 *		describe( 'MyClass', () => {
 	 *			testUtils.createSinonSandbox();

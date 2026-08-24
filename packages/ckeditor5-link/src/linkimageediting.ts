@@ -7,7 +7,7 @@
  * @module link/linkimageediting
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import {
 	Matcher,
 	type UpcastElementEvent,
@@ -17,14 +17,14 @@ import {
 	type ViewElement,
 	type DowncastDispatcher,
 	type UpcastDispatcher
-} from '@ckeditor/ckeditor5-engine';
-import { type GetCallback, priorities, toMap } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-engine';
+import { type GetCallback, priorities, toMap } from '@ssmckinney/ckeditor5-utils';
 
 import { LinkEditing } from './linkediting.js';
 import { type LinkManualDecorator } from './utils/manualdecorator.js';
 import { type LinkCommand } from './linkcommand.js';
 
-import { ImageEditing, ImageUtils } from '@ckeditor/ckeditor5-image';
+import { ImageEditing, ImageUtils } from '@ssmckinney/ckeditor5-image';
 
 /**
  * The link image engine feature.
@@ -229,7 +229,7 @@ function downcastImageLinkManualDecorator( decorator: LinkManualDecorator ): ( d
 
 				// The <a> element was removed by the time this converter is executed.
 				// It may happen when the base `linkHref` and decorator attributes are removed
-				// at the same time (see https://github.com/ckeditor/ckeditor5/issues/8401).
+				// at the same time (see https://github.com/ssmckinney/ckeditor5/issues/8401).
 				if ( !linkInImage ) {
 					return;
 				}
@@ -290,7 +290,7 @@ function upcastImageLinkManualDecorator( editor: Editor, decorator: LinkManualDe
 			const imageInLink = imageUtils.findViewImgElement( viewLink );
 
 			// We need to check whether an image is inside a link because the converter handles
-			// only manual decorators for linked images. See https://github.com/ckeditor/ckeditor5/issues/7975.
+			// only manual decorators for linked images. See https://github.com/ssmckinney/ckeditor5/issues/7975.
 			if ( !imageInLink ) {
 				return;
 			}

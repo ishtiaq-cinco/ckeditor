@@ -9,7 +9,7 @@ import {
 	KeystrokeHandler,
 	FocusTracker,
 	keyCodes
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import {
 	View,
@@ -17,7 +17,7 @@ import {
 	FocusCycler,
 	ViewCollection,
 	ButtonView
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 
 import { LinkProviderItemsView } from '../../src/ui/linkprovideritemsview.js';
 

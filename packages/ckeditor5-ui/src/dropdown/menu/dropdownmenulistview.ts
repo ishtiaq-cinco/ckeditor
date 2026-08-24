@@ -7,7 +7,7 @@
  * @module ui/dropdown/menu/dropdownmenulistview
  */
 
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 import { ListView } from '../../list/listview.js';
 
 /**

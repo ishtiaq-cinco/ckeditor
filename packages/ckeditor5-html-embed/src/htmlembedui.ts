@@ -7,9 +7,9 @@
  * @module html-embed/htmlembedui
  */
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { IconHtml } from '@ckeditor/ckeditor5-icons';
-import { ButtonView, MenuBarMenuListItemButtonView } from '@ckeditor/ckeditor5-ui';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { IconHtml } from '@ssmckinney/ckeditor5-icons';
+import { ButtonView, MenuBarMenuListItemButtonView } from '@ssmckinney/ckeditor5-ui';
 import type { RawHtmlApi } from './htmlembedediting.js';
 import { type HtmlEmbedCommand } from './htmlembedcommand.js';
 

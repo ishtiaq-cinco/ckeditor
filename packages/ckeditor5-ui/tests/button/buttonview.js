@@ -8,7 +8,7 @@ import { ButtonView } from '../../src/button/buttonview.js';
 import { IconView } from '../../src/icon/iconview.js';
 import { View } from '../../src/view.js';
 import { ViewCollection } from '../../src/viewcollection.js';
-import { env } from '@ckeditor/ckeditor5-utils';
+import { env } from '@ssmckinney/ckeditor5-utils';
 import { ButtonLabelView } from '../../src/index.js';
 
 describe( 'ButtonView', () => {
@@ -556,7 +556,7 @@ describe( 'ButtonView', () => {
 		} );
 
 		it( 'is omitted in #children when view#keystroke is not defined', () => {
-			// (https://github.com/ckeditor/ckeditor5/issues/9412)
+			// (https://github.com/ssmckinney/ckeditor5/issues/9412)
 			view = new ButtonView( locale );
 			view.withKeystroke = true;
 			view.render();

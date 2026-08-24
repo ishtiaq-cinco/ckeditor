@@ -7,9 +7,9 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 import { FontCommand } from '../src/fontcommand.js';
 
-import { Command } from '@ckeditor/ckeditor5-core';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { Command } from '@ssmckinney/ckeditor5-core';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'FontCommand', () => {
 	let editor, model, doc, root, command;
@@ -247,7 +247,7 @@ describe( 'FontCommand', () => {
 			expect( spy ).toHaveBeenCalledWith( batch, expect.anything() );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/18430
+		// https://github.com/ssmckinney/ckeditor5/issues/18430
 		it( 'when applying font to range that includes empty paragraph, empty paragraph should get selection:font', () => {
 			_setModelData( model, '[<paragraph>foo</paragraph><paragraph></paragraph><paragraph>foo</paragraph>]' );
 

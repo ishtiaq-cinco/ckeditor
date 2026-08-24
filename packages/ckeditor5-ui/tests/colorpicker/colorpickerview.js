@@ -5,7 +5,7 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { ColorPickerView } from './../../src/colorpicker/colorpickerview.js';
-import { env, Locale } from '@ckeditor/ckeditor5-utils';
+import { env, Locale } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'ColorPickerView', () => {
 	let locale, view;
@@ -381,7 +381,7 @@ describe( 'ColorPickerView', () => {
 			view.element.remove();
 		} );
 
-		// See: https://github.com/ckeditor/ckeditor5/issues/17069
+		// See: https://github.com/ssmckinney/ckeditor5/issues/17069
 		it( 'should focus input before color slider to avoid selection issues', () => {
 			const buggyBrowsers = [ 'isGecko', 'isiOS', 'isSafari', 'isBlink' ];
 

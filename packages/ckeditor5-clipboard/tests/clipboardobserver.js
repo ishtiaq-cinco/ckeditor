@@ -7,8 +7,8 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 import { ClipboardObserver } from '../src/clipboardobserver.js';
 
-import { EditingView, ViewDataTransfer, ViewDowncastWriter } from '@ckeditor/ckeditor5-engine';
-import { createViewRoot } from '@ckeditor/ckeditor5-engine/tests/view/_utils/createroot.js';
+import { EditingView, ViewDataTransfer, ViewDowncastWriter } from '@ssmckinney/ckeditor5-engine';
+import { createViewRoot } from '@ssmckinney/ckeditor5-engine/tests/view/_utils/createroot.js';
 
 describe( 'ClipboardObserver', () => {
 	let view, doc, writer, observer, root, el, range, eventSpy, preventDefaultSpy, stopPropagationSpy, mockedDomDataTransferFilesSpy;
@@ -314,7 +314,7 @@ describe( 'ClipboardObserver', () => {
 			expect( data.dataTransfer.files ).toEqual( dataTransfer.files );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/13366
+		// https://github.com/ssmckinney/ckeditor5/issues/13366
 		it( 'should not access native DataTransfer files if not needed', () => {
 			const dataTransfer = mockDomDataTransfer();
 			const targetElement = mockDomTargetElement( {} );

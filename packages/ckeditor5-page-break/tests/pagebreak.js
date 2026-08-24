@@ -4,7 +4,7 @@
  */
 
 import { describe, expect, it } from 'vitest';
-import { Widget } from '@ckeditor/ckeditor5-widget';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
 
 import { PageBreak } from '../src/pagebreak.js';
 import { PageBreakEditing } from '../src/pagebreakediting.js';

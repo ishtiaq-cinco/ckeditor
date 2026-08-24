@@ -16,7 +16,7 @@ import { StylesProcessor } from '../../../src/view/stylesmap.js';
 import { ViewDocumentFragment } from '../../../src/view/documentfragment.js';
 import { HtmlDataProcessor } from '../../../src/dataprocessor/htmldataprocessor.js';
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'DowncastWriter', () => {
 	let writer, attributes, root, doc;

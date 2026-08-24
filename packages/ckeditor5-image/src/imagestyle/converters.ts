@@ -15,8 +15,8 @@ import type {
 	UpcastConversionApi,
 	UpcastElementEvent,
 	ViewElement
-} from '@ckeditor/ckeditor5-engine';
-import { first, type GetCallback } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-engine';
+import { first, type GetCallback } from '@ssmckinney/ckeditor5-utils';
 import type { ImageStyleOptionDefinition } from '../imageconfig.js';
 import { DEFAULT_OPTIONS, getStyleDefinitionByName } from './utils.js';
 

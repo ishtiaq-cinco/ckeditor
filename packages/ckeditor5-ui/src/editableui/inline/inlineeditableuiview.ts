@@ -9,9 +9,9 @@
 
 import { EditableUIView } from '../editableuiview.js';
 
-import type { EditingView } from '@ckeditor/ckeditor5-engine';
-import type { Locale } from '@ckeditor/ckeditor5-utils';
-import type { ViewRootElementDefinition } from '@ckeditor/ckeditor5-core';
+import type { EditingView } from '@ssmckinney/ckeditor5-engine';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
+import type { ViewRootElementDefinition } from '@ssmckinney/ckeditor5-core';
 
 /**
  * The inline editable UI class implementing an inline {@link module:ui/editableui/editableuiview~EditableUIView}.

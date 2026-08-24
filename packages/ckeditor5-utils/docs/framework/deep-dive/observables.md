@@ -14,7 +14,7 @@ Any class can become observable; all you need to do is mix the {@link module:uti
 
 <code-switcher>
 ```js
-import { ObservableMixin, mix } from 'ckeditor5';
+import { ObservableMixin, mix } from '@ssmckinney/ckeditor5';
 
 class AnyClass {
 	// Any class definition.

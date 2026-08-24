@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Context } from '@ckeditor/ckeditor5-core';
+import { Context } from '@ssmckinney/ckeditor5-core';
 import { CloudServicesCore } from '../src/cloudservicescore.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { UploadGateway } from '../src/uploadgateway/uploadgateway.js';
 import { Token } from '../src/token/token.js';
 

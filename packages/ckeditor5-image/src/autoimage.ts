@@ -7,16 +7,16 @@
  * @module image/autoimage
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import {
 	Clipboard,
 	type ClipboardInputTransformationEvent,
 	type ClipboardPipeline
-} from '@ckeditor/ckeditor5-clipboard';
-import { ModelLivePosition, ModelLiveRange } from '@ckeditor/ckeditor5-engine';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { Delete } from '@ckeditor/ckeditor5-typing';
-import { global } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-clipboard';
+import { ModelLivePosition, ModelLiveRange } from '@ssmckinney/ckeditor5-engine';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { Delete } from '@ssmckinney/ckeditor5-typing';
+import { global } from '@ssmckinney/ckeditor5-utils';
 
 import { ImageUtils } from './imageutils.js';
 
@@ -152,7 +152,7 @@ export class AutoImage extends Plugin {
 		// This action mustn't be executed if undo was called between pasting and auto-embedding.
 		this._timeoutId = setTimeout( () => {
 			// Do nothing if image element cannot be inserted at the current position.
-			// See https://github.com/ckeditor/ckeditor5/issues/2763.
+			// See https://github.com/ssmckinney/ckeditor5/issues/2763.
 			// Condition must be checked after timeout - pasting may take place on an element, replacing it. The final position matters.
 			const imageCommand = editor.commands.get( 'insertImage' )!;
 

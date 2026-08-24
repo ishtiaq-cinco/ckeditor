@@ -9,7 +9,7 @@
 
 import { View } from '../view.js';
 import { type ViewCollection } from '../viewcollection.js';
-import { FocusTracker, type Locale } from '@ckeditor/ckeditor5-utils';
+import { FocusTracker, type Locale } from '@ssmckinney/ckeditor5-utils';
 import { FocusCycler, type FocusableView } from '../focuscycler.js';
 
 /**

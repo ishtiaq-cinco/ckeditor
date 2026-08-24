@@ -4,11 +4,11 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { IconShowBlocks } from '@ckeditor/ckeditor5-icons';
-import { global } from '@ckeditor/ckeditor5-utils';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
-import { ButtonView, MenuBarMenuListItemButtonView } from '@ckeditor/ckeditor5-ui';
+import { IconShowBlocks } from '@ssmckinney/ckeditor5-icons';
+import { global } from '@ssmckinney/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { SourceEditing } from '@ssmckinney/ckeditor5-source-editing';
+import { ButtonView, MenuBarMenuListItemButtonView } from '@ssmckinney/ckeditor5-ui';
 
 import { ShowBlocksEditing } from '../src/showblocksediting.js';
 import { ShowBlocksUI } from '../src/showblocksui.js';

@@ -26,7 +26,7 @@ import {
 	type DiffResult,
 	type ObservableChangeEvent,
 	type ObservableMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import type { ViewDocumentChangeType } from './document.js';
 import { type ViewDocumentSelection } from './documentselection.js';
@@ -104,7 +104,7 @@ export class ViewRenderer extends ViewRendererBase {
 	 *
 	 * Note: In some browsers, the renderer will stop rendering the selection and inline fillers while the user is making
 	 * a selection to avoid glitches in DOM selection
-	 * (https://github.com/ckeditor/ckeditor5/issues/10562, https://github.com/ckeditor/ckeditor5/issues/10723).
+	 * (https://github.com/ssmckinney/ckeditor5/issues/10562, https://github.com/ssmckinney/ckeditor5/issues/10723).
 	 *
 	 * @observable
 	 */
@@ -147,7 +147,7 @@ export class ViewRenderer extends ViewRendererBase {
 
 		// Rendering the selection and inline filler manipulation should be postponed in (non-Android) Blink until the user finishes
 		// creating the selection in DOM to avoid accidental selection collapsing
-		// (https://github.com/ckeditor/ckeditor5/issues/10562, https://github.com/ckeditor/ckeditor5/issues/10723).
+		// (https://github.com/ssmckinney/ckeditor5/issues/10562, https://github.com/ssmckinney/ckeditor5/issues/10723).
 		// When the user stops selecting, all pending changes should be rendered ASAP, though.
 		if ( env.isBlink && !env.isAndroid ) {
 			this.on<ObservableChangeEvent>( 'change:isSelecting', () => {
@@ -244,7 +244,7 @@ export class ViewRenderer extends ViewRendererBase {
 
 		// Don't manipulate inline fillers while the selection is being made in (non-Android) Blink to prevent accidental
 		// DOM selection collapsing
-		// (https://github.com/ckeditor/ckeditor5/issues/10562, https://github.com/ckeditor/ckeditor5/issues/10723).
+		// (https://github.com/ssmckinney/ckeditor5/issues/10562, https://github.com/ssmckinney/ckeditor5/issues/10723).
 		if ( isInlineFillerRenderingPossible ) {
 			// There was inline filler rendered in the DOM but it's not
 			// at the selection position any more, so we can remove it
@@ -273,7 +273,7 @@ export class ViewRenderer extends ViewRendererBase {
 			// While down-casting the document selection attributes, all existing empty
 			// attribute elements (for selection position) are removed from the view and DOM,
 			// so make sure that we were able to map filler position.
-			// https://github.com/ckeditor/ckeditor5/issues/12026
+			// https://github.com/ssmckinney/ckeditor5/issues/12026
 			if ( inlineFillerPosition && inlineFillerPosition.parent.is( '$text' ) ) {
 				// The inline filler position is expected to be before the text node.
 				inlineFillerPosition = ViewPosition._createBefore( inlineFillerPosition.parent );
@@ -301,7 +301,7 @@ export class ViewRenderer extends ViewRendererBase {
 		//   it will not be present. Fix those and similar scenarios.
 		// * Don't manipulate inline fillers while the selection is being made in (non-Android) Blink to prevent accidental
 		//   DOM selection collapsing
-		//   (https://github.com/ckeditor/ckeditor5/issues/10562, https://github.com/ckeditor/ckeditor5/issues/10723).
+		//   (https://github.com/ssmckinney/ckeditor5/issues/10562, https://github.com/ssmckinney/ckeditor5/issues/10723).
 		if ( isInlineFillerRenderingPossible ) {
 			if ( inlineFillerPosition ) {
 				const fillerDomPosition = this.domConverter.viewPositionToDom( inlineFillerPosition )!;
@@ -321,7 +321,7 @@ export class ViewRenderer extends ViewRendererBase {
 		}
 
 		// First focus the new editing host, then update the selection.
-		// Otherwise, FF may throw an error (https://github.com/ckeditor/ckeditor5/issues/721).
+		// Otherwise, FF may throw an error (https://github.com/ssmckinney/ckeditor5/issues/721).
 		this._updateFocus();
 		this._updateSelection();
 
@@ -378,7 +378,7 @@ export class ViewRenderer extends ViewRendererBase {
 					const viewChild = viewElement.getChild( insertIndex );
 
 					// UIElement and RawElement are special cases. Their children are not stored in a view.
-					// See https://github.com/ckeditor/ckeditor5/issues/799.
+					// See https://github.com/ssmckinney/ckeditor5/issues/799.
 					// so we cannot use them with replacing flow (since they use view children during rendering
 					// which will always result in rendering empty elements).
 					if ( viewChild && !viewChild.is( 'uiElement' ) && !viewChild.is( 'rawElement' ) ) {
@@ -654,7 +654,7 @@ export class ViewRenderer extends ViewRendererBase {
 		// IME on Android inserts a new text node while typing after a link
 		// instead of updating an existing text node that follows the link.
 		// We must normalize those text nodes so the diff won't get confused.
-		// https://github.com/ckeditor/ckeditor5/issues/12574.
+		// https://github.com/ssmckinney/ckeditor5/issues/12574.
 		if ( env.isAndroid ) {
 			let previousDomNode = null;
 
@@ -701,7 +701,7 @@ export class ViewRenderer extends ViewRendererBase {
 		// Handle deletions first.
 		// This is to prevent a situation where an element that already exists in `actualDomChildren` is inserted at a different
 		// index in `actualDomChildren`. Since `actualDomChildren` is a `NodeList`, this works like move, not like an insert,
-		// and it disrupts the whole algorithm. See https://github.com/ckeditor/ckeditor5/issues/6367.
+		// and it disrupts the whole algorithm. See https://github.com/ssmckinney/ckeditor5/issues/6367.
 		//
 		// It doesn't matter in what order we remove or add nodes, as long as we remove and add correct nodes at correct indexes.
 		for ( const action of actions ) {
@@ -888,7 +888,7 @@ export class ViewRenderer extends ViewRendererBase {
 		// Our approach to interleaving space character with NBSP might differ with the one implemented by the browser.
 		// Avoid modifying the text node in the DOM if only NBSPs and spaces are interchanged.
 		// We should avoid DOM modifications while composing to avoid breakage of composition.
-		// See: https://github.com/ckeditor/ckeditor5/issues/13994.
+		// See: https://github.com/ssmckinney/ckeditor5/issues/13994.
 		if ( env.isAndroid && this.isComposing && actualText.replace( /\u00A0/g, ' ' ) == expectedText.replace( /\u00A0/g, ' ' ) ) {
 			// @if CK_DEBUG_TYPING // if ( ( window as any ).logCKETyping ) {
 			// @if CK_DEBUG_TYPING // 	console.info( ..._buildLogMessage( this, 'Renderer',
@@ -966,7 +966,7 @@ export class ViewRenderer extends ViewRendererBase {
 		// Block updating DOM selection in (non-Android) Blink while the user is selecting to prevent accidental selection collapsing.
 		// Note: Structural changes in DOM must trigger selection rendering, though. Nodes the selection was anchored
 		// to, may disappear in DOM which would break the selection (e.g. in real-time collaboration scenarios).
-		// https://github.com/ckeditor/ckeditor5/issues/10562, https://github.com/ckeditor/ckeditor5/issues/10723
+		// https://github.com/ssmckinney/ckeditor5/issues/10562, https://github.com/ssmckinney/ckeditor5/issues/10723
 		if ( env.isBlink && !env.isAndroid && this.isSelecting && !this.markedChildren.size ) {
 			return;
 		}
@@ -997,7 +997,7 @@ export class ViewRenderer extends ViewRendererBase {
 			// @if CK_DEBUG_TYPING // }
 
 			// But if there was a fake selection, and it is not fake anymore - remove it as it can map to no longer existing widget.
-			// See https://github.com/ckeditor/ckeditor5/issues/18123.
+			// See https://github.com/ssmckinney/ckeditor5/issues/18123.
 			if ( !this.selection.isFake && this._fakeSelectionContainer && this._fakeSelectionContainer.isConnected ) {
 				// @if CK_DEBUG_TYPING // if ( ( window as any ).logCKETyping ) {
 				// @if CK_DEBUG_TYPING // 	console.info( ..._buildLogMessage( this, 'Renderer',
@@ -1384,7 +1384,7 @@ function createFakeSelectionContainer( domDocument: DomDocument ): DomElement {
 		position: 'fixed',
 		top: 0,
 		left: '-9999px',
-		// See https://github.com/ckeditor/ckeditor5/issues/752.
+		// See https://github.com/ssmckinney/ckeditor5/issues/752.
 		width: '42px'
 	} );
 

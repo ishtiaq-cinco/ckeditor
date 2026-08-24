@@ -7,7 +7,7 @@
  * @module image/imagetextalternative/imagetextalternativecommand
  */
 
-import { Command } from '@ckeditor/ckeditor5-core';
+import { Command } from '@ssmckinney/ckeditor5-core';
 import { type ImageUtils } from '../imageutils.js';
 
 /**

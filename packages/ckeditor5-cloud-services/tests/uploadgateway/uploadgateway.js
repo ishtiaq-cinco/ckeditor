@@ -7,7 +7,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { FileUploader } from '../../src/uploadgateway/fileuploader.js';
 import { UploadGateway } from '../../src/uploadgateway/uploadgateway.js';
 import { Token } from '../../src/token/token.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'UploadGateway', () => {
 	let token;

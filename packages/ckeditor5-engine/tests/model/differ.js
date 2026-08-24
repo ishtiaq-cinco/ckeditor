@@ -1726,7 +1726,7 @@ describe( 'Differ', () => {
 			} );
 		} );
 
-		// See: https://github.com/ckeditor/ckeditor5/issues/16819
+		// See: https://github.com/ssmckinney/ckeditor5/issues/16819
 		it( 'should generate diff instructions for text shorter than max push call stack args count', () => {
 			const p = root.getChild( 0 );
 			const veryLongString = 'a'.repeat( 300 );
@@ -1746,7 +1746,7 @@ describe( 'Differ', () => {
 			} );
 		} );
 
-		// See: https://github.com/ckeditor/ckeditor5/issues/16819
+		// See: https://github.com/ssmckinney/ckeditor5/issues/16819
 		it( 'should generate diff instructions for text longer than max push call stack args count', () => {
 			const MAX_PUSH_CALL_STACK_ARGS = 1500;
 
@@ -2805,7 +2805,7 @@ describe( 'Differ', () => {
 	} );
 
 	describe( 'other cases', () => {
-		// See https://github.com/ckeditor/ckeditor5/issues/4284.
+		// See https://github.com/ssmckinney/ckeditor5/issues/4284.
 		it( 'multiple inserts and removes in one element', () => {
 			model.change( () => {
 				insert( new ModelText( 'x' ), new ModelPosition( root, [ 0, 2 ] ) );
@@ -2819,9 +2819,9 @@ describe( 'Differ', () => {
 			} );
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/733.
+		// See https://github.com/ssmckinney/ckeditor5/issues/733.
 		it( 'proper filtering of changes in removed elements', () => {
-			// Before fix there was a buggy scenario described in https://github.com/ckeditor/ckeditor5/issues/733.
+			// Before fix there was a buggy scenario described in https://github.com/ssmckinney/ckeditor5/issues/733.
 			// There was this structure: `<paragraph>foo[</paragraph><imageBlock /><blockQuote><p>te]xt</p></blockQuote>`
 			// On delete of above selection `image` and `paragraph` inside `blockQuote` are removed (it gets merged).
 			// However, since `image` was removed first, when checking if `paragraph` is in a removed element,

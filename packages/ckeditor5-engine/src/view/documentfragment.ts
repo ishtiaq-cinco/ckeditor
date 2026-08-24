@@ -11,7 +11,7 @@ import { ViewTypeCheckable } from './typecheckable.js';
 import { ViewText } from './text.js';
 import { ViewTextProxy } from './textproxy.js';
 
-import { EmitterMixin, isIterable, type EmitterMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { EmitterMixin, isIterable, type EmitterMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 
 import type { ViewDocument, ViewDocumentChangeType } from './document.js';
 

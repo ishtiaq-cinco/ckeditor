@@ -149,7 +149,7 @@ function isClosingTag( line: string, elementsToFormat: Array<FormattedElementDef
  * @param indentChar Indentation character(s). 4 spaces by default.
  */
 function indentLine( line: string, indentCount: number, indentChar: string = '    ' ): string {
-	// More about Math.max() here in https://github.com/ckeditor/ckeditor5/issues/10698.
+	// More about Math.max() here in https://github.com/ssmckinney/ckeditor5/issues/10698.
 	return `${ indentChar.repeat( Math.max( 0, indentCount ) ) }${ line }\n`;
 }
 

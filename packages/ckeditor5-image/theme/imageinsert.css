@@ -12,6 +12,11 @@
 	--ck-input-width: 100%;
 	width: 400px;
 
+	/* The breakpoint fields stack under the main URL field, which has no bottom margin of its own. */
+	& .ck-image-insert-url__breakpoint {
+		margin-top: var(--ck-spacing-standard);
+	}
+
 	& .ck-image-insert-url__action-row {
 		grid-column-gap: var(--ck-spacing-large);
 		margin-top: var(--ck-spacing-large);

@@ -19,12 +19,12 @@ import {
 	toUnit,
 	getVisualViewportOffset,
 	global
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 // @if CK_DEBUG_STICKYPANEL // import {
 // @if CK_DEBUG_STICKYPANEL // 	RectDrawer,
 // @if CK_DEBUG_STICKYPANEL // 	diagonalStylesBlack
-// @if CK_DEBUG_STICKYPANEL // } from '@ckeditor/ckeditor5-utils/tests/_utils/rectdrawer.js';
+// @if CK_DEBUG_STICKYPANEL // } from '@ssmckinney/ckeditor5-utils/tests/_utils/rectdrawer.js';
 
 import '../../../theme/components/panel/stickypanel.css';
 

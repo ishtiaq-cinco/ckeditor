@@ -7,7 +7,7 @@
  * @module engine/view/elementdefinition
  */
 
-import type { ArrayOrItem } from '@ckeditor/ckeditor5-utils';
+import type { ArrayOrItem } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * A plain object that describes a view element in a way that a concrete, exact view element could be created from that description.

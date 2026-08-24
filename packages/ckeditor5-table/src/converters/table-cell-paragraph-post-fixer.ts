@@ -7,7 +7,7 @@
  * @module table/converters/table-cell-paragraph-post-fixer
  */
 
-import type { Model, ModelWriter, ModelElement, DifferItemInsert, DifferItemRemove } from '@ckeditor/ckeditor5-engine';
+import type { Model, ModelWriter, ModelElement, DifferItemInsert, DifferItemRemove } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * Injects a table cell post-fixer into the model which inserts a `paragraph` element into empty table cells.
@@ -111,7 +111,7 @@ function fixTableCellContent( tableCell: ModelElement, writer: ModelWriter ) {
 	}
 
 	// Check table cell children for directly placed text nodes.
-	// Temporary solution. See https://github.com/ckeditor/ckeditor5/issues/1464.
+	// Temporary solution. See https://github.com/ssmckinney/ckeditor5/issues/1464.
 	const textNodes = Array.from( tableCell.getChildren() ).filter( child => child.is( '$text' ) );
 
 	// @if CK_DEBUG_TABLE // textNodes.length && console.log( 'Post-fixing table: wrap cell content with paragraph.' );

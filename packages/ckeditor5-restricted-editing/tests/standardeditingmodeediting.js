@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _getViewData, _getModelData, _setModelData, _parseModel } from '@ckeditor/ckeditor5-engine';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _getViewData, _getModelData, _setModelData, _parseModel } from '@ssmckinney/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
 
 import {
 	StandardEditingModeEditing,

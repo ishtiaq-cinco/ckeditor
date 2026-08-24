@@ -7,7 +7,7 @@
  * @module html-support/datafilter
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import {
 	Matcher,
@@ -20,15 +20,15 @@ import {
 	type ModelDocumentSelectionChangeAttributeEvent,
 	type ModelElement,
 	type ModelItem
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import {
 	CKEditorError,
 	priorities,
 	isValidAttributeName
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
-import { Widget } from '@ckeditor/ckeditor5-widget';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
 
 import {
 	viewToModelObjectConverter,
@@ -383,7 +383,7 @@ export class DataFilter extends Plugin {
 			// as RTC is stopping event propagation.
 			// * Make sure no other features hook into this event before GHS because otherwise the
 			// downcast conversion (for these features) could run before GHS registered its converters
-			// (https://github.com/ckeditor/ckeditor5/issues/11356).
+			// (https://github.com/ssmckinney/ckeditor5/issues/11356).
 			priority: priorities.highest + 1
 		} );
 	}
@@ -770,7 +770,7 @@ export class DataFilter extends Plugin {
 					.some( key => key.startsWith( 'html' ) );
 
 			// Register a post-fixer that removes htmlEmptyElement when its htmlXX attribute is removed.
-			// See: https://github.com/ckeditor/ckeditor5/issues/18089
+			// See: https://github.com/ssmckinney/ckeditor5/issues/18089
 			editor.model.document.registerPostFixer( writer => {
 				const changes = editor.model.document.differ.getChanges();
 				const elementsToRemove = new Set<ModelElement>();

@@ -15,7 +15,7 @@ import { type ModelDocument } from './document.js';
 import { type ModelDocumentFragment } from './documentfragment.js';
 import { type ModelElement } from './element.js';
 
-import { compareArrays, toMap } from '@ckeditor/ckeditor5-utils';
+import { compareArrays, toMap } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Model node. Most basic structure of model tree.

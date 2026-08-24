@@ -7,10 +7,10 @@
  * @module link/linkcommand
  */
 
-import { Command } from '@ckeditor/ckeditor5-core';
-import { findAttributeRange } from '@ckeditor/ckeditor5-typing';
-import { Collection, diff, first, toMap } from '@ckeditor/ckeditor5-utils';
-import { ModelLivePosition, type ModelRange, type ModelItem, type ModelTextProxy } from '@ckeditor/ckeditor5-engine';
+import { Command } from '@ssmckinney/ckeditor5-core';
+import { findAttributeRange } from '@ssmckinney/ckeditor5-typing';
+import { Collection, diff, first, toMap } from '@ssmckinney/ckeditor5-utils';
+import { ModelLivePosition, type ModelRange, type ModelItem, type ModelTextProxy } from '@ssmckinney/ckeditor5-engine';
 
 import { AutomaticLinkDecorators } from './utils/automaticdecorators.js';
 import { extractTextFromLinkRange, isLinkableElement } from './utils.js';
@@ -62,7 +62,7 @@ export class LinkCommand extends Command {
 
 		// A check for any integration that allows linking elements (e.g. `LinkImage`).
 		// Currently the selection reads attributes from text nodes only.
-		// See https://github.com/ckeditor/ckeditor5/issues/7429 and https://github.com/ckeditor/ckeditor5/issues/7465.
+		// See https://github.com/ssmckinney/ckeditor5/issues/7429 and https://github.com/ssmckinney/ckeditor5/issues/7465.
 		if ( isLinkableElement( selectedElement, model.schema ) ) {
 			this.value = selectedElement.getAttribute( 'linkHref' ) as string | undefined;
 			this.isEnabled = model.schema.checkAttribute( selectedElement, 'linkHref' );
@@ -387,7 +387,7 @@ export class LinkCommand extends Command {
 
 		// A check for the `LinkImage` plugin. If the selection contains an element, get values from the element.
 		// Currently the selection reads attributes from text nodes only.
-		// See https://github.com/ckeditor/ckeditor5/issues/7429 and https://github.com/ckeditor/ckeditor5/issues/7465.
+		// See https://github.com/ssmckinney/ckeditor5/issues/7429 and https://github.com/ssmckinney/ckeditor5/issues/7465.
 		if ( isLinkableElement( selectedElement, model.schema ) ) {
 			return selectedElement.getAttribute( decoratorName ) as boolean | undefined;
 		}

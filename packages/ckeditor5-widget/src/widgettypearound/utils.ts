@@ -16,7 +16,7 @@ import type {
 	ModelSchema,
 	ModelSelection,
 	ViewElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 /**
  * The name of the type around model selection attribute responsible for

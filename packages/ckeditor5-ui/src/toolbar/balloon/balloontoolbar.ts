@@ -17,7 +17,7 @@ import type {
 	EditorUIUpdateEvent
 } from '../../editorui/editorui.js';
 
-import { Plugin, type Editor, type EditorReadyEvent, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type EditorReadyEvent, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import {
 	FocusTracker,
@@ -27,14 +27,14 @@ import {
 	global,
 	toUnit,
 	type ObservableChangeEvent
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import {
 	Observer,
 	type ModelDocumentSelection,
 	type ModelDocumentSelectionChangeRangeEvent,
 	type ModelSchema
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { debounce } from 'es-toolkit/compat';
 
@@ -191,7 +191,7 @@ export class BalloonToolbar extends Plugin {
 		// grouped or ungrouped, update the position of the balloon because a shorter/longer toolbar
 		// means the balloon could be pointing at the wrong place. Once updated, the balloon will point
 		// at the right selection in the content again.
-		// https://github.com/ckeditor/ckeditor5/issues/6444
+		// https://github.com/ssmckinney/ckeditor5/issues/6444
 		this.listenTo<ToolbarViewGroupedItemsUpdateEvent>( this.toolbarView, 'groupedItemsUpdate', () => {
 			this._updatePosition();
 		} );
@@ -251,7 +251,7 @@ export class BalloonToolbar extends Plugin {
 		}
 
 		// Do not show the toolbar when there is more than one range in the selection and they fully contain selectable elements.
-		// See https://github.com/ckeditor/ckeditor5/issues/6443.
+		// See https://github.com/ssmckinney/ckeditor5/issues/6443.
 		if ( selectionContainsOnlyMultipleSelectables( selection, schema ) ) {
 			return;
 		}
@@ -384,7 +384,7 @@ export class BalloonToolbar extends Plugin {
 	private _getBalloonPositions( isBackward: boolean ) {
 		const isSafariIniOS = env.isSafari && env.isiOS;
 
-		// https://github.com/ckeditor/ckeditor5/issues/7707
+		// https://github.com/ssmckinney/ckeditor5/issues/7707
 		const positions = isSafariIniOS ? BalloonPanelView.generatePositions( {
 			// 20px when zoomed out. Less then 20px when zoomed in; the "radius" of the native selection handle gets
 			// smaller as the user zooms in. No less than the default v-offset, though.

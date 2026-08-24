@@ -8,13 +8,13 @@ badges: [ premium ]
 
 # Page break
 
-The page break feature lets you insert page breaks into your content. This gives you more control over the final structure of a document that is printed or [exported to PDF](https://ckeditor.com/docs/ckeditor5/latest/features/converters/export-pdf.html) or [Word](https://ckeditor.com/docs/ckeditor5/latest/features/converters/export-word.html).
+The page break feature lets you insert page breaks into your content. This gives you more control over the final structure of a document that is printed or [exported to PDF](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/converters/export-pdf.html) or [Word](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/converters/export-word.html).
 
 {@snippet getting-started/unlock-feature}
 
 ## Demo
 
-Use the insert page break toolbar button {@icon @ckeditor/ckeditor5-icons/theme/icons/page-break.svg Insert page break} to see the feature in action. Use the "Open print preview" button below the editor to preview the content.
+Use the insert page break toolbar button {@icon @ssmckinney/ckeditor5-icons/theme/icons/page-break.svg Insert page break} to see the feature in action. Use the "Open print preview" button below the editor to preview the content.
 
 {@snippet features/page-break}
 
@@ -32,7 +32,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, PageBreak } from 'ckeditor5';
+import { ClassicEditor, PageBreak } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -49,9 +49,9 @@ ClassicEditor
 
 Here are some useful CKEditor&nbsp;5 features that you can use together with the page break plugin for an all-around paged editing experience:
 
-* The {@link features/pagination pagination feature} allows you to see where page breaks would be after the document is [exported to PDF](https://ckeditor.com/docs/ckeditor5/latest/features/converters/export-pdf.html) or [to Word](https://ckeditor.com/docs/ckeditor5/latest/features/converters/export-word.html).
-* The [export to Word](https://ckeditor.com/docs/ckeditor5/latest/features/converters/export-word.html) feature will allow you to generate editable, paged `.docx` files out of your editor-created content.
-* The [export to PDF](https://ckeditor.com/docs/ckeditor5/latest/features/converters/export-pdf.html) feature will allow you to generate portable, paged PDF files out of your editor-created content.
+* The {@link features/pagination pagination feature} allows you to see where page breaks would be after the document is [exported to PDF](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/converters/export-pdf.html) or [to Word](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/converters/export-word.html).
+* The [export to Word](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/converters/export-word.html) feature will allow you to generate editable, paged `.docx` files out of your editor-created content.
+* The [export to PDF](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/converters/export-pdf.html) feature will allow you to generate portable, paged PDF files out of your editor-created content.
 
 ## Common API
 

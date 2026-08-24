@@ -7,8 +7,8 @@
  * @module image/imageblock
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { Widget } from '@ckeditor/ckeditor5-widget';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
 
 import { ImageTextAlternative } from './imagetextalternative.js';
 import { ImageBlockEditing } from './image/imageblockediting.js';

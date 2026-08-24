@@ -7,7 +7,7 @@
  * @module ui/model
  */
 
-import { ObservableMixin, type ObservableMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { ObservableMixin, type ObservableMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 import { extend } from 'es-toolkit/compat';
 
 const UIModelBase: ObservableMixinConstructor = /* #__PURE__ */ ObservableMixin();

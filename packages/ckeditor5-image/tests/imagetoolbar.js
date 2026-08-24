@@ -4,16 +4,16 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { LinkImage } from '@ckeditor/ckeditor5-link';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { LinkImage } from '@ssmckinney/ckeditor5-link';
 import { ImageToolbar } from '../src/imagetoolbar.js';
 import { ImageCaption } from '../src/imagecaption.js';
 import { Image } from '../src/image.js';
-import { global } from '@ckeditor/ckeditor5-utils';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { ButtonView, View } from '@ckeditor/ckeditor5-ui';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { global } from '@ssmckinney/ckeditor5-utils';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { ButtonView, View } from '@ssmckinney/ckeditor5-ui';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 import { ImageStyle } from '../src/imagestyle.js';
 
 describe( 'ImageToolbar', () => {

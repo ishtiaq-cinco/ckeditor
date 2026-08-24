@@ -14,7 +14,7 @@ import { ModelTextProxy } from './textproxy.js';
 
 import { type ModelItem } from './item.js';
 
-import { isIterable } from '@ckeditor/ckeditor5-utils';
+import { isIterable } from '@ssmckinney/ckeditor5-utils';
 
 // @if CK_DEBUG_ENGINE // import { convertMapToStringifiedObject, convertMapToTags } from '../dev-utils/utils.js';
 
@@ -397,7 +397,7 @@ export class ModelElement extends ModelNode {
 ModelElement.prototype.is = function( this: ModelElement, type: string, name?: string ): boolean {
 	if ( !name ) {
 		return type === 'element' || type === 'model:element' ||
-			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ckeditor/ckeditor5/issues/6529.
+			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ssmckinney/ckeditor5/issues/6529.
 			type === 'node' || type === 'model:node';
 	}
 

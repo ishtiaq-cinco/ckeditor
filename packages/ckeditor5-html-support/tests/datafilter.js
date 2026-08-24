@@ -3,16 +3,16 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
-import { FontColorEditing } from '@ckeditor/ckeditor5-font';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
+import { FontColorEditing } from '@ssmckinney/ckeditor5-font';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { DataFilter } from '../src/datafilter.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import {
 	_getModelData,
 	_setModelData,
@@ -21,9 +21,9 @@ import {
 	addBorderStylesRules,
 	addMarginStylesRules,
 	addPaddingStylesRules
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 import { getModelDataWithAttributes } from './_utils/utils.js';
-import { getLabel } from '@ckeditor/ckeditor5-widget';
+import { getLabel } from '@ssmckinney/ckeditor5-widget';
 
 import { GeneralHtmlSupport } from '../src/generalhtmlsupport.js';
 
@@ -158,7 +158,7 @@ describe( 'DataFilter', () => {
 				}, {
 					// The actual RTC client listens on 'high' but in these tests we're making a point
 					// of GHS registering its converters before anything else triggers the downcast conversion.
-					// See https://github.com/ckeditor/ckeditor5/issues/11356.
+					// See https://github.com/ssmckinney/ckeditor5/issues/11356.
 					priority: 'highest'
 				} );
 			}
@@ -847,7 +847,7 @@ describe( 'DataFilter', () => {
 			expect( editor.getData() ).toBe( '<section><p>foo</p></section>' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/11000
+		// https://github.com/ssmckinney/ckeditor5/issues/11000
 		it( 'should not consume element attributes if the element was consumed into a collapsed range', () => {
 			dataFilter.allowElement( 'input' );
 			dataFilter.allowAttributes( { name: 'input', attributes: true } );

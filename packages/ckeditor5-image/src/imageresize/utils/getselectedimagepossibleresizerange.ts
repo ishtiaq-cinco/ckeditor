@@ -7,11 +7,11 @@
  * @module image/imageresize/utils/getselectedimagepossibleresizerange
  */
 
-import type { Editor } from '@ckeditor/ckeditor5-core';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
 
-import { calculateResizeHostAncestorWidth } from '@ckeditor/ckeditor5-widget';
+import { calculateResizeHostAncestorWidth } from '@ssmckinney/ckeditor5-widget';
 import { getSelectedImageEditorNodes } from './getselectedimageeditornodes.js';
-import { _tryCastDimensionsToUnit, _tryParseDimensionWithUnit } from '@ckeditor/ckeditor5-utils';
+import { _tryCastDimensionsToUnit, _tryParseDimensionWithUnit } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Returns min and max value of resize image in specified unit.

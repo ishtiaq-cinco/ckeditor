@@ -12,9 +12,9 @@ import type {
 	Batch,
 	ModelDocumentChangeEvent,
 	ModelDocumentSelectionChangeEvent
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import type { EventInfo } from '@ckeditor/ckeditor5-utils';
+import type { EventInfo } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Change buffer allows to group atomic changes (like characters that have been typed) into

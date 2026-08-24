@@ -5,12 +5,12 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { HtmlEmbedEditing } from '../src/htmlembedediting.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { HtmlEmbedCommand } from '../src/htmlembedcommand.js';
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
-import { isWidget } from '@ckeditor/ckeditor5-widget';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { ButtonView } from '@ckeditor/ckeditor5-ui';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { isWidget } from '@ssmckinney/ckeditor5-widget';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { ButtonView } from '@ssmckinney/ckeditor5-ui';
 
 describe( 'HtmlEmbedEditing', () => {
 	let element, editor, model, view, viewDocument;
@@ -260,7 +260,7 @@ describe( 'HtmlEmbedEditing', () => {
 				expect( rawHtml.getAttribute( 'value' ) ).toBe( rawContent );
 			} );
 
-			// See https://github.com/ckeditor/ckeditor5/issues/8789.
+			// See https://github.com/ssmckinney/ckeditor5/issues/8789.
 			it( 'should convert content from clipboard', () => {
 				const dataTransferMock = createDataTransfer( {
 					'text/html':

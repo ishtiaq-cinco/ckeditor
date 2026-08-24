@@ -3,25 +3,25 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
 import {
 	IconObjectSizeSmall,
 	IconObjectSizeMedium,
 	IconObjectSizeLarge,
 	IconObjectSizeFull
-} from '@ckeditor/ckeditor5-icons';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+} from '@ssmckinney/ckeditor5-icons';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 import { Image } from '../../src/image.js';
-import { DropdownView, ButtonView, View } from '@ckeditor/ckeditor5-ui';
+import { DropdownView, ButtonView, View } from '@ssmckinney/ckeditor5-ui';
 import { ImageResizeButtons } from '../../src/imageresize/imageresizebuttons.js';
 import { ImageCustomResizeUI } from '../../src/imageresize/imagecustomresizeui.js';
 import { ImageStyle } from '../../src/imagestyle.js';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { Table } from '@ckeditor/ckeditor5-table';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { Table } from '@ssmckinney/ckeditor5-table';
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'ImageResizeButtons', () => {
 	let plugin, command, editor, editorElement;

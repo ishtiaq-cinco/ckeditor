@@ -9,7 +9,7 @@
 
 import { ViewTypeCheckable } from './typecheckable.js';
 
-import { CKEditorError, compareArrays } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, compareArrays } from '@ssmckinney/ckeditor5-utils';
 
 import { ViewEditableElement } from './editableelement.js';
 

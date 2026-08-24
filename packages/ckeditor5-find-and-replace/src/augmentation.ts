@@ -16,7 +16,7 @@ import type {
 	FindAndReplaceConfig
 } from './index.js';
 
-declare module '@ckeditor/ckeditor5-core' {
+declare module '@ssmckinney/ckeditor5-core' {
 	interface PluginsMap {
 		[ FindAndReplace.pluginName ]: FindAndReplace;
 		[ FindAndReplaceEditing.pluginName ]: FindAndReplaceEditing;

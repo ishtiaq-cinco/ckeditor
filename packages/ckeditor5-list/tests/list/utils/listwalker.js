@@ -8,7 +8,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { ListWalker } from '../../../src/list/utils/listwalker.js';
 import { modelList } from '../_utils/utils.js';
 
-import { Model, _parseModel } from '@ckeditor/ckeditor5-engine';
+import { Model, _parseModel } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'List - utils - ListWalker', () => {
 	let model, schema;

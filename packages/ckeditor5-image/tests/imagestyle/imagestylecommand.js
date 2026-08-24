@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { DEFAULT_OPTIONS } from '../../src/imagestyle/utils.js';
 
 describe( 'ImageStyleCommand', () => {

@@ -9,7 +9,7 @@
 
 import { ModelNode } from './node.js';
 
-import { CKEditorError, spliceArray } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, spliceArray } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Provides an interface to operate on a list of {@link module:engine/model/node~ModelNode nodes}. `NodeList` is used internally

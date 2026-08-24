@@ -7,7 +7,7 @@
  * @module code-block/codeblock
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import { CodeBlockEditing } from './codeblockediting.js';
 import { CodeBlockUI } from './codeblockui.js';

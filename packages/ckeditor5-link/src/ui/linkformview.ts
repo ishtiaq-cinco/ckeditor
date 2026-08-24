@@ -21,13 +21,13 @@ import {
 	submitHandler,
 	type InputTextView,
 	type FocusableView
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 import {
 	FocusTracker,
 	KeystrokeHandler,
 	type Locale
-} from '@ckeditor/ckeditor5-utils';
-import { IconPreviousArrow } from '@ckeditor/ckeditor5-icons';
+} from '@ssmckinney/ckeditor5-utils';
+import { IconPreviousArrow } from '@ssmckinney/ckeditor5-icons';
 
 import '../../theme/linkform.css';
 
@@ -76,6 +76,15 @@ export class LinkFormView extends View {
 	public readonly providersListChildren: ViewCollection<ButtonView>;
 
 	/**
+	 * A collection of child views in the link options list shown below the form, holding buttons that open
+	 * a sub-panel of the balloon — the "Link properties" switches among them.
+	 *
+	 * Keeping it as a collection rather than a fixed button lets the form stay unaware of what the options
+	 * actually are; {@link module:link/linkui~LinkUI} decides what, if anything, is worth offering.
+	 */
+	public readonly optionsListChildren: ViewCollection<ButtonView>;
+
+	/**
 	 * An array of form validators used by {@link #isValid}.
 	 */
 	private readonly _validators: Array<LinkFormValidatorCallback>;
@@ -115,11 +124,24 @@ export class LinkFormView extends View {
 		this.urlInputView = this._createUrlInput();
 
 		this.providersListChildren = this.createCollection();
+		this.optionsListChildren = this.createCollection();
 		this.children = this.createCollection( [
 			this._createHeaderView()
 		] );
 
 		this._createFormChildren();
+
+		// The two lists below the form join #children only once they have something to show, so an unused one
+		// leaves behind neither an empty row nor its separator. The options list is inserted right after the
+		// form rows while the providers list is appended, which fixes their order no matter which is filled first.
+		const formChildrenCount = this.children.length;
+
+		// Add options list view to the children when the first item is added to the list.
+		// This is to avoid adding the list view when there are no options to show.
+		this.listenTo( this.optionsListChildren, 'add', () => {
+			this.stopListening( this.optionsListChildren, 'add' );
+			this.children.add( this._createOptionsListView(), formChildrenCount );
+		} );
 
 		// Add providers list view to the children when the first item is added to the list.
 		// This is to avoid adding the list view when the form is empty.
@@ -173,6 +195,7 @@ export class LinkFormView extends View {
 		const childViews = [
 			this.urlInputView,
 			this.saveButtonView,
+			...this.optionsListChildren,
 			...this.providersListChildren,
 			this.backButtonView,
 			this.displayedTextInputView
@@ -313,6 +336,31 @@ export class LinkFormView extends View {
 		} );
 
 		return providersListView;
+	}
+
+	/**
+	 * Creates a view for the link options list.
+	 */
+	private _createOptionsListView(): ListView {
+		const optionsListView = new ListView( this.locale );
+
+		optionsListView.extendTemplate( {
+			attributes: {
+				class: [
+					'ck-link-form__options-list'
+				]
+			}
+		} );
+
+		optionsListView.items.bindTo( this.optionsListChildren ).using( def => {
+			const listItemView = new ListItemView( this.locale );
+
+			listItemView.children.add( def );
+
+			return listItemView;
+		} );
+
+		return optionsListView;
 	}
 
 	/**

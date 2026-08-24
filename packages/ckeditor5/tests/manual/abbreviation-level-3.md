@@ -17,8 +17,8 @@ This guide assumes that you are familiar with npm. If not, see the [npm document
 
 First, install packages needed to build and set up a basic CKEditor&nbsp;5 instance. On top of that, we will need:
 
-* The [`@ckeditor/ckeditor5-core`](https://www.npmjs.com/package/@ckeditor/ckeditor5-core) package which contains the {@link module:core/plugin~Plugin} and {@link module:core/command~Command} classes.
-* The [`@ckeditor/ckeditor5-ui`](https://www.npmjs.com/package/@ckeditor/ckeditor5-ui) package which contains the UI library and framework.
+* The [`@ssmckinney/ckeditor5-core`](https://www.npmjs.com/package/@ssmckinney/ckeditor5-core) package which contains the {@link module:core/plugin~Plugin} and {@link module:core/command~Command} classes.
+* The [`@ssmckinney/ckeditor5-ui`](https://www.npmjs.com/package/@ssmckinney/ckeditor5-ui) package which contains the UI library and framework.
 
 ```bash
 npm install --save \
@@ -28,14 +28,14 @@ npm install --save \
 	style-loader@2 \
 	webpack@5 \
 	webpack-cli@4 \
-	@ckeditor/ckeditor5-editor-classic \
-	@ckeditor/ckeditor5-essentials \
-	@ckeditor/ckeditor5-paragraph \
-	@ckeditor/ckeditor5-heading \
-	@ckeditor/ckeditor5-list \
-	@ckeditor/ckeditor5-basic-styles \
-	@ckeditor/ckeditor5-ui \
-	@ckeditor/ckeditor5-core
+	@ssmckinney/ckeditor5-editor-classic \
+	@ssmckinney/ckeditor5-essentials \
+	@ssmckinney/ckeditor5-paragraph \
+	@ssmckinney/ckeditor5-heading \
+	@ssmckinney/ckeditor5-list \
+	@ssmckinney/ckeditor5-basic-styles \
+	@ssmckinney/ckeditor5-ui \
+	@ssmckinney/ckeditor5-core
 ```
 
 Create a minimal webpack configuration:
@@ -63,7 +63,7 @@ module.exports = {
 				use: [ 'raw-loader' ]
 			},
 			{
-				test: /ckeditor5-[^/\\]+[/\\]theme[/\\].+\.css$/,
+				test: /@ssmckinney/ckeditor5-[^/\\]+[/\\]theme[/\\].+\.css$/,
 				use: [
 					{
 						loader: 'style-loader',
@@ -101,12 +101,12 @@ Create your project's entry point:
 ```js
 // app.js
 
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { List } from '@ckeditor/ckeditor5-list';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { List } from '@ssmckinney/ckeditor5-list';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 ClassicEditor
 	.create( {
@@ -182,7 +182,7 @@ Let's define the 3 plugins.
 
 import AbbreviationEditing from './abbreviationediting';
 import AbbreviationUI from './abbreviationui';
-import { Plugin } from 'ckeditor5';
+import { Plugin } from '@ssmckinney/ckeditor5';
 
 export default class Abbreviation extends Plugin {
 	static get requires() {
@@ -194,7 +194,7 @@ export default class Abbreviation extends Plugin {
 ```js
 // abbreviation/abbreviationui.js
 
-import { Plugin } from 'ckeditor5';
+import { Plugin } from '@ssmckinney/ckeditor5';
 
 export default class AbbreviationUI extends Plugin {
 	init() {
@@ -206,7 +206,7 @@ export default class AbbreviationUI extends Plugin {
 ```js
 // abbreviation/abbreviationediting.js
 
-import { Plugin } from 'ckeditor5';
+import { Plugin } from '@ssmckinney/ckeditor5';
 
 export default class AbbreviationEditing extends Plugin {
 	init() {
@@ -220,12 +220,12 @@ Now you need to load the `Abbreviation` plugin in your `app.js` file:
 ```js
 // app.js
 
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { List } from '@ckeditor/ckeditor5-list';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { List } from '@ssmckinney/ckeditor5-list';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 import Abbreviation from './simplebox/abbreviation'; // ADDED
 
@@ -269,7 +269,7 @@ Update the `AbbreviationEditing` plugin with this definition.
 ```js
 // abbreviation/abbreviationediting.js
 
-import { Plugin } from 'ckeditor5';
+import { Plugin } from '@ssmckinney/ckeditor5';
 
 export default class AbbreviationEditing extends Plugin {
 	init() {
@@ -303,7 +303,7 @@ Getting the title is a little bit tricky. In upcast conversion, we will need a s
 ```js
 // abbreviation/abbreviationediting.js
 
-import { Plugin } from 'ckeditor5';
+import { Plugin } from '@ssmckinney/ckeditor5';
 
 export default class AbbreviationEditing extends Plugin {
 	init() {
@@ -337,7 +337,7 @@ export default class AbbreviationEditing extends Plugin {
 ```js
 // abbreviation/abbreviationediting.js
 
-import { Plugin } from 'ckeditor5';
+import { Plugin } from '@ssmckinney/ckeditor5';
 
 export default class AbbreviationEditing extends Plugin {
 	init() {
@@ -391,7 +391,7 @@ Create a new file `abbreviationcommand.js` in the `abbreviation/` directory.
 ```js
 // abbreviation/abbreviationcommand.js
 
-import { Command } from '@ckeditor/ckeditor5-core';
+import { Command } from '@ssmckinney/ckeditor5-core';
 
 export default class Abbreviationommand extends Command {
 	execute( value ) {
@@ -416,7 +416,7 @@ Import the command and register it in the `AbbreviationEditing` plugin:
 ```js
 // abbreviation/abbreviationediting.js
 
-import { Plugin } from 'ckeditor5';
+import { Plugin } from '@ssmckinney/ckeditor5';
 
 import AbbreviationCommand from './abbreviationcommand';                 // ADDED
 
@@ -478,8 +478,8 @@ import {
 	createLabeledInputText,
 	ButtonView,
 	submitHandler
-} from '@ckeditor/ckeditor5-ui';
-import { icons } from '@ckeditor/ckeditor5-core';
+} from '@ssmckinney/ckeditor5-ui';
+import { icons } from '@ssmckinney/ckeditor5-core';
 
 export default class FormView extends View {
 	constructor( locale ) {

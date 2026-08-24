@@ -9,7 +9,7 @@ import { ModelElement } from '../../../src/model/element.js';
 import { RenameOperation } from '../../../src/model/operation/renameoperation.js';
 import { ModelPosition } from '../../../src/model/position.js';
 
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'RenameOperation', () => {
 	const oldName = 'oldName';

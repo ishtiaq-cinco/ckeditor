@@ -13,7 +13,7 @@ import { INLINE_FILLER } from '../../../src/view/filler.js';
 
 import { _parseView } from '../../../src/dev-utils/view.js';
 
-import { createElement } from '@ckeditor/ckeditor5-utils';
+import { createElement } from '@ssmckinney/ckeditor5-utils';
 import { StylesProcessor } from '../../../src/view/stylesmap.js';
 
 describe( 'DomConverter', () => {

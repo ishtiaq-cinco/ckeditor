@@ -55,6 +55,7 @@ export { createImageTypeRegExp } from './imageupload/utils.js';
 export type {
 	ImageConfig,
 	ImageInsertConfig,
+	ImageResponsiveBreakpoint,
 	ImageResizeOption,
 	ImageStyleDropdownDefinition,
 	ImageStyleConfig,
@@ -95,7 +96,15 @@ export {
 } from './image/utils.js';
 
 export { ImageInsertFormView as _ImageInsertFormView } from './imageinsert/ui/imageinsertformview.js';
-export { ImageInsertUrlView as _ImageInsertUrlView } from './imageinsert/ui/imageinserturlview.js';
+export {
+	ImageInsertUrlView as _ImageInsertUrlView,
+	type ImageSourceDefinition
+} from './imageinsert/ui/imageinserturlview.js';
+
+export {
+	DEFAULT_IMAGE_RESPONSIVE_BREAKPOINTS,
+	getImageResponsiveBreakpoints as _getImageResponsiveBreakpoints
+} from './imageinsert/utils.js';
 
 export { ImageCustomResizeFormView as _ImageCustomResizeFormView } from './imageresize/ui/imagecustomresizeformview.js';
 export type {

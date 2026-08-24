@@ -21,12 +21,15 @@ describe( 'ListProperties - utils - config', () => {
 					listTypes: [ 'numbered', 'bulleted' ],
 					listStyleTypes: {
 						numbered: [ 'decimal', 'decimal-leading-zero', 'lower-roman', 'upper-roman', 'lower-latin', 'upper-latin' ],
-						bulleted: [ 'disc', 'circle', 'square' ]
+						bulleted: [ 'disc', 'circle', 'square', 'circle-tick', 'circle-cross' ]
 					},
 					useAttribute: true
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -47,7 +50,10 @@ describe( 'ListProperties - utils - config', () => {
 					useAttribute: true
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -63,12 +69,15 @@ describe( 'ListProperties - utils - config', () => {
 				styles: {
 					listTypes: [ 'bulleted' ],
 					listStyleTypes: {
-						bulleted: [ 'disc', 'circle', 'square' ]
+						bulleted: [ 'disc', 'circle', 'square', 'circle-tick', 'circle-cross' ]
 					},
 					useAttribute: true
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -87,7 +96,10 @@ describe( 'ListProperties - utils - config', () => {
 					useAttribute: true
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -107,7 +119,10 @@ describe( 'ListProperties - utils - config', () => {
 					useAttribute: false
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -121,12 +136,15 @@ describe( 'ListProperties - utils - config', () => {
 					listTypes: [ 'bulleted', 'numbered' ],
 					listStyleTypes: {
 						numbered: [ 'decimal', 'decimal-leading-zero', 'lower-roman', 'upper-roman', 'lower-latin', 'upper-latin' ],
-						bulleted: [ 'disc', 'circle', 'square' ]
+						bulleted: [ 'disc', 'circle', 'square', 'circle-tick', 'circle-cross' ]
 					},
 					useAttribute: false
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -142,7 +160,10 @@ describe( 'ListProperties - utils - config', () => {
 					useAttribute: false
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -160,7 +181,10 @@ describe( 'ListProperties - utils - config', () => {
 					useAttribute: false
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -173,12 +197,15 @@ describe( 'ListProperties - utils - config', () => {
 				styles: {
 					listTypes: [ 'bulleted' ],
 					listStyleTypes: {
-						bulleted: [ 'disc', 'circle', 'square' ]
+						bulleted: [ 'disc', 'circle', 'square', 'circle-tick', 'circle-cross' ]
 					},
 					useAttribute: false
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -194,12 +221,15 @@ describe( 'ListProperties - utils - config', () => {
 					listTypes: [ 'bulleted', 'numbered' ],
 					listStyleTypes: {
 						numbered: [ 'decimal', 'decimal-leading-zero', 'lower-roman', 'upper-roman', 'lower-latin', 'upper-latin' ],
-						bulleted: [ 'disc', 'circle', 'square' ]
+						bulleted: [ 'disc', 'circle', 'square', 'circle-tick', 'circle-cross' ]
 					},
 					useAttribute: true
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -215,7 +245,10 @@ describe( 'ListProperties - utils - config', () => {
 					useAttribute: false
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -228,13 +261,16 @@ describe( 'ListProperties - utils - config', () => {
 				styles: {
 					listTypes: [ 'bulleted', 'numbered' ],
 					listStyleTypes: {
-						bulleted: [ 'disc', 'circle', 'square' ],
+						bulleted: [ 'disc', 'circle', 'square', 'circle-tick', 'circle-cross' ],
 						numbered: [ 'decimal', 'decimal-leading-zero', 'lower-roman', 'upper-roman', 'lower-latin', 'upper-latin' ]
 					},
 					useAttribute: false
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -247,12 +283,15 @@ describe( 'ListProperties - utils - config', () => {
 				styles: {
 					listTypes: [ 'bulleted' ],
 					listStyleTypes: {
-						bulleted: [ 'disc', 'circle', 'square' ]
+						bulleted: [ 'disc', 'circle', 'square', 'circle-tick', 'circle-cross' ]
 					},
 					useAttribute: false
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -270,7 +309,10 @@ describe( 'ListProperties - utils - config', () => {
 					useAttribute: false
 				},
 				startIndex: false,
-				reversed: false
+				reversed: false,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 
@@ -286,12 +328,15 @@ describe( 'ListProperties - utils - config', () => {
 					listTypes: [ 'bulleted', 'numbered' ],
 					listStyleTypes: {
 						numbered: [ 'decimal', 'decimal-leading-zero', 'lower-roman', 'upper-roman', 'lower-latin', 'upper-latin' ],
-						bulleted: [ 'disc', 'circle', 'square' ]
+						bulleted: [ 'disc', 'circle', 'square', 'circle-tick', 'circle-cross' ]
 					},
 					useAttribute: false
 				},
 				startIndex: true,
-				reversed: true
+				reversed: true,
+				markerColor: false,
+				markerColors: [],
+				columns: null
 			} );
 		} );
 	} );

@@ -34,7 +34,7 @@ export class ReplaceCommand extends FindReplaceCommandBase {
 		//
 		// Keep in mind that the highlighted offset is indexed from 1, as it's displayed to the user. It's why we subtract 1 here.
 		//
-		// More info: https://github.com/ckeditor/ckeditor5/issues/16648
+		// More info: https://github.com/ssmckinney/ckeditor5/issues/16648
 		const oldHighlightOffset = Math.max( this._state!.highlightedOffset - 1, 0 );
 
 		this._replace( replacementText, result );

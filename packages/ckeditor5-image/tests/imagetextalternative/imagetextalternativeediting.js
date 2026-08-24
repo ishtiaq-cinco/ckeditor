@@ -4,7 +4,7 @@
  */
 
 import { describe, it, beforeEach, expect } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 import { ImageTextAlternativeEditing } from '../../src/imagetextalternative/imagetextalternativeediting.js';
 import { ImageTextAlternativeCommand } from '../../src/imagetextalternative/imagetextalternativecommand.js';
 

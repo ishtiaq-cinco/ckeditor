@@ -7,7 +7,7 @@
  * @module font/fontfamily
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { FontFamilyEditing } from './fontfamily/fontfamilyediting.js';
 import { FontFamilyUI } from './fontfamily/fontfamilyui.js';
 

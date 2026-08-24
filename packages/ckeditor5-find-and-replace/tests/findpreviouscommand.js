@@ -5,10 +5,10 @@
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { _setModelData, _stringifyModel } from '@ckeditor/ckeditor5-engine';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { _setModelData, _stringifyModel } from '@ssmckinney/ckeditor5-engine';
 import { FindAndReplaceEditing } from '../src/findandreplaceediting.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 describe( 'FindPreviousCommand', () => {
 	let editor, model, command;

@@ -22,7 +22,7 @@ It handles file uploads and significantly reduces the effort required to build a
 	<ck:tab label='CKEditor 5 addon' active='true'>
         <div class='doc live-snippet'>
 			<p>
-				To upload a file using CKBox, use the open file manager toolbar button {@icon @ckeditor/ckeditor5-icons/theme/icons/browse-files.svg Open file manager}. You can choose more than one file at a time. Use the edit image button {@icon @ckeditor/ckeditor5-icons/theme/icons/ckbox-image-edit.svg} from either the main toolbar or the image contextual toolbar to edit the selected image.
+				To upload a file using CKBox, use the open file manager toolbar button {@icon @ssmckinney/ckeditor5-icons/theme/icons/browse-files.svg Open file manager}. You can choose more than one file at a time. Use the edit image button {@icon @ssmckinney/ckeditor5-icons/theme/icons/ckbox-image-edit.svg} from either the main toolbar or the image contextual toolbar to edit the selected image.
 			</p>
 			<div id='snippet-ckbox-ckeditor'></div>
 		</div>
@@ -192,11 +192,11 @@ Once imported, you can use it within your application:
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/{@var ckeditor5-version}/ckeditor5.css">
+		<link rel="stylesheet" href="https://cdn.ckeditor.com/@ssmckinney/ckeditor5/{@var @ssmckinney/ckeditor5-version}/ckeditor5.css">
 	</head>
 	<body>
 		<div id="editor"></div>
-		<script src="https://cdn.ckeditor.com/ckeditor5/{@var ckeditor5-version}/ckeditor5.umd.js"></script>
+		<script src="https://cdn.ckeditor.com/@ssmckinney/ckeditor5/{@var @ssmckinney/ckeditor5-version}/@ssmckinney/ckeditor5.umd.js"></script>
 		<script src="https://cdn.ckbox.io/ckbox/{%CKBOX_VERSION%}/ckbox.js"></script>
 		<script>
 			const { ClassicEditor, LinkEditing, Image, ImageUpload, PictureEditing, CKBox, CKBoxImageEdit, CloudServices } = CKEDITOR;
@@ -230,15 +230,15 @@ For applications using modern bundling tools (such as Webpack or Vite) and packa
 First, install the necessary dependencies:
 
 ```bash
-npm install ckeditor5 ckbox
+npm install @ssmckinney/ckeditor5 ckbox
 ```
 
 Once the packages are installed, you can import the necessary modules directly into your application code and use them within your application:
 
 ```js
-import { ClassicEditor, Image, ImageUpload, LinkEditing, PictureEditing, CKBox, CKBoxImageEdit, CloudServices } from 'ckeditor5';
+import { ClassicEditor, Image, ImageUpload, LinkEditing, PictureEditing, CKBox, CKBoxImageEdit, CloudServices } from '@ssmckinney/ckeditor5';
 import * as ckbox from 'ckbox';
-import 'ckeditor5/ckeditor5.css';
+import '@ssmckinney/ckeditor5/ckeditor5.css';
 import 'ckbox/dist/styles/ckbox.css';
 
 ClassicEditor
@@ -293,7 +293,7 @@ If you define your own upload category mappings for a particular image type, onl
 
 The [CKBox workspaces](https://ckeditor.com/docs/ckbox/latest/features/file-management/workspaces.html) provide a convenient solution for achieving data isolation and user separation within CKBox. With workspaces, you can easily create separate storage and data spaces, giving you precise control over assigning specific users, user groups, or tenants to each workspace.
 
-If the user is assigned to more than one workspace, by default all the files uploaded directly from CKEditor are located in the first workspace in the list of workspaces allowed in the user's JWT token. This corresponds to uploads through drag and drop into the editor area, pasting images from the clipboard, or images uploaded using the Image {@icon @ckeditor/ckeditor5-icons/theme/icons/image-upload.svg Image} feature. If you would like to define a specific workspace for files uploaded this way, you can define its ID in the `defaultUploadWorkspaceId` option. After that, all the files uploaded directly from CKEditor will be placed in the specified workspace.
+If the user is assigned to more than one workspace, by default all the files uploaded directly from CKEditor are located in the first workspace in the list of workspaces allowed in the user's JWT token. This corresponds to uploads through drag and drop into the editor area, pasting images from the clipboard, or images uploaded using the Image {@icon @ssmckinney/ckeditor5-icons/theme/icons/image-upload.svg Image} feature. If you would like to define a specific workspace for files uploaded this way, you can define its ID in the `defaultUploadWorkspaceId` option. After that, all the files uploaded directly from CKEditor will be placed in the specified workspace.
 
 ```js
 ClassicEditor

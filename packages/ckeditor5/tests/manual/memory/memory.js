@@ -3,28 +3,28 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { TableProperties, TableCellProperties, TableColumnResize } from '@ckeditor/ckeditor5-table';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { Underline, Code, Strikethrough, Superscript, Subscript } from '@ckeditor/ckeditor5-basic-styles';
-import { FontColor, FontBackgroundColor, FontFamily, FontSize } from '@ckeditor/ckeditor5-font';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { WordCount } from '@ckeditor/ckeditor5-word-count';
-import { TodoList } from '@ckeditor/ckeditor5-list';
-import { SpecialCharacters, SpecialCharactersEssentials } from '@ckeditor/ckeditor5-special-characters';
-import { PageBreak } from '@ckeditor/ckeditor5-page-break';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
-import { Highlight } from '@ckeditor/ckeditor5-highlight';
-import { IndentBlock } from '@ckeditor/ckeditor5-indent';
-import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
-import { Mention } from '@ckeditor/ckeditor5-mention';
-import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
-import { Alignment } from '@ckeditor/ckeditor5-alignment';
-import { TextTransformation } from '@ckeditor/ckeditor5-typing';
-import { ImageUpload } from '@ckeditor/ckeditor5-image';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { TableProperties, TableCellProperties, TableColumnResize } from '@ssmckinney/ckeditor5-table';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { Underline, Code, Strikethrough, Superscript, Subscript } from '@ssmckinney/ckeditor5-basic-styles';
+import { FontColor, FontBackgroundColor, FontFamily, FontSize } from '@ssmckinney/ckeditor5-font';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { WordCount } from '@ssmckinney/ckeditor5-word-count';
+import { TodoList } from '@ssmckinney/ckeditor5-list';
+import { SpecialCharacters, SpecialCharactersEssentials } from '@ssmckinney/ckeditor5-special-characters';
+import { PageBreak } from '@ssmckinney/ckeditor5-page-break';
+import { HorizontalLine } from '@ssmckinney/ckeditor5-horizontal-line';
+import { Highlight } from '@ssmckinney/ckeditor5-highlight';
+import { IndentBlock } from '@ssmckinney/ckeditor5-indent';
+import { EasyImage } from '@ssmckinney/ckeditor5-easy-image';
+import { Mention } from '@ssmckinney/ckeditor5-mention';
+import { RemoveFormat } from '@ssmckinney/ckeditor5-remove-format';
+import { Alignment } from '@ssmckinney/ckeditor5-alignment';
+import { TextTransformation } from '@ssmckinney/ckeditor5-typing';
+import { ImageUpload } from '@ssmckinney/ckeditor5-image';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
 
-import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
+import { CS_CONFIG } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
 
 /*
  * Memory-leak safe version of balloon editor manual test does not:
@@ -137,7 +137,7 @@ function initEditor() {
 				iframeElement.srcdoc = '<html>' +
 					'<head>' +
 					`<title>${ document.title }</title>` +
-					'<link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/nightly/ckeditor5.css">' +
+					'<link rel="stylesheet" href="https://cdn.ckeditor.com/@ssmckinney/ckeditor5/nightly/ckeditor5.css">' +
 					'<link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5-premium-features/nightly/ckeditor5-premium-features.css">' +
 					'</head>' +
 					'<body class="ck-content">' +

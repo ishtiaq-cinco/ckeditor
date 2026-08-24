@@ -11,7 +11,7 @@ import {
 	toWidgetEditable,
 	findOptimalInsertionRange,
 	createElement
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 import {
 	CS_CONFIG,
 	ClassicEditor,

@@ -7,7 +7,7 @@
  * @module core/commandcollection
  */
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 import { type Command } from './command.js';
 
 /**
@@ -117,7 +117,7 @@ export class CommandCollection implements Iterable<[ string, Command ]> {
  * 	}
  * }
  *
- * declare module '@ckeditor/ckeditor5-core' {
+ * declare module '@ssmckinney/ckeditor5-core' {
  * 	interface CommandsMap {
  * 		myCommand: MyCommand;
  * 	}

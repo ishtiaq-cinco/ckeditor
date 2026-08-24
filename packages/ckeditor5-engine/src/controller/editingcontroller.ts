@@ -11,7 +11,7 @@ import {
 	CKEditorError,
 	ObservableMixin,
 	type ObservableMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { ViewRootEditableElement } from '../view/rooteditableelement.js';
 import { EditingView } from '../view/view.js';

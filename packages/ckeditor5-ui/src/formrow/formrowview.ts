@@ -10,7 +10,7 @@
 import { View } from '../view.js';
 import { type ViewCollection } from '../viewcollection.js';
 import { type LabelView } from '../label/labelview.js';
-import { toArray, type ArrayOrItem, type Locale } from '@ckeditor/ckeditor5-utils';
+import { toArray, type ArrayOrItem, type Locale } from '@ssmckinney/ckeditor5-utils';
 
 import '../../theme/components/formrow/formrow.css';
 

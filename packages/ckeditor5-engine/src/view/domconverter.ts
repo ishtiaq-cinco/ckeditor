@@ -31,7 +31,7 @@ import {
 	isValidAttributeName,
 	first,
 	env
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { type ViewNode } from './node.js';
 import { type ViewDocument } from './document.js';
@@ -418,7 +418,7 @@ export class ViewDomConverter {
 				if ( viewElementOrFragment.name === '$comment' ) {
 					domElement = this._domDocument.createComment( viewElementOrFragment.getCustomProperty( '$rawContent' ) as string );
 				} else {
-					// UIElement has its own render() method (see https://github.com/ckeditor/ckeditor5/issues/799).
+					// UIElement has its own render() method (see https://github.com/ssmckinney/ckeditor5/issues/799).
 					domElement = viewElementOrFragment.render( this._domDocument, this );
 				}
 
@@ -443,7 +443,7 @@ export class ViewDomConverter {
 				}
 
 				// RawElement take care of their children in RawElement#render() method which can be customized
-				// (see https://github.com/ckeditor/ckeditor5/issues/4469).
+				// (see https://github.com/ssmckinney/ckeditor5/issues/4469).
 				if ( viewElementOrFragment.is( 'rawElement' ) ) {
 					viewElementOrFragment.render( domElement, this );
 				}
@@ -519,7 +519,7 @@ export class ViewDomConverter {
 		}
 
 		// If the attribute should not be rendered, rename it (instead of removing) to give developers some idea of what
-		// is going on (https://github.com/ckeditor/ckeditor5/issues/10801).
+		// is going on (https://github.com/ssmckinney/ckeditor5/issues/10801).
 		domElement.setAttribute( shouldRenderAttribute ? key : UNSAFE_ATTRIBUTE_NAME_PREFIX + key, value );
 	}
 
@@ -649,7 +649,7 @@ export class ViewDomConverter {
 			}
 
 			// In case someone uses outdated view position, but DOM text node was already changed while typing.
-			// See: https://github.com/ckeditor/ckeditor5/issues/18648.
+			// See: https://github.com/ssmckinney/ckeditor5/issues/18648.
 			// Note that when checking Renderer#_isSelectionInInlineFiller() this might be other element
 			// than a text node as it is triggered before applying view changes to the DOM.
 			if ( domParent.data && offset > domParent.data.length ) {
@@ -811,7 +811,7 @@ export class ViewDomConverter {
 	 * @returns View selection.
 	 */
 	public domSelectionToView( domSelection: DomSelection ): ViewSelection {
-		// See: https://github.com/ckeditor/ckeditor5/issues/9635.
+		// See: https://github.com/ssmckinney/ckeditor5/issues/9635.
 		if ( isGeckoRestrictedDomSelection( domSelection ) ) {
 			return new ViewSelection( [] );
 		}
@@ -1225,7 +1225,7 @@ export class ViewDomConverter {
 		}
 
 		// Special case for <p><br></p> in which <br> should be treated as filler even when we are not in the 'br' mode.
-		// See https://github.com/ckeditor/ckeditor5/issues/5564.
+		// See https://github.com/ssmckinney/ckeditor5/issues/5564.
 		if ( isOnlyBrInBlock( domNode as DomElement, this.blockElements ) ) {
 			return true;
 		}
@@ -1253,7 +1253,7 @@ export class ViewDomConverter {
 			range.setEnd( selection.focusNode!, selection.focusOffset );
 		} catch {
 			// Safari sometimes gives us a selection that makes Range.set{Start,End} throw.
-			// See https://github.com/ckeditor/ckeditor5/issues/12375.
+			// See https://github.com/ssmckinney/ckeditor5/issues/12375.
 			return false;
 		}
 
@@ -1411,7 +1411,7 @@ export class ViewDomConverter {
 		inlineNodes: Array<ViewNode>
 	): IterableIterator<ViewNode | ViewDocumentFragment | null> {
 		// Special case for <p><br></p> in which <br> should be treated as filler even when we are not in the 'br' mode.
-		// See https://github.com/ckeditor/ckeditor5/issues/5564.
+		// See https://github.com/ssmckinney/ckeditor5/issues/5564.
 		if ( this.blockFillerMode != 'br' && isOnlyBrInBlock( domNode as DomElement, this.blockElements ) ) {
 			return null;
 		}
@@ -1567,7 +1567,7 @@ export class ViewDomConverter {
 				// see https://github.com/ckeditor/ckeditor5-engine/issues/822#issuecomment-311670249) to a single space character.
 				// That's how multiple whitespaces are treated when rendered, so we normalize those whitespaces.
 				// We're replacing 1+ (and not 2+) to also normalize singular \n\t\r characters.
-				// See https://github.com/ckeditor/ckeditor5/issues/822.
+				// See https://github.com/ssmckinney/ckeditor5/issues/822.
 				data = node.data.replace( /[ \n\t\r]{1,}/g, ' ' );
 				nodeEndsWithSpace = /[^\S\u00A0]/.test( data.charAt( data.length - 1 ) );
 
@@ -1595,7 +1595,7 @@ export class ViewDomConverter {
 				// This means that the text node starts/end with normal space instead of non-breaking space.
 				// This causes a problem because the normal space would be removed in `.replace` calls above. To prevent that,
 				// the inline filler is removed only after the data is initially processed (by the `.replace` above).
-				// See https://github.com/ckeditor/ckeditor5/issues/692.
+				// See https://github.com/ssmckinney/ckeditor5/issues/692.
 				data = getDataWithoutFiller( data );
 
 				// Block filler handling.
@@ -1790,7 +1790,7 @@ export class ViewDomConverter {
 			// ViewContainerElement is found on a way to next ViewText node, so given `node` was first/last
 			// text node in its container element.
 			// The ol, ul, and li elements are rendered as an attribute element so we should check list of known block elements.
-			// See: https://github.com/ckeditor/ckeditor5/issues/18960.
+			// See: https://github.com/ssmckinney/ckeditor5/issues/18960.
 			else if ( item.is( 'containerElement' ) || this._isBlockViewElement( item ) ) {
 				return null;
 			}
@@ -1985,7 +1985,7 @@ function isViewBrFiller( node: ViewNode ): boolean {
  * Special case for `<p><br></p>` in which `<br>` should be treated as filler even when we are not in the 'br' mode.
  */
 function isOnlyBrInBlock( domNode: DomElement, blockElements: Array<string> ): boolean {
-	// See https://github.com/ckeditor/ckeditor5/issues/5564.
+	// See https://github.com/ssmckinney/ckeditor5/issues/5564.
 	return (
 		domNode.tagName === 'BR' &&
 		hasBlockParent( domNode, blockElements ) &&
@@ -2012,7 +2012,7 @@ function _logUnsafeElement( elementName: string ): void {
 /**
  * In certain cases, Firefox mysteriously assigns so called "restricted objects" to native DOM Range properties.
  * Any attempt at accessing restricted object's properties causes errors.
- * See: https://github.com/ckeditor/ckeditor5/issues/9635.
+ * See: https://github.com/ssmckinney/ckeditor5/issues/9635.
  */
 function isGeckoRestrictedDomSelection( domSelection: DomSelection ): boolean {
 	if ( !env.isGecko ) {

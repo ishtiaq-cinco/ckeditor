@@ -7,7 +7,7 @@
  * @module emoji/emojiutils
  */
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 import type { EmojiCdnResource, EmojiEntry } from './emojirepository.js';
 import type { EmojiSkinToneId } from './emojiconfig.js';
 import { isEmojiSupported } from './utils/isemojisupported.js';

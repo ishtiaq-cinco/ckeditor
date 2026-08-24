@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 import { GeneralHtmlSupport } from '../../src/generalhtmlsupport.js';
 import { getModelDataWithAttributes } from '../_utils/utils.js';
-import { _getViewData } from '@ckeditor/ckeditor5-engine';
+import { _getViewData } from '@ssmckinney/ckeditor5-engine';
 import { IframeElementSupport } from '../../src/integrations/iframe.js';
 
 describe( 'IframeElementSupport', () => {

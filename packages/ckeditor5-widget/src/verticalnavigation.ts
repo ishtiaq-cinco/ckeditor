@@ -11,7 +11,7 @@ import {
 	keyCodes,
 	Rect,
 	type GetCallback
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import type {
 	ModelDocumentSelection,
@@ -22,7 +22,7 @@ import type {
 	ModelSchema,
 	ModelSelection,
 	ViewDocumentArrowKeyEvent
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 /**
  * Returns 'keydown' handler for up/down arrow keys that modifies the caret movement if it's in a text line next to an object.

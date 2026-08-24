@@ -7,7 +7,7 @@
  * @module alignment/alignment
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import { AlignmentEditing } from './alignmentediting.js';
 import { AlignmentUI } from './alignmentui.js';

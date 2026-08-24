@@ -5,14 +5,14 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { global } from '@ckeditor/ckeditor5-utils';
-import { Image } from '@ckeditor/ckeditor5-image';
-import { Link } from '@ckeditor/ckeditor5-link';
-import { CKFinderUploadAdapter } from '@ckeditor/ckeditor5-adapter-ckfinder';
-import { IconImageAssetManager, IconBrowseFiles } from '@ckeditor/ckeditor5-icons';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { global } from '@ssmckinney/ckeditor5-utils';
+import { Image } from '@ssmckinney/ckeditor5-image';
+import { Link } from '@ssmckinney/ckeditor5-link';
+import { CKFinderUploadAdapter } from '@ssmckinney/ckeditor5-adapter-ckfinder';
+import { IconImageAssetManager, IconBrowseFiles } from '@ssmckinney/ckeditor5-icons';
 
-import { ButtonView, MenuBarMenuListItemButtonView, UIModel } from '@ckeditor/ckeditor5-ui';
+import { ButtonView, MenuBarMenuListItemButtonView, UIModel } from '@ssmckinney/ckeditor5-ui';
 
 import { CKFinder } from '../src/ckfinder.js';
 import { CKFinderUI } from '../src/ckfinderui.js';

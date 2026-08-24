@@ -13,7 +13,7 @@ import { ModelRange } from '../range.js';
 
 import { type ModelDocument } from '../document.js';
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 import { isEqual } from 'es-toolkit/compat';
 import type { ModelSelectable } from '../selection.js';
 

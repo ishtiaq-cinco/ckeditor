@@ -7,7 +7,7 @@
  * @module image/image/imageloadobserver
  */
 
-import { Observer } from '@ckeditor/ckeditor5-engine';
+import { Observer } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * Observes all new images added to the {@link module:engine/view/document~ViewDocument},
@@ -32,7 +32,7 @@ export class ImageLoadObserver extends Observer {
 			if ( domElement.tagName == 'IMG' ) {
 				this._fireEvents( domEvent );
 			}
-			// Use capture phase for better performance (https://github.com/ckeditor/ckeditor5/issues/4504).
+			// Use capture phase for better performance (https://github.com/ssmckinney/ckeditor5/issues/4504).
 		}, { useCapture: true } );
 	}
 

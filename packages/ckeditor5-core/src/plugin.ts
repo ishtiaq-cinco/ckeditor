@@ -9,7 +9,7 @@
 
 /* eslint-disable @typescript-eslint/no-invalid-void-type */
 
-import { ObservableMixin, type ObservableSetEvent, type EventInfo, type ObservableMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { ObservableMixin, type ObservableSetEvent, type EventInfo, type ObservableMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 
 import { type Editor } from './editor/editor.js';
 

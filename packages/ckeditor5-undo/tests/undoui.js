@@ -3,12 +3,12 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { IconUndo, IconRedo } from '@ckeditor/ckeditor5-icons';
+import { IconUndo, IconRedo } from '@ssmckinney/ckeditor5-icons';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { UndoEditing } from '../src/undoediting.js';
 import { UndoUI } from '../src/undoui.js';
-import { ButtonView, MenuBarMenuListItemButtonView } from '@ckeditor/ckeditor5-ui';
+import { ButtonView, MenuBarMenuListItemButtonView } from '@ssmckinney/ckeditor5-ui';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 describe( 'UndoUI', () => {

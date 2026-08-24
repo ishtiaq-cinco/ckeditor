@@ -5,12 +5,12 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { IconAlignLeft, IconAlignRight } from '@ckeditor/ckeditor5-icons';
+import { IconAlignLeft, IconAlignRight } from '@ssmckinney/ckeditor5-icons';
 
 import { AlignmentEditing } from '../src/alignmentediting.js';
 import { AlignmentUI } from '../src/alignmentui.js';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 describe( 'Alignment UI', () => {
 	let editor, command, element, button;

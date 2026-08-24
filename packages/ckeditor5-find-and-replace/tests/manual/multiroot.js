@@ -3,13 +3,13 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { MultiRootEditor } from '@ckeditor/ckeditor5-editor-multi-root';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { List } from '@ckeditor/ckeditor5-list';
-import { Link } from '@ckeditor/ckeditor5-link';
+import { MultiRootEditor } from '@ssmckinney/ckeditor5-editor-multi-root';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { List } from '@ssmckinney/ckeditor5-list';
+import { Link } from '@ssmckinney/ckeditor5-link';
 import { FindAndReplace } from '../../src/findandreplace.js';
 
 MultiRootEditor

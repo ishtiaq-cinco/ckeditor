@@ -4,13 +4,13 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { Emoji } from '../src/emoji.js';
 import { EmojiPicker } from '../src/emojipicker.js';
 import { EmojiRepository } from '../src/emojirepository.js';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Mention } from '@ckeditor/ckeditor5-mention';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Mention } from '@ssmckinney/ckeditor5-mention';
 
 import database from './fixtures/database.json';
 

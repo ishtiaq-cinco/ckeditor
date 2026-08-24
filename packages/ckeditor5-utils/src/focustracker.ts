@@ -10,7 +10,7 @@
 import { DomEmitterMixin, type DomEmitterMixinConstructor } from './dom/emittermixin.js';
 import { ObservableMixin, type ObservableMixinConstructor } from './observablemixin.js';
 import { CKEditorError } from './ckeditorerror.js';
-import type { View } from '@ckeditor/ckeditor5-ui';
+import type { View } from '@ssmckinney/ckeditor5-ui';
 import { isElement as _isElement } from 'es-toolkit/compat';
 
 const FocusTrackerBase: DomEmitterMixinConstructor<ObservableMixinConstructor> =

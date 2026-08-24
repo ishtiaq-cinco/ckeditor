@@ -7,8 +7,8 @@
  * @module image/imagestyle/imagestyleediting
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import type { ModelBlockAlignmentAttributesMapping, ModelElement, UpcastElementEvent } from '@ckeditor/ckeditor5-engine';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import type { ModelBlockAlignmentAttributesMapping, ModelElement, UpcastElementEvent } from '@ssmckinney/ckeditor5-engine';
 
 import { ImageStyleCommand } from './imagestylecommand.js';
 import { ImageUtils } from '../imageutils.js';

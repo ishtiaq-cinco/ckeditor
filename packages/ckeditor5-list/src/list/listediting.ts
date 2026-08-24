@@ -7,7 +7,7 @@
  * @module list/list/listediting
  */
 
-import { Plugin, type Editor, type MultiCommand, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type MultiCommand, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import type {
 	DowncastAttributeEvent,
@@ -23,11 +23,11 @@ import type {
 	ModelWriter,
 	DowncastRemoveEvent,
 	MapperModelToViewPositionEvent
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import { Delete, type ViewDocumentDeleteEvent } from '@ckeditor/ckeditor5-typing';
-import { Enter, type EnterCommand, type ViewDocumentEnterEvent } from '@ckeditor/ckeditor5-enter';
-import { CKEditorError, type GetCallback } from '@ckeditor/ckeditor5-utils';
+import { Delete, type ViewDocumentDeleteEvent } from '@ssmckinney/ckeditor5-typing';
+import { Enter, type EnterCommand, type ViewDocumentEnterEvent } from '@ssmckinney/ckeditor5-enter';
+import { CKEditorError, type GetCallback } from '@ssmckinney/ckeditor5-utils';
 
 import { ListIndentCommand } from './listindentcommand.js';
 import { ListCommand } from './listcommand.js';
@@ -71,7 +71,7 @@ import { ListWalker, ListBlocksIterable } from './utils/listwalker.js';
 import {
 	ClipboardPipeline,
 	type ClipboardOutputTransformationEvent
-} from '@ckeditor/ckeditor5-clipboard';
+} from '@ssmckinney/ckeditor5-clipboard';
 
 import '../../theme/documentlist.css';
 import '../../theme/list.css';
@@ -254,7 +254,7 @@ export class ListEditing extends Plugin {
 		this.listenTo<ViewDocumentDeleteEvent>( editor.editing.view.document, 'delete', ( evt, data ) => {
 			const selection = editor.model.document.selection;
 
-			// Let the Widget plugin take care of block widgets while deleting (https://github.com/ckeditor/ckeditor5/issues/11346).
+			// Let the Widget plugin take care of block widgets while deleting (https://github.com/ssmckinney/ckeditor5/issues/11346).
 			if ( getSelectedBlockObject( editor.model ) ) {
 				return;
 			}
@@ -666,7 +666,7 @@ export class ListEditing extends Plugin {
 		//	                       │  * bar]             │ * bar             │
 		//	                       └─────────────────────┴───────────────────┘
 		//
-		// See https://github.com/ckeditor/ckeditor5/issues/11608, https://github.com/ckeditor/ckeditor5/issues/14969
+		// See https://github.com/ssmckinney/ckeditor5/issues/11608, https://github.com/ssmckinney/ckeditor5/issues/14969
 		this.listenTo<ClipboardOutputTransformationEvent>( clipboardPipeline, 'outputTransformation', ( evt, data ) => {
 			model.change( writer => {
 				// Remove last block if it's empty.
@@ -973,7 +973,7 @@ function createModelIndentPasteFixer( model: Model ): GetCallback<ModelInsertCon
 	return ( evt, [ content, selectable ] ) => {
 		// Only consider block elements for list attribute fixing. Applying list attributes to text nodes
 		// or inline objects does not make sense and can cause editor crashes.
-		// See https://github.com/ckeditor/ckeditor5/issues/19994.
+		// See https://github.com/ssmckinney/ckeditor5/issues/19994.
 		const items = ( content.is( 'documentFragment' ) ?
 			Array.from( content.getChildren() ) :
 			[ content ]
@@ -1014,7 +1014,7 @@ function createModelIndentPasteFixer( model: Model ): GetCallback<ModelInsertCon
 					 * When paragraphs or a plain text list is pasted into a simple list, convert
 					 * the `<paragraphs>' to `<listItem>' to avoid breaking the target list.
 					 *
-					 * See https://github.com/ckeditor/ckeditor5/issues/13826.
+					 * See https://github.com/ssmckinney/ckeditor5/issues/13826.
 					 */
 					writer.rename( item as ModelElement, 'listItem' );
 				}

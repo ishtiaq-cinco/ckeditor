@@ -20,7 +20,7 @@ The widget API consists of two layers:
 Besides these mentioned core functionalities, this package implements the following utilities:
 
 * The {@link module:widget/widgettoolbarrepository~WidgetToolbarRepository `WidgetToolbarRepository`} plugin which exposes a nice API for registering widget toolbars.
-* A few helper functions for managing widgets in the {@link module:widget/utils `@ckeditor/ckeditor5-widget/utils`} module.
+* A few helper functions for managing widgets in the {@link module:widget/utils `@ssmckinney/ckeditor5-widget/utils`} module.
 
 <info-box>
 	The widget API is proposed in a different way than it was in CKEditor 4. It is just a set of utilities that allow you to implement typical object-like entities. Most of the work actually happens in the {@link api/engine engine} and this API's only role is to control it.
@@ -31,7 +31,7 @@ Besides these mentioned core functionalities, this package implements the follow
 This package is part of our open-source aggregate package.
 
 ```bash
-npm install ckeditor5
+npm install @ssmckinney/ckeditor5
 ```
 
 ## Contribute
@@ -40,7 +40,7 @@ The source code of this package is available on GitHub in [https://github.com/ck
 
 ## External links
 
-* [`@ckeditor/ckeditor5-widget` on npm](https://www.npmjs.com/package/@ckeditor/ckeditor5-widget)
+* [`@ssmckinney/ckeditor5-widget` on npm](https://www.npmjs.com/package/@ssmckinney/ckeditor5-widget)
 * [`ckeditor/ckeditor5-widget` on GitHub](https://github.com/ckeditor/ckeditor5/tree/master/packages/ckeditor5-widget)
-* [Issue tracker](https://github.com/ckeditor/ckeditor5/issues)
+* [Issue tracker](https://github.com/ssmckinney/ckeditor5/issues)
 * [Changelog](https://github.com/ckeditor/ckeditor5/blob/master/CHANGELOG.md)

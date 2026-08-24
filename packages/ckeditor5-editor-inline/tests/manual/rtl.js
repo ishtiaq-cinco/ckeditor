@@ -4,7 +4,7 @@
  */
 
 import { InlineEditor } from '../../src/inlineeditor.js';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 
 InlineEditor
 	.create( {

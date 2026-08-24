@@ -6,16 +6,16 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
 import { Alignment } from '../src/alignment.js';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Image, ImageCaption } from '@ckeditor/ckeditor5-image';
-import { List } from '@ckeditor/ckeditor5-list';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Delete } from '@ckeditor/ckeditor5-typing';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Image, ImageCaption } from '@ssmckinney/ckeditor5-image';
+import { List } from '@ssmckinney/ckeditor5-list';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Delete } from '@ssmckinney/ckeditor5-typing';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'Alignment integration', () => {
 	let editor, model, element;

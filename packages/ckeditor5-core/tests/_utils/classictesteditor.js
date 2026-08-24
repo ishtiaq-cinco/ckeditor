@@ -6,9 +6,9 @@
 import { Editor } from '../../src/editor/editor.js';
 import { ElementApiMixin } from '../../src/editor/utils/elementapimixin.js';
 import { normalizeRootsConfig, normalizeSingleRootEditorConstructorParams } from '../../src/editor/utils/normalizerootsconfig.js';
-import { EditorUI, BoxedEditorUIView, InlineEditableUIView } from '@ckeditor/ckeditor5-ui';
-import { ElementReplacer } from '@ckeditor/ckeditor5-utils';
-import { registerAndInitializeRootConfigAttributes } from '@ckeditor/ckeditor5-core';
+import { EditorUI, BoxedEditorUIView, InlineEditableUIView } from '@ssmckinney/ckeditor5-ui';
+import { ElementReplacer } from '@ssmckinney/ckeditor5-utils';
+import { registerAndInitializeRootConfigAttributes } from '@ssmckinney/ckeditor5-core';
 import { isElement } from 'es-toolkit/compat';
 
 /**

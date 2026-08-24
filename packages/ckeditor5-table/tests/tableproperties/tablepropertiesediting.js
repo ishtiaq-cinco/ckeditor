@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ImageBlockEditing, ImageResizeEditing } from '@ckeditor/ckeditor5-image';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ImageBlockEditing, ImageResizeEditing } from '@ssmckinney/ckeditor5-image';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
 
 import { TableEditing } from '../../src/tableediting.js';
 import { TableLayoutEditing } from '../../src/tablelayout/tablelayoutediting.js';
@@ -25,7 +25,7 @@ import { TableWidthCommand } from '../../src/tableproperties/commands/tablewidth
 import { TableHeightCommand } from '../../src/tableproperties/commands/tableheightcommand.js';
 import { TableBackgroundColorCommand } from '../../src/tableproperties/commands/tablebackgroundcolorcommand.js';
 
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { assertTableStyle, assertTableClass, assertTRBLAttribute } from '../_utils/utils.js';
 
 describe( 'table properties', () => {
@@ -299,7 +299,7 @@ describe( 'table properties', () => {
 				} );
 
 				describe( 'nested tables', () => {
-					// https://github.com/ckeditor/ckeditor5/issues/6177.
+					// https://github.com/ssmckinney/ckeditor5/issues/6177.
 					it( 'should upcast tables with nested tables in their cells', () => {
 						editor.setData(
 							'<table style="border:2px solid red">' +
@@ -344,7 +344,7 @@ describe( 'table properties', () => {
 						);
 					} );
 
-					// https://github.com/ckeditor/ckeditor5/issues/8393.
+					// https://github.com/ssmckinney/ckeditor5/issues/8393.
 					it( 'should not throw error - inner cell with border style', () => {
 						expect( () => {
 							editor.setData(
@@ -383,7 +383,7 @@ describe( 'table properties', () => {
 						);
 					} );
 
-					// https://github.com/ckeditor/ckeditor5/issues/8393.
+					// https://github.com/ssmckinney/ckeditor5/issues/8393.
 					it( 'should not throw error - inner empty table with border style', () => {
 						expect( () => {
 							editor.setData(
@@ -420,7 +420,7 @@ describe( 'table properties', () => {
 						);
 					} );
 
-					// https://github.com/ckeditor/ckeditor5/issues/8393.
+					// https://github.com/ssmckinney/ckeditor5/issues/8393.
 					it( 'should not throw error - no tables allowed in an element', () => {
 						// Conversion will create a merged text node out of all the text contents,
 						// including the one in elements not allowed by schema in this scope.
@@ -468,7 +468,7 @@ describe( 'table properties', () => {
 					} );
 
 					describe( 'nested tables forbidden by custom rule', () => {
-						// Nested tables are supported since https://github.com/ckeditor/ckeditor5/issues/3232, so let's check
+						// Nested tables are supported since https://github.com/ssmckinney/ckeditor5/issues/3232, so let's check
 						// if the editor will not blow up in case nested tables are forbidden by custom scheme rule.
 						beforeEach( () => {
 							model.schema.addChildCheck( ( context, childDefinition ) => {
@@ -514,7 +514,7 @@ describe( 'table properties', () => {
 							);
 						} );
 
-						// https://github.com/ckeditor/ckeditor5/issues/8393.
+						// https://github.com/ssmckinney/ckeditor5/issues/8393.
 						it( 'should not throw error - inner cell with border style', () => {
 							expect( () => {
 								editor.setData(
@@ -547,7 +547,7 @@ describe( 'table properties', () => {
 							);
 						} );
 
-						// https://github.com/ckeditor/ckeditor5/issues/8393.
+						// https://github.com/ssmckinney/ckeditor5/issues/8393.
 						it( 'should not throw error - inner empty table with border style', () => {
 							expect( () => {
 								editor.setData(
@@ -574,7 +574,7 @@ describe( 'table properties', () => {
 							);
 						} );
 
-						// https://github.com/ckeditor/ckeditor5/issues/8393.
+						// https://github.com/ssmckinney/ckeditor5/issues/8393.
 						it( 'should not throw error - no tables allowed in an element', () => {
 							// Conversion will create a merged text node out of all the text contents,
 							// including the one in elements not allowed by schema in this scope.

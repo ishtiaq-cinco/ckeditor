@@ -7,7 +7,7 @@
  * @module editor-classic/classiceditorui
  */
 
-import { rootAcceptsBlocks, type Editor, type ElementApi } from '@ckeditor/ckeditor5-core';
+import { rootAcceptsBlocks, type Editor, type ElementApi } from '@ssmckinney/ckeditor5-core';
 import {
 	EditorUI,
 	DialogView,
@@ -16,12 +16,12 @@ import {
 	type Dialog,
 	type EditorUIReadyEvent,
 	type ContextualBalloonGetPositionOptionsEvent
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 import {
 	enableViewPlaceholder,
 	type ViewScrollToTheSelectionEvent
-} from '@ckeditor/ckeditor5-engine';
-import { ElementReplacer, Rect, type EventInfo } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-engine';
+import { ElementReplacer, Rect, type EventInfo } from '@ssmckinney/ckeditor5-utils';
 import { type ClassicEditorUIView } from './classiceditoruiview.js';
 
 /**
@@ -226,7 +226,7 @@ export class ClassicEditorUI extends EditorUI {
 			// Handle edge case when the target element is larger than the limiter.
 			// It's an issue because the contextual balloon can overlap top table cells when the table is larger than the viewport
 			// and it's placed at the top of the editor. It's better to overlap toolbar in that situation.
-			// Check this issue: https://github.com/ckeditor/ckeditor5/issues/15744
+			// Check this issue: https://github.com/ssmckinney/ckeditor5/issues/15744
 			const target = typeof position.target === 'function' ? position.target() : position.target;
 			const limiter = typeof position.limiter === 'function' ? position.limiter() : position.limiter;
 
@@ -315,7 +315,7 @@ export class ClassicEditorUI extends EditorUI {
 			dialogView.on<DialogViewMoveToEvent>( 'moveTo', ( evt, data ) => {
 				// Engage only when the panel is sticky, and the dialog is using one of default positions.
 				// Ignore modals because they are displayed on top of the page (and overlay) and they do not collide with anything
-				// See (https://github.com/ckeditor/ckeditor5/issues/17339).
+				// See (https://github.com/ssmckinney/ckeditor5/issues/17339).
 				if ( !stickyPanel.isSticky || dialogView.wasMoved || dialogView.isModal ) {
 					return;
 				}

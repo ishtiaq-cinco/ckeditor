@@ -10,9 +10,9 @@
 import type {
 	ModelElement,
 	ModelWriter
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import { Command } from '@ckeditor/ckeditor5-core';
+import { Command } from '@ssmckinney/ckeditor5-core';
 import { TableUtils } from '../tableutils.js';
 import { updateNumericAttribute } from '../utils/common.js';
 import { removeEmptyRowsColumns } from '../utils/structure.js';

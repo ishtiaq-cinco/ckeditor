@@ -15,7 +15,7 @@ import {
 	type KeystrokeHandler,
 	type KeystrokeHandlerOptions,
 	type EmitterMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { type View } from './view.js';
 import { type ViewCollection } from './viewcollection.js';

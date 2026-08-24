@@ -7,10 +7,10 @@
  * @module indent/indentblockcommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
-import type { ModelElement } from '@ckeditor/ckeditor5-engine';
-import type { ListUtils } from '@ckeditor/ckeditor5-list';
-import { first } from '@ckeditor/ckeditor5-utils';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
+import type { ModelElement } from '@ssmckinney/ckeditor5-engine';
+import type { ListUtils } from '@ssmckinney/ckeditor5-list';
+import { first } from '@ssmckinney/ckeditor5-utils';
 
 import type { IndentBehavior } from './indentcommandbehavior/indentbehavior.js';
 
@@ -102,7 +102,7 @@ export class IndentBlockCommand extends Command {
 	/**
 	 * Returns false if indentation cannot be applied, i.e.:
 	 * - for blocks disallowed by schema declaration
-	 * - for blocks in Document Lists (disallowed forward indentation only). See https://github.com/ckeditor/ckeditor5/issues/14155.
+	 * - for blocks in Document Lists (disallowed forward indentation only). See https://github.com/ssmckinney/ckeditor5/issues/14155.
 	 * Otherwise returns true.
 	 */
 	private _isIndentationChangeAllowed( element: ModelElement ): boolean {

@@ -191,7 +191,7 @@ Any UI {@link framework/architecture/ui-library#views view} can be focusable. To
 
 <code-switcher>
 ```js
-import { View } from 'ckeditor5';
+import { View } from '@ssmckinney/ckeditor5';
 
 class MyListItemView extends View {
 	constructor( locale, text ) {
@@ -223,7 +223,7 @@ If a view has many focusable children (like a list), the `focus()` method should
 
 <code-switcher>
 ```js
-import { View } from 'ckeditor5';
+import { View } from '@ssmckinney/ckeditor5';
 
 class MyListView extends View {
 	constructor( locale ) {
@@ -297,7 +297,7 @@ Take a look at the following example of a list that has multiple items, a classi
 
 <code-switcher>
 ```js
-import { View, FocusTracker } from 'ckeditor5';
+import { View, FocusTracker } from '@ssmckinney/ckeditor5';
 
 class MyListView extends View {
 	constructor( locale ) {
@@ -371,7 +371,7 @@ However, in the context of focus management, it is used by the [focus cycler](#u
 
 <code-switcher>
 ```js
-import { FocusCycler, View, FocusTracker, KeystrokeHandler } from 'ckeditor5';
+import { FocusCycler, View, FocusTracker, KeystrokeHandler } from '@ssmckinney/ckeditor5';
 
 export default class MyListView extends View {
 	constructor( locale ) {
@@ -416,7 +416,7 @@ Take a look at the example list class using focus cycler, keystroke handler and 
 
 <code-switcher>
 ```js
-import { FocusCycler, View, FocusTracker, KeystrokeHandler } from 'ckeditor5';
+import { FocusCycler, View, FocusTracker, KeystrokeHandler } from '@ssmckinney/ckeditor5';
 
 class MyListView extends View {
 	constructor( locale ) {
@@ -513,7 +513,7 @@ The complete code of a list class that hosts multiple item views and supports th
 
 <code-switcher>
 ```js
-import { FocusCycler, View, FocusTracker, KeystrokeHandler } from 'ckeditor5';
+import { FocusCycler, View, FocusTracker, KeystrokeHandler } from '@ssmckinney/ckeditor5';
 
 class MyListView extends View {
 	constructor( locale ) {

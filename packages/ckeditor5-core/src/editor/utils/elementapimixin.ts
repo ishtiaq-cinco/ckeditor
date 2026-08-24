@@ -12,7 +12,7 @@ import {
 	setDataInElement,
 	type Constructor,
 	type Mixed
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { type Editor } from '../editor.js';
 

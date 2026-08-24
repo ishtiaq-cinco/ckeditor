@@ -15,7 +15,7 @@ The HTML embed feature lets you embed any HTML snippet in your content. The feat
 
 ## Demo
 
-Use the HTML embed toolbar button {@icon @ckeditor/ckeditor5-icons/theme/icons/html.svg HTML embed} in the editor below to see the plugin in action. Click the "Preview editor data" button under the editor to preview the editor content, including the embedded HTML.
+Use the HTML embed toolbar button {@icon @ssmckinney/ckeditor5-icons/theme/icons/html.svg HTML embed} in the editor below to see the plugin in action. Click the "Preview editor data" button under the editor to preview the editor content, including the embedded HTML.
 
 {@snippet features/html-embed}
 
@@ -54,7 +54,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, HtmlEmbed } from 'ckeditor5';
+import { ClassicEditor, HtmlEmbed } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -101,7 +101,7 @@ ClassicEditor
 	.catch( /* ... */ );
 ```
 
-Currently, the [feature does not execute `<script>` tags](https://github.com/ckeditor/ckeditor5/issues/8326) so the content that requires executing JavaScript to generate a preview will not show in the editor. However, other JavaScript code, for example, used in `on*` observers and `src="javascript:..."` attributes will be executed. You still need to enable the sanitizer.
+Currently, the [feature does not execute `<script>` tags](https://github.com/ssmckinney/ckeditor5/issues/8326) so the content that requires executing JavaScript to generate a preview will not show in the editor. However, other JavaScript code, for example, used in `on*` observers and `src="javascript:..."` attributes will be executed. You still need to enable the sanitizer.
 
 Displaying raw HTML previews can execute malicious JS (for example via `onclick` or `javascript:`) in your site’s context. Read more about the security aspect in the next section.
 

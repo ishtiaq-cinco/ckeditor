@@ -12,7 +12,7 @@ import { View } from '../view.js';
 import type { FocusableView } from '../focuscycler.js';
 import { type ViewCollection } from '../viewcollection.js';
 
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * The list item view class.

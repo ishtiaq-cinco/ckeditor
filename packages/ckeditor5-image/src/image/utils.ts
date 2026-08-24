@@ -17,9 +17,9 @@ import {
 	type ViewDowncastWriter,
 	type ViewElement,
 	_isParagraphableModelNode as isParagraphable
-} from '@ckeditor/ckeditor5-engine';
-import type { Editor } from '@ckeditor/ckeditor5-core';
-import { first } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-engine';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
+import { first } from '@ssmckinney/ckeditor5-utils';
 
 import { type ImageUtils } from '../imageutils.js';
 
@@ -94,7 +94,7 @@ export function getImgViewElementMatcher( editor: Editor, matchImageType: 'image
 			name: true
 		};
 
-		// This will trigger src consumption (See https://github.com/ckeditor/ckeditor5/issues/11530).
+		// This will trigger src consumption (See https://github.com/ssmckinney/ckeditor5/issues/11530).
 		if ( element.hasAttribute( 'src' ) ) {
 			pattern.attributes = [ 'src' ];
 		}

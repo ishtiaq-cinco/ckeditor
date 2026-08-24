@@ -6,7 +6,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { Base64UploadAdapter } from '../../src/adapters/base64uploadadapter.js';
 import { FileRepository } from '../../src/filerepository.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { createNativeFileMock } from '../_utils/mocks.js';
 
 describe( 'Base64UploadAdapter', () => {

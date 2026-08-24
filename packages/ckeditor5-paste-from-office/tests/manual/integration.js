@@ -3,26 +3,26 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 
-import { ListProperties } from '@ckeditor/ckeditor5-list';
-import { Strikethrough, Underline } from '@ckeditor/ckeditor5-basic-styles';
-import { Table, TableToolbar, TableProperties, TableCellProperties, TableColumnResize } from '@ckeditor/ckeditor5-table';
-import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
-import { FontColor, FontBackgroundColor } from '@ckeditor/ckeditor5-font';
-import { PageBreak } from '@ckeditor/ckeditor5-page-break';
-import { ImageUpload } from '@ckeditor/ckeditor5-image';
-import { Bookmark } from '@ckeditor/ckeditor5-bookmark';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
+import { ListProperties } from '@ssmckinney/ckeditor5-list';
+import { Strikethrough, Underline } from '@ssmckinney/ckeditor5-basic-styles';
+import { Table, TableToolbar, TableProperties, TableCellProperties, TableColumnResize } from '@ssmckinney/ckeditor5-table';
+import { EasyImage } from '@ssmckinney/ckeditor5-easy-image';
+import { FontColor, FontBackgroundColor } from '@ssmckinney/ckeditor5-font';
+import { PageBreak } from '@ssmckinney/ckeditor5-page-break';
+import { ImageUpload } from '@ssmckinney/ckeditor5-image';
+import { Bookmark } from '@ssmckinney/ckeditor5-bookmark';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
+import { Indent, IndentBlock } from '@ssmckinney/ckeditor5-indent';
 
 import { PasteFromOffice } from '../../src/pastefromoffice.js';
 
-import { _stringifyView } from '@ckeditor/ckeditor5-engine';
+import { _stringifyView } from '@ssmckinney/ckeditor5-engine';
 
-import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
+import { CS_CONFIG } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
 
 const htmlDiv = document.querySelector( '#html' );
 const textDiv = document.querySelector( '#text' );

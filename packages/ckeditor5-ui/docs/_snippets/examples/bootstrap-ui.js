@@ -25,7 +25,7 @@ import {
 	UndoEditing,
 	ElementReplacer,
 	getDataFromElement
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 
 // Extending the Editor class, which brings base editor API.
 export default class BootstrapEditor extends ElementApiMixin( Editor ) {

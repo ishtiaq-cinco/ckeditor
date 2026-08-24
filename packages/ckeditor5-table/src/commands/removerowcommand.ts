@@ -7,8 +7,8 @@
  * @module table/commands/removerowcommand
  */
 
-import { Command } from '@ckeditor/ckeditor5-core';
-import type { ModelElement, ModelNode } from '@ckeditor/ckeditor5-engine';
+import { Command } from '@ssmckinney/ckeditor5-core';
+import type { ModelElement, ModelNode } from '@ssmckinney/ckeditor5-engine';
 import { type TableUtils } from '../tableutils.js';
 
 /**

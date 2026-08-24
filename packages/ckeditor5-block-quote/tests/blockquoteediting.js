@@ -6,12 +6,12 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
 import { BlockQuoteEditing } from '../src/blockquoteediting.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ListEditing } from '@ckeditor/ckeditor5-list';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ListEditing } from '@ssmckinney/ckeditor5-list';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { BlockQuoteCommand } from '../src/blockquotecommand.js';
 
@@ -165,7 +165,7 @@ describe( 'BlockQuoteEditing', () => {
 	} );
 
 	describe( 'nested blockQuote forbidden by custom rule', () => {
-		// Nested block quotes are supported since https://github.com/ckeditor/ckeditor5/issues/9210, so let's check
+		// Nested block quotes are supported since https://github.com/ssmckinney/ckeditor5/issues/9210, so let's check
 		// if the editor will not blow up in case nested block quotes are forbidden by custom scheme rule.
 		beforeEach( () => {
 			model.schema.addChildCheck( ( ctx, childDef ) => {

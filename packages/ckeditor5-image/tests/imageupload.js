@@ -4,15 +4,15 @@
  */
 
 import { describe, it, beforeEach, afterEach, expect } from 'vitest';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
 import { Image } from '../src/image.js';
 import { ImageUpload } from '../src/imageupload.js';
 import { ImageUploadEditing } from '../src/imageupload/imageuploadediting.js';
 import { ImageUploadProgress } from '../src/imageupload/imageuploadprogress.js';
 import { ImageUploadUI } from '../src/imageupload/imageuploadui.js';
 
-import { UploadAdapterPluginMock } from '@ckeditor/ckeditor5-upload/tests/_utils/mocks.js';
+import { UploadAdapterPluginMock } from '@ssmckinney/ckeditor5-upload/tests/_utils/mocks.js';
 
 describe( 'ImageUpload', () => {
 	let editor, editorElement;

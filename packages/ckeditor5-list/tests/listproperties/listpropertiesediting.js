@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { ListPropertiesEditing } from '../../src/listproperties/listpropertiesediting.js';
 import { modelList } from '../list/_utils/utils.js';
 import { stubUid } from '../list/_utils/uid.js';

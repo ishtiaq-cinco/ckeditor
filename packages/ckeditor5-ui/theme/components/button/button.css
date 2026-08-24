@@ -47,7 +47,7 @@
 	/* Apply some smooth transition to the box-shadow and border. */
 	transition: box-shadow .2s ease-in-out, border .2s ease-in-out;
 
-	/* https://github.com/ckeditor/ckeditor5/issues/3414 */
+	/* https://github.com/ssmckinney/ckeditor5/issues/3414 */
 	-webkit-appearance: none;
 	-webkit-user-select: none;
 	user-select: none;
@@ -110,7 +110,7 @@
 		}
 	}
 
-	/* https://github.com/ckeditor/ckeditor5/issues/3362 */
+	/* https://github.com/ssmckinney/ckeditor5/issues/3362 */
 	&.ck-disabled {
 		background: var(--ck-button-disabled-background);
 
@@ -124,7 +124,7 @@
 			opacity: var(--ck-disabled-opacity);
 		}
 
-		/* https://github.com/ckeditor/ckeditor5/issues/3376 */
+		/* https://github.com/ssmckinney/ckeditor5/issues/3376 */
 		& .ck-button__label {
 			opacity: var(--ck-disabled-opacity);
 		}

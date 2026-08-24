@@ -12,7 +12,7 @@ With the General HTML Support (GHS) feature, developers can enable HTML features
 
 ## Demo
 
-Use the {@link features/source-editing-enhanced Enhanced source code editing feature} toolbar button {@icon @ckeditor/ckeditor5-icons/theme/icons/source.svg Enhanced source code editing} to view and edit the HTML source of the document. You can find the configuration of this snippet below the demo.
+Use the {@link features/source-editing-enhanced Enhanced source code editing feature} toolbar button {@icon @ssmckinney/ckeditor5-icons/theme/icons/source.svg Enhanced source code editing} to view and edit the HTML source of the document. You can find the configuration of this snippet below the demo.
 
 You can configure the General HTML Support feature using the `config.htmlSupport` property. With this property, you need to list the HTML features that should be handled by GHS.
 
@@ -58,7 +58,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, GeneralHtmlSupport } from 'ckeditor5';
+import { ClassicEditor, GeneralHtmlSupport } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -277,7 +277,7 @@ Base implementation example:
 
 <code-switcher>
 ```js
-import { ClassicEditor, Essentials, Paragraph, Plugin, SourceEditingEnhanced, GeneralHtmlSupport } from 'ckeditor5';
+import { ClassicEditor, Essentials, Paragraph, Plugin, SourceEditingEnhanced, GeneralHtmlSupport } from '@ssmckinney/ckeditor5';
 
 /**
 * A plugin extending General HTML Support, for example, with custom HTML elements.
@@ -482,7 +482,7 @@ You can add support for arbitrary styles, classes, and other attributes to exist
 	While the GHS feature is stable, some problems with complex documents may occur if you use it together with {@link features/real-time-collaboration real-time collaboration}.
 </info-box>
 
-We are open to feedback, so if you find any issue, feel free to report it in the [main CKEditor&nbsp;5 repository](https://github.com/ckeditor/ckeditor5/issues/).
+We are open to feedback, so if you find any issue, feel free to report it in the [main CKEditor&nbsp;5 repository](https://github.com/ssmckinney/ckeditor5/issues/).
 
 ## Related features
 

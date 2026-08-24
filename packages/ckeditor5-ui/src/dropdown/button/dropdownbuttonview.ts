@@ -7,12 +7,12 @@
  * @module ui/dropdown/button/dropdownbuttonview
  */
 
-import { IconDropdownArrow } from '@ckeditor/ckeditor5-icons';
+import { IconDropdownArrow } from '@ssmckinney/ckeditor5-icons';
 import { ButtonView } from '../../button/buttonview.js';
 import { type DropdownButton } from './dropdownbutton.js';
 import { IconView } from '../../icon/iconview.js';
 
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * The default dropdown button view class.

@@ -7,7 +7,7 @@ import type { ViteUserConfig } from 'vitest/config';
 import { createVitestConfig } from '../../vitest.config';
 
 const config: ViteUserConfig = createVitestConfig( import.meta.dirname, {
-	name: 'ckeditor5',
+	name: '@ssmckinney/ckeditor5',
 	exclude: [
 		'**/_data/**'
 	]

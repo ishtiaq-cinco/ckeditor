@@ -7,7 +7,7 @@
  * @module highlight/highlight
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import { HighlightEditing } from './highlightediting.js';
 import { HighlightUI } from './highlightui.js';

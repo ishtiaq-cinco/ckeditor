@@ -4,9 +4,9 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
 import { StyleEditing } from '../src/styleediting.js';
 import { StyleCommand } from '../src/stylecommand.js';
 import { StyleUtils } from '../src/styleutils.js';

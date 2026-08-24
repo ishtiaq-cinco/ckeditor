@@ -4,17 +4,17 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { TableEditing } from '../../src/tableediting.js';
 import { TablePropertiesEditing } from '../../src/tableproperties/tablepropertiesediting.js';
 
 import { TableCellPropertiesEditing } from '../../src/tablecellproperties/tablecellpropertiesediting.js';
 
-import { AlignmentEditing } from '@ckeditor/ckeditor5-alignment';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
+import { AlignmentEditing } from '@ssmckinney/ckeditor5-alignment';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
 
 import { assertTableClass } from '../_utils/utils.js';
 
@@ -63,7 +63,7 @@ describe( 'table properties', () => {
 				table = createEmptyTable();
 			} );
 
-			// See https://github.com/ckeditor/ckeditor5/issues/6265.
+			// See https://github.com/ssmckinney/ckeditor5/issues/6265.
 			it( 'should correctly undo setting table and then cell style', () => {
 				const firstCell = table.getChild( 0 ).getChild( 0 );
 

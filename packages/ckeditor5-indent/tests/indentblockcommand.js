@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ListEditing } from '@ckeditor/ckeditor5-list';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ListEditing } from '@ssmckinney/ckeditor5-list';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { IndentBlockCommand } from '../src/indentblockcommand.js';
 import { IndentBlock } from '../src/indentblock.js';
@@ -164,7 +164,7 @@ describe( 'IndentBlockCommand', () => {
 						return editor.destroy();
 					} );
 
-					// Should be disabled for block items in Document Lists. See https://github.com/ckeditor/ckeditor5/issues/14155.
+					// Should be disabled for block items in Document Lists. See https://github.com/ssmckinney/ckeditor5/issues/14155.
 					it( 'should be false for a block element inside a list item', () => {
 						_setModelData( model, '<paragraph listItemId="foo">[]bar</paragraph>' );
 						expect( command.isEnabled ).toBe( false );
@@ -294,7 +294,7 @@ describe( 'IndentBlockCommand', () => {
 						return editor.destroy();
 					} );
 
-					// Should be disabled for block items in Document Lists. See https://github.com/ckeditor/ckeditor5/issues/14155.
+					// Should be disabled for block items in Document Lists. See https://github.com/ssmckinney/ckeditor5/issues/14155.
 					it( 'should be false for a block element inside a list item', () => {
 						_setModelData( model, '<paragraph listItemId="foo">[]bar</paragraph>' );
 						expect( command.isEnabled ).toBe( false );
@@ -350,7 +350,7 @@ describe( 'IndentBlockCommand', () => {
 						return editor.destroy();
 					} );
 
-					// Should be disabled for block items in Document Lists. See https://github.com/ckeditor/ckeditor5/issues/14155.
+					// Should be disabled for block items in Document Lists. See https://github.com/ssmckinney/ckeditor5/issues/14155.
 					it( 'should be executed only for blocks that are not in Document Lists', () => {
 						_setModelData( model,
 							'<paragraph>f[oo</paragraph>' +

@@ -3,15 +3,15 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
-import { Code } from '@ckeditor/ckeditor5-basic-styles';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { Indent, IndentBlock } from '@ssmckinney/ckeditor5-indent';
+import { Code } from '@ssmckinney/ckeditor5-basic-styles';
 import { ImageResize } from '../../src/imageresize.js';
 import { ImageSizeAttributes } from '../../src/imagesizeattributes.js';
 import { PictureEditing } from '../../src/pictureediting.js';
-import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
-import { _getModelData } from '@ckeditor/ckeditor5-engine';
+import { PasteFromOffice } from '@ssmckinney/ckeditor5-paste-from-office';
+import { _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 const commonConfig = getConfig();
 const configPx = getConfig( true );

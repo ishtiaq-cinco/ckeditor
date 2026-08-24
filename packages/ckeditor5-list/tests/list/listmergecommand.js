@@ -7,8 +7,8 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { modelList } from './_utils/utils.js';
 import { ListMergeCommand } from '../../src/list/listmergecommand.js';
 
-import { Editor } from '@ckeditor/ckeditor5-core';
-import { Model, _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { Editor } from '@ssmckinney/ckeditor5-core';
+import { Model, _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'ListMergeCommand', () => {
 	let editor, model, doc, command, attributeNames;

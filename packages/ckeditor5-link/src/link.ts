@@ -7,7 +7,7 @@
  * @module link/link
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { LinkEditing } from './linkediting.js';
 import { LinkUI } from './linkui.js';
 import { AutoLink } from './autolink.js';

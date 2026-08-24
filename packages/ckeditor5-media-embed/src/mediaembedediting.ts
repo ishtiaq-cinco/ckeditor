@@ -7,9 +7,9 @@
  * @module media-embed/mediaembedediting
  */
 
-import { Plugin, type Editor } from '@ckeditor/ckeditor5-core';
-import type { UpcastElementEvent } from '@ckeditor/ckeditor5-engine';
-import { first, type GetCallback } from '@ckeditor/ckeditor5-utils';
+import { Plugin, type Editor } from '@ssmckinney/ckeditor5-core';
+import type { UpcastElementEvent } from '@ssmckinney/ckeditor5-engine';
+import { first, type GetCallback } from '@ssmckinney/ckeditor5-utils';
 
 import { modelToViewUrlAttributeConverter } from './converters.js';
 import type { MediaEmbedConfig } from './mediaembedconfig.js';

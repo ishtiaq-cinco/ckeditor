@@ -3,11 +3,11 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
-import { toWidget, Widget } from '@ckeditor/ckeditor5-widget';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
+import { toWidget, Widget } from '@ssmckinney/ckeditor5-widget';
 
 import { ViewPosition } from '../../../../src/view/position.js';
 import { _setModelData } from '../../../../src/dev-utils/model.js';

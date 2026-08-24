@@ -7,10 +7,10 @@
  * @module fullscreen/fullscreenui
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { ButtonView, MenuBarMenuListItemButtonView } from '@ckeditor/ckeditor5-ui';
-import { IconFullscreenEnter, IconFullscreenLeave } from '@ckeditor/ckeditor5-icons';
-import { env } from '@ckeditor/ckeditor5-utils';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { ButtonView, MenuBarMenuListItemButtonView } from '@ssmckinney/ckeditor5-ui';
+import { IconFullscreenEnter, IconFullscreenLeave } from '@ssmckinney/ckeditor5-icons';
+import { env } from '@ssmckinney/ckeditor5-utils';
 
 import { FullscreenEditing } from './fullscreenediting.js';
 import '../theme/fullscreen.css';
@@ -86,7 +86,7 @@ export class FullscreenUI extends Plugin {
 
 			// On non-Chromium browsers, toolbar is not blurred properly after moving the editable,
 			// even though the `document.activeElement` is changed. Hence we need to blur the view manually.
-			// Fixes https://github.com/ckeditor/ckeditor5/issues/18250 and https://github.com/ckeditor/ckeditor5/issues/18247.
+			// Fixes https://github.com/ssmckinney/ckeditor5/issues/18250 and https://github.com/ssmckinney/ckeditor5/issues/18247.
 			if ( !env.isBlink ) {
 				this.editor.ui.view.toolbar!.focusTracker.focusedElement = null;
 			}

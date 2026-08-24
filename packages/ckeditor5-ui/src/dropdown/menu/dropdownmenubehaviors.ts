@@ -7,7 +7,7 @@
  * @module ui/dropdown/menu/dropdownmenubehaviors
  */
 
-import type { BaseEvent, ObservableChangeEvent } from '@ckeditor/ckeditor5-utils';
+import type { BaseEvent, ObservableChangeEvent } from '@ssmckinney/ckeditor5-utils';
 import { type DropdownMenuNestedMenuView } from './dropdownmenunestedmenuview.js';
 import type { FocusableView } from '../../focuscycler.js';
 

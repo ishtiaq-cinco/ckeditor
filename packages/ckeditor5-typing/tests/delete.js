@@ -4,16 +4,16 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { Delete } from '../src/delete.js';
 import { Typing } from '../src/typing.js';
-import { Widget, toWidget, toWidgetEditable } from '@ckeditor/ckeditor5-widget';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { TodoList, List } from '@ckeditor/ckeditor5-list';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { ViewDocumentDomEventData, _setModelData, _getModelData, Batch } from '@ckeditor/ckeditor5-engine';
-import { EventInfo, env, getCode } from '@ckeditor/ckeditor5-utils';
+import { Widget, toWidget, toWidgetEditable } from '@ssmckinney/ckeditor5-widget';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { TodoList, List } from '@ssmckinney/ckeditor5-list';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { ViewDocumentDomEventData, _setModelData, _getModelData, Batch } from '@ssmckinney/ckeditor5-engine';
+import { EventInfo, env, getCode } from '@ssmckinney/ckeditor5-utils';
 import { fireBeforeInputDomEvent } from './_utils/utils.js';
 
 describe( 'Delete feature', () => {
@@ -126,7 +126,7 @@ describe( 'Delete feature', () => {
 		expect( spy ).toHaveBeenCalledWith( 'delete', expect.objectContaining( { unit: 'character', sequence: 5 } ) );
 	} );
 
-	// See https://github.com/ckeditor/ckeditor5/issues/17383.
+	// See https://github.com/ssmckinney/ckeditor5/issues/17383.
 	it( 'handles the backspace key in a nested editable', () => {
 		_setModelData( model, '<widget><nested>fo[]</nested></widget>' );
 
@@ -286,8 +286,8 @@ describe( 'Delete feature', () => {
 	} );
 
 	// See:
-	// https://github.com/ckeditor/ckeditor5/issues/17383
-	// https://github.com/ckeditor/ckeditor5/issues/18356
+	// https://github.com/ssmckinney/ckeditor5/issues/17383
+	// https://github.com/ssmckinney/ckeditor5/issues/18356
 	describe( 'prevent backspace at the beginning of editables', () => {
 		it( 'handles the backspace key in an empty nested editable', () => {
 			_setModelData( model, '<widget><nested>[]</nested></widget>' );

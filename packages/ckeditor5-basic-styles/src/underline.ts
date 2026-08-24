@@ -7,7 +7,7 @@
  * @module basic-styles/underline
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { UnderlineEditing } from './underline/underlineediting.js';
 import { UnderlineUI } from './underline/underlineui.js';
 

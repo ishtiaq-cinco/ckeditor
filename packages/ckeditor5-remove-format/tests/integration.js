@@ -4,17 +4,17 @@
  */
 
 import { RemoveFormat } from '../src/removeformat.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Image, ImageResize, ImageCaption } from '@ckeditor/ckeditor5-image';
-import { Link } from '@ckeditor/ckeditor5-link';
-import { Bold, Underline } from '@ckeditor/ckeditor5-basic-styles';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Image, ImageResize, ImageCaption } from '@ssmckinney/ckeditor5-image';
+import { Link } from '@ssmckinney/ckeditor5-link';
+import { Bold, Underline } from '@ssmckinney/ckeditor5-basic-styles';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import {
 	_getModelData,
 	_setModelData
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
@@ -42,7 +42,7 @@ describe( 'RemoveFormat', () => {
 	} );
 
 	it( 'does not remove image width attribute', () => {
-		// (https://github.com/ckeditor/ckeditor5/issues/9684)
+		// (https://github.com/ssmckinney/ckeditor5/issues/9684)
 		_setModelData( model, '[<imageBlock src="assets/sample.png" width="50%"><caption>caption</caption></imageBlock>]' );
 
 		editor.execute( 'removeFormat' );

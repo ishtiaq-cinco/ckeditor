@@ -31,7 +31,7 @@
 	vertical-align: middle;
 	transition: none;
 
-	/* https://github.com/ckeditor/ckeditor5/issues/3379 */
+	/* https://github.com/ssmckinney/ckeditor5/issues/3379 */
 	word-wrap: break-word;
 }
 

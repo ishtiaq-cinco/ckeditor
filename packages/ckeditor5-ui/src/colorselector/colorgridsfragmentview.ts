@@ -15,13 +15,13 @@ import { Template } from '../template.js';
 
 import { DocumentColorCollection } from './documentcolorcollection.js';
 
-import type { Model } from '@ckeditor/ckeditor5-engine';
-import type { FocusTracker, Locale } from '@ckeditor/ckeditor5-utils';
+import type { Model } from '@ssmckinney/ckeditor5-engine';
+import type { FocusTracker, Locale } from '@ssmckinney/ckeditor5-utils';
 import { type ViewCollection } from '../viewcollection.js';
 import type { FocusableView } from '../focuscycler.js';
 import type { ColorSelectorExecuteEvent, ColorSelectorColorPickerShowEvent } from './colorselectorview.js';
 
-import { IconEraser, IconColorPalette } from '@ckeditor/ckeditor5-icons';
+import { IconEraser, IconColorPalette } from '@ssmckinney/ckeditor5-icons';
 
 /**
  * One of the fragments of {@link module:ui/colorselector/colorselectorview~ColorSelectorView}.

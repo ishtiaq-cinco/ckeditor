@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { ReplaceImageSourceCommand } from '../../src/image/replaceimagesourcecommand.js';
 import { ImageBlockEditing } from '../../src/image/imageblockediting.js';
@@ -99,6 +99,78 @@ describe( 'ReplaceImageSourceCommand', () => {
 					resolve();
 				}, 100 );
 			} );
+		} );
+	} );
+
+	describe( 'responsive sources', () => {
+		const SOURCES = [
+			{ srcset: 'small.png', media: '(max-width: 767px)' }
+		];
+
+		beforeEach( () => {
+			model.schema.extend( 'imageBlock', { allowAttributes: 'sources' } );
+		} );
+
+		it( 'should set the given sources on the image', () => {
+			_setModelData( model, '[<imageBlock src="sample.png"></imageBlock>]' );
+
+			const element = model.document.selection.getSelectedElement();
+
+			command.execute( { source: '/large.png', sources: SOURCES } );
+
+			expect( element.getAttribute( 'src' ) ).toBe( '/large.png' );
+			expect( element.getAttribute( 'sources' ) ).toEqual( SOURCES );
+		} );
+
+		it( 'should replace the previous sources rather than merge with them', () => {
+			_setModelData( model, '[<imageBlock src="sample.png"></imageBlock>]' );
+
+			const element = model.document.selection.getSelectedElement();
+
+			command.execute( { source: '/a.png', sources: [ { srcset: 'old.png', media: '(max-width: 500px)' } ] } );
+			command.execute( { source: '/b.png', sources: SOURCES } );
+
+			expect( element.getAttribute( 'sources' ) ).toEqual( SOURCES );
+		} );
+
+		it( 'should drop the previous sources when none are given', () => {
+			// They describe the previous `src`, so carrying them over to a new one would be wrong.
+			// See https://github.com/ssmckinney/ckeditor5/issues/15093.
+			_setModelData( model, '[<imageBlock src="sample.png"></imageBlock>]' );
+
+			const element = model.document.selection.getSelectedElement();
+
+			command.execute( { source: '/large.png', sources: SOURCES } );
+			command.execute( { source: '/other.png' } );
+
+			expect( element.hasAttribute( 'sources' ) ).toBe( false );
+		} );
+
+		it( 'should treat an empty array as no sources', () => {
+			_setModelData( model, '[<imageBlock src="sample.png"></imageBlock>]' );
+
+			const element = model.document.selection.getSelectedElement();
+
+			command.execute( { source: '/large.png', sources: SOURCES } );
+			command.execute( { source: '/other.png', sources: [] } );
+
+			expect( element.hasAttribute( 'sources' ) ).toBe( false );
+		} );
+
+		it( 'should survive a custom cleanupImage() that also clears sources', () => {
+			// `cleanupImage` is decorated and runs before the new sources are applied, so an integrator
+			// hooking into it cannot accidentally wipe what the caller just asked for.
+			_setModelData( model, '[<imageBlock src="sample.png"></imageBlock>]' );
+
+			const element = model.document.selection.getSelectedElement();
+
+			command.on( 'cleanupImage', ( evt, [ writer, image ] ) => {
+				writer.removeAttribute( 'sources', image );
+			} );
+
+			command.execute( { source: '/large.png', sources: SOURCES } );
+
+			expect( element.getAttribute( 'sources' ) ).toEqual( SOURCES );
 		} );
 	} );
 

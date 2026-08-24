@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { ListEditing } from '@ckeditor/ckeditor5-list';
-import { ModelElement, _setModelData, _getModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
-import { ListItemUid } from '../../../ckeditor5-list/src/list/utils/model.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { ListEditing } from '@ssmckinney/ckeditor5-list';
+import { ModelElement, _setModelData, _getModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
+import { ListItemUid } from '../../../@ssmckinney/ckeditor5-list/src/list/utils/model.js';
 
 import { IndentEditing } from '../../src/indentediting.js';
 import { IndentBlock } from '../../src/indentblock.js';

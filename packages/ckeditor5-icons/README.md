@@ -1,7 +1,7 @@
 CKEditor&nbsp;5 icon pack
 =========================
 
-[![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-icons.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-icons)
+[![npm version](https://badge.fury.io/js/%40ckeditor%2F@ssmckinney/ckeditor5-icons.svg)](https://www.npmjs.com/package/@ssmckinney/ckeditor5-icons)
 [![codecov](https://codecov.io/gh/ckeditor/ckeditor5/branch/master/graph/badge.svg)](https://codecov.io/gh/ckeditor/ckeditor5)
 [![CircleCI](https://circleci.com/gh/ckeditor/ckeditor5.svg?style=shield)](https://app.circleci.com/pipelines/github/ckeditor/ckeditor5?branch=master)
 
@@ -9,10 +9,10 @@ This package contains icons for CKEditor&nbsp;5.
 
 ## Installation
 
-This plugin is part of the `ckeditor5` package. Install the whole package to use it.
+This plugin is part of the `@ssmckinney/ckeditor5` package. Install the whole package to use it.
 
 ```bash
-npm install ckeditor5
+npm install @ssmckinney/ckeditor5
 ```
 
 ## Create free account

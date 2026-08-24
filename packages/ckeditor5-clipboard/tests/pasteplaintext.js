@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { getCode } from '@ckeditor/ckeditor5-utils';
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { getCode } from '@ssmckinney/ckeditor5-utils';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { PastePlainText } from '../src/pasteplaintext.js';
 
-// https://github.com/ckeditor/ckeditor5/issues/1006
+// https://github.com/ssmckinney/ckeditor5/issues/1006
 describe( 'PastePlainText', () => {
 	let editor, model, viewDocument;
 
@@ -207,7 +207,7 @@ describe( 'PastePlainText', () => {
 	} );
 
 	it( 'should work if the insertContent event is cancelled', () => {
-		// (https://github.com/ckeditor/ckeditor5/issues/7887).
+		// (https://github.com/ssmckinney/ckeditor5/issues/7887).
 		_setModelData( model, '<paragraph><$text bold="true">Bolded []text.</$text></paragraph>' );
 
 		const dataTransferMock = createDataTransfer( {

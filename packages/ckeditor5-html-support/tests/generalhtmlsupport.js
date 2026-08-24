@@ -4,20 +4,20 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { GeneralHtmlSupport } from '../src/index.js';
-import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
-import { SelectAll } from '@ckeditor/ckeditor5-select-all';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Image, ImageCaption } from '@ckeditor/ckeditor5-image';
-import { Table, TableCaption, TableCellProperties, TableColumnResize, TableProperties } from '@ckeditor/ckeditor5-table';
-import { PageBreak } from '@ckeditor/ckeditor5-page-break';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { List, ListProperties } from '@ckeditor/ckeditor5-list';
-import { stubUid } from '@ckeditor/ckeditor5-list/tests/list/_utils/uid.js';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { _getModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
+import { RemoveFormat } from '@ssmckinney/ckeditor5-remove-format';
+import { SelectAll } from '@ssmckinney/ckeditor5-select-all';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Image, ImageCaption } from '@ssmckinney/ckeditor5-image';
+import { Table, TableCaption, TableCellProperties, TableColumnResize, TableProperties } from '@ssmckinney/ckeditor5-table';
+import { PageBreak } from '@ssmckinney/ckeditor5-page-break';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { List, ListProperties } from '@ssmckinney/ckeditor5-list';
+import { stubUid } from '@ssmckinney/ckeditor5-list/tests/list/_utils/uid.js';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { _getModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'GeneralHtmlSupport', () => {
 	let editor, element, dataSchema, generalHtmlSupport;

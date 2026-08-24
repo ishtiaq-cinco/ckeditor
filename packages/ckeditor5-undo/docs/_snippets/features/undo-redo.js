@@ -11,7 +11,7 @@ import {
 	ImageUpload,
 	ImageInsert,
 	PictureEditing
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 import {
 	CS_CONFIG,
 	TOKEN_URL,

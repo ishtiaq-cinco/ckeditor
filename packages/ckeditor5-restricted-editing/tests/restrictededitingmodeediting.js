@@ -5,24 +5,24 @@
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 
-import { _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { getCode, env } from '@ckeditor/ckeditor5-utils';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BoldEditing, StrikethroughEditing, ItalicEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { SelectAllEditing } from '@ckeditor/ckeditor5-select-all';
-import { ImageInlineEditing, InsertImageCommand } from '@ckeditor/ckeditor5-image';
+import { _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { getCode, env } from '@ssmckinney/ckeditor5-utils';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BoldEditing, StrikethroughEditing, ItalicEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { SelectAllEditing } from '@ssmckinney/ckeditor5-select-all';
+import { ImageInlineEditing, InsertImageCommand } from '@ssmckinney/ckeditor5-image';
 
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { Table, TableEditing } from '@ckeditor/ckeditor5-table';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { Table, TableEditing } from '@ssmckinney/ckeditor5-table';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 import { RestrictedEditingModeEditing } from './../src/restrictededitingmodeediting.js';
 import { RestrictedEditingModeNavigationCommand } from '../src/restrictededitingmodenavigationcommand.js';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { Command } from '@ckeditor/ckeditor5-core';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { Command } from '@ssmckinney/ckeditor5-core';
 
 describe( 'RestrictedEditingModeEditing', () => {
 	let editor, model;
@@ -854,7 +854,7 @@ describe( 'RestrictedEditingModeEditing', () => {
 			expect( markerRange.isEqual( expectedRange ) ).to.be.true;
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/9650
+		// https://github.com/ssmckinney/ckeditor5/issues/9650
 		it( 'should not try to fix the marker if it was removed from markers collection', () => {
 			_setModelData( model, '<paragraph>[]foo bar baz</paragraph>' );
 			const firstParagraph = model.document.getRoot().getChild( 0 );
@@ -1428,7 +1428,7 @@ describe( 'RestrictedEditingModeEditing', () => {
 					expect( _getModelData( model ) ).to.equal(
 						'<paragraph>foo b<$text bold="true" italic="true" linkHref="foo">XXX</$text>' +
 						// The link attribute is removed from selection after pasting.
-						// See https://github.com/ckeditor/ckeditor5/issues/6053.
+						// See https://github.com/ssmckinney/ckeditor5/issues/6053.
 						'<$text bold="true" italic="true">[]</$text>ar baz</paragraph>'
 					);
 					assertMarkerRangePaths( [ 0, 4 ], [ 0, 10 ], 'inline:1' );

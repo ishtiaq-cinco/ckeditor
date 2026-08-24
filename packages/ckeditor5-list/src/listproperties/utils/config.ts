@@ -8,8 +8,11 @@
  */
 
 import { pick } from 'es-toolkit/compat';
-import { toArray } from '@ckeditor/ckeditor5-utils';
+import { toArray } from '@ssmckinney/ckeditor5-utils';
+import type { ColorDefinition } from '@ssmckinney/ckeditor5-ui';
+
 import type { ListPropertiesConfig, ListPropertiesStyleListType } from '../../listconfig.js';
+import { LIST_COLUMN_COUNTS } from './markers.js';
 
 /**
  * Normalizes {@link module:list/listconfig~ListPropertiesConfig} in the configuration of the list properties feature.
@@ -31,12 +34,15 @@ import type { ListPropertiesConfig, ListPropertiesStyleListType } from '../../li
  * @returns An object with normalized list properties options.
  */
 export function getNormalizedConfig( config: ListPropertiesConfig ): NormalizedListPropertiesConfig {
-	const { startIndex, reversed, styles } = config;
+	const { startIndex, reversed, styles, markerColor, columns } = config;
 
 	return {
 		styles: getNormalizedStylesConfig( styles ),
 		startIndex: startIndex || false,
-		reversed: reversed || false
+		reversed: reversed || false,
+		markerColor: markerColor || false,
+		markerColors: [],
+		columns: getNormalizedColumnsConfig( columns )
 	};
 }
 
@@ -54,13 +60,13 @@ export function getNormalizedConfig( config: ListPropertiesConfig ): NormalizedL
  * @param styles The list properties styles.
  * @returns An object with normalized list properties styles.
  */
-function getNormalizedStylesConfig( styles: ListPropertiesConfig[ 'styles' ] ): NormalizedListPropertiesConfig[ 'styles' ] {
-	const normalizedConfig: NormalizedListPropertiesConfig[ 'styles' ] = {
+function getNormalizedStylesConfig( styles: ListPropertiesConfig['styles'] ): NormalizedListPropertiesConfig['styles'] {
+	const normalizedConfig: NormalizedListPropertiesConfig['styles'] = {
 		listTypes: [ 'bulleted', 'numbered' ],
 		useAttribute: false,
 		listStyleTypes: {
 			numbered: [ 'decimal', 'decimal-leading-zero', 'lower-roman', 'upper-roman', 'lower-latin', 'upper-latin' ],
-			bulleted: [ 'disc', 'circle', 'square' ]
+			bulleted: [ 'disc', 'circle', 'square', 'circle-tick', 'circle-cross' ]
 		}
 	};
 
@@ -94,6 +100,24 @@ function getNormalizedStylesConfig( styles: ListPropertiesConfig[ 'styles' ] ): 
 }
 
 /**
+ * Normalizes the column counts a list may be laid out in.
+ *
+ * `false` means the control is off and yields `null` rather than an empty array, so that "no columns offered" and
+ * "columns offered but none of them valid" cannot be confused. Counts outside {@link
+ * module:list/listproperties/utils/markers~LIST_COLUMN_COUNTS} have no CSS behind them and are dropped.
+ */
+function getNormalizedColumnsConfig( columns: ListPropertiesConfig['columns'] ): Array<number> | null {
+	if ( !columns ) {
+		return null;
+	}
+
+	const requested = columns === true ? LIST_COLUMN_COUNTS : columns;
+	const normalized = requested.filter( count => LIST_COLUMN_COUNTS.includes( count ) );
+
+	return normalized.length ? normalized : null;
+}
+
+/**
 * Normalized list properties config.
 *
 * @internal
@@ -109,4 +133,11 @@ export type NormalizedListPropertiesConfig = {
 	};
 	startIndex: boolean;
 	reversed: boolean;
+	markerColor: boolean;
+
+	/**
+	 * The swatches the marker colour grid offers. Filled in by the UI, which is where the palette lives.
+	 */
+	markerColors: Array<ColorDefinition>;
+	columns: Array<number> | null;
 };

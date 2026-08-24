@@ -57,19 +57,19 @@
 			}
 		}
 
-		/* https://github.com/ckeditor/ckeditor5/issues/23 */
+		/* https://github.com/ssmckinney/ckeditor5/issues/23 */
 		& .ck-button__label {
 			width: 7em;
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
 
-		/* https://github.com/ckeditor/ckeditor5/issues/3362 */
+		/* https://github.com/ssmckinney/ckeditor5/issues/3362 */
 		&.ck-disabled .ck-button__label {
 			opacity: var(--ck-disabled-opacity);
 		}
 
-		/* https://github.com/ckeditor/ckeditor5/issues/816 */
+		/* https://github.com/ssmckinney/ckeditor5/issues/816 */
 		&.ck-on {
 			border-bottom-left-radius: 0;
 			border-bottom-right-radius: 0;
@@ -79,7 +79,7 @@
 			width: auto;
 		}
 
-		/* https://github.com/ckeditor/ckeditor5/issues/8699 */
+		/* https://github.com/ssmckinney/ckeditor5/issues/8699 */
 		&.ck-off:active,
 		&.ck-on:active {
 			box-shadow: none;
@@ -119,7 +119,7 @@
 		&.ck-dropdown__panel_s {
 			/*
 			 * Using transform: translate3d( 0, 100%, 0 ) causes blurry dropdown on Chrome 67-78+ on non-retina displays.
-			 * See https://github.com/ckeditor/ckeditor5/issues/1053.
+			 * See https://github.com/ssmckinney/ckeditor5/issues/1053.
 			 */
 			top: 100%;
 			bottom: auto;
@@ -170,7 +170,7 @@
 	min-width: 100%;
 
 	/* Disabled corner border radius to be consistent with the .dropdown__button
-	https://github.com/ckeditor/ckeditor5/issues/816 */
+	https://github.com/ssmckinney/ckeditor5/issues/816 */
 	&.ck-dropdown__panel_se {
 		border-top-left-radius: 0;
 	}
@@ -194,7 +194,7 @@
 
 /*
  * Toolbar dropdown panels should be always above the UI (eg. other dropdown panels) from the editor's content.
- * See https://github.com/ckeditor/ckeditor5/issues/7874
+ * See https://github.com/ssmckinney/ckeditor5/issues/7874
  */
 
 .ck.ck-toolbar .ck-dropdown__panel {

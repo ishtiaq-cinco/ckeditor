@@ -4,19 +4,19 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 import { ImageBlockEditing } from '../../src/image/imageblockediting.js';
 import { ImageUploadEditing } from '../../src/imageupload/imageuploadediting.js';
 import { ImageUploadProgress } from '../../src/imageupload/imageuploadprogress.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { FileRepository } from '@ckeditor/ckeditor5-upload';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { FileRepository } from '@ssmckinney/ckeditor5-upload';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
 
-import { createNativeFileMock, NativeFileReaderMock, UploadAdapterMock } from '@ckeditor/ckeditor5-upload/tests/_utils/mocks.js';
-import { _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { testUtils } from '@ckeditor/ckeditor5-core/tests/_utils/utils.js';
+import { createNativeFileMock, NativeFileReaderMock, UploadAdapterMock } from '@ssmckinney/ckeditor5-upload/tests/_utils/mocks.js';
+import { _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { testUtils } from '@ssmckinney/ckeditor5-core/tests/_utils/utils.js';
 import { ImageInlineEditing } from '../../src/image/imageinlineediting.js';
 
 describe( 'ImageUploadProgress', () => {
@@ -117,7 +117,7 @@ describe( 'ImageUploadProgress', () => {
 		loader.file.then( () => nativeReaderMock.mockSuccess( base64Sample ) );
 	} ) );
 
-	// See https://github.com/ckeditor/ckeditor5/issues/1985.
+	// See https://github.com/ssmckinney/ckeditor5/issues/1985.
 	// Might be obsolete after changes in table refreshing (now it refreshes siblings of an image and not its parent).
 	it( 'should work if image parent is refreshed by the differ', () => new Promise( ( resolve, reject ) => {
 		model.schema.register( 'outerBlock', {

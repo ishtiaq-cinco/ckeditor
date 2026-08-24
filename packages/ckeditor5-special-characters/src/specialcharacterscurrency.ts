@@ -7,7 +7,7 @@
  * @module special-characters/specialcharacterscurrency
  */
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 import { type SpecialCharacters } from './specialcharacters.js';
 
 /**

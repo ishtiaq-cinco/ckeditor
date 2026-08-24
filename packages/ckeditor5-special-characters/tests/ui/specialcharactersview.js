@@ -7,7 +7,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { SpecialCharactersView } from '../../src/ui/specialcharactersview.js';
 import { CharacterGridView } from '../../src/ui/charactergridview.js';
 import { CharacterInfoView } from '../../src/ui/characterinfoview.js';
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
 import { SpecialCharactersCategoriesView } from '../../src/ui/specialcharacterscategoriesview.js';
 
 describe( 'SpecialCharactersView', () => {

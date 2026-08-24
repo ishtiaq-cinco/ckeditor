@@ -22,7 +22,7 @@ import {
 	type CollectionRemoveEvent,
 	type Locale,
 	type ObservableChangeEvent
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import '../../theme/components/colorgrid/colorgrid.css';
 

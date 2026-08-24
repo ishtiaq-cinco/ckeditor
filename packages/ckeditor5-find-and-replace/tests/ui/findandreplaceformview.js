@@ -5,19 +5,19 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { View, LabeledFieldView, ButtonView, ViewCollection, FocusCycler, CollapsibleView, SwitchButtonView } from '@ckeditor/ckeditor5-ui';
+import { View, LabeledFieldView, ButtonView, ViewCollection, FocusCycler, CollapsibleView, SwitchButtonView } from '@ssmckinney/ckeditor5-ui';
 
-import { KeystrokeHandler, FocusTracker, keyCodes } from '@ckeditor/ckeditor5-utils';
+import { KeystrokeHandler, FocusTracker, keyCodes } from '@ssmckinney/ckeditor5-utils';
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
 
 import { FindAndReplace } from '../../src/findandreplace.js';
 import { FindAndReplaceFormView } from '../../src/ui/findandreplaceformview.js';
 
-import { IconPreviousArrow } from '@ckeditor/ckeditor5-icons';
+import { IconPreviousArrow } from '@ssmckinney/ckeditor5-icons';
 
 describe( 'FindAndReplaceFormView', () => {
 	let view;

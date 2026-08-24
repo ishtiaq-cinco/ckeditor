@@ -7,7 +7,7 @@
  * @module emoji/emojicommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
 import { type EmojiPicker } from './emojipicker.js';
 
 /**

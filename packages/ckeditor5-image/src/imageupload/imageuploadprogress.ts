@@ -7,13 +7,13 @@
  * @module image/imageupload/imageuploadprogress
  */
 
-import { type Editor, Plugin } from '@ckeditor/ckeditor5-core';
-import { FileRepository, type FileLoader } from '@ckeditor/ckeditor5-upload';
+import { type Editor, Plugin } from '@ssmckinney/ckeditor5-core';
+import { FileRepository, type FileLoader } from '@ssmckinney/ckeditor5-upload';
 
 import '../../theme/imageuploadprogress.css';
 import '../../theme/imageuploadicon.css';
 import '../../theme/imageuploadloader.css';
-import type { GetCallback } from '@ckeditor/ckeditor5-utils';
+import type { GetCallback } from '@ssmckinney/ckeditor5-utils';
 import type {
 	ViewDowncastWriter,
 	EditingView,
@@ -22,7 +22,7 @@ import type {
 	ViewUIElement,
 	DowncastAttributeEvent,
 	ModelElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 import { type ImageUtils } from '../imageutils.js';
 
 /**

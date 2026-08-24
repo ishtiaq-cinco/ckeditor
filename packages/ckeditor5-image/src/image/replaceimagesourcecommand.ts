@@ -7,9 +7,10 @@
  * @module image/image/replaceimagesourcecommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
 import { type ImageUtils } from '../imageutils.js';
-import type { ModelWriter, ModelElement } from '@ckeditor/ckeditor5-engine';
+import type { ModelWriter, ModelElement } from '@ssmckinney/ckeditor5-engine';
+import type { ImageSourceDefinition } from '../imageinsert/ui/imageinserturlview.js';
 
 /**
  * Replace image source command.
@@ -18,6 +19,16 @@ import type { ModelWriter, ModelElement } from '@ckeditor/ckeditor5-engine';
  *
  * ```ts
  * editor.execute( 'replaceImageSource', { source: 'http://url.to.the/image' } );
+ * ```
+ *
+ * Responsive sources can be replaced along with it, which is how a `<picture>` keeps its `<source>` elements across
+ * an edit instead of being flattened back to a plain `<img>`:
+ *
+ * ```ts
+ * editor.execute( 'replaceImageSource', {
+ * 	source: 'http://url.to.the/large.png',
+ * 	sources: [ { media: '(max-width: 767px)', srcset: 'http://url.to.the/small.png' } ]
+ * } );
  * ```
  */
 export class ReplaceImageSourceCommand extends Command {
@@ -47,8 +58,10 @@ export class ReplaceImageSourceCommand extends Command {
 	 * @fires execute
 	 * @param options Options for the executed command.
 	 * @param options.source The image source to replace.
+	 * @param options.sources Responsive sources describing the new image source. Omit to leave the image a plain
+	 * `<img>`; see {@link module:image/pictureediting~PictureEditing} for the shape and what it converts to.
 	 */
-	public override execute( options: { source: string } ): void {
+	public override execute( options: { source: string; sources?: Array<ImageSourceDefinition> } ): void {
 		const image = this.editor.model.document.selection.getSelectedElement()!;
 		const imageUtils: ImageUtils = this.editor.plugins.get( 'ImageUtils' );
 
@@ -56,6 +69,12 @@ export class ReplaceImageSourceCommand extends Command {
 			writer.setAttribute( 'src', options.source, image );
 
 			this.cleanupImage( writer, image );
+
+			// Applied after the cleanup rather than before it: `cleanupImage()` drops the previous `sources` because
+			// they describe the previous `src`, while these describe the new one.
+			if ( options.sources && options.sources.length ) {
+				writer.setAttribute( 'sources', options.sources, image );
+			}
 
 			imageUtils.setImageNaturalSizeAttributes( image );
 		} );
@@ -81,7 +100,7 @@ export class ReplaceImageSourceCommand extends Command {
 
 		/**
 		 * In case responsive images some attributes should be cleaned up.
-		 * Check: https://github.com/ckeditor/ckeditor5/issues/15093
+		 * Check: https://github.com/ssmckinney/ckeditor5/issues/15093
 		 */
 		writer.removeAttribute( 'sources', image );
 		writer.removeAttribute( 'width', image );

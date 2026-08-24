@@ -13,8 +13,8 @@ import {
 	View,
 	createLabeledInputText,
 	submitHandler
-} from '@ckeditor/ckeditor5-ui';
-import { FocusTracker, KeystrokeHandler, type Locale } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-ui';
+import { FocusTracker, KeystrokeHandler, type Locale } from '@ssmckinney/ckeditor5-utils';
 
 import '../../theme/mediaform.css';
 

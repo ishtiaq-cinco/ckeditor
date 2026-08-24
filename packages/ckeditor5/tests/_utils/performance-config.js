@@ -3,36 +3,36 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { Alignment } from '@ckeditor/ckeditor5-alignment';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { AutoImage, ImageResize, ImageInsert } from '@ckeditor/ckeditor5-image';
-import { AutoLink, LinkImage } from '@ckeditor/ckeditor5-link';
-import { Code, Strikethrough, Subscript, Superscript, Underline } from '@ckeditor/ckeditor5-basic-styles';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
-import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
-import { FontBackgroundColor, FontColor, FontFamily, FontSize } from '@ckeditor/ckeditor5-font';
-import { Highlight } from '@ckeditor/ckeditor5-highlight';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
-import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed';
-import { HtmlComment, GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-import { IndentBlock } from '@ckeditor/ckeditor5-indent';
-import { ListProperties, TodoList } from '@ckeditor/ckeditor5-list';
-import { Mention } from '@ckeditor/ckeditor5-mention';
-import { PageBreak } from '@ckeditor/ckeditor5-page-break';
-import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
-import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
-import { ShowBlocks } from '@ckeditor/ckeditor5-show-blocks';
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
-import { SpecialCharacters, SpecialCharactersEssentials } from '@ckeditor/ckeditor5-special-characters';
-import { TableCellProperties, TableProperties, TableCaption, TableColumnResize } from '@ckeditor/ckeditor5-table';
-import { TextTransformation } from '@ckeditor/ckeditor5-typing';
-import { TextPartLanguage } from '@ckeditor/ckeditor5-language';
-import { WordCount } from '@ckeditor/ckeditor5-word-count';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { Style } from '@ckeditor/ckeditor5-style';
+import { Alignment } from '@ssmckinney/ckeditor5-alignment';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { AutoImage, ImageResize, ImageInsert } from '@ssmckinney/ckeditor5-image';
+import { AutoLink, LinkImage } from '@ssmckinney/ckeditor5-link';
+import { Code, Strikethrough, Subscript, Superscript, Underline } from '@ssmckinney/ckeditor5-basic-styles';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { EasyImage } from '@ssmckinney/ckeditor5-easy-image';
+import { FindAndReplace } from '@ssmckinney/ckeditor5-find-and-replace';
+import { FontBackgroundColor, FontColor, FontFamily, FontSize } from '@ssmckinney/ckeditor5-font';
+import { Highlight } from '@ssmckinney/ckeditor5-highlight';
+import { HorizontalLine } from '@ssmckinney/ckeditor5-horizontal-line';
+import { HtmlEmbed } from '@ssmckinney/ckeditor5-html-embed';
+import { HtmlComment, GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
+import { IndentBlock } from '@ssmckinney/ckeditor5-indent';
+import { ListProperties, TodoList } from '@ssmckinney/ckeditor5-list';
+import { Mention } from '@ssmckinney/ckeditor5-mention';
+import { PageBreak } from '@ssmckinney/ckeditor5-page-break';
+import { PasteFromOffice } from '@ssmckinney/ckeditor5-paste-from-office';
+import { RemoveFormat } from '@ssmckinney/ckeditor5-remove-format';
+import { ShowBlocks } from '@ssmckinney/ckeditor5-show-blocks';
+import { SourceEditing } from '@ssmckinney/ckeditor5-source-editing';
+import { SpecialCharacters, SpecialCharactersEssentials } from '@ssmckinney/ckeditor5-special-characters';
+import { TableCellProperties, TableProperties, TableCaption, TableColumnResize } from '@ssmckinney/ckeditor5-table';
+import { TextTransformation } from '@ssmckinney/ckeditor5-typing';
+import { TextPartLanguage } from '@ssmckinney/ckeditor5-language';
+import { WordCount } from '@ssmckinney/ckeditor5-word-count';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { Style } from '@ssmckinney/ckeditor5-style';
 
-import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
+import { CS_CONFIG } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
 
 export const config = {
 	plugins: [

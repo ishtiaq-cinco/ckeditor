@@ -7,9 +7,9 @@
  * @module html-support/generalhtmlsupport
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { toArray, type ArrayOrItem } from '@ckeditor/ckeditor5-utils';
-import type { RemoveFormatCommand } from '@ckeditor/ckeditor5-remove-format';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { toArray, type ArrayOrItem } from '@ssmckinney/ckeditor5-utils';
+import type { RemoveFormatCommand } from '@ssmckinney/ckeditor5-remove-format';
 
 import { DataFilter } from './datafilter.js';
 import { CodeBlockElementSupport } from './integrations/codeblock.js';
@@ -25,7 +25,7 @@ import { HorizontalLineElementSupport } from './integrations/horizontalline.js';
 import { IframeElementSupport } from './integrations/iframe.js';
 import { CustomElementSupport } from './integrations/customelement.js';
 import type { HtmlSupportDataSchemaInlineElementDefinition } from './dataschema.js';
-import type { ModelDocumentSelection, ModelItem, Model, ModelRange, ModelSelectable } from '@ckeditor/ckeditor5-engine';
+import type { ModelDocumentSelection, ModelItem, Model, ModelRange, ModelSelectable } from '@ssmckinney/ckeditor5-engine';
 import { getHtmlAttributeName, modifyGhsAttribute, removeFormatting } from './utils.js';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { GeneralHtmlSupportConfig } from './generalhtmlsupportconfig.js';

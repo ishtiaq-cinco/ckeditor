@@ -11,7 +11,7 @@ import { InsertOperation } from '../../../src/model/operation/insertoperation.js
 import { MoveOperation } from '../../../src/model/operation/moveoperation.js';
 import { ModelPosition } from '../../../src/model/position.js';
 import { ModelText } from '../../../src/model/text.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'InsertOperation', () => {
 	let model, doc, root;

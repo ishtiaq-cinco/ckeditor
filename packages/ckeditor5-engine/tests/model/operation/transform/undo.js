@@ -214,7 +214,7 @@ describe( 'transform', () => {
 		} );
 
 		it( 'undoing split after the element created by split has been removed', () => {
-			// This example is ported here from ckeditor5-undo to keep 100% CC in ckeditor5-engine alone.
+			// This example is ported here from @ssmckinney/ckeditor5-undo to keep 100% CC in @ssmckinney/ckeditor5-engine alone.
 			john.setData( '<paragraph>Foo[]bar</paragraph>' );
 
 			john.split();
@@ -395,7 +395,7 @@ describe( 'transform', () => {
 			expectClients( '<paragraph>Foo</paragraph><paragraph>Bar</paragraph>' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/1288
+		// https://github.com/ssmckinney/ckeditor5/issues/1288
 		it( 'remove two groups of blocks then undo, undo', () => {
 			john.setData(
 				'<paragraph>X</paragraph><paragraph>A</paragraph><paragraph>B[</paragraph><paragraph>C</paragraph><paragraph>D]</paragraph>'
@@ -418,7 +418,7 @@ describe( 'transform', () => {
 			);
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/1287 TC1
+		// https://github.com/ssmckinney/ckeditor5/issues/1287 TC1
 		it( 'pasting on non-collapsed selection undo and redo', () => {
 			john.setData( '<paragraph>Fo[o</paragraph><paragraph>B]ar</paragraph>' );
 
@@ -542,7 +542,7 @@ describe( 'transform', () => {
 			expectClients( '<paragraph><m1:start></m1:start>Foo<m1:end></m1:end>bar</paragraph><paragraph></paragraph>' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/19916
+		// https://github.com/ssmckinney/ckeditor5/issues/19916
 		it( 'multi-element marker moved then undo redo', () => {
 			john.setData( '<paragraph>Fo[o</paragraph><paragraph>Bar</paragraph><paragraph>Ab]c</paragraph>' );
 
@@ -846,7 +846,7 @@ describe( 'transform', () => {
 			expectClients( '<paragraph>XY</paragraph>' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/1385
+		// https://github.com/ssmckinney/ckeditor5/issues/1385
 		it( 'paste inside paste + undo, undo + redo, redo', () => {
 			const model = john.editor.model;
 
@@ -881,7 +881,7 @@ describe( 'transform', () => {
 			}
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/1540
+		// https://github.com/ssmckinney/ckeditor5/issues/1540
 		it( 'paste, select all, paste, undo, undo, redo, redo, redo', () => {
 			john.setData( '<paragraph>[]</paragraph>' );
 
@@ -954,7 +954,7 @@ describe( 'transform', () => {
 			expectClients( '<paragraph>AbFoo</paragraph><paragraph>Baryz</paragraph>' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/8870
+		// https://github.com/ssmckinney/ckeditor5/issues/8870
 		it( 'object, p, p, p, remove, undo', () => {
 			john.setData( '<imageBlock></imageBlock><paragraph>A</paragraph><paragraph>B[]</paragraph>' );
 
@@ -1102,7 +1102,7 @@ describe( 'transform', () => {
 			return kate.destroy();
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/9296
+		// https://github.com/ssmckinney/ckeditor5/issues/9296
 		it( 'multiple enters, then backspaces, then undo, redo', () => {
 			john.setData( '<paragraph>AB[]CD</paragraph>' );
 
@@ -1141,7 +1141,7 @@ describe( 'transform', () => {
 			expectClients( '<paragraph>ABCD</paragraph>' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/18740
+		// https://github.com/ssmckinney/ckeditor5/issues/18740
 		it( 'unwrap, merge first element, undo, undo', () => {
 			john.setData( '<paragraph>A</paragraph><blockQuote><paragraph>[B</paragraph><paragraph>C]</paragraph></blockQuote>' );
 
@@ -1161,7 +1161,7 @@ describe( 'transform', () => {
 			expectClients( '<paragraph>A</paragraph><blockQuote><paragraph>B</paragraph><paragraph>C</paragraph></blockQuote>' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/18740
+		// https://github.com/ssmckinney/ckeditor5/issues/18740
 		it( 'unwrap, merge last element, undo, undo', () => {
 			john.setData( '<paragraph>A</paragraph><blockQuote><paragraph>[B</paragraph><paragraph>C]</paragraph></blockQuote>' );
 

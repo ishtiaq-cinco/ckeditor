@@ -7,8 +7,8 @@
  * @module media-embed/converters
  */
 
-import type { GetCallback } from '@ckeditor/ckeditor5-utils';
-import type { DowncastAttributeEvent, DowncastDispatcher, ModelElement, ViewElement } from '@ckeditor/ckeditor5-engine';
+import type { GetCallback } from '@ssmckinney/ckeditor5-utils';
+import type { DowncastAttributeEvent, DowncastDispatcher, ModelElement, ViewElement } from '@ssmckinney/ckeditor5-engine';
 import { type MediaRegistry } from './mediaregistry.js';
 import type { MediaOptions } from './utils.js';
 

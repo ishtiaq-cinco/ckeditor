@@ -18,7 +18,7 @@ import {
 import { type ModelPosition } from './position.js';
 import { type ModelRange } from './range.js';
 
-import { CKEditorError, EmitterMixin, type EmitterMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, EmitterMixin, type EmitterMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 
 const MarkerCollectionBase: EmitterMixinConstructor = /* #__PURE__ */ EmitterMixin();
 const MarkerBase: EmitterMixinConstructor<typeof ModelTypeCheckable> = /* #__PURE__ */ EmitterMixin( ModelTypeCheckable );

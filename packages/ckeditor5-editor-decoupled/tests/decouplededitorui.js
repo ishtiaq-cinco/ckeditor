@@ -4,20 +4,20 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { View, EditorUI } from '@ckeditor/ckeditor5-ui';
+import { View, EditorUI } from '@ssmckinney/ckeditor5-ui';
 
 import { DecoupledEditor } from '../src/decouplededitor.js';
 import { DecoupledEditorUI } from '../src/decouplededitorui.js';
 import { DecoupledEditorUIView } from '../src/decouplededitoruiview.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Image, ImageCaption, ImageToolbar } from '@ckeditor/ckeditor5-image';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Image, ImageCaption, ImageToolbar } from '@ssmckinney/ckeditor5-image';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
-import { assertBinding } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
+import { assertBinding } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { isElement } from 'es-toolkit/compat';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
-import { normalizeRootsConfig, Plugin } from '@ckeditor/ckeditor5-core';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { normalizeRootsConfig, Plugin } from '@ssmckinney/ckeditor5-core';
 
 describe( 'DecoupledEditorUI', () => {
 	let editor, view, ui, viewElement;
@@ -428,7 +428,7 @@ describe( 'Focus handling and navigation between editing root and editor toolbar
 
 			_setModelData( editor.model,
 				'<paragraph>foo</paragraph>' +
-				'[<imageBlock src="https://ckeditor.com/docs/ckeditor5/latest/assets/img/warsaw.jpg"><caption>bar</caption></imageBlock>]' +
+				'[<imageBlock src="https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/assets/img/warsaw.jpg"><caption>bar</caption></imageBlock>]' +
 				'<paragraph>baz</paragraph>'
 			);
 

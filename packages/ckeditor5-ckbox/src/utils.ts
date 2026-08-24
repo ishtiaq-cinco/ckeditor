@@ -7,7 +7,7 @@
  * @module ckbox/utils
  */
 
-import type { InitializedToken } from '@ckeditor/ckeditor5-cloud-services';
+import type { InitializedToken } from '@ssmckinney/ckeditor5-cloud-services';
 import type { CKBoxImageUrls } from './ckboxconfig.js';
 
 import { decode } from 'blurhash';

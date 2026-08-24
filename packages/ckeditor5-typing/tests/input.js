@@ -5,14 +5,14 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
-import { ViewDocumentDomEventData, _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { toWidget, Widget } from '@ckeditor/ckeditor5-widget';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { insertAt, env } from '@ckeditor/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
+import { ViewDocumentDomEventData, _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { toWidget, Widget } from '@ssmckinney/ckeditor5-widget';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { insertAt, env } from '@ssmckinney/ckeditor5-utils';
 
 import { Input } from '../src/input.js';
 import { InsertTextCommand } from '../src/inserttextcommand.js';

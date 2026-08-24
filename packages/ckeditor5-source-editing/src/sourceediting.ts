@@ -7,10 +7,10 @@
  * @module source-editing/sourceediting
  */
 
-import { Plugin, PendingActions, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { IconSource } from '@ckeditor/ckeditor5-icons';
-import { ButtonView, MenuBarMenuListItemButtonView, type Dialog } from '@ckeditor/ckeditor5-ui';
-import { CKEditorError, createElement, ElementReplacer, env, formatHtml } from '@ckeditor/ckeditor5-utils';
+import { Plugin, PendingActions, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { IconSource } from '@ssmckinney/ckeditor5-icons';
+import { ButtonView, MenuBarMenuListItemButtonView, type Dialog } from '@ssmckinney/ckeditor5-ui';
+import { CKEditorError, createElement, ElementReplacer, env, formatHtml } from '@ssmckinney/ckeditor5-utils';
 
 import '../theme/sourceediting.css';
 
@@ -269,7 +269,7 @@ export class SourceEditing extends Plugin {
 			// Allow native undo/redo in the textarea. The editor's keystroke handler (attached via
 			// setEditableElement()) intercepts Ctrl+Z/Y and calls preventDefault(), blocking browser
 			// undo/redo while editor commands are force-disabled in source editing mode.
-			// See: https://github.com/ckeditor/ckeditor5/issues/13700
+			// See: https://github.com/ssmckinney/ckeditor5/issues/13700
 			domSourceEditingElementTextarea.addEventListener( 'keydown', evt => {
 				// Normalize the key to lowercase because `evt.key` reflects the Caps Lock state
 				// (e.g. returns 'Z' instead of 'z' when Caps Lock is on), which would otherwise

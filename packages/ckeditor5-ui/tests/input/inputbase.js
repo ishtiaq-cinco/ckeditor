@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { FocusTracker } from '@ckeditor/ckeditor5-utils';
+import { FocusTracker } from '@ssmckinney/ckeditor5-utils';
 import { InputBase } from '../../src/input/inputbase.js';
 import { InputView } from '../../src/input/inputview.js';
 
@@ -128,7 +128,7 @@ describe( 'InputBase', () => {
 				} );
 			} );
 
-			// See ckeditor5-ui/issues/335.
+			// See @ssmckinney/ckeditor5-ui/issues/335.
 			it( 'should set element value when value was defined before view#render', () => {
 				view = new InputView();
 
@@ -258,7 +258,7 @@ describe( 'InputBase', () => {
 				expect( spy ).toHaveBeenCalledWith( expect.any( Object ), expect.anything() );
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/10431
+			// https://github.com/ssmckinney/ckeditor5/issues/10431
 			it( 'should trigger update of the #isEmpty property', () => {
 				view.element.value = 'foo';
 				view.element.dispatchEvent( new Event( 'input' ) );

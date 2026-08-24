@@ -7,10 +7,10 @@
  * @module upload/adapters/simpleuploadadapter
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { FileRepository, type UploadResponse, type FileLoader, type UploadAdapter } from '../filerepository.js';
 import type { SimpleUploadConfig } from '../uploadconfig.js';
-import { logWarning } from '@ckeditor/ckeditor5-utils';
+import { logWarning } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * The Simple upload adapter allows uploading images to an application running on your server using

@@ -7,7 +7,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { CommandCollection } from '../src/commandcollection.js';
 import { Command } from '../src/command.js';
 import { ModelTestEditor } from './_utils/modeltesteditor.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 class SomeCommand extends Command {
 	execute() {}

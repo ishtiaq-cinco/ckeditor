@@ -3,11 +3,11 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
 import { Mention } from '../../src/mention.js';
-import { Underline } from '@ckeditor/ckeditor5-basic-styles';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { Font } from '@ckeditor/ckeditor5-font';
+import { Underline } from '@ssmckinney/ckeditor5-basic-styles';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { Font } from '@ssmckinney/ckeditor5-font';
 
 ClassicEditor
 	.create( {

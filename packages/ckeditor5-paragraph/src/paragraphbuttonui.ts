@@ -7,9 +7,9 @@
  * @module paragraph/paragraphbuttonui
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { ButtonView } from '@ckeditor/ckeditor5-ui';
-import { IconParagraph } from '@ckeditor/ckeditor5-icons';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { ButtonView } from '@ssmckinney/ckeditor5-ui';
+import { IconParagraph } from '@ssmckinney/ckeditor5-icons';
 
 import { Paragraph } from './paragraph.js';
 import { type ParagraphCommand } from './paragraphcommand.js';

@@ -3,12 +3,12 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { ImageUpload, ImageInsert, PictureEditing } from '@ckeditor/ckeditor5-image';
-import { LinkImageEditing, LinkImage } from '@ckeditor/ckeditor5-link';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { Autosave } from '@ckeditor/ckeditor5-autosave';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ImageUpload, ImageInsert, PictureEditing } from '@ssmckinney/ckeditor5-image';
+import { LinkImageEditing, LinkImage } from '@ssmckinney/ckeditor5-link';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { Autosave } from '@ssmckinney/ckeditor5-autosave';
 import { TOKEN_URL } from '../_utils/ckbox-config.js';
 import { CKBox } from '../../src/ckbox.js';
 import { CKBoxImageEdit } from '../../src/ckboximageedit.js';

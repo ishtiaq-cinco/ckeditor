@@ -7,8 +7,8 @@
  * @module cloud-services/cloudservices
  */
 
-import { ContextPlugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { ContextPlugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 import { CloudServicesCore } from './cloudservicescore.js';
 import type { CloudServicesConfig, TokenUrl } from './cloudservicesconfig.js';
 import type { InitializedToken } from './token/token.js';
@@ -37,7 +37,7 @@ export class CloudServices extends ContextPlugin implements CloudServicesConfig 
 	 * CKEditor Ecosystem customer dashboard.
 	 *
 	 * Note: Unlike most plugins, `RealTimeCollaborativeEditing` is not included in any CKEditor 5 build and needs to be installed manually.
-	 * Check [Collaboration overview](https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/overview.html) for more details.
+	 * Check [Collaboration overview](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/collaboration/overview.html) for more details.
 	 */
 	public readonly webSocketUrl?: string;
 
@@ -110,7 +110,7 @@ export class CloudServices extends ContextPlugin implements CloudServicesConfig 
 		// The problem is that if this happens here, then the token refresh interval will be executed even
 		// after destroying the editor (as the exception was thrown from `init` method). To prevent that
 		// behavior we need to catch the exception and destroy the uninitialized token instance.
-		// See: https://github.com/ckeditor/ckeditor5/issues/17531
+		// See: https://github.com/ssmckinney/ckeditor5/issues/17531
 		const cloudServicesCore: CloudServicesCore = this.context.plugins.get( 'CloudServicesCore' );
 		const uninitializedToken = cloudServicesCore.createToken( this.tokenUrl, { autoRefresh: this.autoRefresh } );
 

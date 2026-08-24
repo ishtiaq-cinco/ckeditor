@@ -3,10 +3,10 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
 
 import { ArticlePluginSet } from '../_utils/articlepluginset.js';
-import { BalloonToolbar } from '@ckeditor/ckeditor5-ui';
+import { BalloonToolbar } from '@ssmckinney/ckeditor5-ui';
 
 ClassicEditor
 	.create( {

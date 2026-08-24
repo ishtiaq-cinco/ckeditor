@@ -7,8 +7,8 @@
  * @module restricted-editing/restrictededitingmodenavigationcommand
  */
 
-import type { Model, ModelRange } from '@ckeditor/ckeditor5-engine';
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
+import type { Model, ModelRange } from '@ssmckinney/ckeditor5-engine';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
 import { getExceptionRange } from './restrictededitingmode/utils.js';
 
 /**

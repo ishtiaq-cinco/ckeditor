@@ -3,16 +3,16 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
 import { Emoji, EmojiMention, EmojiPicker, EmojiRepository } from '../../src/index.js';
-import { Mention } from '@ckeditor/ckeditor5-mention';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { List } from '@ckeditor/ckeditor5-list';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
-import { BalloonToolbar } from '@ckeditor/ckeditor5-ui';
-import { BalloonEditor } from '@ckeditor/ckeditor5-editor-balloon';
+import { Mention } from '@ssmckinney/ckeditor5-mention';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { List } from '@ssmckinney/ckeditor5-list';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
+import { BalloonToolbar } from '@ssmckinney/ckeditor5-ui';
+import { BalloonEditor } from '@ssmckinney/ckeditor5-editor-balloon';
 
 const cssValue = [
 	':root {',

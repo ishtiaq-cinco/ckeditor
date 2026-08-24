@@ -7,9 +7,9 @@
  * @module indent/indentui
  */
 
-import { ButtonView, MenuBarMenuListItemButtonView } from '@ckeditor/ckeditor5-ui';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { IconIndent, IconOutdent } from '@ckeditor/ckeditor5-icons';
+import { ButtonView, MenuBarMenuListItemButtonView } from '@ssmckinney/ckeditor5-ui';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { IconIndent, IconOutdent } from '@ssmckinney/ckeditor5-icons';
 
 /**
  * The indent UI feature.

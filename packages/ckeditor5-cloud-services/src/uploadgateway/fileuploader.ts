@@ -7,8 +7,8 @@
  * @module cloud-services/uploadgateway/fileuploader
  */
 
-import type { UploadResponse } from '@ckeditor/ckeditor5-upload';
-import { EmitterMixin, CKEditorError, type EmitterMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import type { UploadResponse } from '@ssmckinney/ckeditor5-upload';
+import { EmitterMixin, CKEditorError, type EmitterMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 import type { InitializedToken } from '../token/token.js';
 
 const BASE64_HEADER_REG_EXP = /^data:(\S*?);base64,/;

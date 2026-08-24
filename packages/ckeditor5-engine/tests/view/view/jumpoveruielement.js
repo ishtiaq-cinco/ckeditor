@@ -9,10 +9,10 @@ import { ViewContainerElement } from '../../../src/view/containerelement.js';
 import { ViewAttributeElement } from '../../../src/view/attributeelement.js';
 import { ViewText } from '../../../src/view/text.js';
 import { ViewRange } from '../../../src/view/range.js';
-import { keyCodes, createElement } from '@ckeditor/ckeditor5-utils';
+import { keyCodes, createElement } from '@ssmckinney/ckeditor5-utils';
 import { createViewRoot } from '../_utils/createroot.js';
 import { _setViewData } from '../../../src/dev-utils/view.js';
-import { testUtils } from '@ckeditor/ckeditor5-core/tests/_utils/utils.js';
+import { testUtils } from '@ssmckinney/ckeditor5-core/tests/_utils/utils.js';
 import { StylesProcessor } from '../../../src/view/stylesmap.js';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 

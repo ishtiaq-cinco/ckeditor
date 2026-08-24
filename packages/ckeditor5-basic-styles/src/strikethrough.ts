@@ -7,7 +7,7 @@
  * @module basic-styles/strikethrough
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { StrikethroughEditing } from './strikethrough/strikethroughediting.js';
 import { StrikethroughUI } from './strikethrough/strikethroughui.js';
 

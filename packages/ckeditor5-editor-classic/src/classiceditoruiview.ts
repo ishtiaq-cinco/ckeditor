@@ -7,10 +7,10 @@
  * @module editor-classic/classiceditoruiview
  */
 
-import { BoxedEditorUIView, InlineEditableUIView, MenuBarView, StickyPanelView, ToolbarView } from '@ckeditor/ckeditor5-ui';
-import type { Locale } from '@ckeditor/ckeditor5-utils';
-import type { EditingView } from '@ckeditor/ckeditor5-engine';
-import type { ViewRootElementDefinition } from '@ckeditor/ckeditor5-core';
+import { BoxedEditorUIView, InlineEditableUIView, MenuBarView, StickyPanelView, ToolbarView } from '@ssmckinney/ckeditor5-ui';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
+import type { EditingView } from '@ssmckinney/ckeditor5-engine';
+import type { ViewRootElementDefinition } from '@ssmckinney/ckeditor5-core';
 
 import '../theme/classiceditor.css';
 

@@ -7,7 +7,7 @@
  * @module heading/headingui
  */
 
-import { Plugin, type Command } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Command } from '@ssmckinney/ckeditor5-core';
 import {
 	UIModel,
 	createDropdown,
@@ -18,9 +18,9 @@ import {
 	MenuBarMenuListView,
 	MenuBarMenuView,
 	MenuBarMenuListItemButtonView
-} from '@ckeditor/ckeditor5-ui';
-import { Collection } from '@ckeditor/ckeditor5-utils';
-import type { ParagraphCommand } from '@ckeditor/ckeditor5-paragraph';
+} from '@ssmckinney/ckeditor5-ui';
+import { Collection } from '@ssmckinney/ckeditor5-utils';
+import type { ParagraphCommand } from '@ssmckinney/ckeditor5-paragraph';
 
 import { getLocalizedOptions } from './utils.js';
 import { type HeadingCommand } from './headingcommand.js';

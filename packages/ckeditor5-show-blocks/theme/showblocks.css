@@ -169,7 +169,7 @@
 	/*
 	 * `:dir()` resolves the effective direction of the editable, so this also works when the `dir`
 	 * attribute is inherited from an ancestor wrapper.
-	 * See: https://github.com/ckeditor/ckeditor5/issues/15969.
+	 * See: https://github.com/ssmckinney/ckeditor5/issues/15969.
 	 */
 	&:dir(ltr) :where(
 		address,

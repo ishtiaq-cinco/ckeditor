@@ -4,13 +4,13 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach, beforeAll } from 'vitest';
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 import { EditorWatchdog } from '../src/editorwatchdog.js';
-import { MultiRootEditor } from '@ckeditor/ckeditor5-editor-multi-root';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
+import { MultiRootEditor } from '@ssmckinney/ckeditor5-editor-multi-root';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
 
 class CommentsRepository extends Plugin {
 	static get pluginName() {
@@ -1363,7 +1363,7 @@ describe( 'EditorWatchdog', () => {
 	} );
 
 	describe( 'destroying', () => {
-		// See https://github.com/ckeditor/ckeditor5/issues/4706.
+		// See https://github.com/ssmckinney/ckeditor5/issues/4706.
 		it( 'destroy() should clean internal stuff', () => {
 			// 30ms should be enough to make the two data changes split into two data save actions.
 			// This will ensure that the second data save action will be put off in time.
@@ -1399,7 +1399,7 @@ describe( 'EditorWatchdog', () => {
 			} );
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/10643.
+		// See https://github.com/ssmckinney/ckeditor5/issues/10643.
 		it( 'watchdog should remove the listener for `change:data` event before destroying the editor', async () => {
 			const watchdog = new EditorWatchdog( ClassicTestEditor );
 

@@ -34,7 +34,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { Bold, ClassicEditor, Clipboard } from 'ckeditor5';
+import { Bold, ClassicEditor, Clipboard } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -50,15 +50,15 @@ The {@link module:clipboard/pasteplaintext~PastePlainText `PastePlainText`} plug
 
 ## Support for other applications
 
-You can find more information regarding compatibility with other applications in [this ticket](https://github.com/ckeditor/ckeditor5/issues/1184#issuecomment-409828069).
+You can find more information regarding compatibility with other applications in [this ticket](https://github.com/ssmckinney/ckeditor5/issues/1184#issuecomment-409828069).
 
 If you think that support for any of the applications needs improvements, please add 👍  and comments in the following issues:
 
-* [Support pasting from Excel](https://github.com/ckeditor/ckeditor5/issues/2513).
-* [Support pasting from Libre Office](https://github.com/ckeditor/ckeditor5/issues/2520).
-* [Support pasting from Pages](https://github.com/ckeditor/ckeditor5/issues/2527).
+* [Support pasting from Excel](https://github.com/ssmckinney/ckeditor5/issues/2513).
+* [Support pasting from Libre Office](https://github.com/ssmckinney/ckeditor5/issues/2520).
+* [Support pasting from Pages](https://github.com/ssmckinney/ckeditor5/issues/2527).
 
-Feel free to open a [new feature request](https://github.com/ckeditor/ckeditor5/issues/new/choose) for other similar applications, too!
+Feel free to open a [new feature request](https://github.com/ssmckinney/ckeditor5/issues/new/choose) for other similar applications, too!
 
 ## Related features
 

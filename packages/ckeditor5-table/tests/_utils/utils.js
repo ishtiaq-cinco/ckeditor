@@ -5,7 +5,7 @@
 
 import { expect } from 'vitest';
 
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 import { TableWalker } from '../../src/tablewalker.js';
 
 const WIDGET_TABLE_CELL_CLASS = 'ck-editor__editable ck-editor__nested-editable';

@@ -26,8 +26,8 @@ import {
 	type NormalizedColorOption,
 	type ColorPickerConfig,
 	type FocusableView
-} from '@ckeditor/ckeditor5-ui';
-import { FocusTracker, KeystrokeHandler, type ObservableChangeEvent, type Locale } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-ui';
+import { FocusTracker, KeystrokeHandler, type ObservableChangeEvent, type Locale } from '@ssmckinney/ckeditor5-utils';
 import {
 	IconObjectCenter,
 	IconObjectInlineLeft,
@@ -35,7 +35,7 @@ import {
 	IconObjectLeft,
 	IconObjectRight,
 	IconPreviousArrow
-} from '@ckeditor/ckeditor5-icons';
+} from '@ssmckinney/ckeditor5-icons';
 
 import {
 	fillToolbar,
@@ -516,7 +516,7 @@ export class TablePropertiesView extends View {
 		// Reset the border color and width fields depending on the `border-style` value.
 		this.on<ObservableChangeEvent<string>>( 'change:borderStyle', ( evt, name, newValue, oldValue ) => {
 			// When removing the border (`border-style:none`), clear the remaining `border-*` properties.
-			// See: https://github.com/ckeditor/ckeditor5/issues/6227.
+			// See: https://github.com/ssmckinney/ckeditor5/issues/6227.
 			if ( !isBorderStyleSet( newValue ) ) {
 				this.borderColor = '';
 				this.borderWidth = '';

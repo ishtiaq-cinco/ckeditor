@@ -8,15 +8,15 @@ import { InlineEditor } from '../src/inlineeditor.js';
 import { InlineEditorUI } from '../src/inlineeditorui.js';
 import { InlineEditorUIView } from '../src/inlineeditoruiview.js';
 
-import { HtmlDataProcessor, ModelRootElement } from '@ckeditor/ckeditor5-engine';
+import { HtmlDataProcessor, ModelRootElement } from '@ssmckinney/ckeditor5-engine';
 
-import { Context, Plugin } from '@ckeditor/ckeditor5-core';
-import { EditorWatchdog, ContextWatchdog } from '@ckeditor/ckeditor5-watchdog';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
+import { Context, Plugin } from '@ssmckinney/ckeditor5-core';
+import { EditorWatchdog, ContextWatchdog } from '@ssmckinney/ckeditor5-watchdog';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
 
-import { assertCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { assertCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'InlineEditor', () => {
 	let editor, editorElement;
@@ -97,7 +97,7 @@ describe( 'InlineEditor', () => {
 			} );
 		} );
 
-		// See: https://github.com/ckeditor/ckeditor5/issues/746
+		// See: https://github.com/ssmckinney/ckeditor5/issues/746
 		it( 'should throw when trying to create the editor using the same source element more than once', () => {
 			return InlineEditor.create( editorElement )
 				.then(
@@ -769,7 +769,7 @@ describe( 'InlineEditor', () => {
 			} );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/8974
+		// https://github.com/ssmckinney/ckeditor5/issues/8974
 		it( 'initializes with empty content if legacy config.initialData is set to an empty string', () => {
 			const editorElement = document.createElement( 'div' );
 			editorElement.innerHTML = '<p>Hello world!</p>';

@@ -11,7 +11,7 @@ import { ViewDocumentFragment } from '../../src/view/documentfragment.js';
 import { ViewRootEditableElement } from '../../src/view/rooteditableelement.js';
 
 import { createViewDocumentMock } from '../../tests/view/_utils/createdocumentmock.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { ViewDocument } from '../../src/view/document.js';
 import { StylesProcessor } from '../../src/view/stylesmap.js';
 

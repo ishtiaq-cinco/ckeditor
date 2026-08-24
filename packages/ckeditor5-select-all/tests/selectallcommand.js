@@ -4,12 +4,12 @@
  */
 
 import { beforeEach, afterEach, describe, expect, it } from 'vitest';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
 import { SelectAllEditing } from '../src/selectallediting.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ImageBlockEditing, ImageCaptionEditing } from '@ckeditor/ckeditor5-image';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ImageBlockEditing, ImageCaptionEditing } from '@ssmckinney/ckeditor5-image';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'SelectAllCommand', () => {
 	let editor, model, command;

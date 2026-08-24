@@ -13,7 +13,7 @@ import {
 	CKEditorError,
 	Locale,
 	type LocaleTranslate
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { PluginCollection } from './plugincollection.js';
 import { type Editor } from './editor/editor.js';

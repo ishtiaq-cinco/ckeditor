@@ -7,7 +7,7 @@ import { describe, expect, it } from 'vitest';
 import { HtmlEmbed } from '../src/htmlembed.js';
 import { HtmlEmbedUI } from '../src/htmlembedui.js';
 import { HtmlEmbedEditing } from '../src/htmlembedediting.js';
-import { Widget } from '@ckeditor/ckeditor5-widget';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
 
 describe( 'HtmlEmbed', () => {
 	it( 'should require HtmlEmbedEditing, HtmlEmbedUI and Widget', () => {

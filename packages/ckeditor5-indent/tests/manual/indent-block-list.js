@@ -3,31 +3,31 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Alignment } from '@ckeditor/ckeditor5-alignment';
-import { AutoImage, ImageResize, ImageUpload, Image, ImageCaption, ImageStyle, ImageToolbar } from '@ckeditor/ckeditor5-image';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
-import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed';
-import { HtmlComment, GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-import { LinkImage, Link } from '@ckeditor/ckeditor5-link';
-import { PageBreak } from '@ckeditor/ckeditor5-page-break';
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
-import { TableCaption, Table, TableToolbar } from '@ckeditor/ckeditor5-table';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
-import { List, ListProperties } from '@ckeditor/ckeditor5-list';
-import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
-import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Alignment } from '@ssmckinney/ckeditor5-alignment';
+import { AutoImage, ImageResize, ImageUpload, Image, ImageCaption, ImageStyle, ImageToolbar } from '@ssmckinney/ckeditor5-image';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { EasyImage } from '@ssmckinney/ckeditor5-easy-image';
+import { HorizontalLine } from '@ssmckinney/ckeditor5-horizontal-line';
+import { HtmlEmbed } from '@ssmckinney/ckeditor5-html-embed';
+import { HtmlComment, GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
+import { LinkImage, Link } from '@ssmckinney/ckeditor5-link';
+import { PageBreak } from '@ssmckinney/ckeditor5-page-break';
+import { SourceEditing } from '@ssmckinney/ckeditor5-source-editing';
+import { TableCaption, Table, TableToolbar } from '@ssmckinney/ckeditor5-table';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Indent, IndentBlock } from '@ssmckinney/ckeditor5-indent';
+import { List, ListProperties } from '@ssmckinney/ckeditor5-list';
+import { MediaEmbed } from '@ssmckinney/ckeditor5-media-embed';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { RemoveFormat } from '@ssmckinney/ckeditor5-remove-format';
+import { PasteFromOffice } from '@ssmckinney/ckeditor5-paste-from-office';
 
-import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
+import { CS_CONFIG } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
 
 const INITIAL_DATA = `
 	<h3>Margins on ol/ul and li:</h3>

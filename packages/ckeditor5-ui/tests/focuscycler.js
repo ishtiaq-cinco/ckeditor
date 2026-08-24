@@ -7,7 +7,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { ViewCollection } from '../src/viewcollection.js';
 import { View } from '../src/view.js';
 import { FocusCycler, isViewWithFocusCycler } from '../src/focuscycler.js';
-import { KeystrokeHandler, keyCodes, FocusTracker, wait } from '@ckeditor/ckeditor5-utils';
+import { KeystrokeHandler, keyCodes, FocusTracker, wait } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'FocusCycler', () => {
 	let focusables, focusTracker, cycler, viewIndex;

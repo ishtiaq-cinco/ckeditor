@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 import { MediaEmbedEditing } from '../src/mediaembedediting.js';
-import { _setModelData, _getModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { normalizeHtml } from '@ckeditor/ckeditor5-utils/tests/_utils/normalizehtml.js';
+import { _setModelData, _getModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { normalizeHtml } from '@ssmckinney/ckeditor5-utils/tests/_utils/normalizehtml.js';
 import { escapeRegExp } from 'es-toolkit/compat';
 
 describe( 'MediaEmbedEditing', () => {
@@ -1230,7 +1230,7 @@ describe( 'MediaEmbedEditing', () => {
 						);
 					} );
 
-					// Related to https://github.com/ckeditor/ckeditor5/issues/407.
+					// Related to https://github.com/ssmckinney/ckeditor5/issues/407.
 					it( 'should not discard internals (e.g. UI) injected by other features when converting the url attribute', () => {
 						_setModelData( model, '<media url="https://ckeditor.com"></media>' );
 						const media = doc.getRoot().getChild( 0 );

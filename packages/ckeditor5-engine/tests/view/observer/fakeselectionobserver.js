@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach, beforeAll, afterAll } from 'vitest';
-import { createElement, keyCodes } from '@ckeditor/ckeditor5-utils';
+import { createElement, keyCodes } from '@ssmckinney/ckeditor5-utils';
 import { FakeSelectionObserver } from '../../../src/view/observer/fakeselectionobserver.js';
 import { EditingView } from '../../../src/view/view.js';
 import { ViewDocumentDomEventData } from '../../../src/view/observer/domeventdata.js';

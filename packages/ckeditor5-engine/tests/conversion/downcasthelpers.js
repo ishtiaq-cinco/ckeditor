@@ -34,11 +34,11 @@ import { _stringifyView } from '../../src/dev-utils/view.js';
 import { EditingView } from '../../src/view/view.js';
 import { createViewRoot } from '../view/_utils/createroot.js';
 import { _setModelData } from '../../src/dev-utils/model.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { StylesProcessor } from '../../src/view/stylesmap.js';
 import { ViewDowncastWriter } from '../../src/view/downcastwriter.js';
 
-import { toWidget } from '@ckeditor/ckeditor5-widget';
+import { toWidget } from '@ssmckinney/ckeditor5-widget';
 
 describe( 'DowncastHelpers', () => {
 	let model, modelRoot, viewRoot, downcastHelpers, controller, modelRootStart;
@@ -853,7 +853,7 @@ describe( 'DowncastHelpers', () => {
 				expect( spy ).toHaveBeenCalled();
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/9641
+			// https://github.com/ssmckinney/ckeditor5/issues/9641
 			it( 'should convert on multiple similar child hooks', () => {
 				model.schema.register( 'simpleBlock2', {
 					allowIn: '$root',
@@ -1851,7 +1851,7 @@ describe( 'DowncastHelpers', () => {
 				expect( spy ).toHaveBeenCalled();
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/9641
+			// https://github.com/ssmckinney/ckeditor5/issues/9641
 			it( 'should convert on multiple similar child hooks', () => {
 				model.schema.register( 'simpleBlock2', {
 					allowIn: '$root',
@@ -3201,7 +3201,7 @@ describe( 'DowncastHelpers', () => {
 			}, /^conversion-slot-filter-incomplete/, controller.downcastDispatcher );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/11163
+		// https://github.com/ssmckinney/ckeditor5/issues/11163
 		it( 'should throw an exception when invoked for a model element that allows $text', () => {
 			model.schema.register( 'myElement', {
 				allowIn: '$root',

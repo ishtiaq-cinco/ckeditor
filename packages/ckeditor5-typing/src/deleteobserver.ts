@@ -13,7 +13,7 @@ import {
 	isInsideCombinedSymbol,
 	isInsideEmojiSequence,
 	isInsideSurrogatePair
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 import {
 	BubblingEventInfo,
 	ViewDocumentDomEventData,
@@ -26,7 +26,7 @@ import {
 	type ViewSelection,
 	type ViewRange,
 	type EditingView
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 const DELETE_CHARACTER = 'character';
 const DELETE_WORD = 'word';
@@ -196,7 +196,7 @@ export class DeleteObserver extends Observer {
 			document.fire( eventInfo, new ViewDocumentDomEventData( view, domEvent, deleteData ) );
 
 			// Stop the beforeinput event if `delete` event was stopped.
-			// https://github.com/ckeditor/ckeditor5/issues/753
+			// https://github.com/ssmckinney/ckeditor5/issues/753
 			if ( eventInfo.stop.called ) {
 				evt.stop();
 			}
@@ -259,7 +259,7 @@ export interface DeleteEventData extends ViewDocumentDomEventData<InputEvent> {
 }
 
 /**
- * Enables workaround for the issue https://github.com/ckeditor/ckeditor5/issues/11904.
+ * Enables workaround for the issue https://github.com/ssmckinney/ckeditor5/issues/11904.
  */
 function enableChromeWorkaround( observer: DeleteObserver ) {
 	const view = observer.view;

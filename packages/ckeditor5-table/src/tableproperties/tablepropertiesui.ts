@@ -7,8 +7,8 @@
  * @module table/tableproperties/tablepropertiesui
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { IconTableProperties } from '@ckeditor/ckeditor5-icons';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { IconTableProperties } from '@ssmckinney/ckeditor5-icons';
 import {
 	ButtonView,
 	ContextualBalloon,
@@ -16,7 +16,7 @@ import {
 	getLocalizedColorOptions,
 	normalizeColorOptions,
 	type LabeledFieldView
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 
 import { debounce } from 'es-toolkit/compat';
 
@@ -36,8 +36,8 @@ import {
 	getNormalizedDefaultTableProperties,
 	type NormalizedDefaultProperties
 } from '../utils/table-properties.js';
-import type { Batch } from '@ckeditor/ckeditor5-engine';
-import type { EventInfo, ObservableChangeEvent } from '@ckeditor/ckeditor5-utils';
+import type { Batch } from '@ssmckinney/ckeditor5-engine';
+import type { EventInfo, ObservableChangeEvent } from '@ssmckinney/ckeditor5-utils';
 
 import { type TableBorderStyleCommand } from './commands/tableborderstylecommand.js';
 
@@ -191,7 +191,7 @@ export class TablePropertiesUI extends Plugin {
 		super.destroy();
 
 		// Destroy created UI components as they are not automatically destroyed.
-		// See https://github.com/ckeditor/ckeditor5/issues/1341.
+		// See https://github.com/ssmckinney/ckeditor5/issues/1341.
 		if ( this.view ) {
 			this.view.destroy();
 		}
@@ -227,7 +227,7 @@ export class TablePropertiesUI extends Plugin {
 		} );
 
 		this.listenTo( view, 'cancel', () => {
-			// https://github.com/ckeditor/ckeditor5/issues/6180
+			// https://github.com/ssmckinney/ckeditor5/issues/6180
 			if ( this._undoStepBatch!.operations.length ) {
 				editor.execute( 'undo', this._undoStepBatch );
 			}
@@ -390,7 +390,7 @@ export class TablePropertiesUI extends Plugin {
 		this._isReady = false;
 
 		// Blur any input element before removing it from DOM to prevent issues in some browsers.
-		// See https://github.com/ckeditor/ckeditor5/issues/1501.
+		// See https://github.com/ssmckinney/ckeditor5/issues/1501.
 		this.view!.saveButtonView.focus();
 
 		this._balloon.remove( this.view! );

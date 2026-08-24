@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ViewContainerElement, ViewDowncastWriter, _setModelData } from '@ckeditor/ckeditor5-engine';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ViewContainerElement, ViewDowncastWriter, _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 
 import { LegacyListEditing } from '../../src/legacylist/legacylistediting.js';
 import { LegacyListPropertiesEditing } from '../../src/legacylistproperties/legacylistpropertiesediting.js';
@@ -17,8 +17,8 @@ import {
 	getSiblingNodes
 } from '../../src/legacylist/legacyutils.js';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
 
 describe( 'legacy utils', () => {
 	let writer;
@@ -84,7 +84,7 @@ describe( 'legacy utils', () => {
 			} );
 
 			// Block filler is required after the `<br>` element if the element is the last child in the container.
-			// See: https://github.com/ckeditor/ckeditor5/issues/1312#issuecomment-436669045.
+			// See: https://github.com/ssmckinney/ckeditor5/issues/1312#issuecomment-436669045.
 			describe( 'for <br> elements in container', () => {
 				it( 'returns offset of the last child which is the <br> element (1)', () => {
 					const item = createViewListItemElement( writer );

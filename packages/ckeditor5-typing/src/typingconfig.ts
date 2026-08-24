@@ -8,7 +8,7 @@
  */
 
 /**
- * The configuration of the typing features. Used by the typing features in `@ckeditor/ckeditor5-typing` package.
+ * The configuration of the typing features. Used by the typing features in `@ssmckinney/ckeditor5-typing` package.
  *
  * ```ts
  * ClassicEditor

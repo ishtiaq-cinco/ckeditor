@@ -5,11 +5,11 @@
 
 import { ShowBlocks } from '../../src/showblocks.js';
 
-import { MultiRootEditor } from '@ckeditor/ckeditor5-editor-multi-root';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
+import { MultiRootEditor } from '@ssmckinney/ckeditor5-editor-multi-root';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
 
 const roots = {
 	intro: { element: document.querySelector( '#editor-intro' ) },

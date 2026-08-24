@@ -7,7 +7,7 @@
  * @module ui/notification/notification
  */
 
-import { ContextPlugin } from '@ckeditor/ckeditor5-core';
+import { ContextPlugin } from '@ssmckinney/ckeditor5-core';
 
 /**
  * The Notification plugin.

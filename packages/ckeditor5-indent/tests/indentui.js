@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { IconIndent, IconOutdent } from '@ckeditor/ckeditor5-icons';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { ButtonView } from '@ckeditor/ckeditor5-ui';
+import { IconIndent, IconOutdent } from '@ssmckinney/ckeditor5-icons';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ButtonView } from '@ssmckinney/ckeditor5-ui';
 
 import { IndentEditing } from '../src/indentediting.js';
 import { IndentUI } from '../src/indentui.js';

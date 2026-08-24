@@ -14,7 +14,7 @@ import {
 	IconPreviousArrow,
 	MediaEmbedStyle,
 	MediaEmbedToolbar
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 import { MediaEditor } from './build-media-source.js';
 
 MediaEditor

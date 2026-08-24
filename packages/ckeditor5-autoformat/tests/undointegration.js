@@ -7,19 +7,19 @@ import { Autoformat } from '../src/autoformat.js';
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ListEditing, _ListItemUid as ListItemUid } from '@ckeditor/ckeditor5-list';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { BoldEditing, CodeEditing, StrikethroughEditing, ItalicEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Delete } from '@ckeditor/ckeditor5-typing';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ListEditing, _ListItemUid as ListItemUid } from '@ssmckinney/ckeditor5-list';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { BoldEditing, CodeEditing, StrikethroughEditing, ItalicEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Delete } from '@ssmckinney/ckeditor5-typing';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
 
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 
-import { _setModelData, _getModelData, ViewDocumentDomEventData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _getModelData, ViewDocumentDomEventData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'Autoformat undo integration', () => {
 	let editor, model, doc;

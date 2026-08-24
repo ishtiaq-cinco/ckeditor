@@ -7,13 +7,13 @@
  * @module typing/deletecommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
-import { count } from '@ckeditor/ckeditor5-utils';
-import type { ModelDocumentSelection, ModelElement, ModelSelection, ModelWriter } from '@ckeditor/ckeditor5-engine';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
+import { count } from '@ssmckinney/ckeditor5-utils';
+import type { ModelDocumentSelection, ModelElement, ModelSelection, ModelWriter } from '@ssmckinney/ckeditor5-engine';
 
 import { TypingChangeBuffer } from './utils/changebuffer.js';
 
-// @if CK_DEBUG_TYPING // import { _buildLogMessage } from '@ckeditor/ckeditor5-engine/src/dev-utils/utils.js';
+// @if CK_DEBUG_TYPING // import { _buildLogMessage } from '@ssmckinney/ckeditor5-engine/src/dev-utils/utils.js';
 
 /**
  * The delete command. Used by the {@link module:typing/delete~Delete delete feature} to handle the <kbd>Delete</kbd> and
@@ -109,7 +109,7 @@ export class DeleteCommand extends Command {
 			}
 
 			// Check if deleting in the first empty block.
-			// See https://github.com/ckeditor/ckeditor5/issues/8137.
+			// See https://github.com/ssmckinney/ckeditor5/issues/8137.
 			if ( this._shouldReplaceFirstBlockWithParagraph( selection, sequence ) ) {
 				this.editor.execute( 'paragraph', { selection } );
 

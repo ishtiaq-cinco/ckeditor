@@ -7,7 +7,7 @@
  * @module ckbox/ckboxediting
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import {
 	ModelRange,
 	type ModelDocumentSelection,
@@ -19,9 +19,9 @@ import {
 	type UpcastElementEvent,
 	type ViewElement,
 	type ModelWriter
-} from '@ckeditor/ckeditor5-engine';
-import { logError, type DecoratedMethodEvent } from '@ckeditor/ckeditor5-utils';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
+} from '@ssmckinney/ckeditor5-engine';
+import { logError, type DecoratedMethodEvent } from '@ssmckinney/ckeditor5-utils';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
 
 import type { CKBoxAssetDefinition } from './ckboxconfig.js';
 
@@ -29,7 +29,7 @@ import { CKBoxCommand } from './ckboxcommand.js';
 import { CKBoxUploadAdapter } from './ckboxuploadadapter.js';
 import { CKBoxUtils } from './ckboxutils.js';
 
-import { PictureEditing, type ReplaceImageSourceCommand } from '@ckeditor/ckeditor5-image';
+import { PictureEditing, type ReplaceImageSourceCommand } from '@ssmckinney/ckeditor5-image';
 import { sendHttpRequest } from './utils.js';
 
 const COMMAND_FORCE_DISABLE_ID = 'NoPermission';

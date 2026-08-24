@@ -7,8 +7,8 @@
  * @module media-embed/mediaembedresize/mediaembedresizeediting
  */
 
-import type { ViewElement } from '@ckeditor/ckeditor5-engine';
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import type { ViewElement } from '@ssmckinney/ckeditor5-engine';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { MediaEmbedEditing } from '../mediaembedediting.js';
 import { ResizeMediaEmbedCommand } from './resizemediaembedcommand.js';
 import { RESIZED_MEDIA_CLASS } from './constants.js';

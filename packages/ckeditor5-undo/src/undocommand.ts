@@ -8,7 +8,7 @@
  */
 
 import { UndoRedoBaseCommand, type UndoRedoBaseCommandRevertEvent } from './basecommand.js';
-import type { Batch } from '@ckeditor/ckeditor5-engine';
+import type { Batch } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * The undo command stores {@link module:engine/model/batch~Batch batches} applied to the

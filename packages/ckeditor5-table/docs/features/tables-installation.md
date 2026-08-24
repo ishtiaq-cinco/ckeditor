@@ -13,7 +13,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, Table, TableToolbar } from 'ckeditor5';
+import { ClassicEditor, Table, TableToolbar } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -61,7 +61,7 @@ ClassicEditor
 	.catch( /* ... */ );
 ```
 
-Check the table with default headers applied to both the first row and the first column in the demo below. Click on the table and use the column properties {@icon @ckeditor/ckeditor5-icons/theme/icons/table-column.svg Table column} or the row properties {@icon @ckeditor/ckeditor5-icons/theme/icons/table-row.svg Table row} UI button to toggle the respective headers.
+Check the table with default headers applied to both the first row and the first column in the demo below. Click on the table and use the column properties {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-column.svg Table column} or the row properties {@icon @ssmckinney/ckeditor5-icons/theme/icons/table-row.svg Table row} UI button to toggle the respective headers.
 
 {@snippet features/table-default-headings}
 

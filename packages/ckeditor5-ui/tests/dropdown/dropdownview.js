@@ -5,7 +5,7 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { DropdownView } from '../../src/dropdown/dropdownview.js';
-import { KeystrokeHandler, keyCodes, global, FocusTracker } from '@ckeditor/ckeditor5-utils';
+import { KeystrokeHandler, keyCodes, global, FocusTracker } from '@ssmckinney/ckeditor5-utils';
 import { ButtonView } from '../../src/button/buttonview.js';
 import { DropdownPanelView } from '../../src/dropdown/dropdownpanelview.js';
 

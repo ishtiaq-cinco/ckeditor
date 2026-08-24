@@ -1,22 +1,22 @@
 {
-  "name": "@ckeditor/ckeditor5-markdown-gfm",
+  "name": "@ssmckinney/ckeditor5-markdown-gfm",
   "version": "48.3.0",
   "description": "GitHub Flavored Markdown data processor for CKEditor 5.",
   "license": "SEE LICENSE IN LICENSE.md",
   "author": "CKSource (http://cksource.com/)",
   "homepage": "https://ckeditor.com/ckeditor-5",
-  "bugs": "https://github.com/ckeditor/ckeditor5/issues",
+  "bugs": "https://github.com/ssmckinney/ckeditor5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5.git",
+    "url": "https://github.com/ssmckinney/ckeditor5.git",
     "directory": "packages/ckeditor5-markdown-gfm"
   },
   "keywords": [
     "ckeditor",
     "ckeditor5",
     "ckeditor 5",
-    "ckeditor5-feature",
-    "ckeditor5-plugin"
+    "@ssmckinney/ckeditor5-feature",
+    "@ssmckinney/ckeditor5-plugin"
   ],
   "type": "module",
   "main": "./src/index.ts",
@@ -39,9 +39,6 @@
     "dist/translations/*.umd.js"
   ],
   "dependencies": {
-    "@ckeditor/ckeditor5-clipboard": "workspace:*",
-    "@ckeditor/ckeditor5-core": "workspace:*",
-    "@ckeditor/ckeditor5-engine": "workspace:*",
     "@types/hast": "3.0.4",
     "hast-util-from-dom": "5.0.1",
     "hast-util-to-html": "9.0.5",
@@ -56,30 +53,33 @@
     "remark-rehype": "11.1.2",
     "remark-stringify": "11.0.0",
     "unified": "11.0.5",
-    "unist-util-visit": "5.0.0"
+    "unist-util-visit": "5.0.0",
+    "@ssmckinney/ckeditor5-clipboard": "workspace:*",
+    "@ssmckinney/ckeditor5-engine": "workspace:*",
+    "@ssmckinney/ckeditor5-core": "workspace:*"
   },
   "devDependencies": {
-    "@ckeditor/ckeditor5-autoformat": "workspace:*",
-    "@ckeditor/ckeditor5-basic-styles": "workspace:*",
-    "@ckeditor/ckeditor5-block-quote": "workspace:*",
-    "@ckeditor/ckeditor5-code-block": "workspace:*",
-    "@ckeditor/ckeditor5-editor-classic": "workspace:*",
-    "@ckeditor/ckeditor5-essentials": "workspace:*",
-    "@ckeditor/ckeditor5-font": "workspace:*",
-    "@ckeditor/ckeditor5-heading": "workspace:*",
-    "@ckeditor/ckeditor5-horizontal-line": "workspace:*",
-    "@ckeditor/ckeditor5-image": "workspace:*",
-    "@ckeditor/ckeditor5-indent": "workspace:*",
-    "@ckeditor/ckeditor5-link": "workspace:*",
-    "@ckeditor/ckeditor5-list": "workspace:*",
-    "@ckeditor/ckeditor5-media-embed": "workspace:*",
-    "@ckeditor/ckeditor5-paragraph": "workspace:*",
-    "@ckeditor/ckeditor5-table": "workspace:*",
-    "@ckeditor/ckeditor5-undo": "workspace:*",
-    "@ckeditor/ckeditor5-utils": "workspace:*",
     "@vitest/browser-playwright": "^4.1.8",
     "@vitest/coverage-v8": "^4.1.8",
-    "vitest": "^4.1.8"
+    "vitest": "^4.1.8",
+    "@ssmckinney/ckeditor5-horizontal-line": "workspace:*",
+    "@ssmckinney/ckeditor5-editor-classic": "workspace:*",
+    "@ssmckinney/ckeditor5-basic-styles": "workspace:*",
+    "@ssmckinney/ckeditor5-block-quote": "workspace:*",
+    "@ssmckinney/ckeditor5-media-embed": "workspace:*",
+    "@ssmckinney/ckeditor5-autoformat": "workspace:*",
+    "@ssmckinney/ckeditor5-code-block": "workspace:*",
+    "@ssmckinney/ckeditor5-essentials": "workspace:*",
+    "@ssmckinney/ckeditor5-paragraph": "workspace:*",
+    "@ssmckinney/ckeditor5-heading": "workspace:*",
+    "@ssmckinney/ckeditor5-indent": "workspace:*",
+    "@ssmckinney/ckeditor5-image": "workspace:*",
+    "@ssmckinney/ckeditor5-table": "workspace:*",
+    "@ssmckinney/ckeditor5-utils": "workspace:*",
+    "@ssmckinney/ckeditor5-font": "workspace:*",
+    "@ssmckinney/ckeditor5-link": "workspace:*",
+    "@ssmckinney/ckeditor5-list": "workspace:*",
+    "@ssmckinney/ckeditor5-undo": "workspace:*"
   },
   "scripts": {
     "build": "node ../../scripts/nim/build-package.mjs",
@@ -90,7 +90,7 @@
   },
   "files": [
     "dist",
-    "ckeditor5-metadata.json",
+    "@ssmckinney/ckeditor5-metadata.json",
     "CHANGELOG.md"
   ],
   "depcheckIgnore": [

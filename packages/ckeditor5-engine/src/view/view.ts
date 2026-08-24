@@ -46,7 +46,7 @@ import {
 	type ObservableChangeEvent,
 	type IfTrue,
 	type ObservableMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 import { injectUiElementHandling } from './uielement.js';
 import { injectQuirksHandling } from './filler.js';
 
@@ -224,7 +224,7 @@ export class EditingView extends EditingViewBase {
 		} );
 
 		// Remove ranges from DOM selection if editor is blurred.
-		// See https://github.com/ckeditor/ckeditor5/issues/5753.
+		// See https://github.com/ssmckinney/ckeditor5/issues/5753.
 		if ( env.isiOS ) {
 			this.listenTo<ViewDocumentBlurEvent>( this.document, 'blur', ( evt, data ) => {
 				const relatedViewElement = this.domConverter.mapDomToView( data.domEvent.relatedTarget as HTMLElement );

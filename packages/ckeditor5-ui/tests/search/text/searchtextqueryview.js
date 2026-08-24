@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Locale } from '@ckeditor/ckeditor5-utils';
-import { ButtonView, createLabeledInputText, IconView } from '@ckeditor/ckeditor5-ui';
+import { Locale } from '@ssmckinney/ckeditor5-utils';
+import { ButtonView, createLabeledInputText, IconView } from '@ssmckinney/ckeditor5-ui';
 import { SearchTextQueryView } from '../../../src/search/text/searchtextqueryview.js';
-import { IconCancel, IconLoupe } from '@ckeditor/ckeditor5-icons';
+import { IconCancel, IconLoupe } from '@ssmckinney/ckeditor5-icons';
 
 describe( 'SearchTextQueryView', () => {
 	let locale, view;

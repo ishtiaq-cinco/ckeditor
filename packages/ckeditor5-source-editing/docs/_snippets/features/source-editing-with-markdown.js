@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { Markdown } from 'ckeditor5';
+import { Markdown } from '@ssmckinney/ckeditor5';
 import {
 	TOKEN_URL,
 	getViewportTopOffsetConfig,

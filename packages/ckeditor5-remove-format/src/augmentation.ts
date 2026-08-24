@@ -11,7 +11,7 @@ import type {
 	RemoveFormatCommand
 } from './index.js';
 
-declare module '@ckeditor/ckeditor5-core' {
+declare module '@ssmckinney/ckeditor5-core' {
 	interface PluginsMap {
 		[ RemoveFormat.pluginName ]: RemoveFormat;
 		[ RemoveFormatUI.pluginName ]: RemoveFormatUI;

@@ -5,16 +5,16 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ImageBlockEditing, ImageUploadEditing } from '@ckeditor/ckeditor5-image';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
-import { Notification } from '@ckeditor/ckeditor5-ui';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ImageBlockEditing, ImageUploadEditing } from '@ssmckinney/ckeditor5-image';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
+import { Notification } from '@ssmckinney/ckeditor5-ui';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
 
 import { CKFinderCommand } from '../src/ckfindercommand.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'CKFinderCommand', () => {
 	let editor, command, model;

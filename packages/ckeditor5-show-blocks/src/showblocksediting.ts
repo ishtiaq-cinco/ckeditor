@@ -7,7 +7,7 @@
  * @module show-blocks/showblocksediting
  */
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 import { ShowBlocksCommand } from './showblockscommand.js';
 
 /**

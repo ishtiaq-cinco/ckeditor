@@ -3,18 +3,18 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
-import { Code } from '@ckeditor/ckeditor5-basic-styles';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { Indent, IndentBlock } from '@ssmckinney/ckeditor5-indent';
+import { Code } from '@ssmckinney/ckeditor5-basic-styles';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
 import { ImageResize } from '../../src/imageresize.js';
 import { ImageSizeAttributes } from '../../src/imagesizeattributes.js';
 import { ImageUpload } from '../../src/imageupload.js';
-import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+import { PasteFromOffice } from '@ssmckinney/ckeditor5-paste-from-office';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
 
-import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
+import { CS_CONFIG } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
 
 const commonConfig = {
 	attachTo: document.querySelector( '#editor-ghs-with-width-height-attributes' ),

@@ -10,7 +10,7 @@ Tests should be organized within their respective packages following this struct
 
 ```
 packages/
-├── ckeditor5-package-name/
+├── @ssmckinney/ckeditor5-package-name/
 │   ├── src/
 │   │   └── [source files]
 │   └── tests/

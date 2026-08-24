@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { global } from '@ckeditor/ckeditor5-utils';
+import { global } from '@ssmckinney/ckeditor5-utils';
 import { TextareaView } from '../../src/textarea/textareaview.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'TextareaView', () => {
 	let wrapper, view;

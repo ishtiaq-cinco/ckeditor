@@ -5,8 +5,8 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { ColorInputView } from '../../src/ui/colorinputview.js';
-import { InputTextView, ColorGridView, DropdownView, ButtonView, FocusCycler, ViewCollection } from '@ckeditor/ckeditor5-ui';
-import { FocusTracker, KeystrokeHandler, keyCodes, global } from '@ckeditor/ckeditor5-utils';
+import { InputTextView, ColorGridView, DropdownView, ButtonView, FocusCycler, ViewCollection } from '@ssmckinney/ckeditor5-ui';
+import { FocusTracker, KeystrokeHandler, keyCodes, global } from '@ssmckinney/ckeditor5-utils';
 
 const DEFAULT_COLORS = [
 	{

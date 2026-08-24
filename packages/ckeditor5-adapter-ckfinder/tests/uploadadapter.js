@@ -5,13 +5,13 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { Image, ImageUpload } from '@ckeditor/ckeditor5-image';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { Image, ImageUpload } from '@ssmckinney/ckeditor5-image';
 import { CKFinderUploadAdapter } from '../src/uploadadapter.js';
-import { FileRepository } from '@ckeditor/ckeditor5-upload';
-import { createNativeFileMock } from '@ckeditor/ckeditor5-upload/tests/_utils/mocks.js';
+import { FileRepository } from '@ssmckinney/ckeditor5-upload';
+import { createNativeFileMock } from '@ssmckinney/ckeditor5-upload/tests/_utils/mocks.js';
 
 describe( 'CKFinderUploadAdapter', () => {
 	let editor, fakeXHR, fileRepository, editorElement;

@@ -7,7 +7,7 @@
  * @module clipboard/dragdrop
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import {
 	ModelLiveRange,
@@ -21,13 +21,13 @@ import {
 	type ViewDocumentDomEventData,
 	type ViewDocumentPointerDownEvent,
 	type ViewDocumentPointerUpEvent
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import {
 	Widget,
 	isWidget,
 	type WidgetToolbarRepository
-} from '@ckeditor/ckeditor5-widget';
+} from '@ssmckinney/ckeditor5-widget';
 
 import {
 	env,
@@ -40,7 +40,7 @@ import {
 	type DelayedFunc,
 	type ObservableChangeEvent,
 	type DomEmitter
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import {
 	ClipboardPipeline,
@@ -297,7 +297,7 @@ export class DragDrop extends Plugin {
 			const canEditAtDraggedRange = this.isEnabled && editor.model.canEditAt( this._draggedRange );
 
 			data.dataTransfer.effectAllowed = canEditAtDraggedRange ? 'copyMove' : 'copy';
-			data.dataTransfer.setData( 'application/ckeditor5-dragging-uid', this._draggingUid );
+			data.dataTransfer.setData( 'application/@ssmckinney/ckeditor5-dragging-uid', this._draggingUid );
 
 			const draggedSelection = model.createSelection( this._draggedRange.toRange() );
 			const clipboardPipeline: ClipboardPipeline = this.editor.plugins.get( 'ClipboardPipeline' );
@@ -425,7 +425,7 @@ export class DragDrop extends Plugin {
 
 			// Since we cannot rely on the drag end event, we must check if the local drag range is from the current drag and drop
 			// or it is from some previous not cleared one.
-			if ( this._draggedRange && this._draggingUid != data.dataTransfer.getData( 'application/ckeditor5-dragging-uid' ) ) {
+			if ( this._draggedRange && this._draggingUid != data.dataTransfer.getData( 'application/@ssmckinney/ckeditor5-dragging-uid' ) ) {
 				this._draggedRange.detach();
 				this._draggedRange = null;
 				this._draggingUid = '';
@@ -758,7 +758,7 @@ function findDraggableWidget( target: ViewElement ): ViewElement | null {
 		return null;
 	}
 
-	// TODO: Let's have a isWidgetSelectionHandleDomElement() helper in ckeditor5-widget utils.
+	// TODO: Let's have a isWidgetSelectionHandleDomElement() helper in @ssmckinney/ckeditor5-widget utils.
 	if ( target.hasClass( 'ck-widget__selection-handle' ) ) {
 		return target.findAncestor( isWidget );
 	}

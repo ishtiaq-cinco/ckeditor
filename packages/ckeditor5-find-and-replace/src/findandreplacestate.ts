@@ -7,14 +7,14 @@
  * @module find-and-replace/findandreplacestate
  */
 
-import type { Model, ModelItem } from '@ckeditor/ckeditor5-engine';
+import type { Model, ModelItem } from '@ssmckinney/ckeditor5-engine';
 import {
 	ObservableMixin,
 	Collection,
 	type CollectionChangeEvent,
 	type ObservableChangeEvent,
 	type ObservableMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 import type { FindResultType } from './findandreplace.js';
 
 const FindAndReplaceStateBase: ObservableMixinConstructor = /* #__PURE__ */ ObservableMixin();

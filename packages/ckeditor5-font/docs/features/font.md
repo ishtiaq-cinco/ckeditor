@@ -9,7 +9,7 @@ The font feature lets you change font family, size, and color (including backgro
 
 ## Demo
 
-Use the toolbar dropdowns in the demo below to control the font size {@icon @ckeditor/ckeditor5-icons/theme/icons/font-size.svg Font size} and font family {@icon @ckeditor/ckeditor5-icons/theme/icons/font-family.svg Font family}. You can also change both the font color {@icon @ckeditor/ckeditor5-icons/theme/icons/font-color.svg Font color} and the font background color {@icon @ckeditor/ckeditor5-icons/theme/icons/font-background.svg Font background color} with predefined palette or color picker {@icon @ckeditor/ckeditor5-icons/theme/icons/color-palette.svg Color picker}.
+Use the toolbar dropdowns in the demo below to control the font size {@icon @ssmckinney/ckeditor5-icons/theme/icons/font-size.svg Font size} and font family {@icon @ssmckinney/ckeditor5-icons/theme/icons/font-family.svg Font family}. You can also change both the font color {@icon @ssmckinney/ckeditor5-icons/theme/icons/font-color.svg Font color} and the font background color {@icon @ssmckinney/ckeditor5-icons/theme/icons/font-background.svg Font background color} with predefined palette or color picker {@icon @ssmckinney/ckeditor5-icons/theme/icons/color-palette.svg Color picker}.
 
 {@snippet features/font}
 
@@ -38,7 +38,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, Font } from 'ckeditor5';
+import { ClassicEditor, Font } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -62,7 +62,7 @@ You can also add just one or a selected few of the font features to your plugin 
 
 <code-switcher>
 ```js
-import { ClassicEditor, FontFamily } from 'ckeditor5';
+import { ClassicEditor, FontFamily } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {

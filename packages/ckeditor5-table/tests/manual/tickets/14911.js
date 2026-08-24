@@ -3,17 +3,17 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
-import { Autosave } from '@ckeditor/ckeditor5-autosave';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { SourceEditing } from '@ssmckinney/ckeditor5-source-editing';
+import { Autosave } from '@ssmckinney/ckeditor5-autosave';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
 import {
 	TableProperties,
 	TableColumnResize,
 	TableCaption,
 	TableCellProperties
-} from '@ckeditor/ckeditor5-table';
+} from '@ssmckinney/ckeditor5-table';
 
 const table1 = `<table>
     <thead>

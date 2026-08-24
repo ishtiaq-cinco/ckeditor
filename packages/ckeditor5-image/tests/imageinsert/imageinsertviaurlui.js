@@ -4,12 +4,17 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { UIModel, SplitButtonView, ButtonView, MenuBarMenuListItemButtonView } from '@ckeditor/ckeditor5-ui';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { UIModel, SplitButtonView, ButtonView, MenuBarMenuListItemButtonView } from '@ssmckinney/ckeditor5-ui';
 
-import { IconImageUrl } from '@ckeditor/ckeditor5-icons';
+import { IconImageUrl } from '@ssmckinney/ckeditor5-icons';
+
+import { IconImageResponsive } from '../../src/imageinsert/utils.js';
+
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 import { Image } from '../../src/image.js';
+import { PictureEditing } from '../../src/pictureediting.js';
 import { ImageInsertViaUrlUI } from '../../src/imageinsert/imageinsertviaurlui.js';
 import { ImageInsertViaUrl } from '../../src/index.js';
 
@@ -42,7 +47,7 @@ describe( 'ImageInsertViaUrlUI', () => {
 		expect( ImageInsertViaUrlUI.isPremiumPlugin ).toBe( false );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/15869
+	// https://github.com/ssmckinney/ckeditor5/issues/15869
 	it( 'should work if ImageInsertViaUrl plugin is specified before Image', async () => {
 		await createEditor( {
 			plugins: [ ImageInsertViaUrl, Image ]
@@ -398,6 +403,280 @@ describe( 'ImageInsertViaUrlUI', () => {
 
 				testButton( MenuBarMenuListItemButtonView, 'Via URL' );
 			} );
+		} );
+	} );
+
+	describe( 'responsive breakpoints', () => {
+		let dialog, urlView, acceptButton;
+
+		const BREAKPOINTS = [
+			{ label: 'Mobile', media: '(max-width: 767px)' },
+			{ label: 'Tablet', media: '(min-width: 768px) and (max-width: 1199px)' }
+		];
+
+		function openDialog() {
+			button.fire( 'execute' );
+			urlView = dialog.view.contentView.children.get( 0 );
+			acceptButton = dialog.view.actionsView.children.get( 1 );
+		}
+
+		async function createResponsiveEditor( responsive = BREAKPOINTS ) {
+			await createEditor( {
+				plugins: [ Image, ImageInsertViaUrl, PictureEditing, Paragraph ],
+				image: {
+					insert: { responsive }
+				}
+			} );
+
+			button = editor.ui.componentFactory.create( 'insertImageViaUrl' );
+			dialog = editor.plugins.get( 'Dialog' );
+		}
+
+		function fillBreakpoint( index, value ) {
+			urlView.breakpointInputViews[ index ].fieldView.element.value = value;
+		}
+
+		it( 'should not add any fields when the feature is off', async () => {
+			await createEditor( { plugins: [ Image, ImageInsertViaUrl, PictureEditing, Paragraph ] } );
+
+			button = editor.ui.componentFactory.create( 'insertImageViaUrl' );
+			dialog = editor.plugins.get( 'Dialog' );
+
+			openDialog();
+
+			expect( urlView.breakpoints ).toEqual( [] );
+			expect( urlView.breakpointInputViews ).toEqual( [] );
+		} );
+
+		it( 'should add one field per configured breakpoint', async () => {
+			await createResponsiveEditor();
+			openDialog();
+
+			expect( urlView.breakpointInputViews ).toHaveLength( 2 );
+			expect( urlView.breakpointInputViews[ 0 ].label ).toBe( 'Mobile' );
+			expect( urlView.breakpointInputViews[ 1 ].label ).toBe( 'Tablet' );
+			expect( urlView.breakpointInputViews[ 0 ].infoText ).toBe( '(max-width: 767px)' );
+		} );
+
+		it( 'should insert a picture from the filled fields', async () => {
+			await createResponsiveEditor();
+			openDialog();
+
+			urlView.imageURLInputValue = 'large.png';
+			fillBreakpoint( 0, 'small.png' );
+			fillBreakpoint( 1, 'medium.png' );
+
+			const stubExecute = vi.spyOn( editor, 'execute' ).mockImplementation( () => {} );
+
+			acceptButton.fire( 'execute' );
+
+			expect( stubExecute.mock.calls[ 0 ][ 0 ] ).toBe( 'insertImage' );
+			expect( stubExecute.mock.calls[ 0 ][ 1 ] ).toEqual( {
+				source: {
+					src: 'large.png',
+					sources: [
+						{ srcset: 'small.png', media: '(max-width: 767px)' },
+						{ srcset: 'medium.png', media: '(min-width: 768px) and (max-width: 1199px)' }
+					]
+				}
+			} );
+		} );
+
+		it( 'should skip a breakpoint left blank rather than emit an empty source', async () => {
+			await createResponsiveEditor();
+			openDialog();
+
+			urlView.imageURLInputValue = 'large.png';
+			fillBreakpoint( 0, 'small.png' );
+
+			const stubExecute = vi.spyOn( editor, 'execute' ).mockImplementation( () => {} );
+
+			acceptButton.fire( 'execute' );
+
+			expect( stubExecute.mock.calls[ 0 ][ 1 ].source.sources ).toEqual( [
+				{ srcset: 'small.png', media: '(max-width: 767px)' }
+			] );
+		} );
+
+		it( 'should fall back to the plain call shape when no breakpoint is filled', async () => {
+			await createResponsiveEditor();
+			openDialog();
+
+			urlView.imageURLInputValue = 'large.png';
+
+			const stubExecute = vi.spyOn( editor, 'execute' ).mockImplementation( () => {} );
+
+			acceptButton.fire( 'execute' );
+
+			expect( stubExecute.mock.calls[ 0 ][ 1 ] ).toEqual( { source: 'large.png' } );
+		} );
+
+		it( 'should round trip a picture through the document', async () => {
+			await createResponsiveEditor();
+
+			editor.setData(
+				'<figure class="image"><picture>' +
+					'<source media="(max-width: 767px)" srcset="small.png">' +
+					'<img src="large.png">' +
+				'</picture></figure>'
+			);
+
+			expect( editor.getData() ).toBe(
+				'<figure class="image"><picture>' +
+					'<source srcset="small.png" media="(max-width: 767px)">' +
+					'<img src="large.png">' +
+				'</picture></figure>'
+			);
+		} );
+
+		describe( 'editing an existing image', () => {
+			beforeEach( async () => {
+				await createResponsiveEditor();
+
+				editor.setData(
+					'<figure class="image"><picture>' +
+						'<source media="(max-width: 767px)" srcset="small.png">' +
+						'<source media="(min-width: 768px) and (max-width: 1199px)" srcset="medium.png">' +
+						'<img src="large.png">' +
+					'</picture></figure>'
+				);
+
+				editor.model.change( writer => {
+					writer.setSelection( editor.model.document.getRoot().getChild( 0 ), 'on' );
+				} );
+			} );
+
+			it( 'should prefill every field from the selected image', () => {
+				openDialog();
+
+				expect( urlView.imageURLInputValue ).toBe( 'large.png' );
+				expect( urlView.breakpointInputViews[ 0 ].fieldView.value ).toBe( 'small.png' );
+				expect( urlView.breakpointInputViews[ 1 ].fieldView.value ).toBe( 'medium.png' );
+			} );
+
+			it( 'should keep the sources when only the main URL changes', () => {
+				openDialog();
+
+				urlView.imageURLInputValue = 'huge.png';
+
+				acceptButton.fire( 'execute' );
+
+				expect( editor.getData() ).toBe(
+					'<figure class="image"><picture>' +
+						'<source srcset="small.png" media="(max-width: 767px)">' +
+						'<source srcset="medium.png" media="(min-width: 768px) and (max-width: 1199px)">' +
+						'<img src="huge.png">' +
+					'</picture></figure>'
+				);
+			} );
+
+			it( 'should flatten back to a plain image when every breakpoint is cleared', () => {
+				openDialog();
+
+				fillBreakpoint( 0, '' );
+				fillBreakpoint( 1, '' );
+
+				acceptButton.fire( 'execute' );
+
+				expect( editor.getData() ).toBe( '<figure class="image"><img src="large.png"></figure>' );
+			} );
+
+			it( 'should keep sources it has no field for', () => {
+				// A format-switching source of the kind an upload adapter adds. The form neither shows nor
+				// manages it, so saving must not be what deletes it.
+				editor.model.change( writer => {
+					writer.setAttribute( 'sources', [
+						{ srcset: 'small.png', media: '(max-width: 767px)' },
+						{ srcset: 'large.webp', type: 'image/webp' }
+					], editor.model.document.getRoot().getChild( 0 ) );
+				} );
+
+				openDialog();
+
+				expect( urlView.breakpointInputViews[ 0 ].fieldView.value ).toBe( 'small.png' );
+
+				fillBreakpoint( 0, 'tiny.png' );
+				acceptButton.fire( 'execute' );
+
+				expect( editor.getData() ).toBe(
+					'<figure class="image"><picture>' +
+						'<source srcset="tiny.png" media="(max-width: 767px)">' +
+						'<source srcset="large.webp" type="image/webp">' +
+						'<img src="large.png">' +
+					'</picture></figure>'
+				);
+			} );
+
+			it( 'should reset the fields when the dialog is reopened with no image selected', () => {
+				editor.setData(
+					'<figure class="image"><picture>' +
+						'<source media="(max-width: 767px)" srcset="small.png">' +
+						'<img src="large.png">' +
+					'</picture></figure>' +
+					'<p>after</p>'
+				);
+
+				const root = editor.model.document.getRoot();
+
+				editor.model.change( writer => writer.setSelection( root.getChild( 0 ), 'on' ) );
+
+				openDialog();
+				expect( urlView.breakpointInputViews[ 0 ].fieldView.value ).toBe( 'small.png' );
+
+				dialog.hide();
+
+				editor.model.change( writer => writer.setSelection( root.getChild( 1 ), 0 ) );
+
+				openDialog();
+				expect( urlView.breakpointInputViews[ 0 ].fieldView.value ).toBe( '' );
+				expect( urlView.breakpointInputViews[ 0 ].fieldView.element.value ).toBe( '' );
+			} );
+		} );
+
+		it( 'should mark the buttons with the responsive icon', async () => {
+			await createResponsiveEditor();
+
+			for ( const name of [ 'insertImageViaUrl', 'menuBar:insertImageViaUrl' ] ) {
+				expect( editor.ui.componentFactory.create( name ).icon, name ).toBe( IconImageResponsive );
+			}
+		} );
+
+		it( 'should keep the stock icon when the feature is off', async () => {
+			await createEditor( { plugins: [ Image, ImageInsertViaUrl, PictureEditing, Paragraph ] } );
+
+			for ( const name of [ 'insertImageViaUrl', 'menuBar:insertImageViaUrl' ] ) {
+				expect( editor.ui.componentFactory.create( name ).icon, name ).toBe( IconImageUrl );
+			}
+		} );
+
+		it( 'should be a renderable SVG', () => {
+			// `IconView` throws `ui-iconview-invalid-svg` on anything it cannot parse, so this is what stands
+			// between a typo in the markup and every insert-image button disappearing.
+			const parsed = new DOMParser().parseFromString( IconImageResponsive, 'image/svg+xml' );
+
+			expect( parsed.querySelector( 'parsererror' ) ).toBeNull();
+			expect( parsed.querySelector( 'svg' ) ).not.toBeNull();
+			expect( parsed.querySelector( 'svg' ).getAttribute( 'viewBox' ) ).toBe( '0 0 20 20' );
+			expect( parsed.querySelector( 'text' ).textContent ).toBe( '\u{1F3A8}' );
+		} );
+
+		it( 'should warn when configured without PictureEditing', async () => {
+			const warnSpy = vi.spyOn( console, 'warn' ).mockImplementation( () => {} );
+
+			await createEditor( {
+				plugins: [ Image, ImageInsertViaUrl, Paragraph ],
+				image: { insert: { responsive: true } }
+			} );
+
+			expect( warnSpy.mock.calls.join( ' ' ) ).toContain( 'image-insert-responsive-requires-picture-editing' );
+		} );
+
+		it( 'should not warn when the feature is off', async () => {
+			const warnSpy = vi.spyOn( console, 'warn' ).mockImplementation( () => {} );
+
+			await createEditor( { plugins: [ Image, ImageInsertViaUrl, Paragraph ] } );
+
+			expect( warnSpy.mock.calls.join( ' ' ) ).not.toContain( 'image-insert-responsive-requires-picture-editing' );
 		} );
 	} );
 

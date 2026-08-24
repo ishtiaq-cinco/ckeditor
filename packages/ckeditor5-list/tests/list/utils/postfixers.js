@@ -16,7 +16,7 @@ import {
 import { stubUid } from '../_utils/uid.js';
 import { modelList } from '../_utils/utils.js';
 
-import { Model, _stringifyModel, _parseModel } from '@ckeditor/ckeditor5-engine';
+import { Model, _stringifyModel, _parseModel } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'List - utils - postfixers', () => {
 	let model, schema;

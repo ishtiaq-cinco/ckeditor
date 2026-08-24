@@ -14,7 +14,7 @@ You can insert images by uploading them directly from your disk, but you can als
 
 ### Demo
 
-To upload an image, use the image toolbar button {@icon @ckeditor/ckeditor5-icons/theme/icons/image-upload.svg Image}. If you want to add an image through a URL, click the arrow next to the image button and paste the URL in the dropdown panel. To update an existing image, select it and paste a new URL in the dropdown panel.
+To upload an image, use the image toolbar button {@icon @ssmckinney/ckeditor5-icons/theme/icons/image-upload.svg Image}. If you want to add an image through a URL, click the arrow next to the image button and paste the URL in the dropdown panel. To update an existing image, select it and paste a new URL in the dropdown panel.
 
 {@snippet features/image-insert-via-url}
 
@@ -28,7 +28,7 @@ Using the URL of an image, the user may paste it into the editor. To enable this
 
 <code-switcher>
 ```js
-import { ClassicEditor, Image, ImageInsert } from 'ckeditor5';
+import { ClassicEditor, Image, ImageInsert } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -41,7 +41,7 @@ ClassicEditor
 ```
 </code-switcher>
 
-This will add a new **Insert image** dropdown {@icon @ckeditor/ckeditor5-icons/theme/icons/image.svg Insert image} in the toolbar.
+This will add a new **Insert image** dropdown {@icon @ssmckinney/ckeditor5-icons/theme/icons/image.svg Insert image} in the toolbar.
 
 ## Inserting images via pasting a URL into the editor
 
@@ -49,7 +49,7 @@ This will add a new **Insert image** dropdown {@icon @ckeditor/ckeditor5-icons/t
 
 You can paste an image URL directly into the editor content, and it will be automatically embedded.
 
-<ck:input class="example-input" type="text" value="https://ckeditor.com/docs/ckeditor5/latest/assets/img/malta.jpg" expanded readonly icon="link" />
+<ck:input class="example-input" type="text" value="https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/assets/img/malta.jpg" expanded readonly icon="link" />
 
 {@snippet features/image-insert-via-pasting-url-into-editor}
 

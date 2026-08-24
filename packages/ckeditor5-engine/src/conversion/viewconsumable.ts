@@ -7,7 +7,7 @@
  * @module engine/conversion/viewconsumable
  */
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 import type { ViewElement, ViewNormalizedConsumables } from '../view/element.js';
 import { type ViewNode } from '../view/node.js';

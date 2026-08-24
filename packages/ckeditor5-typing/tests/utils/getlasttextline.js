@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, beforeEach } from 'vitest';
-import { Model, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { Model, _setModelData } from '@ssmckinney/ckeditor5-engine';
 import { getLastTextLine } from '../../src/utils/getlasttextline.js';
 
 describe( 'utils', () => {

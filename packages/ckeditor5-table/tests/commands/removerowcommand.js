@@ -5,14 +5,14 @@
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _setModelData, _getModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _setModelData, _getModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
 
 import { RemoveRowCommand } from '../../src/commands/removerowcommand.js';
 import { TableSelection } from '../../src/tableselection.js';
 import { modelTable, viewTable } from '../_utils/utils.js';
 import { TableEditing } from '../../src/tableediting.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 describe( 'RemoveRowCommand', () => {
 	let editor, model, command;
@@ -86,7 +86,7 @@ describe( 'RemoveRowCommand', () => {
 		} );
 
 		it( 'should be false when the first column with rowspan is selected', () => {
-			// (https://github.com/ckeditor/ckeditor5/issues/6427)
+			// (https://github.com/ssmckinney/ckeditor5/issues/6427)
 			_setModelData( model, modelTable( [
 				[ { rowspan: 2, contents: '00' }, '01' ],
 				[ '11' ],

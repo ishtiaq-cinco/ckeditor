@@ -11,7 +11,7 @@ import { View } from '../view.js';
 import { type ViewCollection } from '../viewcollection.js';
 import { type DropdownPanelFocusable } from './dropdownpanelfocusable.js';
 
-import { logWarning, type Locale } from '@ckeditor/ckeditor5-utils';
+import { logWarning, type Locale } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * The dropdown panel view class.

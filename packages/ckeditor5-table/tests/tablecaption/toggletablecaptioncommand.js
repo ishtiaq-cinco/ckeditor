@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { TableSelection } from '../../src/tableselection.js';
 import { TableEditing } from '../../src/tableediting.js';
@@ -14,7 +14,7 @@ import { modelTable } from '../_utils/utils.js';
 
 import { ToggleTableCaptionCommand } from '../../src/tablecaption/toggletablecaptioncommand.js';
 import { TableCaptionEditing } from '../../src/tablecaption/tablecaptionediting.js';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
 
 describe( 'ToggleTableCaptionCommand', () => {
 	let editor, model, command;

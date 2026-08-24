@@ -7,7 +7,7 @@
  * @module list/listproperties/listpropertiesui
  */
 
-import { Plugin, type Editor } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor } from '@ssmckinney/ckeditor5-core';
 import {
 	IconBulletedList,
 	IconNumberedList,
@@ -15,25 +15,36 @@ import {
 	IconListStyleDecimal,
 	IconListStyleDecimalLeadingZero,
 	IconListStyleDisc,
+	IconListStyleCircleTick,
+	IconListStyleCircleCross,
 	IconListStyleLowerLatin,
 	IconListStyleLowerRoman,
 	IconListStyleSquare,
 	IconListStyleUpperLatin,
 	IconListStyleUpperRoman,
 	IconListStyleArabicIndic
-} from '@ckeditor/ckeditor5-icons';
+} from '@ssmckinney/ckeditor5-icons';
 import {
 	ButtonView,
 	SplitButtonView,
 	createDropdown,
 	focusChildOnDropdownOpen,
 	MenuBarMenuView,
+	normalizeColorOptions,
+	type ColorDefinition,
+	type ColorOption,
 	type DropdownView
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
-import { ListPropertiesView } from './ui/listpropertiesview.js';
+import {
+	ListPropertiesView,
+	type ListPropertiesViewColumnsEvent,
+	type ListPropertiesViewMarkerColorEvent
+} from './ui/listpropertiesview.js';
+import type { ListMarkerColorCommand } from './listmarkercolorcommand.js';
+import type { ListColumnsCommand } from './listcolumnscommand.js';
 
 import { type LegacyListStyleCommand } from '../legacylistproperties/legacyliststylecommand.js';
 import { type ListStyleCommand } from '../listproperties/liststylecommand.js';
@@ -98,6 +109,18 @@ export class ListPropertiesUI extends Plugin {
 					tooltip: t( 'Square' ),
 					type: 'square',
 					icon: IconListStyleSquare
+				},
+				{
+					label: t( 'Toggle the tick list style' ),
+					tooltip: t( 'Tick' ),
+					type: 'circle-tick',
+					icon: IconListStyleCircleTick
+				},
+				{
+					label: t( 'Toggle the cross list style' ),
+					tooltip: t( 'Cross' ),
+					type: 'circle-cross',
+					icon: IconListStyleCircleCross
 				}
 			];
 			const buttonLabel = t( 'Bulleted List' );
@@ -273,7 +296,7 @@ function getDropdownViewCreator( {
 
 		// Focus the editable after executing the command.
 		// Overrides a default behaviour where the focus is moved to the dropdown button.
-		// See https://github.com/ckeditor/ckeditor5/issues/12125.
+		// See https://github.com/ssmckinney/ckeditor5/issues/12125.
 		dropdownView.on( 'execute', () => {
 			editor.editing.view.focus();
 		} );
@@ -369,6 +392,10 @@ function createListPropertiesView( {
 	const enabledProperties = {
 		...normalizedConfig,
 
+		// The swatches are read here rather than during config normalization, because they may come from the
+		// font colour feature, which has only defined its own config by the time the UI is built.
+		markerColors: getMarkerColorDefinitions( editor ),
+
 		...( parentCommandName != 'numberedList' ? {
 			startIndex: false,
 			reversed: false
@@ -437,10 +464,65 @@ function createListPropertiesView( {
 		} );
 	}
 
+	if ( enabledProperties.markerColor ) {
+		const listMarkerColorCommand = editor.commands.get( 'listMarkerColor' ) as ListMarkerColorCommand;
+
+		listPropertiesView.markerColorGridView!.bind( 'selectedColor' ).to( listMarkerColorCommand, 'value' );
+		listPropertiesView.markerColorRowView!.bind( 'isEnabled' ).to( listMarkerColorCommand );
+
+		listPropertiesView.on<ListPropertiesViewMarkerColorEvent>( 'listMarkerColor', ( evt, data ) => {
+			editor.execute( 'listMarkerColor', { color: data.color } );
+		} );
+	}
+
+	if ( enabledProperties.columns ) {
+		const listColumnsCommand = editor.commands.get( 'listColumns' ) as ListColumnsCommand;
+
+		listPropertiesView.columnsRowView!.bind( 'isEnabled' ).to( listColumnsCommand );
+
+		for ( const button of listPropertiesView.columnsButtonViews! ) {
+			const columns = Number( button.label );
+
+			button.bind( 'isEnabled' ).to( listColumnsCommand );
+			button.bind( 'isOn' ).to( listColumnsCommand, 'value', value => value === columns );
+		}
+
+		listPropertiesView.on<ListPropertiesViewColumnsEvent>( 'listColumns', ( evt, data ) => {
+			editor.execute( 'listColumns', { columns: data.columns } );
+		} );
+	}
+
 	// Make sure applying styles closes the dropdown.
 	listPropertiesView.delegate( 'execute' ).to( dropdownView );
 
 	return listPropertiesView;
+}
+
+/**
+ * The swatches offered by the marker colour grid.
+ *
+ * They are taken from the font colour feature when it is loaded, so that an editor offers one palette rather than
+ * two that drift apart. A "remove colour" tile is prepended, since there has to be a way back to the default.
+ */
+function getMarkerColorDefinitions( editor: Editor ): Array<ColorDefinition> {
+	const t = editor.locale.t;
+	const configured = editor.config.get( 'fontColor.colors' ) as Array<ColorOption> | undefined;
+
+	const definitions: Array<ColorDefinition> = [ {
+		color: '',
+		label: t( 'Default marker color' ),
+		options: { hasBorder: true }
+	} ];
+
+	for ( const option of normalizeColorOptions( configured || [] ) ) {
+		definitions.push( {
+			color: option.model,
+			label: option.label,
+			options: { hasBorder: option.hasBorder }
+		} );
+	}
+
+	return definitions;
 }
 
 /**

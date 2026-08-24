@@ -4,12 +4,12 @@
  */
 
 import { InlineEditor } from '../../src/inlineeditor.js';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
 
 window.editors = {};
 

@@ -3,20 +3,20 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 
-import { Strikethrough, Underline } from '@ckeditor/ckeditor5-basic-styles';
-import { Table, TableToolbar, TableProperties, TableCellProperties, TableColumnResize } from '@ckeditor/ckeditor5-table';
-import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
-import { FontColor, FontBackgroundColor } from '@ckeditor/ckeditor5-font';
-import { PageBreak } from '@ckeditor/ckeditor5-page-break';
+import { Strikethrough, Underline } from '@ssmckinney/ckeditor5-basic-styles';
+import { Table, TableToolbar, TableProperties, TableCellProperties, TableColumnResize } from '@ssmckinney/ckeditor5-table';
+import { EasyImage } from '@ssmckinney/ckeditor5-easy-image';
+import { FontColor, FontBackgroundColor } from '@ssmckinney/ckeditor5-font';
+import { PageBreak } from '@ssmckinney/ckeditor5-page-break';
 
 import { PasteFromOffice } from '../../../../src/pastefromoffice.js';
 
-import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
-import { ImageUpload } from '@ckeditor/ckeditor5-image';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
+import { CS_CONFIG } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
+import { ImageUpload } from '@ssmckinney/ckeditor5-image';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
 
 ClassicEditor
 	.create( {

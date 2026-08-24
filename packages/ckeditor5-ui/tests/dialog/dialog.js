@@ -4,12 +4,12 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { IconFindReplace } from '@ckeditor/ckeditor5-icons';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { IconFindReplace } from '@ssmckinney/ckeditor5-icons';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 import { Dialog, DialogView, DialogViewPosition, IconView } from '../../src/index.js';
-import { env, keyCodes, KeystrokeHandler } from '@ckeditor/ckeditor5-utils';
+import { env, keyCodes, KeystrokeHandler } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'Dialog', () => {
 	let editor, editorElement, dialogPlugin;

@@ -3,25 +3,25 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Alignment } from '@ckeditor/ckeditor5-alignment';
-import { AutoImage, ImageResize, ImageUpload } from '@ckeditor/ckeditor5-image';
-import { AutoLink, LinkImage } from '@ckeditor/ckeditor5-link';
-import { Code } from '@ckeditor/ckeditor5-basic-styles';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
-import { PageBreak } from '@ckeditor/ckeditor5-page-break';
-import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
-import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
-import { TextTransformation } from '@ckeditor/ckeditor5-typing';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { Widget, toWidget, viewToModelPositionOutsideModelElement } from '@ckeditor/ckeditor5-widget';
-import { ViewUpcastWriter } from '@ckeditor/ckeditor5-engine';
-import { CS_CONFIG } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Alignment } from '@ssmckinney/ckeditor5-alignment';
+import { AutoImage, ImageResize, ImageUpload } from '@ssmckinney/ckeditor5-image';
+import { AutoLink, LinkImage } from '@ssmckinney/ckeditor5-link';
+import { Code } from '@ssmckinney/ckeditor5-basic-styles';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { EasyImage } from '@ssmckinney/ckeditor5-easy-image';
+import { HorizontalLine } from '@ssmckinney/ckeditor5-horizontal-line';
+import { PageBreak } from '@ssmckinney/ckeditor5-page-break';
+import { PasteFromOffice } from '@ssmckinney/ckeditor5-paste-from-office';
+import { RemoveFormat } from '@ssmckinney/ckeditor5-remove-format';
+import { TextTransformation } from '@ssmckinney/ckeditor5-typing';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { Widget, toWidget, viewToModelPositionOutsideModelElement } from '@ssmckinney/ckeditor5-widget';
+import { ViewUpcastWriter } from '@ssmckinney/ckeditor5-engine';
+import { CS_CONFIG } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/cloud-services-config.js';
 
 const contacts = [
 	/* eslint-disable @stylistic/no-multi-spaces */

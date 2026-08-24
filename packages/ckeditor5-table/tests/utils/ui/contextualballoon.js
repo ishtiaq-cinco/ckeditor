@@ -4,15 +4,15 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
 import { Table } from '../../../src/table.js';
 import { TableCellProperties } from '../../../src/tablecellproperties.js';
-import { global } from '@ckeditor/ckeditor5-utils';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { View, BalloonPanelView } from '@ckeditor/ckeditor5-ui';
+import { global } from '@ssmckinney/ckeditor5-utils';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { View, BalloonPanelView } from '@ssmckinney/ckeditor5-ui';
 
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 import { modelTable } from '../../_utils/utils.js';
 import { getBalloonCellPositionData, repositionContextualBalloon } from '../../../src/utils/ui/contextualballoon.js';
 

@@ -55,7 +55,7 @@ export class FocusObserver extends DomEventObserver<'focus' | 'blur'> {
 		// Focus the editor in cases where browser dispatches `beforeinput` event to a not-focused editable element.
 		// This is flushed by the beforeinput listener in the `InsertTextObserver`.
 		// Note that focus is set only if the document is not focused yet.
-		// See https://github.com/ckeditor/ckeditor5/issues/14702.
+		// See https://github.com/ssmckinney/ckeditor5/issues/14702.
 		document.on<ViewDocumentInputEvent>( 'beforeinput', () => {
 			if ( !document.isFocused ) {
 				this._handleFocus();

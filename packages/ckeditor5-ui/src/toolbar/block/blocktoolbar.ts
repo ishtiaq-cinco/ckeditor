@@ -10,7 +10,7 @@
 import {
 	Plugin,
 	type Editor
-} from '@ckeditor/ckeditor5-core';
+} from '@ssmckinney/ckeditor5-core';
 
 import {
 	type EventInfo,
@@ -20,9 +20,9 @@ import {
 	ResizeObserver,
 	toUnit,
 	type ObservableChangeEvent
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
-import type { ModelDocumentSelectionChangeRangeEvent } from '@ckeditor/ckeditor5-engine';
+import type { ModelDocumentSelectionChangeRangeEvent } from '@ssmckinney/ckeditor5-engine';
 
 import { BlockButtonView } from './blockbuttonview.js';
 import { BalloonPanelView } from '../../panel/balloon/balloonpanelview.js';
@@ -220,7 +220,7 @@ export class BlockToolbar extends Plugin {
 	public override destroy(): void {
 		super.destroy();
 
-		// Destroy created UI components as they are not automatically destroyed (see https://github.com/ckeditor/ckeditor5/issues/1341).
+		// Destroy created UI components as they are not automatically destroyed (see https://github.com/ssmckinney/ckeditor5/issues/1341).
 		this.panelView.destroy();
 		this.buttonView.destroy();
 		this.toolbarView.destroy();
@@ -405,7 +405,7 @@ export class BlockToolbar extends Plugin {
 		//    is set allowing the toolbar to re-group again and finally panelView.pin() does the positioning when the
 		//    items grouping state is stable and final.
 		//
-		// https://github.com/ckeditor/ckeditor5/issues/6449, https://github.com/ckeditor/ckeditor5/issues/6575
+		// https://github.com/ssmckinney/ckeditor5/issues/6449, https://github.com/ssmckinney/ckeditor5/issues/6575
 		this.panelView.show();
 
 		const editableElement = this._getSelectedEditableElement();
@@ -462,7 +462,7 @@ export class BlockToolbar extends Plugin {
 			// nested scrollable element. The button should be repositioned only when the user scrolls the
 			// editable or any other scrollable parent of the editable. Leaving it as it is buggy on Chrome
 			// where scrolling nested scrollables is not properly handled.
-			// See more: https://github.com/ckeditor/ckeditor5/issues/17067
+			// See more: https://github.com/ssmckinney/ckeditor5/issues/17067
 			const editableElement = this._getSelectedEditableElement();
 
 			if (

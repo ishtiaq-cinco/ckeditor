@@ -10,7 +10,7 @@
 import { View } from '../view.js';
 import { type ViewCollection } from '../viewcollection.js';
 
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * A dialog content view class.

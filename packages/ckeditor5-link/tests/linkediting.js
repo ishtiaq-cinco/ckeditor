@@ -8,17 +8,17 @@ import { LinkEditing } from '../src/linkediting.js';
 import { LinkCommand } from '../src/linkcommand.js';
 import { UnlinkCommand } from '../src/unlinkcommand.js';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { BoldEditing, ItalicEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { Clipboard, ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { ViewDocumentDomEventData, _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { ImageBlockEditing, ImageInline } from '@ckeditor/ckeditor5-image';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Input, Delete } from '@ckeditor/ckeditor5-typing';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { keyCodes, env } from '@ckeditor/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { BoldEditing, ItalicEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { Clipboard, ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { ViewDocumentDomEventData, _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { ImageBlockEditing, ImageInline } from '@ssmckinney/ckeditor5-image';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Input, Delete } from '@ssmckinney/ckeditor5-typing';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { keyCodes, env } from '@ssmckinney/ckeditor5-utils';
 import { isLinkElement } from '../src/utils.js';
 
 describe( 'LinkEditing', () => {
@@ -146,7 +146,7 @@ describe( 'LinkEditing', () => {
 		} );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/6053
+	// https://github.com/ssmckinney/ckeditor5/issues/6053
 	describe( 'selection attribute management on paste', () => {
 		it( 'should remove link attributes when pasting a link', () => {
 			_setModelData( model, '<paragraph>foo[]</paragraph>' );
@@ -268,7 +268,7 @@ describe( 'LinkEditing', () => {
 			expect( [ ...model.document.selection.getAttributeKeys() ] ).toHaveLength( 0 );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/8158
+		// https://github.com/ssmckinney/ckeditor5/issues/8158
 		it( 'should expand link text on pasting plain text', () => {
 			_setModelData( model, '<paragraph><$text linkHref="ckeditor.com">f[]oo</$text></paragraph>' );
 
@@ -339,7 +339,7 @@ describe( 'LinkEditing', () => {
 			expect( editor.getData() ).toBe( '<p><a href="url">foo</a>bar</p>' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/500
+		// https://github.com/ssmckinney/ckeditor5/issues/500
 		it( 'should not pick up `<a name="foo">`', () => {
 			editor.setData( '<p><a name="foo">foo</a>bar</p>' );
 
@@ -1408,7 +1408,7 @@ describe( 'LinkEditing', () => {
 		}
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/1016
+	// https://github.com/ssmckinney/ckeditor5/issues/1016
 	describe( 'typing around the link after a click', () => {
 		let editor;
 
@@ -1602,7 +1602,7 @@ describe( 'LinkEditing', () => {
 		}
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/4762
+	// https://github.com/ssmckinney/ckeditor5/issues/4762
 	describe( 'typing over the link', () => {
 		let editor;
 
@@ -2178,7 +2178,7 @@ describe( 'LinkEditing', () => {
 		} );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/7521
+	// https://github.com/ssmckinney/ckeditor5/issues/7521
 	describe( 'removing a character before the link element', () => {
 		let editor;
 
@@ -2379,7 +2379,136 @@ describe( 'LinkEditing', () => {
 		} );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/13985
+	// https://github.com/ssmckinney/ckeditor5/issues/13985
+	describe( 'built-in manual decorators', () => {
+		let editor;
+
+		afterEach( async () => {
+			if ( editor ) {
+				await editor.destroy();
+				editor = null;
+			}
+		} );
+
+		async function createEditor( link ) {
+			editor = await ClassicTestEditor.create( element, {
+				plugins: [ Paragraph, LinkEditing ],
+				link
+			} );
+
+			model = editor.model;
+			view = editor.editing.view;
+
+			return editor;
+		}
+
+		it( 'should not register any of them by default', async () => {
+			await createEditor( {} );
+
+			expect( editor.commands.get( 'link' ).manualDecorators ).toHaveLength( 0 );
+		} );
+
+		it( 'should register all of them when enabled with `true`', async () => {
+			await createEditor( { builtinDecorators: true } );
+
+			expect( Array.from( editor.commands.get( 'link' ).manualDecorators, decorator => decorator.id ) ).toEqual( [
+				'linkOpenInNewTab',
+				'linkNoFollow',
+				'linkNoIndex',
+				'linkSponsored',
+				'linkUgc',
+				'linkDownloadable'
+			] );
+		} );
+
+		it( 'should register only the named ones when given a list', async () => {
+			await createEditor( { builtinDecorators: [ 'noFollow', 'noIndex' ] } );
+
+			expect( Array.from( editor.commands.get( 'link' ).manualDecorators, decorator => decorator.id ) ).toEqual( [
+				'linkNoFollow',
+				'linkNoIndex'
+			] );
+		} );
+
+		it( 'should let a decorator declared by the integrator win on a name clash', async () => {
+			await createEditor( {
+				builtinDecorators: [ 'noFollow' ],
+				decorators: {
+					noFollow: {
+						mode: 'manual',
+						label: 'Do not follow',
+						attributes: { rel: 'nofollow' }
+					}
+				}
+			} );
+
+			const manualDecorators = editor.commands.get( 'link' ).manualDecorators;
+
+			expect( manualDecorators ).toHaveLength( 1 );
+			expect( manualDecorators.first.label ).toBe( 'Do not follow' );
+		} );
+
+		it( 'should keep the integrator\'s own decorators alongside the built-in ones', async () => {
+			await createEditor( {
+				builtinDecorators: [ 'noFollow' ],
+				decorators: {
+					isFoo: {
+						mode: 'manual',
+						label: 'Foo',
+						attributes: { foo: 'bar' }
+					}
+				}
+			} );
+
+			expect( Array.from( editor.commands.get( 'link' ).manualDecorators, decorator => decorator.id ) ).toEqual( [
+				'linkNoFollow',
+				'linkIsFoo'
+			] );
+		} );
+
+		it( 'should compose the `rel` flags instead of overwriting them', async () => {
+			await createEditor( { builtinDecorators: true } );
+
+			_setModelData( model,
+				'<paragraph><$text linkHref="#" linkNoFollow="true" linkNoIndex="true" linkSponsored="true">link</$text></paragraph>'
+			);
+
+			expect( editor.getData() ).toBe( '<p><a href="#" rel="nofollow noindex sponsored">link</a></p>' );
+		} );
+
+		it( 'should upcast composed `rel` flags back into separate decorators', async () => {
+			await createEditor( { builtinDecorators: true } );
+
+			editor.setData( '<p><a href="#" rel="nofollow noindex">link</a></p>' );
+
+			expect( _getModelData( model, { withoutSelection: true } ) ).toBe(
+				'<paragraph><$text linkHref="#" linkNoFollow="true" linkNoIndex="true">link</$text></paragraph>'
+			);
+		} );
+
+		it( 'should compose `openInNewTab` with the `rel` flags', async () => {
+			await createEditor( { builtinDecorators: true } );
+
+			editor.setData( '<p><a href="#" target="_blank" rel="noopener noreferrer nofollow">link</a></p>' );
+
+			expect( _getModelData( model, { withoutSelection: true } ) ).toBe(
+				'<paragraph><$text linkHref="#" linkNoFollow="true" linkOpenInNewTab="true">link</$text></paragraph>'
+			);
+		} );
+
+		it( 'should round trip the `downloadable` decorator through the boolean form of the attribute', async () => {
+			await createEditor( { builtinDecorators: true } );
+
+			editor.setData( '<p><a href="#" download="">link</a></p>' );
+
+			expect( _getModelData( model, { withoutSelection: true } ) ).toBe(
+				'<paragraph><$text linkDownloadable="true" linkHref="#">link</$text></paragraph>'
+			);
+
+			expect( editor.getData() ).toBe( '<p><a href="#" download="">link</a></p>' );
+		} );
+	} );
+
 	describe( 'manual decorators with rel attribute', () => {
 		let editor;
 

@@ -175,7 +175,7 @@ describe( 'transform', () => {
 				expectClients( '<paragraph><$text attr="bar">Foo Bar</$text></paragraph>' );
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/6265
+			// https://github.com/ssmckinney/ckeditor5/issues/6265
 			it( 'on elements on different but intersecting "levels"', () => {
 				john.setData( '[<table><tableRow><tableCell><paragraph>Foo</paragraph></tableCell></tableRow></table>]' );
 				kate.setData( '<table><tableRow>[<tableCell><paragraph>Foo</paragraph></tableCell>]</tableRow></table>' );

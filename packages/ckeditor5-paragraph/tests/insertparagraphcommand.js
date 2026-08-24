@@ -3,10 +3,10 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
 import { InsertParagraphCommand } from '../src/insertparagraphcommand.js';
 
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
@@ -147,7 +147,7 @@ describe( 'InsertParagraphCommand', () => {
 			expect( result.isEqual( document.selection.getFirstPosition() ) ).toBe( true );
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/14714.
+		// See https://github.com/ssmckinney/ckeditor5/issues/14714.
 		it( 'should insert paragraph bellow the block widget (inside container)', () => {
 			schema.register( 'blockContainer', { inheritAllFrom: '$container' } );
 			schema.register( 'blockWidget', { inheritAllFrom: '$blockObject', allowIn: 'allowP' } );
@@ -171,7 +171,7 @@ describe( 'InsertParagraphCommand', () => {
 			expect( result.isEqual( document.selection.getFirstPosition() ) ).toBe( true );
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/14714.
+		// See https://github.com/ssmckinney/ckeditor5/issues/14714.
 		it( 'should insert paragraph bellow the block widget (inside table cell)', () => {
 			schema.register( 'table', { inheritAllFrom: '$blockObject' } );
 			schema.register( 'tableRow', { allowIn: 'table', isLimit: true } );

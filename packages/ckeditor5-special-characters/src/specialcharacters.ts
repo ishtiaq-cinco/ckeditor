@@ -7,11 +7,11 @@
  * @module special-characters/specialcharacters
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { IconSpecialCharacters } from '@ckeditor/ckeditor5-icons';
-import { ButtonView, MenuBarMenuListItemButtonView, DialogViewPosition, Dialog } from '@ckeditor/ckeditor5-ui';
-import { CKEditorError, type Locale } from '@ckeditor/ckeditor5-utils';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { IconSpecialCharacters } from '@ssmckinney/ckeditor5-icons';
+import { ButtonView, MenuBarMenuListItemButtonView, DialogViewPosition, Dialog } from '@ssmckinney/ckeditor5-ui';
+import { CKEditorError, type Locale } from '@ssmckinney/ckeditor5-utils';
 import {
 	CharacterGridView,
 	type SpecialCharactersGridViewExecuteEvent,

@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _getViewData } from '@ckeditor/ckeditor5-engine';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
 
 import { IndentEditing } from '../src/indentediting.js';
 import { IndentBlock } from '../src/indentblock.js';
@@ -71,7 +71,7 @@ describe( 'IndentBlock - integration', () => {
 		} );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/8177
+	// https://github.com/ssmckinney/ckeditor5/issues/8177
 	describe( 'with custom heading', () => {
 		beforeEach( () => {
 			return createTestEditor( {
@@ -114,7 +114,7 @@ describe( 'IndentBlock - integration', () => {
 		} );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/2359
+	// https://github.com/ssmckinney/ckeditor5/issues/2359
 	it( 'should work with paragraphs regardless of plugin order', () => {
 		return createTestEditor( {
 			plugins: [ IndentEditing, IndentBlock, Paragraph, HeadingEditing ],

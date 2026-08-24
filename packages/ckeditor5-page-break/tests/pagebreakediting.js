@@ -4,11 +4,11 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 import { PageBreakEditing } from '../src/pagebreakediting.js';
 import { PageBreakCommand } from '../src/pagebreakcommand.js';
-import { _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { isWidget } from '@ckeditor/ckeditor5-widget';
+import { _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { isWidget } from '@ssmckinney/ckeditor5-widget';
 
 describe( 'PageBreakEditing', () => {
 	let editor, model, view, viewDocument;
@@ -72,8 +72,8 @@ describe( 'PageBreakEditing', () => {
 		expect( editor.commands.get( 'pageBreak' ) ).toBeInstanceOf( PageBreakCommand );
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/8880.
-	// (Formerly it was a UIElement https://github.com/ckeditor/ckeditor5/issues/8788)
+	// https://github.com/ssmckinney/ckeditor5/issues/8880.
+	// (Formerly it was a UIElement https://github.com/ssmckinney/ckeditor5/issues/8788)
 	// Proper integration testing of this is too complex.
 	// Making sure the label is no longer a regular text element should be enough.
 	it( 'should have label as a RawElement', () => {

@@ -9,7 +9,7 @@ import {
 	TableProperties,
 	TableCellProperties,
 	TableLayout
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 import {
 	TOKEN_URL,
 	getViewportTopOffsetConfig,

@@ -18,7 +18,7 @@ import { RenameOperation } from '../../src/model/operation/renameoperation.js';
 import { MergeOperation } from '../../src/model/operation/mergeoperation.js';
 import { SplitOperation } from '../../src/model/operation/splitoperation.js';
 
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'Range', () => {
 	let doc, range, start, end, root, otherRoot, gy, model;

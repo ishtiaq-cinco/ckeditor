@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 import { Image } from '../../src/image.js';
 import {
 	FileDialogButtonView,
@@ -15,18 +15,18 @@ import {
 	UIModel,
 	MenuBarMenuListItemButtonView,
 	MenuBarMenuListItemFileDialogButtonView
-} from '@ckeditor/ckeditor5-ui';
-import { FileRepository } from '@ckeditor/ckeditor5-upload';
+} from '@ssmckinney/ckeditor5-ui';
+import { FileRepository } from '@ssmckinney/ckeditor5-upload';
 import { ImageInlineEditing } from '../../src/image/imageinlineediting.js';
 import { ImageUploadUI } from '../../src/imageupload/imageuploadui.js';
 import { ImageUploadEditing } from '../../src/imageupload/imageuploadediting.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { IconImageUpload } from '@ckeditor/ckeditor5-icons';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { IconImageUpload } from '@ssmckinney/ckeditor5-icons';
 
-import { createNativeFileMock, UploadAdapterMock } from '@ckeditor/ckeditor5-upload/tests/_utils/mocks.js';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
-import { testUtils } from '@ckeditor/ckeditor5-core/tests/_utils/utils.js';
+import { createNativeFileMock, UploadAdapterMock } from '@ssmckinney/ckeditor5-upload/tests/_utils/mocks.js';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
+import { testUtils } from '@ssmckinney/ckeditor5-core/tests/_utils/utils.js';
 
 describe( 'ImageUploadUI', () => {
 	let editor, model, editorElement, fileRepository, button;
@@ -314,7 +314,7 @@ describe( 'ImageUploadUI', () => {
 			expect( button.isEnabled ).toBe( !initState );
 		} );
 
-		// ckeditor5-upload/#77
+		// @ssmckinney/ckeditor5-upload/#77
 		it( 'should be properly bound with UploadImageCommand', () => {
 			const command = editor.commands.get( 'uploadImage' );
 			const spy = vi.fn();

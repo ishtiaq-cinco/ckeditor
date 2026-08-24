@@ -7,7 +7,7 @@
  * @module table/tableclipboard
  */
 
-import type { EventInfo } from '@ckeditor/ckeditor5-utils';
+import type { EventInfo } from '@ssmckinney/ckeditor5-utils';
 
 import {
 	ClipboardPipeline,
@@ -17,9 +17,9 @@ import {
 	type ViewDocumentCutEvent,
 	type ViewDocumentClipboardOutputEvent,
 	type ClipboardContentInsertionEvent
-} from '@ckeditor/ckeditor5-clipboard';
+} from '@ssmckinney/ckeditor5-clipboard';
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import type {
 	ModelDocumentFragment,
@@ -32,7 +32,7 @@ import type {
 	ModelPosition,
 	ModelSelection,
 	ModelWriter
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { TableSelection } from './tableselection.js';
 import { TableWalker, type TableSlot } from './tablewalker.js';
@@ -440,7 +440,7 @@ export class TableClipboard extends Plugin {
 		}
 
 		// We do not support mixed content when pasting table into table.
-		// See: https://github.com/ckeditor/ckeditor5/issues/6817.
+		// See: https://github.com/ssmckinney/ckeditor5/issues/6817.
 		if ( content.childCount == 1 && content.getChild( 0 )!.is( 'element', 'table' ) ) {
 			return content.getChild( 0 ) as ModelElement;
 		}

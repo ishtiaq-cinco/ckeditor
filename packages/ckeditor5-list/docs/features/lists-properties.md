@@ -40,7 +40,7 @@ Additional numbering style that {@link features/lists#enabling-specific-enumerat
 
 ### Demo
 
-In the editor below, use the ordered {@icon @ckeditor/ckeditor5-icons/theme/icons/numbered-list.svg Insert ordered list} or unordered list dropdown {@icon @ckeditor/ckeditor5-icons/theme/icons/bulleted-list.svg Insert unordered list} to choose the desired marker type for each list.
+In the editor below, use the ordered {@icon @ssmckinney/ckeditor5-icons/theme/icons/numbered-list.svg Insert ordered list} or unordered list dropdown {@icon @ssmckinney/ckeditor5-icons/theme/icons/bulleted-list.svg Insert unordered list} to choose the desired marker type for each list.
 
 {@snippet features/lists-style}
 
@@ -52,7 +52,7 @@ When this feature is {@link module:list/listconfig~ListPropertiesConfig#startInd
 
 ### Demo
 
-In the editor below, notice how the ordering continues in the second list. To achieve continuous numbering of all spaceships from the example, go to the first item of the last list. Then use the ordered list {@icon @ckeditor/ckeditor5-icons/theme/icons/numbered-list.svg Insert ordered list} dropdown input field to set the start index.
+In the editor below, notice how the ordering continues in the second list. To achieve continuous numbering of all spaceships from the example, go to the first item of the last list. Then use the ordered list {@icon @ssmckinney/ckeditor5-icons/theme/icons/numbered-list.svg Insert ordered list} dropdown input field to set the start index.
 
 {@snippet features/lists-index}
 
@@ -64,7 +64,7 @@ When this feature is {@link module:list/listconfig~ListPropertiesConfig#reversed
 
 ### Demo
 
-Click the second list and use the ordered list {@icon @ckeditor/ckeditor5-icons/theme/icons/numbered-list.svg Insert ordered list} dropdown switch to choose whether to reverse the numbering order.
+Click the second list and use the ordered list {@icon @ssmckinney/ckeditor5-icons/theme/icons/numbered-list.svg Insert ordered list} dropdown switch to choose whether to reverse the numbering order.
 
 {@snippet features/lists-reversed}
 
@@ -93,7 +93,7 @@ This feature is enabled by default. To disable it, use the following configurati
 
 <code-switcher>
 ```js
-import { ClassicEditor, List, Bold } from 'ckeditor5';
+import { ClassicEditor, List, Bold } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {

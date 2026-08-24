@@ -5,7 +5,7 @@
 
 import { describe, it, expect, beforeEach } from 'vitest';
 import { MarkdownGfmDataProcessor } from '../../src/gfmdataprocessor.js';
-import { ViewDocument, StylesProcessor } from '@ckeditor/ckeditor5-engine';
+import { ViewDocument, StylesProcessor } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'MarkdownGfmDataProcessor', () => {
 	let dataProcessor, viewDocument;

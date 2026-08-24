@@ -6,7 +6,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { ElementApiMixin } from '../../../src/editor/utils/elementapimixin.js';
 import { Editor } from '../../../src/editor/editor.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'ElementApiMixin', () => {
 	let editor;
@@ -18,7 +18,7 @@ describe( 'ElementApiMixin', () => {
 		editor = new CustomEditor();
 		editor.model.document.createRoot();
 		editor.model.schema.extend( '$text', { allowIn: '$root' } );
-		editor.fire( 'ready' ); // (https://github.com/ckeditor/ckeditor5/issues/6139)
+		editor.fire( 'ready' ); // (https://github.com/ssmckinney/ckeditor5/issues/6139)
 	} );
 
 	afterEach( async () => {

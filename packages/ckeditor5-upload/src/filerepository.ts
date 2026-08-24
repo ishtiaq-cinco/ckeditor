@@ -7,7 +7,7 @@
  * @module upload/filerepository
  */
 
-import { Plugin, PendingActions, type PendingAction, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, PendingActions, type PendingAction, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import {
 	CKEditorError,
@@ -18,7 +18,7 @@ import {
 	type ObservableChangeEvent,
 	type CollectionChangeEvent,
 	type ObservableMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { FileReader } from './filereader.js';
 

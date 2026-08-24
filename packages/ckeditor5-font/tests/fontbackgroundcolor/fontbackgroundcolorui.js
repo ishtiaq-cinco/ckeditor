@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { IconFontBackground } from '@ckeditor/ckeditor5-icons';
+import { IconFontBackground } from '@ssmckinney/ckeditor5-icons';
 import { FontBackgroundColorEditing } from './../../src/fontbackgroundcolor/fontbackgroundcolorediting.js';
 import { FontBackgroundColorUI } from './../../src/fontbackgroundcolor/fontbackgroundcolorui.js';
 import { FontColorUIBase } from './../../src/ui/colorui.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 describe( 'FontBckgroundColorUI', () => {
 	let element, editor;

@@ -4,12 +4,12 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 
-import { Plugin, PendingActions } from '@ckeditor/ckeditor5-core';
+import { Plugin, PendingActions } from '@ssmckinney/ckeditor5-core';
 import { FileRepository } from '../src/filerepository.js';
 
-import { Collection } from '@ckeditor/ckeditor5-utils';
+import { Collection } from '@ssmckinney/ckeditor5-utils';
 import { createNativeFileMock, UploadAdapterMock, NativeFileReaderMock } from './_utils/mocks.js';
 import { FileReader } from '../src/filereader.js';
 

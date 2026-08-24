@@ -17,7 +17,7 @@ import { isFunction } from 'es-toolkit/compat';
 // @if CK_DEBUG_POSITION // 	diagonalStylesBlack,
 // @if CK_DEBUG_POSITION // 	diagonalStylesGreen,
 // @if CK_DEBUG_POSITION // 	diagonalStylesRed
-// @if CK_DEBUG_POSITION // } from '@ckeditor/ckeditor5-utils/tests/_utils/rectdrawer.js';
+// @if CK_DEBUG_POSITION // } from '@ssmckinney/ckeditor5-utils/tests/_utils/rectdrawer.js';
 // @if CK_DEBUG_POSITION // const TARGET_RECT_STYLE = {
 // @if CK_DEBUG_POSITION // 	outlineWidth: '2px', outlineStyle: 'dashed', outlineColor: 'blue', outlineOffset: '2px'
 // @if CK_DEBUG_POSITION // };

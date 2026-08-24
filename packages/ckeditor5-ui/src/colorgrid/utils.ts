@@ -7,7 +7,7 @@
  * @module ui/colorgrid/utils
  */
 
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
 export type ColorOption = string | {
 	color: string;

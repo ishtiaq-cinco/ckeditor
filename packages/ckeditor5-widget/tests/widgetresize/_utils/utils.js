@@ -7,7 +7,7 @@ import { vi } from 'vitest';
 
 import { WidgetResize } from '../../../src/widgetresize.js';
 
-import { Rect } from '@ckeditor/ckeditor5-utils';
+import { Rect } from '@ssmckinney/ckeditor5-utils';
 
 export const resizerMouseSimulator = {
 	down( editor, domTarget, options = {} ) {
@@ -159,7 +159,7 @@ export async function focusEditor( editor ) {
 
 	// It may take some time for DOM to react in Chrome, especially if the focus is somewhere else
 	// like in dev tools or the window is blurred. Let's give it that time before proceeding any further.
-	// See https://github.com/ckeditor/ckeditor5/issues/8571.
+	// See https://github.com/ssmckinney/ckeditor5/issues/8571.
 	return new Promise( resolve => {
 		setTimeout( () => {
 			resolve();

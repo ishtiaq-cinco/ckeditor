@@ -11,11 +11,11 @@ import { ViewUIElement } from '../../../src/view/uielement.js';
 import { ViewContainerElement } from '../../../src/view/containerelement.js';
 import { ViewDowncastWriter } from '../../../src/view/downcastwriter.js';
 import { BR_FILLER, INLINE_FILLER, INLINE_FILLER_LENGTH, NBSP_FILLER, MARKED_NBSP_FILLER } from '../../../src/view/filler.js';
-import { global } from '@ckeditor/ckeditor5-utils';
+import { global } from '@ssmckinney/ckeditor5-utils';
 import { StylesProcessor } from '../../../src/view/stylesmap.js';
 import { ViewPosition } from '../../../src/view/position.js';
 import { ViewRange } from '../../../src/view/range.js';
-import { ViewText } from '@ckeditor/ckeditor5-engine';
+import { ViewText } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'ViewDomConverter', () => {
 	let converter, viewDocument;
@@ -362,7 +362,7 @@ describe( 'ViewDomConverter', () => {
 							expect( converter.isBlockFiller( context.childNodes[ 1 ] ) ).toBe( false );
 						} );
 
-						// SPECIAL CASE (see https://github.com/ckeditor/ckeditor5/issues/5564).
+						// SPECIAL CASE (see https://github.com/ssmckinney/ckeditor5/issues/5564).
 						it( 'should return true for a <br> element which is the only child of its block parent', () => {
 							const context = document.createElement( elementName );
 							context.innerHTML = '<br>';

@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { Link } from '@ckeditor/ckeditor5-link';
-import { Delete } from '@ckeditor/ckeditor5-typing';
-import { ViewDocumentDomEventData, _parseView, _getViewData, _setModelData } from '@ckeditor/ckeditor5-engine';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Table, TableToolbar } from '@ssmckinney/ckeditor5-table';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { Link } from '@ssmckinney/ckeditor5-link';
+import { Delete } from '@ssmckinney/ckeditor5-typing';
+import { ViewDocumentDomEventData, _parseView, _getViewData, _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 import { MentionEditing } from '../src/mentionediting.js';
 import { Mention } from '../src/mention.js';
@@ -49,7 +49,7 @@ describe( 'Mention feature - integration', () => {
 				} );
 		} );
 
-		// Failing test. See https://github.com/ckeditor/ckeditor5/issues/1645.
+		// Failing test. See https://github.com/ssmckinney/ckeditor5/issues/1645.
 		it( 'should restore removed mention on adding a text inside mention', () => {
 			editor.setData( '<p>foo <span class="mention" data-mention="@John" data-mention-uid="u1">@John</span> bar</p>' );
 
@@ -77,7 +77,7 @@ describe( 'Mention feature - integration', () => {
 				.toBe( '<p>foo <span class="mention" data-mention="@John" data-mention-uid="u1">@John</span> bar</p>' );
 		} );
 
-		// Failing test. See https://github.com/ckeditor/ckeditor5/issues/1645.
+		// Failing test. See https://github.com/ssmckinney/ckeditor5/issues/1645.
 		it( 'should restore removed mention on removing a text inside mention', () => {
 			editor.setData( '<p>foo <span class="mention" data-mention="@John" data-mention-uid="u1">@John</span> bar</p>' );
 
@@ -371,7 +371,7 @@ describe( 'Mention feature - integration', () => {
 					// Show link UI
 					editor.execute( 'link', '@' );
 					// The link is not being selected after inserting it. We need to put the selection manually.
-					// See https://github.com/ckeditor/ckeditor5/issues/1016.
+					// See https://github.com/ssmckinney/ckeditor5/issues/1016.
 					model.change( writer => {
 						writer.setSelection( writer.createRangeOn( model.document.getRoot().getChild( 0 ).getChild( 0 ) ) );
 					} );

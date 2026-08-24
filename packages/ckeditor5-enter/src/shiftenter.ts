@@ -9,13 +9,13 @@
 
 import { ShiftEnterCommand } from './shiftentercommand.js';
 import { EnterObserver, type ViewDocumentEnterEvent } from './enterobserver.js';
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 
 import type {
 	ModelElement,
 	ModelNode,
 	ModelWriter
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 /**
  * This plugin handles the <kbd>Shift</kbd>+<kbd>Enter</kbd> keystroke (soft line break) in the editor.

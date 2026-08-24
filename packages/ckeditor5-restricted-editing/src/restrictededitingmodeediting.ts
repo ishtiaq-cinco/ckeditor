@@ -11,7 +11,7 @@ import {
 	Plugin,
 	type Command,
 	type Editor
-} from '@ckeditor/ckeditor5-core';
+} from '@ssmckinney/ckeditor5-core';
 
 import type {
 	ModelDocumentSelection,
@@ -23,7 +23,7 @@ import type {
 	ViewDocumentTabEvent,
 	ViewDocumentKeyDownEvent,
 	ViewDocumentKeyEventData
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import {
 	getCode,
@@ -31,18 +31,18 @@ import {
 	type BaseEvent,
 	type EventInfo,
 	type GetCallback
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import type {
 	InsertTextCommand,
 	InsertTextCommandExecuteEvent
-} from '@ckeditor/ckeditor5-typing';
+} from '@ssmckinney/ckeditor5-typing';
 
 import type {
 	ClipboardContentInsertionEvent,
 	ViewDocumentClipboardOutputEvent,
 	ClipboardPipeline
-} from '@ckeditor/ckeditor5-clipboard';
+} from '@ssmckinney/ckeditor5-clipboard';
 
 import { RestrictedEditingModeNavigationCommand } from './restrictededitingmodenavigationcommand.js';
 import type { RestrictedEditingConfig } from './restrictededitingconfig.js';
@@ -179,7 +179,7 @@ export class RestrictedEditingModeEditing extends Plugin {
 
 		// Remove existing restricted editing markers when setting new data to prevent marker resurrection.
 		// Without this, markers from removed content would be incorrectly restored due to the resurrection mechanism.
-		// See more: https://github.com/ckeditor/ckeditor5/issues/9646#issuecomment-843064995
+		// See more: https://github.com/ssmckinney/ckeditor5/issues/9646#issuecomment-843064995
 		editor.data.on( 'set', () => {
 			editor.model.change( writer => {
 				for ( const marker of editor.model.markers.getMarkersGroup( 'restrictedEditingException' ) ) {
@@ -648,7 +648,7 @@ function isRangeInsideSingleMarker( editor: Editor, range: ModelRange ) {
  * Note: This marker fixer only consider case which is possible to create using StandardEditing mode plugin.
  * Markers created by developer in the data might break in many other ways.
  *
- * See https://github.com/ckeditor/ckeditor5/issues/6003.
+ * See https://github.com/ssmckinney/ckeditor5/issues/6003.
  */
 function ensureNewMarkerIsFlatPostFixer( editor: Editor ): ModelPostFixer {
 	return writer => {

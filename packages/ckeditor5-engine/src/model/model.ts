@@ -38,7 +38,7 @@ import {
 	type DecoratedMethodEvent,
 	type Config,
 	type ObservableMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import type { EngineConfig } from '../engineconfig.js';
 

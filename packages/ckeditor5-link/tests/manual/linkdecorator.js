@@ -3,13 +3,13 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { Bold, Italic, Underline } from '@ckeditor/ckeditor5-basic-styles';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { Bold, Italic, Underline } from '@ssmckinney/ckeditor5-basic-styles';
 import { LinkImage } from '../../src/linkimage.js';
 
 // Just to have nicely styles switchbutton;
-import '@ckeditor/ckeditor5-ui/theme/components/list/list.css';
+import '@ssmckinney/ckeditor5-ui/theme/components/list/list.css';
 
 window.editors = {};
 

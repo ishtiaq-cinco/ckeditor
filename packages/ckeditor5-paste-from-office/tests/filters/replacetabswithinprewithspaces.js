@@ -5,7 +5,7 @@
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
-import { HtmlDataProcessor, ViewUpcastWriter, ViewDocument, StylesProcessor } from '@ckeditor/ckeditor5-engine';
+import { HtmlDataProcessor, ViewUpcastWriter, ViewDocument, StylesProcessor } from '@ssmckinney/ckeditor5-engine';
 import { replaceTabsWithinPreWithSpaces } from '../../src/filters/replacetabswithinprewithspaces.js';
 
 const DEFAULT_TAB_FILLER = ' '.repeat( 8 );

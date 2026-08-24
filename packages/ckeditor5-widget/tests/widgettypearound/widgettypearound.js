@@ -3,10 +3,10 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { ViewDocumentDomEventData, BubblingEventInfo, _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
-import { EventInfo, global, getCode, env, insertAt } from '@ckeditor/ckeditor5-utils';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ViewDocumentDomEventData, BubblingEventInfo, _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
+import { EventInfo, global, getCode, env, insertAt } from '@ssmckinney/ckeditor5-utils';
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 

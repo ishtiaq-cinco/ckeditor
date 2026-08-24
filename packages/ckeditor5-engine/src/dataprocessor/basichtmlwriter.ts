@@ -8,7 +8,7 @@
  */
 
 import { type DataProcessorHtmlWriter } from './htmlwriter.js';
-import { global } from '@ckeditor/ckeditor5-utils';
+import { global } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Basic HTML writer. It uses the native `innerHTML` property for basic conversion

@@ -7,7 +7,7 @@
  * @module basic-styles/subscript
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { SubscriptEditing } from './subscript/subscriptediting.js';
 import { SubscriptUI } from './subscript/subscriptui.js';
 

@@ -6,11 +6,11 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { FontSizeEditing } from './../../src/fontsize/fontsizeediting.js';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
-import { assertCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { assertCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'FontSizeEditing', () => {
 	let editor, doc;

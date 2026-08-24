@@ -3,11 +3,11 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 import { describe, it, expect, vi } from 'vitest';
 
-describe( 'Bug ckeditor5-engine#1653', () => {
+describe( 'Bug @ssmckinney/ckeditor5-engine#1653', () => {
 	it( '`DataController.parse()` should not fire `editing.view#render`', () => {
 		let editor;
 

@@ -23,7 +23,7 @@ import {
 	type Locale,
 	type ObservableChangeEvent,
 	type PositioningFunction
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import '../../theme/components/dropdown/dropdown.css';
 

@@ -13,7 +13,7 @@ import { ButtonView } from '../../button/buttonview.js';
 import type { ButtonExecuteEvent } from '../../button/button.js';
 import { type ViewCollection } from '../../viewcollection.js';
 
-import { Plugin, type Editor } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor } from '@ssmckinney/ckeditor5-core';
 import {
 	CKEditorError,
 	FocusTracker,
@@ -23,8 +23,8 @@ import {
 	type ObservableChangeEvent,
 	type DomOptimalPositionOptions,
 	type DecoratedMethodEvent
-} from '@ckeditor/ckeditor5-utils';
-import { IconNextArrow, IconPreviousArrow } from '@ckeditor/ckeditor5-icons';
+} from '@ssmckinney/ckeditor5-utils';
+import { IconNextArrow, IconPreviousArrow } from '@ssmckinney/ckeditor5-icons';
 
 import '../../../theme/components/panel/balloonrotator.css';
 import '../../../theme/components/panel/fakepanel.css';

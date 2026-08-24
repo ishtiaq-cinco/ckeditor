@@ -4,15 +4,15 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Image, ImageCaption } from '@ckeditor/ckeditor5-image';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { Link } from '@ckeditor/ckeditor5-link';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Image, ImageCaption } from '@ssmckinney/ckeditor5-image';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { Link } from '@ssmckinney/ckeditor5-link';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { LinkStyleSupport } from '../../src/integrations/link.js';
 
 import { Style } from '../../src/style.js';

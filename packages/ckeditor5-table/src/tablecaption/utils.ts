@@ -12,7 +12,7 @@ import type {
 	ModelDocumentSelection,
 	ModelElement,
 	ViewElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { getSelectionAffectedTable } from '../utils/common.js';
 

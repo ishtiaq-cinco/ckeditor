@@ -10,14 +10,14 @@
 import {
 	type ListEditingPostFixerEvent,
 	type _ListIndentCommandAfterExecuteEvent
-} from '@ckeditor/ckeditor5-list';
+} from '@ssmckinney/ckeditor5-list';
 
-import { type GetCallback } from '@ckeditor/ckeditor5-utils';
+import { type GetCallback } from '@ssmckinney/ckeditor5-utils';
 
 import {
 	type MultiCommand,
 	Plugin
-} from '@ckeditor/ckeditor5-core';
+} from '@ssmckinney/ckeditor5-core';
 
 import {
 	addMarginStylesRules,
@@ -27,7 +27,7 @@ import {
 	type ViewConsumable,
 	type ViewDocumentTabEvent,
 	type ViewElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { IndentBlockListCommand } from './indentblocklistcommand.js';
 import { IndentBlockListItemCommand } from './indentblocklistitemcommand.js';

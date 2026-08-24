@@ -5,7 +5,7 @@
 
 import { describe, it, expect, beforeEach } from 'vitest';
 import { findAttributeRange, findAttributeRangeBound } from '../../src/utils/findattributerange.js';
-import { Model, ModelRange, _setModelData, ModelPosition } from '@ckeditor/ckeditor5-engine';
+import { Model, ModelRange, _setModelData, ModelPosition } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'findAttributeRange', () => {
 	let model, document, root;

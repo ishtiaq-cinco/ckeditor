@@ -7,15 +7,15 @@
  * @module media-embed/mediaembedresize/mediaembedcustomresizeui
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import {
 	ContextualBalloon,
 	BalloonPanelView,
 	clickOutsideHandler,
 	CssTransitionDisablerMixin,
 	type ViewWithCssTransitionDisabler
-} from '@ckeditor/ckeditor5-ui';
-import type { DomOptimalPositionOptions } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-ui';
+import type { DomOptimalPositionOptions } from '@ssmckinney/ckeditor5-utils';
 
 import { getSelectedMediaViewWidget } from '../utils.js';
 import { getSelectedMediaEmbedWidthInUnits } from './utils/getselectedmediaembedwidthinunits.js';

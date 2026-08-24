@@ -6,7 +6,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { clickOutsideHandler } from '../../src/bindings/clickoutsidehandler.js';
 
-import { DomEmitterMixin } from '@ckeditor/ckeditor5-utils';
+import { DomEmitterMixin } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'clickOutsideHandler', () => {
 	let activator, actionSpy, contextElement1, contextElement2, contextElementsCallback;

@@ -5,10 +5,10 @@
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { DecoupledEditorUIView } from '../src/decouplededitoruiview.js';
-import { EditingView } from '@ckeditor/ckeditor5-engine';
-import { ToolbarView, MenuBarView, InlineEditableUIView } from '@ckeditor/ckeditor5-ui';
-import { Locale } from '@ckeditor/ckeditor5-utils';
-import { createViewRoot } from '@ckeditor/ckeditor5-engine/tests/view/_utils/createroot.js';
+import { EditingView } from '@ssmckinney/ckeditor5-engine';
+import { ToolbarView, MenuBarView, InlineEditableUIView } from '@ssmckinney/ckeditor5-ui';
+import { Locale } from '@ssmckinney/ckeditor5-utils';
+import { createViewRoot } from '@ssmckinney/ckeditor5-engine/tests/view/_utils/createroot.js';
 
 describe( 'DecoupledEditorUIView', () => {
 	let locale, view, editingView, editingViewRoot;

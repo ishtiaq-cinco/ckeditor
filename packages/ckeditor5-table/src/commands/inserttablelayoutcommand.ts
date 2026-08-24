@@ -7,14 +7,14 @@
  * @module table/commands/inserttablelayoutcommand
  */
 
-import { Command } from '@ckeditor/ckeditor5-core';
+import { Command } from '@ssmckinney/ckeditor5-core';
 
 import type {
 	ModelDocumentSelection,
 	ModelSchema,
 	ModelSelection,
 	ModelElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { type TableUtils } from '../tableutils.js';
 import { type TableWidthsCommand } from '../tablecolumnresize/tablewidthscommand.js';

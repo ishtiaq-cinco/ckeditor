@@ -7,9 +7,9 @@
  * @module block-quote/blockquoteediting
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { Enter, type ViewDocumentEnterEvent } from '@ckeditor/ckeditor5-enter';
-import { Delete, type ViewDocumentDeleteEvent } from '@ckeditor/ckeditor5-typing';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { Enter, type ViewDocumentEnterEvent } from '@ssmckinney/ckeditor5-enter';
+import { Delete, type ViewDocumentDeleteEvent } from '@ssmckinney/ckeditor5-typing';
 
 import { BlockQuoteCommand } from './blockquotecommand.js';
 

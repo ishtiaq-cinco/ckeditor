@@ -7,14 +7,14 @@
  * @module widget/utils
  */
 
-import { IconDragHandle } from '@ckeditor/ckeditor5-icons';
+import { IconDragHandle } from '@ssmckinney/ckeditor5-icons';
 import {
 	Rect,
 	CKEditorError,
 	toArray,
 	type ObservableChangeEvent,
 	type GetCallback
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import {
 	type DowncastAddHighlightCallback,
@@ -30,9 +30,9 @@ import {
 	type ViewEditableElement,
 	type ViewElement,
 	type ViewTypeCheckable
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import { IconView } from '@ckeditor/ckeditor5-ui';
+import { IconView } from '@ssmckinney/ckeditor5-ui';
 
 import { WidgetHighlightStack, type WidgetHighlightStackChangeEvent } from './highlightstack.js';
 import { getTypeAroundFakeCaretPosition } from './widgettypearound/utils.js';
@@ -298,7 +298,7 @@ export function toWidgetEditable(
 	// Setting tabindex=-1 on contenteditable=false makes it focusable. It propagates focus to the editable
 	// element and makes it possible to highlight nested editables as focused. It's not what we want
 	// for read-only editables though.
-	// See more: https://github.com/ckeditor/ckeditor5/issues/18965
+	// See more: https://github.com/ssmckinney/ckeditor5/issues/18965
 	if ( !editable.isReadOnly ) {
 		writer.setAttribute( 'tabindex', '-1', editable );
 	}
@@ -359,7 +359,7 @@ export function findOptimalInsertionRange(
 		const typeAroundFakeCaretPosition = getTypeAroundFakeCaretPosition( selection );
 
 		// If the WidgetTypeAround "fake caret" is displayed, use its position for the insertion
-		// to provide the most predictable UX (https://github.com/ckeditor/ckeditor5/issues/7438).
+		// to provide the most predictable UX (https://github.com/ssmckinney/ckeditor5/issues/7438).
 		if ( typeAroundFakeCaretPosition ) {
 			return model.createRange( model.createPositionAt( selectedElement, typeAroundFakeCaretPosition ) );
 		}
@@ -495,7 +495,7 @@ export function calculateResizeHostAncestorWidth( domResizeHost: HTMLElement ): 
 
 	// Sometimes parent width cannot be accessed. If that happens we should go up in the elements tree
 	// and try to get width from next ancestor.
-	// https://github.com/ckeditor/ckeditor5/issues/10776
+	// https://github.com/ssmckinney/ckeditor5/issues/10776
 	const ancestorLevelLimit = 5;
 	let currentLevel = 0;
 

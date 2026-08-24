@@ -7,7 +7,7 @@
  * @module block-quote/blockquote
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import { BlockQuoteEditing } from './blockquoteediting.js';
 import { BlockQuoteUI } from './blockquoteui.js';

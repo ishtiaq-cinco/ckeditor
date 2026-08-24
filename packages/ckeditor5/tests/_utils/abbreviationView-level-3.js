@@ -10,9 +10,9 @@ import {
 	ButtonView,
 	submitHandler,
 	FocusCycler
-} from '@ckeditor/ckeditor5-ui';
-import { FocusTracker, KeystrokeHandler } from '@ckeditor/ckeditor5-utils';
-import { IconCheck, IconCancel } from '@ckeditor/ckeditor5-icons';
+} from '@ssmckinney/ckeditor5-ui';
+import { FocusTracker, KeystrokeHandler } from '@ssmckinney/ckeditor5-utils';
+import { IconCheck, IconCancel } from '@ssmckinney/ckeditor5-icons';
 
 export class FormView extends View {
 	constructor( locale ) {

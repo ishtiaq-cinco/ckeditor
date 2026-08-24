@@ -6,20 +6,23 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { LinkEditing } from '../../src/linkediting.js';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { _getModelData, _parseView } from '@ckeditor/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { _getModelData, _parseView } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'Link integration: clipboard paste', () => {
 	let editor, model;
 
-	describe( 'when default protocol is not set', () => {
+	describe( 'when default protocol is switched off', () => {
 		beforeEach( () => {
 			return VirtualTestEditor
 				.create( {
-					plugins: [ Paragraph, ClipboardPipeline, LinkEditing ]
+					plugins: [ Paragraph, ClipboardPipeline, LinkEditing ],
+
+					// An empty string is how the behaviour is switched off now that `https://` is the default.
+					link: { defaultProtocol: '' }
 				} )
 				.then( newEditor => {
 					editor = newEditor;
