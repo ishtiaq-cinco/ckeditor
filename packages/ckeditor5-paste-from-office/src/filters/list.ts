@@ -14,7 +14,7 @@ import {
 	type ViewElement,
 	type ViewNode,
 	type ViewText
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import {
 	convertCssLengthToPx,
@@ -248,7 +248,7 @@ export function transformListItemLikeElementsIntoLists(
 			}
 
 			// Use LI if it is already it or create a new LI element.
-			// https://github.com/ckeditor/ckeditor5/issues/15964
+			// https://github.com/ssmckinney/ckeditor5/issues/15964
 			const listItem = itemLikeElement.element.name == 'li' ? itemLikeElement.element : writer.createElement( 'li' );
 
 			applyListItemMarginLeftAndUpdateTopLevelInfo( writer, stack, topLevelListInfo, itemLikeElement, listItem, indent );
@@ -438,7 +438,7 @@ function findAllItemLikeElements(
 	const foundMargins = new Set<string>();
 
 	for ( const item of range.getItems() ) {
-		// https://github.com/ckeditor/ckeditor5/issues/15964
+		// https://github.com/ssmckinney/ckeditor5/issues/15964
 		if ( !item.is( 'element' ) || !item.name.match( /^(p|h\d+|li|div)$/ ) ) {
 			continue;
 		}
@@ -502,12 +502,12 @@ function isListContinuation( currentItem: ListLikeElement ) {
 	if ( !previousSibling ) {
 		const parent = currentItem.element.parent as ViewElement;
 
-		// If it's a li inside ul or ol like in here: https://github.com/ckeditor/ckeditor5/issues/15964.
+		// If it's a li inside ul or ol like in here: https://github.com/ssmckinney/ckeditor5/issues/15964.
 		// If the parent has previous sibling, which is not a list, then it is not a continuation.
 		return isList( parent ) && ( !parent.previousSibling || isList( parent.previousSibling ) );
 	}
 
-	// Even with the same id the list does not have to be continuous (https://github.com/ckeditor/ckeditor5/issues/43).
+	// Even with the same id the list does not have to be continuous (https://github.com/ssmckinney/ckeditor5/issues/43).
 	return isList( previousSibling );
 }
 
@@ -619,7 +619,7 @@ function detectListStyle( listLikeItem: ListLikeElement, stylesString: string ) 
  * Tries to extract the `list-style-type` value based on the marker element for bulleted list.
  */
 function findBulletedListStyle( element: ViewElement ) {
-	// https://github.com/ckeditor/ckeditor5/issues/15964
+	// https://github.com/ssmckinney/ckeditor5/issues/15964
 	if ( element.name == 'li' && element.parent!.name == 'ul' && element.parent!.hasAttribute( 'type' ) ) {
 		return element.parent!.getAttribute( 'type' );
 	}
@@ -757,7 +757,7 @@ function applyListStyleToElement(
  * where:
  *
  * ```
- * * `l1` is a list id (however it does not mean this is a continuous list - see https://github.com/ckeditor/ckeditor5/issues/43),
+ * * `l1` is a list id (however it does not mean this is a continuous list - see https://github.com/ssmckinney/ckeditor5/issues/43),
  * * `level1` is a list item indentation level,
  * * `lfo1` is a list insertion order in a document.
  * ```

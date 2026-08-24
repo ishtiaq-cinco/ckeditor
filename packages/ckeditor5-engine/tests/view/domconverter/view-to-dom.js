@@ -20,10 +20,10 @@ import { INLINE_FILLER, INLINE_FILLER_LENGTH, BR_FILLER, NBSP_FILLER, MARKED_NBS
 import { _parseView, _getViewData } from '../../../src/dev-utils/view.js';
 import { _setModelData } from '../../../src/dev-utils/model.js';
 
-import { createElement, global } from '@ckeditor/ckeditor5-utils';
+import { createElement, global } from '@ssmckinney/ckeditor5-utils';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 import { StylesProcessor } from '../../../src/view/stylesmap.js';
 

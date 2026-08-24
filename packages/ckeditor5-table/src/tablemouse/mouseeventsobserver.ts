@@ -7,7 +7,7 @@
  * @module table/tablemouse/mouseeventsobserver
  */
 
-import { DomEventObserver, type ViewDocumentDomEventData } from '@ckeditor/ckeditor5-engine';
+import { DomEventObserver, type ViewDocumentDomEventData } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * The mouse selection event observer.

@@ -5,21 +5,21 @@
 
 import { LegacyTodoListEditing } from '../../src/legacytodolist/legacytodolistediting.js';
 import { LegacyListEditing } from '../../src/legacylist/legacylistediting.js';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { Typing } from '@ckeditor/ckeditor5-typing';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
 import { LegacyListCommand } from '../../src/legacylist/legacylistcommand.js';
 import { LegacyCheckTodoListCommand } from '../../src/legacytodolist/legacychecktodolistcommand.js';
-import { ModelElement, _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { InlineEditableUIView } from '@ckeditor/ckeditor5-ui';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
-import { Enter, ShiftEnter } from '@ckeditor/ckeditor5-enter';
+import { ModelElement, _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { InlineEditableUIView } from '@ssmckinney/ckeditor5-ui';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
+import { Enter, ShiftEnter } from '@ssmckinney/ckeditor5-enter';
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { getCode, env } from '@ckeditor/ckeditor5-utils';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { getCode, env } from '@ssmckinney/ckeditor5-utils';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 describe( 'LegacyTodoListEditing', () => {
 	let editor, model, modelDoc, modelRoot, view, viewDoc;

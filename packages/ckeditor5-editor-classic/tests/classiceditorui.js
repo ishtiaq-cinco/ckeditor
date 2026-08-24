@@ -4,20 +4,20 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { View, EditorUI, ContextualBalloon, Dialog, DialogViewPosition } from '@ckeditor/ckeditor5-ui';
+import { View, EditorUI, ContextualBalloon, Dialog, DialogViewPosition } from '@ssmckinney/ckeditor5-ui';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 import { ClassicEditor } from '../src/classiceditor.js';
 import { ClassicEditorUI } from '../src/classiceditorui.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 import { ClassicEditorUIView } from '../src/classiceditoruiview.js';
-import { Image, ImageCaption, ImageToolbar } from '@ckeditor/ckeditor5-image';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { Image, ImageCaption, ImageToolbar } from '@ssmckinney/ckeditor5-image';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 
-import { keyCodes, env } from '@ckeditor/ckeditor5-utils';
-import { assertBinding } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { keyCodes, env } from '@ssmckinney/ckeditor5-utils';
+import { assertBinding } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { isElement } from 'es-toolkit/compat';
-import { normalizeRootsConfig, Plugin } from '@ckeditor/ckeditor5-core';
+import { normalizeRootsConfig, Plugin } from '@ssmckinney/ckeditor5-core';
 
 describe( 'ClassicEditorUI', () => {
 	let editor, view, ui, viewElement;
@@ -1126,7 +1126,7 @@ describe( 'Focus handling and navigation between editing root and editor toolbar
 
 			_setModelData( editor.model,
 				'<paragraph>foo</paragraph>' +
-				'[<imageBlock src="https://ckeditor.com/docs/ckeditor5/latest/assets/img/warsaw.jpg"><caption>bar</caption></imageBlock>]' +
+				'[<imageBlock src="https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/assets/img/warsaw.jpg"><caption>bar</caption></imageBlock>]' +
 				'<paragraph>baz</paragraph>'
 			);
 

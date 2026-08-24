@@ -6,10 +6,10 @@
 import { describe, it, beforeEach, afterEach, vi, expect } from 'vitest';
 
 import { MediaEmbed } from '../src/mediaembed.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { _getViewData, enableViewPlaceholder } from '@ckeditor/ckeditor5-engine';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { _getViewData, enableViewPlaceholder } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'MediaEmbed integration', () => {
 	let element;
@@ -26,7 +26,7 @@ describe( 'MediaEmbed integration', () => {
 	} );
 
 	describe( 'with the placeholder feature', () => {
-		// https://github.com/ckeditor/ckeditor5/issues/1684
+		// https://github.com/ssmckinney/ckeditor5/issues/1684
 		it( 'should make the placeholder CSS class disappear when pasting a new media into an empty editing root', async () => {
 			const editor = await ClassicTestEditor.create( element, {
 				plugins: [ MediaEmbed, Paragraph ]

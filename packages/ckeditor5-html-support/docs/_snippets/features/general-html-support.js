@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { GeneralHtmlSupport } from 'ckeditor5';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5';
 import {
 	TOKEN_URL,
 	CS_CONFIG,

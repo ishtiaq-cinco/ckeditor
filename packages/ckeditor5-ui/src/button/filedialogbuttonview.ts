@@ -11,7 +11,7 @@ import { View } from '../view.js';
 import { ButtonView } from './buttonview.js';
 import type { ButtonExecuteEvent } from './button.js';
 
-import type { Constructor, Locale, Mixed } from '@ckeditor/ckeditor5-utils';
+import type { Constructor, Locale, Mixed } from '@ssmckinney/ckeditor5-utils';
 import { ListItemButtonView } from './listitembuttonview.js';
 
 /**

@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { createElement, count } from '@ckeditor/ckeditor5-utils';
+import { createElement, count } from '@ssmckinney/ckeditor5-utils';
 import { ViewDocument } from '../../src/view/document.js';
 import { createViewRoot } from './_utils/createroot.js';
 import { StylesProcessor } from '../../src/view/stylesmap.js';

@@ -12,7 +12,7 @@ import {
 	type BaseEvent,
 	type Locale,
 	type ObservableChangeEvent
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 import { type FocusableView } from '../focuscycler.js';
 import { View } from '../view.js';
 import { isObject } from 'es-toolkit/compat';

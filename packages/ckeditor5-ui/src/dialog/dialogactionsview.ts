@@ -11,7 +11,7 @@ import {
 	FocusTracker,
 	KeystrokeHandler,
 	type Locale
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 import type { Button, ButtonExecuteEvent } from '../button/button.js';
 import { ButtonView } from '../button/buttonview.js';
 import { View } from '../view.js';

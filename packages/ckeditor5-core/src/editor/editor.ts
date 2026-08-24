@@ -25,7 +25,7 @@ import {
 	type ObservableChangeEvent,
 	type CRCData,
 	type ObservableMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import {
 	Conversion,
@@ -33,10 +33,10 @@ import {
 	EditingController,
 	Model,
 	StylesProcessor
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import type { EditorUI } from '@ckeditor/ckeditor5-ui';
-import { ContextWatchdog, EditorWatchdog } from '@ckeditor/ckeditor5-watchdog';
+import type { EditorUI } from '@ssmckinney/ckeditor5-ui';
+import { ContextWatchdog, EditorWatchdog } from '@ssmckinney/ckeditor5-watchdog';
 
 import { Context } from '../context.js';
 import { PluginCollection } from '../plugincollection.js';
@@ -1062,7 +1062,7 @@ export abstract class Editor extends EditorBase {
 				 * Your license key has expired.
 				 *
 				 * If you used our free trial, you either need to switch to
-				 * [open-source license](https://ckeditor.com/docs/ckeditor5/latest/getting-started/licensing/license-and-legal.html), or
+				 * [open-source license](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/getting-started/licensing/license-and-legal.html), or
 				 * in case of a commercial plan, change the trial key to production key or development key.
 				 * Switching from trial, you also need to align the editor configuration to the features available in your plan.
 				 *
@@ -1189,7 +1189,7 @@ export abstract class Editor extends EditorBase {
 				 * {@glink getting-started/licensing/usage-based-billing#key-terms Read more about distributions in the documentation}.
 				 * Please verify your installation or [contact support](https://ckeditor.com/contact/) for assistance.
 				 * Should you need to migrate your installation from npm to CDN, please refer to our
-				 * [dedicated migration guides](https://ckeditor.com/docs/ckeditor5/latest/updating/migrations/vanilla-js.html).
+				 * [dedicated migration guides](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/updating/migrations/vanilla-js.html).
 				 *
 				 * @error license-key-invalid-distribution-channel
 				 */
@@ -1350,7 +1350,7 @@ export type EditorRootAttributes = Record<string, unknown>;
  *
  * If you did not intend to use LTS, please note that all releases in the v47.7 line are
  * for LTS subscribers only. To use a non-LTS edition, either upgrade to v48 or newer,
- * which is our standard [latest](https://ckeditor.com/docs/ckeditor5/latest/updating/guides/changelog.html)
+ * which is our standard [latest](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/updating/guides/changelog.html)
  * release line, or stay on a version 47.6.2 or earlier.
  *
  * @error license-key-lts-not-allowed

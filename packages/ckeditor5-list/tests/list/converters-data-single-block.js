@@ -5,18 +5,18 @@
 
 import { ListEditing } from '../../src/list/listediting.js';
 
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { IndentEditing } from '@ckeditor/ckeditor5-indent';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { CodeBlockEditing } from '@ckeditor/ckeditor5-code-block';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { IndentEditing } from '@ssmckinney/ckeditor5-indent';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { CodeBlockEditing } from '@ssmckinney/ckeditor5-code-block';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 import { beforeEach, afterEach, describe, it, vi } from 'vitest';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 import { setupTestHelpers } from './_utils/utils.js';
 import { stubUid } from './_utils/uid.js';
 
@@ -240,7 +240,7 @@ describe( 'ListEditing (multiBlock=false) - converters - data pipeline', () => {
 			);
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/16450.
+		// See https://github.com/ssmckinney/ckeditor5/issues/16450.
 		it( 'does not clear incorrect nodes within <ul>', () => {
 			test.data(
 				'<ul>' +
@@ -270,7 +270,7 @@ describe( 'ListEditing (multiBlock=false) - converters - data pipeline', () => {
 			);
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/16450.
+		// See https://github.com/ssmckinney/ckeditor5/issues/16450.
 		it( 'does not clear incorrect nodes and elements within <ul>', () => {
 			test.data(
 				'<p>0</p>' +
@@ -1595,7 +1595,7 @@ describe( 'ListEditing (multiBlock=false) - converters - data pipeline', () => {
 			);
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/16450.
+		// See https://github.com/ssmckinney/ckeditor5/issues/16450.
 		it( 'mixed lists deep structure, white spaces, incorrect content, empty items', () => {
 			test.data(
 				'<p>foo</p>' +

@@ -14,7 +14,7 @@ import {
 	type DecoratedMethodEvent,
 	type ObservableSetEvent,
 	type ObservableMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { type Editor } from './editor/editor.js';
 

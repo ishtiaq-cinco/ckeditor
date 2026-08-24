@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { ContextPlugin } from '@ckeditor/ckeditor5-core';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ContextPlugin } from '@ssmckinney/ckeditor5-core';
 import { Notification } from '../../src/notification/notification.js';
 
 describe( 'Notification', () => {

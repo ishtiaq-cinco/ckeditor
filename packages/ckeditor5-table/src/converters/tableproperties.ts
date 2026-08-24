@@ -7,7 +7,7 @@
  * @module table/converters/tableproperties
  */
 
-import type { Editor } from '@ckeditor/ckeditor5-core';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
 import type {
 	Conversion,
 	UpcastConversionApi,
@@ -19,8 +19,8 @@ import type {
 	StyleValue,
 	BoxStyleSides,
 	DowncastAttributeEvent
-} from '@ckeditor/ckeditor5-engine';
-import { first } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-engine';
+import { first } from '@ssmckinney/ckeditor5-utils';
 
 const ALIGN_VALUES_REG_EXP = /^(left|center|right)$/;
 const FLOAT_VALUES_REG_EXP = /^(left|none|right)$/;
@@ -171,7 +171,7 @@ export function upcastBorderStyles(
 		dispatcher.on<UpcastElementEvent>( `element:${ viewElementName }`, ( evt, data, conversionApi ) => {
 			const { modelRange, viewItem } = data;
 			// If the element was not converted by element-to-element converter,
-			// we should not try to convert the style. See https://github.com/ckeditor/ckeditor5/issues/8393.
+			// we should not try to convert the style. See https://github.com/ssmckinney/ckeditor5/issues/8393.
 			if ( !modelRange ) {
 				return;
 			}
@@ -417,7 +417,7 @@ export function upcastTableCellPaddingAttribute(
 		dispatcher.on<UpcastElementEvent>( `element:${ viewElementName }`, ( evt, data, conversionApi ) => {
 			const { modelRange, viewItem } = data;
 			// If the element was not converted by element-to-element converter,
-			// we should not try to convert the style. See https://github.com/ckeditor/ckeditor5/issues/8393.
+			// we should not try to convert the style. See https://github.com/ssmckinney/ckeditor5/issues/8393.
 			if ( !modelRange ) {
 				return;
 			}

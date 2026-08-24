@@ -45,3 +45,17 @@
 1. Click a link element.
 2. Click toolbar unlink button.
 3. Check if link has been converted into a regular text.
+
+### Link options
+
+1. Select a fragment of regular text and click the toolbar link button.
+2. Below the `Link URL` field there should be a **Link properties** row.
+3. Click it. Six switches should appear: Open in a new tab, Nofollow, Noindex, Sponsored,
+	User-generated content, Downloadable.
+4. Turn a few on. Nothing should reach the document yet.
+5. Press Back, fill in `Link URL`, then click `Insert`. The link should appear with all of the
+	chosen attributes at once, and a single undo should remove the whole thing.
+6. Turning Nofollow, Noindex and Sponsored all on should produce `rel="nofollow noindex sponsored"` —
+	they compose rather than replace one another.
+7. Put the caret in an existing link and use the gear in the link toolbar instead. Those switches
+	apply immediately, without a Save.

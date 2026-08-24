@@ -24,7 +24,7 @@ import { type ViewSelection } from '../view/selection.js';
 import { type ViewDocumentSelection } from '../view/documentselection.js';
 import { isParagraphable, wrapInParagraph } from '../model/utils/autoparagraphing.js';
 
-import { priorities, type EventInfo, type PriorityString } from '@ckeditor/ckeditor5-utils';
+import { priorities, type EventInfo, type PriorityString } from '@ssmckinney/ckeditor5-utils';
 
 import { cloneDeep } from 'es-toolkit/compat';
 
@@ -1050,7 +1050,7 @@ function prepareToAttributeConverter(
 	): void => {
 		// Converting an attribute of an element that has not been converted to anything does not make sense
 		// because there will be nowhere to set that attribute on. At this stage, the element should've already
-		// been converted (https://github.com/ckeditor/ckeditor5/issues/11000).
+		// been converted (https://github.com/ssmckinney/ckeditor5/issues/11000).
 		if ( !data.modelRange && shallow ) {
 			return;
 		}
@@ -1159,7 +1159,7 @@ function setAttributeOn(
 		}
 
 		// Mark the node as consumed even if the attribute will not be updated because it's in a valid context (schema)
-		// and would be converted if the attribute wouldn't be present. See https://github.com/ckeditor/ckeditor5/issues/8921.
+		// and would be converted if the attribute wouldn't be present. See https://github.com/ssmckinney/ckeditor5/issues/8921.
 		result = true;
 
 		// Do not override the attribute if it's already present.

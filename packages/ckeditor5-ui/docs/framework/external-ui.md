@@ -52,12 +52,12 @@ import {
 	UnderlineEditing,
 	HeadingEditing,
 	CKEditorError
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 ```
 </code-switcher>
 
 <info-box info>
-	Note that instead of {@link module:basic-styles/bold~Bold}, which loads the default bold UI and bold editing feature, just the {@link module:basic-styles/bold/boldediting~BoldEditing} is imported. It provides the [engine](https://www.npmjs.com/package/@ckeditor/ckeditor5-engine) features associated with editing any bold text but does not come with the actual UI.
+	Note that instead of {@link module:basic-styles/bold~Bold}, which loads the default bold UI and bold editing feature, just the {@link module:basic-styles/bold/boldediting~BoldEditing} is imported. It provides the [engine](https://www.npmjs.com/package/@ssmckinney/ckeditor5-engine) features associated with editing any bold text but does not come with the actual UI.
 
 	Respectively, `ItalicEditing`, `UnderlineEditing`, `HeadingEditing`, and `UndoEditing` are also imported.
 </info-box>

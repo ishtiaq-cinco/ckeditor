@@ -17,7 +17,7 @@ The list feature lets you create ordered (numbered) and unordered (bulleted) lis
 
 ## Demo
 
-Use the editor below to see the list feature in action. You can use toolbar buttons to insert both ordered {@icon @ckeditor/ckeditor5-icons/theme/icons/numbered-list.svg Insert ordered list} and unordered lists {@icon @ckeditor/ckeditor5-icons/theme/icons/bulleted-list.svg Insert unordered list}.
+Use the editor below to see the list feature in action. You can use toolbar buttons to insert both ordered {@icon @ssmckinney/ckeditor5-icons/theme/icons/numbered-list.svg Insert ordered list} and unordered lists {@icon @ssmckinney/ckeditor5-icons/theme/icons/bulleted-list.svg Insert unordered list}.
 
 You can also use Markdown code recognized by the {@link features/autoformat autoformatting feature}:
 
@@ -40,7 +40,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, List } from 'ckeditor5';
+import { ClassicEditor, List } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -64,7 +64,7 @@ To enable selected sub-features of the {@link features/lists-properties list pro
 
 <code-switcher>
 ```js
-import { ClassicEditor, List, ListProperties } from 'ckeditor5';
+import { ClassicEditor, List, ListProperties } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {

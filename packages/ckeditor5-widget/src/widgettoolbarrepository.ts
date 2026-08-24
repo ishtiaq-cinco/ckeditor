@@ -7,9 +7,9 @@
  * @module widget/widgettoolbarrepository
  */
 
-import { Plugin, type Editor, type ToolbarConfigItem, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type ToolbarConfigItem, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
-import type { ViewDocumentSelection, ViewElement } from '@ckeditor/ckeditor5-engine';
+import type { ViewDocumentSelection, ViewElement } from '@ssmckinney/ckeditor5-engine';
 
 import {
 	BalloonPanelView,
@@ -18,7 +18,7 @@ import {
 	type BalloonToolbar,
 	type BalloonToolbarShowEvent,
 	type EditorUIUpdateEvent
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 
 import {
 	CKEditorError,
@@ -26,7 +26,7 @@ import {
 	type ObservableChangeEvent,
 	type PositioningFunction,
 	type RectSource
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { isWidget } from './utils.js';
 

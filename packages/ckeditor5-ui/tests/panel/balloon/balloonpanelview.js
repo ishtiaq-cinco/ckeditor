@@ -7,7 +7,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { ViewCollection } from '../../../src/viewcollection.js';
 import { BalloonPanelView } from '../../../src/panel/balloon/balloonpanelview.js';
 import { ButtonView } from '../../../src/button/buttonview.js';
-import { Rect, ResizeObserver, global } from '@ckeditor/ckeditor5-utils';
+import { Rect, ResizeObserver, global } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'BalloonPanelView', () => {
 	let view;

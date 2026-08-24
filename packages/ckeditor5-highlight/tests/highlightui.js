@@ -4,12 +4,12 @@
  */
 
 import { beforeAll, afterAll, beforeEach, afterEach, describe, expect, it, vi } from 'vitest';
-import { IconMarker, IconPen, IconEraser } from '@ckeditor/ckeditor5-icons';
+import { IconMarker, IconPen, IconEraser } from '@ssmckinney/ckeditor5-icons';
 import { HighlightEditing } from '../src/highlightediting.js';
 import { HighlightUI } from '../src/highlightui.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { _clearTranslations, add as addTranslations } from '@ckeditor/ckeditor5-utils';
-import { ListSeparatorView, MenuBarMenuListItemView, MenuBarMenuView } from '@ckeditor/ckeditor5-ui';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { _clearTranslations, add as addTranslations } from '@ssmckinney/ckeditor5-utils';
+import { ListSeparatorView, MenuBarMenuListItemView, MenuBarMenuView } from '@ssmckinney/ckeditor5-ui';
 
 describe( 'HighlightUI', () => {
 	let editor, command, element;

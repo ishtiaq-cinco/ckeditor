@@ -7,8 +7,8 @@
  * @module image/imagestyle/imagestyleui
  */
 
-import { Plugin, type PluginDependenciesOf, type Command } from '@ckeditor/ckeditor5-core';
-import { ButtonView, createDropdown, addToolbarToDropdown, SplitButtonView } from '@ckeditor/ckeditor5-ui';
+import { Plugin, type PluginDependenciesOf, type Command } from '@ssmckinney/ckeditor5-core';
+import { ButtonView, createDropdown, addToolbarToDropdown, SplitButtonView } from '@ssmckinney/ckeditor5-ui';
 import { isObject, identity } from 'es-toolkit/compat';
 import { ImageStyleEditing } from './imagestyleediting.js';
 import { utils } from './utils.js';
@@ -179,7 +179,7 @@ export class ImageStyleUI extends Plugin {
 
 			// Focus the editable after executing the command.
 			// Overrides a default behaviour where the focus is moved to the dropdown button.
-			// See https://github.com/ckeditor/ckeditor5/issues/12125.
+			// See https://github.com/ssmckinney/ckeditor5/issues/12125.
 			this.listenTo( dropdownView, 'execute', () => {
 				this.editor.editing.view.focus();
 			} );

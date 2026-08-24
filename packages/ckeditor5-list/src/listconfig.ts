@@ -7,7 +7,7 @@
  * @module list/listconfig
  */
 
-import { type ArrayOrItem } from '@ckeditor/ckeditor5-utils';
+import { type ArrayOrItem } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * The configuration of the {@link module:list/list~List list} feature
@@ -142,6 +142,62 @@ export interface ListPropertiesConfig {
 	 * @default false
 	 */
 	reversed?: boolean;
+
+	/**
+	 * When set, a colour control appears in the list properties panel, colouring the markers of a list without
+	 * touching the text beside them. It is stored as the `--ck-list-marker-color` custom property on the list.
+	 *
+	 * ```ts
+	 * ClassicEditor
+	 * 	.create( {
+	 * 		list: {
+	 * 			properties: {
+	 * 				markerColor: true
+	 * 			}
+	 * 		}
+	 * 	} )
+	 * 	.then( ... )
+	 * 	.catch( ... );
+	 * ```
+	 *
+	 * The swatches offered are the ones from
+	 * {@link module:font/fontconfig~FontColorConfig#colors `config.fontColor.colors`} when the font colour feature
+	 * is loaded, so an editor has one palette rather than two that drift apart.
+	 *
+	 * **Note**: This colours what `::marker` can colour — the plain `disc`, `circle` and `square` bullets and the
+	 * numbers of an ordered list. The markers drawn from an SVG
+	 * ({@link module:list/listproperties/utils/markers~LIST_MARKERS}) are images and render in the colours they
+	 * were drawn in, so the control has no effect while one of those is selected.
+	 *
+	 * @default false
+	 */
+	markerColor?: boolean;
+
+	/**
+	 * When set, a column control appears in the list properties panel, laying a list out across several columns
+	 * rather than stacking it. It is stored as a class on the list.
+	 *
+	 * Pass `true` for up to four columns, or a list of counts to offer:
+	 *
+	 * ```ts
+	 * ClassicEditor
+	 * 	.create( {
+	 * 		list: {
+	 * 			properties: {
+	 * 				columns: [ 1, 2, 3 ]
+	 * 			}
+	 * 		}
+	 * 	} )
+	 * 	.then( ... )
+	 * 	.catch( ... );
+	 * ```
+	 *
+	 * The generated stylesheet collapses the columns on narrow viewports, so a three-column list becomes two on a
+	 * tablet and one on a phone rather than three unreadably narrow ones.
+	 *
+	 * @default false
+	 */
+	columns?: boolean | Array<number>;
 }
 
 export interface ListPropertiesStyleConfig {
@@ -272,4 +328,6 @@ export type NumberedListStyleType =
 export type BulletedListStyleType =
 	| 'disc'
 	| 'circle'
-	| 'square';
+	| 'square'
+	| 'circle-tick'
+	| 'circle-cross';

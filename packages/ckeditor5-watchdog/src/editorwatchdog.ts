@@ -13,14 +13,14 @@ import { Watchdog, type WatchdogConfig } from './watchdog.js';
 
 import type {
 	CKEditorError
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import type {
 	ModelNode,
 	ModelText,
 	ModelElement,
 	ModelWriter
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import type {
 	Editor,
@@ -28,7 +28,7 @@ import type {
 	Context,
 	EditorReadyEvent,
 	RootConfig
-} from '@ckeditor/ckeditor5-core';
+} from '@ssmckinney/ckeditor5-core';
 
 import {
 	throttle,

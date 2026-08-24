@@ -7,12 +7,12 @@
  * @module html-support/integrations/horizontalline
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import type {
 	DowncastAttributeEvent,
 	DowncastDispatcher,
 	ModelElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { DataFilter, type HtmlSupportDataFilterRegisterEvent } from '../datafilter.js';
 import { type GHSViewAttributes, updateViewAttributes } from '../utils.js';

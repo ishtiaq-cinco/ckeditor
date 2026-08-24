@@ -7,7 +7,7 @@
  * @module image/imageupload/imageuploadediting
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import {
 	ViewUpcastWriter,
@@ -19,16 +19,16 @@ import {
 	type ModelNodeAttributes,
 	type DowncastAttributeEvent,
 	type UpcastElementEvent
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import { Notification } from '@ckeditor/ckeditor5-ui';
+import { Notification } from '@ssmckinney/ckeditor5-ui';
 import {
 	ClipboardPipeline,
 	type ViewDocumentClipboardInputEvent,
 	type ClipboardInputTransformationEvent
-} from '@ckeditor/ckeditor5-clipboard';
-import { FileRepository, type UploadResponse, type FileLoader } from '@ckeditor/ckeditor5-upload';
-import { env } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-clipboard';
+import { FileRepository, type UploadResponse, type FileLoader } from '@ssmckinney/ckeditor5-upload';
+import { env } from '@ssmckinney/ckeditor5-utils';
 
 import { ImageUtils } from '../imageutils.js';
 import { UploadImageCommand } from './uploadimagecommand.js';
@@ -409,7 +409,7 @@ export class ImageUploadEditing extends Plugin {
 
 				for ( const imageElement of imageUploadElements.get( loader.id )! ) {
 					// Force re–paint in Safari. Without it, the image will display with a wrong size.
-					// https://github.com/ckeditor/ckeditor5/issues/1975
+					// https://github.com/ssmckinney/ckeditor5/issues/1975
 					/* istanbul ignore next -- @preserve */
 					if ( env.isSafari ) {
 						const viewFigure = editor.editing.mapper.toViewElement( imageElement )!;
@@ -565,7 +565,7 @@ export class ImageUploadEditing extends Plugin {
 
 		// It sets `data-ck-upload-id` attribute on the view image elements that are not fully uploaded.
 		// It avoids the situation when image disappears when it's being moved and upload is not finished yet.
-		// See more: https://github.com/ckeditor/ckeditor5/issues/16967
+		// See more: https://github.com/ssmckinney/ckeditor5/issues/16967
 		conversion.for( 'dataDowncast' ).add( dispatcher => {
 			dispatcher.on<DowncastAttributeEvent>( `attribute:uploadId:${ imageType }`, ( evt, data, conversionApi ) => {
 				if ( !conversionApi.consumable.test( data.item, evt.name ) ) {

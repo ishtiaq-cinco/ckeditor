@@ -6,7 +6,7 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { FontBackgroundColorCommand } from '../../src/fontbackgroundcolor/fontbackgroundcolorcommand.js';
 import { FontCommand } from '../../src/fontcommand.js';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
 
 describe( 'FontBackgroundColorCommand', () => {
 	let editor, command;

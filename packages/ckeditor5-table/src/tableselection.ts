@@ -7,8 +7,8 @@
  * @module table/tableselection
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { type EventInfo, first } from '@ckeditor/ckeditor5-utils';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { type EventInfo, first } from '@ssmckinney/ckeditor5-utils';
 
 import type {
 	ModelElement,
@@ -17,12 +17,12 @@ import type {
 	ViewDowncastWriter,
 	ViewElement,
 	ModelDeleteContentEvent
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import type {
 	ViewDocumentInsertTextEvent,
 	InsertTextEventData
-} from '@ckeditor/ckeditor5-typing';
+} from '@ssmckinney/ckeditor5-typing';
 
 import { TableWalker } from './tablewalker.js';
 import { TableUtils } from './tableutils.js';
@@ -388,7 +388,7 @@ export class TableSelection extends Plugin {
 		// 	* Without this adjustment, only `B`, `A` and `E` would be selected.
 		// 	* With this adjustment, `A`, `B`, `C`, `D`, and `E` are selected.
 		//
-		// See: https://github.com/ckeditor/ckeditor5/issues/17538
+		// See: https://github.com/ssmckinney/ckeditor5/issues/17538
 		const endColumnExtraColspan = ( parseInt( targetCell.getAttribute( 'colspan' ) as string || '1' ) - 1 );
 		const endColumn = Math.max( startLocation.column, endLocation.column + endColumnExtraColspan );
 

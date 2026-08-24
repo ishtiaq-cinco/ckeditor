@@ -1,21 +1,21 @@
 {
-  "name": "@ckeditor/ckeditor5-cloud-services",
+  "name": "@ssmckinney/ckeditor5-cloud-services",
   "version": "48.3.0",
   "description": "CKEditor 5's Cloud Services integration layer.",
   "license": "SEE LICENSE IN LICENSE.md",
   "author": "CKSource (http://cksource.com/)",
   "homepage": "https://ckeditor.com/ckeditor-5",
-  "bugs": "https://github.com/ckeditor/ckeditor5/issues",
+  "bugs": "https://github.com/ssmckinney/ckeditor5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5.git",
+    "url": "https://github.com/ssmckinney/ckeditor5.git",
     "directory": "packages/ckeditor5-cloud-services"
   },
   "keywords": [
     "ckeditor",
     "ckeditor5",
     "ckeditor 5",
-    "ckeditor5-lib"
+    "@ssmckinney/ckeditor5-lib"
   ],
   "type": "module",
   "main": "./src/index.ts",
@@ -34,15 +34,15 @@
     }
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-core": "workspace:*",
-    "@ckeditor/ckeditor5-upload": "workspace:*",
-    "@ckeditor/ckeditor5-utils": "workspace:*"
+    "@ssmckinney/ckeditor5-upload": "workspace:*",
+    "@ssmckinney/ckeditor5-utils": "workspace:*",
+    "@ssmckinney/ckeditor5-core": "workspace:*"
   },
   "devDependencies": {
-    "@ckeditor/ckeditor5-editor-classic": "workspace:*",
     "@vitest/browser-playwright": "^4.1.8",
     "@vitest/coverage-v8": "^4.1.8",
-    "vitest": "^4.1.8"
+    "vitest": "^4.1.8",
+    "@ssmckinney/ckeditor5-editor-classic": "workspace:*"
   },
   "scripts": {
     "build": "node ../../scripts/nim/build-package.mjs",
@@ -53,7 +53,7 @@
   },
   "files": [
     "dist",
-    "ckeditor5-metadata.json",
+    "@ssmckinney/ckeditor5-metadata.json",
     "CHANGELOG.md"
   ]
 }

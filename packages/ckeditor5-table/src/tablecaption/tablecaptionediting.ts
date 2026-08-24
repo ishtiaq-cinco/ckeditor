@@ -7,15 +7,15 @@
  * @module table/tablecaption/tablecaptionediting
  */
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 import {
 	type DowncastInsertEvent,
 	type ViewElement,
 	ModelElement,
 	enableViewPlaceholder
-} from '@ckeditor/ckeditor5-engine';
-import { uid } from '@ckeditor/ckeditor5-utils';
-import { toWidgetEditable } from '@ckeditor/ckeditor5-widget';
+} from '@ssmckinney/ckeditor5-engine';
+import { uid } from '@ssmckinney/ckeditor5-utils';
+import { toWidgetEditable } from '@ssmckinney/ckeditor5-widget';
 
 import { injectTableCaptionPostFixer } from '../converters/table-caption-post-fixer.js';
 import { ToggleTableCaptionCommand } from './toggletablecaptioncommand.js';

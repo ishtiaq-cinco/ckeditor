@@ -1,0 +1,33 @@
+<h2>Default breakpoints (<code>insert.responsive: true</code>)</h2>
+<div id="editor">
+	<p>A responsive image loaded straight from the data, so upcast is exercised too:</p>
+	<figure class="image">
+		<picture>
+			<source media="(max-width: 767px)" srcset="../manual/100px-Run.svg.png">
+			<source media="(min-width: 768px) and (max-width: 1199px)" srcset="../manual/game_boy.jpg">
+			<img src="../manual/sample.jpg" alt="Responsive image">
+		</picture>
+		<figcaption>Narrow the window and reload to see a different source used.</figcaption>
+	</figure>
+
+	<p>A plain image, for comparison:</p>
+	<figure class="image">
+		<img src="../manual/sample.jpg" alt="Plain image">
+	</figure>
+</div>
+
+<h2>Custom breakpoints</h2>
+<div id="editor2">
+	<p>Three breakpoints of someone else's choosing, one of which is not a width at all.</p>
+	<figure class="image">
+		<img src="../manual/sample.jpg" alt="Plain image">
+	</figure>
+</div>
+
+<h2>Off, the default (no <code>insert.responsive</code>)</h2>
+<div id="editor3">
+	<p>The stock single-URL dialog.</p>
+	<figure class="image">
+		<img src="../manual/sample.jpg" alt="Plain image">
+	</figure>
+</div>

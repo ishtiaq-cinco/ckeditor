@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { Enter } from '../src/enter.js';
 import { EnterCommand } from '../src/entercommand.js';
 import { EnterObserver } from '../src/enterobserver.js';
-import { ViewDocumentDomEventData } from '@ckeditor/ckeditor5-engine';
+import { ViewDocumentDomEventData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'Enter feature', () => {
 	let element, editor, viewDocument;

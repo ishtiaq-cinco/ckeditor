@@ -5,11 +5,11 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { IconFindReplace } from '@ckeditor/ckeditor5-icons';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { DropdownView, ButtonView, MenuBarMenuListItemButtonView, DialogView } from '@ckeditor/ckeditor5-ui';
-import { global, keyCodes, env } from '@ckeditor/ckeditor5-utils';
+import { IconFindReplace } from '@ssmckinney/ckeditor5-icons';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { DropdownView, ButtonView, MenuBarMenuListItemButtonView, DialogView } from '@ssmckinney/ckeditor5-ui';
+import { global, keyCodes, env } from '@ssmckinney/ckeditor5-utils';
 import { FindAndReplaceUI } from '../src/findandreplaceui.js';
 import { FindAndReplace } from '../src/findandreplace.js';
 import { FindAndReplaceFormView } from '../src/ui/findandreplaceformview.js';
@@ -135,7 +135,7 @@ describe( 'FindAndReplaceUI', () => {
 				function testButton() {
 					describe( 'upon dialog open', () => {
 						it( 'CSS transitions should be disabled to avoid unnecessary animations (and then enable them again)', () => {
-							// (https://github.com/ckeditor/ckeditor5/issues/10008)
+							// (https://github.com/ssmckinney/ckeditor5/issues/10008)
 							const disableCssTransitionsSpy = vi.spyOn( form, 'disableCssTransitions' );
 							const enableCssTransitionsSpy = vi.spyOn( form, 'enableCssTransitions' );
 							const selectSpy = vi.spyOn( form._findInputView.fieldView, 'select' );
@@ -562,7 +562,7 @@ describe( 'FindAndReplaceUI', () => {
 
 				describe( 'upon dropdown open', () => {
 					it( 'CSS transitions should be disabled to avoid unnecessary animations (and then enable them again)', () => {
-						// (https://github.com/ckeditor/ckeditor5/issues/10008)
+						// (https://github.com/ssmckinney/ckeditor5/issues/10008)
 						const disableCssTransitionsSpy = vi.spyOn( form, 'disableCssTransitions' );
 						const enableCssTransitionsSpy = vi.spyOn( form, 'enableCssTransitions' );
 						const selectSpy = vi.spyOn( form._findInputView.fieldView, 'select' );

@@ -10,14 +10,14 @@ This package implements the clipboard (copy, cut, paste) support for CKEditor&nb
 
 See the {@link module:clipboard/clipboard~Clipboard} plugin documentation and the {@link framework/deep-dive/clipboard clipboard deep dive guide}.
 
-This plugin is usually enabled by the {@link module:essentials/essentials~Essentials} plugin from the {@link api/essentials `@ckeditor/ckeditor5-essentials`} package (which also enables other fundamental editing features).
+This plugin is usually enabled by the {@link module:essentials/essentials~Essentials} plugin from the {@link api/essentials `@ssmckinney/ckeditor5-essentials`} package (which also enables other fundamental editing features).
 
 ## Installation
 
 This package is part of our open-source aggregate package.
 
 ```bash
-npm install ckeditor5
+npm install @ssmckinney/ckeditor5
 ```
 
 ## Contribute
@@ -26,7 +26,7 @@ The source code of this package is available on GitHub in [https://github.com/ck
 
 ## External links
 
-* [`@ckeditor/ckeditor5-clipboard` on npm](https://www.npmjs.com/package/@ckeditor/ckeditor5-clipboard)
+* [`@ssmckinney/ckeditor5-clipboard` on npm](https://www.npmjs.com/package/@ssmckinney/ckeditor5-clipboard)
 * [`ckeditor/ckeditor5-clipboard` on GitHub](https://github.com/ckeditor/ckeditor5/tree/master/packages/ckeditor5-clipboard)
-* [Issue tracker](https://github.com/ckeditor/ckeditor5/issues)
+* [Issue tracker](https://github.com/ssmckinney/ckeditor5/issues)
 * [Changelog](https://github.com/ckeditor/ckeditor5/blob/master/CHANGELOG.md)

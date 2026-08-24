@@ -591,7 +591,7 @@ describe( 'scrollViewportToShowTarget()', () => {
 			assertScrollPosition( iframeAncestor, { scrollTop: -200, scrollLeft: 100 } );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/930
+		// https://github.com/ssmckinney/ckeditor5/issues/930
 		it( 'should not throw if the child frame has no access to the #frameElement of the parent', () => {
 			vi.spyOn( iframeWindow, 'frameElement', 'get' ).mockReturnValue( null );
 

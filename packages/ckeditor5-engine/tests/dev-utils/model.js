@@ -11,7 +11,7 @@ import { ModelElement } from '../../src/model/element.js';
 import { ModelText } from '../../src/model/text.js';
 import { ModelRange } from '../../src/model/range.js';
 import { ModelPosition } from '../../src/model/position.js';
-import { count } from '@ckeditor/ckeditor5-utils';
+import { count } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'model test utils', () => {
 	let model, document, root, selection;

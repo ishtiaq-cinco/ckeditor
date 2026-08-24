@@ -7,9 +7,9 @@
  * @module media-embed/mediaembedresize/utils/getselectedmediaembedpossibleresizerange
  */
 
-import type { Editor } from '@ckeditor/ckeditor5-core';
-import { calculateResizeHostAncestorWidth } from '@ckeditor/ckeditor5-widget';
-import { _tryCastDimensionsToUnit, _tryParseDimensionWithUnit } from '@ckeditor/ckeditor5-utils';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
+import { calculateResizeHostAncestorWidth } from '@ssmckinney/ckeditor5-widget';
+import { _tryCastDimensionsToUnit, _tryParseDimensionWithUnit } from '@ssmckinney/ckeditor5-utils';
 
 import { getSelectedMediaEmbedEditorNodes } from './getselectedmediaembededitornodes.js';
 

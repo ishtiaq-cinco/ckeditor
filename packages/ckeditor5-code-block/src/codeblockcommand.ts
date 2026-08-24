@@ -7,9 +7,9 @@
  * @module code-block/codeblockcommand
  */
 
-import type { ModelElement, ModelWriter } from '@ckeditor/ckeditor5-engine';
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
-import { first } from '@ckeditor/ckeditor5-utils';
+import type { ModelElement, ModelWriter } from '@ssmckinney/ckeditor5-engine';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
+import { first } from '@ssmckinney/ckeditor5-utils';
 
 import { getNormalizedAndLocalizedLanguageDefinitions, canBeCodeBlock } from './utils.js';
 
@@ -129,7 +129,7 @@ export class CodeBlockCommand extends Command {
 			writer.setAttribute( 'language', language, block );
 			schema.removeDisallowedAttributes( [ block ], writer );
 
-			// Remove children of the  `codeBlock` element that are not allowed. See https://github.com/ckeditor/ckeditor5/issues/9567.
+			// Remove children of the  `codeBlock` element that are not allowed. See https://github.com/ssmckinney/ckeditor5/issues/9567.
 			Array.from( block.getChildren() )
 				.filter( child => !schema.checkChild( block, child ) )
 				.forEach( child => writer.remove( child ) );

@@ -8,7 +8,7 @@
  */
 
 /**
- * The configuration of the image features. Used by the image features in the `@ckeditor/ckeditor5-image` package.
+ * The configuration of the image features. Used by the image features in the `@ssmckinney/ckeditor5-image` package.
  *
  * ```ts
  * ClassicEditor
@@ -442,7 +442,7 @@ export interface ImageConfig {
 }
 
 /**
- * The configuration of the image insert dropdown panel view. Used by the image insert feature in the `@ckeditor/ckeditor5-image` package.
+ * The configuration of the image insert dropdown panel view. Used by the image insert feature in the `@ssmckinney/ckeditor5-image` package.
  *
  * ```ts
  * ClassicEditor
@@ -501,6 +501,69 @@ export interface ImageInsertConfig {
 	 * @default 'block'
 	 */
 	type?: 'inline' | 'block' | 'auto';
+
+	/**
+	 * Adds a URL field per breakpoint to the "Insert image via URL" form, turning it into a way to author a
+	 * [`<picture>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) with one `<source>` per
+	 * breakpoint instead of a lone `<img>`.
+	 *
+	 * Pass `true` for the {@link module:image/imageinsert/utils~DEFAULT_IMAGE_RESPONSIVE_BREAKPOINTS default
+	 * breakpoints}, or a list to choose your own:
+	 *
+	 * ```ts
+	 * ClassicEditor
+	 * 	.create( {
+	 * 		image: {
+	 * 			insert: {
+	 * 				responsive: [
+	 * 					{ label: 'Mobile', media: '(max-width: 767px)' },
+	 * 					{ label: 'Tablet', media: '(min-width: 768px) and (max-width: 1199px)' }
+	 * 				]
+	 * 			}
+	 * 		}
+	 * 	} )
+	 * 	.then( ... )
+	 * 	.catch( ... );
+	 * ```
+	 *
+	 * The URL in the main field stays the `<img src>`: it is the fallback for browsers without `<picture>` support
+	 * and what a viewport matching none of the breakpoints resolves to, so it remains the only required field.
+	 * Breakpoints left blank simply produce no `<source>` and fall back to it:
+	 *
+	 * ```html
+	 * <figure class="image">
+	 * 	<picture>
+	 * 		<source media="(max-width: 767px)" srcset="small.png">
+	 * 		<source media="(min-width: 768px) and (max-width: 1199px)" srcset="medium.png">
+	 * 		<img src="large.png">
+	 * 	</picture>
+	 * </figure>
+	 * ```
+	 *
+	 * **Note**: This requires the {@link module:image/pictureediting~PictureEditing} plugin, which owns the `sources`
+	 * model attribute the fields are written to and converts it both ways. Without it the extra URLs are discarded.
+	 *
+	 * @default false
+	 */
+	responsive?: boolean | Array<ImageResponsiveBreakpoint>;
+}
+
+/**
+ * A single breakpoint offered by
+ * {@link module:image/imageconfig~ImageInsertConfig#responsive `config.image.insert.responsive`}.
+ */
+export interface ImageResponsiveBreakpoint {
+
+	/**
+	 * Labels the URL field in the insert image form, for example `'Mobile'`.
+	 */
+	label: string;
+
+	/**
+	 * The media query written to the `media` attribute of the generated `<source>`,
+	 * for example `'(max-width: 767px)'`.
+	 */
+	media: string;
 }
 
 /**
@@ -711,7 +774,7 @@ export interface ImageStyleOptionDefinition {
 }
 
 /**
- * The configuration of the image upload feature. Used by the image upload feature in the `@ckeditor/ckeditor5-image` package.
+ * The configuration of the image upload feature. Used by the image upload feature in the `@ssmckinney/ckeditor5-image` package.
  *
  * ```ts
  * ClassicEditor

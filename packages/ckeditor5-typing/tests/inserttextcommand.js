@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { InsertTextCommand } from '../src/inserttextcommand.js';
 import { TypingChangeBuffer } from '../src/utils/changebuffer.js';
 import { Input } from '../src/input.js';
@@ -369,7 +369,7 @@ describe( 'InsertTextCommand', () => {
 			);
 
 			// deleteContent() does not support multi-range selections yet, so we need to mock it here.
-			// See https://github.com/ckeditor/ckeditor5/issues/6328.
+			// See https://github.com/ssmckinney/ckeditor5/issues/6328.
 			model.on( 'deleteContent', ( evt, args ) => {
 				const [ selection ] = args;
 

@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { TableLayout } from '../src/tablelayout.js';
 import { TableColumnResize } from '../src/tablecolumnresize.js';
 import { TableLayoutEditing } from '../src/tablelayout/tablelayoutediting.js';

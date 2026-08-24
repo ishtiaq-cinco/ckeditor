@@ -4,7 +4,7 @@
  */
 
 import { describe, it, beforeEach, afterEach, expect } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { ImageCaption } from '../src/imagecaption.js';
 import { ImageCaptionEditing } from '../src/imagecaption/imagecaptionediting.js';
 import { ImageCaptionUI } from '../src/imagecaption/imagecaptionui.js';

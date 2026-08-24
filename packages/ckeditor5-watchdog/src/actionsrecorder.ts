@@ -12,12 +12,12 @@
 import type {
 	Command,
 	Editor
-} from '@ckeditor/ckeditor5-core';
+} from '@ssmckinney/ckeditor5-core';
 
 import type {
 	ViewTypeCheckable,
 	ModelTypeCheckable
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import type {
 	ActionsRecorderEntry,

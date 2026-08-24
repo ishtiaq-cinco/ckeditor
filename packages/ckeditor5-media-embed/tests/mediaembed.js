@@ -4,13 +4,13 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { MediaEmbed } from '../src/mediaembed.js';
 import { MediaEmbedEditing } from '../src/mediaembedediting.js';
 import { MediaEmbedUI } from '../src/mediaembedui.js';
 import { AutoMediaEmbed } from '../src/automediaembed.js';
-import { Widget } from '@ckeditor/ckeditor5-widget';
-import { global } from '@ckeditor/ckeditor5-utils';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
+import { global } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'MediaEmbed', () => {
 	let editorElement, editor;

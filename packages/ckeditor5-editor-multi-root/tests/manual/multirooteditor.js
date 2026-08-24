@@ -4,12 +4,12 @@
  */
 
 import { MultiRootEditor } from '../../src/multirooteditor.js';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { Image, AutoImage, ImageInsert } from '@ckeditor/ckeditor5-image';
-import { LinkImage } from '@ckeditor/ckeditor5-link';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { Image, AutoImage, ImageInsert } from '@ssmckinney/ckeditor5-image';
+import { LinkImage } from '@ssmckinney/ckeditor5-link';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 
 const roots = {
 	intro: {

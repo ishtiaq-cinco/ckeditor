@@ -3,10 +3,10 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 
 import { ImageCaptionEditing } from '../../src/imagecaption/imagecaptionediting.js';
 import { ImageBlockEditing } from '../../src/image/imageblockediting.js';
@@ -14,7 +14,7 @@ import { ImageInlineEditing } from '../../src/image/imageinlineediting.js';
 import { ToggleImageCaptionCommand } from '../../src/imagecaption/toggleimagecaptioncommand.js';
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
+import { _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'ImageCaptionEditing', () => {
 	let editor, model, doc, view;

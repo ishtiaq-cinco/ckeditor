@@ -9,12 +9,12 @@ import { Editor } from '../../src/editor/editor.js';
 import { ClassicTestEditor } from '../../tests/_utils/classictesteditor.js';
 
 import { Plugin } from '../../src/plugin.js';
-import { HtmlDataProcessor, ModelRootElement, _getModelData } from '@ckeditor/ckeditor5-engine';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { HtmlDataProcessor, ModelRootElement, _getModelData } from '@ssmckinney/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
-import { EditorUI, BoxedEditorUIView, InlineEditableUIView } from '@ckeditor/ckeditor5-ui';
+import { EditorUI, BoxedEditorUIView, InlineEditableUIView } from '@ssmckinney/ckeditor5-ui';
 
-import { assertCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { assertCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { removeEditorBodyOrphans } from '../_utils/cleanup.js';
 
 describe( 'ClassicTestEditor', () => {

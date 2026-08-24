@@ -9,17 +9,17 @@ import { CodeBlockCommand } from '../src/codeblockcommand.js';
 import { IndentCodeBlockCommand } from '../src/indentcodeblockcommand.js';
 import { OutdentCodeBlockCommand } from '../src/outdentcodeblockcommand.js';
 
-import { AlignmentEditing } from '@ckeditor/ckeditor5-alignment';
-import { BoldEditing, CodeEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { Enter, ShiftEnter } from '@ckeditor/ckeditor5-enter';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { ViewDocumentDomEventData, _getModelData, _setModelData, _stringifyModel, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { IndentEditing } from '@ckeditor/ckeditor5-indent';
-import { ClipboardPipeline, DragDrop } from '@ckeditor/ckeditor5-clipboard';
+import { AlignmentEditing } from '@ssmckinney/ckeditor5-alignment';
+import { BoldEditing, CodeEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { Enter, ShiftEnter } from '@ssmckinney/ckeditor5-enter';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { ViewDocumentDomEventData, _getModelData, _setModelData, _stringifyModel, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { IndentEditing } from '@ssmckinney/ckeditor5-indent';
+import { ClipboardPipeline, DragDrop } from '@ssmckinney/ckeditor5-clipboard';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { getCode, _clearTranslations, add as addTranslations } from '@ckeditor/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { getCode, _clearTranslations, add as addTranslations } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'CodeBlockEditing', () => {
 	let editor, element, model, view, viewDoc, root;
@@ -858,7 +858,7 @@ describe( 'CodeBlockEditing', () => {
 				} );
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/5910.
+		// See https://github.com/ssmckinney/ckeditor5/issues/5910.
 		it( 'should allow to indent an entire code block with at least two lines', () => {
 			const element = document.createElement( 'div' );
 			document.body.appendChild( element );
@@ -1592,7 +1592,7 @@ describe( 'CodeBlockEditing', () => {
 					} );
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/5924
+			// https://github.com/ssmckinney/ckeditor5/issues/5924
 			it( 'should upcast using only the first class from config as a defining language class', () => {
 				// "baz" is the first class configured for the "baz" language.
 				return ClassicTestEditor.create( '<pre><code class="baz">foo</code></pre>', {
@@ -1613,7 +1613,7 @@ describe( 'CodeBlockEditing', () => {
 				} );
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/5924
+			// https://github.com/ssmckinney/ckeditor5/issues/5924
 			it( 'should not upcast if the class is not the first (defining) language class', () => {
 				// "bar" is the second class configured for the "baz" language.
 				return ClassicTestEditor.create( '<pre><code class="bar">foo</code></pre>', {

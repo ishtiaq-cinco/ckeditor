@@ -9,7 +9,7 @@ import { ModelText } from '../../src/model/text.js';
 import { ModelTextProxy } from '../../src/model/textproxy.js';
 import { Model } from '../../src/model/model.js';
 
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'ModelTextProxy', () => {
 	let model, doc, element, textProxy, root, textProxyNoParent, text, textNoParent;

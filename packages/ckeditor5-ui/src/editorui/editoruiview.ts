@@ -11,7 +11,7 @@ import { View } from '../view.js';
 import { BodyCollection } from './bodycollection.js';
 import { type EditableUIView } from '../editableui/editableuiview.js';
 
-import type { Locale, LocaleTranslate } from '@ckeditor/ckeditor5-utils';
+import type { Locale, LocaleTranslate } from '@ssmckinney/ckeditor5-utils';
 
 import '../../theme/components/editorui/editorui.css';
 import { type MenuBarView } from '../menubar/menubarview.js';

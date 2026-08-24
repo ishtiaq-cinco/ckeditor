@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, beforeEach } from 'vitest';
-import { ModelSelection } from '@ckeditor/ckeditor5-engine';
+import { ModelSelection } from '@ssmckinney/ckeditor5-engine';
 import {
 	TYPE_AROUND_SELECTION_ATTRIBUTE,
 	getTypeAroundFakeCaretPosition

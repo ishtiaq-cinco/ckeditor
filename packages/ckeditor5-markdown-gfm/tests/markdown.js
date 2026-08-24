@@ -6,7 +6,7 @@
 import { describe, it, expect } from 'vitest';
 import { Markdown } from '../src/markdown.js';
 import { MarkdownGfmDataProcessor } from '../src/gfmdataprocessor.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 describe( 'Markdown', () => {
 	it( 'has proper name', () => {

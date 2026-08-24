@@ -37,7 +37,7 @@
 	border-radius: 2px;
 
 	/* The first value should be equal to --ck-spacing-large variable if used in the editor context
-	to avoid the content jumping (See https://github.com/ckeditor/ckeditor5/issues/9825). */
+	to avoid the content jumping (See https://github.com/ssmckinney/ckeditor5/issues/9825). */
 	margin: 0.9em 0;
 
 	/* Code block are language direction–agnostic. */

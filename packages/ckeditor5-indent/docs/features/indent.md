@@ -8,7 +8,7 @@ The block indentation feature lets you set indentation for text blocks such as p
 
 ## Demo
 
-Use the indent {@icon @ckeditor/ckeditor5-icons/theme/icons/indent.svg Indent} or outdent {@icon @ckeditor/ckeditor5-icons/theme/icons/outdent.svg Outdent} toolbar buttons in the editor below to change the indentation level. Try this on different elements: paragraphs, headings, and list items.
+Use the indent {@icon @ssmckinney/ckeditor5-icons/theme/icons/indent.svg Indent} or outdent {@icon @ssmckinney/ckeditor5-icons/theme/icons/outdent.svg Outdent} toolbar buttons in the editor below to change the indentation level. Try this on different elements: paragraphs, headings, and list items.
 
 {@snippet features/indent}
 
@@ -22,7 +22,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, Indent, IndentBlock } from 'ckeditor5';
+import { ClassicEditor, Indent, IndentBlock } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -133,7 +133,7 @@ When all three plugins are loaded, the editor also supports applying visual bloc
 Only the topmost list in the content can be indented or outdented. The selection must be at the start of the list (collapsed or non-collapsed). Use one of the following methods:
 
 * Press <kbd>Tab</kbd> to indent or <kbd>Shift</kbd>+<kbd>Tab</kbd> to outdent the list. The indentation changes in steps (by default, `40px`).
-* Use the indent {@icon @ckeditor/ckeditor5-icons/theme/icons/indent.svg Indent} and outdent {@icon @ckeditor/ckeditor5-icons/theme/icons/outdent.svg Outdent} toolbar buttons. The indentation also changes in steps.
+* Use the indent {@icon @ssmckinney/ckeditor5-icons/theme/icons/indent.svg Indent} and outdent {@icon @ssmckinney/ckeditor5-icons/theme/icons/outdent.svg Outdent} toolbar buttons. The indentation also changes in steps.
 
 <info-box>
 	When multiple lists are selected, the <kbd>Tab</kbd> key only changes the indentation of the first list in the selection. The toolbar buttons change the indentation of all selected lists.
@@ -149,7 +149,7 @@ List items cannot be indented through the editor UI. However, indentation values
 
 A list item's indentation can only be reset in a single step by:
 
-* Using the indent {@icon @ckeditor/ckeditor5-icons/theme/icons/indent.svg Indent} button (if the value is negative) or the outdent {@icon @ckeditor/ckeditor5-icons/theme/icons/outdent.svg Outdent} button (if the value is positive).
+* Using the indent {@icon @ssmckinney/ckeditor5-icons/theme/icons/indent.svg Indent} button (if the value is negative) or the outdent {@icon @ssmckinney/ckeditor5-icons/theme/icons/outdent.svg Outdent} button (if the value is positive).
 * Using the {@link features/remove-format remove format} feature.
 
 The selection must be set inside a list item (or span multiple list items) for these actions to work.

@@ -22,10 +22,10 @@ import { ViewPosition } from '../../../src/view/position.js';
 import { ViewSelection } from '../../../src/view/selection.js';
 import { StylesProcessor } from '../../../src/view/stylesmap.js';
 
-import { count, global, createElement, env, CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { count, global, createElement, env, CKEditorError } from '@ssmckinney/ckeditor5-utils';
 import { createViewRoot } from '../_utils/createroot.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
-import { stubGeometry, assertScrollPosition } from '@ckeditor/ckeditor5-utils/tests/_utils/scroll.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
+import { stubGeometry, assertScrollPosition } from '@ssmckinney/ckeditor5-utils/tests/_utils/scroll.js';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 describe( 'view', () => {
@@ -842,7 +842,7 @@ describe( 'view', () => {
 
 			// Both selection need to stay in sync to avoid inf selection loops
 			// as there's no editing pipeline that would ensure that the view selection
-			// gets changed based on the selectionChange event. See https://github.com/ckeditor/ckeditor5/issues/6655.
+			// gets changed based on the selectionChange event. See https://github.com/ssmckinney/ckeditor5/issues/6655.
 			viewDocument.selection._setTo( viewText, 1 );
 			domSelection.collapse( domText, 1 );
 

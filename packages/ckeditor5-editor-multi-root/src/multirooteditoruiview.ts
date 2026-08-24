@@ -7,10 +7,10 @@
  * @module editor-multi-root/multirooteditoruiview
  */
 
-import { EditorUIView, InlineEditableUIView, MenuBarView, ToolbarView } from '@ckeditor/ckeditor5-ui';
-import type { Locale } from '@ckeditor/ckeditor5-utils';
-import type { EditingView } from '@ckeditor/ckeditor5-engine';
-import type { ViewRootElementDefinition } from '@ckeditor/ckeditor5-core';
+import { EditorUIView, InlineEditableUIView, MenuBarView, ToolbarView } from '@ssmckinney/ckeditor5-ui';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
+import type { EditingView } from '@ssmckinney/ckeditor5-engine';
+import type { ViewRootElementDefinition } from '@ssmckinney/ckeditor5-core';
 
 /**
  * The multi-root editor UI view. It is a virtual view providing an inline

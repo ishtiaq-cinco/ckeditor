@@ -24,7 +24,7 @@ import { type Operation } from './operation.js';
 import { type ModelDocument } from '../document.js';
 import { type History } from '../history.js';
 
-import { compareArrays } from '@ckeditor/ckeditor5-utils';
+import { compareArrays } from '@ssmckinney/ckeditor5-utils';
 
 type TransformationFunction = ( a: Operation, b: Operation, context: TransformationContext ) => Array<Operation>;
 

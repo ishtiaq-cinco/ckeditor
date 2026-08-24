@@ -4,18 +4,18 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Editor } from '@ckeditor/ckeditor5-core';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { Editor } from '@ssmckinney/ckeditor5-core';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
 import { EditorUI } from '../../src/editorui/editorui.js';
 import { BalloonPanelView } from '../../src/index.js';
 import { View } from '../../src/view.js';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Rect, global } from '@ckeditor/ckeditor5-utils';
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
-import { generateLicenseKey } from '@ckeditor/ckeditor5-core/tests/_utils/generatelicensekey.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Rect, global } from '@ssmckinney/ckeditor5-utils';
+import { SourceEditing } from '@ssmckinney/ckeditor5-source-editing';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { generateLicenseKey } from '@ssmckinney/ckeditor5-core/tests/_utils/generatelicensekey.js';
 
 describe( 'EvaluationBadge', () => {
 	let editor, element, developmentLicenseKey;

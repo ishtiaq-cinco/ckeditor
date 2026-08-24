@@ -3,17 +3,17 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Code, Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Table, TablePropertiesEditing, TableCellPropertiesEditing } from '@ckeditor/ckeditor5-table';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Code, Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Table, TablePropertiesEditing, TableCellPropertiesEditing } from '@ssmckinney/ckeditor5-table';
 import { LegacyList } from '../../src/legacylist.js';
 import { LegacyListProperties } from '../../src/legacylistproperties.js';
-import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
+import { Indent, IndentBlock } from '@ssmckinney/ckeditor5-indent';
 import { LegacyTodoList } from '../../src/legacytodolist.js';
-import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
+import { RemoveFormat } from '@ssmckinney/ckeditor5-remove-format';
 
 const config = {
 	root: {

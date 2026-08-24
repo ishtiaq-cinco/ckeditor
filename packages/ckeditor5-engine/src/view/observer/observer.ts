@@ -7,7 +7,7 @@
  * @module engine/view/observer/observer
  */
 
-import { DomEmitterMixin, type DomEmitterMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { DomEmitterMixin, type DomEmitterMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 
 import { type ViewDocument } from '../document.js';
 import { type EditingView } from '../view.js';

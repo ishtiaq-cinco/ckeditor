@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ViewDomConverter, StylesProcessor, ViewDocument, ViewDowncastWriter, _parseView } from '@ckeditor/ckeditor5-engine';
+import { ViewDomConverter, StylesProcessor, ViewDocument, ViewDowncastWriter, _parseView } from '@ssmckinney/ckeditor5-engine';
 import { viewToPlainText } from '../../src/utils/viewtoplaintext.js';
 
 describe( 'viewToPlainText()', () => {

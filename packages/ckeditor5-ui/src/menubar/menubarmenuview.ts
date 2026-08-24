@@ -14,7 +14,7 @@ import {
 	type Locale,
 	type PositioningFunction,
 	type ObservableChangeEvent
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 import { MenuBarMenuButtonView } from './menubarmenubuttonview.js';
 import { MenuBarMenuBehaviors, MenuBarMenuViewPanelPositioningFunctions } from './utils.js';
 import type { FocusableView } from '../focuscycler.js';

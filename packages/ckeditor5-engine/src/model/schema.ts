@@ -25,7 +25,7 @@ import {
 	first,
 	ObservableMixin,
 	type ObservableMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 const ModelSchemaBase: ObservableMixinConstructor = /* #__PURE__ */ ObservableMixin();
 

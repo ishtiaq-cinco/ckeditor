@@ -1,21 +1,21 @@
 {
-  "name": "@ckeditor/ckeditor5-icons",
+  "name": "@ssmckinney/ckeditor5-icons",
   "version": "48.3.0",
   "description": "Icon pack for CKEditor 5.",
   "license": "SEE LICENSE IN LICENSE.md",
   "author": "CKSource (http://cksource.com/)",
   "homepage": "https://ckeditor.com/ckeditor-5",
-  "bugs": "https://github.com/ckeditor/ckeditor5/issues",
+  "bugs": "https://github.com/ssmckinney/ckeditor5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5.git",
+    "url": "https://github.com/ssmckinney/ckeditor5.git",
     "directory": "packages/ckeditor5-icons"
   },
   "keywords": [
     "ckeditor",
     "ckeditor5",
     "ckeditor 5",
-    "ckeditor5-lib"
+    "@ssmckinney/ckeditor5-lib"
   ],
   "type": "module",
   "main": "./src/index.ts",

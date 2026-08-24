@@ -3,13 +3,13 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Typing } from '@ckeditor/ckeditor5-typing';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
 import { Heading } from '../../src/heading.js';
 import { HeadingButtonsUI } from '../../src/headingbuttonsui.js';
-import { Paragraph, ParagraphButtonUI } from '@ckeditor/ckeditor5-paragraph';
-import { Undo } from '@ckeditor/ckeditor5-undo';
+import { Paragraph, ParagraphButtonUI } from '@ssmckinney/ckeditor5-paragraph';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
 
 ClassicEditor
 	.create( {

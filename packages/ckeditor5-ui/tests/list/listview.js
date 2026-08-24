@@ -6,7 +6,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { ViewCollection } from '../../src/viewcollection.js';
 import { ListView } from '../../src/list/listview.js';
-import { KeystrokeHandler, FocusTracker, keyCodes } from '@ckeditor/ckeditor5-utils';
+import { KeystrokeHandler, FocusTracker, keyCodes } from '@ssmckinney/ckeditor5-utils';
 import { FocusCycler } from '../../src/focuscycler.js';
 import { View } from '../../src/view.js';
 import { ListItemGroupView, ListItemView } from '../../src/index.js';

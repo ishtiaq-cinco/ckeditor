@@ -7,16 +7,16 @@ import { describe, it, expect, vi, beforeEach, afterEach, beforeAll, afterAll } 
 
 import { WordCount } from '../src/wordcount.js';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { MultiRootEditor } from '@ckeditor/ckeditor5-editor-multi-root';
-import { _setModelData, ModelPosition } from '@ckeditor/ckeditor5-engine';
-import { add as addTranslations, _clearTranslations, env } from '@ckeditor/ckeditor5-utils';
-import { ShiftEnter } from '@ckeditor/ckeditor5-enter';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { ListEditing } from '@ckeditor/ckeditor5-list';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
-import { ImageCaptionEditing, ImageBlockEditing } from '@ckeditor/ckeditor5-image';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { MultiRootEditor } from '@ssmckinney/ckeditor5-editor-multi-root';
+import { _setModelData, ModelPosition } from '@ssmckinney/ckeditor5-engine';
+import { add as addTranslations, _clearTranslations, env } from '@ssmckinney/ckeditor5-utils';
+import { ShiftEnter } from '@ssmckinney/ckeditor5-enter';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { ListEditing } from '@ssmckinney/ckeditor5-list';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
+import { ImageCaptionEditing, ImageBlockEditing } from '@ssmckinney/ckeditor5-image';
 
 // Delay related to word-count throttling.
 const DELAY = 300;

@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { Code, Font } from 'ckeditor5';
+import { Code, Font } from '@ssmckinney/ckeditor5';
 import { ClassicEditor } from '@snippets/index.js';
 
 export class ExtendingContentEditor extends ClassicEditor {

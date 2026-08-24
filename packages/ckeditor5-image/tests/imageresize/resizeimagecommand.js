@@ -4,12 +4,12 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Widget } from '@ckeditor/ckeditor5-widget';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { ResizeImageCommand } from '../../src/imageresize/resizeimagecommand.js';
 import { ImageResizeEditing } from '../../src/imageresize/imageresizeediting.js';
 import { ImageCaptionEditing } from '../../src/imagecaption/imagecaptionediting.js';

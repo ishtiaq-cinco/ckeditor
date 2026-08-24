@@ -12,7 +12,7 @@ The to-do list feature lets you create a list of interactive checkboxes with lab
 
 ## Demo
 
-Use the to-do list toolbar button {@icon @ckeditor/ckeditor5-icons/theme/icons/todo-list.svg To-do list} to add a list to the editor content. Thanks to the integration with the {@link features/autoformat autoformatting feature}, you can also start a line with `[ ]` or `[x]` followed by a space to insert an unchecked or checked list item.
+Use the to-do list toolbar button {@icon @ssmckinney/ckeditor5-icons/theme/icons/todo-list.svg To-do list} to add a list to the editor content. Thanks to the integration with the {@link features/autoformat autoformatting feature}, you can also start a line with `[ ]` or `[x]` followed by a space to insert an unchecked or checked list item.
 
 {@snippet features/todo-list}
 
@@ -30,7 +30,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, TodoList } from 'ckeditor5';
+import { ClassicEditor, TodoList } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {

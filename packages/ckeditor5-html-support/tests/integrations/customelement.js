@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { Link } from '@ckeditor/ckeditor5-link';
-import { _getModelData, _getViewData, _VIEW_INLINE_FILLER } from '@ckeditor/ckeditor5-engine';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { Link } from '@ssmckinney/ckeditor5-link';
+import { _getModelData, _getViewData, _VIEW_INLINE_FILLER } from '@ssmckinney/ckeditor5-engine';
 
 import { GeneralHtmlSupport } from '../../src/generalhtmlsupport.js';
 import { getModelDataWithAttributes } from '../_utils/utils.js';
@@ -71,7 +71,7 @@ describe( 'CustomElementSupport', () => {
 		expect( editor.getData() ).toBe( '<custom-foo-element>bar</custom-foo-element>' );
 	} );
 
-	// See https://github.com/ckeditor/ckeditor5/issues/14933.
+	// See https://github.com/ssmckinney/ckeditor5/issues/14933.
 	it( 'should allow <template> element', () => {
 		dataFilter.allowElement( /.*/ );
 		editor.setData( '<template>bar</template>' );
@@ -262,7 +262,7 @@ describe( 'CustomElementSupport', () => {
 			expect( editor.getData() ).toBe( '<p>foo <custom>this is <p>some content</p>and more of it </custom>bar</p>' );
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/14933.
+		// See https://github.com/ssmckinney/ckeditor5/issues/14933.
 		it( 'should preserve <`template> element content', () => {
 			dataFilter.allowElement( /.*/ );
 			editor.setData( 'foo <template>this is <p>some content</p> and more of it</template> bar' );

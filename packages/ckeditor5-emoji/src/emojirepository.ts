@@ -10,15 +10,15 @@
 import fuzzysort from 'fuzzysort';
 import { groupBy } from 'es-toolkit/compat';
 
-import { type Editor, Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { logWarning, version as editorVersion, type ObservableChangeEvent } from '@ckeditor/ckeditor5-utils';
+import { type Editor, Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { logWarning, version as editorVersion, type ObservableChangeEvent } from '@ssmckinney/ckeditor5-utils';
 import { EmojiUtils } from './emojiutils.js';
 import { EmojiRepositoryCache } from './utils/emojirepositorycache.js';
 import type { EmojiSkinToneId } from './emojiconfig.js';
 
 // An endpoint from which the emoji data will be downloaded during plugin initialization.
 // The `{version}` placeholder is replaced with the value from editor config.
-const DEFAULT_EMOJI_DATABASE_URL = 'https://cdn.ckeditor.com/ckeditor5/data/emoji/{version}/en.json';
+const DEFAULT_EMOJI_DATABASE_URL = 'https://cdn.ckeditor.com/@ssmckinney/ckeditor5/data/emoji/{version}/en.json';
 
 const DEFAULT_EMOJI_VERSION = 16;
 

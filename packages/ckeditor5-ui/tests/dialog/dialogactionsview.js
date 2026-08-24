@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { FocusTracker, KeystrokeHandler, keyCodes } from '@ckeditor/ckeditor5-utils';
+import { FocusTracker, KeystrokeHandler, keyCodes } from '@ssmckinney/ckeditor5-utils';
 import { ButtonView, FocusCycler, View, ViewCollection } from '../../src/index.js';
 import { DialogActionsView } from '../../src/dialog/dialogactionsview.js';
 

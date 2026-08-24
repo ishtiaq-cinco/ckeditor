@@ -16,7 +16,7 @@ import {
 	type ViewSelectionChangeEvent
 } from './selection.js';
 
-import { EmitterMixin, type EmitterMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { EmitterMixin, type EmitterMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 
 import { type ViewEditableElement } from './editableelement.js';
 import { type ViewElement } from './element.js';

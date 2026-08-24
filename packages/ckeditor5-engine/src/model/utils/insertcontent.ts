@@ -22,7 +22,7 @@ import { type ModelWriter } from '../writer.js';
 import { type ModelNode } from '../node.js';
 import { type ModelSelection } from '../selection.js';
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Inserts content into the editor (specified selection) as one would expect the paste functionality to work.

@@ -7,7 +7,7 @@
  * @module media-embed/mediaembedstyle
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { MediaEmbedStyleEditing } from './mediaembedstyle/mediaembedstyleediting.js';
 import { MediaEmbedStyleUI } from './mediaembedstyle/mediaembedstyleui.js';
 

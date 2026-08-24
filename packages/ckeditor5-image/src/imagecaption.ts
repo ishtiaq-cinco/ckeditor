@@ -7,7 +7,7 @@
  * @module image/imagecaption
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { ImageCaptionEditing } from './imagecaption/imagecaptionediting.js';
 import { ImageCaptionUI } from './imagecaption/imagecaptionui.js';
 

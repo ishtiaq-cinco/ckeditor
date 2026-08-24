@@ -7,18 +7,18 @@ import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 
 import { BalloonEditor } from '../src/ballooneditor.js';
 import { BalloonEditorUI } from '../src/ballooneditorui.js';
-import { EditorUI, BalloonToolbar } from '@ckeditor/ckeditor5-ui';
+import { EditorUI, BalloonToolbar } from '@ssmckinney/ckeditor5-ui';
 import { BalloonEditorUIView } from '../src/ballooneditoruiview.js';
-import { Image, ImageCaption, ImageToolbar } from '@ckeditor/ckeditor5-image';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Heading } from '@ckeditor/ckeditor5-heading';
+import { Image, ImageCaption, ImageToolbar } from '@ssmckinney/ckeditor5-image';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
 
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
 import { isElement } from 'es-toolkit/compat';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
-import { assertBinding } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
-import { normalizeRootsConfig, Plugin } from '@ckeditor/ckeditor5-core';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { assertBinding } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
+import { normalizeRootsConfig, Plugin } from '@ssmckinney/ckeditor5-core';
 
 describe( 'BalloonEditorUI', () => {
 	let editor, view, ui, viewElement;
@@ -372,7 +372,7 @@ describe( 'Focus handling and navigation between editing root and editor toolbar
 
 			_setModelData( editor.model,
 				'<paragraph>foo</paragraph>' +
-				'[<imageBlock src="https://ckeditor.com/docs/ckeditor5/latest/assets/img/warsaw.jpg"><caption>bar</caption></imageBlock>]' +
+				'[<imageBlock src="https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/assets/img/warsaw.jpg"><caption>bar</caption></imageBlock>]' +
 				'<paragraph>baz</paragraph>'
 			);
 

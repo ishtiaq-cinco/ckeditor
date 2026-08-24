@@ -3,19 +3,19 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
 
 import { UndoEditing } from '../src/undoediting.js';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
 
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
@@ -773,7 +773,7 @@ describe( 'UndoEditing integration', () => {
 	} );
 
 	describe( 'other reported cases', () => {
-		// ckeditor5-engine#t/1051
+		// @ssmckinney/ckeditor5-engine#t/1051
 		it( 'rename leaks to other elements on undo #1', () => {
 			input( '<heading1>[]Foo</heading1><paragraph>Bar</paragraph>' );
 
@@ -844,7 +844,7 @@ describe( 'UndoEditing integration', () => {
 			output( '<heading1>[]Foo</heading1><paragraph>Bar</paragraph>' );
 		} );
 
-		// ckeditor5-engine#t/1053
+		// @ssmckinney/ckeditor5-engine#t/1053
 		it( 'wrap, split, undo, undo is correct', () => {
 			// Add a "div feature".
 			model.schema.register( 'div', {
@@ -874,7 +874,7 @@ describe( 'UndoEditing integration', () => {
 			output( '<paragraph>[]Foo</paragraph><paragraph>Bar</paragraph>' );
 		} );
 
-		// ckeditor5-engine#t/1055
+		// @ssmckinney/ckeditor5-engine#t/1055
 		it( 'selection attribute setting: split, bold, merge, undo, undo, undo', () => {
 			input( '<paragraph>Foo[]</paragraph><paragraph>Bar</paragraph>' );
 
@@ -949,7 +949,7 @@ describe( 'UndoEditing integration', () => {
 			};
 		}
 
-		// ckeditor5-engine#t/1065
+		// @ssmckinney/ckeditor5-engine#t/1065
 		it( 'undo paste into non empty element should not throw and be correct', () => {
 			model.change( () => {
 				input( '<paragraph>Foo[]</paragraph>' );
@@ -974,7 +974,7 @@ describe( 'UndoEditing integration', () => {
 			output( '<paragraph>Foo[]</paragraph>' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/781
+		// https://github.com/ssmckinney/ckeditor5/issues/781
 		it( 'cutting should not create empty undo step', () => {
 			input( '<paragraph>Fo[oba]r</paragraph>' );
 
@@ -1002,7 +1002,7 @@ describe( 'UndoEditing integration', () => {
 			output( '<paragraph>fo[o</paragraph><paragraph>b]ar</paragraph>' );
 		} );
 
-		// Related to ckeditor5-engine#891 and ckeditor5-list#51.
+		// Related to @ssmckinney/ckeditor5-engine#891 and @ssmckinney/ckeditor5-list#51.
 		it( 'change attribute of removed node then undo and redo', () => {
 			input( '<paragraph></paragraph>' );
 

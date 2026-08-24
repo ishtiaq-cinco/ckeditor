@@ -7,7 +7,7 @@
  * @module basic-styles/strikethrough/strikethroughediting
  */
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 import { AttributeCommand } from '../attributecommand.js';
 
 const STRIKETHROUGH = 'strikethrough';

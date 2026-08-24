@@ -7,10 +7,10 @@
  * @module style/stylecommand
  */
 
-import type { ModelDocumentSelection, ModelElement } from '@ckeditor/ckeditor5-engine';
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
-import { logWarning, first } from '@ckeditor/ckeditor5-utils';
-import type { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+import type { ModelDocumentSelection, ModelElement } from '@ssmckinney/ckeditor5-engine';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
+import { logWarning, first } from '@ssmckinney/ckeditor5-utils';
+import type { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
 
 import {
 	StyleUtils,
@@ -249,7 +249,7 @@ export class StyleCommand extends Command {
 /**
  * Returns classes that are defined only in the supplied definition and not in any other active definition. It's used
  * to ensure that classes used by other definitions are preserved when a style is removed.
- * See https://github.com/ckeditor/ckeditor5/issues/11748.
+ * See https://github.com/ssmckinney/ckeditor5/issues/11748.
  *
  * @param activeDefinitions All currently active definitions affecting selected element(s).
  * @param definition Definition whose classes will be compared with all other active definition classes.

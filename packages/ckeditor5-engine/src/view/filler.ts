@@ -32,7 +32,7 @@
  * @module engine/view/filler
  */
 
-import { keyCodes, isText, type KeystrokeInfo } from '@ckeditor/ckeditor5-utils';
+import { keyCodes, isText, type KeystrokeInfo } from '@ssmckinney/ckeditor5-utils';
 import { type EditingView } from './view.js';
 import { type ViewDocumentDomEventData } from './observer/domeventdata.js';
 import type { ViewDocumentArrowKeyEvent } from './observer/arrowkeysobserver.js';

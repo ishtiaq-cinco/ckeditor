@@ -16,9 +16,9 @@ import { InsertOperation } from '../../src/model/operation/insertoperation.js';
 import { MoveOperation } from '../../src/model/operation/moveoperation.js';
 import { AttributeOperation } from '../../src/model/operation/attributeoperation.js';
 import { SplitOperation } from '../../src/model/operation/splitoperation.js';
-import { Collection, count } from '@ckeditor/ckeditor5-utils';
+import { Collection, count } from '@ssmckinney/ckeditor5-utils';
 import { _setModelData, _getModelData } from '../../src/dev-utils/model.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'DocumentSelection', () => {
 	let model, doc, root, selection, liveRange, range;

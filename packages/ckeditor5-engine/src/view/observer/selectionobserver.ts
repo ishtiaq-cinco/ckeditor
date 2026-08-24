@@ -10,7 +10,7 @@
 import { Observer } from './observer.js';
 import { MutationObserver } from './mutationobserver.js';
 import { FocusObserver } from './focusobserver.js';
-import { env, type ObservableChangeEvent } from '@ckeditor/ckeditor5-utils';
+import { env, type ObservableChangeEvent } from '@ssmckinney/ckeditor5-utils';
 import { debounce } from 'es-toolkit/compat';
 
 import type { EditingView } from '../view.js';
@@ -261,7 +261,7 @@ export class SelectionObserver extends Observer {
 	private _reportInfiniteLoop() {
 	// @if CK_DEBUG //		throw new Error(
 	// @if CK_DEBUG //			'Selection change observer detected an infinite rendering loop.\n\n' +
-	// @if CK_DEBUG //	 		'⚠️⚠️ Report this error on https://github.com/ckeditor/ckeditor5/issues/11658.'
+	// @if CK_DEBUG //	 		'⚠️⚠️ Report this error on https://github.com/ssmckinney/ckeditor5/issues/11658.'
 	// @if CK_DEBUG //		);
 	}
 
@@ -341,7 +341,7 @@ export class SelectionObserver extends Observer {
 			// whose parent has already been detached from the DOM. In most cases this is harmless, but if the selectionchange
 			// event fires before the view is fully synchronized with the DOM converter, some elements in the selection may become orphans.
 			// This can result in the view being out of sync with the actual DOM structure.
-			// See: https://github.com/ckeditor/ckeditor5/issues/18744
+			// See: https://github.com/ssmckinney/ckeditor5/issues/18744
 			this.view.forceRender();
 		} else if ( this.selection.isSimilar( newViewSelection ) ) {
 			// If selection was equal and we are at this point of algorithm, it means that it was incorrect.

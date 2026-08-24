@@ -4,36 +4,36 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
 
-import { CodeBlockEditing } from '@ckeditor/ckeditor5-code-block';
+import { CodeBlockEditing } from '@ssmckinney/ckeditor5-code-block';
 
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
 
-import { HighlightEditing } from '@ckeditor/ckeditor5-highlight';
+import { HighlightEditing } from '@ssmckinney/ckeditor5-highlight';
 
-import { HtmlEmbedEditing } from '@ckeditor/ckeditor5-html-embed';
+import { HtmlEmbedEditing } from '@ssmckinney/ckeditor5-html-embed';
 
-import { ImageBlockEditing, ImageInlineEditing, ImageCaptionEditing } from '@ckeditor/ckeditor5-image';
+import { ImageBlockEditing, ImageInlineEditing, ImageCaptionEditing } from '@ssmckinney/ckeditor5-image';
 
-import { IndentBlock, IndentEditing } from '@ckeditor/ckeditor5-indent';
+import { IndentBlock, IndentEditing } from '@ssmckinney/ckeditor5-indent';
 
-import { LinkEditing, LinkImageEditing } from '@ckeditor/ckeditor5-link';
+import { LinkEditing, LinkImageEditing } from '@ssmckinney/ckeditor5-link';
 
-import { ListEditing, ListPropertiesEditing, TodoListEditing } from '@ckeditor/ckeditor5-list';
+import { ListEditing, ListPropertiesEditing, TodoListEditing } from '@ssmckinney/ckeditor5-list';
 
-import { MediaEmbedEditing } from '@ckeditor/ckeditor5-media-embed';
+import { MediaEmbedEditing } from '@ssmckinney/ckeditor5-media-embed';
 
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
+import { SourceEditing } from '@ssmckinney/ckeditor5-source-editing';
 
-import { TableEditing, TableCaption } from '@ckeditor/ckeditor5-table';
+import { TableEditing, TableCaption } from '@ssmckinney/ckeditor5-table';
 
 import { HtmlComment } from '../src/htmlcomment.js';
-import { MultiRootEditor } from '@ckeditor/ckeditor5-editor-multi-root';
+import { MultiRootEditor } from '@ssmckinney/ckeditor5-editor-multi-root';
 
 describe( 'HtmlComment integration', () => {
 	describe( 'integration with BlockQuote', () => {
@@ -739,7 +739,7 @@ describe( 'HtmlComment integration', () => {
 			);
 
 			// Currently, if input element in a to-do list is preceded by a comment, a to-do list is not created.
-			// See https://github.com/ckeditor/ckeditor5/issues/10129.
+			// See https://github.com/ssmckinney/ckeditor5/issues/10129.
 			//
 			// expect( editor.getData() ).toBe(
 			// 	'<ul class="todo-list">' +
@@ -1121,7 +1121,7 @@ describe( 'HtmlComment integration', () => {
 			return editor.destroy();
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/10116.
+		// See https://github.com/ssmckinney/ckeditor5/issues/10116.
 		it( 'should work if comment is in an empty table cell', async () => {
 			editor = await createEditor(
 				'<table>' +
@@ -1149,7 +1149,7 @@ describe( 'HtmlComment integration', () => {
 			);
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/10116.
+		// See https://github.com/ssmckinney/ckeditor5/issues/10116.
 		it( 'should work if comment is in table cell after empty paragraph', async () => {
 			editor = await createEditor(
 				'<table>' +
@@ -1178,7 +1178,7 @@ describe( 'HtmlComment integration', () => {
 			);
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/10116.
+		// See https://github.com/ssmckinney/ckeditor5/issues/10116.
 		it( 'should work if comment is in table cell after non-empty paragraph', async () => {
 			editor = await createEditor(
 				'<table>' +

@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
 import { GeneralHtmlSupport } from '../../src/generalhtmlsupport.js';
 
 describe( 'bug #13803', () => {

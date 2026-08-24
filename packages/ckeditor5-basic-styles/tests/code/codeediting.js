@@ -7,12 +7,12 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
 import { CodeEditing } from '../../src/code/codeediting.js';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 import { AttributeCommand } from '../../src/attributecommand.js';
 
-import { _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
+import { _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'CodeEditing', () => {
 	let editor, model;
@@ -94,7 +94,7 @@ describe( 'CodeEditing', () => {
 			expect( editor.getData() ).toEqual( '<p><code>foo</code>bar</p>' );
 		} );
 
-		// See: https://github.com/ckeditor/ckeditor5/issues/17789
+		// See: https://github.com/ssmckinney/ckeditor5/issues/17789
 		it( 'should not convert word-wrap:break-word to code attribute', () => {
 			editor.setData( '<p><span style="word-wrap: break-word">foo</span>bar</p>' );
 

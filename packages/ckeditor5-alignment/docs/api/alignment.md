@@ -19,7 +19,7 @@ See the {@link features/text-alignment text alignment feature guide} and the {@l
 This package is part of our open-source aggregate package.
 
 ```bash
-npm install ckeditor5
+npm install @ssmckinney/ckeditor5
 ```
 
 ## Contribute
@@ -28,7 +28,7 @@ The source code of this package is available on GitHub in [https://github.com/ck
 
 ## External links
 
-* [`@ckeditor/ckeditor5-alignment` on npm](https://www.npmjs.com/package/@ckeditor/ckeditor5-alignment)
+* [`@ssmckinney/ckeditor5-alignment` on npm](https://www.npmjs.com/package/@ssmckinney/ckeditor5-alignment)
 * [`ckeditor/ckeditor5-alignment` on GitHub](https://github.com/ckeditor/ckeditor5/tree/master/packages/ckeditor5-alignment)
-* [Issue tracker](https://github.com/ckeditor/ckeditor5/issues)
+* [Issue tracker](https://github.com/ssmckinney/ckeditor5/issues)
 * [Changelog](https://github.com/ckeditor/ckeditor5/blob/master/CHANGELOG.md)

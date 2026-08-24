@@ -32,7 +32,7 @@ import { ViewRange } from '../../src/view/range.js';
 import { StylesProcessor } from '../../src/view/stylesmap.js';
 import { ModelWriter } from '../../src/model/writer.js';
 
-import { toArray } from '@ckeditor/ckeditor5-utils';
+import { toArray } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'UpcastHelpers', () => {
 	let upcastDispatcher, model, schema, upcastHelpers, viewDocument;
@@ -868,7 +868,7 @@ describe( 'UpcastHelpers', () => {
 			);
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/11000
+		// https://github.com/ssmckinney/ckeditor5/issues/11000
 		it( 'should not set an attribute on child nodes if parent was not converted', () => {
 			upcastHelpers.elementToElement( { view: 'p', model: 'paragraph' } );
 			upcastHelpers.attributeToAttribute( { view: { key: 'foo' }, model: 'foo' } );

@@ -39,7 +39,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, Base64UploadAdapter } from 'ckeditor5';
+import { ClassicEditor, Base64UploadAdapter } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {

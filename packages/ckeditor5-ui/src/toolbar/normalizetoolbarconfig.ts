@@ -7,7 +7,7 @@
  * @module ui/toolbar/normalizetoolbarconfig
  */
 
-import type { ToolbarConfig, ToolbarConfigItem } from '@ckeditor/ckeditor5-core';
+import type { ToolbarConfig, ToolbarConfigItem } from '@ssmckinney/ckeditor5-core';
 
 /**
  * Normalizes the toolbar configuration (`config.toolbar`), which:

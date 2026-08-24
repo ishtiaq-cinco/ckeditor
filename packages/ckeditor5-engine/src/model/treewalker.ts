@@ -20,7 +20,7 @@ import { type ModelDocumentFragment } from './documentfragment.js';
 import { type ModelItem } from './item.js';
 import { type ModelRange } from './range.js';
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Position iterator class. It allows to iterate forward and backward over the document.
@@ -240,7 +240,7 @@ export class ModelTreeWalker implements Iterable<ModelTreeWalkerValue> {
 
 		// Get node just after the current position.
 		// Use a highly optimized version instead of checking the text node first and then getting the node after.
-		// See https://github.com/ckeditor/ckeditor5/issues/6582.
+		// See https://github.com/ssmckinney/ckeditor5/issues/6582.
 		const textNodeAtPosition = getTextNodeAtPosition( position, parent );
 		const node = textNodeAtPosition || getNodeAfterPosition( position, parent, textNodeAtPosition );
 
@@ -320,7 +320,7 @@ export class ModelTreeWalker implements Iterable<ModelTreeWalkerValue> {
 
 		// Get node just before the current position.
 		// Use a highly optimized version instead of checking the text node first and then getting the node before.
-		// See https://github.com/ckeditor/ckeditor5/issues/6582.
+		// See https://github.com/ssmckinney/ckeditor5/issues/6582.
 		const positionParent = position.parent;
 		const textNodeAtPosition = getTextNodeAtPosition( position, positionParent );
 		const node = textNodeAtPosition || getNodeBeforePosition( position, positionParent, textNodeAtPosition );

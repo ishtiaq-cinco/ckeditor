@@ -6,16 +6,16 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { MediaEmbed } from '../src/mediaembed.js';
 import { AutoMediaEmbed } from '../src/automediaembed.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Link } from '@ckeditor/ckeditor5-link';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Image, ImageCaption } from '@ckeditor/ckeditor5-image';
-import { Table } from '@ckeditor/ckeditor5-table';
-import { global } from '@ckeditor/ckeditor5-utils';
-import { ViewDocumentDomEventData, _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Link } from '@ssmckinney/ckeditor5-link';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Image, ImageCaption } from '@ssmckinney/ckeditor5-image';
+import { Table } from '@ssmckinney/ckeditor5-table';
+import { global } from '@ssmckinney/ckeditor5-utils';
+import { ViewDocumentDomEventData, _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'AutoMediaEmbed - integration', () => {
 	let editorElement, editor;
@@ -355,7 +355,7 @@ describe( 'AutoMediaEmbed - integration', () => {
 			);
 		} );
 
-		// s/ckeditor5/3
+		// s/@ssmckinney/ckeditor5/3
 		it( 'should handle invalid URL with repeated characters', () => {
 			const invalidURL = 'a.' + 'a'.repeat( 100000 ) + '^';
 

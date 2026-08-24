@@ -4,16 +4,16 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { ImageBlock, ImageCaption } from '@ckeditor/ckeditor5-image';
-import { CodeBlock } from '@ckeditor/ckeditor5-code-block';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { Table } from '@ckeditor/ckeditor5-table';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ImageBlock, ImageCaption } from '@ssmckinney/ckeditor5-image';
+import { CodeBlock } from '@ssmckinney/ckeditor5-code-block';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { Table } from '@ssmckinney/ckeditor5-table';
+import { HorizontalLine } from '@ssmckinney/ckeditor5-horizontal-line';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { Style } from '../src/style.js';
 
@@ -635,7 +635,7 @@ describe( 'StyleCommand', () => {
 				);
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/11588
+			// https://github.com/ssmckinney/ckeditor5/issues/11588
 			it( 'should detect applied multiple inline styles (ignore basic styles)', () => {
 				_setModelData( model, '<paragraph>[foobar]</paragraph>' );
 
@@ -674,7 +674,7 @@ describe( 'StyleCommand', () => {
 			expect( stub.mock.calls[ 0 ][ 0 ] ).toContain( 'style-command-executed-with-incorrect-style-name' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/11748
+		// https://github.com/ssmckinney/ckeditor5/issues/11748
 		it( 'should keep classes of removed style if other active styles also use them', () => {
 			_setModelData( model, '<codeBlock language="typescript">[]</codeBlock>' );
 

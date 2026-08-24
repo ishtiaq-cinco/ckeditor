@@ -14,7 +14,7 @@ import {
 	EmitterMixin,
 	compareArrays,
 	type EmitterMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import type { ViewDocument, ViewDocumentChangeType } from './document.js';
 import { type ViewDocumentFragment } from './documentfragment.js';

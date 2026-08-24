@@ -3,13 +3,13 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { Undo } from '@ckeditor/ckeditor5-undo';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
 import { ViewPosition } from '../../../src/view/position.js';
 
 function createEndingUIElement( writer ) {

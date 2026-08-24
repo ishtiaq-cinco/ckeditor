@@ -15,7 +15,7 @@ import { type ViewEditableElement } from './editableelement.js';
 import { type ViewElement } from './element.js';
 import { type EditingView } from './view.js';
 
-import { logWarning, type ObservableChangeEvent } from '@ckeditor/ckeditor5-utils';
+import { logWarning, type ObservableChangeEvent } from '@ssmckinney/ckeditor5-utils';
 
 // Each document stores information about its placeholder elements and check functions.
 const documentPlaceholders = new WeakMap<ViewDocument, Map<ViewElement, PlaceholderConfig>>();
@@ -256,8 +256,8 @@ function updateDocumentPlaceholders(
 		// This can happen when user replaces the first child element of the parent element
 		// with new one, but the previous one is still in the view tree.
 		// See:
-		// https://github.com/ckeditor/ckeditor5/issues/14354
-		// https://github.com/ckeditor/ckeditor5/issues/18149
+		// https://github.com/ssmckinney/ckeditor5/issues/14354
+		// https://github.com/ssmckinney/ckeditor5/issues/18149
 		if ( hostElement !== config.hostElement && config.hostElement ) {
 			writer.removeAttribute( 'data-placeholder', config.hostElement );
 			hideViewPlaceholder( writer, config.hostElement );

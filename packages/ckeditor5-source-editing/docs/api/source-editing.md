@@ -19,7 +19,7 @@ See the {@link features/source-editing source code editing feature guide} and th
 This package is part of our open-source aggregate package.
 
 ```bash
-npm install ckeditor5
+npm install @ssmckinney/ckeditor5
 ```
 
 ## Contribute
@@ -28,7 +28,7 @@ The source code of this package is available on GitHub in [https://github.com/ck
 
 ## External links
 
-* [`@ckeditor/ckeditor5-source-editing` on npm](https://www.npmjs.com/package/@ckeditor/ckeditor5-source-editing)
+* [`@ssmckinney/ckeditor5-source-editing` on npm](https://www.npmjs.com/package/@ssmckinney/ckeditor5-source-editing)
 * [`ckeditor/ckeditor5-source-editing` on GitHub](https://github.com/ckeditor/ckeditor5/tree/master/packages/ckeditor5-source-editing)
-* [Issue tracker](https://github.com/ckeditor/ckeditor5/issues)
+* [Issue tracker](https://github.com/ssmckinney/ckeditor5/issues)
 * [Changelog](https://github.com/ckeditor/ckeditor5/blob/master/CHANGELOG.md)

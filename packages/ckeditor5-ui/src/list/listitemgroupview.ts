@@ -14,7 +14,7 @@ import { type ListItemView } from './listitemview.js';
 import { LabelView } from '../label/labelview.js';
 import { ListSeparatorView } from './listseparatorview.js';
 
-import { type Locale } from '@ckeditor/ckeditor5-utils';
+import { type Locale } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * The list item group view class.

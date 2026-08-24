@@ -7,11 +7,11 @@ import { DeleteCommand } from '../src/deletecommand.js';
 import { Delete } from '../src/delete.js';
 import { TypingChangeBuffer } from '../src/utils/changebuffer.js';
 
-import { ParagraphCommand } from '@ckeditor/ckeditor5-paragraph';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { ParagraphCommand } from '@ssmckinney/ckeditor5-paragraph';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
 
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 

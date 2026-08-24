@@ -7,23 +7,23 @@ import { ListEditing } from '../../../src/list/listediting.js';
 import { isListItemBlock } from '../../../src/list/utils/model.js';
 import { modelList } from '../_utils/utils.js';
 
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ImageBlockEditing, ImageInlineEditing } from '@ckeditor/ckeditor5-image';
-import { Widget } from '@ckeditor/ckeditor5-widget';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ImageBlockEditing, ImageInlineEditing } from '@ssmckinney/ckeditor5-image';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import {
 	_getModelData,
 	_parseModel,
 	_setModelData,
-	_parseView } from '@ckeditor/ckeditor5-engine';
+	_parseView } from '@ssmckinney/ckeditor5-engine';
 
 import { stubUid } from '../_utils/uid.js';
 

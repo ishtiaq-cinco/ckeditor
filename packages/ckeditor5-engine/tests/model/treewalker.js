@@ -12,7 +12,7 @@ import { ModelTreeWalker } from '../../src/model/treewalker.js';
 import { ModelPosition } from '../../src/model/position.js';
 import { ModelRange } from '../../src/model/range.js';
 
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'ModelTreeWalker', () => {
 	let model, doc, root, img1, paragraph, ba, r, img2, x,

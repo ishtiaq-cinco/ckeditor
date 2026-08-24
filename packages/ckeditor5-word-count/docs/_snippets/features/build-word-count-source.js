@@ -34,7 +34,7 @@ import {
 	TextTransformation,
 	CloudServices,
 	WordCount
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 
 const builtinPlugins = [
 	Essentials,

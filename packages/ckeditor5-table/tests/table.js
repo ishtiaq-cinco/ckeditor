@@ -10,7 +10,7 @@ import { TableUI } from '../src/tableui.js';
 import { TableSelection } from '../src/tableselection.js';
 import { TableClipboard } from '../src/tableclipboard.js';
 import { TableKeyboard } from '../src/tablekeyboard.js';
-import { Widget } from '@ckeditor/ckeditor5-widget';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
 import { TableMouse } from '../src/tablemouse.js';
 
 describe( 'Table', () => {

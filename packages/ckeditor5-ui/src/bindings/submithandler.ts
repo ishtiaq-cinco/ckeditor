@@ -16,7 +16,7 @@ import { type View } from '../view.js';
  * {@link module:utils/dom/emittermixin~DomEmitter emitter}, e.g. to serialize the form data.
  *
  * ```ts
- * import { submitHandler } from '@ckeditor/ckeditor5-ui/src/bindings/submithandler';
+ * import { submitHandler } from '@ssmckinney/ckeditor5-ui/src/bindings/submithandler';
  *
  * // ...
  *

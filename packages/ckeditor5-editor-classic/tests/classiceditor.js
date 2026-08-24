@@ -8,13 +8,13 @@ import { ClassicEditor } from '../src/classiceditor.js';
 import { ClassicEditorUI } from '../src/classiceditorui.js';
 import { ClassicEditorUIView } from '../src/classiceditoruiview.js';
 
-import { HtmlDataProcessor, ModelRootElement } from '@ckeditor/ckeditor5-engine';
+import { HtmlDataProcessor, ModelRootElement } from '@ssmckinney/ckeditor5-engine';
 
-import { Context, Plugin } from '@ckeditor/ckeditor5-core';
-import { EditorWatchdog, ContextWatchdog } from '@ckeditor/ckeditor5-watchdog';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { Context, Plugin } from '@ssmckinney/ckeditor5-core';
+import { EditorWatchdog, ContextWatchdog } from '@ssmckinney/ckeditor5-watchdog';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'ClassicEditor', () => {
 	let editor, editorElement;
@@ -778,7 +778,7 @@ describe( 'ClassicEditor', () => {
 			} );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/8974
+		// https://github.com/ssmckinney/ckeditor5/issues/8974
 		it( 'initializes with empty content if legacy config.initialData is set to an empty string', () => {
 			return ClassicEditor.create( editorElement, {
 				initialData: '',

@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { ButtonView } from '@ckeditor/ckeditor5-ui';
-import { EventInfo } from '@ckeditor/ckeditor5-utils';
-import { ViewDocumentDomEventData } from '@ckeditor/ckeditor5-engine';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ButtonView } from '@ssmckinney/ckeditor5-ui';
+import { EventInfo } from '@ssmckinney/ckeditor5-utils';
+import { ViewDocumentDomEventData } from '@ssmckinney/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 import { LinkImage } from '../src/linkimage.js';
 import { LinkImageUI } from '../src/linkimageui.js';
-import { Image, ImageBlockEditing } from '@ckeditor/ckeditor5-image';
+import { Image, ImageBlockEditing } from '@ssmckinney/ckeditor5-image';
 
 describe( 'LinkImageUI', () => {
 	let editor, viewDocument, editorElement;
@@ -145,7 +145,7 @@ describe( 'LinkImageUI', () => {
 			expect( data.preventDefault ).toHaveBeenCalled();
 		} );
 
-		// See: https://github.com/ckeditor/ckeditor5/issues/9607.
+		// See: https://github.com/ssmckinney/ckeditor5/issues/9607.
 		describe( 'blocking the LinkUI plugin', () => {
 			let linkUI;
 

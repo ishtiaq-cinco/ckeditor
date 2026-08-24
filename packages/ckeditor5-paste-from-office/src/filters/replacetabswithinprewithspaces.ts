@@ -7,7 +7,7 @@
  * @module paste-from-office/filters/replacetabswithinprewithspaces
  */
 
-import type { ViewDocumentFragment, ViewUpcastWriter, ViewText, ViewElement } from '@ckeditor/ckeditor5-engine';
+import type { ViewDocumentFragment, ViewUpcastWriter, ViewText, ViewElement } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * Replaces tab characters with spaces in text nodes that are inside elements styled with `white-space: pre-wrap`.
@@ -17,7 +17,7 @@ import type { ViewDocumentFragment, ViewUpcastWriter, ViewText, ViewElement } fr
  * inconsistent spacing in pasted content. This function replaces tabs with spaces to ensure visual consistency.
  * This is intended as a temporary solution.
  *
- * See: https://github.com/ckeditor/ckeditor5/issues/18995
+ * See: https://github.com/ssmckinney/ckeditor5/issues/18995
  *
  * @param documentFragment The `data.content` element obtained from the clipboard.
  * @param writer The upcast writer used to manipulate the view structure.

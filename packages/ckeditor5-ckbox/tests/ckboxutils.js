@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { LinkEditing, LinkImageEditing } from '@ckeditor/ckeditor5-link';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { LinkEditing, LinkImageEditing } from '@ssmckinney/ckeditor5-link';
 import {
 	PictureEditing,
 	ImageUploadEditing,
@@ -14,16 +14,16 @@ import {
 	ImageInlineEditing,
 	ImageCaptionEditing,
 	Image
-} from '@ckeditor/ckeditor5-image';
-import { CloudServices, Token } from '@ckeditor/ckeditor5-cloud-services';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+} from '@ssmckinney/ckeditor5-image';
+import { CloudServices, Token } from '@ssmckinney/ckeditor5-cloud-services';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 import { CloudServicesCoreMock } from './_utils/cloudservicescoremock.js';
 
 import { CKBoxEditing } from '../src/ckboxediting.js';
 import { CKBoxUploadAdapter } from '../src/ckboxuploadadapter.js';
-import { TokenMock } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
+import { TokenMock } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
 import { CKBoxUtils } from '../src/ckboxutils.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 const CKBOX_API_URL = 'https://upload.example.com';
 
@@ -681,7 +681,7 @@ describe( 'CKBoxUtils', () => {
 			fakeXHRServer.restore();
 		} );
 
-		// See: https://github.com/ckeditor/ckeditor5/issues/16040
+		// See: https://github.com/ssmckinney/ckeditor5/issues/16040
 		it( 'should not use `Number#toString()` method due to minification issues on some bundlers', async () => {
 			const categories = createCategories( 10 );
 			const toStringSpy = vi.spyOn( Number.prototype, 'toString' );

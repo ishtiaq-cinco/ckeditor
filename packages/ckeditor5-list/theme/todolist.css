@@ -111,7 +111,7 @@
 .ck-editor__editable.ck-content .todo-list .todo-list__label {
 	/*
 	 * To-do list should be interactive only during the editing
-	 * (https://github.com/ckeditor/ckeditor5/issues/2090).
+	 * (https://github.com/ssmckinney/ckeditor5/issues/2090).
 	 */
 	& > input,
 	& > span[contenteditable=false] > input {

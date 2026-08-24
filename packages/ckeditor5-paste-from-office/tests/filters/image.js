@@ -5,10 +5,10 @@
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 
-import { normalizeHtml } from '@ckeditor/ckeditor5-utils/tests/_utils/normalizehtml.js';
-import { _stringifyView } from '@ckeditor/ckeditor5-engine';
+import { normalizeHtml } from '@ssmckinney/ckeditor5-utils/tests/_utils/normalizehtml.js';
+import { _stringifyView } from '@ssmckinney/ckeditor5-engine';
 
 import { parsePasteOfficeHtml } from '../../src/filters/parse.js';
 import { replaceImagesSourceWithBase64, _convertHexToBase64 } from '../../src/filters/image.js';

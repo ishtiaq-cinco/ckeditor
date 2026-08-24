@@ -7,7 +7,7 @@
  * @module core/editor/utils/verifyrootelements
  */
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 import type { Editor } from '../editor.js';
 

@@ -6,6 +6,6 @@
 
 ### Known limitations
 
-1. [Issue #10118](https://github.com/ckeditor/ckeditor5/issues/10118): comments located between some HTML tags are repositioned or lost.
-1. [Issue #10119](https://github.com/ckeditor/ckeditor5/issues/10119): comments can be easily repositioned during editing the document.
-1. [Issue #10127](https://github.com/ckeditor/ckeditor5/issues/10127): comments are not handled in copy & paste or drag & drop.
+1. [Issue #10118](https://github.com/ssmckinney/ckeditor5/issues/10118): comments located between some HTML tags are repositioned or lost.
+1. [Issue #10119](https://github.com/ssmckinney/ckeditor5/issues/10119): comments can be easily repositioned during editing the document.
+1. [Issue #10127](https://github.com/ssmckinney/ckeditor5/issues/10127): comments are not handled in copy & paste or drag & drop.

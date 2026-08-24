@@ -7,7 +7,7 @@
  * @module code-block/utils
  */
 
-import type { Editor } from '@ckeditor/ckeditor5-core';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
 import type { CodeBlockLanguageDefinition } from './codeblockconfig.js';
 import type {
 	ModelDocumentSelection,
@@ -19,9 +19,9 @@ import type {
 	ViewUpcastWriter,
 	ViewDocumentFragment,
 	ViewElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import { first, type LocaleTranslate } from '@ckeditor/ckeditor5-utils';
+import { first, type LocaleTranslate } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Returns code block languages as defined in `config.codeBlock.languages` but processed:

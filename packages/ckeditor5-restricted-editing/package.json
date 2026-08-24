@@ -1,21 +1,21 @@
 {
-  "name": "@ckeditor/ckeditor5-restricted-editing",
+  "name": "@ssmckinney/ckeditor5-restricted-editing",
   "version": "48.3.0",
   "description": "Restricted editing feature for CKEditor 5 editors.",
   "license": "SEE LICENSE IN LICENSE.md",
   "author": "CKSource (http://cksource.com/)",
   "homepage": "https://ckeditor.com/ckeditor-5",
-  "bugs": "https://github.com/ckeditor/ckeditor5/issues",
+  "bugs": "https://github.com/ssmckinney/ckeditor5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5.git",
+    "url": "https://github.com/ssmckinney/ckeditor5.git",
     "directory": "packages/ckeditor5-restricted-editing"
   },
   "keywords": [
     "ckeditor",
     "ckeditor5",
     "ckeditor 5",
-    "ckeditor5-lib"
+    "@ssmckinney/ckeditor5-lib"
   ],
   "type": "module",
   "main": "./src/index.ts",
@@ -34,29 +34,29 @@
     }
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-clipboard": "workspace:*",
-    "@ckeditor/ckeditor5-core": "workspace:*",
-    "@ckeditor/ckeditor5-engine": "workspace:*",
-    "@ckeditor/ckeditor5-icons": "workspace:*",
-    "@ckeditor/ckeditor5-typing": "workspace:*",
-    "@ckeditor/ckeditor5-ui": "workspace:*",
-    "@ckeditor/ckeditor5-utils": "workspace:*"
+    "@ssmckinney/ckeditor5-clipboard": "workspace:*",
+    "@ssmckinney/ckeditor5-engine": "workspace:*",
+    "@ssmckinney/ckeditor5-typing": "workspace:*",
+    "@ssmckinney/ckeditor5-icons": "workspace:*",
+    "@ssmckinney/ckeditor5-utils": "workspace:*",
+    "@ssmckinney/ckeditor5-core": "workspace:*",
+    "@ssmckinney/ckeditor5-ui": "workspace:*"
   },
   "devDependencies": {
-    "@ckeditor/ckeditor5-basic-styles": "workspace:*",
-    "@ckeditor/ckeditor5-block-quote": "workspace:*",
-    "@ckeditor/ckeditor5-cloud-services": "workspace:*",
-    "@ckeditor/ckeditor5-easy-image": "workspace:*",
-    "@ckeditor/ckeditor5-editor-classic": "workspace:*",
-    "@ckeditor/ckeditor5-image": "workspace:*",
-    "@ckeditor/ckeditor5-link": "workspace:*",
-    "@ckeditor/ckeditor5-paragraph": "workspace:*",
-    "@ckeditor/ckeditor5-select-all": "workspace:*",
-    "@ckeditor/ckeditor5-table": "workspace:*",
-    "@ckeditor/ckeditor5-undo": "workspace:*",
     "@vitest/browser-playwright": "^4.1.8",
     "@vitest/coverage-v8": "^4.1.8",
-    "vitest": "^4.1.8"
+    "vitest": "^4.1.8",
+    "@ssmckinney/ckeditor5-cloud-services": "workspace:*",
+    "@ssmckinney/ckeditor5-editor-classic": "workspace:*",
+    "@ssmckinney/ckeditor5-basic-styles": "workspace:*",
+    "@ssmckinney/ckeditor5-block-quote": "workspace:*",
+    "@ssmckinney/ckeditor5-easy-image": "workspace:*",
+    "@ssmckinney/ckeditor5-select-all": "workspace:*",
+    "@ssmckinney/ckeditor5-paragraph": "workspace:*",
+    "@ssmckinney/ckeditor5-image": "workspace:*",
+    "@ssmckinney/ckeditor5-table": "workspace:*",
+    "@ssmckinney/ckeditor5-link": "workspace:*",
+    "@ssmckinney/ckeditor5-undo": "workspace:*"
   },
   "scripts": {
     "build": "node ../../scripts/nim/build-package.mjs",
@@ -67,7 +67,7 @@
   },
   "files": [
     "dist",
-    "ckeditor5-metadata.json",
+    "@ssmckinney/ckeditor5-metadata.json",
     "CHANGELOG.md"
   ]
 }

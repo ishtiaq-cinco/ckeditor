@@ -11,10 +11,10 @@ import { LegacyListCommand } from './legacylistcommand.js';
 import { LegacyIndentCommand } from './legacyindentcommand.js';
 import { LegacyListUtils } from './legacylistutils.js';
 
-import { Plugin, type MultiCommand, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type MultiCommand, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
-import { Enter, type ViewDocumentEnterEvent } from '@ckeditor/ckeditor5-enter';
-import { Delete, type ViewDocumentDeleteEvent } from '@ckeditor/ckeditor5-typing';
+import { Enter, type ViewDocumentEnterEvent } from '@ssmckinney/ckeditor5-enter';
+import { Delete, type ViewDocumentDeleteEvent } from '@ssmckinney/ckeditor5-typing';
 
 import type {
 	DowncastAttributeEvent,
@@ -27,7 +27,7 @@ import type {
 	UpcastElementEvent,
 	ViewDocumentTabEvent,
 	ViewElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import {
 	cleanList,

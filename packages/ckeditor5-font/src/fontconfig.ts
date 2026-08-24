@@ -7,8 +7,8 @@
  * @module font/fontconfig
  */
 
-import type { ColorOption, ColorPickerConfig } from '@ckeditor/ckeditor5-ui';
-import type { MatcherPattern, ViewElementDefinition } from '@ckeditor/ckeditor5-engine';
+import type { ColorOption, ColorPickerConfig } from '@ssmckinney/ckeditor5-ui';
+import type { MatcherPattern, ViewElementDefinition } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * The configuration of the font color and font background color features.
@@ -28,6 +28,54 @@ import type { MatcherPattern, ViewElementDefinition } from '@ckeditor/ckeditor5-
  * See {@link module:core/editor/editorconfig~EditorConfig all editor options}.
  */
 export interface FontColorConfig {
+
+	/**
+	 * Adds a brand's colours to the palette, on top of whatever {@link #colors} already offers.
+	 *
+	 * ```ts
+	 * ClassicEditor
+	 * 	.create( {
+	 * 		fontColor: {
+	 * 			brand: 'cinco'
+	 * 		}
+	 * 	} )
+	 * 	.then( ... )
+	 * 	.catch( ... );
+	 * ```
+	 *
+	 * The option is optional: naming no brand leaves the palette exactly as it would otherwise be. The brands that
+	 * ship with the feature are listed in {@link module:font/brands~FONT_BRAND_PALETTES}, and {@link #brands} adds
+	 * or overrides them.
+	 *
+	 * A brand colour the palette already offers is skipped rather than duplicated, compared by value rather than by
+	 * how it is written — so a brand's `#000000` does not add a second Black beside the stock `hsl(0, 0%, 0%)`.
+	 */
+	brand?: string;
+
+	/**
+	 * The brand palettes {@link #brand} can name, replacing the ones that ship with the feature.
+	 *
+	 * ```ts
+	 * ClassicEditor
+	 * 	.create( {
+	 * 		fontColor: {
+	 * 			brand: 'acme',
+	 * 			brands: {
+	 * 				acme: [
+	 * 					{ color: '#FF6600', label: 'Acme orange' },
+	 * 					{ color: '#003366', label: 'Acme navy' }
+	 * 				]
+	 * 			}
+	 * 		}
+	 * 	} )
+	 * 	.then( ... )
+	 * 	.catch( ... );
+	 * ```
+	 *
+	 * **Note**: Setting this replaces the built-in brands rather than merging with them. Spread
+	 * {@link module:font/brands~FONT_BRAND_PALETTES} in to keep them.
+	 */
+	brands?: Record<string, Array<ColorOption>>;
 
 	/**
 	 * Available font colors defined as an array of strings or objects.

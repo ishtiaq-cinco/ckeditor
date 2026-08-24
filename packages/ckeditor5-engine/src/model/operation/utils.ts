@@ -18,7 +18,7 @@ import { type ModelItem } from '../item.js';
 import { type ModelNodeList } from '../nodelist.js';
 import { type ModelPosition } from '../position.js';
 
-import { CKEditorError, isIterable } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, isIterable } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Inserts given nodes at given position.

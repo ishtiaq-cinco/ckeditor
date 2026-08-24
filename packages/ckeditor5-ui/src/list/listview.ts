@@ -22,7 +22,7 @@ import {
 	type Locale,
 	type GetCallback,
 	type CollectionChangeEvent
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import '../../theme/components/list/list.css';
 

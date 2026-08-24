@@ -3,17 +3,17 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Typing } from '@ckeditor/ckeditor5-typing';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
 import { Title } from '../../src/title.js';
 import { Heading } from '../../src/heading.js';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { UploadAdapterMock } from '@ckeditor/ckeditor5-upload/tests/_utils/mocks.js';
-import { Image, ImageUpload } from '@ckeditor/ckeditor5-image';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
-import { Alignment } from '@ckeditor/ckeditor5-alignment';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { UploadAdapterMock } from '@ssmckinney/ckeditor5-upload/tests/_utils/mocks.js';
+import { Image, ImageUpload } from '@ssmckinney/ckeditor5-image';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
+import { Alignment } from '@ssmckinney/ckeditor5-alignment';
 
 ClassicEditor
 	.create( {

@@ -5,14 +5,14 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { toWidgetEditable } from '@ckeditor/ckeditor5-widget';
-import { _getViewData, _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { toWidgetEditable } from '@ssmckinney/ckeditor5-widget';
+import { _getViewData, _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { modelTable, viewTable } from '../_utils/utils.js';
 import { Table } from '../../src/table.js';
 import { TableCaption } from '../../src/tablecaption.js';
@@ -599,8 +599,8 @@ describe( 'downcast converters', () => {
 				);
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/8941
-			// https://github.com/ckeditor/ckeditor5/issues/8979
+			// https://github.com/ssmckinney/ckeditor5/issues/8941
+			// https://github.com/ssmckinney/ckeditor5/issues/8979
 			it( 'should create table with an empty cell', () => {
 				model.schema.register( 'block', {
 					allowWhere: '$block',
@@ -3170,7 +3170,7 @@ describe( 'downcast converters', () => {
 				await testEditor.destroy();
 			} );
 
-			// See: https://github.com/ckeditor/ckeditor5/issues/11394
+			// See: https://github.com/ssmckinney/ckeditor5/issues/11394
 			it( 'should allow overriding image caption converters', async () => {
 				const testEditor = await ClassicTestEditor.create( editorElement, {
 					plugins: [ ArticlePluginSet, Table, TableCaption, ClipboardPipeline ],

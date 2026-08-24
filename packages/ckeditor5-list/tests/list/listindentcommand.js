@@ -9,8 +9,8 @@ import { ListIndentCommand } from '../../src/list/listindentcommand.js';
 import { stubUid } from './_utils/uid.js';
 import { modelList } from './_utils/utils.js';
 
-import { Editor } from '@ckeditor/ckeditor5-core';
-import { Model, _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { Editor } from '@ssmckinney/ckeditor5-core';
+import { Model, _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'ListIndentCommand', () => {
 	let editor, model, doc, root, attributeNames;

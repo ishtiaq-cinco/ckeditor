@@ -7,7 +7,7 @@
  * @module ui/autocomplete/autocompleteview
 */
 
-import { getOptimalPosition, type PositioningFunction, type Locale, global, toUnit, Rect } from '@ckeditor/ckeditor5-utils';
+import { getOptimalPosition, type PositioningFunction, type Locale, global, toUnit, Rect } from '@ssmckinney/ckeditor5-utils';
 import { SearchTextView, type SearchTextViewConfig } from '../search/text/searchtextview.js';
 import { type SearchResultsView } from '../search/searchresultsview.js';
 import { type InputBase } from '../input/inputbase.js';

@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-// This is a temporary special handling for https://github.com/ckeditor/ckeditor5/issues/8263
+// This is a temporary special handling for https://github.com/ssmckinney/ckeditor5/issues/8263
 // The goal is to show which test case(s) exactly causes the "Selection change observer detected an infinite rendering loop." warn
 // and reduced engine code coverage.
 //

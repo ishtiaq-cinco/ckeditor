@@ -20,7 +20,7 @@ import {
 	type CallbackOptions,
 	type Constructor,
 	type Mixed
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { BubblingEventInfo, type BubblingEventPhase } from './bubblingeventinfo.js';
 import { type ViewDocument } from '../document.js';

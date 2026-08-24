@@ -9,7 +9,7 @@ import { Bookmark } from '../src/bookmark.js';
 import { BookmarkUI } from '../src/bookmarkui.js';
 import { BookmarkEditing } from '../src/bookmarkediting.js';
 
-import { Widget } from '@ckeditor/ckeditor5-widget';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
 
 describe( 'Bookmark', () => {
 	it( 'should be correctly named', () => {

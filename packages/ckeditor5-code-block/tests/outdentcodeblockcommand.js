@@ -7,13 +7,13 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { CodeBlockEditing } from '../src/codeblockediting.js';
 import { OutdentCodeBlockCommand } from '../src/outdentcodeblockcommand.js';
 
-import { AlignmentEditing } from '@ckeditor/ckeditor5-alignment';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
+import { AlignmentEditing } from '@ssmckinney/ckeditor5-alignment';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
 
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'OutdentCodeBlockCommand', () => {
 	let editor, model, outdentCommand;

@@ -8,7 +8,7 @@ import {
 	TOKEN_URL,
 	getViewportTopOffsetConfig
 } from '@snippets/index.js';
-import { MediaEmbedStyle, MediaEmbedToolbar } from 'ckeditor5';
+import { MediaEmbedStyle, MediaEmbedToolbar } from '@ssmckinney/ckeditor5';
 import { MediaEditor } from './build-media-source.js';
 
 MediaEditor

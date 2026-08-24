@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, beforeEach } from 'vitest';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { ParagraphCommand } from '@ckeditor/ckeditor5-paragraph';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { ParagraphCommand } from '@ssmckinney/ckeditor5-paragraph';
 import { HeadingCommand } from '../src/headingcommand.js';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 const options = [
 	{ model: 'heading1', view: { name: 'h2' }, title: 'H2' },

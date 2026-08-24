@@ -279,7 +279,7 @@ export class Rect {
 			// * the last positioned child must have `position: absolute`,
 			// * the parent must have a position other than `position: static`.
 			//
-			// https://github.com/ckeditor/ckeditor5/issues/14107.
+			// https://github.com/ssmckinney/ckeditor5/issues/14107.
 			if (
 				isNonClippingParent ||
 				( lastPositionedChildElement && getElementPosition( lastPositionedChildElement ) === 'absolute' && !isPositioned( parent ) )

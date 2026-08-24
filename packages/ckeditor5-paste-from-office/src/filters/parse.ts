@@ -12,7 +12,7 @@ import {
 	ViewDocument,
 	type StylesProcessor,
 	type ViewDocumentFragment
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { normalizeSpacing, normalizeSpacerunSpans } from './space.js';
 
@@ -27,7 +27,7 @@ export function parsePasteOfficeHtml( htmlString: string, stylesProcessor: Style
 	// Remove Word specific "if comments" so content inside is not omitted by the parser.
 	htmlString = htmlString.replace( /<!--\[if gte vml 1]>/g, '' );
 
-	// Clean the <head> section of MS Windows specific tags. See https://github.com/ckeditor/ckeditor5/issues/15333.
+	// Clean the <head> section of MS Windows specific tags. See https://github.com/ssmckinney/ckeditor5/issues/15333.
 	// The regular expression matches the <o:SmartTagType> tag with optional attributes (with or without values).
 	htmlString = htmlString.replace( /<o:SmartTagType(?:\s+[^\s>=]+(?:="[^"]*")?)*\s*\/?>/gi, '' );
 
@@ -41,7 +41,7 @@ export function parsePasteOfficeHtml( htmlString: string, stylesProcessor: Style
 	// Remove `<style>` blocks that ended up inside the `<body>`. Some sources (e.g. Excel Online) wrap a whole
 	// `<html>` document inside a `<div>`, which makes the browser flatten the document's `<style>` into the body.
 	// Such a `<style>` is not a usable stylesheet there and would otherwise be pasted as visible text.
-	// See https://github.com/ckeditor/ckeditor5/issues/20188.
+	// See https://github.com/ssmckinney/ckeditor5/issues/20188.
 	// In-`<head>` styles are left untouched and are still collected by `extractStyles()` below.
 	removeInBodyStyleBlocks( htmlDocument );
 

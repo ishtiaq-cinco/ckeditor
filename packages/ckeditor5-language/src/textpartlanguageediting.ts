@@ -7,9 +7,9 @@
  * @module language/textpartlanguageediting
  */
 
-import type { ViewElement } from '@ckeditor/ckeditor5-engine';
-import type { LanguageDirection } from '@ckeditor/ckeditor5-utils';
-import { Plugin, type Editor } from '@ckeditor/ckeditor5-core';
+import type { ViewElement } from '@ssmckinney/ckeditor5-engine';
+import type { LanguageDirection } from '@ssmckinney/ckeditor5-utils';
+import { Plugin, type Editor } from '@ssmckinney/ckeditor5-core';
 import { TextPartLanguageCommand } from './textpartlanguagecommand.js';
 import { stringifyLanguageAttribute, parseLanguageAttribute } from './utils.js';
 

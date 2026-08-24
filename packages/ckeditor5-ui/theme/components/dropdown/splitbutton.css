@@ -54,14 +54,14 @@
 	}
 
 	/* Make sure the divider stretches 100% height of the button
-	https://github.com/ckeditor/ckeditor5/issues/10936 */
+	https://github.com/ssmckinney/ckeditor5/issues/10936 */
 	& > .ck-splitbutton__arrow:not(:focus) {
 		border-top-width: 0px;
 		border-bottom-width: 0px;
 	}
 
 	/* Don't round the bottom left and right corners of the buttons when "open"
-	https://github.com/ckeditor/ckeditor5/issues/816 */
+	https://github.com/ssmckinney/ckeditor5/issues/816 */
 	&.ck-splitbutton_open {
 		border-radius: var(--ck-rounded-corners-radius);
 

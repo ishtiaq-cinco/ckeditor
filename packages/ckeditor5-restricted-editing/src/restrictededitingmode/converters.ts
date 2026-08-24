@@ -7,7 +7,7 @@
  * @module restricted-editing/restrictededitingmode/converters
  */
 
-import type { Editor } from '@ckeditor/ckeditor5-core';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
 import {
 	Matcher,
 	type ViewDowncastWriter,
@@ -17,7 +17,7 @@ import {
 	type UpcastDispatcher,
 	type ModelWriter,
 	type ViewElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { getMarkerAtPosition } from './utils.js';
 
@@ -94,7 +94,7 @@ export function setupExceptionHighlighting( editor: Editor ): void {
  * @internal
  */
 export function resurrectCollapsedMarkerPostFixer( editor: Editor ): ModelPostFixer {
-	// This post-fixer shouldn't be necessary after https://github.com/ckeditor/ckeditor5/issues/5778.
+	// This post-fixer shouldn't be necessary after https://github.com/ssmckinney/ckeditor5/issues/5778.
 	return writer => {
 		let changeApplied = false;
 
@@ -118,7 +118,7 @@ export function resurrectCollapsedMarkerPostFixer( editor: Editor ): ModelPostFi
  * @internal
  */
 export function extendMarkerOnTypingPostFixer( editor: Editor ): ModelPostFixer {
-	// This post-fixer shouldn't be necessary after https://github.com/ckeditor/ckeditor5/issues/5778.
+	// This post-fixer shouldn't be necessary after https://github.com/ssmckinney/ckeditor5/issues/5778.
 	return writer => {
 		let changeApplied = false;
 		const schema = editor.model.schema;

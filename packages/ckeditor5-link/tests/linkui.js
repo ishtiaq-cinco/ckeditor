@@ -4,18 +4,18 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { IconBookmarkMedium, IconBookmarkSmall, IconLink } from '@ckeditor/ckeditor5-icons';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { IconBookmarkMedium, IconBookmarkSmall, IconLink } from '@ssmckinney/ckeditor5-icons';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
 
-import { indexOf, keyCodes, env } from '@ckeditor/ckeditor5-utils';
-import { _getModelData, _setModelData, _getViewData, ClickObserver } from '@ckeditor/ckeditor5-engine';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { ContextualBalloon, ButtonView, View, MenuBarMenuListItemButtonView, ToolbarView } from '@ckeditor/ckeditor5-ui';
-import { toWidget } from '@ckeditor/ckeditor5-widget';
+import { indexOf, keyCodes, env } from '@ssmckinney/ckeditor5-utils';
+import { _getModelData, _setModelData, _getViewData, ClickObserver } from '@ssmckinney/ckeditor5-engine';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { ContextualBalloon, ButtonView, View, MenuBarMenuListItemButtonView, ToolbarView } from '@ssmckinney/ckeditor5-ui';
+import { toWidget } from '@ssmckinney/ckeditor5-widget';
 
 import { LinkEditing } from '../src/linkediting.js';
 import { LinkUI } from '../src/linkui.js';
@@ -497,7 +497,7 @@ describe( 'LinkUI', () => {
 		} );
 
 		it( 'should add #formView to the balloon and attach the balloon to the marker element when selection is collapsed', () => {
-			// (https://github.com/ckeditor/ckeditor5/issues/7926)
+			// (https://github.com/ssmckinney/ckeditor5/issues/7926)
 			_setModelData( editor.model, '<paragraph>f[]oo</paragraph>' );
 			linkUIFeature._showUI();
 			formView = linkUIFeature.formView;
@@ -1802,7 +1802,7 @@ describe( 'LinkUI', () => {
 				expect( spy ).not.toHaveBeenCalled();
 			} );
 
-			// See: https://github.com/ckeditor/ckeditor5/issues/9607.
+			// See: https://github.com/ssmckinney/ckeditor5/issues/9607.
 			it( 'should show the UI when clicking on the linked inline widget', () => {
 				editor.model.schema.register( 'inlineWidget', {
 					allowWhere: '$text',
@@ -1970,6 +1970,28 @@ describe( 'LinkUI', () => {
 			return { editor, formView };
 		};
 
+		it( 'should not offer link properties when there are no manual decorators', async () => {
+			// The built-in decorators are opt-in, so an editor that asks for nothing gets nothing:
+			// no options button below the form, and no properties view behind it.
+			const { editor, formView } = await createEditorWithLinkConfig( {} );
+
+			expect( editor.commands.get( 'link' ).manualDecorators ).toHaveLength( 0 );
+			expect( formView.optionsListChildren ).toHaveLength( 0 );
+			expect( formView.element.querySelector( '.ck-link-form__options-list' ) ).toBeNull();
+			expect( editor.plugins.get( LinkUI ).propertiesView ).toBeNull();
+
+			await editor.destroy();
+		} );
+
+		it( 'should offer link properties once built-in decorators are enabled', async () => {
+			const { editor, formView } = await createEditorWithLinkConfig( { builtinDecorators: [ 'noFollow' ] } );
+
+			expect( formView.optionsListChildren ).toHaveLength( 1 );
+			expect( formView.element.querySelector( '.ck-link-form__options-list' ) ).not.toBeNull();
+
+			await editor.destroy();
+		} );
+
 		beforeEach( () => {
 			// Make sure that forms are lazy initiated.
 			expect( linkUIFeature.formView ).toBeNull();
@@ -2045,7 +2067,20 @@ describe( 'LinkUI', () => {
 				return editor.destroy();
 			} );
 
-			it( 'should not add a protocol without the configuration', () => {
+			it( 'should add the default protocol when the configuration does not name one', () => {
+				const linkCommandSpy = vi.spyOn( editor.commands.get( 'link' ), 'execute' );
+
+				formView.urlInputView.fieldView.value = 'ckeditor.com';
+				formView.fire( 'submit' );
+
+				expect( linkCommandSpy.mock.calls[ 0 ][ 0 ] ).toBe( 'https://ckeditor.com' );
+
+				return editor.destroy();
+			} );
+
+			it( 'should not add a protocol when it is switched off with an empty string', async () => {
+				// An empty string is how the behaviour is turned off now that `https://` is the default.
+				const { editor, formView } = await createEditorWithLinkConfig( { defaultProtocol: '' } );
 				const linkCommandSpy = vi.spyOn( editor.commands.get( 'link' ), 'execute' );
 
 				formView.urlInputView.fieldView.value = 'ckeditor.com';
@@ -2053,7 +2088,7 @@ describe( 'LinkUI', () => {
 
 				expect( linkCommandSpy.mock.calls[ 0 ][ 0 ] ).toBe( 'ckeditor.com' );
 
-				return editor.destroy();
+				await editor.destroy();
 			} );
 
 			it( 'should not add a protocol to the local links even when `config.link.defaultProtocol` configured', async () => {
@@ -2654,7 +2689,7 @@ describe( 'LinkUI', () => {
 				expect( balloon.visibleView ).toBeNull();
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/1501
+			// https://github.com/ssmckinney/ckeditor5/issues/1501
 			it( 'should blur url input element before hiding the view', () => {
 				linkUIFeature._showUI();
 
@@ -2733,7 +2768,7 @@ describe( 'LinkUI', () => {
 					return editor.destroy();
 				} );
 
-				it( 'should gather information about manual decorators', () => {
+				it( 'should gather information about manual decorators and apply it on submit', () => {
 					const executeSpy = vi.spyOn( editor, 'execute' );
 
 					_setModelData( model, 'f[<$text linkHref="url" linkDecorator1="true">ooba</$text>]r' );
@@ -2749,19 +2784,140 @@ describe( 'LinkUI', () => {
 						linkDecorator3: false
 					} );
 
-					// Switch the first decorator on.
-					linkUIFeature._createPropertiesView();
+					// Switch the second decorator on.
 					propertiesView.listChildren.get( 1 ).fire( 'execute' );
+
+					// Nothing reaches the model while the form is still open...
+					expect( executeSpy ).not.toHaveBeenCalled();
+
+					// ...but the choice is remembered.
+					expect( linkUIFeature._getDecoratorSwitchesState() ).toEqual( {
+						linkDecorator1: true,
+						linkDecorator2: true,
+						linkDecorator3: false
+					} );
+
+					formView.fire( 'submit' );
+
+					// The URL, the displayed text and the decorators land together, as one undo step.
+					// `url` gains the default protocol on the way through, hence `https://url`.
+					expect( executeSpy ).toHaveBeenCalledExactlyOnceWith(
+						'link',
+						'https://url',
+						{
+							linkDecorator1: true,
+							linkDecorator2: true,
+							linkDecorator3: false
+						},
+						undefined
+					);
+				} );
+
+				it( 'should apply decorators picked before the link exists', () => {
+					const executeSpy = vi.spyOn( editor, 'execute' );
+
+					_setModelData( model, 'f[ooba]r' );
+
+					// There is no link to hang a toolbar off, so this goes straight to the form.
+					linkUIFeature._showUI( true );
+
+					expect( editor.commands.get( 'link' ).value, 'nothing to execute against yet' ).toBeUndefined();
+
+					// Switch the first decorator on.
+					propertiesView.listChildren.get( 0 ).fire( 'execute' );
+
+					expect( executeSpy ).not.toHaveBeenCalled();
+
+					formView.urlInputView.fieldView.element.value = 'http://example.com';
+					formView.fire( 'submit' );
+
+					expect( executeSpy ).toHaveBeenCalledExactlyOnceWith(
+						'link',
+						'http://example.com',
+						{
+							linkDecorator1: true,
+							// Its `defaultValue` is `true` and it was never touched.
+							linkDecorator2: true,
+							linkDecorator3: false
+						},
+						undefined
+					);
+				} );
+
+				it( 'should discard decorators picked in the properties panel when the form is dismissed', () => {
+					_setModelData( model, 'f[<$text linkHref="url">ooba</$text>]r' );
+
+					linkUIFeature._showUI( true ); // ToolbarView
+					linkUIFeature._showUI( true ); // FormView
+
+					const decoratorSwitch = propertiesView.listChildren.get( 0 );
+
+					decoratorSwitch.fire( 'execute' );
+
+					expect( decoratorSwitch.isOn ).toBe( true );
+
+					formView.fire( 'cancel' );
+
+					expect( decoratorSwitch.isOn, 'the switch is read back from the model' ).toBe( false );
+					expect( _getModelData( model ) ).not.toContain( 'linkDecorator1' );
+				} );
+
+				it( 'should apply decorators immediately when the panel is opened from the link toolbar', () => {
+					const executeSpy = vi.spyOn( editor, 'execute' );
+
+					_setModelData( model, 'f[<$text linkHref="url">ooba</$text>]r' );
+
+					linkUIFeature._showUI( true ); // ToolbarView, with no form in the way.
+					linkUIFeature._addPropertiesView();
+
+					propertiesView.listChildren.get( 0 ).fire( 'execute' );
 
 					expect( executeSpy ).toHaveBeenCalledExactlyOnceWith(
 						'link',
 						'url',
 						{
 							linkDecorator1: true,
-							linkDecorator2: true,
+							linkDecorator2: false,
 							linkDecorator3: false
 						}
 					);
+				} );
+
+				describe( 'link properties button', () => {
+					it( 'should be added below the form', () => {
+						expect( formView.optionsListChildren ).toHaveLength( 1 );
+						expect( formView.optionsListChildren.first.label ).toBe( 'Link properties' );
+					} );
+
+					it( 'should open the properties view', () => {
+						const balloon = editor.plugins.get( ContextualBalloon );
+
+						_setModelData( model, 'f[ooba]r' );
+
+						linkUIFeature._showUI( true );
+
+						expect( balloon.visibleView ).toBe( formView );
+
+						formView.optionsListChildren.first.fire( 'execute' );
+
+						expect( balloon.visibleView ).toBe( propertiesView );
+					} );
+
+					it( 'should go back to the form rather than closing the balloon', () => {
+						const balloon = editor.plugins.get( ContextualBalloon );
+
+						_setModelData( model, 'f[ooba]r' );
+
+						linkUIFeature._showUI( true );
+						formView.optionsListChildren.first.fire( 'execute' );
+
+						const focusSpy = vi.spyOn( formView, 'focus' );
+
+						propertiesView.fire( 'back' );
+
+						expect( balloon.visibleView ).toBe( formView );
+						expect( focusSpy ).toHaveBeenCalledOnce();
+					} );
 				} );
 
 				it( 'should keep switch state when form is closed', () => {

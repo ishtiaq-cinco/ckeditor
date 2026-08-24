@@ -5,7 +5,7 @@
 
 import { describe, it, expect } from 'vitest';
 
-import { ViewDocumentFragment } from '@ckeditor/ckeditor5-engine';
+import { ViewDocumentFragment } from '@ssmckinney/ckeditor5-engine';
 
 import { parsePasteOfficeHtml } from '../../src/filters/parse.js';
 
@@ -211,7 +211,7 @@ describe( 'PasteFromOffice - filters', () => {
 				expect( body.getChild( 0 ).name ).toBe( 'p' );
 			} );
 
-			// See https://github.com/ckeditor/ckeditor5/issues/15333.
+			// See https://github.com/ssmckinney/ckeditor5/issues/15333.
 			describe( 'should remove MS Windows specific tags to prevent incorrect parsing of HTML', () => {
 				it( 'should remove <o:SmartTagType> empty tag (with or without `/` at the end)', () => {
 					const html =

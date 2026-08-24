@@ -3,12 +3,12 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { BalloonEditor } from '@ckeditor/ckeditor5-editor-balloon';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { BalloonEditor } from '@ssmckinney/ckeditor5-editor-balloon';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 
-import { Strikethrough, Code } from '@ckeditor/ckeditor5-basic-styles';
-import { Highlight } from '@ckeditor/ckeditor5-highlight';
+import { Strikethrough, Code } from '@ssmckinney/ckeditor5-basic-styles';
+import { Highlight } from '@ssmckinney/ckeditor5-highlight';
 
 const config = {
 	image: { toolbar: [ 'toggleImageCaption', 'imageTextAlternative' ] },

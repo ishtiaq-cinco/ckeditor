@@ -10,7 +10,7 @@ The highlight feature lets you mark text fragments with different colors. You ca
 
 ## Demo
 
-Select the text you want to highlight. Then use the highlight toolbar button {@icon @ckeditor/ckeditor5-icons/theme/icons/marker.svg Highlight} to choose a desired color from the dropdown.
+Select the text you want to highlight. Then use the highlight toolbar button {@icon @ssmckinney/ckeditor5-icons/theme/icons/marker.svg Highlight} to choose a desired color from the dropdown.
 
 {@snippet features/highlight}
 
@@ -24,7 +24,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, Highlight } from 'ckeditor5';
+import { ClassicEditor, Highlight } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {

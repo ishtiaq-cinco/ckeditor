@@ -5,10 +5,10 @@
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
 
 import { UndoEditing } from '../src/undoediting.js';
-import { env, keyCodes } from '@ckeditor/ckeditor5-utils';
+import { env, keyCodes } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'UndoEditing', () => {
 	let editor, undo, model, root;

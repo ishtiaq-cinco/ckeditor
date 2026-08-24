@@ -4,27 +4,27 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
 import { ImageBlockEditing } from '../../src/image/imageblockediting.js';
 import { ImageInlineEditing } from '../../src/image/imageinlineediting.js';
 import { ImageUploadEditing } from '../../src/imageupload/imageuploadediting.js';
 import { UploadImageCommand } from '../../src/imageupload/uploadimagecommand.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { ViewDataTransfer, _setModelData, _getModelData, _getViewData, _stringifyView, ModelWriter } from '@ckeditor/ckeditor5-engine';
-import { EventInfo } from '@ckeditor/ckeditor5-utils';
-import { testUtils } from '@ckeditor/ckeditor5-core/tests/_utils/utils.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { ViewDataTransfer, _setModelData, _getModelData, _getViewData, _stringifyView, ModelWriter } from '@ssmckinney/ckeditor5-engine';
+import { EventInfo } from '@ssmckinney/ckeditor5-utils';
+import { testUtils } from '@ssmckinney/ckeditor5-core/tests/_utils/utils.js';
 
-import { FileRepository } from '@ckeditor/ckeditor5-upload';
-import { UploadAdapterMock, createNativeFileMock, NativeFileReaderMock } from '@ckeditor/ckeditor5-upload/tests/_utils/mocks.js';
+import { FileRepository } from '@ssmckinney/ckeditor5-upload';
+import { UploadAdapterMock, createNativeFileMock, NativeFileReaderMock } from '@ssmckinney/ckeditor5-upload/tests/_utils/mocks.js';
 
-import { Notification } from '@ckeditor/ckeditor5-ui';
+import { Notification } from '@ssmckinney/ckeditor5-ui';
 import { downcastImageAttribute } from '../../src/image/converters.js';
-import { assertCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { assertCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'ImageUploadEditing', () => {
 	// eslint-disable-next-line @stylistic/max-len
@@ -1633,7 +1633,7 @@ describe( 'ImageUploadEditing', () => {
 			vi.spyOn( window, 'fetch' ).mockImplementation( () => Promise.reject( new TypeError() ) );
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/7957.
+		// See https://github.com/ssmckinney/ckeditor5/issues/7957.
 		it( 'should upload image using canvas conversion', () => new Promise( resolve => {
 			const spy = vi.fn();
 			const notification = editor.plugins.get( Notification );

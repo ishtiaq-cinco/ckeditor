@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { global } from '@ckeditor/ckeditor5-utils';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { global } from '@ssmckinney/ckeditor5-utils';
 
 import { Fullscreen } from '../src/fullscreen.js';
 import { FullscreenUI } from '../src/fullscreenui.js';

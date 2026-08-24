@@ -3,17 +3,17 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { ImageInlineEditing } from '@ckeditor/ckeditor5-image';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { CodeBlockEditing } from '@ckeditor/ckeditor5-code-block';
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { ImageInlineEditing } from '@ssmckinney/ckeditor5-image';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { CodeBlockEditing } from '@ssmckinney/ckeditor5-code-block';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { _parseModel } from '@ckeditor/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { _parseModel } from '@ssmckinney/ckeditor5-engine';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 import { ListEditing } from '../../src/list/listediting.js';

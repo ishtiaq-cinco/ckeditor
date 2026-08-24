@@ -6,7 +6,7 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { secureSourceElement } from '../../../src/editor/utils/securesourceelement.js';
 import { Editor } from '../../../src/editor/editor.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'secureSourceElement()', () => {
 	let editor, sourceElement;

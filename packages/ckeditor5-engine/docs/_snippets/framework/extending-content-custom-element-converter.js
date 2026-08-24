@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { toWidget, toWidgetEditable } from 'ckeditor5';
+import { toWidget, toWidgetEditable } from '@ssmckinney/ckeditor5';
 import {
 	CS_CONFIG,
 	ClassicEditor,

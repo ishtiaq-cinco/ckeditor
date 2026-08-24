@@ -10,7 +10,7 @@
 /**
  * URL to the documentation with error codes.
  */
-export const DOCUMENTATION_URL = 'https://ckeditor.com/docs/ckeditor5/latest/support/error-codes.html';
+export const DOCUMENTATION_URL = 'https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/support/error-codes.html';
 
 /**
  * The CKEditor error class.
@@ -76,7 +76,7 @@ export class CKEditorError extends Error {
 		// Wrapping an original error in a CKEditorError instance.
 		if ( originalError ) {
 			// Restore the original stack trace to make the error look like the original one.
-			// See https://github.com/ckeditor/ckeditor5/issues/5595 for more details.
+			// See https://github.com/ssmckinney/ckeditor5/issues/5595 for more details.
 			this.stack = originalError.stack;
 		}
 	}

@@ -11,7 +11,7 @@ modified_at: 2021-07-12
 The content minimap feature shows a miniature overview of your content. It helps you navigate a document that is too long to fit on the screen.
 
 <info-box warning>
-	This is a **feature preview**, and as such it is not recommended for production use. For more information, comments, and feature requests, please refer to the [issue on GitHub](https://github.com/ckeditor/ckeditor5/issues/10089).
+	This is a **feature preview**, and as such it is not recommended for production use. For more information, comments, and feature requests, please refer to the [issue on GitHub](https://github.com/ssmckinney/ckeditor5/issues/10089).
 </info-box>
 
 ## Demo
@@ -30,7 +30,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { DecoupledEditor, Minimap } from 'ckeditor5';
+import { DecoupledEditor, Minimap } from '@ssmckinney/ckeditor5';
 
 DecoupledEditor
 	.create( {

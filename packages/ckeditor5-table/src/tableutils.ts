@@ -7,8 +7,8 @@
  * @module table/tableutils
  */
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 import type {
 	ModelDocumentSelection,
 	ModelElement,
@@ -17,7 +17,7 @@ import type {
 	ModelRange,
 	ModelSelection,
 	ModelWriter
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { TableWalker, type TableWalkerOptions } from './tablewalker.js';
 import { createEmptyTableCell, updateNumericAttribute, isEntireCellsLineHeader, isTableCellTypeEnabled } from './utils/common.js';
@@ -595,7 +595,7 @@ export class TableUtils extends Plugin {
 				}
 
 				// If table has `tableColumn` elements, we need to update it manually.
-				// See https://github.com/ckeditor/ckeditor5/issues/14521#issuecomment-1662102889 for details.
+				// See https://github.com/ssmckinney/ckeditor5/issues/14521#issuecomment-1662102889 for details.
 				if ( tableColumns[ removedColumnIndex ] ) {
 					// If the removed column is the first one then we need to add its width to the next column.
 					// Otherwise we add it to the previous column.
@@ -1709,7 +1709,7 @@ function moveCellsToRow( table: ModelElement, targetRowIndex: number, cellsToMov
 
 			previousCell = cellToMove;
 		} else if ( isAnchor ) {
-			// If cell is spanned then `cell` holds reference to overlapping cell. See https://github.com/ckeditor/ckeditor5/issues/6502.
+			// If cell is spanned then `cell` holds reference to overlapping cell. See https://github.com/ssmckinney/ckeditor5/issues/6502.
 			previousCell = cell;
 		}
 	}

@@ -7,9 +7,9 @@
  * @module indent/integrations/indentblocklistitemcommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
-import { type ModelElement } from '@ckeditor/ckeditor5-engine';
-import { type ListUtils } from '@ckeditor/ckeditor5-list';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
+import { type ModelElement } from '@ssmckinney/ckeditor5-engine';
+import { type ListUtils } from '@ssmckinney/ckeditor5-list';
 
 import type { IndentBehavior } from '../indentcommandbehavior/indentbehavior.js';
 

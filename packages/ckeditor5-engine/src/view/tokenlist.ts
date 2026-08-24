@@ -7,7 +7,7 @@
  * @module engine/view/tokenlist
  */
 
-import { type ArrayOrItem, toArray } from '@ckeditor/ckeditor5-utils';
+import { type ArrayOrItem, toArray } from '@ssmckinney/ckeditor5-utils';
 import type { ViewElementAttributeValue } from './element.js';
 
 /**

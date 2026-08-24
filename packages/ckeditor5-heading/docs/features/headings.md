@@ -44,7 +44,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, Heading } from 'ckeditor5';
+import { ClassicEditor, Heading } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -66,7 +66,7 @@ To configure the toolbar buttons for styling text as headings and paragraphs, yo
 
 <code-switcher>
 ```js
-import { ClassicEditor, HeadingButtonsUI, ParagraphButtonUI } from 'ckeditor5';
+import { ClassicEditor, HeadingButtonsUI, ParagraphButtonUI } from '@ssmckinney/ckeditor5';
 ```
 </code-switcher>
 

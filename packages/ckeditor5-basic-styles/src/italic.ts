@@ -7,7 +7,7 @@
  * @module basic-styles/italic
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { ItalicEditing } from './italic/italicediting.js';
 import { ItalicUI } from './italic/italicui.js';
 

@@ -7,8 +7,8 @@
  * @module table/tablecellproperties/tablecellpropertiesui
  */
 
-import { Plugin, type Editor, type Command, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { IconTableCellProperties } from '@ckeditor/ckeditor5-icons';
+import { Plugin, type Editor, type Command, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { IconTableCellProperties } from '@ssmckinney/ckeditor5-icons';
 import {
 	ButtonView,
 	clickOutsideHandler,
@@ -16,8 +16,8 @@ import {
 	getLocalizedColorOptions,
 	normalizeColorOptions,
 	type View
-} from '@ckeditor/ckeditor5-ui';
-import type { Batch } from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-ui';
+import type { Batch } from '@ssmckinney/ckeditor5-engine';
 
 import { TableCellPropertiesView } from './ui/tablecellpropertiesview.js';
 import {
@@ -36,7 +36,7 @@ import {
 	getNormalizedDefaultProperties,
 	type NormalizedDefaultProperties
 } from '../utils/table-properties.js';
-import type { GetCallback, ObservableChangeEvent } from '@ckeditor/ckeditor5-utils';
+import type { GetCallback, ObservableChangeEvent } from '@ssmckinney/ckeditor5-utils';
 
 import { type TableCellBorderStyleCommand } from './commands/tablecellborderstylecommand.js';
 
@@ -197,7 +197,7 @@ export class TableCellPropertiesUI extends Plugin {
 		super.destroy();
 
 		// Destroy created UI components as they are not automatically destroyed.
-		// See https://github.com/ckeditor/ckeditor5/issues/1341.
+		// See https://github.com/ssmckinney/ckeditor5/issues/1341.
 		if ( this.view ) {
 			this.view.destroy();
 		}
@@ -236,7 +236,7 @@ export class TableCellPropertiesUI extends Plugin {
 		} );
 
 		this.listenTo( view, 'cancel', () => {
-			// https://github.com/ckeditor/ckeditor5/issues/6180
+			// https://github.com/ssmckinney/ckeditor5/issues/6180
 			if ( this._undoStepBatch!.operations.length ) {
 				editor.execute( 'undo', this._undoStepBatch );
 			}
@@ -435,7 +435,7 @@ export class TableCellPropertiesUI extends Plugin {
 		this._isReady = false;
 
 		// Blur any input element before removing it from DOM to prevent issues in some browsers.
-		// See https://github.com/ckeditor/ckeditor5/issues/1501.
+		// See https://github.com/ssmckinney/ckeditor5/issues/1501.
 		this.view!.saveButtonView.focus();
 
 		this._balloon!.remove( this.view! );

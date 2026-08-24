@@ -26,7 +26,7 @@ import {
 	TableProperties,
 	Minimap,
 	_MinimapIframeView
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 import {
 	CS_CONFIG,
 	TOKEN_URL,
@@ -152,7 +152,7 @@ DecoupledEditor
  * This patch rewrites font URLs in CSS styles so that they are resolved correctly relative to the CSS file location,
  * ensuring fonts load properly in the minimap.
  *
- * See more: https://github.com/ckeditor/ckeditor5/issues/18896
+ * See more: https://github.com/ssmckinney/ckeditor5/issues/18896
  */
 function patchMinimapView() {
 	const originalRender = _MinimapIframeView.prototype.render;

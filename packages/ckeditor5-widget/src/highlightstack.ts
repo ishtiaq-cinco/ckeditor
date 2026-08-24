@@ -7,9 +7,9 @@
  * @module widget/highlightstack
  */
 
-import { EmitterMixin, type ArrayOrItem, type EmitterMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { EmitterMixin, type ArrayOrItem, type EmitterMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 
-import type { ViewDowncastWriter, DowncastHighlightDescriptor } from '@ckeditor/ckeditor5-engine';
+import type { ViewDowncastWriter, DowncastHighlightDescriptor } from '@ssmckinney/ckeditor5-engine';
 
 const WidgetHighlightStackBase: EmitterMixinConstructor = /* #__PURE__ */ EmitterMixin();
 

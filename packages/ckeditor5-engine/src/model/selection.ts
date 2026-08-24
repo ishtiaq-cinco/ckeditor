@@ -17,7 +17,7 @@ import { type ModelDocumentSelection } from './documentselection.js';
 import { type ModelElement } from './element.js';
 import { type ModelItem } from './item.js';
 
-import { CKEditorError, EmitterMixin, isIterable, type EmitterMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, EmitterMixin, isIterable, type EmitterMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 
 const ModelSelectionBase: EmitterMixinConstructor<typeof ModelTypeCheckable> = /* #__PURE__ */ EmitterMixin( ModelTypeCheckable );
 
@@ -441,7 +441,7 @@ export class ModelSelection extends ModelSelectionBase {
 				 * Common mistakes leading to this error are:
 				 *
 				 * * using DOM `Range` object,
-				 * * incorrect CKEditor 5 installation with multiple `ckeditor5-engine` packages having different versions.
+				 * * incorrect CKEditor 5 installation with multiple `@ssmckinney/ckeditor5-engine` packages having different versions.
 				 *
 				 * @error model-selection-set-ranges-not-range
 				 */
@@ -922,7 +922,7 @@ function isTopBlockInRange( block: ModelNode, range: ModelRange ) {
 
 /**
  * If a selection starts at the end of a block, that block is not returned as from the user's perspective this block wasn't selected.
- * See [#11585](https://github.com/ckeditor/ckeditor5/issues/11585) for more details.
+ * See [#11585](https://github.com/ssmckinney/ckeditor5/issues/11585) for more details.
  *
  * ```xml
  * <paragraph>a[</paragraph> // This block will not be returned

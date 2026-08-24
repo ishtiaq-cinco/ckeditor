@@ -7,8 +7,8 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { Editor } from '../../../src/editor/editor.js';
 import { ElementApiMixin } from '../../../src/editor/utils/elementapimixin.js';
 import { normalizeRootsConfig, normalizeSingleRootEditorConstructorParams } from '../../../src/editor/utils/normalizerootsconfig.js';
-import { registerAndInitializeRootConfigAttributes } from '@ckeditor/ckeditor5-core';
-import { global } from '@ckeditor/ckeditor5-utils';
+import { registerAndInitializeRootConfigAttributes } from '@ssmckinney/ckeditor5-core';
+import { global } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'registerAndInitializeRootConfigAttributes()', () => {
 	let domElement, editor;

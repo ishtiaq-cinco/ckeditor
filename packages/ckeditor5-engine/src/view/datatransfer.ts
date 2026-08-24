@@ -31,7 +31,7 @@ export class ViewDataTransfer {
 		// We should store references to the File instances in case someone would like to process this files
 		// outside the event handler. Files are stored only for `drop` and `paste` events because they are not usable
 		// in other events and are generating a huge delay on Firefox while dragging.
-		// See https://github.com/ckeditor/ckeditor5/issues/13366.
+		// See https://github.com/ssmckinney/ckeditor5/issues/13366.
 		this._files = options.cacheFiles ? getFiles( nativeDataTransfer ) : null;
 
 		this._native = nativeDataTransfer;

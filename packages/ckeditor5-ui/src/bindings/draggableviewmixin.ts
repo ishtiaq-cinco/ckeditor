@@ -8,7 +8,7 @@
  */
 
 import { type View } from '../view.js';
-import { global, type Constructor, type Mixed, type EventInfo } from '@ckeditor/ckeditor5-utils';
+import { global, type Constructor, type Mixed, type EventInfo } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Constructor returned by {@link ~DraggableViewMixin}. Use it to name a mixin base class before extending it.

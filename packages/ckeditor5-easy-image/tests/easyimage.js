@@ -5,19 +5,19 @@
 
 import { describe, it, expect, vi, beforeAll, afterAll, beforeEach, afterEach } from 'vitest';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 import { EasyImage } from '../src/easyimage.js';
 import { CloudServicesUploadAdapter } from '../src/cloudservicesuploadadapter.js';
-import { Image, ImageUpload } from '@ckeditor/ckeditor5-image';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
+import { Image, ImageUpload } from '@ssmckinney/ckeditor5-image';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
 
 import { UploadGatewayMock } from './_utils/uploadgatewaymock.js';
-import { createNativeFileMock } from '@ckeditor/ckeditor5-upload/tests/_utils/mocks.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { createNativeFileMock } from '@ssmckinney/ckeditor5-upload/tests/_utils/mocks.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
-import { CloudServices, CloudServicesCore } from '@ckeditor/ckeditor5-cloud-services';
-import { TokenMock } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
+import { CloudServices, CloudServicesCore } from '@ssmckinney/ckeditor5-cloud-services';
+import { TokenMock } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
 
 // EasyImage requires the `CloudServicesCore` plugin as a dependency.
 // In order to mock the `Token` class, we create a new class that extend the `CloudServicesCore` plugin

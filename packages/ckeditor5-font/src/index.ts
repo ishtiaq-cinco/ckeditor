@@ -52,3 +52,8 @@ export { normalizeOptions as _normalizeFontFamilyOptions } from './fontfamily/ut
 export { normalizeOptions as _normalizeFontSizeOptions } from './fontsize/utils.js';
 
 import './augmentation.js';
+
+export {
+	FONT_BRAND_PALETTES,
+	addBrandColors as _addFontBrandColors
+} from './brands.js';

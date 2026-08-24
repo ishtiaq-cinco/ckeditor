@@ -7,10 +7,10 @@
  * @module fullscreen/handlers/abstracteditorhandler
  */
 
-import { BodyCollection, ButtonView, DialogViewPosition } from '@ckeditor/ckeditor5-ui';
-import { global, createElement, Rect, type EventInfo, ResizeObserver } from '@ckeditor/ckeditor5-utils';
-import type { ElementApi, Editor, EditorConfig } from '@ckeditor/ckeditor5-core';
-import { IconDocumentOutlineToggle, IconPreviousArrow } from '@ckeditor/ckeditor5-icons';
+import { BodyCollection, ButtonView, DialogViewPosition } from '@ssmckinney/ckeditor5-ui';
+import { global, createElement, Rect, type EventInfo, ResizeObserver } from '@ssmckinney/ckeditor5-utils';
+import type { ElementApi, Editor, EditorConfig } from '@ssmckinney/ckeditor5-core';
+import { IconDocumentOutlineToggle, IconPreviousArrow } from '@ssmckinney/ckeditor5-icons';
 import { registerFullscreenBalloonOffsetCorrection } from './integrations/contextualballoon.js';
 
 const DIALOG_OFFSET = 28;

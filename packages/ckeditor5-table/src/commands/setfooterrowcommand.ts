@@ -7,8 +7,8 @@
  * @module table/commands/setfooterrowcommand
  */
 
-import { Command } from '@ckeditor/ckeditor5-core';
-import type { ModelElement } from '@ckeditor/ckeditor5-engine';
+import { Command } from '@ssmckinney/ckeditor5-core';
+import type { ModelElement } from '@ssmckinney/ckeditor5-engine';
 import type { TableUtils } from '../tableutils.js';
 
 import { getVerticallyOverlappingCells, splitHorizontally } from '../utils/structure.js';

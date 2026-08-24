@@ -5,10 +5,10 @@
 
 import { Autoformat } from '../src/autoformat.js';
 import { inlineAutoformatEditing } from '../src/inlineautoformatediting.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 
 describe( 'inlineAutoformatEditing', () => {

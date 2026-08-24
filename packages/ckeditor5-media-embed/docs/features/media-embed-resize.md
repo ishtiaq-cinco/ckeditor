@@ -101,7 +101,7 @@ import {
 	MediaEmbedResizeEditing,
 	MediaEmbedResizeButtons,
 	MediaEmbedCustomResizeUI
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -156,7 +156,7 @@ The {@link module:media-embed/mediaembedresize~MediaEmbedResize} plugin is not l
 
 <code-switcher>
 ```js
-import { ClassicEditor, MediaEmbed, MediaEmbedResize } from 'ckeditor5';
+import { ClassicEditor, MediaEmbed, MediaEmbedResize } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {

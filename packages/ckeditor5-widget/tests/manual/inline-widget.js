@@ -3,23 +3,23 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { _getModelData } from '@ckeditor/ckeditor5-engine';
-import { global } from '@ckeditor/ckeditor5-utils';
+import { _getModelData } from '@ssmckinney/ckeditor5-engine';
+import { global } from '@ssmckinney/ckeditor5-utils';
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
-import { Enter, ShiftEnter } from '@ckeditor/ckeditor5-enter';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Undo } from '@ckeditor/ckeditor5-undo';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
+import { Enter, ShiftEnter } from '@ssmckinney/ckeditor5-enter';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
 import { Widget } from '../../src/widget.js';
 import { toWidget, viewToModelPositionOutsideModelElement } from '../../src/utils.js';
-import { ButtonView } from '@ckeditor/ckeditor5-ui';
-import { Clipboard } from '@ckeditor/ckeditor5-clipboard';
-import { Table } from '@ckeditor/ckeditor5-table';
-import { Link } from '@ckeditor/ckeditor5-link';
+import { ButtonView } from '@ssmckinney/ckeditor5-ui';
+import { Clipboard } from '@ssmckinney/ckeditor5-clipboard';
+import { Table } from '@ssmckinney/ckeditor5-table';
+import { Link } from '@ssmckinney/ckeditor5-link';
 
 class InlineWidget extends Plugin {
 	constructor( editor ) {

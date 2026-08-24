@@ -218,7 +218,7 @@ export class MutationObserver extends Observer {
 		}
 
 		// In case only non-relevant mutations were recorded it skips the event and force render.
-		// See https://github.com/ckeditor/ckeditor5/issues/5600.
+		// See https://github.com/ssmckinney/ckeditor5/issues/5600.
 		if ( mutations.length ) {
 			// @if CK_DEBUG_TYPING // if ( ( window as any ).logCKETyping ) {
 			// @if CK_DEBUG_TYPING // 	_debouncedLine();

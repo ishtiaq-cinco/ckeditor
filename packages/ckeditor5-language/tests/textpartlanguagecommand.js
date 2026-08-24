@@ -5,8 +5,8 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { TextPartLanguageCommand } from '../src/textpartlanguagecommand.js';
 
@@ -316,7 +316,7 @@ describe( 'TextPartLanguageCommand', () => {
 			expect( doc.selection.getAttribute( 'language' ) ).toEqual( 'ar:rtl' );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/18430
+		// https://github.com/ssmckinney/ckeditor5/issues/18430
 		it( 'when applying language to range that includes empty paragraph, empty paragraph should get selection:language', () => {
 			_setModelData( model, '[<p>foo</p><p></p><p>foo</p>]' );
 

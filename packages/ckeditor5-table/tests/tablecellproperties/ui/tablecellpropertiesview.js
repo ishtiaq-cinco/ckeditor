@@ -5,8 +5,8 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { TableCellPropertiesView } from '../../../src/tablecellproperties/ui/tablecellpropertiesview.js';
-import { LabeledFieldView, FocusCycler, ViewCollection, ToolbarView, ButtonView, InputTextView } from '@ckeditor/ckeditor5-ui';
-import { keyCodes, KeystrokeHandler, FocusTracker } from '@ckeditor/ckeditor5-utils';
+import { LabeledFieldView, FocusCycler, ViewCollection, ToolbarView, ButtonView, InputTextView } from '@ssmckinney/ckeditor5-ui';
+import { keyCodes, KeystrokeHandler, FocusTracker } from '@ssmckinney/ckeditor5-utils';
 import { ColorInputView } from '../../../src/ui/colorinputview.js';
 
 const VIEW_OPTIONS = {

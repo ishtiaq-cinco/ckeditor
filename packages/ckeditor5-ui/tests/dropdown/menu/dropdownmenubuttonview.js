@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { IconDropdownArrow } from '@ckeditor/ckeditor5-icons';
+import { IconDropdownArrow } from '@ssmckinney/ckeditor5-icons';
 import { createMockLocale } from './_utils/dropdowntreemock.js';
 
 import { IconView, ListItemButtonView } from '../../../src/index.js';

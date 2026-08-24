@@ -7,10 +7,11 @@
  * @module font/fontcolor/fontcolorediting
  */
 
-import { Plugin, type Editor } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor } from '@ssmckinney/ckeditor5-core';
 import { FontColorCommand } from './fontcolorcommand.js';
-import type { ViewElement } from '@ckeditor/ckeditor5-engine';
+import type { ViewElement } from '@ssmckinney/ckeditor5-engine';
 import { FONT_COLOR, renderDowncastElement, renderUpcastAttribute } from '../utils.js';
+import { addBrandColors } from '../brands.js';
 
 /**
  * The font color editing feature.
@@ -107,6 +108,14 @@ export class FontColorEditing extends Plugin {
 			],
 			columns: 5
 		} );
+
+		// Brand colours are appended after the defaults are in place, so that they extend whatever palette is in
+		// force — the stock one, or one the integrator supplied.
+		editor.config.set( 'fontColor.colors', addBrandColors(
+			editor.config.get( 'fontColor.colors' )!,
+			editor.config.get( 'fontColor.brand' ),
+			editor.config.get( 'fontColor.brands' )
+		) );
 
 		editor.conversion.for( 'upcast' ).elementToAttribute( {
 			view: {

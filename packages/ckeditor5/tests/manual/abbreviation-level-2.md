@@ -32,7 +32,7 @@ We will also pass the editor's {@link module:utils/locale~Locale} instance to th
 ```js
 // abbreviation/abbreviationview.js
 
-import { View } from '@ckeditor/ckeditor5-ui';
+import { View } from '@ssmckinney/ckeditor5-ui';
 
 export default class FormView extends View {
 	constructor( locale ) {
@@ -65,7 +65,7 @@ import {
 	View,
 	LabeledFieldView,               // ADDED
 	createLabeledInputText          // ADDED
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 
 export default class FormView extends View {
 	constructor( locale ) {
@@ -105,7 +105,7 @@ import {
 	LabeledFieldView,
 	createLabeledInputText,
 	ButtonView // ADDED
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 
 export default class FormView extends View {
 	constructor( locale ) {
@@ -187,8 +187,8 @@ Import it into `AbbreviationUI`:
 ```js
 // abbreviation/abbreviationui.js
 
-import { Plugin } from 'ckeditor5';
-import { ButtonView } from '@ckeditor/ckeditor5-ui';
+import { Plugin } from '@ssmckinney/ckeditor5';
+import { ButtonView } from '@ssmckinney/ckeditor5-ui';
 import './styles.css';													// ADDED
 
 class AbbreviationUI extends Plugin {
@@ -214,7 +214,7 @@ import {
 	createLabeledInputText,
 	ButtonView,
 	submitHandler                                   // ADDED
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 
 export default class FormView extends View {
 	constructor( locale ) {
@@ -272,7 +272,7 @@ This is where we ended up with our UI in the first part of the tutorial.
 ```js
 // abbreviation/abbreviationui.js
 
-import { Plugin, ButtonView } from 'ckeditor5';
+import { Plugin, ButtonView } from '@ssmckinney/ckeditor5';
 
 class AbbreviationUI extends Plugin {
 	init() {
@@ -319,7 +319,7 @@ import {
 	Plugin,
 	ButtonView,			// ADDED
 	ContextualBalloon	// ADDED
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 
 import FormView from './abbreviationview';	// ADDED
 
@@ -467,7 +467,7 @@ Additionally, we will import {@link module:ui/bindings/clickoutsidehandler~click
 // abbreviation/abbreviationui.js
 
 // ...
-import { ContextualBalloon, clickOutsideHandler } from 'ckeditor5'; // ADDED
+import { ContextualBalloon, clickOutsideHandler } from '@ssmckinney/ckeditor5'; // ADDED
 
 class AbbreviationUI extends Plugin {
 	static get requires() {

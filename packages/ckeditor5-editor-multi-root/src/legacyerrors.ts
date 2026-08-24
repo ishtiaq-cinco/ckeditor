@@ -7,7 +7,7 @@
  * @module editor-multi-root/legacyerrors
  */
 
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 if ( false ) {
 	/**

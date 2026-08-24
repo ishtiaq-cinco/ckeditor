@@ -15,7 +15,7 @@ The media embed feature lets you insert embeddable media such as YouTube or Vime
 
 ## Demo
 
-You can use the insert media button in the toolbar {@icon @ckeditor/ckeditor5-icons/theme/icons/media.svg Insert media} to embed media. You can also paste a media URL directly into the editor content, and it will be [automatically embedded](#automatic-media-embed-on-paste). Try both approaches with the following URLs:
+You can use the insert media button in the toolbar {@icon @ssmckinney/ckeditor5-icons/theme/icons/media.svg Insert media} to embed media. You can also paste a media URL directly into the editor content, and it will be [automatically embedded](#automatic-media-embed-on-paste). Try both approaches with the following URLs:
 
 <ck:preload-svg-spritesheet-icon icon='link' />
 
@@ -35,7 +35,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, MediaEmbed } from 'ckeditor5';
+import { ClassicEditor, MediaEmbed } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -57,7 +57,7 @@ ClassicEditor
 
 ## Media embed features
 
-The [`@ckeditor/ckeditor5-media-embed`](https://www.npmjs.com/package/@ckeditor/ckeditor5-media-embed) package contains multiple plugins that implement media-related features:
+The [`@ssmckinney/ckeditor5-media-embed`](https://www.npmjs.com/package/@ssmckinney/ckeditor5-media-embed) package contains multiple plugins that implement media-related features:
 
 * {@link features/media-embed-configuration Configuration} &ndash; set the data output format and extend, remove, or override the default media providers.
 * {@link features/media-embed-external-preview External services} &ndash; use Iframely or Embedly to render rich previews inside the editor and on your target website.

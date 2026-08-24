@@ -5,8 +5,8 @@
 
 /* globals $ */
 
-import { BalloonEditor } from '@ckeditor/ckeditor5-editor-balloon';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { BalloonEditor } from '@ssmckinney/ckeditor5-editor-balloon';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 
 // Display an info when this file is ran as a standalone test.
 if ( window.top === window ) {
@@ -26,7 +26,7 @@ if ( window.top === window ) {
 
 			$( '#modal' ).modal( {
 				// Make sure the modal does not steal the input focus (e.g. when editing a link).
-				// https://github.com/ckeditor/ckeditor5/issues/1147
+				// https://github.com/ssmckinney/ckeditor5/issues/1147
 				focus: false
 			} );
 		} )

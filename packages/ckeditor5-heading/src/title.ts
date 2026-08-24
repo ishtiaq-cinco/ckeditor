@@ -7,9 +7,9 @@
  * @module heading/title
  */
 
-import { Plugin, type Editor, type ElementApi, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { first, logWarning, type GetCallback } from '@ckeditor/ckeditor5-utils';
+import { Plugin, type Editor, type ElementApi, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { first, logWarning, type GetCallback } from '@ssmckinney/ckeditor5-utils';
 import {
 	ViewDowncastWriter,
 	enableViewPlaceholder,
@@ -28,7 +28,7 @@ import {
 	type ViewElement,
 	type ModelWriter,
 	type PlaceholderableViewElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 // A list of element names that should be treated by the Title plugin as title-like.
 // This means that an element of a type from this list will be changed to a title element
@@ -82,7 +82,7 @@ export class Title extends Plugin {
 		//     <title-content>The title text</title-content>
 		// </title>
 		//
-		// See: https://github.com/ckeditor/ckeditor5/issues/2005.
+		// See: https://github.com/ssmckinney/ckeditor5/issues/2005.
 		//
 		// Title is scoped to roots whose `modelElement` is the generic `$root`. Custom root
 		// `modelElement` names (including `$inlineRoot`) are intentionally not supported:
@@ -117,7 +117,7 @@ export class Title extends Plugin {
 		) );
 
 		// Custom converter is used for data v -> m conversion to avoid calling post-fixer when setting data.
-		// See https://github.com/ckeditor/ckeditor5/issues/2036.
+		// See https://github.com/ssmckinney/ckeditor5/issues/2036.
 		editor.data.upcastDispatcher.on<UpcastElementEvent>( 'element:h1', dataViewModelH1Insertion, { priority: 'high' } );
 		editor.data.upcastDispatcher.on<UpcastElementEvent>( 'element:h2', dataViewModelH1Insertion, { priority: 'high' } );
 		editor.data.upcastDispatcher.on<UpcastElementEvent>( 'element:h3', dataViewModelH1Insertion, { priority: 'high' } );
@@ -492,7 +492,7 @@ export class Title extends Plugin {
 				}
 
 				// Then we need to display placeholder if it is needed.
-				// See: https://github.com/ckeditor/ckeditor5/issues/8689.
+				// See: https://github.com/ssmckinney/ckeditor5/issues/8689.
 				if ( needsViewPlaceholder( body, true ) && viewRoot!.childCount === 2 && body!.name === 'p' ) {
 					hasChanged = showViewPlaceholder( writer, body ) ? true : hasChanged;
 				} else {

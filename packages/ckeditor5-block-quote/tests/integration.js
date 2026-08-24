@@ -6,21 +6,21 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
 import { BlockQuote } from '../src/blockquote.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Image, ImageCaption } from '@ckeditor/ckeditor5-image';
-import { List, _ListItemUid as ListItemUid } from '@ckeditor/ckeditor5-list';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Delete } from '@ckeditor/ckeditor5-typing';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
-import { Table } from '@ckeditor/ckeditor5-table';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Image, ImageCaption } from '@ssmckinney/ckeditor5-image';
+import { List, _ListItemUid as ListItemUid } from '@ssmckinney/ckeditor5-list';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Delete } from '@ssmckinney/ckeditor5-typing';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
+import { Table } from '@ssmckinney/ckeditor5-table';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import {
 	_parseModel,
 	_getModelData,
 	_setModelData
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 describe( 'BlockQuote integration', () => {
 	let editor, model, element, viewDocument;

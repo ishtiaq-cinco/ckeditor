@@ -9,7 +9,7 @@
 
 import { HighlightedTextView } from './highlightedtextview.js';
 import { type LabelView } from '../label/labelview.js';
-import { uid } from '@ckeditor/ckeditor5-utils';
+import { uid } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * A label view that can highlight a text fragment.

@@ -5,7 +5,7 @@
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { BoxedEditorUIView } from '../../../src/editorui/boxed/boxededitoruiview.js';
-import { Locale } from '@ckeditor/ckeditor5-utils';
+import { Locale } from '@ssmckinney/ckeditor5-utils';
 import { ViewCollection } from '../../../src/viewcollection.js';
 
 describe( 'BoxedEditorUIView', () => {

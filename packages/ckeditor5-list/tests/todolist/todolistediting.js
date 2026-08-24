@@ -5,17 +5,17 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { HeadingEditing } from '@ckeditor/ckeditor5-heading';
-import { ModelElement, _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-import { AlignmentEditing } from '@ckeditor/ckeditor5-alignment';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { HeadingEditing } from '@ssmckinney/ckeditor5-heading';
+import { ModelElement, _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
+import { AlignmentEditing } from '@ssmckinney/ckeditor5-alignment';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { getCode, env } from '@ckeditor/ckeditor5-utils';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { getCode, env } from '@ssmckinney/ckeditor5-utils';
 
 import { TodoListEditing } from '../../src/todolist/todolistediting.js';
 import { ListEditing } from '../../src/list/listediting.js';

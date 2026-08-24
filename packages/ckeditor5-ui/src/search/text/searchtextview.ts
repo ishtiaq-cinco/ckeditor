@@ -7,7 +7,7 @@
  * @module ui/search/text/searchtextview
 */
 
-import { FocusTracker, KeystrokeHandler, type Locale } from '@ckeditor/ckeditor5-utils';
+import { FocusTracker, KeystrokeHandler, type Locale } from '@ssmckinney/ckeditor5-utils';
 import { View } from '../../view.js';
 import { SearchTextQueryView, type SearchTextQueryViewConfig } from './searchtextqueryview.js';
 import { SearchInfoView } from '../searchinfoview.js';

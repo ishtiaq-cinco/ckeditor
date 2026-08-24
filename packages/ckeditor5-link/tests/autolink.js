@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { ModelTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/modeltesteditor.js';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { CodeBlockEditing } from '@ckeditor/ckeditor5-code-block';
-import { Enter, ShiftEnter } from '@ckeditor/ckeditor5-enter';
-import { Input } from '@ckeditor/ckeditor5-typing';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { UndoEditing } from '@ckeditor/ckeditor5-undo';
-import { ModelRange, ViewDocumentDomEventData, _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { ModelTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/modeltesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { CodeBlockEditing } from '@ssmckinney/ckeditor5-code-block';
+import { Enter, ShiftEnter } from '@ssmckinney/ckeditor5-enter';
+import { Input } from '@ssmckinney/ckeditor5-typing';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { UndoEditing } from '@ssmckinney/ckeditor5-undo';
+import { ModelRange, ViewDocumentDomEventData, _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
 import { LinkEditing } from '../src/linkediting.js';
 import { AutoLink } from '../src/autolink.js';
 
@@ -353,7 +353,7 @@ describe( 'AutoLink', () => {
 		} );
 
 		it( 'does not add a linkHref attribute for links with www subdomain only, pressing enter with part of its end selected', () => {
-			// https://github.com/ckeditor/ckeditor5/issues/8050.
+			// https://github.com/ssmckinney/ckeditor5/issues/8050.
 			_setModelData( model, '<paragraph>https://www.ckso[urce.com]</paragraph>' );
 
 			editor.execute( 'enter' );
@@ -398,7 +398,7 @@ describe( 'AutoLink', () => {
 
 			editor.execute( 'shiftEnter' );
 
-			// TODO: should test with selection but master has a bug. See: https://github.com/ckeditor/ckeditor5/issues/7459.
+			// TODO: should test with selection but master has a bug. See: https://github.com/ssmckinney/ckeditor5/issues/7459.
 			expect( _getModelData( model, { withoutSelection: true } ) ).toBe(
 				'<paragraph>' +
 				'<$text linkHref="https://www.cksource.com">https://www.cksource.com</$text>' +
@@ -430,7 +430,7 @@ describe( 'AutoLink', () => {
 			);
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/15862
+		// https://github.com/ssmckinney/ckeditor5/issues/15862
 		it( 'adds linkHref to a text link inside an inline limit element on enter', () => {
 			editor.model.schema.register( 'limit', {
 				isLimit: true,
@@ -460,7 +460,7 @@ describe( 'AutoLink', () => {
 			);
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/15862
+		// https://github.com/ssmckinney/ckeditor5/issues/15862
 		it( 'adds linkHref to a text link inside a block limit element on enter', () => {
 			_setModelData( model, '<paragraph>https://www.cksource.com[]</paragraph>' );
 
@@ -573,8 +573,8 @@ describe( 'AutoLink', () => {
 				'http://उदाहरण.परीक्षा',
 				'http://1337.net',
 				'http://a.b-c.de',
-				'http://127.0.0.1:8080/ckeditor5/latest/features/link.html',
-				'http://192.168.43.58/ckeditor5/latest/features/link.html',
+				'http://127.0.0.1:8080/@ssmckinney/ckeditor5/latest/features/link.html',
+				'http://192.168.43.58/@ssmckinney/ckeditor5/latest/features/link.html',
 				'http://83.127.13.40',
 				'http://userid@83.127.13.40',
 				'http://localhost',
@@ -616,7 +616,7 @@ describe( 'AutoLink', () => {
 				'ftps://foo.bar/',
 				'http://-error-.invalid/',
 				'http:/cksource.com',
-				'http://www.cksource', // https://github.com/ckeditor/ckeditor5/issues/8050.
+				'http://www.cksource', // https://github.com/ssmckinney/ckeditor5/issues/8050.
 				'cksource.com',
 				'ww.cksource.com',
 				'www.cksource'
@@ -694,7 +694,7 @@ describe( 'AutoLink', () => {
 			);
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/12447
+		// https://github.com/ssmckinney/ckeditor5/issues/12447
 		it( 'should not undo auto-linking by pressing backspace after any other change has been made', () => {
 			const viewDocument = editor.editing.view.document;
 			const deleteEvent = new ViewDocumentDomEventData(

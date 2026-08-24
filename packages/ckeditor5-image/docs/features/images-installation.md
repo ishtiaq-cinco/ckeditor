@@ -21,7 +21,7 @@ import {
 	ImageStyle,
 	ImageToolbar,
 	LinkImage
-} from 'ckeditor5';
+} from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -39,7 +39,7 @@ ClassicEditor
 
 ## Configuring the toolbar dropdown
 
-The Image feature comes with the unified image insert dropdown component {@icon @ckeditor/ckeditor5-icons/theme/icons/image-upload.svg Image insert}. It automatically collects installed image insert methods. For example, if you install the `ImageUpload` plugin, the corresponding button will automatically appear in the dropdown. You only need to add a button to the toolbar:
+The Image feature comes with the unified image insert dropdown component {@icon @ssmckinney/ckeditor5-icons/theme/icons/image-upload.svg Image insert}. It automatically collects installed image insert methods. For example, if you install the `ImageUpload` plugin, the corresponding button will automatically appear in the dropdown. You only need to add a button to the toolbar:
 
 ```js
 ClassicEditor
@@ -53,9 +53,9 @@ ClassicEditor
 
 The feature is pre-configured to include the following image insertion methods:
 
-* `upload` - Upload image from computer. It uses the configured image upload adapter. {@icon @ckeditor/ckeditor5-icons/theme/icons/image-upload.svg Image upload}
-* `assetManager` - Opens the installed asset manager (for example the CKBox). {@icon @ckeditor/ckeditor5-icons/theme/icons/image-asset-manager.svg Asset manager}
-* `url` - Allows inserting an image by directly specifying its URL. Integration provided by `ImageInsertViaUrl` feature. {@icon @ckeditor/ckeditor5-icons/theme/icons/image-url.svg Insert via URL}
+* `upload` - Upload image from computer. It uses the configured image upload adapter. {@icon @ssmckinney/ckeditor5-icons/theme/icons/image-upload.svg Image upload}
+* `assetManager` - Opens the installed asset manager (for example the CKBox). {@icon @ssmckinney/ckeditor5-icons/theme/icons/image-asset-manager.svg Asset manager}
+* `url` - Allows inserting an image by directly specifying its URL. Integration provided by `ImageInsertViaUrl` feature. {@icon @ssmckinney/ckeditor5-icons/theme/icons/image-url.svg Insert via URL}
 
 Note that the insert methods mentioned above will only be added if you install dedicated features. However, not all features are required. If only one is available, it will be indicated by the toolbar dropdown icon.
 

@@ -7,8 +7,8 @@
  * @module table/converters/downcast
  */
 
-import { type Editor } from '@ckeditor/ckeditor5-core';
-import { toWidget, toWidgetEditable } from '@ckeditor/ckeditor5-widget';
+import { type Editor } from '@ssmckinney/ckeditor5-core';
+import { toWidget, toWidgetEditable } from '@ssmckinney/ckeditor5-widget';
 import type {
 	ModelNode,
 	ViewElement,
@@ -18,7 +18,7 @@ import type {
 	DowncastElementCreatorFunction,
 	ViewContainerElement,
 	DowncastConversionApi
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { TableUtils } from '../tableutils.js';
 import type { TableConversionAdditionalSlot } from '../tableediting.js';

@@ -7,8 +7,8 @@
  * @module highlight/highlightcommand
  */
 
-import { Command } from '@ckeditor/ckeditor5-core';
-import { ModelDocumentSelection, type ModelTreeWalkerValue, type ModelRange, type ModelElement } from '@ckeditor/ckeditor5-engine';
+import { Command } from '@ssmckinney/ckeditor5-core';
+import { ModelDocumentSelection, type ModelTreeWalkerValue, type ModelRange, type ModelElement } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * The highlight command. It is used by the {@link module:highlight/highlightediting~HighlightEditing highlight feature}

@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { Underline, Strikethrough, Mention } from 'ckeditor5';
+import { Underline, Strikethrough, Mention } from '@ssmckinney/ckeditor5';
 import { CS_CONFIG, ClassicEditor, getViewportTopOffsetConfig } from '@snippets/index.js';
 
 ClassicEditor

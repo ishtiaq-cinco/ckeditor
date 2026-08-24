@@ -3,15 +3,15 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { BalloonEditor } from '@ckeditor/ckeditor5-editor-balloon';
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { DecoupledEditor } from '@ckeditor/ckeditor5-editor-decoupled';
-import { InlineEditor } from '@ckeditor/ckeditor5-editor-inline';
+import { BalloonEditor } from '@ssmckinney/ckeditor5-editor-balloon';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { DecoupledEditor } from '@ssmckinney/ckeditor5-editor-decoupled';
+import { InlineEditor } from '@ssmckinney/ckeditor5-editor-inline';
 
-import { BlockToolbar } from '@ckeditor/ckeditor5-ui';
-import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
+import { BlockToolbar } from '@ssmckinney/ckeditor5-ui';
+import { SourceEditing } from '@ssmckinney/ckeditor5-source-editing';
 
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 
 window.editors = {};
 

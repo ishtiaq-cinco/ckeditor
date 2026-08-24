@@ -7,7 +7,7 @@
  * @module media-embed/mediaembedresize/mediaembedresizebuttons
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import {
 	ButtonView,
 	DropdownButtonView,
@@ -15,15 +15,15 @@ import {
 	createDropdown,
 	addListToDropdown,
 	type ListDropdownItemDefinition
-} from '@ckeditor/ckeditor5-ui';
-import { CKEditorError, Collection, type Locale } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-ui';
+import { CKEditorError, Collection, type Locale } from '@ssmckinney/ckeditor5-utils';
 import {
 	IconObjectSizeCustom,
 	IconObjectSizeFull,
 	IconObjectSizeLarge,
 	IconObjectSizeMedium,
 	IconObjectSizeSmall
-} from '@ckeditor/ckeditor5-icons';
+} from '@ssmckinney/ckeditor5-icons';
 
 import { MediaEmbedResizeEditing } from './mediaembedresizeediting.js';
 import type { ResizeMediaEmbedCommand } from './resizemediaembedcommand.js';

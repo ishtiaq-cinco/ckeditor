@@ -7,8 +7,8 @@
  * @module mention/ui/domwrapperview
  */
 
-import { View } from '@ckeditor/ckeditor5-ui';
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import { View } from '@ssmckinney/ckeditor5-ui';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * This class wraps DOM element as a CKEditor5 UI View.

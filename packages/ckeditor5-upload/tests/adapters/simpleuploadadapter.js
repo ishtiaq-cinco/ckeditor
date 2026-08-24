@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { SimpleUploadAdapter } from '../../src/adapters/simpleuploadadapter.js';
 import { FileRepository } from '../../src/filerepository.js';
 import { createNativeFileMock } from '../_utils/mocks.js';

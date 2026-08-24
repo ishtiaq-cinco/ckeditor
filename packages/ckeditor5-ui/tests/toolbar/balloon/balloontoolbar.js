@@ -4,22 +4,22 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach, afterAll } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { EditorUI } from '../../../src/editorui/editorui.js';
 import { BalloonToolbar } from '../../../src/toolbar/balloon/balloontoolbar.js';
 import { ContextualBalloon } from '../../../src/panel/balloon/contextualballoon.js';
 import { BalloonPanelView } from '../../../src/panel/balloon/balloonpanelview.js';
 import { ToolbarView } from '../../../src/toolbar/toolbarview.js';
 import { ButtonView } from '../../../src/button/buttonview.js';
-import { FocusTracker, global, ResizeObserver, env, Rect, toUnit } from '@ckeditor/ckeditor5-utils';
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { Bold, Italic, Underline } from '@ckeditor/ckeditor5-basic-styles';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { MultiRootEditor } from '@ckeditor/ckeditor5-editor-multi-root';
+import { FocusTracker, global, ResizeObserver, env, Rect, toUnit } from '@ssmckinney/ckeditor5-utils';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { Bold, Italic, Underline } from '@ssmckinney/ckeditor5-basic-styles';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { HorizontalLine } from '@ssmckinney/ckeditor5-horizontal-line';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { MultiRootEditor } from '@ssmckinney/ckeditor5-editor-multi-root';
 
-import { _setModelData, _stringifyView } from '@ckeditor/ckeditor5-engine';
+import { _setModelData, _stringifyView } from '@ssmckinney/ckeditor5-engine';
 
 const toPx = toUnit( 'px' );
 
@@ -465,7 +465,7 @@ describe( 'BalloonToolbar', () => {
 			expect( balloonAddSpy ).toHaveBeenCalledOnce();
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/6443
+		// https://github.com/ssmckinney/ckeditor5/issues/6443
 		it( 'should not add the #toolbarView to the #_balloon when the selection contains more than one fully contained object', () => {
 			_setModelData( model, '[<horizontalLine></horizontalLine>]<paragraph>foo</paragraph>[<horizontalLine></horizontalLine>]' );
 
@@ -473,7 +473,7 @@ describe( 'BalloonToolbar', () => {
 			expect( balloonAddSpy ).not.toHaveBeenCalled();
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/6432
+		// https://github.com/ssmckinney/ckeditor5/issues/6432
 		it( 'should not add the #toolbarView to the #_balloon when the selection contains more than one fully contained selectable', () => {
 			// This is for multi cell selection in tables.
 			_setModelData( model, '<table>' +
@@ -529,7 +529,7 @@ describe( 'BalloonToolbar', () => {
 			expect( balloonToolbar.toolbarView.maxWidth ).toBe( expectedWidth );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/7707
+		// https://github.com/ssmckinney/ckeditor5/issues/7707
 		describe( 'on iOS (avoiding the clash with native selection handles)', () => {
 			let targetRect, balloonRect;
 

@@ -7,7 +7,7 @@
  * @module widget/widgetresize/resizerstate
  */
 
-import { ObservableMixin, Rect, type ObservableMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { ObservableMixin, Rect, type ObservableMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 
 import type { WidgetResizerOptions } from '../widgetresize.js';
 import { calculateResizeHostPercentageWidth } from '../utils.js';

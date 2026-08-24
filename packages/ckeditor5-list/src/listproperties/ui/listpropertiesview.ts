@@ -17,16 +17,20 @@ import {
 	createLabeledInputNumber,
 	addKeyboardHandlingForGrid,
 	CollapsibleView,
+	ColorGridView,
+	LabelView,
+	type ColorDefinition,
+	type ColorGridViewExecuteEvent,
 	type InputNumberView,
 	type FocusableView
-} from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-ui';
 
 import {
 	FocusTracker,
 	KeystrokeHandler,
 	global,
 	type Locale
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import type { NormalizedListPropertiesConfig } from '../utils/config.js';
 
@@ -85,6 +89,29 @@ export class ListPropertiesView extends View {
 	 * @readonly
 	 */
 	public reversedSwitchButtonView: SwitchButtonView | null = null;
+
+	/**
+	 * The grid of marker colours, when
+	 * {@link module:list/listconfig~ListPropertiesConfig#markerColor `config.list.properties.markerColor`} is on.
+	 */
+	public markerColorGridView: ColorGridView | null = null;
+
+	/**
+	 * The labelled row wrapping {@link #markerColorGridView}. Exposed so that its enabled state can be bound to
+	 * the command, greying the whole row out rather than only the swatches.
+	 */
+	public markerColorRowView: ListPropertiesRowView | null = null;
+
+	/**
+	 * The row of column-count buttons, when
+	 * {@link module:list/listconfig~ListPropertiesConfig#columns `config.list.properties.columns`} is on.
+	 */
+	public columnsButtonViews: Array<ButtonView> | null = null;
+
+	/**
+	 * The labelled row wrapping {@link #columnsButtonViews}.
+	 */
+	public columnsRowView: ListPropertiesRowView | null = null;
 
 	/**
 	 * Tracks information about the DOM focus in the view.
@@ -158,8 +185,10 @@ export class ListPropertiesView extends View {
 
 		// The rendering of the numbered list property views is also conditional. It only makes sense for the numbered list
 		// dropdown. The unordered list does not have such properties.
-		if ( enabledProperties.startIndex || enabledProperties.reversed ) {
-			this._addNumberedListPropertyViews( enabledProperties );
+		if ( enabledProperties.startIndex || enabledProperties.reversed ||
+			enabledProperties.markerColor || enabledProperties.columns
+		) {
+			this._addAdditionalPropertyViews( enabledProperties );
 
 			elementCssClasses.push( 'ck-list-properties_with-numbered-properties' );
 		}
@@ -198,7 +227,7 @@ export class ListPropertiesView extends View {
 				focusTracker: this.stylesView.focusTracker,
 				gridItems: this.stylesView.children,
 				// Note: The styles view has a different number of columns depending on whether the other properties
-				// are enabled in the dropdown or not (https://github.com/ckeditor/ckeditor5/issues/12340)
+				// are enabled in the dropdown or not (https://github.com/ssmckinney/ckeditor5/issues/12340)
 				numberOfColumns: () => global.window
 					.getComputedStyle( this.stylesView!.element! )
 					.getPropertyValue( 'grid-template-columns' )
@@ -312,9 +341,23 @@ export class ListPropertiesView extends View {
 	 * @param enabledProperties An object containing the configuration of enabled list property names
 	 * (see {@link #constructor}).
 	 */
-	private _addNumberedListPropertyViews( enabledProperties: NormalizedListPropertiesConfig ) {
+	private _addAdditionalPropertyViews( enabledProperties: NormalizedListPropertiesConfig ) {
 		const t = this.locale.t;
-		const numberedPropertyViews = [];
+		// Everything the collapsible hosts must carry an `isEnabled`, because the collapsible binds its own
+		// enabled state to theirs below.
+		const numberedPropertyViews: Array<FocusableView & { isEnabled: boolean }> = [];
+
+		if ( enabledProperties.markerColor ) {
+			this.markerColorGridView = this._createMarkerColorGrid( enabledProperties.markerColors );
+			this.markerColorRowView = this._createLabelledRow( t( 'Marker color' ), this.markerColorGridView );
+			numberedPropertyViews.push( this.markerColorRowView );
+		}
+
+		if ( enabledProperties.columns ) {
+			this.columnsButtonViews = enabledProperties.columns.map( columns => this._createColumnsButton( columns ) );
+			this.columnsRowView = this._createLabelledRow( t( 'Columns' ), this._createColumnsRow() );
+			numberedPropertyViews.push( this.columnsRowView );
+		}
 
 		if ( enabledProperties.startIndex ) {
 			this.startIndexFieldView = this._createStartIndexField();
@@ -350,6 +393,103 @@ export class ListPropertiesView extends View {
 		} else {
 			this.children.addMany( numberedPropertyViews );
 		}
+	}
+
+	/**
+	 * Wraps a control in a labelled row, so that a grid or a button row reads as a named property rather than
+	 * as loose widgets in the panel.
+	 */
+	private _createLabelledRow( label: string, content: View ): ListPropertiesRowView {
+		const labelView = new LabelView( this.locale );
+
+		labelView.text = label;
+
+		const row = new View( this.locale ) as ListPropertiesRowView;
+
+		// The collapsible binds its own enabled state to that of everything inside it, so a row has to have one
+		// even though it is only a wrapper.
+		row.set( 'isEnabled', true );
+
+		const bind = row.bindTemplate;
+
+		row.setTemplate( {
+			tag: 'div',
+			attributes: {
+				class: [
+					'ck',
+					'ck-list-properties__row',
+					bind.if( 'isEnabled', 'ck-disabled', value => !value )
+				]
+			},
+			children: [ labelView, content ]
+		} );
+
+		// The row itself is not focusable; focus belongs to whatever it wraps.
+		row.focus = () => ( content as FocusableView ).focus();
+
+		return row;
+	}
+
+	/**
+	 * Creates the grid of marker colours.
+	 */
+	private _createMarkerColorGrid( colors: Array<ColorDefinition> ): ColorGridView {
+		const gridView = new ColorGridView( this.locale, {
+			colorDefinitions: colors,
+			columns: 5
+		} );
+
+		gridView.extendTemplate( {
+			attributes: {
+				class: 'ck-list-properties__marker-colors'
+			}
+		} );
+
+		gridView.on<ColorGridViewExecuteEvent>( 'execute', ( evt, data ) => {
+			this.fire<ListPropertiesViewMarkerColorEvent>( 'listMarkerColor', { color: data.value || null } );
+		} );
+
+		return gridView;
+	}
+
+	/**
+	 * Creates the row of column-count buttons.
+	 */
+	private _createColumnsRow(): View {
+		const row = new View( this.locale );
+
+		row.setTemplate( {
+			tag: 'div',
+			attributes: {
+				class: [ 'ck', 'ck-list-properties__columns' ]
+			},
+			children: this.columnsButtonViews!
+		} );
+
+		( row as FocusableView ).focus = () => this.columnsButtonViews![ 0 ].focus();
+
+		return row;
+	}
+
+	/**
+	 * Creates a single column-count button.
+	 */
+	private _createColumnsButton( columns: number ): ButtonView {
+		const t = this.locale.t;
+		const button = new ButtonView( this.locale );
+
+		button.set( {
+			label: String( columns ),
+			tooltip: columns === 1 ? t( 'Stacked, one column' ) : t( 'Lay the list out in %0 columns', columns ),
+			withText: true,
+			isToggleable: true
+		} );
+
+		button.on( 'execute', () => {
+			this.fire<ListPropertiesViewColumnsEvent>( 'listColumns', { columns } );
+		} );
+
+		return button;
 	}
 
 	/**
@@ -442,4 +582,29 @@ export type ListPropertiesViewListStartEvent = {
 export type ListPropertiesViewListReversedEvent = {
 	name: 'listReversed';
 	args: [];
+};
+
+/**
+ * A row of the list properties panel pairing a label with a control.
+ */
+export type ListPropertiesRowView = View & FocusableView & { isEnabled: boolean };
+
+/**
+ * Fired when a colour is picked in the marker colour grid.
+ *
+ * @eventName ~ListPropertiesView#listMarkerColor
+ */
+export type ListPropertiesViewMarkerColorEvent = {
+	name: 'listMarkerColor';
+	args: [ { color: string | null } ];
+};
+
+/**
+ * Fired when a column count is picked.
+ *
+ * @eventName ~ListPropertiesView#listColumns
+ */
+export type ListPropertiesViewColumnsEvent = {
+	name: 'listColumns';
+	args: [ { columns: number } ];
 };

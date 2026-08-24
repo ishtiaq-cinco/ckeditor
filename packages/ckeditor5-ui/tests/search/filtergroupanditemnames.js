@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Locale, global } from '@ckeditor/ckeditor5-utils';
+import { Locale, global } from '@ssmckinney/ckeditor5-utils';
 import {
 	ButtonLabelWithHighlightView,
 	ButtonView,

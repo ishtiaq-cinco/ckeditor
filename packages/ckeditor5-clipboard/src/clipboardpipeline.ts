@@ -7,9 +7,9 @@
  * @module clipboard/clipboardpipeline
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
-import { EventInfo } from '@ckeditor/ckeditor5-utils';
+import { EventInfo } from '@ssmckinney/ckeditor5-utils';
 
 import type {
 	ViewDataTransfer,
@@ -20,7 +20,7 @@ import type {
 	ViewRange,
 	ModelSelection,
 	ModelDocumentSelection
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import {
 	ClipboardObserver,
@@ -220,7 +220,7 @@ export class ClipboardPipeline extends Plugin {
 			const dataTransfer = data.dataTransfer;
 
 			const eventInfo = new EventInfo( this, 'inputTransformation' );
-			const sourceEditorId = dataTransfer.getData( 'application/ckeditor5-editor-id' ) || null;
+			const sourceEditorId = dataTransfer.getData( 'application/@ssmckinney/ckeditor5-editor-id' ) || null;
 
 			// Some feature could already inject content in the higher priority event handler (i.e., codeBlock, paste from office).
 			const content = typeof data.content == 'string' ?
@@ -324,7 +324,7 @@ export class ClipboardPipeline extends Plugin {
 			if ( !data.content.isEmpty ) {
 				data.dataTransfer.setData( 'text/html', this.editor.data.htmlProcessor.toData( data.content ) );
 				data.dataTransfer.setData( 'text/plain', viewToPlainText( editor.data.htmlProcessor.domConverter, data.content ) );
-				data.dataTransfer.setData( 'application/ckeditor5-editor-id', this.editor.id );
+				data.dataTransfer.setData( 'application/@ssmckinney/ckeditor5-editor-id', this.editor.id );
 			}
 
 			if ( data.method == 'cut' ) {

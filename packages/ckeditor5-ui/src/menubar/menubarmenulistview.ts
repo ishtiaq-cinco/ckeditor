@@ -7,7 +7,7 @@
  * @module ui/menubar/menubarmenulistview
  */
 
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 import { type View } from '../view.js';
 
 import { ListItemView } from '../list/listitemview.js';

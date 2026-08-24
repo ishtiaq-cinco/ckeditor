@@ -11,7 +11,7 @@ import type {
 	EditingController,
 	ModelElement,
 	Model
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { TableWalker } from '../tablewalker.js';
 
@@ -60,7 +60,7 @@ export function tableStructureRefreshHandler( model: Model, editing: EditingCont
 		}
 
 		// Mark row to be reconverted when it was moved around so that `<th>` and `<td>` elements can be updated.
-		// See https://github.com/ckeditor/ckeditor5/issues/19671.
+		// See https://github.com/ssmckinney/ckeditor5/issues/19671.
 		if (
 			change.type == 'insert' &&
 			change.name == 'tableRow' &&
@@ -88,7 +88,7 @@ export function tableStructureRefreshHandler( model: Model, editing: EditingCont
 				cellsToReconvert.add( tableSlot.cell );
 
 				// Reconvert rows that were just inserted (moved) as marking cells inside for reconversion does not work.
-				// See https://github.com/ckeditor/ckeditor5/issues/19671.
+				// See https://github.com/ssmckinney/ckeditor5/issues/19671.
 				if ( movedRows.has( tableSlot.cell.parent as ModelElement ) ) {
 					rowsToReconvert.add( tableSlot.cell.parent as ModelElement );
 				}

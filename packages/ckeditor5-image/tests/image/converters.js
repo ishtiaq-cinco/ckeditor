@@ -13,9 +13,9 @@ import {
 	createBlockImageViewElement,
 	createInlineImageViewElement
 } from '../../src/image/utils.js';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 
-import { _getViewData, _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { _getViewData, _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'Image converters', () => {
 	let editor, model, document, viewDocument;

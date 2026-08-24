@@ -4,17 +4,17 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 
 import { UploadImageCommand } from '../../src/imageupload/uploadimagecommand.js';
-import { FileRepository } from '@ckeditor/ckeditor5-upload';
+import { FileRepository } from '@ssmckinney/ckeditor5-upload';
 
-import { createNativeFileMock, UploadAdapterMock } from '@ckeditor/ckeditor5-upload/tests/_utils/mocks.js';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { createNativeFileMock, UploadAdapterMock } from '@ssmckinney/ckeditor5-upload/tests/_utils/mocks.js';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { ImageBlockEditing } from '../../src/image/imageblockediting.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 import { ImageInlineEditing } from '../../src/image/imageinlineediting.js';
 
 describe( 'UploadImageCommand', () => {

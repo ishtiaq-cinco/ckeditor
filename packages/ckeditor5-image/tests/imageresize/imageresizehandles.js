@@ -6,22 +6,22 @@
 import { describe, it, expect, vi, beforeEach, afterEach, beforeAll, afterAll } from 'vitest';
 
 // ClassicTestEditor can't be used, as it doesn't handle the focus, which is needed to test resizer visual cues.
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { HtmlEmbedEditing } from '@ckeditor/ckeditor5-html-embed';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Rect } from '@ckeditor/ckeditor5-utils';
-import { Table } from '@ckeditor/ckeditor5-table';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { LinkImageEditing } from '@ckeditor/ckeditor5-link';
-import { LegacyTodoList } from '@ckeditor/ckeditor5-list';
-import { Widget } from '@ckeditor/ckeditor5-widget';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { HtmlEmbedEditing } from '@ssmckinney/ckeditor5-html-embed';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Rect } from '@ssmckinney/ckeditor5-utils';
+import { Table } from '@ssmckinney/ckeditor5-table';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { LinkImageEditing } from '@ssmckinney/ckeditor5-link';
+import { LegacyTodoList } from '@ssmckinney/ckeditor5-list';
+import { Widget } from '@ssmckinney/ckeditor5-widget';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 import {
 	focusEditor,
 	resizerMouseSimulator,
 	getWidgetDomParts,
 	getHandleCenterPoint
-} from '@ckeditor/ckeditor5-widget/tests/widgetresize/_utils/utils.js';
+} from '@ssmckinney/ckeditor5-widget/tests/widgetresize/_utils/utils.js';
 import { IMAGE_SRC_FIXTURE, waitForAllImagesLoaded } from './_utils/utils.js';
 
 import { Image } from '../../src/image.js';
@@ -101,7 +101,7 @@ describe( 'ImageResizeHandles', () => {
 			it( 'disables the resizer if the command is disabled', async () => {
 				await setModelAndWaitForImages( editor,
 					`<paragraph>foo</paragraph>[<imageBlock src="${ IMAGE_SRC_FIXTURE }"></imageBlock>]` );
-				// Enforce selection on an image. See: https://github.com/ckeditor/ckeditor5/issues/8617.
+				// Enforce selection on an image. See: https://github.com/ssmckinney/ckeditor5/issues/8617.
 				editor.model.change( writer => writer.setSelection( editor.model.document.getRoot().getChild( 1 ), 'on' ) );
 
 				const resizer = getSelectedImageResizer( editor );
@@ -172,7 +172,7 @@ describe( 'ImageResizeHandles', () => {
 			} );
 
 			it( 'doesn\'t flicker at the beginning of the resize', async () => {
-				// (https://github.com/ckeditor/ckeditor5/issues/5189)
+				// (https://github.com/ssmckinney/ckeditor5/issues/5189)
 				const resizerPosition = 'bottom-left';
 				const domParts = getWidgetDomParts( editor, widget, resizerPosition );
 				const initialPointerPosition = getHandleCenterPoint( domParts.widget, resizerPosition );
@@ -210,7 +210,7 @@ describe( 'ImageResizeHandles', () => {
 
 				await setModelAndWaitForImages( editor,
 					`<paragraph>foo</paragraph>[<imageBlock src="${ IMAGE_SRC_FIXTURE }"></imageBlock>]` );
-				// Enforce selection on an image. See: https://github.com/ckeditor/ckeditor5/issues/8617.
+				// Enforce selection on an image. See: https://github.com/ssmckinney/ckeditor5/issues/8617.
 				editor.model.change( writer => writer.setSelection( editor.model.document.getRoot().getChild( 1 ), 'on' ) );
 
 				widget = viewDocument.getRoot().getChild( 1 );
@@ -313,7 +313,7 @@ describe( 'ImageResizeHandles', () => {
 		} );
 
 		it( 'only creates a resizer after the image is loaded', async () => {
-			// https://github.com/ckeditor/ckeditor5/issues/8088
+			// https://github.com/ssmckinney/ckeditor5/issues/8088
 			editor = await createEditor();
 			_setModelData( editor.model, `[<imageBlock src="${ IMAGE_SRC_FIXTURE }"></imageBlock>]` );
 			widget = viewDocument.getRoot().getChild( 0 );
@@ -433,7 +433,7 @@ describe( 'ImageResizeHandles', () => {
 				await setModelAndWaitForImages( editor,
 					`<paragraph>foo</paragraph>[<imageBlock src="${ IMAGE_SRC_FIXTURE }"></imageBlock>]` );
 
-				// Enforce selection on an image. See: https://github.com/ckeditor/ckeditor5/issues/8617.
+				// Enforce selection on an image. See: https://github.com/ssmckinney/ckeditor5/issues/8617.
 				editor.model.change( writer => writer.setSelection( editor.model.document.getRoot().getChild( 1 ), 'on' ) );
 
 				widget = viewDocument.getRoot().getChild( 1 );
@@ -580,7 +580,7 @@ describe( 'ImageResizeHandles', () => {
 					'<paragraph>foo</paragraph>' +
 					`<paragraph>[<imageInline src="${ IMAGE_SRC_FIXTURE }"></imageInline>]</paragraph>`
 				);
-				// Enforce selection on an image. See: https://github.com/ckeditor/ckeditor5/issues/8617.
+				// Enforce selection on an image. See: https://github.com/ssmckinney/ckeditor5/issues/8617.
 				editor.model.change( writer => writer.setSelection( editor.model.document.getRoot().getChild( 1 ).getChild( 0 ), 'on' ) );
 
 				const resizer = getSelectedImageResizer( editor );
@@ -632,7 +632,7 @@ describe( 'ImageResizeHandles', () => {
 			} );
 
 			it( 'doesn\'t flicker at the beginning of the resize', async () => {
-				// (https://github.com/ckeditor/ckeditor5/issues/5189)
+				// (https://github.com/ssmckinney/ckeditor5/issues/5189)
 				const resizerPosition = 'bottom-left';
 				const domParts = getWidgetDomParts( editor, widget, resizerPosition );
 				const initialPointerPosition = getHandleCenterPoint( domParts.widget, resizerPosition );
@@ -703,7 +703,7 @@ describe( 'ImageResizeHandles', () => {
 					'<paragraph>foo</paragraph>' +
 					`<paragraph>[<imageInline src="${ IMAGE_SRC_FIXTURE }"></imageInline>]</paragraph>`
 				);
-				// Enforce selection on an image. See: https://github.com/ckeditor/ckeditor5/issues/8617.
+				// Enforce selection on an image. See: https://github.com/ssmckinney/ckeditor5/issues/8617.
 				editor.model.change( writer => writer.setSelection( editor.model.document.getRoot().getChild( 1 ).getChild( 0 ), 'on' ) );
 
 				widget = viewDocument.getRoot().getChild( 1 ).getChild( 0 );
@@ -784,7 +784,7 @@ describe( 'ImageResizeHandles', () => {
 		} );
 
 		it( 'only creates a resizer after the image is loaded', async () => {
-			// https://github.com/ckeditor/ckeditor5/issues/8088
+			// https://github.com/ssmckinney/ckeditor5/issues/8088
 			editor = await createEditor();
 			_setModelData( editor.model, `<paragraph>[<imageInline src="${ IMAGE_SRC_FIXTURE }"></imageInline>]</paragraph>` );
 			widget = viewDocument.getRoot().getChild( 0 ).getChild( 0 );
@@ -797,7 +797,7 @@ describe( 'ImageResizeHandles', () => {
 		} );
 
 		it( 'should be able to get the proper resizeHost size when the image it is wrapped with an inline element', async () => {
-			// https://github.com/ckeditor/ckeditor5/issues/9568
+			// https://github.com/ssmckinney/ckeditor5/issues/9568
 			const editor = await createEditor( {
 				plugins: [ Image, ImageResizeEditing, ImageResizeHandles, LinkImageEditing, Paragraph ],
 				image: { resizeUnit: 'px' }
@@ -927,7 +927,7 @@ describe( 'ImageResizeHandles', () => {
 					`<paragraph>foo</paragraph><paragraph>[<imageInline src="${ IMAGE_SRC_FIXTURE }"></imageInline>]</paragraph>`
 				);
 
-				// Enforce selection on an image. See: https://github.com/ckeditor/ckeditor5/issues/8617.
+				// Enforce selection on an image. See: https://github.com/ssmckinney/ckeditor5/issues/8617.
 				editor.model.change( writer => writer.setSelection( editor.model.document.getRoot().getChild( 1 ).getChild( 0 ), 'on' ) );
 
 				widget = viewDocument.getRoot().getChild( 1 ).getChild( 0 );

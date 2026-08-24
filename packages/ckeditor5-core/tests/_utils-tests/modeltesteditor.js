@@ -5,7 +5,7 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { Editor } from '../../src/editor/editor.js';
-import { EditingController, HtmlDataProcessor, ModelRootElement, _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { EditingController, HtmlDataProcessor, ModelRootElement, _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 import { ModelTestEditor } from '../../tests/_utils/modeltesteditor.js';
 
 describe( 'ModelTestEditor', () => {

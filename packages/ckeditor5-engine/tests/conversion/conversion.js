@@ -18,7 +18,7 @@ import { Model } from '../../src/model/model.js';
 import { _parseView, _stringifyView } from '../../src/dev-utils/view.js';
 import { _stringifyModel } from '../../src/dev-utils/model.js';
 import { ConversionHelpers } from '../../src/conversion/conversionhelpers.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { StylesProcessor } from '../../src/view/stylesmap.js';
 
 describe( 'Conversion', () => {

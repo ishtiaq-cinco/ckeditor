@@ -7,7 +7,7 @@
  * @module upload/adapters/base64uploadadapter
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { FileRepository, type UploadResponse, type FileLoader, type UploadAdapter } from '../filerepository.js';
 
 type DomFileReader = globalThis.FileReader;

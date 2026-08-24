@@ -15,8 +15,8 @@ import {
 	type ButtonExecuteEvent,
 	type DropdownView,
 	type ListDropdownItemDefinition
-} from '@ckeditor/ckeditor5-ui';
-import { Collection, type Locale } from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-ui';
+import { Collection, type Locale } from '@ssmckinney/ckeditor5-utils';
 import type { EmojiSkinToneId } from '../emojiconfig.js';
 import type { EmojiSkinTone } from '../emojirepository.js';
 

@@ -24,11 +24,11 @@ import { ViewDowncastWriter } from '../../src/view/downcastwriter.js';
 
 import { _parseView, _stringifyView, _setViewData, _getViewData } from '../../src/dev-utils/view.js';
 import { BR_FILLER, INLINE_FILLER, INLINE_FILLER_LENGTH } from '../../src/view/filler.js';
-import { testUtils } from '@ckeditor/ckeditor5-core/tests/_utils/utils.js';
+import { testUtils } from '@ssmckinney/ckeditor5-core/tests/_utils/utils.js';
 import { createViewRoot } from './_utils/createroot.js';
-import { createElement, env } from '@ckeditor/ckeditor5-utils';
-import { normalizeHtml } from '@ckeditor/ckeditor5-utils/tests/_utils/normalizehtml.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { createElement, env } from '@ssmckinney/ckeditor5-utils';
+import { normalizeHtml } from '@ssmckinney/ckeditor5-utils/tests/_utils/normalizehtml.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 import { StylesProcessor } from '../../src/view/stylesmap.js';
 
 describe( 'Renderer', () => {
@@ -381,7 +381,7 @@ describe( 'Renderer', () => {
 			expect( domRoot.childNodes.length ).toBe( 0 );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/5734
+		// https://github.com/ssmckinney/ckeditor5/issues/5734
 		it( 'should remove the comment and add a child element', () => {
 			const viewImg = new ViewElement( viewDocument, 'img' );
 			viewRoot._appendChild( viewImg );
@@ -783,7 +783,7 @@ describe( 'Renderer', () => {
 			renderAndExpectNoChanges( renderer, domRoot );
 		} );
 
-		// See https://github.com/ckeditor/ckeditor5/issues/14028.
+		// See https://github.com/ssmckinney/ckeditor5/issues/14028.
 		it( 'should add and remove inline filler in case <p><br>[]</p>', () => {
 			const domSelection = document.getSelection();
 
@@ -2973,7 +2973,7 @@ describe( 'Renderer', () => {
 				expect( mappings.get( domQULB ) ).toBe( viewQ.getChild( 0 ).getChild( 0 ).getChild( 1 ) );
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/5734
+			// https://github.com/ssmckinney/ckeditor5/issues/5734
 			it( 'should not rerender DOM when view replaced with the same structure without a comment', () => {
 				const domContent = '' +
 					'<h2>He<i>ading 1</i></h2>' +
@@ -3633,7 +3633,7 @@ describe( 'Renderer', () => {
 				expect( domRoot.innerHTML ).toBe( '<p><a href="#href">Foo<i>Bar</i></a></p>' );
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/6367.
+			// https://github.com/ssmckinney/ckeditor5/issues/6367.
 			it( 'should correctly handle moving a DOM element when rendering children', () => {
 				viewRoot._insertChild( 0, _parseView( 'y<attribute:span>x</attribute:span>' ) );
 				renderer.markToSync( 'children', viewRoot );
@@ -3651,7 +3651,7 @@ describe( 'Renderer', () => {
 				expect( domRoot.innerHTML ).toBe( '<span>x</span>y<strong>z</strong>' );
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/6367, but more complex
+			// https://github.com/ssmckinney/ckeditor5/issues/6367, but more complex
 			it( 'should correctly handle moving a DOM element when rendering children (more complex case)', () => {
 				viewRoot._insertChild( 0,
 					_parseView( '1<attribute:span>2</attribute:span><attribute:span>3</attribute:span>4<attribute:span>5</attribute:span>' )
@@ -3864,7 +3864,7 @@ describe( 'Renderer', () => {
 				] );
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/12574.
+			// https://github.com/ssmckinney/ckeditor5/issues/12574.
 			it( 'should normalize text nodes (on Android)', () => {
 				vi.spyOn( env, 'isAndroid', 'get' ).mockReturnValue( true );
 
@@ -4786,8 +4786,8 @@ describe( 'Renderer', () => {
 		}
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/10562
-	// https://github.com/ckeditor/ckeditor5/issues/10723
+	// https://github.com/ssmckinney/ckeditor5/issues/10562
+	// https://github.com/ssmckinney/ckeditor5/issues/10723
 	describe( 'Blocking selection rendering while making selection in Blink (#10562)', () => {
 		describe( 'constructor()', () => {
 			let viewDocument, selection, domConverter, renderer;
@@ -5051,7 +5051,7 @@ describe( 'Renderer', () => {
 					expect( domSelection.getRangeAt( 0 ).endOffset ).toBe( 2 );
 				} );
 
-				// https://github.com/ckeditor/ckeditor5/issues/11472.
+				// https://github.com/ssmckinney/ckeditor5/issues/11472.
 				it( 'should not remove the inline filler while the user is making selection (#11472)', () => {
 					const domSelection = document.getSelection();
 

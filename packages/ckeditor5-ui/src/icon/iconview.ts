@@ -9,7 +9,7 @@
 
 import { View } from '../view.js';
 
-import { CKEditorError, type ObservableChangeEvent } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, type ObservableChangeEvent } from '@ssmckinney/ckeditor5-utils';
 
 import '../../theme/components/icon/icon.css';
 
@@ -114,11 +114,11 @@ export class IconView extends View {
 					bind.if( 'isVisible', 'ck-hidden', value => !value ),
 
 					// Exclude icon internals from the CSS reset to allow rich (non-monochromatic) icons
-					// (https://github.com/ckeditor/ckeditor5/issues/12599).
+					// (https://github.com/ssmckinney/ckeditor5/issues/12599).
 					'ck-reset_all-excluded',
 
 					// The class to remove the dynamic color inheritance is toggleable
-					// (https://github.com/ckeditor/ckeditor5/issues/12599).
+					// (https://github.com/ssmckinney/ckeditor5/issues/12599).
 					bind.if( 'isColorInherited', 'ck-icon_inherit-color' )
 				],
 				viewBox: bind.to( 'viewBox' ),
@@ -172,7 +172,7 @@ export class IconView extends View {
 			}
 
 			// Preserve presentational attributes of the <svg> element from the source.
-			// They can affect rendering of the entire icon (https://github.com/ckeditor/ckeditor5/issues/12597).
+			// They can affect rendering of the entire icon (https://github.com/ssmckinney/ckeditor5/issues/12597).
 			for ( const { name, value } of Array.from( svg.attributes ) ) {
 				if ( IconView.presentationalAttributeNames.includes( name ) ) {
 					this.element!.setAttribute( name, value );

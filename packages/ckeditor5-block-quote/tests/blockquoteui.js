@@ -8,7 +8,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { BlockQuoteEditing } from '../src/blockquoteediting.js';
 import { BlockQuoteUI } from '../src/blockquoteui.js';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 
 describe( 'BlockQuoteUI', () => {
 	let editor, command, element, button;

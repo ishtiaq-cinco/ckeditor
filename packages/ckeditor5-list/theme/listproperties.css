@@ -60,3 +60,36 @@
 		}
 	}
 }
+
+/*
+ * The marker colour grid and the column buttons, each on a labelled row inside the properties collapsible.
+ */
+.ck.ck-list-properties {
+	& .ck-list-properties__row {
+		display: flex;
+		flex-direction: column;
+		gap: var(--ck-spacing-small);
+		padding: var(--ck-spacing-standard) var(--ck-spacing-large) 0;
+
+		/* The rows follow the command, and there is nothing to set a property on outside a list. */
+		&.ck-disabled {
+			opacity: .5;
+			pointer-events: none;
+		}
+
+		& > .ck-label {
+			font-weight: bold;
+			padding: 0;
+		}
+	}
+
+	& .ck-list-properties__columns {
+		display: flex;
+		gap: var(--ck-spacing-small);
+
+		& > .ck-button {
+			flex-grow: 1;
+			justify-content: center;
+		}
+	}
+}

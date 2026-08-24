@@ -5,10 +5,10 @@
 
 /* eslint-disable @stylistic/max-len */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-import { HorizontalLine } from '@ckeditor/ckeditor5-horizontal-line';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
+import { HorizontalLine } from '@ssmckinney/ckeditor5-horizontal-line';
 import { Table } from '../../src/table.js';
 import { TableToolbar } from '../../src/tabletoolbar.js';
 import { TableSelection } from '../../src/tableselection.js';

@@ -1,7 +1,7 @@
 GitHub Flavored Markdown support for CKEditor&nbsp;5
 ===============================================
 
-[![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-markdown-gfm.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-markdown-gfm)
+[![npm version](https://badge.fury.io/js/%40ckeditor%2F@ssmckinney/ckeditor5-markdown-gfm.svg)](https://www.npmjs.com/package/@ssmckinney/ckeditor5-markdown-gfm)
 [![codecov](https://codecov.io/gh/ckeditor/ckeditor5/branch/master/graph/badge.svg)](https://codecov.io/gh/ckeditor/ckeditor5)
 [![CircleCI](https://circleci.com/gh/ckeditor/ckeditor5.svg?style=shield)](https://app.circleci.com/pipelines/github/ckeditor/ckeditor5?branch=master)
 
@@ -9,10 +9,10 @@ This package implements the GitHub Flavored Markdown data processor for CKEditor
 
 ## Installation
 
-This plugin is part of the `ckeditor5` package. Install the whole package to use it.
+This plugin is part of the `@ssmckinney/ckeditor5` package. Install the whole package to use it.
 
 ```bash
-npm install ckeditor5
+npm install @ssmckinney/ckeditor5
 ```
 
 ## Create free account
@@ -21,11 +21,11 @@ If you want to check full CKEditor&nbsp;5 capabilities, sign up for a [free non-
 
 ## Demo
 
-Check out the [demo in the Markdown output feature guide](https://ckeditor.com/docs/ckeditor5/latest/features/markdown.html#demo) to see the editor configured to input and output Markdown code. Use the [demo in the Paste Markdown feature guide](https://ckeditor.com/docs/ckeditor5/latest/features/pasting/paste-markdown.html#demo) to try out experimental pasting Markdown-formatted content straight into the editor.
+Check out the [demo in the Markdown output feature guide](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/markdown.html#demo) to see the editor configured to input and output Markdown code. Use the [demo in the Paste Markdown feature guide](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/pasting/paste-markdown.html#demo) to try out experimental pasting Markdown-formatted content straight into the editor.
 
 ## Documentation
 
-See the [`@ckeditor/ckeditor5-markdown-gfm` package](https://ckeditor.com/docs/ckeditor5/latest/api/markdown-gfm.html) page as well as the [Markdown output](https://ckeditor.com/docs/ckeditor5/latest/features/markdown.html) and [Paste Markdown](https://ckeditor.com/docs/ckeditor5/latest/features/pasting/paste-markdown.html) in [CKEditor&nbsp;5 documentation](https://ckeditor.com/docs/ckeditor5/latest/).
+See the [`@ssmckinney/ckeditor5-markdown-gfm` package](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/api/markdown-gfm.html) page as well as the [Markdown output](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/markdown.html) and [Paste Markdown](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/pasting/paste-markdown.html) in [CKEditor&nbsp;5 documentation](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/).
 
 
 ## License

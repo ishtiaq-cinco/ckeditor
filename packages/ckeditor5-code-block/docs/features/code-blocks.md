@@ -9,7 +9,7 @@ The code block feature lets you insert and edit blocks of pre-formatted code. It
 
 ## Demo
 
-Use the code block toolbar button {@icon @ckeditor/ckeditor5-icons/theme/icons/code-block.svg Insert code block} and the type dropdown to insert a desired code block. Alternatively, start a line with a backtick, and the {@link features/autoformat autoformatting feature} will format it as a code block. To add a paragraph under a code block, simply press <kbd>Enter</kbd> three times.
+Use the code block toolbar button {@icon @ssmckinney/ckeditor5-icons/theme/icons/code-block.svg Insert code block} and the type dropdown to insert a desired code block. Alternatively, start a line with a backtick, and the {@link features/autoformat autoformatting feature} will format it as a code block. To add a paragraph under a code block, simply press <kbd>Enter</kbd> three times.
 
 {@snippet features/code-block}
 
@@ -25,7 +25,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, CodeBlock } from 'ckeditor5';
+import { ClassicEditor, CodeBlock } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -101,7 +101,7 @@ ClassicEditor
 
 ### Integration with code highlighters
 
-Although live code block highlighting ***is impossible when editing*** in CKEditor&nbsp;5 ([learn more](https://github.com/ckeditor/ckeditor5/issues/436#issuecomment-548399675)), the content can be highlighted when displayed in the frontend (for example, in blog posts or website content).
+Although live code block highlighting ***is impossible when editing*** in CKEditor&nbsp;5 ([learn more](https://github.com/ssmckinney/ckeditor5/issues/436#issuecomment-548399675)), the content can be highlighted when displayed in the frontend (for example, in blog posts or website content).
 
 The code language {@link module:code-block/codeblockconfig~CodeBlockConfig#languages configuration} helps to integrate with external code highlighters (for example, [highlight.js](https://highlightjs.org/) or [Prism](https://prismjs.com/)). Refer to the documentation of the highlighter of your choice and make sure the CSS classes configured in `codeBlock.languages` correspond with the code syntax autodetection feature of the highlighter.
 

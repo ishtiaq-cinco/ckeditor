@@ -7,12 +7,12 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { Paragraph } from '../src/paragraph.js';
 import { ParagraphCommand } from '../src/paragraphcommand.js';
 import { InsertParagraphCommand } from '../src/insertparagraphcommand.js';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 import {
 	_getModelData,
 	_setModelData,
 	_stringifyModel,
-	_getViewData, ModelDocumentFragment, ModelText } from '@ckeditor/ckeditor5-engine';
+	_getViewData, ModelDocumentFragment, ModelText } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'Paragraph feature', () => {
 	let model, editor, doc, root;

@@ -7,7 +7,7 @@
  * @module ckbox/ckboximageedit/ckboximageeditcommand
  */
 
-import { Command, PendingActions, type Editor } from '@ckeditor/ckeditor5-core';
+import { Command, PendingActions, type Editor } from '@ssmckinney/ckeditor5-core';
 import {
 	CKEditorError,
 	abortableDebounce,
@@ -15,16 +15,16 @@ import {
 	retry,
 	delay,
 	type AbortableFunc
-} from '@ckeditor/ckeditor5-utils';
-import type { ModelElement } from '@ckeditor/ckeditor5-engine';
-import { Notification } from '@ckeditor/ckeditor5-ui';
+} from '@ssmckinney/ckeditor5-utils';
+import type { ModelElement } from '@ssmckinney/ckeditor5-engine';
+import { Notification } from '@ssmckinney/ckeditor5-ui';
 import { isEqual } from 'es-toolkit/compat';
 
 import { sendHttpRequest } from '../utils.js';
 import { prepareImageAssetAttributes } from '../ckboxcommand.js';
 import type { CKBoxRawAssetDefinition, CKBoxRawAssetDataDefinition } from '../ckboxconfig.js';
 
-import type { ImageUtils } from '@ckeditor/ckeditor5-image';
+import type { ImageUtils } from '@ssmckinney/ckeditor5-image';
 import { createEditabilityChecker } from './utils.js';
 import { CKBoxUtils } from '../ckboxutils.js';
 
@@ -64,7 +64,7 @@ export class CKBoxImageEditCommand extends Command {
 	* page layout changes after it finishes. To address this, we use a setTimeout hack
 	* to ensure that floating elements on the page maintain their correct position.
 	*
-	* See: https://github.com/ckeditor/ckeditor5/issues/16153.
+	* See: https://github.com/ssmckinney/ckeditor5/issues/16153.
 	*/
 	private _updateUiDelayed = delay( () => this.editor.ui.update(), 0 );
 

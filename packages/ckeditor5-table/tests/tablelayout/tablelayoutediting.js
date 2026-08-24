@@ -4,13 +4,13 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
 import {
 	_getModelData, _setModelData, _getViewData, _parseView, _stringifyModel, ViewDocumentFragment
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { TableLayoutEditing } from '../../src/tablelayout/tablelayoutediting.js';
 import { Table } from '../../src/table.js';
@@ -1389,7 +1389,7 @@ describe( 'TableLayoutEditing', () => {
 		describe( 'pasting content', () => {
 			it( 'should preserve table type if paste within the same editor', () => {
 				const dataTransferMock = createDataTransfer( {
-					'application/ckeditor5-editor-id': editor.id,
+					'application/@ssmckinney/ckeditor5-editor-id': editor.id,
 					'text/html': '<table class="table layout-table"><tbody><tr><td>Foo</td></tr></tbody></table>'
 				} );
 
@@ -1421,7 +1421,7 @@ describe( 'TableLayoutEditing', () => {
 
 			it( 'should preserve table type if paste from the another editor', () => {
 				const dataTransferMock = createDataTransfer( {
-					'application/ckeditor5-editor-id': 'other-editor',
+					'application/@ssmckinney/ckeditor5-editor-id': 'other-editor',
 					'text/html': '<table class="table layout-table"><tbody><tr><td>Foo</td></tr></tbody></table>'
 				} );
 
@@ -1519,7 +1519,7 @@ describe( 'TableLayoutEditing', () => {
 
 			it( 'should not convert to content table if it\'s pasted from other editor (without figure)', () => {
 				const dataTransferMock = createDataTransfer( {
-					'application/ckeditor5-editor-id': 'other-editor',
+					'application/@ssmckinney/ckeditor5-editor-id': 'other-editor',
 					'text/html': '<table><tbody><tr><td>Foo</td></tr></tbody></table>'
 				} );
 

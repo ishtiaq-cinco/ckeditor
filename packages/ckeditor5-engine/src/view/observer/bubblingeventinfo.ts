@@ -7,7 +7,7 @@
  * @module engine/view/observer/bubblingeventinfo
  */
 
-import { EventInfo } from '@ckeditor/ckeditor5-utils';
+import { EventInfo } from '@ssmckinney/ckeditor5-utils';
 import { type ViewDocument } from '../document.js';
 import { type ViewNode } from '../node.js';
 import { type ViewRange } from '../range.js';

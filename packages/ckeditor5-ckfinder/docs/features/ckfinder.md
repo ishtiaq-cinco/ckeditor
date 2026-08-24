@@ -22,7 +22,7 @@ The CKFinder feature lets you insert images and links to files into your content
 This demo shows the integration where the file manager's server connector handles [image upload](#configuring-the-image-upload-only) only:
 
 * Paste an image directly into the editor. It will be automatically uploaded using the server-side connector.
-* Use the insert image button {@icon @ckeditor/ckeditor5-icons/theme/icons/image-upload.svg Image} in the toolbar to insert an image.
+* Use the insert image button {@icon @ssmckinney/ckeditor5-icons/theme/icons/image-upload.svg Image} in the toolbar to insert an image.
 
 {@snippet features/ckfinder-upload-only}
 
@@ -31,7 +31,7 @@ This demo shows the integration where the file manager's server connector handle
 This demo shows the [full integration](#configuring-the-full-integration) with the CKFinder file uploader:
 
 * Paste an image directly into the editor. It will be automatically uploaded using the server-side connector.
-* Use the insert image or file button {@icon @ckeditor/ckeditor5-icons/theme/icons/browse-files.svg Browse files} in the toolbar to open the CKFinder file manager. Then insert an image or a link to any other file.
+* Use the insert image or file button {@icon @ssmckinney/ckeditor5-icons/theme/icons/browse-files.svg Browse files} in the toolbar to open the CKFinder file manager. Then insert an image or a link to any other file.
 
 {@snippet features/ckfinder}
 
@@ -65,7 +65,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 ### From npm
 
 ```js
-import { ClassicEditor, CKFinder, CKFinderUploadAdapter } from 'ckeditor5';
+import { ClassicEditor, CKFinder, CKFinderUploadAdapter } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {

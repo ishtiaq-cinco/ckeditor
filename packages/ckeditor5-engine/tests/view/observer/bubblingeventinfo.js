@@ -6,7 +6,7 @@
 import { describe, it, expect } from 'vitest';
 import { BubblingEventInfo } from '../../../src/view/observer/bubblingeventinfo.js';
 
-import { EventInfo } from '@ckeditor/ckeditor5-utils';
+import { EventInfo } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'BubblingEventInfo', () => {
 	it( 'should be created properly', () => {

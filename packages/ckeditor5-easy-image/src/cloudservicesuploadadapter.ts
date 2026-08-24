@@ -7,9 +7,9 @@
 * @module easy-image/cloudservicesuploadadapter
 */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { FileRepository, type FileLoader, type UploadAdapter } from '@ckeditor/ckeditor5-upload';
-import { CloudServices, type CloudServicesCore, type UploadGateway, type FileUploader } from '@ckeditor/ckeditor5-cloud-services';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { FileRepository, type FileLoader, type UploadAdapter } from '@ssmckinney/ckeditor5-upload';
+import { CloudServices, type CloudServicesCore, type UploadGateway, type FileUploader } from '@ssmckinney/ckeditor5-cloud-services';
 
 /**
  * A plugin that enables upload to [CKEditor Cloud Services](https://ckeditor.com/ckeditor-cloud-services/).

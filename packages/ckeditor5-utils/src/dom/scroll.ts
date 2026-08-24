@@ -122,7 +122,7 @@ export function scrollViewportToShowTarget<T extends boolean, U extends IfTrue<T
 		// and leads to the viewport being scrolled to the absolute top of the document. To prevent this, the target's rect
 		// must be shifted to the ancestor's top position. It should not affect the target's visibility because the ancestor
 		// is already scrolled to reveal the target.
-		// See more: https://github.com/ckeditor/ckeditor5/issues/17079
+		// See more: https://github.com/ssmckinney/ckeditor5/issues/17079
 		const ancestorWindowRelativeRect = getRectRelativeToWindow( firstAncestorToScroll, currentWindow );
 
 		if ( targetRect.height > ancestorWindowRelativeRect.height ) {
@@ -152,7 +152,7 @@ export function scrollViewportToShowTarget<T extends boolean, U extends IfTrue<T
 			// If the current window has some parent but frameElement is inaccessible, then they have
 			// different domains/ports and, due to security reasons, accessing and scrolling
 			// the parent window won't be possible.
-			// See https://github.com/ckeditor/ckeditor5/issues/930.
+			// See https://github.com/ssmckinney/ckeditor5/issues/930.
 			if ( !currentFrame ) {
 				return;
 			}

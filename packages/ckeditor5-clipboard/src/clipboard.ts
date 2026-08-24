@@ -7,7 +7,7 @@
  * @module clipboard/clipboard
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
 import { ClipboardPipeline } from './clipboardpipeline.js';
 import { DragDrop } from './dragdrop.js';

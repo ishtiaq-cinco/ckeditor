@@ -7,8 +7,8 @@
  * @module list/legacytodolist/legacychecktodolistcommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
-import type { ModelElement } from '@ckeditor/ckeditor5-engine';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
+import type { ModelElement } from '@ssmckinney/ckeditor5-engine';
 
 const attributeKey = 'todoListChecked';
 

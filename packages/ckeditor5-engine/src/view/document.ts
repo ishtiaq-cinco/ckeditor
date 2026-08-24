@@ -10,7 +10,7 @@
 import { ViewDocumentSelection } from './documentselection.js';
 import { BubblingEmitterMixin, type BubblingEmitterMixinConstructor } from './observer/bubblingemittermixin.js';
 
-import { Collection, ObservableMixin, type ObservableMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { Collection, ObservableMixin, type ObservableMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 
 import type { StylesProcessor } from './stylesmap.js';
 import { type ViewRootEditableElement } from './rooteditableelement.js';

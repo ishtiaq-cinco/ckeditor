@@ -8,7 +8,7 @@ import { Model, ModelDocumentFragment,
 	_getModelData,
 	_parseModel,
 	_stringifyModel,
-	_getViewData } from '@ckeditor/ckeditor5-engine';
+	_getViewData } from '@ssmckinney/ckeditor5-engine';
 import { ListWalker } from '../../../src/list/utils/listwalker.js';
 
 /**

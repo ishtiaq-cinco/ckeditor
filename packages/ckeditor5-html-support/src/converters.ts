@@ -7,7 +7,7 @@
  * @module html-support/converters
  */
 
-import type { Editor } from '@ckeditor/ckeditor5-core';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
 import type {
 	ViewAttributeElement,
 	DowncastAttributeEvent,
@@ -21,8 +21,8 @@ import type {
 	UpcastElementEvent,
 	ViewElement,
 	ModelItem
-} from '@ckeditor/ckeditor5-engine';
-import { toWidget } from '@ckeditor/ckeditor5-widget';
+} from '@ssmckinney/ckeditor5-engine';
+import { toWidget } from '@ssmckinney/ckeditor5-widget';
 import {
 	setViewAttributes,
 	mergeViewElementAttributes,
@@ -239,7 +239,7 @@ export function viewToModelBlockAttributeConverter(
 			// Converting an attribute of an element that has not been converted to anything does not make sense
 			// because there will be nowhere to set that attribute on. At this stage, the element should've already
 			// been converted. A collapsed range can show up in to-do lists (<input>) or complex widgets (e.g. table).
-			// (https://github.com/ckeditor/ckeditor5/issues/11000).
+			// (https://github.com/ssmckinney/ckeditor5/issues/11000).
 			if ( !data.modelRange || data.modelRange.isCollapsed ) {
 				return;
 			}

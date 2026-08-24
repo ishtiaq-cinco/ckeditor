@@ -7,11 +7,11 @@
  * @module html-embed/htmlembedediting
  */
 
-import { Plugin, type Editor } from '@ckeditor/ckeditor5-core';
-import { ButtonView } from '@ckeditor/ckeditor5-ui';
-import { toWidget } from '@ckeditor/ckeditor5-widget';
-import { logWarning, createElement } from '@ckeditor/ckeditor5-utils';
-import { IconCancel, IconCheck, IconPencil } from '@ckeditor/ckeditor5-icons';
+import { Plugin, type Editor } from '@ssmckinney/ckeditor5-core';
+import { ButtonView } from '@ssmckinney/ckeditor5-ui';
+import { toWidget } from '@ssmckinney/ckeditor5-widget';
+import { logWarning, createElement } from '@ssmckinney/ckeditor5-utils';
+import { IconCancel, IconCheck, IconPencil } from '@ssmckinney/ckeditor5-icons';
 
 import type { HtmlEmbedConfig } from './htmlembedconfig.js';
 import { HtmlEmbedCommand } from './htmlembedcommand.js';
@@ -397,7 +397,7 @@ export class HtmlEmbedEditing extends Plugin {
 			} );
 
 			// Creating a contextual document fragment allows executing scripts when inserting into the preview element.
-			// See: https://github.com/ckeditor/ckeditor5/issues/8326.
+			// See: https://github.com/ssmckinney/ckeditor5/issues/8326.
 			const domRange = domDocument.createRange();
 			const domDocumentFragment = domRange.createContextualFragment( sanitizedOutput.html );
 

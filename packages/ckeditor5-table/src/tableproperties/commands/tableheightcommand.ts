@@ -9,7 +9,7 @@
 
 import { TablePropertyCommand } from './tablepropertycommand.js';
 import { addDefaultUnitToNumericValue } from '../../utils/table-properties.js';
-import type { Editor } from '@ckeditor/ckeditor5-core';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
 
 /**
  * The table height command.

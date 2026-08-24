@@ -12,7 +12,7 @@ import {
 	env,
 	getEnvKeystrokeText,
 	type Locale
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { View } from '../../view.js';
 import { LabelView } from '../../label/labelview.js';
@@ -21,7 +21,7 @@ import type {
 	KeystrokeInfoDefinition,
 	KeystrokeInfoDefinitions,
 	KeystrokeInfoGroupDefinition
-} from '@ckeditor/ckeditor5-core';
+} from '@ssmckinney/ckeditor5-core';
 
 /**
  * The view displaying keystrokes in the Accessibility help dialog.

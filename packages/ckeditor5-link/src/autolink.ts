@@ -7,11 +7,11 @@
  * @module link/autolink
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import type { ClipboardInputTransformationEvent } from '@ckeditor/ckeditor5-clipboard';
-import type { ModelDocumentSelectionChangeEvent, Model, ModelPosition, ModelRange, ModelWriter } from '@ckeditor/ckeditor5-engine';
-import { Delete, TextWatcher, getLastTextLine, findAttributeRange, type TextWatcherMatchedDataEvent } from '@ckeditor/ckeditor5-typing';
-import type { EnterCommand, ShiftEnterCommand } from '@ckeditor/ckeditor5-enter';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import type { ClipboardInputTransformationEvent } from '@ssmckinney/ckeditor5-clipboard';
+import type { ModelDocumentSelectionChangeEvent, Model, ModelPosition, ModelRange, ModelWriter } from '@ssmckinney/ckeditor5-engine';
+import { Delete, TextWatcher, getLastTextLine, findAttributeRange, type TextWatcherMatchedDataEvent } from '@ssmckinney/ckeditor5-typing';
+import type { EnterCommand, ShiftEnterCommand } from '@ssmckinney/ckeditor5-enter';
 
 import { addLinkProtocolIfApplicable, linkHasProtocol } from './utils.js';
 import { LinkEditing } from './linkediting.js';
@@ -41,7 +41,7 @@ const URL_REG_EXP = new RegExp(
 				'(?:\\.(?:[1-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))' +
 				'|' +
 				'(' +
-					// Do not allow `www.foo` - see https://github.com/ckeditor/ckeditor5/issues/8050.
+					// Do not allow `www.foo` - see https://github.com/ssmckinney/ckeditor5/issues/8050.
 					'((?!www\\.)|(www\\.))' +
 					// Host & domain names.
 					'(?![-_])(?:[-_a-z0-9\\u00a1-\\uffff]{1,63}\\.)+' +

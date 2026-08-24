@@ -6,7 +6,7 @@
 import type { EditorData } from './editorwatchdog.js';
 import type { ActionsRecorderConfig } from './actionsrecorderconfig.js';
 
-declare module '@ckeditor/ckeditor5-core' {
+declare module '@ssmckinney/ckeditor5-core' {
 	interface EditorConfig {
 
 		/**

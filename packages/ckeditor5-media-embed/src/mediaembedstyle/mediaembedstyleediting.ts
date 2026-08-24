@@ -7,9 +7,9 @@
  * @module media-embed/mediaembedstyle/mediaembedstyleediting
  */
 
-import { first } from '@ckeditor/ckeditor5-utils';
-import type { UpcastElementEvent } from '@ckeditor/ckeditor5-engine';
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { first } from '@ssmckinney/ckeditor5-utils';
+import type { UpcastElementEvent } from '@ssmckinney/ckeditor5-engine';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import { MediaEmbedEditing } from '../mediaembedediting.js';
 import { MediaEmbedStyleCommand } from './mediaembedstylecommand.js';
 import type { NormalizedMediaStyleOption } from '../mediaembedconfig.js';

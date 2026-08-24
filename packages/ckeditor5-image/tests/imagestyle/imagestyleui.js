@@ -4,18 +4,18 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { global } from '@ckeditor/ckeditor5-utils';
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { global } from '@ssmckinney/ckeditor5-utils';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 import { DEFAULT_OPTIONS, utils } from '../../src/imagestyle/utils.js';
 import { ImageToolbar } from '../../src/imagetoolbar.js';
 import { ImageStyleEditing } from '../../src/imagestyle/imagestyleediting.js';
 import { ImageStyleUI } from '../../src/imagestyle/imagestyleui.js';
 import { ImageBlockEditing } from '../../src/image/imageblockediting.js';
 import { ImageInlineEditing } from '../../src/image/imageinlineediting.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ButtonView, DropdownView, SplitButtonView } from '@ckeditor/ckeditor5-ui';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ButtonView, DropdownView, SplitButtonView } from '@ssmckinney/ckeditor5-ui';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'ImageStyleUI', () => {
 	let editor, editorElement, factory, defaultDropdowns;

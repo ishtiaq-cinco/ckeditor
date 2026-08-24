@@ -17,7 +17,7 @@ import { type ModelItem } from './item.js';
 import { type ModelNode } from './node.js';
 import { type ModelRange } from './range.js';
 
-import { isIterable } from '@ckeditor/ckeditor5-utils';
+import { isIterable } from '@ssmckinney/ckeditor5-utils';
 
 // @if CK_DEBUG_ENGINE // import { convertMapToTags } from '../dev-utils/utils.js';
 

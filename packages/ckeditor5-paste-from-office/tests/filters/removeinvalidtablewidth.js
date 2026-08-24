@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, beforeAll } from 'vitest';
-import { HtmlDataProcessor, ViewUpcastWriter, ViewDocument, StylesProcessor } from '@ckeditor/ckeditor5-engine';
+import { HtmlDataProcessor, ViewUpcastWriter, ViewDocument, StylesProcessor } from '@ssmckinney/ckeditor5-engine';
 import { removeInvalidTableWidth } from '../../src/filters/removeinvalidtablewidth.js';
 
 describe( 'PasteFromOffice - filters', () => {

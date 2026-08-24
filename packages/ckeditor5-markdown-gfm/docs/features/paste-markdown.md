@@ -39,7 +39,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, Bold, Italic, Essentials, PasteFromMarkdownExperimental } from 'ckeditor5';
+import { ClassicEditor, Bold, Italic, Essentials, PasteFromMarkdownExperimental } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -61,7 +61,7 @@ ClassicEditor
 
 ## Known issues
 
-While the paste Markdown feature is already stable enough to use, it still needs some more testing. We are now focused on testing it in connection with other tools and plugins. If you have any observations, suggestions, or feedback you want to share, feel free to put them in [this GitHub issue](https://github.com/ckeditor/ckeditor5/issues/2321).
+While the paste Markdown feature is already stable enough to use, it still needs some more testing. We are now focused on testing it in connection with other tools and plugins. If you have any observations, suggestions, or feedback you want to share, feel free to put them in [this GitHub issue](https://github.com/ssmckinney/ckeditor5/issues/2321).
 
 ## Related features
 

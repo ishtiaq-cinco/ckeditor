@@ -8,16 +8,16 @@ import { BalloonEditor } from '../src/ballooneditor.js';
 import { BalloonEditorUI } from '../src/ballooneditorui.js';
 import { BalloonEditorUIView } from '../src/ballooneditoruiview.js';
 
-import { HtmlDataProcessor, ModelRootElement } from '@ckeditor/ckeditor5-engine';
+import { HtmlDataProcessor, ModelRootElement } from '@ssmckinney/ckeditor5-engine';
 
-import { Plugin, Context } from '@ckeditor/ckeditor5-core';
-import { EditorWatchdog, ContextWatchdog } from '@ckeditor/ckeditor5-watchdog';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
-import { BalloonToolbar } from '@ckeditor/ckeditor5-ui';
+import { Plugin, Context } from '@ssmckinney/ckeditor5-core';
+import { EditorWatchdog, ContextWatchdog } from '@ssmckinney/ckeditor5-watchdog';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
+import { BalloonToolbar } from '@ssmckinney/ckeditor5-ui';
 
-import { assertCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { assertCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'BalloonEditor', () => {
 	let editor, editorElement;
@@ -101,7 +101,7 @@ describe( 'BalloonEditor', () => {
 				} );
 		} );
 
-		// See: https://github.com/ckeditor/ckeditor5/issues/746
+		// See: https://github.com/ssmckinney/ckeditor5/issues/746
 		it( 'should throw when trying to create the editor using the same source element more than once', () => {
 			return BalloonEditor.create( editorElement )
 				.then(
@@ -791,7 +791,7 @@ describe( 'BalloonEditor', () => {
 			} );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/8974
+		// https://github.com/ssmckinney/ckeditor5/issues/8974
 		it( 'initializes with empty content if legacy config.initialData is set to an empty string', () => {
 			const editorElement = document.createElement( 'div' );
 			editorElement.innerHTML = '<p><strong>foo</strong> bar</p>';

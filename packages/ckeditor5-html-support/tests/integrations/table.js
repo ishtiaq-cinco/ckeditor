@@ -4,13 +4,13 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Table, TableCaption, TableColumnResize } from '@ckeditor/ckeditor5-table';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
-import { priorities } from '@ckeditor/ckeditor5-utils';
-import { _setModelData, _getModelData } from '@ckeditor/ckeditor5-engine';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Table, TableCaption, TableColumnResize } from '@ssmckinney/ckeditor5-table';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
+import { priorities } from '@ssmckinney/ckeditor5-utils';
+import { _setModelData, _getModelData } from '@ssmckinney/ckeditor5-engine';
 
 import { GeneralHtmlSupport } from '../../src/generalhtmlsupport.js';
 import { getModelDataWithAttributes } from '../_utils/utils.js';
@@ -1482,7 +1482,7 @@ describe( 'TableElementSupport', () => {
 		);
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/11000
+	// https://github.com/ssmckinney/ckeditor5/issues/11000
 	it( 'should not strip allowed attributes from elements that are not directly upcasted (like <thead> or <tbody>) ' +
 		'if another upcast converter exists for all possible view elements', async () => {
 		const editor = await ClassicTestEditor.create( editorElement, {
@@ -1537,7 +1537,7 @@ describe( 'TableElementSupport', () => {
 		await editor.destroy();
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/11479
+	// https://github.com/ssmckinney/ckeditor5/issues/11479
 	it( 'should not strip attributes from <colgroup> and <col> elements', async () => {
 		const editor = await ClassicTestEditor.create( editorElement, {
 			plugins: [ Table, TableCaption, TableColumnResize, Paragraph, GeneralHtmlSupport, ClipboardPipeline ],
@@ -1582,7 +1582,7 @@ describe( 'TableElementSupport', () => {
 		await editor.destroy();
 	} );
 
-	// https://github.com/ckeditor/ckeditor5/issues/13876
+	// https://github.com/ssmckinney/ckeditor5/issues/13876
 	it( 'should not throw error when pasting table inside the custom element', async () => {
 		const editor = await ClassicTestEditor.create( editorElement, {
 			plugins: [

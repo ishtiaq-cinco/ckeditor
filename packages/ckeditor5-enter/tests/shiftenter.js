@@ -4,11 +4,11 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { ShiftEnter } from '../src/shiftenter.js';
 import { ShiftEnterCommand } from '../src/shiftentercommand.js';
 import { EnterObserver } from '../src/enterobserver.js';
-import { ViewDocumentDomEventData } from '@ckeditor/ckeditor5-engine';
+import { ViewDocumentDomEventData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'ShiftEnter feature', () => {
 	let element, editor, viewDocument;

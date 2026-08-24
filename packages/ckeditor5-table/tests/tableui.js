@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, vi, beforeAll, afterAll, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { _clearTranslations, add as addTranslations } from '@ckeditor/ckeditor5-utils';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { _clearTranslations, add as addTranslations } from '@ssmckinney/ckeditor5-utils';
 
 import { TableEditing } from '../src/tableediting.js';
 import { TableUI } from '../src/tableui.js';
 import { InsertTableView } from '../src/ui/inserttableview.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { SwitchButtonView, DropdownView, ListSeparatorView, SplitButtonView } from '@ckeditor/ckeditor5-ui';
-import { IconTable } from '@ckeditor/ckeditor5-icons';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { SwitchButtonView, DropdownView, ListSeparatorView, SplitButtonView } from '@ssmckinney/ckeditor5-ui';
+import { IconTable } from '@ssmckinney/ckeditor5-icons';
 
 describe( 'TableUI', () => {
 	let editor, element;
@@ -124,7 +124,7 @@ describe( 'TableUI', () => {
 
 			document.body.appendChild( insertTable.element );
 
-			// Dropdown is lazy loaded, so make sure its open (https://github.com/ckeditor/ckeditor5/issues/6193).
+			// Dropdown is lazy loaded, so make sure its open (https://github.com/ssmckinney/ckeditor5/issues/6193).
 			insertTable.isOpen = true;
 		} );
 
@@ -180,7 +180,7 @@ describe( 'TableUI', () => {
 				insertTable.render();
 				document.body.appendChild( insertTable.element );
 
-				insertTable.isOpen = true; // Dropdown is lazy loaded (https://github.com/ckeditor/ckeditor5/issues/6193).
+				insertTable.isOpen = true; // Dropdown is lazy loaded (https://github.com/ssmckinney/ckeditor5/issues/6193).
 				insertTable.isOpen = false;
 			} );
 

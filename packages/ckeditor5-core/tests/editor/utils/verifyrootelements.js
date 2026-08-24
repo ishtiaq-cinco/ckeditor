@@ -6,7 +6,7 @@
 import { describe, it, expect } from 'vitest';
 import { Editor } from '../../../src/editor/editor.js';
 import { verifyRootElements } from '../../../src/editor/utils/verifyrootelements.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'verifyRootElements()', () => {
 	class TestEditor extends Editor {}

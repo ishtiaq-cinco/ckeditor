@@ -7,9 +7,9 @@
  * @module typing/twostepcaretmovement
  */
 
-import { Plugin, type Editor } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor } from '@ssmckinney/ckeditor5-core';
 
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
 
 import {
 	MouseObserver,
@@ -25,7 +25,7 @@ import {
 	type ViewDocumentTouchStartEvent,
 	type ModelInsertContentEvent,
 	type ModelDeleteContentEvent
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import type { ViewDocumentDeleteEvent } from './deleteobserver.js';
 
@@ -490,7 +490,7 @@ export class TwoStepCaretMovement extends Plugin {
 	 *
 	 * The purpose of this action is to allow typing around the 2-step node directly after a click.
 	 *
-	 * See https://github.com/ckeditor/ckeditor5/issues/1016.
+	 * See https://github.com/ssmckinney/ckeditor5/issues/1016.
 	 */
 	private _enableClickingAfterNode(): void {
 		const editor = this.editor;
@@ -514,7 +514,7 @@ export class TwoStepCaretMovement extends Plugin {
 		// Keep in mind that it's often called after the selection change on iOS devices.
 		// On the Android devices, it's called before the selection change.
 		// That's why we watch `touchstart` event on mobile and set `touched` flag, as it's fired before the selection change.
-		// See more: https://github.com/ckeditor/ckeditor5/issues/17171
+		// See more: https://github.com/ssmckinney/ckeditor5/issues/17171
 		this.listenTo<ViewDocumentMouseDownEvent>( document, 'mousedown', () => {
 			clicked = true;
 		} );
@@ -570,7 +570,7 @@ export class TwoStepCaretMovement extends Plugin {
 	 * The purpose of this action is to improve the overall UX because the user is no longer "trapped" by the
 	 * two-step attribute of the selection, and they can type a "clean" (`linkHref`–less) text right away.
 	 *
-	 * See https://github.com/ckeditor/ckeditor5/issues/6053.
+	 * See https://github.com/ssmckinney/ckeditor5/issues/6053.
 	 */
 	private _enableInsertContentSelectionAttributesFixer(): void {
 		const editor = this.editor;
@@ -600,7 +600,7 @@ export class TwoStepCaretMovement extends Plugin {
 	 *
 	 * The purpose of this action is to allow removing the link text and keep the selection outside the link.
 	 *
-	 * See https://github.com/ckeditor/ckeditor5/issues/7521.
+	 * See https://github.com/ssmckinney/ckeditor5/issues/7521.
 	 */
 	private _handleDeleteContentAfterNode(): void {
 		const editor = this.editor;

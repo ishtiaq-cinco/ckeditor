@@ -5,7 +5,7 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 
-import { EmitterMixin } from '@ckeditor/ckeditor5-utils';
+import { EmitterMixin } from '@ssmckinney/ckeditor5-utils';
 
 import { EditingController } from '../../src/controller/editingcontroller.js';
 
@@ -24,7 +24,7 @@ import { _getModelData, _parseModel } from '../../src/dev-utils/model.js';
 import { _getViewData } from '../../src/dev-utils/view.js';
 import { StylesProcessor } from '../../src/view/stylesmap.js';
 
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'EditingController', () => {
 	afterEach( () => {

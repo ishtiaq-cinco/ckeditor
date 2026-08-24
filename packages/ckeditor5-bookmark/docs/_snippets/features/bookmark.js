@@ -5,7 +5,7 @@
 
 // source editing only added for testing purposes, remove when done
 
-import { CKBox, CKBoxImageEdit, PictureEditing, ImageInsert, ImageResize, AutoImage, LinkImage, Bookmark } from 'ckeditor5';
+import { CKBox, CKBoxImageEdit, PictureEditing, ImageInsert, ImageResize, AutoImage, LinkImage, Bookmark } from '@ssmckinney/ckeditor5';
 import { SourceEditingEnhanced } from 'ckeditor5-premium-features';
 import {
 	TOKEN_URL,

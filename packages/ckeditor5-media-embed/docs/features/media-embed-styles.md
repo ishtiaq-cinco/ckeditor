@@ -19,7 +19,7 @@ The {@link module:media-embed/mediaembedstyle~MediaEmbedStyle} plugin is not loa
 
 <code-switcher>
 ```js
-import { ClassicEditor, MediaEmbed, MediaEmbedStyle } from 'ckeditor5';
+import { ClassicEditor, MediaEmbed, MediaEmbedStyle } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -39,19 +39,19 @@ The plugin provides the following five style options out of the box. Each option
 
 **Block alignments** &ndash; the media takes a full line, with surrounding text appearing above and below.
 
-* {@icon @ckeditor/ckeditor5-icons/theme/icons/object-left.svg Left aligned media} **Left aligned** &ndash; button `mediaEmbed:alignBlockLeft`, class `media-style-block-align-left`.
-* {@icon @ckeditor/ckeditor5-icons/theme/icons/object-center.svg Centered media} **Centered** &ndash; button `mediaEmbed:alignCenter`; default, no class.
-* {@icon @ckeditor/ckeditor5-icons/theme/icons/object-right.svg Right aligned media} **Right aligned** &ndash; button `mediaEmbed:alignBlockRight`, class `media-style-block-align-right`.
+* {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-left.svg Left aligned media} **Left aligned** &ndash; button `mediaEmbed:alignBlockLeft`, class `media-style-block-align-left`.
+* {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-center.svg Centered media} **Centered** &ndash; button `mediaEmbed:alignCenter`; default, no class.
+* {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-right.svg Right aligned media} **Right aligned** &ndash; button `mediaEmbed:alignBlockRight`, class `media-style-block-align-right`.
 
 **Wrap-text alignments** &ndash; the media floats to one side and surrounding text wraps around it.
 
-* {@icon @ckeditor/ckeditor5-icons/theme/icons/object-inline-left.svg Left aligned media} **Left aligned** &ndash; button `mediaEmbed:alignLeft`, class `media-style-align-left`.
-* {@icon @ckeditor/ckeditor5-icons/theme/icons/object-inline-right.svg Right aligned media} **Right aligned** &ndash; button `mediaEmbed:alignRight`, class `media-style-align-right`.
+* {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-inline-left.svg Left aligned media} **Left aligned** &ndash; button `mediaEmbed:alignLeft`, class `media-style-align-left`.
+* {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-inline-right.svg Right aligned media} **Right aligned** &ndash; button `mediaEmbed:alignRight`, class `media-style-align-right`.
 
 <info-box>
 	The actual styling of the media embeds is the job of the integrator. CKEditor&nbsp;5 comes with some default styles, but they will only be applied to the media inside the editor. The integrator needs to style them appropriately on the target pages.
 
-	You can find the source of the default styles applied by the editor here: [`ckeditor5-media-embed/theme/mediaembedstyle.css`](https://github.com/ckeditor/ckeditor5/blob/master/packages/ckeditor5-media-embed/theme/mediaembedstyle.css).
+	You can find the source of the default styles applied by the editor here: [`@ssmckinney/ckeditor5-media-embed/theme/mediaembedstyle.css`](https://github.com/ckeditor/ckeditor5/blob/master/packages/ckeditor5-media-embed/theme/mediaembedstyle.css).
 
 	Read more about {@link getting-started/setup/css styling the content of the editor}.
 </info-box>

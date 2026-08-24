@@ -23,7 +23,7 @@ import { isParagraphable, wrapInParagraph } from '../model/utils/autoparagraphin
 
 import { type ViewItem } from '../view/item.js';
 
-import { CKEditorError, EmitterMixin, type EmitterMixinConstructor } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, EmitterMixin, type EmitterMixinConstructor } from '@ssmckinney/ckeditor5-utils';
 
 const UpcastDispatcherBase: EmitterMixinConstructor = /* #__PURE__ */ EmitterMixin();
 

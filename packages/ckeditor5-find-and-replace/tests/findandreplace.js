@@ -5,12 +5,12 @@
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Essentials } from '@ckeditor/ckeditor5-essentials';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { Collection } from '@ckeditor/ckeditor5-utils';
-import { _getViewData, _stringifyModel } from '@ckeditor/ckeditor5-engine';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Essentials } from '@ssmckinney/ckeditor5-essentials';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { Collection } from '@ssmckinney/ckeditor5-utils';
+import { _getViewData, _stringifyModel } from '@ssmckinney/ckeditor5-engine';
 
 import { FindAndReplace } from '../src/findandreplace.js';
 import { FindAndReplaceUI } from '../src/findandreplaceui.js';
@@ -172,7 +172,7 @@ describe( 'FindAndReplace', () => {
 					newEditorElement.remove();
 				} );
 
-				// Verifying mocks from https://github.com/ckeditor/ckeditor5/issues/9719#issuecomment-857557024.
+				// Verifying mocks from https://github.com/ssmckinney/ckeditor5/issues/9719#issuecomment-857557024.
 				it( 'has a proper initial state', () => {
 					// "Initial state" mock.
 					newEditor.setData( LONG_TEXT );
@@ -220,7 +220,7 @@ describe( 'FindAndReplace', () => {
 				} );
 
 				it( 'shows counter with 0 of 0 when no results were found', () => {
-					// (https://github.com/ckeditor/ckeditor5/issues/10014).
+					// (https://github.com/ssmckinney/ckeditor5/issues/10014).
 					newEditor.setData( LONG_TEXT );
 
 					toolbarDropdownView.buttonView.fire( 'execute' );
@@ -280,7 +280,7 @@ describe( 'FindAndReplace', () => {
 						.find( item => item.label == 'Find and replace' );
 				} );
 
-				// Verifying mocks from https://github.com/ckeditor/ckeditor5/issues/9719#issuecomment-857557024.
+				// Verifying mocks from https://github.com/ssmckinney/ckeditor5/issues/9719#issuecomment-857557024.
 				it( 'has a proper initial state', () => {
 					// "Initial state" mock.
 					editor.setData( LONG_TEXT );
@@ -332,7 +332,7 @@ describe( 'FindAndReplace', () => {
 				} );
 
 				it( 'shows counter with 0 of 0 when no results were found', async () => {
-					// (https://github.com/ckeditor/ckeditor5/issues/10014).
+					// (https://github.com/ssmckinney/ckeditor5/issues/10014).
 					editor.setData( LONG_TEXT );
 
 					toolbarButtonView.fire( 'execute' );
@@ -518,7 +518,7 @@ describe( 'FindAndReplace', () => {
 
 		describe( 'undo', () => {
 			it( 'doesn\'t bring back highlighted content', () => {
-				// (https://github.com/ckeditor/ckeditor5/issues/9974)
+				// (https://github.com/ssmckinney/ckeditor5/issues/9974)
 				editor.setData( FOO_BAR_PARAGRAPH );
 
 				const { results } = editor.execute( 'find', 'bar' );

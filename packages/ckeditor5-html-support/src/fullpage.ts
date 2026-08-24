@@ -7,14 +7,14 @@
  * @module html-support/fullpage
  */
 
-import { Plugin, type Editor } from '@ckeditor/ckeditor5-core';
-import { logWarning, global } from '@ckeditor/ckeditor5-utils';
+import { Plugin, type Editor } from '@ssmckinney/ckeditor5-core';
+import { logWarning, global } from '@ssmckinney/ckeditor5-utils';
 import {
 	ViewUpcastWriter,
 	type DataControllerToModelEvent,
 	type DataControllerToViewEvent,
 	type ModelRootElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { HtmlPageDataProcessor } from './htmlpagedataprocessor.js';
 

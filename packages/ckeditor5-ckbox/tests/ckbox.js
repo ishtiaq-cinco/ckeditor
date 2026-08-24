@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
-import { PictureEditing, ImageUpload, ImageBlockEditing, ImageInlineEditing } from '@ckeditor/ckeditor5-image';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
+import { PictureEditing, ImageUpload, ImageBlockEditing, ImageInlineEditing } from '@ssmckinney/ckeditor5-image';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { CloudServicesCoreMock } from './_utils/cloudservicescoremock.js';
 
 import { CKBox } from '../src/ckbox.js';

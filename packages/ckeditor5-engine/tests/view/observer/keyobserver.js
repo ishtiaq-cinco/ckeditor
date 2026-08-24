@@ -6,7 +6,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { KeyObserver } from '../../../src/view/observer/keyobserver.js';
 import { EditingView } from '../../../src/view/view.js';
-import { getCode } from '@ckeditor/ckeditor5-utils';
+import { getCode } from '@ssmckinney/ckeditor5-utils';
 import { StylesProcessor } from '../../../src/view/stylesmap.js';
 
 describe( 'KeyObserver', () => {

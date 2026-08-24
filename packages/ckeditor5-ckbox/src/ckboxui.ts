@@ -7,11 +7,11 @@
  * @module ckbox/ckboxui
  */
 
-import { Plugin } from '@ckeditor/ckeditor5-core';
-import { ButtonView, MenuBarMenuListItemButtonView } from '@ckeditor/ckeditor5-ui';
-import { IconBrowseFiles, IconImageAssetManager } from '@ckeditor/ckeditor5-icons';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
+import { ButtonView, MenuBarMenuListItemButtonView } from '@ssmckinney/ckeditor5-ui';
+import { IconBrowseFiles, IconImageAssetManager } from '@ssmckinney/ckeditor5-icons';
 
-import type { ImageInsertUI } from '@ckeditor/ckeditor5-image';
+import type { ImageInsertUI } from '@ssmckinney/ckeditor5-image';
 
 /**
  * Introduces UI components for the `CKBox` plugin.

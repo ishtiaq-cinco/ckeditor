@@ -4,7 +4,7 @@
  */
 
 import { BalloonEditor } from '../../src/ballooneditor.js';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 
 window.editors = [];
 const container = document.querySelector( '.container' );

@@ -16,7 +16,7 @@ import {
 	ViewPosition,
 	ViewText,
 	ViewUIElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import {
 	toWidget,
@@ -623,7 +623,7 @@ describe( 'widget utils', () => {
 			expect( range.end.path ).toEqual( [ 3 ] );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/7438
+		// https://github.com/ssmckinney/ckeditor5/issues/7438
 		describe( 'integration with the WidgetTypeAround feature ("widget-type-around" model selection attribute)', () => {
 			it( 'should respect the attribute value when a widget (block and an object) is selected ("fake caret" before a widget)', () => {
 				_setModelData( model, '<paragraph>x</paragraph>[<imageBlock></imageBlock>]<paragraph>y</paragraph>' );

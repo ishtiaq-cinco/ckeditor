@@ -33,7 +33,7 @@ import { type ModelItem } from './item.js';
 import { type Model } from './model.js';
 import type { ModelNode, ModelNodeAttributes } from './node.js';
 
-import { CKEditorError, logWarning, toMap } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError, logWarning, toMap } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * The model can only be modified by using the writer. It should be used whenever you want to create a node, modify

@@ -16,7 +16,7 @@ import type {
 	ViewDocumentObserverSelectionChangeDoneEvent,
 	ViewDocumentObserverSelectionEventData
 } from './selectionobserver.js';
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
 import { debounce } from 'es-toolkit/compat';
 
 /**

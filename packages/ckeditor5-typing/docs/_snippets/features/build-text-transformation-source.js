@@ -3,7 +3,7 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { TextTransformation, CKBox, CKBoxImageEdit, PictureEditing, ImageInsert, ImageResize, AutoImage, LinkImage } from 'ckeditor5';
+import { TextTransformation, CKBox, CKBoxImageEdit, PictureEditing, ImageInsert, ImageResize, AutoImage, LinkImage } from '@ssmckinney/ckeditor5';
 import { ClassicEditor } from '@snippets/index.js';
 
 export class TextTransformationEditor extends ClassicEditor {

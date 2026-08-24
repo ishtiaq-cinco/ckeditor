@@ -7,9 +7,9 @@
  * @module typing/texttransformation
  */
 
-import { Plugin, type Editor, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { Plugin, type Editor, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 
-import type { ModelPosition } from '@ckeditor/ckeditor5-engine';
+import type { ModelPosition } from '@ssmckinney/ckeditor5-engine';
 
 import { TextWatcher, type TextWatcherMatchedDataEvent } from './textwatcher.js';
 import type { TextTransformationConfig, TextTypingTransformationDescription } from './typingconfig.js';

@@ -32,19 +32,13 @@
 		}
 	}
 
-	& .ck-link-form__providers-list {
+	/* The link options list and the providers list are both rows of full-width buttons hanging below
+	the form, separated from it by a rule, and are styled as one. */
+	& .ck-link-form__providers-list,
+	& .ck-link-form__options-list {
 		display: flex;
 		flex-direction: column;
 		border-top: 1px solid var(--ck-color-base-border);
-
-		/* The list should be scrollable when there are more than 4 items. */
-		&:has(.ck-list__item:nth-child(n + 5)) {
-			overflow: auto;
-			/* Scroll should appear when there are more than 5 item on the list.
-			* var(--ck-spacing-large) - is a form padding.
-			* 1px - is a border width. */
-			max-height: calc(var(--ck-link-provider-list-item-height) * 4 + var(--ck-spacing-large) + 1px);
-		}
 
 		& .ck-link__button {
 			padding: var(--ck-spacing-small) var(--ck-spacing-large);
@@ -55,6 +49,17 @@
 				overflow: hidden;
 				text-overflow: ellipsis;
 			}
+		}
+	}
+
+	& .ck-link-form__providers-list {
+		/* The list should be scrollable when there are more than 4 items. */
+		&:has(.ck-list__item:nth-child(n + 5)) {
+			overflow: auto;
+			/* Scroll should appear when there are more than 5 item on the list.
+			* var(--ck-spacing-large) - is a form padding.
+			* 1px - is a border width. */
+			max-height: calc(var(--ck-link-provider-list-item-height) * 4 + var(--ck-spacing-large) + 1px);
 		}
 	}
 }

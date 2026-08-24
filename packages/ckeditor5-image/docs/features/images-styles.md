@@ -21,7 +21,7 @@ This package allows for adjusting the image appearance by:
 <info-box>
 	The actual styling of the images is the job of the integrator. CKEditor&nbsp;5 WYSIWYG editor comes with some default styles, but they will only be applied to the images inside the editor. The integrator needs to style them appropriately on the target pages.
 
-	You can find the source of the default styles applied by the editor here: [`ckeditor5-image/theme/imagestyle.css`](https://github.com/ckeditor/ckeditor5/blob/master/packages/ckeditor5-image/theme/imagestyle.css).
+	You can find the source of the default styles applied by the editor here: [`@ssmckinney/ckeditor5-image/theme/imagestyle.css`](https://github.com/ckeditor/ckeditor5/blob/master/packages/ckeditor5-image/theme/imagestyle.css).
 
 	Read more about {@link getting-started/setup/css styling the content of the editor}.
 </info-box>
@@ -97,9 +97,9 @@ Most of the editor types support editing structured content. This requires passi
 
 The example below shows an editor with such a basic configuration. There are three types of images:
 
-* **A block image** {@icon @ckeditor/ckeditor5-icons/theme/icons/object-center.svg Block image} &ndash; A representation of a block image with no style-related CSS class.
-* **An inline image** {@icon @ckeditor/ckeditor5-icons/theme/icons/object-inline.svg Inline image} &ndash; A representation of an inline image with no style-related CSS class.
-* **A side image** {@icon @ckeditor/ckeditor5-icons/theme/icons/object-inline-right.svg Side image} &ndash; A semantical style with the `image-style-side` CSS class applied to it
+* **A block image** {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-center.svg Block image} &ndash; A representation of a block image with no style-related CSS class.
+* **An inline image** {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-inline.svg Inline image} &ndash; A representation of an inline image with no style-related CSS class.
+* **A side image** {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-inline-right.svg Side image} &ndash; A semantical style with the `image-style-side` CSS class applied to it
 
 You can change the style of an individual image using the contextual toolbar that opens after clicking the image.
 
@@ -127,14 +127,14 @@ Presentational styles do not relate to any special meaning of the content. They 
 
 The example editor below uses predefined presentational image styles represented by buttons grouped in the dropdowns according to the way the image is displayed in the document:
 
-* **Inline images** {@icon @ckeditor/ckeditor5-icons/theme/icons/object-inline.svg Inline images} &ndash; Displayed inside a line of text. It is the default style for the inline images and it does not apply any CSS class to the image.
-* **Images wrapped with text** {@icon @ckeditor/ckeditor5-icons/theme/icons/object-inline-left.svg Inline image aligned to the left} &ndash; These are the images with the CSS `float` property. They can be either in the inline or block mode. To keep the HTML output valid, the block images (wrapped with the `<figure>` tags) can only be placed before or after paragraphs, not in the middle of them. It contains the following image styles:
-  * `'align-left'` {@icon @ckeditor/ckeditor5-icons/theme/icons/object-inline-left.svg Image aligned to the left},
-  * `'align-right'` {@icon @ckeditor/ckeditor5-icons/theme/icons/object-inline-right.svg Image aligned to the right}.
-* **Images placed between the paragraphs** {@icon @ckeditor/ckeditor5-icons/theme/icons/object-center.svg Centered image} &ndash; Block images without the CSS `float` property. It contains the following image styles:
-  * `'align-block-left'` {@icon @ckeditor/ckeditor5-icons/theme/icons/object-left.svg Block image aligned to the left},
-  * `'align-block-right'` {@icon @ckeditor/ckeditor5-icons/theme/icons/object-right.svg Block image aligned to the right},
-  * `'block'` {@icon @ckeditor/ckeditor5-icons/theme/icons/object-center.svg Centered block image} &ndash; This style is the default one for block images and it does not apply any CSS class to the image.
+* **Inline images** {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-inline.svg Inline images} &ndash; Displayed inside a line of text. It is the default style for the inline images and it does not apply any CSS class to the image.
+* **Images wrapped with text** {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-inline-left.svg Inline image aligned to the left} &ndash; These are the images with the CSS `float` property. They can be either in the inline or block mode. To keep the HTML output valid, the block images (wrapped with the `<figure>` tags) can only be placed before or after paragraphs, not in the middle of them. It contains the following image styles:
+  * `'align-left'` {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-inline-left.svg Image aligned to the left},
+  * `'align-right'` {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-inline-right.svg Image aligned to the right}.
+* **Images placed between the paragraphs** {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-center.svg Centered image} &ndash; Block images without the CSS `float` property. It contains the following image styles:
+  * `'align-block-left'` {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-left.svg Block image aligned to the left},
+  * `'align-block-right'` {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-right.svg Block image aligned to the right},
+  * `'block'` {@icon @ssmckinney/ckeditor5-icons/theme/icons/object-center.svg Centered block image} &ndash; This style is the default one for block images and it does not apply any CSS class to the image.
 
 You can change the style of an individual image using the contextual toolbar invoked after you click an image.
 
@@ -151,7 +151,7 @@ See the result below:
 This set of buttons and styles is available by default in the document editor and does not require any additional customization:
 
 ```js
-import { DecoupledEditor } from 'ckeditor5';
+import { DecoupledEditor } from '@ssmckinney/ckeditor5';
 
 DecoupledEditor.create( {
 	root: {

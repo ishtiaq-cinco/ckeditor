@@ -6,15 +6,15 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { modelElementToPlainText } from '../src/utils.js';
 
-import { ModelElement, ModelText, _setModelData } from '@ckeditor/ckeditor5-engine';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { BlockQuoteEditing } from '@ckeditor/ckeditor5-block-quote';
-import { BoldEditing } from '@ckeditor/ckeditor5-basic-styles';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
-import { ListEditing } from '@ckeditor/ckeditor5-list';
-import { TableEditing } from '@ckeditor/ckeditor5-table';
-import { Enter, ShiftEnter } from '@ckeditor/ckeditor5-enter';
+import { ModelElement, ModelText, _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { BlockQuoteEditing } from '@ssmckinney/ckeditor5-block-quote';
+import { BoldEditing } from '@ssmckinney/ckeditor5-basic-styles';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
+import { ListEditing } from '@ssmckinney/ckeditor5-list';
+import { TableEditing } from '@ssmckinney/ckeditor5-table';
+import { Enter, ShiftEnter } from '@ssmckinney/ckeditor5-enter';
 
 describe( 'utils', () => {
 	describe( 'modelElementToPlainText()', () => {

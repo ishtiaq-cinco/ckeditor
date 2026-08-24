@@ -10,7 +10,7 @@
 import { Observer } from './observer.js';
 import { ViewDocumentDomEventData } from './domeventdata.js';
 
-import type { EventInfo } from '@ckeditor/ckeditor5-utils';
+import type { EventInfo } from '@ssmckinney/ckeditor5-utils';
 
 /**
  * Base class for DOM event observers. This class handles

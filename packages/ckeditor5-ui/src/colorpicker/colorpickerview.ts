@@ -9,8 +9,8 @@
 
 import { convertColor, convertToHex, registerCustomElement, type ColorPickerViewConfig } from './utils.js';
 
-import type { HexColor } from '@ckeditor/ckeditor5-core';
-import { type Locale, global, env } from '@ckeditor/ckeditor5-utils';
+import type { HexColor } from '@ssmckinney/ckeditor5-core';
+import { type Locale, global, env } from '@ssmckinney/ckeditor5-utils';
 import { debounce } from 'es-toolkit/compat';
 import { View } from '../view.js';
 import { type InputTextView } from '../inputtext/inputtextview.js';
@@ -18,7 +18,7 @@ import { type ViewCollection } from '../viewcollection.js';
 import { LabeledFieldView } from '../labeledfield/labeledfieldview.js';
 import { createLabeledInputText } from '../labeledfield/utils.js';
 
-// Custom export due to https://github.com/ckeditor/ckeditor5/issues/15698.
+// Custom export due to https://github.com/ssmckinney/ckeditor5/issues/15698.
 import { HexBase } from 'vanilla-colorful/lib/entrypoints/hex';
 import '../../theme/components/colorpicker/colorpicker.css';
 
@@ -205,7 +205,7 @@ export class ColorPickerView extends View {
 		// In FF, after selecting the color via slider, it instantly moves back to the previous color.
 		// In all iOS browsers and desktop Safari, once the saturation slider is moved for the first time,
 		// editor collapses the selection and doesn't apply the color change.
-		// See: https://github.com/ckeditor/ckeditor5-internal/issues/3245, https://github.com/ckeditor/ckeditor5/issues/14119,
+		// See: https://github.com/ckeditor/ckeditor5-internal/issues/3245, https://github.com/ssmckinney/ckeditor5/issues/14119,
 		// https://github.com/ckeditor/ckeditor5-internal/issues/3268.
 		/* v8 ignore next -- @preserve */
 		if ( !this._config.hideInput && ( env.isGecko || env.isiOS || env.isSafari || env.isBlink ) ) {
@@ -386,8 +386,8 @@ class HashView extends View {
 }
 
 // The class representing a row containing hex color input field.
-// **Note**: For now this class is private. When more use cases appear (beyond `ckeditor5-table` and `ckeditor5-image`),
-// it will become a component in `ckeditor5-ui`.
+// **Note**: For now this class is private. When more use cases appear (beyond `@ssmckinney/ckeditor5-table` and `@ssmckinney/ckeditor5-image`),
+// it will become a component in `@ssmckinney/ckeditor5-ui`.
 //
 // @private
 export class ColorPickerInputRowView extends View {

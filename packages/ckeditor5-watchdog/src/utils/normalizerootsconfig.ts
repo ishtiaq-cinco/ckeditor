@@ -8,10 +8,10 @@
  */
 
 import { isElement as _isElement } from 'es-toolkit/compat';
-import type { EditorConfig } from '@ckeditor/ckeditor5-core';
+import type { EditorConfig } from '@ssmckinney/ckeditor5-core';
 
 // Note: This file is a copy of core/editor/utils/normalizerootsconfig with some adjustments.
-// The main difference is that it does not use the `Config` class from `@ckeditor/ckeditor5-utils` and instead works
+// The main difference is that it does not use the `Config` class from `@ssmckinney/ckeditor5-utils` and instead works
 // with a plain `EditorConfig` object. It also does not throw `CKEditorError` but a generic `Error` with a specific message.
 // It resolves root configuration for the editor, but does not care about real data in initialData as the watchdog does not need it.
 // It just needs to ensure that initialData is defined for all roots, so the editor features can work with it without additional checks.

@@ -1,7 +1,7 @@
 CKEditor&nbsp;5 source code editing feature
 =================================
 
-[![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-source-editing.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-source-editing)
+[![npm version](https://badge.fury.io/js/%40ckeditor%2F@ssmckinney/ckeditor5-source-editing.svg)](https://www.npmjs.com/package/@ssmckinney/ckeditor5-source-editing)
 [![codecov](https://codecov.io/gh/ckeditor/ckeditor5/branch/master/graph/badge.svg)](https://codecov.io/gh/ckeditor/ckeditor5)
 [![CircleCI](https://circleci.com/gh/ckeditor/ckeditor5.svg?style=shield)](https://app.circleci.com/pipelines/github/ckeditor/ckeditor5?branch=master)
 
@@ -9,10 +9,10 @@ This package implements the source code editing support for CKEditor&nbsp;5 that
 
 ## Installation
 
-This plugin is part of the `ckeditor5` package. Install the whole package to use it.
+This plugin is part of the `@ssmckinney/ckeditor5` package. Install the whole package to use it.
 
 ```bash
-npm install ckeditor5
+npm install @ssmckinney/ckeditor5
 ```
 
 ## Create free account
@@ -21,11 +21,11 @@ If you want to check full CKEditor&nbsp;5 capabilities, sign up for a [free non-
 
 ## Demo
 
-Check out the [demo in the source code editing feature guide](https://ckeditor.com/docs/ckeditor5/latest/features/source-editing/source-editing.html#demo).
+Check out the [demo in the source code editing feature guide](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/source-editing/source-editing.html#demo).
 
 ## Documentation
 
-See the [`@ckeditor/ckeditor5-source-editing` package](https://ckeditor.com/docs/ckeditor5/latest/api/source-editing.html) page as well as the [source editing feature](https://ckeditor.com/docs/ckeditor5/latest/features/source-editing/source-editing.html) guide in the [CKEditor&nbsp;5 documentation](https://ckeditor.com/docs/ckeditor5/latest/).
+See the [`@ssmckinney/ckeditor5-source-editing` package](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/api/source-editing.html) page as well as the [source editing feature](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/features/source-editing/source-editing.html) guide in the [CKEditor&nbsp;5 documentation](https://ckeditor.com/docs/@ssmckinney/ckeditor5/latest/).
 
 ## License
 

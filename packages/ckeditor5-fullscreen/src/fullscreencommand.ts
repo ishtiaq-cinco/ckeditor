@@ -7,9 +7,9 @@
  * @module fullscreen/fullscreencommand
  */
 
-import { Command, type Editor } from '@ckeditor/ckeditor5-core';
-import type { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import type { DecoupledEditor } from '@ckeditor/ckeditor5-editor-decoupled';
+import { Command, type Editor } from '@ssmckinney/ckeditor5-core';
+import type { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import type { DecoupledEditor } from '@ssmckinney/ckeditor5-editor-decoupled';
 
 import { FullscreenAbstractEditorHandler } from './handlers/abstracteditorhandler.js';
 import { FullscreenClassicEditorHandler } from './handlers/classiceditorhandler.js';

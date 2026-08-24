@@ -54,7 +54,7 @@ import {
 	type ArrayOrItem,
 	type EventInfo,
 	type PriorityString
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { cloneDeep } from 'es-toolkit/compat';
 

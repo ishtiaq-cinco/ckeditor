@@ -7,7 +7,7 @@
  * @module ui/dropdown/menu/dropdownmenunestedmenupanelview
  */
 
-import type { Locale } from '@ckeditor/ckeditor5-utils';
+import type { Locale } from '@ssmckinney/ckeditor5-utils';
 import type { FocusableView } from '../../focuscycler.js';
 
 import { BalloonPanelView } from '../../panel/balloon/balloonpanelview.js';

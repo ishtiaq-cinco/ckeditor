@@ -7,9 +7,9 @@
  * @module ckbox/ckboxutils
  */
 
-import { CloudServices, type InitializedToken } from '@ckeditor/ckeditor5-cloud-services';
-import { CKEditorError, logError } from '@ckeditor/ckeditor5-utils';
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { CloudServices, type InitializedToken } from '@ssmckinney/ckeditor5-cloud-services';
+import { CKEditorError, logError } from '@ssmckinney/ckeditor5-utils';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import {
 	convertMimeTypeToExtension,
 	getContentTypeOfUrl,

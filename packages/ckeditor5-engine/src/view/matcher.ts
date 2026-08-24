@@ -8,7 +8,7 @@
  */
 
 import { type ViewElement } from './element.js';
-import { logWarning } from '@ckeditor/ckeditor5-utils';
+import { logWarning } from '@ssmckinney/ckeditor5-utils';
 import { normalizeConsumables, type Consumables } from '../conversion/viewconsumable.js';
 
 /**

@@ -7,7 +7,7 @@
  * @module paste-from-office/filters/removexmlns
  */
 
-import type { ViewUpcastWriter, ViewDocumentFragment } from '@ckeditor/ckeditor5-engine';
+import type { ViewUpcastWriter, ViewDocumentFragment } from '@ssmckinney/ckeditor5-engine';
 
 /**
  * Removes the `xmlns` attribute from table pasted from Google Sheets.

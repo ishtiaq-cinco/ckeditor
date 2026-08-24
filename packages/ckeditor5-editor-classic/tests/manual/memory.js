@@ -4,7 +4,7 @@
  */
 
 import { ClassicEditor } from '../../src/classiceditor.js';
-import { ArticlePluginSet } from '@ckeditor/ckeditor5-core/tests/_utils/articlepluginset.js';
+import { ArticlePluginSet } from '@ssmckinney/ckeditor5-core/tests/_utils/articlepluginset.js';
 
 /*
  * Memory-leak safe version of classic editor manual test does not:

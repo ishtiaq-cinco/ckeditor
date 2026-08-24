@@ -15,9 +15,9 @@ import type {
 	ViewNode,
 	ViewDocumentFragment,
 	ModelRange
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import type { LocaleTranslate } from '@ckeditor/ckeditor5-utils';
+import type { LocaleTranslate } from '@ssmckinney/ckeditor5-utils';
 
 import type {
 	LinkDecoratorAutomaticDefinition,
@@ -113,7 +113,11 @@ export function getLocalizedDecorators(
 ): Array<NormalizedLinkDecoratorDefinition> {
 	const localizedDecoratorsLabels: Record<string, string> = {
 		'Open in a new tab': t( 'Open in a new tab' ),
-		'Downloadable': t( 'Downloadable' )
+		'Downloadable': t( 'Downloadable' ),
+		'Nofollow': t( 'Nofollow' ),
+		'Noindex': t( 'Noindex' ),
+		'Sponsored': t( 'Sponsored' ),
+		'User-generated content': t( 'User-generated content' )
 	};
 
 	decorators.forEach( decorator => {

@@ -4,9 +4,9 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { keyCodes, KeystrokeHandler, FocusTracker } from '@ckeditor/ckeditor5-utils';
+import { keyCodes, KeystrokeHandler, FocusTracker } from '@ssmckinney/ckeditor5-utils';
 import { TextAlternativeFormView } from '../../../src/imagetextalternative/ui/textalternativeformview.js';
-import { View, FocusCycler, ViewCollection } from '@ckeditor/ckeditor5-ui';
+import { View, FocusCycler, ViewCollection } from '@ssmckinney/ckeditor5-ui';
 
 describe( 'TextAlternativeFormView', () => {
 	let view;

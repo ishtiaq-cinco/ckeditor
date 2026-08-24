@@ -13,11 +13,11 @@ import { ViewDataTransfer, ViewDocumentFragment, ModelDocumentFragment, ViewText
 	_stringifyModel,
 	_setModelData,
 	_getModelData
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
 
 describe( 'ClipboardPipeline feature', () => {
 	let editor, view, viewDocument, clipboardPlugin, scrollSpy;
@@ -432,7 +432,7 @@ describe( 'ClipboardPipeline feature', () => {
 		} );
 
 		// https://github.com/ckeditor/ckeditor5-upload/issues/92
-		// https://github.com/ckeditor/ckeditor5/issues/6464
+		// https://github.com/ssmckinney/ckeditor5/issues/6464
 		it( 'should stop propagation of the original event if CKEditor handled the input', () => {
 			const dataTransferMock = createDataTransfer( { 'text/html': 'x' } );
 			const spy = vi.fn();
@@ -447,7 +447,7 @@ describe( 'ClipboardPipeline feature', () => {
 		} );
 
 		// https://github.com/ckeditor/ckeditor5-upload/issues/92
-		// https://github.com/ckeditor/ckeditor5/issues/6464
+		// https://github.com/ssmckinney/ckeditor5/issues/6464
 		it( 'should stop propagation of the original event if inputTransformation listener called stop (for file drop)', () => {
 			const fileMock = {
 				type: 'application/zip',
@@ -509,7 +509,7 @@ describe( 'ClipboardPipeline feature', () => {
 				} );
 
 				clipboardPlugin.on( 'inputTransformation', ( evt, data ) => {
-					spy( data.dataTransfer.getData( 'application/ckeditor5-editor-id' ) );
+					spy( data.dataTransfer.getData( 'application/@ssmckinney/ckeditor5-editor-id' ) );
 				} );
 
 				// Paste the copied content.
@@ -569,7 +569,7 @@ describe( 'ClipboardPipeline feature', () => {
 			it( 'should be propagated to contentInsertion event (when it\'s internal content)', () => {
 				const dataTransferMock = createDataTransfer( {
 					'text/html': '<p>internal content</p>',
-					'application/ckeditor5-editor-id': editor.id
+					'application/@ssmckinney/ckeditor5-editor-id': editor.id
 				} );
 
 				const contentInsertionSpy = vi.fn();

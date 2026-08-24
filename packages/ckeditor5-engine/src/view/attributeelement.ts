@@ -8,7 +8,7 @@
  */
 
 import { ViewElement, type ViewElementAttributes } from './element.js';
-import { CKEditorError } from '@ckeditor/ckeditor5-utils';
+import { CKEditorError } from '@ssmckinney/ckeditor5-utils';
 
 import { type ViewDocumentFragment } from './documentfragment.js';
 import { type ViewDocument } from './document.js';
@@ -217,13 +217,13 @@ export class ViewAttributeElement extends ViewElement {
 ViewAttributeElement.prototype.is = function( this: ViewAttributeElement, type: string, name?: string ): boolean {
 	if ( !name ) {
 		return type === 'attributeElement' || type === 'view:attributeElement' ||
-			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ckeditor/ckeditor5/issues/6529.
+			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ssmckinney/ckeditor5/issues/6529.
 			type === 'element' || type === 'view:element' ||
 			type === 'node' || type === 'view:node';
 	} else {
 		return name === this.name && (
 			type === 'attributeElement' || type === 'view:attributeElement' ||
-			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ckeditor/ckeditor5/issues/6529.
+			// From super.is(). This is highly utilised method and cannot call super. See https://github.com/ssmckinney/ckeditor5/issues/6529.
 			type === 'element' || type === 'view:element'
 		);
 	}

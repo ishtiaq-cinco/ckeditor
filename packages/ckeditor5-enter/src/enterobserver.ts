@@ -15,9 +15,9 @@ import {
 	type ViewDocumentInputEvent,
 	type BubblingEvent,
 	type ViewDocumentKeyDownEvent
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
-import { env } from '@ckeditor/ckeditor5-utils';
+import { env } from '@ssmckinney/ckeditor5-utils';
 
 const ENTER_EVENT_TYPES: Record<string, { isSoft: boolean }> = {
 	insertParagraph: { isSoft: false },
@@ -48,7 +48,7 @@ export class EnterObserver extends Observer {
 
 			let inputType = data.inputType;
 
-			// See https://github.com/ckeditor/ckeditor5/issues/13321.
+			// See https://github.com/ssmckinney/ckeditor5/issues/13321.
 			if ( env.isSafari && shiftPressed && inputType == 'insertParagraph' ) {
 				inputType = 'insertLineBreak';
 			}
@@ -67,7 +67,7 @@ export class EnterObserver extends Observer {
 			} ) );
 
 			// Stop `beforeinput` event if `enter` event was stopped.
-			// https://github.com/ckeditor/ckeditor5/issues/753
+			// https://github.com/ssmckinney/ckeditor5/issues/753
 			if ( event.stop.called ) {
 				evt.stop();
 			}

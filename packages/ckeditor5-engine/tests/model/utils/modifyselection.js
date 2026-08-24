@@ -912,7 +912,7 @@ describe( 'DataController utils', () => {
 					expect( doc.selection.getAttribute( 'bold' ) ).toBe( true );
 				} );
 
-				// https://github.com/ckeditor/ckeditor5/issues/12673.
+				// https://github.com/ssmckinney/ckeditor5/issues/12673.
 				it( 'should expand selection to the whole word', () => {
 					_setModelData( model,
 						'<p>' +

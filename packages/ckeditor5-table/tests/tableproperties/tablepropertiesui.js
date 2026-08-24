@@ -4,14 +4,14 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
-import { _getModelData, Batch } from '@ckeditor/ckeditor5-engine';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
+import { _getModelData, Batch } from '@ssmckinney/ckeditor5-engine';
 
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ButtonView, ContextualBalloon } from '@ckeditor/ckeditor5-ui';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ButtonView, ContextualBalloon } from '@ssmckinney/ckeditor5-ui';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
 
 import { Table } from '../../src/table.js';
 import { TableLayout } from '../../src/tablelayout.js';
@@ -194,7 +194,7 @@ describe( 'table properties', () => {
 			} );
 
 			describe( '#cancel event', () => {
-				// https://github.com/ckeditor/ckeditor5/issues/6180
+				// https://github.com/ssmckinney/ckeditor5/issues/6180
 				it( 'should not undo if it there were no changes made to the property fields', () => {
 					const spy = vi.spyOn( editor, 'execute' );
 

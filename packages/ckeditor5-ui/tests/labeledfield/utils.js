@@ -16,7 +16,7 @@ import { LabeledFieldView } from '../../src/labeledfield/labeledfieldview.js';
 import { InputTextView } from '../../src/inputtext/inputtextview.js';
 import { InputNumberView } from '../../src/inputnumber/inputnumberview.js';
 import { DropdownView } from '../../src/dropdown/dropdownview.js';
-import { TextareaView } from '@ckeditor/ckeditor5-ui';
+import { TextareaView } from '@ssmckinney/ckeditor5-ui';
 
 describe( 'LabeledFieldView utils', () => {
 	let locale;

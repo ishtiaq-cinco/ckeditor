@@ -48,18 +48,18 @@ The {@link module:paste-from-office/pastefromoffice~PasteFromOffice} plugin also
 
 ## Support for other office applications
 
-At the current stage, the focus of `@ckeditor/ckeditor5-paste-from-office` and `@ckeditor/ckeditor5-paste-from-office-enhanced` packages is on supporting content that comes from Microsoft Word, Microsoft Excel, and {@link features/paste-from-google-docs Google Docs}. However, it does not mean that pasting from other similar applications (such as Microsoft PowerPoint) is not supported.
+At the current stage, the focus of `@ssmckinney/ckeditor5-paste-from-office` and `@ssmckinney/ckeditor5-paste-from-office-enhanced` packages is on supporting content that comes from Microsoft Word, Microsoft Excel, and {@link features/paste-from-google-docs Google Docs}. However, it does not mean that pasting from other similar applications (such as Microsoft PowerPoint) is not supported.
 
 By default, CKEditor&nbsp;5 will support pasting rich-text content from these applications, however, some styles and formatting may be lost, depending on the source application. Also, other minor bugs may appear.
 
-You can find more information regarding compatibility with other applications in [this ticket](https://github.com/ckeditor/ckeditor5/issues/1184#issuecomment-409828069).
+You can find more information regarding compatibility with other applications in [this ticket](https://github.com/ssmckinney/ckeditor5/issues/1184#issuecomment-409828069).
 
 If you think that support for any of the applications needs improvements, please add 👍&nbsp; and comments in the following issues:
 
-* [Support pasting from Libre Office](https://github.com/ckeditor/ckeditor5/issues/2520).
-* [Support pasting from Pages](https://github.com/ckeditor/ckeditor5/issues/2527).
+* [Support pasting from Libre Office](https://github.com/ssmckinney/ckeditor5/issues/2520).
+* [Support pasting from Pages](https://github.com/ssmckinney/ckeditor5/issues/2527).
 
-Feel free to open a [new feature request](https://github.com/ckeditor/ckeditor5/issues/new/choose) for other similar applications, too!
+Feel free to open a [new feature request](https://github.com/ssmckinney/ckeditor5/issues/new/choose) for other similar applications, too!
 
 ## Automatic content filtering
 
@@ -73,7 +73,7 @@ After {@link getting-started/integrations-cdn/quick-start installing the editor}
 
 <code-switcher>
 ```js
-import { ClassicEditor, PasteFromOffice } from 'ckeditor5';
+import { ClassicEditor, PasteFromOffice } from '@ssmckinney/ckeditor5';
 
 ClassicEditor
 	.create( {
@@ -91,7 +91,7 @@ If the pasted document contains both images and styled text (like headings), ima
 
 It is advised to try and paste the image separately from the body of the text if this error occurs.
 
-If the image is represented in the Word content by the VML syntax (like this one: `<v:shape><v:imagedata src="...."/></v:shape>`), it will not be pasted either as this notation is not supported by CKEditor&nbsp;5. If you'd like to see this feature implemented, add a 👍&nbsp; reaction to [this GitHub issue](https://github.com/ckeditor/ckeditor5/issues/9245).
+If the image is represented in the Word content by the VML syntax (like this one: `<v:shape><v:imagedata src="...."/></v:shape>`), it will not be pasted either as this notation is not supported by CKEditor&nbsp;5. If you'd like to see this feature implemented, add a 👍&nbsp; reaction to [this GitHub issue](https://github.com/ssmckinney/ckeditor5/issues/9245).
 
 ## Related features
 

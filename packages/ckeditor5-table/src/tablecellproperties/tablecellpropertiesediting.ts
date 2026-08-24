@@ -7,8 +7,8 @@
  * @module table/tablecellproperties/tablecellpropertiesediting
  */
 
-import { priorities } from '@ckeditor/ckeditor5-utils';
-import { type Editor, Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
+import { priorities } from '@ssmckinney/ckeditor5-utils';
+import { type Editor, Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
 import {
 	Matcher,
 	addBorderStylesRules,
@@ -21,7 +21,7 @@ import {
 	type UpcastConversionData,
 	type UpcastElementEvent,
 	type ModelElement
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import {
 	downcastAttributeToStyle,
@@ -279,7 +279,7 @@ function enableHorizontalAlignmentProperty( schema: ModelSchema, conversion: Con
  * Upcasts legacy `td[align]` property to proper block alignment attributes in child elements.
  * If there is no block alignment property supported on the element, then the `alignment` fallback will be used.
  *
- * See: https://github.com/ckeditor/ckeditor5/issues/20042
+ * See: https://github.com/ssmckinney/ckeditor5/issues/20042
  */
 function enableLegacyHorizontalAlignmentAttribute( conversion: Conversion ) {
 	conversion.for( 'upcast' ).add( dispatcher => {

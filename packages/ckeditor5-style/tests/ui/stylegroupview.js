@@ -4,8 +4,8 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { LabelView } from '@ckeditor/ckeditor5-ui';
-import { Locale } from '@ckeditor/ckeditor5-utils';
+import { LabelView } from '@ssmckinney/ckeditor5-ui';
+import { Locale } from '@ssmckinney/ckeditor5-utils';
 
 import { StyleGridView } from '../../src/ui/stylegridview.js';
 import { StyleGroupView } from '../../src/ui/stylegroupview.js';

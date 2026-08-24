@@ -7,12 +7,15 @@
  * @module image/imageinsert/imageinsertviaurlui
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import { ButtonView, Dialog, MenuBarMenuListItemButtonView } from '@ckeditor/ckeditor5-ui';
-import { IconImageUrl } from '@ckeditor/ckeditor5-icons';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import { ButtonView, Dialog, MenuBarMenuListItemButtonView } from '@ssmckinney/ckeditor5-ui';
+import { IconImageUrl } from '@ssmckinney/ckeditor5-icons';
+import { logWarning } from '@ssmckinney/ckeditor5-utils';
 
 import { ImageInsertUI } from './imageinsertui.js';
-import { ImageInsertUrlView } from './ui/imageinserturlview.js';
+import { ImageInsertUrlView, type ImageSourceDefinition } from './ui/imageinserturlview.js';
+import { getImageResponsiveBreakpoints, IconImageResponsive } from './utils.js';
+import type { ImageResponsiveBreakpoint } from '../imageconfig.js';
 
 /**
  * The image insert via URL plugin (UI part).
@@ -28,6 +31,7 @@ import { ImageInsertUrlView } from './ui/imageinserturlview.js';
 export class ImageInsertViaUrlUI extends Plugin {
 	private _imageInsertUI!: ImageInsertUI;
 	private _formView?: ImageInsertUrlView;
+	private _breakpoints: Array<ImageResponsiveBreakpoint> = [];
 
 	/**
 	 * @inheritDoc
@@ -59,7 +63,24 @@ export class ImageInsertViaUrlUI extends Plugin {
 	 * @inheritDoc
 	 */
 	public afterInit(): void {
-		this._imageInsertUI = this.editor.plugins.get( 'ImageInsertUI' );
+		const editor = this.editor;
+
+		this._imageInsertUI = editor.plugins.get( 'ImageInsertUI' );
+		this._breakpoints = getImageResponsiveBreakpoints( editor.config.get( 'image.insert.responsive' ) );
+
+		if ( this._breakpoints.length && !editor.plugins.has( 'PictureEditing' ) ) {
+			/**
+			 * {@link module:image/imageconfig~ImageInsertConfig#responsive `config.image.insert.responsive`} is set,
+			 * but the {@link module:image/pictureediting~PictureEditing} plugin is not loaded.
+			 *
+			 * `PictureEditing` owns the `sources` model attribute the breakpoint URLs are written to and converts it
+			 * to and from `<picture>`. Without it the extra URLs are collected and then silently discarded, so load
+			 * the plugin or drop the configuration.
+			 *
+			 * @error image-insert-responsive-requires-picture-editing
+			 */
+			logWarning( 'image-insert-responsive-requires-picture-editing' );
+		}
 
 		this._imageInsertUI.registerIntegration( {
 			name: 'url',
@@ -78,7 +99,10 @@ export class ImageInsertViaUrlUI extends Plugin {
 	): InstanceType<T> {
 		const button = new ButtonClass( this.editor.locale ) as InstanceType<T>;
 
-		button.icon = IconImageUrl;
+		// The dialog behind these buttons composes a `<picture>` once breakpoints are configured, which is a
+		// different enough thing to insert that it is worth saying so on the button.
+		button.icon = this._breakpoints.length ? IconImageResponsive : IconImageUrl;
+
 		button.on( 'execute', () => {
 			this._showModal();
 		} );
@@ -154,7 +178,7 @@ export class ImageInsertViaUrlUI extends Plugin {
 		const replaceImageSourceCommand = editor.commands.get( 'replaceImageSource' )!;
 		const insertImageCommand = editor.commands.get( 'insertImage' )!;
 
-		const imageInsertUrlView = new ImageInsertUrlView( locale );
+		const imageInsertUrlView = new ImageInsertUrlView( locale, this._breakpoints );
 
 		imageInsertUrlView.bind( 'isImageSelected' ).to( this._imageInsertUI );
 		imageInsertUrlView.bind( 'isEnabled' ).toMany( [ insertImageCommand, replaceImageSourceCommand ], 'isEnabled', ( ...isEnabled ) => (
@@ -180,6 +204,7 @@ export class ImageInsertViaUrlUI extends Plugin {
 
 		const replaceImageSourceCommand = editor.commands.get( 'replaceImageSource' )!;
 		this._formView.imageURLInputValue = replaceImageSourceCommand.value || '';
+		this._formView.sources = this._getSelectedImageSources();
 
 		dialog.show( {
 			id: 'insertImageViaUrl',
@@ -206,16 +231,54 @@ export class ImageInsertViaUrlUI extends Plugin {
 	 * Executes appropriate command depending on selection and form value.
 	 */
 	private _handleSave() {
-		const replaceImageSourceCommand = this.editor.commands.get( 'replaceImageSource' )!;
+		const editor = this.editor;
+		const formView = this._formView!;
+		const replaceImageSourceCommand = editor.commands.get( 'replaceImageSource' )!;
+		const src = formView.imageURLInputValue;
+
+		// Without breakpoint fields this is the stock single-URL form, and `replaceImageSource` dropping the previous
+		// `sources` is the documented behaviour — they describe the old `src`, not the one being set now.
+		const sources = formView.breakpoints.length ?
+			[ ...formView.sources, ...this._getUnmanagedSources() ] :
+			[];
 
 		// If an image element is currently selected, we want to replace its source attribute (instead of inserting a new image).
 		// We detect if an image is selected by checking `replaceImageSource` command state.
+		//
+		// With no sources to apply both commands are called exactly as they were before breakpoints existed, so that
+		// clearing every breakpoint field flattens the image back to a plain `<img>` rather than half-updating it.
 		if ( replaceImageSourceCommand.isEnabled ) {
-			this.editor.execute( 'replaceImageSource', { source: this._formView!.imageURLInputValue } );
+			editor.execute( 'replaceImageSource', sources.length ? { source: src, sources } : { source: src } );
 		} else {
-			this.editor.execute( 'insertImage', { source: this._formView!.imageURLInputValue } );
+			editor.execute( 'insertImage', { source: sources.length ? { src, sources } : src } );
 		}
 
-		this.editor.plugins.get( 'Dialog' ).hide();
+		editor.plugins.get( 'Dialog' ).hide();
+	}
+
+	/**
+	 * The `sources` of the selected image that no configured breakpoint claims — a format-switching entry from an
+	 * upload adapter, say. The form neither shows nor manages them, so saving must not be what deletes them.
+	 *
+	 * They are applied after the ones typed into the form, so an explicit breakpoint still wins the `<picture>`
+	 * first-match-wins race and these keep acting as the broader fallback they were.
+	 */
+	private _getUnmanagedSources(): Array<ImageSourceDefinition> {
+		const managedMedia = new Set( this._formView!.breakpoints.map( breakpoint => breakpoint.media ) );
+
+		return this._getSelectedImageSources().filter( source => !source.media || !managedMedia.has( source.media ) );
+	}
+
+	/**
+	 * The `sources` model attribute of the currently selected image, if there is one.
+	 */
+	private _getSelectedImageSources(): Array<ImageSourceDefinition> {
+		const element = this.editor.model.document.selection.getSelectedElement();
+
+		if ( !element || !element.hasAttribute( 'sources' ) ) {
+			return [];
+		}
+
+		return element.getAttribute( 'sources' ) as Array<ImageSourceDefinition>;
 	}
 }

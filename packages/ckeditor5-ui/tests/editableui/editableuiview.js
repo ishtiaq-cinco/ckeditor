@@ -4,10 +4,10 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { EditingView, ViewRootEditableElement } from '@ckeditor/ckeditor5-engine';
+import { EditingView, ViewRootEditableElement } from '@ssmckinney/ckeditor5-engine';
 import { EditableUIView } from '../../src/editableui/editableuiview.js';
 import { View } from '../../src/view.js';
-import { Locale } from '@ckeditor/ckeditor5-utils';
+import { Locale } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'EditableUIView', () => {
 	let view, editableElement, editingView, editingViewRoot, locale;
@@ -239,8 +239,8 @@ describe( 'EditableUIView', () => {
 				expect( editingViewRoot.hasClass( 'ck-blurred' ) ).toBe( true );
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/1530.
-			// https://github.com/ckeditor/ckeditor5/issues/1676.
+			// https://github.com/ssmckinney/ckeditor5/issues/1530.
+			// https://github.com/ssmckinney/ckeditor5/issues/1676.
 			it( 'should work when update is handled during the rendering phase', () => {
 				const secondEditingViewRoot = new ViewRootEditableElement( editingView.document, 'div' );
 				const secondView = new EditableUIView( locale, editingView );

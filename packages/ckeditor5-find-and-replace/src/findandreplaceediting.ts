@@ -7,14 +7,14 @@
  * @module find-and-replace/findandreplaceediting
  */
 
-import { Plugin, type PluginDependenciesOf } from '@ckeditor/ckeditor5-core';
-import type { DifferItem, DifferItemAttribute, ModelElement, ModelNode } from '@ckeditor/ckeditor5-engine';
+import { Plugin, type PluginDependenciesOf } from '@ssmckinney/ckeditor5-core';
+import type { DifferItem, DifferItemAttribute, ModelElement, ModelNode } from '@ssmckinney/ckeditor5-engine';
 import {
 	scrollViewportToShowTarget,
 	type Collection,
 	type GetCallback,
 	type ObservableChangeEvent
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import { FindCommand, type FindAttributes } from './findcommand.js';
 import { ReplaceCommand } from './replacecommand.js';
@@ -190,7 +190,7 @@ export class FindAndReplaceEditing extends Plugin {
 			view: ( { markerName } ) => {
 				const [ , id ] = markerName.split( ':' );
 
-				// Marker removal from the view has a bug: https://github.com/ckeditor/ckeditor5/issues/7499
+				// Marker removal from the view has a bug: https://github.com/ssmckinney/ckeditor5/issues/7499
 				// A minimal option is to return a new object for each converted marker...
 				return {
 					name: 'span',
@@ -208,7 +208,7 @@ export class FindAndReplaceEditing extends Plugin {
 			view: ( { markerName } ) => {
 				const [ , id ] = markerName.split( ':' );
 
-				// Marker removal from the view has a bug: https://github.com/ckeditor/ckeditor5/issues/7499
+				// Marker removal from the view has a bug: https://github.com/ssmckinney/ckeditor5/issues/7499
 				// A minimal option is to return a new object for each converted marker...
 				return {
 					name: 'span',

@@ -3,14 +3,14 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-licensing-options
  */
 
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { Enter } from '@ckeditor/ckeditor5-enter';
-import { Typing } from '@ckeditor/ckeditor5-typing';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
-import { List } from '@ckeditor/ckeditor5-list';
-import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Undo } from '@ckeditor/ckeditor5-undo';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { Enter } from '@ssmckinney/ckeditor5-enter';
+import { Typing } from '@ssmckinney/ckeditor5-typing';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Bold, Italic } from '@ssmckinney/ckeditor5-basic-styles';
+import { List } from '@ssmckinney/ckeditor5-list';
+import { Heading } from '@ssmckinney/ckeditor5-heading';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
 
 import { ModelPosition } from '../../src/model/position.js';
 import { ModelRange } from '../../src/model/range.js';

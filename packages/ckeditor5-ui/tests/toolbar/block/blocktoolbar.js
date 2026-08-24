@@ -5,8 +5,8 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach, afterAll } from 'vitest';
 
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
-import { MultiRootEditor } from '@ckeditor/ckeditor5-editor-multi-root';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { MultiRootEditor } from '@ssmckinney/ckeditor5-editor-multi-root';
 
 import { EditorUI } from '../../../src/editorui/editorui.js';
 import { BlockToolbar } from '../../../src/toolbar/block/blocktoolbar.js';
@@ -15,17 +15,17 @@ import { BalloonPanelView } from '../../../src/panel/balloon/balloonpanelview.js
 import { BlockButtonView } from '../../../src/toolbar/block/blockbuttonview.js';
 import { ButtonView } from '../../../src/button/buttonview.js';
 
-import { Heading, HeadingButtonsUI } from '@ckeditor/ckeditor5-heading';
-import { Paragraph, ParagraphButtonUI } from '@ckeditor/ckeditor5-paragraph';
-import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { Image, ImageCaption } from '@ckeditor/ckeditor5-image';
-import { global, ResizeObserver, keyCodes, Rect, env } from '@ckeditor/ckeditor5-utils';
-import { DragDropBlockToolbar } from '@ckeditor/ckeditor5-clipboard';
-import { Plugin } from '@ckeditor/ckeditor5-core';
+import { Heading, HeadingButtonsUI } from '@ssmckinney/ckeditor5-heading';
+import { Paragraph, ParagraphButtonUI } from '@ssmckinney/ckeditor5-paragraph';
+import { BlockQuote } from '@ssmckinney/ckeditor5-block-quote';
+import { Image, ImageCaption } from '@ssmckinney/ckeditor5-image';
+import { global, ResizeObserver, keyCodes, Rect, env } from '@ssmckinney/ckeditor5-utils';
+import { DragDropBlockToolbar } from '@ssmckinney/ckeditor5-clipboard';
+import { Plugin } from '@ssmckinney/ckeditor5-core';
 
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 
-import { IconPilcrow, IconDragIndicator } from '@ckeditor/ckeditor5-icons';
+import { IconPilcrow, IconDragIndicator } from '@ssmckinney/ckeditor5-icons';
 
 describe( 'BlockToolbar', () => {
 	let editor, element, blockToolbar;
@@ -450,14 +450,14 @@ describe( 'BlockToolbar', () => {
 			} );
 
 			describe( 'mousedown event', () => {
-				// https://github.com/ckeditor/ckeditor5/issues/12184
+				// https://github.com/ssmckinney/ckeditor5/issues/12184
 				it( 'should not call preventDefault to not block dragstart', () => {
 					const ret = blockToolbar.buttonView.element.dispatchEvent( new Event( 'mousedown', { cancelable: true } ) );
 
 					expect( ret ).toBe( true );
 				} );
 
-				// https://github.com/ckeditor/ckeditor5/issues/12115
+				// https://github.com/ssmckinney/ckeditor5/issues/12115
 				describe( 'in Safari', () => {
 					let view;
 
@@ -492,7 +492,7 @@ describe( 'BlockToolbar', () => {
 			expect( blockToolbar.buttonView.isVisible ).toBe( true );
 		} );
 
-		// This test makes no sense now, but so do all other tests here (see https://github.com/ckeditor/ckeditor5/issues/1522).
+		// This test makes no sense now, but so do all other tests here (see https://github.com/ssmckinney/ckeditor5/issues/1522).
 		it( 'should not display the button when the selection is inside a limit element', () => {
 			_setModelData( editor.model, '<imageBlock src="/sample.png"><caption>f[]oo</caption></imageBlock>' );
 

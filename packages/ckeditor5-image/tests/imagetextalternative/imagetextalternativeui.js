@@ -4,15 +4,15 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { ClassicTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/classictesteditor.js';
+import { ClassicTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/classictesteditor.js';
 import { Image } from '../../src/image.js';
 import { ImageTextAlternativeEditing } from '../../src/imagetextalternative/imagetextalternativeediting.js';
 import { ImageTextAlternativeUI } from '../../src/imagetextalternative/imagetextalternativeui.js';
 import { ImageCaption } from '../../src/imagecaption.js';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { ButtonView, View } from '@ckeditor/ckeditor5-ui';
-import { global, keyCodes } from '@ckeditor/ckeditor5-utils';
-import { _setModelData } from '@ckeditor/ckeditor5-engine';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { ButtonView, View } from '@ssmckinney/ckeditor5-ui';
+import { global, keyCodes } from '@ssmckinney/ckeditor5-utils';
+import { _setModelData } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'ImageTextAlternativeUI', () => {
 	let editor, model, doc, plugin, command, form, balloon, editorElement, button;
@@ -234,7 +234,7 @@ describe( 'ImageTextAlternativeUI', () => {
 			expect( balloon.visibleView ).toBe( lastView );
 		} );
 
-		// https://github.com/ckeditor/ckeditor5/issues/1501
+		// https://github.com/ssmckinney/ckeditor5/issues/1501
 		it( 'should blur url input element before hiding the view', () => {
 			_setModelData( model, '[<imageBlock src="" alt="foo bar"></imageBlock>]' );
 

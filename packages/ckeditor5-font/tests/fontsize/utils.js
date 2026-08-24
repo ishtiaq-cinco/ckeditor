@@ -5,7 +5,7 @@
 
 import { describe, it, expect } from 'vitest';
 import { normalizeOptions } from '../../src/fontsize/utils.js';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'FontSizeEditing Utils', () => {
 	describe( 'normalizeOptions()', () => {

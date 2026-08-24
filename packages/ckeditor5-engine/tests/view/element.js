@@ -4,7 +4,7 @@
  */
 
 import { describe, it, expect, beforeEach } from 'vitest';
-import { count } from '@ckeditor/ckeditor5-utils';
+import { count } from '@ssmckinney/ckeditor5-utils';
 import { ViewNode } from '../../src/view/node.js';
 import { ViewElement } from '../../src/view/element.js';
 import { ViewText } from '../../src/view/text.js';
@@ -14,7 +14,7 @@ import { addBorderStylesRules } from '../../src/view/styles/border.js';
 import { addMarginStylesRules } from '../../src/view/styles/margin.js';
 import { StylesProcessor } from '../../src/view/stylesmap.js';
 import { ViewTokenList } from '../../src/view/tokenlist.js';
-import { StylesMap, ViewRootEditableElement } from '@ckeditor/ckeditor5-engine';
+import { StylesMap, ViewRootEditableElement } from '@ssmckinney/ckeditor5-engine';
 
 describe( 'Element', () => {
 	let document;

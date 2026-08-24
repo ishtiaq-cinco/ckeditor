@@ -14,7 +14,7 @@ import {
 	type PositioningFunction,
 	type ObservableChangeEvent,
 	type Locale
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
 import type { FocusableView } from '../../focuscycler.js';
 import { type BodyCollection } from '../../editorui/bodycollection.js';

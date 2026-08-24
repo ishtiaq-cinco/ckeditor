@@ -9,8 +9,8 @@ import { ModelDocument } from '../../src/model/document.js';
 import { ModelRootElement } from '../../src/model/rootelement.js';
 import { ModelText } from '../../src/model/text.js';
 import { Batch } from '../../src/model/batch.js';
-import { Collection, count } from '@ckeditor/ckeditor5-utils';
-import { expectToThrowCKEditorError } from '@ckeditor/ckeditor5-utils/tests/_utils/utils.js';
+import { Collection, count } from '@ssmckinney/ckeditor5-utils';
+import { expectToThrowCKEditorError } from '@ssmckinney/ckeditor5-utils/tests/_utils/utils.js';
 
 describe( 'Document', () => {
 	let model, doc;

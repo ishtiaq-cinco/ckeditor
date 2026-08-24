@@ -9,7 +9,7 @@ import {
 	KeystrokeHandler,
 	Locale,
 	keyCodes
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 import {
 	MenuBarMenuView,
 	MenuBarView

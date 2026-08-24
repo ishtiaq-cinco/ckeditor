@@ -4,8 +4,8 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { LinkEditing, LinkImageEditing } from '@ckeditor/ckeditor5-link';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { LinkEditing, LinkImageEditing } from '@ssmckinney/ckeditor5-link';
 import {
 	PictureEditing,
 	ImageUploadEditing,
@@ -13,19 +13,19 @@ import {
 	ImageBlockEditing,
 	ImageInlineEditing,
 	ImageCaptionEditing
-} from '@ckeditor/ckeditor5-image';
-import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
-import { ModelElement, _getModelData, _setModelData, _getViewData } from '@ckeditor/ckeditor5-engine';
-import { keyCodes } from '@ckeditor/ckeditor5-utils';
-import { CommandCollection } from '@ckeditor/ckeditor5-core';
-import { VirtualTestEditor } from '@ckeditor/ckeditor5-core/tests/_utils/virtualtesteditor.js';
+} from '@ssmckinney/ckeditor5-image';
+import { CloudServices } from '@ssmckinney/ckeditor5-cloud-services';
+import { ModelElement, _getModelData, _setModelData, _getViewData } from '@ssmckinney/ckeditor5-engine';
+import { keyCodes } from '@ssmckinney/ckeditor5-utils';
+import { CommandCollection } from '@ssmckinney/ckeditor5-core';
+import { VirtualTestEditor } from '@ssmckinney/ckeditor5-core/tests/_utils/virtualtesteditor.js';
 import { CloudServicesCoreMock } from './_utils/cloudservicescoremock.js';
 
 import { CKBoxEditing } from '../src/ckboxediting.js';
 import { CKBoxImageEditEditing } from '../src/ckboximageedit/ckboximageeditediting.js';
 import { CKBoxCommand } from '../src/ckboxcommand.js';
 import { CKBoxUploadAdapter } from '../src/ckboxuploadadapter.js';
-import { TokenMock } from '@ckeditor/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
+import { TokenMock } from '@ssmckinney/ckeditor5-cloud-services/tests/_utils/tokenmock.js';
 import { CKBoxUtils } from '../src/ckboxutils.js';
 
 describe( 'CKBoxEditing', () => {
@@ -226,7 +226,7 @@ describe( 'CKBoxEditing', () => {
 				await editor.destroy();
 			} );
 
-			// https://github.com/ckeditor/ckeditor5/issues/15581
+			// https://github.com/ssmckinney/ckeditor5/issues/15581
 			it( 'should extend the schema rules for imageBlock and imageInline', () => {
 				expect( model.schema.checkAttribute( [ '$root', 'imageBlock' ], 'ckboxImageId' ) ).toBe( true );
 				expect( model.schema.checkAttribute( [ '$root', '$block', 'imageInline' ], 'ckboxImageId' ) ).toBe( true );

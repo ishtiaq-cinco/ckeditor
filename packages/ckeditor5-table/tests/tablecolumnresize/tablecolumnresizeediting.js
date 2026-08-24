@@ -13,15 +13,15 @@ import { TableProperties } from '../../src/tableproperties.js';
 import { PlainTableOutput } from '../../src/plaintableoutput.js';
 
 // ClassicTestEditor can't be used, as it doesn't handle the focus, which is needed to test resizer visual cues.
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
-import { _getModelData, _setModelData } from '@ckeditor/ckeditor5-engine';
-import { Bold } from '@ckeditor/ckeditor5-basic-styles';
-import { LinkEditing } from '@ckeditor/ckeditor5-link';
-import { HighlightEditing } from '@ckeditor/ckeditor5-highlight';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
-import { ClipboardPipeline } from '@ckeditor/ckeditor5-clipboard';
+import { ClassicEditor } from '@ssmckinney/ckeditor5-editor-classic';
+import { _getModelData, _setModelData } from '@ssmckinney/ckeditor5-engine';
+import { Bold } from '@ssmckinney/ckeditor5-basic-styles';
+import { LinkEditing } from '@ssmckinney/ckeditor5-link';
+import { HighlightEditing } from '@ssmckinney/ckeditor5-highlight';
+import { GeneralHtmlSupport } from '@ssmckinney/ckeditor5-html-support';
+import { ClipboardPipeline } from '@ssmckinney/ckeditor5-clipboard';
 
-import { focusEditor } from '@ckeditor/ckeditor5-widget/tests/widgetresize/_utils/utils.js';
+import { focusEditor } from '@ssmckinney/ckeditor5-widget/tests/widgetresize/_utils/utils.js';
 import { modelTable } from '../_utils/utils.js';
 import {
 	getComputedStyle,
@@ -48,11 +48,11 @@ import {
 	getColumnGroupElement
 } from '../../src/tablecolumnresize/utils.js';
 import { TableWidthsCommand } from '../../src/tablecolumnresize/tablewidthscommand.js';
-import { WidgetResize } from '@ckeditor/ckeditor5-widget';
-import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { Undo } from '@ckeditor/ckeditor5-undo';
-import { MultiRootEditor } from '@ckeditor/ckeditor5-editor-multi-root';
-import { Rect } from '@ckeditor/ckeditor5-utils';
+import { WidgetResize } from '@ssmckinney/ckeditor5-widget';
+import { Paragraph } from '@ssmckinney/ckeditor5-paragraph';
+import { Undo } from '@ssmckinney/ckeditor5-undo';
+import { MultiRootEditor } from '@ssmckinney/ckeditor5-editor-multi-root';
+import { Rect } from '@ssmckinney/ckeditor5-utils';
 
 describe( 'TableColumnResizeEditing', () => {
 	let model, editor, view, editorElement, contentDirection, resizePlugin;
@@ -3359,7 +3359,7 @@ describe( 'TableColumnResizeEditing', () => {
 			} );
 
 			it( 'should save and load data correctly', () => {
-				// (https://github.com/ckeditor/ckeditor5/issues/12191)
+				// (https://github.com/ssmckinney/ckeditor5/issues/12191)
 				_setModelData( ghsEditor.model, modelTable( [
 					[ '[00', '01', '02]' ]
 				], { tableWidth: '80%', columnWidths: '25%,25%,50%' } ) );

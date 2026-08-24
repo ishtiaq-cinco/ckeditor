@@ -19,9 +19,9 @@ import {
 	type EventInfo,
 	type PositioningFunction,
 	type DomEmitterMixinConstructor
-} from '@ckeditor/ckeditor5-utils';
+} from '@ssmckinney/ckeditor5-utils';
 
-import type { Editor } from '@ckeditor/ckeditor5-core';
+import type { Editor } from '@ssmckinney/ckeditor5-core';
 
 import { isElement, debounce } from 'es-toolkit/compat';
 
@@ -211,7 +211,7 @@ export class TooltipManager extends TooltipManagerBase {
 		// This causes issues with the ContextWatchdog. When an error is thrown in one editor, the watchdog traverses the references
 		// and (because of shared tooltip manager) figures that the error affects all editors and restarts them all.
 		// This flag, excludes tooltip manager instance from the traversal and brings ContextWatchdog back to normal.
-		// More in https://github.com/ckeditor/ckeditor5/issues/12292.
+		// More in https://github.com/ssmckinney/ckeditor5/issues/12292.
 		this._watchdogExcluded = true;
 	}
 
@@ -229,7 +229,7 @@ export class TooltipManager extends TooltipManagerBase {
 		this.stopListening( editor.ui );
 
 		// Prevent the balloon panel from being destroyed in the EditorUI#destroy() cascade. It should be destroyed along
-		// with the last editor only (https://github.com/ckeditor/ckeditor5/issues/12602).
+		// with the last editor only (https://github.com/ssmckinney/ckeditor5/issues/12602).
 		if ( editorBodyViewCollection && editorBodyViewCollection.has( this.balloonPanelView ) ) {
 			editorBodyViewCollection.remove( this.balloonPanelView );
 		}
@@ -314,7 +314,7 @@ export class TooltipManager extends TooltipManagerBase {
 
 		// The tooltip should be pinned immediately when the element gets focused using keyboard.
 		// If it is focused using the mouse, the tooltip should be pinned after a delay to prevent flashing.
-		// See https://github.com/ckeditor/ckeditor5/issues/16383
+		// See https://github.com/ssmckinney/ckeditor5/issues/16383
 		// Also, if the element has an attribute `data-cke-tooltip-instant`, the tooltip should be pinned immediately.
 		// This is useful for elements that have their content partially hidden (e.g. a long text in a small container)
 		// and should show a tooltip on hover, like merge field.
@@ -446,7 +446,7 @@ export class TooltipManager extends TooltipManagerBase {
 		// Ensure that all changes to the tooltip are set before pinning it.
 		// Setting class or text after pinning can cause the tooltip to be pinned in the wrong position.
 		// It happens especially often when tooltip has class modified (like adding `ck-tooltip_multi-line`).
-		// See https://github.com/ckeditor/ckeditor5/issues/16365
+		// See https://github.com/ssmckinney/ckeditor5/issues/16365
 		this.balloonPanelView.pin( {
 			target: targetDomElement,
 			positions: TooltipManager.getPositioningFunctions( position )

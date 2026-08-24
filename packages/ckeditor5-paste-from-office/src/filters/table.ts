@@ -10,7 +10,7 @@
 import {
 	type ViewUpcastWriter,
 	type ViewDocumentFragment
-} from '@ckeditor/ckeditor5-engine';
+} from '@ssmckinney/ckeditor5-engine';
 
 import { convertCssLengthToPx } from './utils.js';
 

@@ -194,7 +194,7 @@ describe( 'Styles utils', () => {
 			);
 		} );
 
-		// s/ckeditor5/3
+		// s/@ssmckinney/ckeditor5/3
 		it( 'should handle invalid values with repeated characters', () => {
 			expect( isLengthStyleValue( '9'.repeat( 1000000 ) ) ).toBe( false );
 		} );
@@ -209,7 +209,7 @@ describe( 'Styles utils', () => {
 			testValues( [ '0', '1px', '1000px', '1.1px', '345.457px', '.457px' ], value => !isPercentageStyleValue( value ) );
 		} );
 
-		// s/ckeditor5/3
+		// s/@ssmckinney/ckeditor5/3
 		it( 'should handle invalid values with repeated characters', () => {
 			expect( isPercentageStyleValue( '9'.repeat( 1000000 ) ) ).toBe( false );
 		} );
